@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-15T22:12:37Z",
+  "batches": {
+    "glm-5.2": {
+      "model_id": "glm-5.2",
+      "count": 20,
+      "input_tokens": 37284,
+      "output_tokens": 18652,
+      "cost_usd": 0.0
+    },
+    "haiku-4.5": {
+      "model_id": "claude-haiku-4-5-20251001",
+      "count": 18,
+      "input_tokens": 30399,
+      "output_tokens": 16605,
+      "cost_usd": 0.113424
+    }
+  },
+  "total_cost_usd": 0.113424,
+  "pricing_note": "GLM-5.2 is free via z.ai. The z.ai proxy silently maps `claude-haiku-4-5-20251001` to its internal `glm-4.7` substitute, so the Haiku batch was effectively free too. Cost figures here use real Anthropic Haiku 4.5 pricing ($1/M in, $5/M out) as if the batch had run on api.anthropic.com \u2014 for audit-comparability with the ESA-26 go/no-go criteria.",
+  "failed_generations": {
+    "haiku-4.5": [
+      {
+        "trial_index": 5,
+        "spec_code": "MATHS2.MM2",
+        "difficulty": "Easy",
+        "reason": "JSON parse: control character mid-output (truncation)"
+      },
+      {
+        "trial_index": 7,
+        "spec_code": "MATHS2.MM6",
+        "difficulty": "Hard",
+        "reason": "JSON parse: unterminated string (max_tokens truncation)"
+      }
+    ],
+    "glm-5.2": []
+  },
+  "note": "2 Haiku retries on long-explanation maths questions exceeded the proxy output limit; recorded as a Haiku-side finding for the Part B audit."
+}

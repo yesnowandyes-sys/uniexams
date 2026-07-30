@@ -1,0 +1,38 @@
+{
+  "topic_key": "CHEM.C12",
+  "topic_name": "Electrolysis",
+  "module_code": "C",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Reactivity Reversal (Aqueous)",
+      "frequency": "High",
+      "example_question_id": "Q1, Q4, Q9",
+      "why_effective": "Students memorize the rule 'Cations go to Cathode' but fail to apply the competing reactivity series for aqueous solutions. They assume the metal ion from the salt is always discharged at the cathode, or the halide is discharged at the anode, even when water is more easily discharged.",
+      "generation_strategy": "Present an aqueous solution of a salt with a reactive metal (Group 1/2) or a concentrated halide. Create an option where the metal is produced at the cathode (e.g., Sodium in Q1, Option B/D) or Oxygen at the anode instead of Chlorine."
+    },
+    {
+      "distractor_type": "Polarity Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q1, Q5, Q8",
+      "why_effective": "Students often confuse the charge of the electrode (Anode/Cathode) with the charge of the ion that attracts it, or simply mix up 'Positive' and 'Negative' labels under pressure.",
+      "generation_strategy": "Swap the products between the anode and cathode in the options (e.g., Option E in Q1 lists Sodium at the positive electrode and Chlorine at the negative electrode)."
+    },
+    {
+      "distractor_type": "Stoichiometry Ratio Errors",
+      "frequency": "High",
+      "example_question_id": "Q2, Q10, Q11",
+      "why_effective": "Students identify the correct elements but fail to balance the electrons transferred, leading to mass/volume calculations that are double, half, or triple the correct value.",
+      "generation_strategy": "For a calculation question, generate distractors using incorrect mole ratios: n (product) = n (given product), 0.5 \u00d7 n (given product), or 2 \u00d7 n (given product). See Q10 (2.16 mg is correct, distractors include 1.08 mg\u2014incorrect ratio, 6.48 mg\u2014incorrect isotope mass, etc.)."
+    },
+    {
+      "distractor_type": "Concentration Change Misconception",
+      "frequency": "Low",
+      "example_question_id": "Q13",
+      "why_effective": "In electroplating or refining, students may calculate the concentration change based on moles of electrons or initial mass without considering the specific ion oxidation states or the solution context.",
+      "generation_strategy": "Create options that reflect simple subtraction of mass from solid without calculating moles (e.g., 80g - 8g = 72g remaining, ignoring stoichiometry of $Cu^{2+}$ to $Cu$)."
+    }
+  ],
+  "_raw": null
+}

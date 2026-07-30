@@ -1,0 +1,50 @@
+{
+  "topic_key": "MATHS2.MM8",
+  "topic_name": "Graphs of functions",
+  "module_code": "M2",
+  "corpus_question_count": 11,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Identifying the intersection count of a divergent function (e.g., tan x) against a linear function (e.g., y = 100x).",
+      "key_insight": "Understanding that $\tan x$ has periodic asymptotes where it approaches $\\pm\\infty$. For $y=100x$ to intersect, one must recognize that near the asymptote, $\tan x$ 'covers' all y-values, guaranteeing a solution in every positive and negative period, plus the origin.",
+      "discrimination_factors": [
+        "Behavior of functions near asymptotes",
+        "Symmetry of odd functions",
+        "Recognizing that tan x grows faster than mx for large x"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Analyzing the graph of y = (sin x)^(sin x) compared to standard sin x or exponential curves.",
+      "key_insight": "Realizing that for $0 < x < 1$ (radians), $\\sin x < 1$. A number $y$ where $0 < y < 1$ raised to a power $a$ (where $0 < a < 1$) actually results in a number $> y$ (e.g., $0.5^{0.5} \\approx 0.707$). Thus, these 'dip' curves sit *above* the line y=x, contradicting the intuition that exponents reduce values.",
+      "discrimination_factors": [
+        "Non-monotonic nature of fractional exponents",
+        "Graphing functions of the form f(x)^g(x)",
+        "Numerical estimation without calculator"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Determining the range of k for which a cubic and a quadratic intersect 3 times, specifically requiring 2 positive roots.",
+      "key_insight": "This requires visualizing the cubic's stationary points and the quadratic's vertex. The student must map 'intersection points' to 'relative heights' of curves (e.g., the quadratic must dip below the cubic's local minimum but rise above the local maximum).",
+      "discrimination_factors": [
+        "Relating algebra to geometry (stationary points vs intersections)",
+        "Inequalities derived from geometric constraints",
+        "Handling parameterized functions"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Transforming y = x^2 via translation and reflection, then identifying the resulting equation.",
+      "key_insight": "Decomposing the sequence: $y=x^2 \to$ Translation $\to$ Reflection. The critical step is handling the reflection in the line $y=-1$. A reflection in $y=c$ transforms $y$ to $2c - y$. For $y=-1$, this is a flip of the vertical distance from -1.",
+      "discrimination_factors": [
+        "Handling horizontal vs vertical shifts (sign errors)",
+        "Reflections in horizontal lines other than the x-axis",
+        "Order of operations in composite transformations"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

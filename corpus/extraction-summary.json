@@ -1,0 +1,401 @@
+{
+  "timestamp": "2026-07-02T13:28:27.346041+00:00",
+  "corpus_dir": "/home/ubuntu/.paperclip/esat-shared/corpus",
+  "output_dir": "/home/ubuntu/.paperclip/esat-shared/corpus/json",
+  "total_papers": 34,
+  "total_questions": 1342,
+  "total_errors": 9,
+  "papers": [
+    {
+      "file": "ENGAA_2016_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2016",
+      "section": "S1",
+      "expected": 54,
+      "extracted": 54,
+      "answer_key_count": 54,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2017_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2017",
+      "section": "S1",
+      "expected": 54,
+      "extracted": 54,
+      "answer_key_count": 54,
+      "errors": [
+        "Q14: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2018_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2018",
+      "section": "S1",
+      "expected": 54,
+      "extracted": 54,
+      "answer_key_count": 54,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2019_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2019",
+      "section": "S1",
+      "expected": 40,
+      "extracted": 40,
+      "answer_key_count": 40,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2020_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2020",
+      "section": "S1",
+      "expected": 40,
+      "extracted": 40,
+      "answer_key_count": 40,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2021_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2021",
+      "section": "S1",
+      "expected": 40,
+      "extracted": 40,
+      "answer_key_count": 40,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2022_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2022",
+      "section": "S1",
+      "expected": 40,
+      "extracted": 40,
+      "answer_key_count": 40,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "ENGAA_2023_S1_QuestionPaper.pdf",
+      "paper_type": "ENGAA",
+      "year": "2023",
+      "section": "S1",
+      "expected": 40,
+      "extracted": 40,
+      "answer_key_count": 40,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "NSAA_2016_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2016",
+      "section": "S1",
+      "expected": 90,
+      "extracted": 90,
+      "answer_key_count": 90,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "NSAA_2017_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2017",
+      "section": "S1",
+      "expected": 90,
+      "extracted": 90,
+      "answer_key_count": 90,
+      "errors": [
+        "Q27: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "NSAA_2018_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2018",
+      "section": "S1",
+      "expected": 90,
+      "extracted": 90,
+      "answer_key_count": 90,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "NSAA_2019_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2019",
+      "section": "S1",
+      "expected": 90,
+      "extracted": 90,
+      "answer_key_count": 90,
+      "errors": [
+        "Q58: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "NSAA_2020_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2020",
+      "section": "S1",
+      "expected": 80,
+      "extracted": 80,
+      "answer_key_count": 80,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "NSAA_2021_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2021",
+      "section": "S1",
+      "expected": 80,
+      "extracted": 80,
+      "answer_key_count": 80,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "NSAA_2022_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2022",
+      "section": "S1",
+      "expected": 80,
+      "extracted": 80,
+      "answer_key_count": 80,
+      "errors": [
+        "Q66: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "NSAA_2023_S1_QuestionPaper.pdf",
+      "paper_type": "NSAA",
+      "year": "2023",
+      "section": "S1",
+      "expected": 80,
+      "extracted": 80,
+      "answer_key_count": 80,
+      "errors": [
+        "Q71: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "TMUA-2016-paper-1.pdf",
+      "paper_type": null,
+      "year": null,
+      "section": null,
+      "expected": 0,
+      "extracted": 0,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": "garbled/empty text"
+    },
+    {
+      "file": "TMUA-2016-paper-2.pdf",
+      "paper_type": null,
+      "year": null,
+      "section": null,
+      "expected": 0,
+      "extracted": 0,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": "garbled/empty text"
+    },
+    {
+      "file": "TMUA-2017-paper-1.pdf",
+      "paper_type": null,
+      "year": null,
+      "section": null,
+      "expected": 0,
+      "extracted": 0,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": "garbled/empty text"
+    },
+    {
+      "file": "TMUA-2017-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2017",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [
+        "Q14: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "TMUA-2018-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2018",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [
+        "Q13: no options"
+      ],
+      "error": null
+    },
+    {
+      "file": "TMUA-2018-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2018",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2019-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2019",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2019-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2019",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2020-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2020",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2020-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2020",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2021-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2021",
+      "section": "P1",
+      "expected": 0,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2021-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2021",
+      "section": "P2",
+      "expected": 0,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2022-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2022",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2022-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2022",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2023-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "2023",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-2023-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "2023",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-early-specimen-paper-1.pdf",
+      "paper_type": "TMUA",
+      "year": "specimen",
+      "section": "P1",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [],
+      "error": null
+    },
+    {
+      "file": "TMUA-early-specimen-paper-2.pdf",
+      "paper_type": "TMUA",
+      "year": "specimen",
+      "section": "P2",
+      "expected": 20,
+      "extracted": 20,
+      "answer_key_count": 0,
+      "errors": [
+        "Q4: no options",
+        "Q7: no options"
+      ],
+      "error": null
+    }
+  ]
+}

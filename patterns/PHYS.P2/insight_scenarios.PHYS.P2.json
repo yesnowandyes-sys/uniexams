@@ -1,0 +1,50 @@
+{
+  "topic_key": "PHYS.P2",
+  "topic_name": "Magnetism",
+  "module_code": "P",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A current-carrying rod rests on rails in a magnetic field. The rod accelerates until it reaches a terminal velocity or leaves the rails, or a steady state is reached where magnetic force balances another force (gravity/friction).",
+      "key_insight": "Understanding that the induced effects (if any) or the motion of the rod itself creates a feedback loop (e.g., Back EMF in a rail gun, or simple force balance $F_B = F_g$). Recognizing that $F = BIL$ must be set equal to $ma$ or $mg$ to solve for the unknown variable.",
+      "discrimination_factors": [
+        "Identifying the correct effective length for the magnetic interaction (often the rail separation, not the rod length).",
+        "Applying Newton's Second Law or equilibrium conditions alongside the Magnetic Force equation.",
+        "Correct application of Fleming's Left-Hand Rule for direction of motion/force."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A bar magnet moves with a varying velocity profile (e.g., constant speed away, then constant speed back) through a coil. The student must graph the induced voltage (EMF) versus time.",
+      "key_insight": "Flux linkage change is driven by the *relative velocity*. When velocity is zero, EMF is zero (even if flux is max). When velocity is constant, EMF is constant (if entering a uniform field, though typically it's the 'slope' of the flux graph). The critical insight is that $EMF \\propto -v(t)$. A triangular velocity profile implies a square/rectangular EMF profile (during acceleration/deceleration or field entry/exit).",
+      "discrimination_factors": [
+        "Distinguishing between the graph of Magnetic Flux (depends on position) and Induced Voltage (depends on rate of change of flux/velocity).",
+        "Recognizing that when the magnet stops moving, the voltage drops to zero, regardless of the magnet's position.",
+        "Polarity determination (Lenz's Law) as the magnet reverses direction."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A charged particle enters a uniform magnetic field perpendicularly. The question asks for the radius of the path, or the time to complete a half/quarter circle.",
+      "key_insight": "The magnetic force provides the centripetal force ($F_B = F_c$). Deriving $r = mv / Bq$. A crucial secondary insight is that the speed of the particle does not change (force is perpendicular to motion), so the time taken depends only on geometry (circumference fraction) and speed, or simply $T = 2\\pi m / Bq$ (independent of radius).",
+      "discrimination_factors": [
+        "Equating Magnetic Force ($Bqv$) to Centripetal Force ($mv^2/r$).",
+        "Handling mass-to-charge ratios for isotopes (e.g., Hydrogen vs Deuterium).",
+        "Geometric reasoning about the path length (half-circle vs full circle) to determine time of flight."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A rigid current-carrying loop or coil is placed in a magnetic field such that the magnetic force acts to rotate or translate the object. The object is constrained by pivots or gravity.",
+      "key_insight": "Analysis of Torque ($\tau = nBIA\\sin\theta$). The realization that forces on opposite sides of a loop are equal and opposite (creating a couple) but do not cancel out because of the lever arm distance.",
+      "discrimination_factors": [
+        "Calculating the Area of the coil correctly from side dimensions.",
+        "Determining the perpendicular distance from the pivot to the line of action of the force.",
+        "Accounting for the number of turns (N) in the coil."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,31 @@
+{
+  "topic_key": "CHEM.C16",
+  "topic_name": "Chemical tests",
+  "module_code": "C",
+  "corpus_question_count": 2,
+  "corpus_backed": false,
+  "distractors": [
+    {
+      "distractor_type": "Ionic State Confusion",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Candidates who misidentify the oxidation state of the transition metal (e.g., assuming Fe\u00b2\u207a instead of Fe\u00b3\u207a based on the brown precipitate of Fe(OH)\u2083) will calculate an incorrect molar mass, often resulting in an option that is numerically close to the correct answer (e.g., 152 vs 400 for FeSO\u2084 vs Fe\u2082(SO\u2084)\u2083).",
+      "generation_strategy": "Identify the central ion's oxidation state using precipitate colour. Generate alternative salts for the metal in lower/higher oxidation states (e.g., Chloride vs Sulfate, Fe\u00b2\u207a vs Fe\u00b3\u207a). Calculate their molar masses and use them as incorrect options."
+    },
+    {
+      "distractor_type": "Non-Discriminative Test Results",
+      "frequency": 1,
+      "example_question_id": "Q2",
+      "why_effective": "Candidates may select a test that yields a positive result for one compound but fail to check if it distinguishes it from the others (e.g., NaOH precipitates Ca\u00b2\u207a but yields no reaction for K\u207a and Na\u207a, failing to distinguish between the latter two).",
+      "generation_strategy": "Analyze the proposed test against all species in the set. Create options representing tests that only distinguish a subset of the group (partial positives) or yield identical results for multiple species (ambiguity)."
+    },
+    {
+      "distractor_type": "Anion Misattribution",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Focuses on the cation (Iron) while neglecting the anion requirement (white ppt with BaCl\u2082 confirms sulfate). Candidates might calculate the mass for Iron Chloride or Iron Nitrate if they miss the anion clue.",
+      "generation_strategy": "Calculate the molar mass for the correct cation combined with anions that do *not* fit the described test (e.g., Cl\u207b, NO\u2083\u207b) and insert these values into the options list."
+    }
+  ],
+  "_raw": null
+}

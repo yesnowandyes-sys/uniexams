@@ -1,0 +1,60 @@
+{
+  "topic_key": "CHEM.C1",
+  "topic_name": "Atomic structure",
+  "module_code": "C",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A question provides a target species (e.g., $^{40}Ca^{2+}$) and asks to identify a different species from the options that shares an identical number of specific sub-atomic particles (e.g., neutrons and electrons).",
+      "key_insight": "Students must realize that for ions, the Atomic Number (Z) determines Protons, Mass Number (A) determines Neutrons ($A-Z$), and Charge determines Electrons ($P - C$). They must execute three separate calculations: $N_n = A_{source} - Z_{source}$, $N_e = Z_{source} - Charge$, and then scan options for an atom/ion with a different Z but matching $N_n$ and $N_e$.",
+      "discrimination_factors": [
+        "Distinguishing between neutrons and electrons.",
+        "Correctly applying the ionic charge to the electron count.",
+        "Checking options systematically rather than guessing based on atomic proximity."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "An element is described with algebraic parameters (e.g., 'An ion has mass number $2x+2$ and charge $-2$'). The student must select the correct expression for the number of protons, neutrons, and electrons from a list of algebraic combinations.",
+      "key_insight": "This tests the definitions: Protons = Atomic Number ($x$). Electrons = Protons - Charge (for negative ions, $x - (-2) = x+2$). Neutrons = Mass - Protons ($2x+2 - x = x+2$). The 'Aha!' moment is setting up the algebra correctly for the negative charge (adding electrons) and simplifying the mass expression.",
+      "discrimination_factors": [
+        "Manipulating algebraic expressions representing physical quantities.",
+        "Sign convention handling for negative ions.",
+        "Substituting $A-Z$ correctly."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Given the relative atomic mass of an element (e.g., Boron, $A_r=10.8$) and the mass numbers of its two isotopes (e.g., 10 and 11), determine the percentage abundance of the heavier isotope.",
+      "key_insight": "The 'Aha!' is recognizing that the $A_r$ is a weighted average: $10(1-x) + 11(x) = 10.8$. This simplifies to $10 + x = 10.8$, meaning the abundance is simply the decimal part of the relative mass (0.8 or 80%). For masses $M$ and $M+1$, the abundance of the heavier isotope is exactly the decimal portion of the $A_r$.",
+      "discrimination_factors": [
+        "Setting up the weighted average formula.",
+        "Mental arithmetic involving decimals and percentages.",
+        "Recognizing the shortcut for unit-mass difference isotopes."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A nuclide is defined algebraically, e.g., $^{(3x-7)}Q$. A second nuclide $^{(2x+3)}Q$ has 6 fewer neutrons. The question asks for the neutron count of a third nuclide $^{(3x+1)}Q$.",
+      "key_insight": "The student must derive $x$ from the condition $N_1 - N_2 = 6$. Since $N = Mass - Z$ (and $Z=x$), the equation is $(3x-7 - x) - (2x+3 - x) = 6$. This simplifies to $(2x-7) - (x+3) = 6 \\rightarrow x - 10 = 6 \\rightarrow x = 16$. The final step is to use this $x$ in the *third* expression: $N_3 = (3x+1) - x = 2x + 1$.",
+      "discrimination_factors": [
+        "Multi-step algebraic derivation.",
+        "Consistently using the correct definitions for Mass and Atomic number.",
+        "Avoiding the trap of stopping after finding $N_1$ or $N_2$."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "An analysis of a mass spectrum of a diatomic molecule (e.g., GaCl3) requires calculating the ratio of peaks for the molecular ion, taking into account the natural abundances of multiple isotopes of different elements (e.g., Ga has 2, Cl has 2).",
+      "key_insight": "This tests the multiplicative principle of probability in statistics. The student must identify the lightest (Ga-69 + 3*Cl-35) and heaviest (Ga-71 + 3*Cl-37) combinations and calculate their relative probabilities based on the given abundance percentages (e.g., $Ab(Ga_{light}) \times Ab(Cl_{light})^3$ vs $Ab(Ga_{heavy}) \times Ab(Cl_{heavy})^3$).",
+      "discrimination_factors": [
+        "Combinatorial logic (picking the correct isotopes for min/max mass).",
+        "Multiplying probabilities.",
+        "Interpreting spectra m/z values."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

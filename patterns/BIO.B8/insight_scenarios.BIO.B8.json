@@ -1,0 +1,60 @@
+{
+  "topic_key": "BIO.B8",
+  "topic_name": "Enzymes",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A graph plots 'Mass of Product' against 'Time' for two conditions X and Y. Line Y rises sharply and plateaus at a high mass. Line X rises shallowly and plateaus at a lower mass, but reaches its plateau *sooner* (flattens out earlier) than Y. Students must determine if X has 'less substrate' or 'higher pH' relative to Y.",
+      "key_insight": "A lower plateau indicates a lower total amount of product formed, which directly correlates to the amount of substrate available (assuming enzyme is not limiting). The time it takes to plateau indicates the *rate*. A shallow slope that plateaus 'early' (in terms of x-axis quantity) indicates a slow rate, but the plateau height depends on substrate quantity. If X finishes 'flatter' (sooner on the time axis) but at a lower height, it means it has less substrate AND a slower rate. Critically, if it has less substrate, it *must* plateau eventually (when substrate runs out). The 'Aha!' moment is realizing that hitting a lower maximum value is the defining evidence for 'Less Substrate', regardless of how steep the slope was.",
+      "discrimination_factors": [
+        "Distinguishing between Rate (slope) and Yield (y-maximum).",
+        "Understanding that reaction stops when substrate is depleted.",
+        "Resisting the intuition that 'steeper/faster' means 'more product'."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A reaction is performed by doubling the volume of *both* the enzyme solution and the substrate solution simultaneously. Students are asked if the rate of reaction changes.",
+      "key_insight": "The reaction rate depends on the *concentration* (molecules per unit volume) and the frequency of collisions. Doubling the volume of both keeps the concentration ratio and collision probability identical. The reaction will proceed at the same speed (rate) but produce twice the total amount of product (if run to completion). The 'Aha!' moment is realizing that 'more stuff' does not mean 'faster reaction' if the density/concentration is constant.",
+      "discrimination_factors": [
+        "Conceptualizing Concentration vs. Amount/Volume.",
+        "Understanding the collision theory basis for rate.",
+        "Overcoming the intuitive heuristic that 'more ingredients = faster cooking'."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A standard 'Rate vs. Temperature' graph is shown, peaking at 40\u00b0C and dropping to near zero at 70\u00b0C. The question asks for the correct explanation for the drop in rate at 70\u00b0C. Options include 'The enzymes have died' vs 'The bonds maintaining the structure have broken'.",
+      "key_insight": "Enzymes are not alive; they are protein molecules. The correct terminology must refer to the physical structure (tertiary/quaternary) and chemical bonds (hydrogenic, ionic, disulfide bridges). The 'Aha!' moment is the shift from biological 'life/death' metaphors to chemical/physical 'structural integrity' concepts.",
+      "discrimination_factors": [
+        "Precision in scientific terminology.",
+        "Distinguishing biological function from molecular structure.",
+        "Understanding the mechanism of denaturation."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "An experiment measures the time taken for a solution to become clear (protein digestion). One option suggests stirring the mixture. Students must predict if stirring affects the time.",
+      "key_insight": "Enzyme kinetics assumes even mixing. In a static solution, the enzyme and substrate must rely on slow diffusion to find each other. Stirring artificially increases the rate of collision by physically moving molecules together, reducing the reliance on diffusion and thereby decreasing the time taken for the reaction to complete. The 'Aha!' moment is recognizing that 'all other variables kept constant' usually implies 'no external agitation', but adding agitation is a valid physical way to increase observed rate.",
+      "discrimination_factors": [
+        "Role of diffusion in enzyme-substrate encounters.",
+        "Practical laboratory physics affecting biological rates.",
+        "Identifying non-chemical rate limiters (mixing)."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A graph plots Rate of Reaction (y) vs Substrate Concentration (x). The line rises linearly then curves into a horizontal plateau. Students are asked to label the y-axis as 'Rate of Substrate Loss' or 'Rate of Enzyme-Substrate Complex Formation' and determine if these are valid.",
+      "key_insight": "At the plateau, the rate is constant ($V_{max}$). This means the substrate is being converted at a steady speed. Consequently, the substrate is being *lost* at that same steady speed. Furthermore, the number of active sites is fully occupied, so the number of Enzyme-Substrate Complexes is turning over at a constant rate. The 'Aha!' insight is recognizing that 'Rate of Product Formation', 'Rate of Substrate Loss', and 'Turnover Rate of Complexes' are all numerically identical and coupled in a steady state.",
+      "discrimination_factors": [
+        "Conservation of mass in reaction equations.",
+        "Understanding steady-state dynamics.",
+        "Interpreting saturation kinetics graphs abstractly."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,50 @@
+{
+  "topic_key": "BIO.B6",
+  "topic_name": "Gene technologies",
+  "module_code": "B",
+  "corpus_question_count": 6,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is presented with a diagram of a plasmid containing an antibiotic resistance gene. A human insulin gene is inserted *within* the sequence of the resistance gene. The student must determine if the bacteria will grow on an agar plate containing that specific antibiotic.",
+      "key_insight": "Inserting a gene 'into' another gene physically disrupts the DNA sequence of the original gene (disruption). The original gene is no longer functional (non-functional protein). Therefore, the bacteria loses the antibiotic resistance phenotype.",
+      "discrimination_factors": [
+        "Ability to visualize the physical reality of DNA base insertion",
+        "Logical deduction of functional consequence from structural change",
+        "Avoidance of the assumption that 'genes are independent' and realizing location matters."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A question lists the steps required to produce a cloned mammal (e.g., Dolly the sheep). One statement claims an adult somatic cell (e.g., a udder cell) divides by meiosis to form a haploid nucleus which is then used.",
+      "key_insight": "Somatic cells are diploid. Cloning requires a full set of chromosomes to match the recipient. Therefore, the donor nucleus must be from a diploid somatic cell (often kept in G0 of the cell cycle), not a haploid gamete. Meiosis is for sexual reproduction, not cloning.",
+      "discrimination_factors": [
+        "Distinction between reproductive (meiotic) and cloning (mitotic/somatic) pathways",
+        "Understanding of ploidy (haploid vs diploid) requirements.",
+        "Recognizing that 'stem cell' terminology does not apply to the donor somatic cell."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A student is asked why bacteria are used to produce human insulin instead of extracting it from pigs, or why the bacteria are 'cultured' (allowed to multiply) rather than just 'modified'.",
+      "key_insight": "Genetic engineering allows for the production of a specific protein that is identical to the human form (avoiding immune rejection). More importantly, the concept of 'Bioreactors': the value is in the *exponential multiplication* of the cell factory, not just the existence of one modified cell.",
+      "discrimination_factors": [
+        "Understanding scale and yield (biological vs chemical synthesis)",
+        "Knowledge of immunogenic differences between species (porcine vs human insulin)",
+        "Process flow: Modification -> Cloning/Culturing -> Harvesting -> Purification."
+      ],
+      "difficulty_band": "1-3"
+    },
+    {
+      "scenario_description": "A mixture of bacteria is plated on agar containing Antibiotic A and Antibiotic B. Bacteria have plasmids conferring resistance to A, B, both, or neither. The student is given the counts of colonies on specific plates and must calculate the percentage of bacteria containing a specific recombinant plasmid.",
+      "key_insight": "This tests the intersection of sets. Students must understand that 'Growth on Plate A' is a subset, and the intersection of 'Growth on A' and 'No Growth on B' identifies a specific plasmid type. It requires using the control plate (no antibiotic) to find the total population denominator.",
+      "discrimination_factors": [
+        "Set theory application to biological phenotypes",
+        "Understanding that bacterial colonies are clonal (one cell = one colony)",
+        "Using control data (total count) to normalize results."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

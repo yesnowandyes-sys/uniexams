@@ -1,0 +1,50 @@
+{
+  "topic_key": "MATHS2.MM2",
+  "topic_name": "Sequences and series",
+  "module_code": "M2",
+  "corpus_question_count": 47,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A geometric progression has first term $a$ and common ratio $r$. The sum of the series of terms ($u_1 + u_2 + \\dots$) is $S$. The sum of the series of squares ($u_1^2 + u_2^2 + \\dots$) is $S_2$. The student must find the sum of the cubes ($S_3$) or prove a relationship between $S$ and $S_2$.",
+      "key_insight": "The series of squares is a new Geometric Progression with first term $a^2$ and ratio $r^2$. Convergence depends on $r^2 < 1$. One must solve the system $S = a/(1-r)$ and $S_2 = a^2/(1-r^2)$ for $a$ and $r$ (or expressions of them) before calculating $S_3 = a^3/(1-r^3)$. You cannot simply square the sum $S$.",
+      "discrimination_factors": [
+        "Recognizing that summing squared terms forms a new GP with a squared ratio.",
+        "Understanding that $( \\sum u_i )^2 \neq \\sum u_i^2$.",
+        "Solving the non-linear system of equations for $a$ and $r$ without a calculator."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "An arithmetic progression (AP) A shares terms with another AP B. The student is asked to find the $N$-th common term.",
+      "key_insight": "The sequence of common terms is itself an Arithmetic Progression. The first term is the first common number, and the common difference is the Least Common Multiple (LCM) of the differences of the two original APs ($LCM(d_1, d_2)$).",
+      "discrimination_factors": [
+        "Identifying that the intersection of two APs is an AP.",
+        "Calculating the LCM of the common differences.",
+        "Finding the first common term using modular arithmetic or simultaneous equations."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A convergent Geometric Progression is defined by algebraic terms (e.g., $2p, p-3, p-7$) or trigonometric ratios. The student must identify the valid sequence from the possible values of the variable/angle.",
+      "key_insight": "The ratio between successive terms must be constant. This creates a quadratic equation for the variable. Solving the quadratic yields two potential values. The 'Aha!' moment is realizing that only one root satisfies the hidden constraints of the problem (e.g., 'convergent' implies $|r|<1$, or 'real and positive' eliminates negative roots, or the sequence must be increasing).",
+      "discrimination_factors": [
+        "Forming the ratio equation correctly from the algebraic terms.",
+        "Solving the resulting quadratic.",
+        "Critically evaluating the roots against the convergence/validity conditions."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A summation involves a trigonometric function like $\\sin(k\\pi/3)$ or $\\sin(n\\pi + \theta)$. The student must evaluate the sum to a large number of terms (e.g., 100) or infinity.",
+      "key_insight": "The sequence of trigonometric values is periodic. The student must determine the period (e.g., for $\\sin(k\\pi/3)$, the sequence repeats every 6 terms). The sum of one full period is often 0 or a specific constant. The total sum can be reduced to 'Number of full periods $\times$ Sum of period + Remainder terms'.",
+      "discrimination_factors": [
+        "Identifying the periodicity of the sequence.",
+        "Calculating the sum of one period.",
+        "Handling the remainder terms for non-multiple indices."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,49 @@
+{
+  "topic_key": "BIO.B7",
+  "topic_name": "Variation",
+  "module_code": "B",
+  "corpus_question_count": 8,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A population of birds is split by a geographic barrier. Over generations, the gene pools diverge. Students must evaluate statements claiming 'New species have formed' vs 'Variation has increased' based solely on the information given about time and location.",
+      "key_insight": "Evolution is a change in allele frequency over time; Speciation is the result of accumulated changes leading to reproductive isolation. Students must distinguish between the *process* and the *outcome*.",
+      "discrimination_factors": [
+        "Distinguishing between variation within a population and divergence between populations.",
+        "Understanding that 'time' alone is not the definition of evolution\u2014change in proportions is."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Given a graph of two populations (e.g., Llama vs Camel) showing different physiological saturation curves. Students are asked to identify if the difference is genetic, environmental, or phenotypic, and to select the statement that correctly explains the mechanism of the difference.",
+      "key_insight": "Phenotype = Genotype + Environment. Organisms with the same ancestor (Genotype similarity) living in different environments (High vs Low altitude) can exhibit different phenotypes. The graph visualizes the *Phenotype*.",
+      "discrimination_factors": [
+        "Ability to interpret 'phenotype' as the visible/measurable characteristic (the curve shape).",
+        "Ability to infer 'genotype' (evolved from same ancestor) vs 'environmental pressure' (altitude adaptation) as the driver of the difference.",
+        "Rejecting the idea that the environment 'caused' the mutation directly (Lamarckism)."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "An experiment involving artificial selection of Maize for high and low oil content over 50 generations. The mean mass stays the same, but the range of oil content splits. Students must identify which statement correctly describes the genetic change.",
+      "key_insight": "Selection acts on variation. 'Disruptive selection' (selecting extremes) increases variance but does not necessarily change the mean of other traits (like mass). It highlights that selection is specific to the selected trait.",
+      "discrimination_factors": [
+        "Understanding that the mean of one trait (oil) shifts, while the mean of another (mass) may stay constant.",
+        "Differentiating between 'directional' (one side) and 'disruptive' (both sides) selection visually.",
+        "Recognizing that 'stable' mass implies that trait was not under selection pressure."
+      ],
+      "difficulty_band": "5-7"
+    },
+    {
+      "scenario_description": "A question about antibiotic resistance in a hospital setting. Students are shown the proportion of 'beneficial', 'harmful', and 'neutral' mutations in a bacterial population.",
+      "key_insight": "Antibiotic resistance is a specific case of natural selection. The 'beneficial' nature of a mutation is entirely context-dependent (only beneficial if the antibiotic is present). Otherwise, it might be neutral or costly.",
+      "discrimination_factors": [
+        "Context-dependency of 'fitness'.",
+        "Statistical reality: Most mutations are harmful or neutral; 'beneficial' is rare, unless selected for.",
+        "Understanding that resistance arises from pre-existing or random variants, not 'need'."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

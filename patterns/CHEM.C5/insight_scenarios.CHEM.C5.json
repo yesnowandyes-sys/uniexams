@@ -1,0 +1,37 @@
+{
+  "topic_key": "CHEM.C5",
+  "topic_name": "Oxidation, reduction and redox",
+  "module_code": "C",
+  "corpus_question_count": 15,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student encounters the reaction `Cl2 + H2O \u2192 HCl + HClO`. They identify HCl as an acid and HClO as an acid, concluding it is an acid-base reaction, or they see the element Chlorine on both sides and assume no change.",
+      "key_insight": "Recognizing Disproportionation. The student must realize that Chlorine (0) has changed into Cl^- (-1) and Cl^O (+1). Identical atoms in the same reactant undergo both oxidation and reduction simultaneously.",
+      "discrimination_factors": [
+        "Ability to assign oxidation states to polyatomic ions (Hypochlorite)",
+        "Recognizing that an element can be both oxidized and reduced in the same reaction"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Faced with the tetrathionate ion `S4O6^2-`, a student calculates the average oxidation state of Sulfur as +2.5. They look for an option with '+2.5' but fail to find it, or select an option assuming all sulfurs are identical.",
+      "key_insight": "Average vs. Specific Oxidation States. The total charge is -2. The oxygens account for -12. Total Sulfur must be +10. Average is +2.5. However, the structure is not symmetrical (it's essentially two SO3 units linked by a disulfide bond). The central bridge atoms are S(0) and the outer atoms are S(+5).",
+      "discrimination_factors": [
+        "Understanding that oxidation states are theoretical assignments, not always real charges",
+        "Recognizing that 'average' oxidation state might not match individual atoms in complex ions"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A question asks for the 'simplest ratio of w:x' in the unbalanced equation `Cl2 + OH- \u2192 Cl- + ClO3- + H2O`. A student attempts to balance by inspection (matching atoms) rather than charge/electron balance.",
+      "key_insight": "Electron Balance vs. Atom Balance. Balancing Chlorine atoms alone doesn't work. Student must balance the *half-reactions*: Cl2 -> 2Cl- (gain 2e) and Cl2 -> 2ClO3- (loss 10e). LCM of electrons is 10, leading to the 5:1 ratio of Cl- : ClO3- (or ratio of coefficients w:x).",
+      "discrimination_factors": [
+        "Ability to write/calculate half-equations internally",
+        "Recognizing that Cl2 appears on both sides of the half-reactions"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

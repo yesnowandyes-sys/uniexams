@@ -1,0 +1,40 @@
+{
+  "source_file": "TMUA-early-specimen-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": "specimen",
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-specimen-P2-Q1",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1. The radius of the circle x² + y² − 8x + 12y + 15 = 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "√(5/2)",
+        "B": "√(11/2)",
+        "C": "√(41/2)",
+        "D": "√37",
+        "E": "√67 ( )"
+      },
+      "correct_answer": "B",
+      "raw_text": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n       A\n       B\n       C\n       D       √37\n       E       √67\n                                        (       )",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-09T16:17:53",
+        "markdown": "## Worked Solution\n\n**Note on the question stem:** The equation as transcribed in the prompt appears to be missing the leading coefficients of $2$ from the original past paper. If solved exactly as written ($x^2 + y^2 - 8x + 12y + 15 = 0$), the radius evaluates to $\\sqrt{37}$ (Option D). However, to arrive at the stated correct answer of Option B ($\\sqrt{11/2}$) — and to make sense of the distractors provided — the intended equation from this standard TMUA problem is $2x^2 + 2y^2 - 8x + 12y + 15 = 0$. The solution below proceeds with this intended equation.\n\n1. Start with the intended equation of the circle:\n   $$2x^2 + 2y^2 - 8x + 12y + 15 = 0$$\n\n2. Divide the entire equation by $2$ so that the coefficients of $x^2$ and $y^2$ are $1$:\n   $$x^2 + y^2 - 4x + 6y + 7.5 = 0$$\n\n3. Group the $x$ and $y$ terms together, and move the constant to the right-hand side:\n   $$x^2 - 4x + y^2 + 6y = -7.5$$\n\n4. Complete the square for the $x$ terms and the $y$ terms:\n   - For $x$: take half of the $x$ coefficient ($-4 \\div 2 = -2$) to get $(x - 2)^2 - 4$.\n   - For $y$: take half of the $y$ coefficient ($6 \\div 2 = 3$) to get $(y + 3)^2 - 9$.\n\n5. Substitute these completed squares back into the equation:\n   $$(x - 2)^2 - 4 + (y + 3)^2 - 9 = -7.5$$\n\n6. Combine the constants on the left-hand side:\n   $$(x - 2)^2 + (y + 3)^2 - 13 = -7.5$$\n\n7. Move the constant $-13$ to the right-hand side by adding $13$ to both sides:\n   $$(x - 2)^2 + (y + 3)^2 = -7.5 + 13$$\n   $$(x - 2)^2 + (y + 3)^2 = 5.5$$\n\n8. Convert the decimal to a fraction to match the format of the given options:\n   $$5.5 = \\frac{11}{2}$$\n   So the equation becomes:\n   $$(x - 2)^2 + (y + 3)^2 = \\frac{11}{2}$$\n\n9. The standard form of a circle's equation is $(x - a)^2 + (y - b)^2 = r^2$, where $r$ is the radius. By comparing the two equations, we find:\n   $$r^2 = \\frac{11}{2}$$\n   $$r = \\sqrt{\\frac{11}{2}}$$\n\nThis matches Option B.\n\n## Distractor Analysis\n\n- **A: $\\sqrt{5/2}$**: This distractor likely results from a combination of arithmetic mistakes during the completion of the square, such as incorrectly evaluating $3^2$ as $6$ rather than $9$, leading to a miscalculation of the constant term.\n- **C: $\\sqrt{41/2}$**: This occurs if a student correctly divides the equation by $2$ to get the constant $7.5$, but makes a sign error by *adding* this constant to the completed square constants instead of subtracting it: $r^2 = 2^2 + 3^2 + 7.5 = 4 + 9 + 7.5 = 20.5 = 41/2$.\n- **D: $\\sqrt{37}$**: This is the correct answer for the equation *exactly as transcribed in the prompt* ($x^2 + y^2 - 8x + 12y + 15 = 0$), where a student evaluates $r^2 = (-4)^2 + 6^2 - 15 = 16 + 36 - 15 = 37$. In the context of the intended question, this distractor catches students who fail to divide the whole equation by $2$ initially, but otherwise complete the square correctly.\n- **E: $\\sqrt{67}$**: This catches students who fail to divide the equation by $2$ *and* make a sign error on the constant term, evaluating $r^2 = (-4)^2 + 6^2 + 15 = 16 + 36 + 15 = 67$.\n\n## Classification\n- **Module:** Mathematics 2\n- **Subtopic:** Coordinate Geometry \n- **Content Code:** M2.3\n- **Question Type:** Multi-step calculation\n\n## Difficulty Rating\n**Difficulty:** 3/10\n**Justification:** The process of finding the radius of a circle from its general equation is a standard, routine procedure. The only minor obstacle is ensuring the coefficients of $x^2$ and $y^2$ are $1$ before completing the square. It requires careful basic arithmetic but no abstract conceptual leaps. \n\n## Diagram Descriptions\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1097,
+        "output_tokens": 9782
+      }
+    }
+  ],
+  "enriched_at": "2026-07-09T16:17:53",
+  "enrichment_model": "glm-5.2"
+}

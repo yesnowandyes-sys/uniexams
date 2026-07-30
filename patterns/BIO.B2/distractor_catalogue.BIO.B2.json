@@ -1,0 +1,45 @@
+{
+  "topic_key": "BIO.B2",
+  "topic_name": "Movement across membranes",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Process Identification Reversal",
+      "frequency": "High",
+      "example_question_id": "Q11, Q12, Q14",
+      "why_effective": "Exploits the common simplification that movement from High to Low concentration is always passive. Students fail to check if the particle is moving *against* the gradient or if the membrane permeability requires specific channels (facilitated diffusion).",
+      "generation_strategy": "Present a scenario with a concentration gradient but a required movement direction that opposes it (e.g., ion uptake in low-concentration environments) or involves non-permeable solutes, and offer 'diffusion' or 'osmosis' as the incorrect mechanism."
+    },
+    {
+      "distractor_type": "Solute-Solvent Role Confusion",
+      "frequency": "High",
+      "example_question_id": "Q1, Q4, Q12, Q15, Q18",
+      "why_effective": "Targets the misunderstanding of osmosis as the movement of the solute (e.g., sugar/salt) rather than the solvent (water). Students incorrectly attribute volume changes or haemolysis to the uptake of the dissolved substance.",
+      "generation_strategy": "Describe osmotic scenarios (swelling/shrinking) and provide options that attribute the cause to 'uptake of [Solute]' instead of 'uptake of water', or claim the solute moves by osmosis."
+    },
+    {
+      "distractor_type": "Non-Permeable Solute Osmosis",
+      "frequency": "Medium",
+      "example_question_id": "Q15, Q18",
+      "why_effective": "Tests the definition of osmosis (water potential) against the colloquial understanding of 'things spreading out'. Students may believe sucrose in a U-tube or potato experiment moves by osmosis to equalize concentration.",
+      "generation_strategy": "In experiments with starch, sucrose, or large proteins (impermeable membranes), include distractors claiming these solutes move by osmosis or diffusion to balance concentrations."
+    },
+    {
+      "distractor_type": "Unit/Scale Conversion Error",
+      "frequency": "Medium",
+      "example_question_id": "Q11",
+      "why_effective": "Calculates the correct magnitude but uses the wrong SI prefix (e.g., calculating 0.02 \u00b5m but selecting 0.02 nm, or failing to convert $\\mu$m to nm). Catches students who are rushing the arithmetic.",
+      "generation_strategy": "Require a calculation involving cell dimensions (nm/$\\mu$m) or concentrations (mmol/$\\mu$m). Include options that differ by orders of magnitude (x10 or x1000)."
+    },
+    {
+      "distractor_type": "Dependent Variable Misattribution",
+      "frequency": "Low",
+      "example_question_id": "Q7",
+      "why_effective": "Explores graph literacy and experimental design. Students may select an option that is scientifically true (e.g., about diffusion rates) but factually incorrect based on the specific graph axes provided (x/y confusion).",
+      "generation_strategy": "Provide a graph description where the axes are unconventional (e.g., time vs. concentration). Include a distractor that is a true biological statement but falsely claims 'the dependent variable is on the x-axis'."
+    }
+  ],
+  "parse_repaired": true
+}

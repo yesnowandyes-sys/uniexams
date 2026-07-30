@@ -1,0 +1,1899 @@
+{
+  "source_file": "NSAA_2018_S1_QuestionPaper.pdf",
+  "paper_type": "NSAA",
+  "year": 2018,
+  "section": "Section1",
+  "total_questions": 90,
+  "questions": [
+    {
+      "id": "NSAA-2018-S1-Q1",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 A group of drivers, consisting of 200 women and 300 men, was asked if they passed their driving test at the first attempt. Altogether 167 of the group said they passed at the first attempt. Of the women, 143 said they did not pass at the first attempt. How many of the men said they passed at the first attempt?",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "24",
+        "C": "33",
+        "D": "57",
+        "E": "110",
+        "F": "133",
+        "G": "157"
+      },
+      "correct_answer": "E",
+      "raw_text": "1   A group of drivers, consisting of 200 women and 300 men, was asked if they passed their\n    driving test at the first attempt.\n    Altogether 167 of the group said they passed at the first attempt.\n    Of the women, 143 said they did not pass at the first attempt.\n    How many of the men said they passed at the first attempt?\n    A   10\n    B   24\n    C   33\n    D   57\n    E   110\n    F   133\n    G   157",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q2",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 A cuboid has sides of length x, 2 x and 2 x, measured in cm. The volume, in cm3, of the cuboid is numerically equal to twice the total surface area, in cm2, of the cuboid. What is the value of x ?",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "6+2 2",
+        "C": "5",
+        "D": "3+ 2 5",
+        "E": "3 1",
+        "F": "+ 2 2 2 6 PART A Mathematics"
+      },
+      "correct_answer": "B",
+      "raw_text": "2   A cuboid has sides of length x, 2 x and 2 x, measured in cm.\n    The volume, in cm3, of the cuboid is numerically equal to twice the total surface area, in cm2, of\n    the cuboid.\n    What is the value of x ?\n    A   10\n    B   6+2 2\n    C   5\n    D   3+ 2\n         5\n    E\n         2\n         3 1\n    F     +  2\n         2 2\n                                                 6\n\f                                                                                     PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q3",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 The line joining the points with coordinates ( p, p – 1) and (1 – p, 2p ) is parallel to the line with equation 2x + 3y + 1 = 0 What is the value of p ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–1 1",
+        "B": "− 7 1",
+        "C": "9 1",
+        "D": "8",
+        "E": "1 5",
+        "F": "4",
+        "G": "2",
+        "H": "5 7 PART A Mathematics"
+      },
+      "correct_answer": "H",
+      "raw_text": "3   The line joining the points with coordinates ( p, p – 1) and (1 – p, 2p ) is parallel to the line with\n    equation 2x + 3y + 1 = 0\n    What is the value of p ?\n    A    –1\n             1\n    B    −\n             7\n         1\n    C\n         9\n         1\n    D\n         8\n    E    1\n         5\n    F\n         4\n    G    2\n    H    5\n                                                    7\n\f                                                                                PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q4",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 A rectangle PQRS is drawn inside a circle, with its vertices on the circumference of the circle. P Q S R [diagram not to scale] The ratio of the length of PQ to the length of QR is 2 : 1 The area of the rectangle PQRS is 96 cm2. What is the radius, in cm, of the circle?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "3",
+        "C": "3 2",
+        "D": "2 15",
+        "E": "4 6",
+        "F": "12",
+        "G": "12 2",
+        "H": "8 15 8 PART A Mathematics"
+      },
+      "correct_answer": "D",
+      "raw_text": "4   A rectangle PQRS is drawn inside a circle, with its vertices on the circumference of the circle.\n                                 P                                      Q\n                                 S                                     R\n                                          [diagram not to scale]\n    The ratio of the length of PQ to the length of QR is 2 : 1\n    The area of the rectangle PQRS is 96 cm2.\n    What is the radius, in cm, of the circle?\n    A       6\n    B   3\n    C   3 2\n    D   2 15\n    E    4 6\n    F   12\n    G   12 2\n    H   8 15\n                                                  8\n\f                                                                               PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q5",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 The expected number of bottles of water sold in a day at a sports ground is directly proportional to the square of the average outside temperature, in degrees Celsius, for that day. On a day when the average outside temperature is 16 °C, 64 bottles of water, the expected number, are sold. On a warmer day, when the average outside temperature is T °C, 256 bottles of water are sold, which is 31 bottles more than the expected number for that day. What is the value of T ?",
+      "has_diagram": false,
+      "options": {
+        "A": "7.5",
+        "B": "450",
+        "C": "30",
+        "D": "32",
+        "E": "1148",
+        "F": "56.25 9 PART A Mathematics"
+      },
+      "correct_answer": "C",
+      "raw_text": "5   The expected number of bottles of water sold in a day at a sports ground is directly proportional\n    to the square of the average outside temperature, in degrees Celsius, for that day.\n    On a day when the average outside temperature is 16 °C, 64 bottles of water, the expected\n    number, are sold.\n    On a warmer day, when the average outside temperature is T °C, 256 bottles of water are sold,\n    which is 31 bottles more than the expected number for that day.\n    What is the value of T ?\n    A   7.5\n    B     450\n    C   30\n    D   32\n    E     1148\n    F   56.25\n                                                9\n\f                                                                                  PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q6",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "320 cm3 [diagram not to scale] At a cinema, drinks are sold in regular and large sizes. The cups for these are mathematically similar. The ratio of the heights of the cups and the ratio of the depths of the drinks are both 4 : 5 The volume of drink in a regular size cup is 320 cm3. What is the volume, in cm3, of drink in a large size cup?",
+      "has_diagram": false,
+      "options": {
+        "A": "384",
+        "B": "400",
+        "C": "500",
+        "D": "576",
+        "E": "625",
+        "F": "640 10 PART A Mathematics"
+      },
+      "correct_answer": "E",
+      "raw_text": "6\n                                     320 cm3\n                                          [diagram not to scale]\n    At a cinema, drinks are sold in regular and large sizes.\n    The cups for these are mathematically similar.\n    The ratio of the heights of the cups and the ratio of the depths of the drinks are both 4 : 5\n    The volume of drink in a regular size cup is 320 cm3.\n    What is the volume, in cm3, of drink in a large size cup?\n    A   384\n    B   400\n    C   500\n    D   576\n    E   625\n    F   640\n                                                 10\n\f                                                                                 PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q7",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 The mean of n numbers is p The mean of two of these numbers is q The mean of the remaining numbers is 10 Which of the following is a correct expression for n in terms of p and q ? 2( q − 10 )",
+      "has_diagram": false,
+      "options": {
+        "A": "( p − 10) 2( q − 10 )",
+        "B": "(10 − p ) 2( q − 10 )",
+        "C": "( p + 10 ) 2(10 − q )",
+        "D": "( p + 10 ) 2(10 + q )",
+        "E": "( p − 10 ) 2(10 + q )",
+        "F": "(10 − p )"
+      },
+      "correct_answer": "A",
+      "raw_text": "7   The mean of n numbers is p\n    The mean of two of these numbers is q\n    The mean of the remaining numbers is 10\n    Which of the following is a correct expression for n in terms of p and q ?\n         2( q − 10 )\n    A\n         ( p − 10)\n         2( q − 10 )\n    B\n         (10 − p )\n         2( q − 10 )\n    C\n         ( p + 10 )\n         2(10 − q )\n    D\n         ( p + 10 )\n         2(10 + q )\n    E\n         ( p − 10 )\n         2(10 + q )\n    F\n         (10 − p )",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q8",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 The straight lines 5x + 2y = 20 y = 3x – 23 x=0 enclose a region with area K square units. What is the value of K ?",
+      "has_diagram": false,
+      "options": {
+        "A": "39",
+        "B": "78",
+        "C": "99",
+        "D": "129",
+        "E": "198",
+        "F": "258 11 PART A Mathematics"
+      },
+      "correct_answer": "C",
+      "raw_text": "8   The straight lines\n                         5x + 2y = 20\n                               y = 3x – 23\n                               x=0\n    enclose a region with area K square units.\n    What is the value of K ?\n    A   39\n    B   78\n    C   99\n    D   129\n    E   198\n    F   258\n                                                 11\n\f                                                                               PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q9",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 A scale model of a cylindrical pillar is to be made. The full-sized pillar has a volume of 12π m3. The model will use a length scale of 1 : 40 4 The model is to be a solid cylinder made of a plastic which has a density of g cm–3. 3 What is the mass of the model in grams?",
+      "has_diagram": false,
+      "options": {
+        "A": "π 640 1",
+        "B": "π 40",
+        "C": "40π 1125",
+        "D": "π 8",
+        "E": "250π",
+        "F": "10 000π",
+        "G": "225 000π",
+        "H": "400 000π 12 PART A Mathematics"
+      },
+      "correct_answer": "E",
+      "raw_text": "9   A scale model of a cylindrical pillar is to be made.\n    The full-sized pillar has a volume of 12π m3.\n    The model will use a length scale of 1 : 40\n                                                                                   4\n    The model is to be a solid cylinder made of a plastic which has a density of     g cm–3.\n                                                                                   3\n    What is the mass of the model in grams?\n          9\n    A        π\n         640\n          1\n    B       π\n         40\n    C   40π\n         1125\n    D         π\n           8\n    E   250π\n    F   10 000π\n    G   225 000π\n    H   400 000π\n                                                    12\n\f                                                                        PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q10",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 P T U Q S R [diagram not to scale] PQRST is a regular pentagon. RSU is an equilateral triangle. What is the size of angle STU ?",
+      "has_diagram": false,
+      "options": {
+        "A": "48°",
+        "B": "54°",
+        "C": "60°",
+        "D": "66°",
+        "E": "84° 13 PART A Mathematics"
+      },
+      "correct_answer": "D",
+      "raw_text": "10                                                    P\n                                  T                   U             Q\n                                       S                        R\n                                           [diagram not to scale]\n     PQRST is a regular pentagon.\n     RSU is an equilateral triangle.\n     What is the size of angle STU ?\n     A   48°\n     B   54°\n     C   60°\n     D   66°\n     E   84°\n                                                 13\n\f                                                                                PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q11",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 The original price of an item is p The price is increased by 125% The increased price is then decreased by 40% to q The relationship between p and q can be expressed as mp = q What is the value of m ? 7",
+      "has_diagram": false,
+      "options": {
+        "A": "20 17",
+        "B": "20 27",
+        "C": "20 33",
+        "D": "20 37",
+        "E": "20"
+      },
+      "correct_answer": "C",
+      "raw_text": "11   The original price of an item is p\n     The price is increased by 125%\n     The increased price is then decreased by 40% to q\n     The relationship between p and q can be expressed as mp = q\n     What is the value of m ?\n           7\n     A\n          20\n          17\n     B\n          20\n          27\n     C\n          20\n          33\n     D\n          20\n          37\n     E\n          20",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q12",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 80% of a number is equal to two-thirds of a second number. The whole number ratio of the first number to the second number in its lowest terms is x : y What is the value of x – y ?",
+      "has_diagram": false,
+      "options": {
+        "A": "7",
+        "B": "2",
+        "C": "1",
+        "D": "0.2",
+        "E": "– 0.2",
+        "F": "–1",
+        "G": "–2",
+        "H": "–7 14 PART A Mathematics"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   80% of a number is equal to two-thirds of a second number.\n     The whole number ratio of the first number to the second number in its lowest terms is x : y\n     What is the value of x – y ?\n     A   7\n     B   2\n     C   1\n     D   0.2\n     E   – 0.2\n     F   –1\n     G   –2\n     H   –7\n                                                 14\n\f                                                                                PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q13",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 Q is 5 km away from P on a bearing of 065° R is 5 km away from Q on a bearing of 155° What is the bearing of P from R ?",
+      "has_diagram": false,
+      "options": {
+        "A": "070°",
+        "B": "110°",
+        "C": "225°",
+        "D": "270°",
+        "E": "290°",
+        "F": "315°",
+        "G": "335°"
+      },
+      "correct_answer": "E",
+      "raw_text": "13   Q is 5 km away from P on a bearing of 065°\n     R is 5 km away from Q on a bearing of 155°\n     What is the bearing of P from R ?\n     A   070°\n     B   110°\n     C   225°\n     D   270°\n     E   290°\n     F   315°\n     G   335°",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q14",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 With school lunch, students can select tomato sauce, or mayonnaise, or both, or neither. n students selected both. 3n + 1 students selected tomato sauce. 3n – 1 students selected only mayonnaise. There were 7n + 5 students in the group. 1 The probability of a student, chosen at random, selecting only mayonnaise is 3 By finding n, what is the probability of a student, chosen at random, selecting only tomato sauce? 3",
+      "has_diagram": false,
+      "options": {
+        "A": "11 7",
+        "B": "26 13",
+        "C": "33 3",
+        "D": "8 7",
+        "E": "13 15 PART A Mathematics"
+      },
+      "correct_answer": "A",
+      "raw_text": "14   With school lunch, students can select tomato sauce, or mayonnaise, or both, or neither.\n     n students selected both.\n     3n + 1 students selected tomato sauce.\n     3n – 1 students selected only mayonnaise.\n     There were 7n + 5 students in the group.\n                                                                                    1\n     The probability of a student, chosen at random, selecting only mayonnaise is\n                                                                                    3\n     By finding n, what is the probability of a student, chosen at random, selecting only tomato\n     sauce?\n         3\n     A\n         11\n          7\n     B\n         26\n         13\n     C\n         33\n         3\n     D\n         8\n          7\n     E\n         13\n                                                  15\n\f                                                                                 PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q15",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 R Q S O 75° P T [diagram not to scale] The line segment RT is a tangent at the point S to a circle with centre O Q and P are points on the circumference of the circle such that QS = QP Angle PST = 75° What is the size of angle QSO ?",
+      "has_diagram": false,
+      "options": {
+        "A": "15°",
+        "B": "30°",
+        "C": "37.5°",
+        "D": "45°",
+        "E": "52.5°",
+        "F": "60°",
+        "G": "67.5°",
+        "H": "75° 16 PART A Mathematics"
+      },
+      "correct_answer": "C",
+      "raw_text": "15                                     R\n                                                               Q\n                                       S               O\n                                           75°\n                                                           P\n                                       T\n                                           [diagram not to scale]\n     The line segment RT is a tangent at the point S to a circle with centre O\n     Q and P are points on the circumference of the circle such that QS = QP\n     Angle PST = 75°\n     What is the size of angle QSO ?\n     A   15°\n     B   30°\n     C   37.5°\n     D   45°\n     E   52.5°\n     F   60°\n     G   67.5°\n     H   75°\n                                                 16\n\f                                                                                 PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q16",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "s cm h cm b cm [diagram not to scale] The vertical height h cm of an isosceles triangle is 3 cm longer than the base length of b cm. The sloping side is of length s cm. The area of the triangle is 14 cm2. There is one value of s which satisfies these conditions. Within which range does this value of s lie?",
+      "has_diagram": false,
+      "options": {
+        "A": "5<s<6",
+        "B": "6<s<7",
+        "C": "7<s<8",
+        "D": "8<s<9",
+        "E": "9 < s < 10",
+        "F": "10 < s < 11 17 PART A Mathematics"
+      },
+      "correct_answer": "C",
+      "raw_text": "16\n                                           s cm                  h cm\n                                                     b cm\n                                           [diagram not to scale]\n     The vertical height h cm of an isosceles triangle is 3 cm longer than the base length of b cm.\n     The sloping side is of length s cm.\n     The area of the triangle is 14 cm2.\n     There is one value of s which satisfies these conditions.\n     Within which range does this value of s lie?\n     A   5<s<6\n     B   6<s<7\n     C   7<s<8\n     D   8<s<9\n     E   9 < s < 10\n     F   10 < s < 11\n                                                    17\n\f                                                                             PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q17",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 The first five terms of a sequence in order are: 2 17 42 77 122 The nth term of this sequence is pn 2 + q where p and q are integers. p−q What is the value of ? p+q 1",
+      "has_diagram": false,
+      "options": {
+        "A": "4 1",
+        "B": "2",
+        "C": "1 23",
+        "D": "13",
+        "E": "7",
+        "F": "2",
+        "G": "4",
+        "H": "14 18 PART A Mathematics"
+      },
+      "correct_answer": "G",
+      "raw_text": "17   The first five terms of a sequence in order are:\n                               2     17     42      77    122\n     The nth term of this sequence is pn 2 + q where p and q are integers.\n                            p−q\n     What is the value of       ?\n                            p+q\n          1\n     A\n          4\n          1\n     B\n          2\n     C   1\n          23\n     D\n          17\n         13\n     E\n          7\n     F   2\n     G   4\n     H   14\n                                                  18\n\f                                                                                    PART A Mathematics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q18",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A bag contains 6 red and 6 green sweets. The sweets are identical apart from their colour. PART B Physics",
+      "has_diagram": false,
+      "options": {
+        "A": "child takes a sweet at random from the bag. If the sweet is red, the child stops taking sweets. If the sweet is green, it is not replaced and the child takes another sweet. This continues until a red sweet is taken at which point the child stops taking sweets. What is the probability that the child takes more green sweets than red sweets? 3 22 5",
+        "B": "22 3",
+        "C": "11 1",
+        "D": "2 8",
+        "E": "11 17",
+        "F": "22 19 20 PART B Physics 21 PART B Physics"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   A bag contains 6 red and 6 green sweets. The sweets are identical apart from their colour.\n     A child takes a sweet at random from the bag.\n     If the sweet is red, the child stops taking sweets.\n     If the sweet is green, it is not replaced and the child takes another sweet.\n     This continues until a red sweet is taken at which point the child stops taking sweets.\n     What is the probability that the child takes more green sweets than red sweets?\n          3\n     A\n          22\n          5\n     B\n          22\n          3\n     C\n          11\n          1\n     D\n          2\n          8\n     E\n          11\n          17\n     F\n          22\n                                                  19\n\fBLANK PAGE\n    20\n\f                 PART B Physics\nPART B Physics\n      21\n\f                                                                                 PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q19",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 An unstable nucleus X becomes a stable nucleus Y after a succession of decays, during which a total of 5 alpha particles and 2 beta (β–) particles are emitted. How many fewer protons does nucleus Y contain than nucleus X?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "14",
+        "F": "16",
+        "G": "18",
+        "H": "20 22 PART B Physics"
+      },
+      "correct_answer": "B",
+      "raw_text": "19   An unstable nucleus X becomes a stable nucleus Y after a succession of decays, during which\n     a total of 5 alpha particles and 2 beta (β–) particles are emitted.\n     How many fewer protons does nucleus Y contain than nucleus X?\n     A   6\n     B   8\n     C   10\n     D   12\n     E   14\n     F   16\n     G   18\n     H   20\n                                              22\n\f                                                                                   PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q20",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 The diagram shows three resistors R1, R2 and R3 connected in series with a battery of constant voltage. The resistance of each resistor and the corresponding current are also shown. 0.20 A A R1 12 Ω R2 15 Ω R3 3.0 Ω Resistor R3 is now removed and the circuit is reconnected. What is the new current in the circuit?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.20 A",
+        "B": "0.22 A",
+        "C": "0.33 A",
+        "D": "0.40 A",
+        "E": "0.50 A",
+        "F": "2.0 A",
+        "G": "6.0 A 23 PART B Physics"
+      },
+      "correct_answer": "B",
+      "raw_text": "20   The diagram shows three resistors R1, R2 and R3 connected in series with a battery of constant\n     voltage. The resistance of each resistor and the corresponding current are also shown.\n                                               0.20 A\n                                                 A\n                                                        R1   12 Ω\n                                                        R2   15 Ω\n                                                        R3   3.0 Ω\n     Resistor R3 is now removed and the circuit is reconnected.\n     What is the new current in the circuit?\n     A   0.20 A\n     B   0.22 A\n     C   0.33 A\n     D   0.40 A\n     E   0.50 A\n     F   2.0 A\n     G   6.0 A\n                                                 23\n\f                                                                                 PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q21",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 When travelling in a vacuum, visible light has a wavelength between 400 nm and 700 nm. The speed of light in a vacuum is 3.0 × 108 m s–1. What can be concluded about ultraviolet radiation from this information?",
+      "has_diagram": false,
+      "options": {
+        "A": "It has a maximum frequency of 2.7 × 1014 Hz",
+        "B": "It has a maximum frequency of 4.3 × 1014 Hz",
+        "C": "It has a maximum frequency of 7.5 × 1014 Hz",
+        "D": "It has a maximum frequency of 1.0 × 1015 Hz",
+        "E": "It has a minimum frequency of 2.7 × 1014 Hz",
+        "F": "It has a minimum frequency of 4.3 × 1014 Hz",
+        "G": "It has a minimum frequency of 7.5 × 1014 Hz",
+        "H": "It has a minimum frequency of 1.0 × 1015 Hz 24 PART B Physics"
+      },
+      "correct_answer": "G",
+      "raw_text": "21   When travelling in a vacuum, visible light has a wavelength between 400 nm and 700 nm.\n     The speed of light in a vacuum is 3.0 × 108 m s–1.\n     What can be concluded about ultraviolet radiation from this information?\n     A   It has a maximum frequency of 2.7 × 1014 Hz\n     B   It has a maximum frequency of 4.3 × 1014 Hz\n     C   It has a maximum frequency of 7.5 × 1014 Hz\n     D   It has a maximum frequency of 1.0 × 1015 Hz\n     E   It has a minimum frequency of 2.7 × 1014 Hz\n     F   It has a minimum frequency of 4.3 × 1014 Hz\n     G   It has a minimum frequency of 7.5 × 1014 Hz\n     H   It has a minimum frequency of 1.0 × 1015 Hz\n                                                  24\n\f                                                                                     PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q22",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 The graph is the speed–time graph for a bus travelling in a straight line between two stops. speed / m s–1 14 12 10 8 6 4 2 0 0 10 20 30 40 50 60 70 80 90 100 110 120 time / s What is the average speed of the bus during this time?",
+      "has_diagram": false,
+      "options": {
+        "A": "3.0 m s–1",
+        "B": "4.5 m s–1",
+        "C": "6.0 m s–1",
+        "D": "8.0 m s–1",
+        "E": "9.0 m s–1",
+        "F": "11 m s–1",
+        "G": "12 m s–1 25 PART B Physics"
+      },
+      "correct_answer": "E",
+      "raw_text": "22   The graph is the speed–time graph for a bus travelling in a straight line between two stops.\n     speed / m s–1\n                     14\n                     12\n                     10\n                      8\n                      6\n                      4\n                      2\n                      0\n                          0      10   20   30   40   50    60   70   80     90    100    110    120\n                                                                                            time / s\n     What is the average speed of the bus during this time?\n     A               3.0 m s–1\n     B               4.5 m s–1\n     C               6.0 m s–1\n     D               8.0 m s–1\n     E               9.0 m s–1\n     F               11 m s–1\n     G               12 m s–1\n                                                      25\n\f                                                                                      PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q23",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 A filament lamp working at its operating voltage converts electrical energy at a rate of 100 W. The lamp has an efficiency of 5.0%. How much energy is wasted by the lamp in 10 minutes?",
+      "has_diagram": false,
+      "options": {
+        "A": "50 J",
+        "B": "950 J",
+        "C": "1000 J",
+        "D": "3000 J",
+        "E": "57 000 J",
+        "F": "60 000 J"
+      },
+      "correct_answer": "E",
+      "raw_text": "23   A filament lamp working at its operating voltage converts electrical energy at a rate of 100 W.\n     The lamp has an efficiency of 5.0%.\n     How much energy is wasted by the lamp in 10 minutes?\n     A   50 J\n     B   950 J\n     C   1000 J\n     D   3000 J\n     E   57 000 J\n     F   60 000 J",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q24",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 A student is investigating heat flow along a solid uniform metal bar. The bar has length l, cross-sectional area A, and has its ends maintained at temperatures T1 and T2 (where T1 > T2). Which relationship represents the rate of heat flow P along the bar? (Assume that there is no heat transfer through the sides of the bar.) (T1 − T2 )",
+      "has_diagram": false,
+      "options": {
+        "A": "P∝ Al (T1 + T2 )",
+        "B": "P∝ Al A (T1 − T2 )",
+        "C": "P∝ l A (T1 + T2 )",
+        "D": "P∝ l l",
+        "E": "P∝ A (T1 − T2 ) l",
+        "F": "P∝ A (T1 + T2 ) Al",
+        "G": "P∝ (T1 − T2 ) Al",
+        "H": "P∝ (T1 + T2 ) 26 PART B Physics"
+      },
+      "correct_answer": "C",
+      "raw_text": "24   A student is investigating heat flow along a solid uniform metal bar.\n     The bar has length l, cross-sectional area A, and has its ends maintained at temperatures\n     T1 and T2 (where T1 > T2).\n     Which relationship represents the rate of heat flow P along the bar?\n     (Assume that there is no heat transfer through the sides of the bar.)\n                (T1 − T2 )\n     A   P∝\n                    Al\n                (T1 + T2 )\n     B   P∝\n                    Al\n                A (T1 − T2 )\n     C   P∝\n                     l\n                A (T1 + T2 )\n     D   P∝\n                     l\n                     l\n     E   P∝\n                A (T1 − T2 )\n                     l\n     F   P∝\n                A (T1 + T2 )\n                    Al\n     G   P∝\n                (T1 − T2 )\n                    Al\n     H   P∝\n                (T1 + T2 )\n                                                 26\n\f                                                                                      PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q25",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 The potential difference across the motor in an electric car is 400 V and the current in the motor is 1250 A. The car accelerates along a horizontal road from rest for 4.0 s. The efficiency of the overall system is 45%. What is the kinetic energy of the car at the end of the 4.0 s? (Ignore energy losses due to air resistance and due to friction between the tyres and the road.)",
+      "has_diagram": false,
+      "options": {
+        "A": "225 000 J",
+        "B": "500 000 J",
+        "C": "900 000 J",
+        "D": "1 250 000 J",
+        "E": "2 000 000 J"
+      },
+      "correct_answer": "C",
+      "raw_text": "25   The potential difference across the motor in an electric car is 400 V and the current in the motor\n     is 1250 A.\n     The car accelerates along a horizontal road from rest for 4.0 s.\n     The efficiency of the overall system is 45%.\n     What is the kinetic energy of the car at the end of the 4.0 s?\n     (Ignore energy losses due to air resistance and due to friction between the tyres and the road.)\n     A   225 000 J\n     B   500 000 J\n     C   900 000 J\n     D   1 250 000 J\n     E   2 000 000 J",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q26",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 The momentum of a small object moving in a straight line is 24 kg m s–1 and its kinetic energy is 96 J. What is the mass of the object?",
+      "has_diagram": false,
+      "options": {
+        "A": "3.0 kg",
+        "B": "4.0 kg",
+        "C": "6.0 kg",
+        "D": "8.0 kg",
+        "E": "12 kg 27 PART B Physics"
+      },
+      "correct_answer": "A",
+      "raw_text": "26   The momentum of a small object moving in a straight line is 24 kg m s–1 and its kinetic energy\n     is 96 J.\n     What is the mass of the object?\n     A   3.0 kg\n     B   4.0 kg\n     C   6.0 kg\n     D   8.0 kg\n     E   12 kg\n                                                    27\n\f                                                                                                            PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q27",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 A radioactive isotope decays in a single step to a stable isotope.",
+      "has_diagram": true,
+      "options": {
+        "A": "20 40",
+        "B": "20 50",
+        "C": "20 60",
+        "D": "20 65",
+        "E": "120 40",
+        "F": "120 50",
+        "G": "120 60",
+        "H": "120 65 28 PART B Physics"
+      },
+      "correct_answer": "A",
+      "raw_text": "27   A radioactive isotope decays in a single step to a stable isotope.\n     A radiation detector is placed very near to a sample of the radioactive isotope in a laboratory.\n     The count rate on the detector changes as time elapses. The graph shows how the measured\n     count rate changes with time.\n                                                120\n               count rate / counts per minute\n                                                100\n                                                80\n                                                60\n                                                40\n                                                20\n                                                 0\n                                                      0   50   100    150      200     250   300      350     400\n                                                                                                   time / minutes\n     What is the background count rate and what is the half-life of the isotope?\n          background count rate                                 half-life of isotope\n           / counts per minute                                       / minutes\n     A                                           20                     40\n     B                                           20                     50\n     C                                           20                     60\n     D                                           20                     65\n     E                                          120                     40\n     F                                          120                     50\n     G                                          120                     60\n     H                                          120                     65\n                                                                         28\n\f                                                                                         PART B Physics",
+      "diagram_images": [
+        "NSAA-2018-S1-Q27-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q28",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 A rock falling vertically experiences an air resistance force of 12 N at an instant when its acceleration is 2.0 m s–2 downwards. What is the mass of the rock? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "1.0 kg",
+        "B": "1.2 kg",
+        "C": "1.5 kg",
+        "D": "6.0 kg",
+        "E": "10 kg",
+        "F": "12 kg",
+        "G": "15 kg",
+        "H": "60 kg"
+      },
+      "correct_answer": "C",
+      "raw_text": "28   A rock falling vertically experiences an air resistance force of 12 N at an instant when its\n     acceleration is 2.0 m s–2 downwards.\n     What is the mass of the rock?\n     (gravitational field strength = 10 N kg–1)\n     A   1.0 kg\n     B   1.2 kg\n     C   1.5 kg\n     D   6.0 kg\n     E   10 kg\n     F   12 kg\n     G   15 kg\n     H   60 kg",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q29",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 A transverse wave with an amplitude of 4.0 cm and a frequency of 10 Hz travels along a rope at a speed of 2.4 m s–1. What is the total distance travelled by a particle in the rope in a time of 20 s?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.4 m",
+        "B": "4.8 m",
+        "C": "8.0 m",
+        "D": "16 m",
+        "E": "32 m",
+        "F": "48 m PART B Physics"
+      },
+      "correct_answer": "E",
+      "raw_text": "29   A transverse wave with an amplitude of 4.0 cm and a frequency of 10 Hz travels along a rope at\n     a speed of 2.4 m s–1.\n     What is the total distance travelled by a particle in the rope in a time of 20 s?\n     A   2.4 m\n     B   4.8 m\n     C   8.0 m\n     D   16 m\n     E   32 m\n     F   48 m\n                                                   29\n\f                                                                                    PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q30",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 A student places a measuring cylinder on a balance. She pours a volume V of water into the measuring cylinder, and finds that the mass of the measuring cylinder and water together is 290 g. She then empties the measuring cylinder and dries it before putting it back on the balance. She now pours the same volume V of olive oil into the measuring cylinder, and finds that the mass of the measuring cylinder and olive oil together is 270 g. What is the mass of the measuring cylinder? (densities: olive oil = 0.90 g cm–3; water = 1.0 g cm–3)",
+      "has_diagram": false,
+      "options": {
+        "A": "18 g",
+        "B": "20 g",
+        "C": "90 g",
+        "D": "180 g",
+        "E": "200 g PART B Physics"
+      },
+      "correct_answer": "C",
+      "raw_text": "30   A student places a measuring cylinder on a balance. She pours a volume V of water into the\n     measuring cylinder, and finds that the mass of the measuring cylinder and water together is\n     290 g.\n     She then empties the measuring cylinder and dries it before putting it back on the balance.\n     She now pours the same volume V of olive oil into the measuring cylinder, and finds that the\n     mass of the measuring cylinder and olive oil together is 270 g.\n     What is the mass of the measuring cylinder?\n     (densities: olive oil = 0.90 g cm–3; water = 1.0 g cm–3)\n     A   18 g\n     B   20 g\n     C   90 g\n     D   180 g\n     E   200 g\n                                                    30\n\f                                                                                            PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q31",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 A skydiver of weight 1000 N falls vertically. The distance–time graph for the skydiver is shown below. distance / m 500 400 300 200 100 0 0 1 2 3 4 5 6 7 8 9 10 11 12 time / s The air resistance F (in N) acting on the skydiver travelling at velocity v (in m s–1) is given by the equation F = k v2 where k (in N m–2 s2) is a constant. What is the numerical value of k for the skydiver?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.050",
+        "B": "0.40",
+        "C": "0.63",
+        "D": "2.5",
+        "E": "20 PART B Physics"
+      },
+      "correct_answer": "B",
+      "raw_text": "31   A skydiver of weight 1000 N falls vertically.\n     The distance–time graph for the skydiver is shown below.\n     distance / m\n                    500\n                    400\n                    300\n                    200\n                    100\n                      0\n                          0   1   2   3   4    5       6        7   8     9     10     11       12\n                                                                                            time / s\n     The air resistance F (in N) acting on the skydiver travelling at velocity v (in m s–1) is given by the\n     equation\n                                                     F = k v2\n     where k (in N m–2 s2) is a constant.\n     What is the numerical value of k for the skydiver?\n     A              0.050\n     B              0.40\n     C              0.63\n     D              2.5\n     E              20\n                                                     31\n\f                                                                                     PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q32",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 A source generates water waves of fixed frequency that have a wavelength of 1.5 cm. As they cross a boundary into shallower water their frequency does not change, but their speed is reduced by 18 cm s–1. The new wavelength is 1.2 cm. What is the speed of the waves in the shallower water?",
+      "has_diagram": false,
+      "options": {
+        "A": "42 cm s–1",
+        "B": "50 cm s–1",
+        "C": "54 cm s–1",
+        "D": "60 cm s–1",
+        "E": "72 cm s–1",
+        "F": "90 cm s–1"
+      },
+      "correct_answer": "E",
+      "raw_text": "32   A source generates water waves of fixed frequency that have a wavelength of 1.5 cm.\n     As they cross a boundary into shallower water their frequency does not change, but their speed\n     is reduced by 18 cm s–1.\n     The new wavelength is 1.2 cm.\n     What is the speed of the waves in the shallower water?\n     A   42 cm s–1\n     B   50 cm s–1\n     C   54 cm s–1\n     D   60 cm s–1\n     E   72 cm s–1\n     F   90 cm s–1",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q33",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 A neutron is absorbed by a uranium-235 ( 235 92U ) nuclide. The resulting nuclide undergoes fission to produce a bromine-88 ( 88 35Br ) nuclide, a lanthanum-145 nuclide and some neutrons. The lanthanum-145 nuclide is radioactive and emits a beta (β–) particle. How many neutrons are emitted in the fission reaction and how many protons are there in the nuclide formed by the decay of lanthanum-145? neutrons protons",
+      "has_diagram": true,
+      "options": {
+        "A": "2 55",
+        "B": "2 56",
+        "C": "2 57",
+        "D": "2 58",
+        "E": "3 55",
+        "F": "3 56",
+        "G": "3 57",
+        "H": "3 58 32 PART B Physics"
+      },
+      "correct_answer": "H",
+      "raw_text": "33   A neutron is absorbed by a uranium-235 ( 235\n                                               92U ) nuclide.\n     The resulting nuclide undergoes fission to produce a bromine-88 ( 88\n                                                                       35Br ) nuclide,\n     a lanthanum-145 nuclide and some neutrons.\n     The lanthanum-145 nuclide is radioactive and emits a beta (β–) particle.\n     How many neutrons are emitted in the fission reaction and how many protons are there in the\n     nuclide formed by the decay of lanthanum-145?\n               neutrons                protons\n     A               2                    55\n     B               2                    56\n     C               2                    57\n     D               2                    58\n     E               3                    55\n     F               3                    56\n     G               3                    57\n     H               3                    58\n                                                 32\n\f                                                                                     PART B Physics",
+      "diagram_images": [
+        "NSAA-2018-S1-Q33-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q34",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 The diagram shows a circuit containing a battery and three identical resistors X, Y and Z. X Y Z The total power supplied by the battery is 18 W. What is the power dissipated as heat in resistor X?",
+      "has_diagram": false,
+      "options": {
+        "A": "1.5 W",
+        "B": "2.0 W",
+        "C": "3.0 W",
+        "D": "4.5 W",
+        "E": "6.0 W",
+        "F": "8.0 W",
+        "G": "12 W 33 PART B Physics"
+      },
+      "correct_answer": "C",
+      "raw_text": "34   The diagram shows a circuit containing a battery and three identical resistors X, Y and Z.\n                                         X\n                                         Y                      Z\n     The total power supplied by the battery is 18 W.\n     What is the power dissipated as heat in resistor X?\n     A   1.5 W\n     B   2.0 W\n     C   3.0 W\n     D   4.5 W\n     E   6.0 W\n     F   8.0 W\n     G   12 W\n                                                 33\n\f                                                                                        PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q35",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 A filament lamp and a 0 -10 Ω variable resistor are connected in series with a power supply of constant voltage. The graph shows the voltage–current (V–I) characteristic of the filament lamp. 25 V/V 20 15 10 5 0 0.0 1.0 2.0 3.0 4.0 I/A When the resistance of the variable resistor is 4.0 Ω, the current in the lamp is 2.0 A. What is the power dissipated in the lamp when the resistance of the variable resistor is zero?",
+      "has_diagram": false,
+      "options": {
+        "A": "12 W",
+        "B": "14 W",
+        "C": "16 W",
+        "D": "28 W",
+        "E": "42 W",
+        "F": "96 W 34 PART B Physics"
+      },
+      "correct_answer": "E",
+      "raw_text": "35   A filament lamp and a 0 -10 Ω variable resistor are connected in series with a power supply of\n     constant voltage.\n     The graph shows the voltage–current (V–I) characteristic of the filament lamp.\n                                       25\n                                 V/V\n                                       20\n                                       15\n                                       10\n                                        5\n                                        0\n                                         0.0     1.0    2.0     3.0    4.0\n                                                                      I/A\n     When the resistance of the variable resistor is 4.0 Ω, the current in the lamp is 2.0 A.\n     What is the power dissipated in the lamp when the resistance of the variable resistor is zero?\n     A   12 W\n     B   14 W\n     C   16 W\n     D   28 W\n     E   42 W\n     F   96 W\n                                                  34\n\f                                                                                      PART B Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q36",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 Three detectors X, Y and Z are separated by large distances. Each of the detectors records a seismic wave from the same earthquake whose epicentre (source) is very close to the surface of the Earth. The wave travels out from the epicentre at 4.0 km s–1. Detectors X and Y start to detect the wave at the same time, but detector Z starts to detect it one minute later. Which of the following statements must be correct? 1 The epicentre is at the midpoint of the line XY. 2 Z is equidistant from X and Y. 3 Z is no more than 240 km away from X and from Y. PART C Chemistry",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 35 PART C Chemistry 37 PART C Chemistry"
+      },
+      "correct_answer": "A",
+      "raw_text": "36   Three detectors X, Y and Z are separated by large distances.\n     Each of the detectors records a seismic wave from the same earthquake whose epicentre\n     (source) is very close to the surface of the Earth.\n     The wave travels out from the epicentre at 4.0 km s–1.\n     Detectors X and Y start to detect the wave at the same time, but detector Z starts to detect it\n     one minute later.\n     Which of the following statements must be correct?\n           1   The epicentre is at the midpoint of the line XY.\n           2   Z is equidistant from X and Y.\n           3   Z is no more than 240 km away from X and from Y.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 35\n\fBLANK PAGE\n    36\n\f                   PART C Chemistry\nPART C Chemistry\n       37\n\f                                                                                   PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q37",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 Which row in the following table gives the numbers of protons, neutrons and 64 2+ electrons in 29 Cu ? number of protons number of neutrons number of electrons",
+      "has_diagram": false,
+      "options": {
+        "A": "27 33 27",
+        "B": "27 35 29",
+        "C": "29 35 27",
+        "D": "29 35 29",
+        "E": "31 33 29",
+        "F": "31 35 29"
+      },
+      "correct_answer": "C",
+      "raw_text": "37   Which row in the following table gives the numbers of protons, neutrons and\n                  64     2+\n     electrons in 29 Cu ?\n          number of protons        number of neutrons    number of electrons\n     A             27                     33                       27\n     B             27                     35                       29\n     C             29                     35                       27\n     D             29                     35                       29\n     E             31                     33                       29\n     F             31                     35                       29",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q38",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 The following exothermic reaction reaches equilibrium at room temperature. C2H5OH(l) + CH3COOH(l) ⇌ CH3COOC2H5(l) + H2O(l) Which of the following changes, when applied independently, will alter the position of the equilibrium? 1 increasing the temperature by 25 °C 2 adding 20 cm3 of water to the equilibrium mixture 3 adding a catalyst 4 adding an extra 0.5 mol of ethanol (C2H5OH)",
+      "has_diagram": false,
+      "options": {
+        "A": "1 only",
+        "B": "1 and 3 only",
+        "C": "1, 2 and 4 only",
+        "D": "2 and 4 only",
+        "E": "1, 2, 3 and 4 PART C Chemistry"
+      },
+      "correct_answer": "C",
+      "raw_text": "38   The following exothermic reaction reaches equilibrium at room temperature.\n                          C2H5OH(l) + CH3COOH(l) ⇌ CH3COOC2H5(l) + H2O(l)\n     Which of the following changes, when applied independently, will alter the position of the\n     equilibrium?\n          1    increasing the temperature by 25 °C\n          2    adding 20 cm3 of water to the equilibrium mixture\n          3    adding a catalyst\n          4    adding an extra 0.5 mol of ethanol (C2H5OH)\n     A   1 only\n     B   1 and 3 only\n     C   1, 2 and 4 only\n     D   2 and 4 only\n     E   1, 2, 3 and 4\n                                                 38\n\f                                                                                    PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q39",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 What is the overall process that takes place at the cathode (negative electrode) in the electrolysis of dilute aqueous sodium sulfate?",
+      "has_diagram": false,
+      "options": {
+        "A": "2H+ + 2e– → H2",
+        "B": "2O2– → O2 + 4e–",
+        "C": "4OH– → O2 + 2H2O + 4e–",
+        "D": "Na+ + e– → Na",
+        "E": "SO42– → SO2 + O2 + 2e–"
+      },
+      "correct_answer": "A",
+      "raw_text": "39   What is the overall process that takes place at the cathode (negative electrode) in the\n     electrolysis of dilute aqueous sodium sulfate?\n     A   2H+ + 2e– → H2\n     B   2O2– → O2 + 4e–\n     C   4OH– → O2 + 2H2O + 4e–\n     D   Na+ + e– → Na\n     E   SO42– → SO2 + O2 + 2e–",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q40",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 A mass spectrum of a sample of element X with atomic number 5 is shown. Using the data, which row in the following table best describes the position of X in the Periodic Table and the relative atomic mass of this sample of X? Period Group relative atomic mass",
+      "has_diagram": true,
+      "options": {
+        "A": "1 15 10.2",
+        "B": "1 15 10.8",
+        "C": "2 13 10.2",
+        "D": "2 13 10.8",
+        "E": "3 2 10.2",
+        "F": "3 2 10.8 39 PART C Chemistry"
+      },
+      "correct_answer": "D",
+      "raw_text": "40   A mass spectrum of a sample of element X with atomic number 5 is shown.\n     Using the data, which row in the following table best describes the position of X in the\n     Periodic Table and the relative atomic mass of this sample of X?\n                 Period                  Group           relative atomic mass\n     A             1                       15                     10.2\n     B             1                       15                     10.8\n     C             2                       13                     10.2\n     D             2                       13                     10.8\n     E             3                       2                      10.2\n     F             3                       2                      10.8\n                                                 39\n\f                                                                                   PART C Chemistry",
+      "diagram_images": [
+        "NSAA-2018-S1-Q40-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q41",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 41,
+      "question_text": "41 The gases nitrogen, oxygen and argon can be separated from liquefied air by fractional distillation. Given the data in the table, in which order would the gases be collected? melting point / °C boiling point / °C nitrogen – 210 – 196 oxygen – 218 – 183 argon – 189 – 186",
+      "has_diagram": true,
+      "options": {
+        "A": "nitrogen, oxygen, argon",
+        "B": "nitrogen, argon, oxygen",
+        "C": "oxygen, nitrogen, argon",
+        "D": "oxygen, argon, nitrogen",
+        "E": "argon, nitrogen, oxygen",
+        "F": "argon, oxygen, nitrogen"
+      },
+      "correct_answer": "B",
+      "raw_text": "41   The gases nitrogen, oxygen and argon can be separated from liquefied air by fractional\n     distillation.\n     Given the data in the table, in which order would the gases be collected?\n                                          melting point / °C        boiling point / °C\n                    nitrogen                    – 210                     – 196\n                     oxygen                     – 218                     – 183\n                     argon                      – 189                     – 186\n     A   nitrogen, oxygen, argon\n     B   nitrogen, argon, oxygen\n     C   oxygen, nitrogen, argon\n     D   oxygen, argon, nitrogen\n     E   argon, nitrogen, oxygen\n     F   argon, oxygen, nitrogen",
+      "diagram_images": [
+        "NSAA-2018-S1-Q41-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q42",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 42,
+      "question_text": "42 Concentrated aqueous sodium chloride was electrolysed. After a few minutes, the remaining electrolyte solution was tested with a pH probe at 25 °C. The gases produced at the electrodes were collected and tested with a colourless aqueous solution of sodium bromide. Which row in the following table best describes the observations in these tests? pH of the remaining test of gas from anode test of gas from cathode solution (positive electrode) (negative electrode)",
+      "has_diagram": true,
+      "options": {
+        "A": "2 no observable change no observable change",
+        "B": "2 no observable change orange solution forms",
+        "C": "7 orange solution forms no observable change",
+        "D": "7 orange solution forms orange solution forms",
+        "E": "12 orange solution forms no observable change",
+        "F": "12 no observable change orange solution forms 40 PART C Chemistry"
+      },
+      "correct_answer": "E",
+      "raw_text": "42   Concentrated aqueous sodium chloride was electrolysed. After a few minutes, the remaining\n     electrolyte solution was tested with a pH probe at 25 °C.\n     The gases produced at the electrodes were collected and tested with a colourless aqueous\n     solution of sodium bromide.\n     Which row in the following table best describes the observations in these tests?\n            pH of the remaining       test of gas from anode     test of gas from cathode\n                  solution              (positive electrode)       (negative electrode)\n     A               2                no observable change        no observable change\n     B               2                no observable change        orange solution forms\n     C               7                orange solution forms       no observable change\n     D               7                orange solution forms       orange solution forms\n     E              12                orange solution forms       no observable change\n     F              12                no observable change        orange solution forms\n                                                40\n\f                                                                                   PART C Chemistry",
+      "diagram_images": [
+        "NSAA-2018-S1-Q42-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q43",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 43,
+      "question_text": "43 The following equations show the main reactions that take place in a blast furnace during the extraction of iron and the removal of the impurities: C + O2 → CO2 CO2 + C → 2CO Fe2O3 + 3CO → 2Fe + 3CO2 CaCO3 → CaO + CO2 CaO + SiO2 → CaSiO3 Which row in the following table correctly identifies whether the underlined substance is oxidised, or reduced, or neither? CO2 CaCO3 CaO",
+      "has_diagram": true,
+      "options": {
+        "A": "oxidised reduced neither",
+        "B": "oxidised neither neither",
+        "C": "oxidised reduced oxidised",
+        "D": "oxidised neither oxidised",
+        "E": "reduced reduced neither",
+        "F": "reduced neither neither",
+        "G": "reduced reduced oxidised",
+        "H": "reduced neither oxidised"
+      },
+      "correct_answer": "F",
+      "raw_text": "43   The following equations show the main reactions that take place in a blast furnace during the\n     extraction of iron and the removal of the impurities:\n                        C + O2 → CO2\n                        CO2 + C → 2CO\n                        Fe2O3 + 3CO → 2Fe + 3CO2\n                        CaCO3 → CaO + CO2\n                        CaO + SiO2 → CaSiO3\n     Which row in the following table correctly identifies whether the underlined substance is\n     oxidised, or reduced, or neither?\n                  CO2                   CaCO3                    CaO\n     A         oxidised                reduced                  neither\n     B         oxidised                 neither                 neither\n     C         oxidised                reduced                 oxidised\n     D         oxidised                 neither                oxidised\n     E          reduced                reduced                  neither\n     F          reduced                 neither                 neither\n     G          reduced                reduced                 oxidised\n     H          reduced                 neither                oxidised",
+      "diagram_images": [
+        "NSAA-2018-S1-Q43-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q44",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 44,
+      "question_text": "44 X, Y and Z have the same electron configuration. X is an atom, Y is a monatomic anion and Z is a monatomic cation. Which of the following statements is always correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "Anion Y has fewer protons than atom X.",
+        "B": "Cation Z has more electrons than protons.",
+        "C": "X, Y and Z are in the same group of the Periodic Table.",
+        "D": "X, Y and Z have consecutive atomic numbers.",
+        "E": "X, Y and Z have the same mass number. 41 PART C Chemistry"
+      },
+      "correct_answer": "A",
+      "raw_text": "44   X, Y and Z have the same electron configuration.\n     X is an atom, Y is a monatomic anion and Z is a monatomic cation.\n     Which of the following statements is always correct?\n     A   Anion Y has fewer protons than atom X.\n     B   Cation Z has more electrons than protons.\n     C   X, Y and Z are in the same group of the Periodic Table.\n     D   X, Y and Z have consecutive atomic numbers.\n     E   X, Y and Z have the same mass number.\n                                                  41\n\f                                                                                    PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q45",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 45,
+      "question_text": "45 In the Contact process, sulfur dioxide reacts with oxygen to make sulfur trioxide in a reversible reaction. 1 SO2(g) + O2(g) ⇌ SO3(g) 2 When 5.00 mol of SO2 and 11.0 mol of O2 are allowed to reach equilibrium at 450 °C, 80.0% of the SO2 is converted to SO3. What is the volume of the resulting mixture? (Assume that temperature and pressure are constant, and that at this temperature the volume of one mole of gas is 60.0 dm3.)",
+      "has_diagram": false,
+      "options": {
+        "A": "240 dm3",
+        "B": "336 dm3",
+        "C": "600 dm3",
+        "D": "720 dm3",
+        "E": "840 dm3",
+        "F": "960 dm3 42 PART C Chemistry"
+      },
+      "correct_answer": "E",
+      "raw_text": "45   In the Contact process, sulfur dioxide reacts with oxygen to make sulfur trioxide in a reversible\n     reaction.\n                                                    1\n                                      SO2(g) +        O2(g) ⇌ SO3(g)\n                                                    2\n     When 5.00 mol of SO2 and 11.0 mol of O2 are allowed to reach equilibrium at 450 °C, 80.0% of\n     the SO2 is converted to SO3.\n     What is the volume of the resulting mixture?\n     (Assume that temperature and pressure are constant, and that at this temperature the volume\n     of one mole of gas is 60.0 dm3.)\n     A   240 dm3\n     B   336 dm3\n     C   600 dm3\n     D   720 dm3\n     E   840 dm3\n     F   960 dm3\n                                                 42\n\f                                                                                      PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q46",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 46,
+      "question_text": "46 The non-metallic element phosphorus forms two stable chlorides: PCl 3 (boiling point 76 °C) and PCl 5 (boiling point 161 °C). Which of the following statements explain(s) the difference in boiling points? 1 There are more covalent bonds in PCl 5 so more energy is required to break them. 2 The forces between the molecules in liquid PCl 5 are stronger. 3 The covalent bonds in PCl 3 are weaker so less energy is required to break them.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "C",
+      "raw_text": "46   The non-metallic element phosphorus forms two stable chlorides: PCl 3 (boiling point 76 °C) and\n     PCl 5 (boiling point 161 °C).\n     Which of the following statements explain(s) the difference in boiling points?\n          1    There are more covalent bonds in PCl 5 so more energy is required to break them.\n          2    The forces between the molecules in liquid PCl 5 are stronger.\n          3    The covalent bonds in PCl 3 are weaker so less energy is required to break them.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q47",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 47,
+      "question_text": "47 A student calculated the mass of anhydrous copper(II) sulfate (CuSO4) required to make 250 cm3 of an aqueous solution of concentration 0.200 mol dm–3. However, the student mistakenly made the solution using the same mass of hydrated copper(II) sulfate (CuSO4·5H2O) instead. What is the concentration, in mol dm–3, of the solution made with the hydrated copper(II) sulfate? (Ar values: Cu = 64; S = 32; O = 16; H = 1.0)",
+      "has_diagram": false,
+      "options": {
+        "A": "0.128 mol dm–3",
+        "B": "0.160 mol dm–3",
+        "C": "0.180 mol dm–3",
+        "D": "0.200 mol dm–3",
+        "E": "0.223 mol dm–3",
+        "F": "0.313 mol dm–3 43 PART C Chemistry"
+      },
+      "correct_answer": "A",
+      "raw_text": "47   A student calculated the mass of anhydrous copper(II) sulfate (CuSO4) required to make\n     250 cm3 of an aqueous solution of concentration 0.200 mol dm–3.\n     However, the student mistakenly made the solution using the same mass of hydrated\n     copper(II) sulfate (CuSO4·5H2O) instead.\n     What is the concentration, in mol dm–3, of the solution made with the hydrated\n     copper(II) sulfate?\n     (Ar values: Cu = 64; S = 32; O = 16; H = 1.0)\n     A   0.128 mol dm–3\n     B   0.160 mol dm–3\n     C   0.180 mol dm–3\n     D   0.200 mol dm–3\n     E   0.223 mol dm–3\n     F   0.313 mol dm–3\n                                                 43\n\f                                                                                   PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q48",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 48,
+      "question_text": "48 Bromine is an element in Group 17 of the Periodic Table. Which of the following statements is/are correct about the element bromine? 1 Bromine will oxidise chloride ions in aqueous solution to form chlorine. 2 Bromine has a lower boiling point than chlorine. 3 Bromine reacts with calcium (Group 2) to form a compound containing 80% bromine by mass. (Ar values: Cl = 35.5; Ca = 40; Br = 80)",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 44 PART C Chemistry"
+      },
+      "correct_answer": "D",
+      "raw_text": "48   Bromine is an element in Group 17 of the Periodic Table.\n     Which of the following statements is/are correct about the element bromine?\n          1    Bromine will oxidise chloride ions in aqueous solution to form chlorine.\n          2    Bromine has a lower boiling point than chlorine.\n          3    Bromine reacts with calcium (Group 2) to form a compound containing 80% bromine\n               by mass.\n     (Ar values: Cl = 35.5; Ca = 40; Br = 80)\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 44\n\f                                                                                 PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q49",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 49,
+      "question_text": "49 Paper chromatography was used to separate three mixtures of amino acids. The mixtures were labelled P, Q and R. Each mixture contains some of the five amino acids in the following table. The Rf values were measured for each amino acid with the solvent used to produce the chromatogram. amino acid Rf value asparagine 0.50 glutamic acid 0.30 glycine 0.26 leucine 0.71 valine 0.61 Which of the following statements is/are correct? 1 Mixture P contains valine and glycine. 2 Leucine is found in all three mixtures. 3 Glutamic acid is the least mobile amino acid with this solvent. 4 Mixtures P and Q both contain asparagine.",
+      "has_diagram": false,
+      "options": {
+        "A": "1 and 2 only",
+        "B": "1 and 4 only",
+        "C": "2 and 3 only",
+        "D": "3 only",
+        "E": "4 only 45 PART C Chemistry"
+      },
+      "correct_answer": "B",
+      "raw_text": "49   Paper chromatography was used to separate three mixtures of amino acids. The mixtures were\n     labelled P, Q and R.\n     Each mixture contains some of the five amino acids in the following table. The Rf values were\n     measured for each amino acid with the solvent used to produce the chromatogram.\n                                 amino acid                     Rf value\n                                 asparagine                       0.50\n                                glutamic acid                     0.30\n                                   glycine                        0.26\n                                   leucine                        0.71\n                                    valine                        0.61\n     Which of the following statements is/are correct?\n          1    Mixture P contains valine and glycine.\n          2    Leucine is found in all three mixtures.\n          3    Glutamic acid is the least mobile amino acid with this solvent.\n          4    Mixtures P and Q both contain asparagine.\n     A   1 and 2 only\n     B   1 and 4 only\n     C   2 and 3 only\n     D   3 only\n     E   4 only\n                                                 45\n\f                                                                                    PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q50",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 50,
+      "question_text": "50 Dilute hydrochloric acid and magnesium were mixed and the total volume of gas released was measured over time. volume 40 of gas / cm3 32 24 16 8 0 0 1 2 3 4 5 6 7 8 9 10 time / s What is the average rate of reaction, in g s–1, with respect to the magnesium over the first two seconds? (Ar value: Mg = 24. Assume that the volume of one mole of gas is 24 dm3.)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.012 g s–1",
+        "B": "0.024 g s–1",
+        "C": "0.048 g s–1",
+        "D": "12 g s–1",
+        "E": "24 g s–1",
+        "F": "48 g s–1 46 PART C Chemistry"
+      },
+      "correct_answer": "A",
+      "raw_text": "50   Dilute hydrochloric acid and magnesium were mixed and the total volume of gas released was\n     measured over time.\n               volume 40\n                of gas\n                / cm3 32\n                       24\n                       16\n                         8\n                         0\n                             0   1    2     3     4     5     6     7     8     9      10\n                                                                                    time / s\n     What is the average rate of reaction, in g s–1, with respect to the magnesium over the\n     first two seconds?\n     (Ar value: Mg = 24. Assume that the volume of one mole of gas is 24 dm3.)\n     A   0.012 g s–1\n     B   0.024 g s–1\n     C   0.048 g s–1\n     D   12 g s–1\n     E   24 g s–1\n     F   48 g s–1\n                                                 46\n\f                                                                                   PART C Chemistry",
+      "diagram_images": [
+        "NSAA-2018-S1-Q50-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q51",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 51,
+      "question_text": "51 Copper can react with concentrated nitric acid to form the gas nitrogen monoxide. 3Cu + a HNO3 → b Cu(NO3)2 + c H2O + d NO What is the value of a when the equation is balanced?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10",
+        "F": "11",
+        "G": "12"
+      },
+      "correct_answer": "C",
+      "raw_text": "51   Copper can react with concentrated nitric acid to form the gas nitrogen monoxide.\n                            3Cu + a HNO3 → b Cu(NO3)2 + c H2O + d NO\n     What is the value of a when the equation is balanced?\n     A   6\n     B   7\n     C   8\n     D   9\n     E   10\n     F   11\n     G   12",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q52",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 52,
+      "question_text": "52 A small amount of a solid mixture, containing calcium carbonate and an inert substance, was added to 50.00 cm3 dilute hydrochloric acid of concentration 0.1000 mol dm–3. CaCO3 + 2HCl → CaCl2 + CO2 + H2O After all of the calcium carbonate had reacted, the solution was heated to drive off the carbon dioxide. The resulting solution was neutralised by 12.50 cm3 of 0.1000 mol dm–3 sodium hydroxide solution. What was the mass of calcium carbonate in the mixture added to the hydrochloric acid? (Mr value: CaCO3 = 100.0)",
+      "has_diagram": false,
+      "options": {
+        "A": "0.06250 g",
+        "B": "0.1250 g",
+        "C": "0.1875 g",
+        "D": "0.3750 g",
+        "E": "0.6250 g",
+        "F": "0.7500 g 47 PART C Chemistry"
+      },
+      "correct_answer": "C",
+      "raw_text": "52   A small amount of a solid mixture, containing calcium carbonate and an inert substance, was\n     added to 50.00 cm3 dilute hydrochloric acid of concentration 0.1000 mol dm–3.\n                               CaCO3 + 2HCl → CaCl2 + CO2 + H2O\n     After all of the calcium carbonate had reacted, the solution was heated to drive off the carbon\n     dioxide.\n     The resulting solution was neutralised by 12.50 cm3 of 0.1000 mol dm–3 sodium hydroxide\n     solution.\n     What was the mass of calcium carbonate in the mixture added to the hydrochloric acid?\n     (Mr value: CaCO3 = 100.0)\n     A   0.06250 g\n     B   0.1250 g\n     C   0.1875 g\n     D   0.3750 g\n     E   0.6250 g\n     F   0.7500 g\n                                                 47\n\f                                                                                 PART C Chemistry",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q53",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 53,
+      "question_text": "53 2.80 g of lithium metal is placed in a closed system with 1.20 dm3 of pure oxygen gas (volume measured at room temperature and pressure). If a complete reaction occurs between the lithium and the oxygen, what is the maximum mass of lithium oxide that can be formed? (Ar values: Li = 7; O = 16. Assume that one mole of gas occupies 24.0 dm3 at room temperature and pressure.)",
+      "has_diagram": false,
+      "options": {
+        "A": "1.50 g",
+        "B": "3.00 g",
+        "C": "3.90 g",
+        "D": "4.60 g",
+        "E": "6.00 g",
+        "F": "12.0 g",
+        "G": "15.6 g"
+      },
+      "correct_answer": "B",
+      "raw_text": "53   2.80 g of lithium metal is placed in a closed system with 1.20 dm3 of pure oxygen gas (volume\n     measured at room temperature and pressure).\n     If a complete reaction occurs between the lithium and the oxygen, what is the maximum mass\n     of lithium oxide that can be formed?\n     (Ar values: Li = 7; O = 16. Assume that one mole of gas occupies 24.0 dm3 at room temperature\n     and pressure.)\n     A   1.50 g\n     B   3.00 g\n     C   3.90 g\n     D   4.60 g\n     E   6.00 g\n     F   12.0 g\n     G   15.6 g",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q54",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 54,
+      "question_text": "54 The following reaction between nitrogen oxide and oxygen releases 116 kJ of energy as heat for each mole of oxygen that reacts. 2NO(g) + O2(g) ⇌ 2NO2(g) An excess of NO and y moles of oxygen are mixed in a sealed container. The reaction reaches equilibrium in one hour. At equilibrium, there are z moles of NO2 . Assume that the pressure is constant throughout the experiment. How much heat will be released over this hour? PART D Biology",
+      "has_diagram": false,
+      "options": {
+        "A": "0 kJ",
+        "B": "58y kJ",
+        "C": "116y kJ",
+        "D": "232y kJ",
+        "E": "58z kJ",
+        "F": "116z kJ",
+        "G": "232z kJ 48 PART D Biology 49 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "54   The following reaction between nitrogen oxide and oxygen releases 116 kJ of energy as heat\n     for each mole of oxygen that reacts.\n                                       2NO(g) + O2(g) ⇌ 2NO2(g)\n     An excess of NO and y moles of oxygen are mixed in a sealed container. The reaction reaches\n     equilibrium in one hour.\n     At equilibrium, there are z moles of NO2 .\n     Assume that the pressure is constant throughout the experiment.\n     How much heat will be released over this hour?\n     A   0 kJ\n     B   58y kJ\n     C   116y kJ\n     D   232y kJ\n     E   58z kJ\n     F   116z kJ\n     G   232z kJ\n                                                  48\n\f                 PART D Biology\nPART D Biology\n      49\n\f                                                                                   PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q55",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 55,
+      "question_text": "55 The graph shows how four variables change with the distance down a river, after a source of pollution flowed in. 1 2 3 quantities oxygen fish algae bacteria distance downstream point at which pollution flowed into the river Which indicator species could be expected to be found in large numbers at 1, 2 and 3? 1 2 3",
+      "has_diagram": true,
+      "options": {
+        "A": "bloodworm bloodworm bloodworm",
+        "B": "bloodworm bloodworm stonefly",
+        "C": "bloodworm stonefly bloodworm",
+        "D": "bloodworm stonefly stonefly",
+        "E": "stonefly bloodworm bloodworm",
+        "F": "stonefly bloodworm stonefly",
+        "G": "stonefly stonefly bloodworm",
+        "H": "stonefly stonefly stonefly 50 PART D Biology"
+      },
+      "correct_answer": "F",
+      "raw_text": "55   The graph shows how four variables change with the distance down a river, after a source of\n     pollution flowed in.\n                               1                 2                      3\n         quantities\n                                                                                      oxygen\n                                                                                      fish\n                                                                                      algae\n                                                                                      bacteria\n                                                                distance downstream\n                       point at which\n                      pollution flowed\n                        into the river\n     Which indicator species could be expected to be found in large numbers at 1, 2 and 3?\n                      1                      2                   3\n     A          bloodworm                bloodworm          bloodworm\n     B          bloodworm                bloodworm           stonefly\n     C          bloodworm                 stonefly          bloodworm\n     D          bloodworm                 stonefly           stonefly\n     E            stonefly               bloodworm          bloodworm\n     F            stonefly               bloodworm           stonefly\n     G            stonefly                stonefly          bloodworm\n     H            stonefly                stonefly           stonefly\n                                                     50\n\f                                                                                     PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q55-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q56",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 56,
+      "question_text": "56 Sickle cell anaemia is a recessive genetic condition that results in abnormally-shaped red blood cells due to the production of a faulty type of haemoglobin. Children born with sickle cell anaemia rarely live to adulthood without significant medical intervention. Carriers, who only have one copy of the sickle cell allele, have greater resistance to the disease malaria than people with two copies of the allele for normal functional haemoglobin. Using this information, which of the following statements is/are correct? 1 People with sickle cell anaemia would have reduced anaerobic respiration in their muscle cells. 2 In areas with malaria the percentage of people surviving with sickle cell anaemia increases. 3 In parts of Africa where malaria is more common you would expect to find more people with a sickle cell allele.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 51 PART D Biology"
+      },
+      "correct_answer": "D",
+      "raw_text": "56   Sickle cell anaemia is a recessive genetic condition that results in abnormally-shaped red blood\n     cells due to the production of a faulty type of haemoglobin. Children born with sickle cell\n     anaemia rarely live to adulthood without significant medical intervention. Carriers, who only\n     have one copy of the sickle cell allele, have greater resistance to the disease malaria than\n     people with two copies of the allele for normal functional haemoglobin.\n     Using this information, which of the following statements is/are correct?\n          1    People with sickle cell anaemia would have reduced anaerobic respiration in their\n               muscle cells.\n          2    In areas with malaria the percentage of people surviving with sickle cell anaemia\n               increases.\n          3    In parts of Africa where malaria is more common you would expect to find more\n               people with a sickle cell allele.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 51\n\f                                                                                    PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q57",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 57,
+      "question_text": "57 A student studied this photograph of part of an organ. The student drew the following conclusions about the two cells labelled X and Y. 1 Both cells X and Y are found in the same tissue. 2 Both cells X and Y were produced by mitosis. 3 Both cells X and Y have a cell wall. Which of these conclusions is/are correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 52 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "57   A student studied this photograph of part of an organ.\n     The student drew the following conclusions about the two cells labelled X and Y.\n          1    Both cells X and Y are found in the same tissue.\n          2    Both cells X and Y were produced by mitosis.\n          3    Both cells X and Y have a cell wall.\n     Which of these conclusions is/are correct?\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                  52\n\f                                                                                    PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q58",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 58,
+      "question_text": "58 A student investigated the tadpole population in a large pond.",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 53 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "58   A student investigated the tadpole population in a large pond.\n     A net with a rectangular opening measuring 0.1 m × 0.2 m was swept through the water for a\n     fixed distance of 1 m. This was repeated 10 times.\n     All the sweeps were made at the edge of the pond as the student had no waders or boat.\n     The number of tadpoles in each sweep was recorded in the table.\n                sweep number          1     2      3   4     5        6   7   8     9    10\n              number of tadpoles     20    12     32   0     4        8   4   8    12    20\n     The student made the following statements.\n          1    Each sweep sampled 0.02 m3 of water.\n          2    The frequency of occurrence of the tadpoles was 90%.\n          3    An accurate estimate of the population size of tadpoles in the pond could be\n               calculated using this data if the total volume of water was known.\n     Which of the statements about the investigation is/are correct?\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 53\n\f                                                                                       PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q58-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q59",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 59,
+      "question_text": "59 A breeding experiment was carried out using rats.",
+      "has_diagram": false,
+      "options": {
+        "A": "16",
+        "B": "32",
+        "C": "64",
+        "D": "128",
+        "E": "256",
+        "F": "512",
+        "G": "1024 54 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "59   A breeding experiment was carried out using rats.\n     A pair of rats has eight offspring per litter. The offspring breed freely amongst each other within\n     the same generation. Each female is only allowed to have one litter of eight.\n     The expected ratio of male to female offspring in this breeding population is the same in rats as\n     in humans, and is seen in every generation.\n     In the 4th generation of offspring, how many individuals would be expected to have the\n     XY genotype?\n     A   16\n     B   32\n     C   64\n     D   128\n     E   256\n     F   512\n     G   1024\n                                                  54\n\f                                                                                   PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q60",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 60,
+      "question_text": "60 The diagram shows four steps in the process of human sperm production. For each step only one complete division takes place. early spermatogonium mitosis intermediate spermatogonium mitosis late spermatogonium mitosis primary spermatocytes meiosis sperm Assuming no mutations and that all of the cells survive, what will be the maximum number of haploid cells originating from a single early spermatogonium?",
+      "has_diagram": true,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "8",
+        "D": "16",
+        "E": "32",
+        "F": "64 55 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "60   The diagram shows four steps in the process of human sperm production. For each step only\n     one complete division takes place.\n                                         early spermatogonium\n                                                         mitosis\n                                     intermediate spermatogonium\n                                                         mitosis\n                                         late spermatogonium\n                                                         mitosis\n                                        primary spermatocytes\n                                                         meiosis\n                                                sperm\n     Assuming no mutations and that all of the cells survive, what will be the maximum number of\n     haploid cells originating from a single early spermatogonium?\n     A   1\n     B   2\n     C   8\n     D   16\n     E   32\n     F   64\n                                               55\n\f                                                                                        PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q60-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q61",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 61,
+      "question_text": "61 Which of the following conditions is/are required by the cells near the tip of a plant shoot in order for the tip to grow towards light from one direction? 1 sufficient glucose 2 uneven distribution of plant hormone 3 sufficient oxygen",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "H",
+      "raw_text": "61   Which of the following conditions is/are required by the cells near the tip of a plant shoot in\n     order for the tip to grow towards light from one direction?\n           1   sufficient glucose\n           2   uneven distribution of plant hormone\n           3   sufficient oxygen\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q62",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 62,
+      "question_text": "62 A cell from the epithelium of an animal was removed. The cytoplasm of this cell can be considered as a 2% sugar solution. The living cell was placed in a 4% sugar solution. Which of the following statements is/are correct? 1 At equilibrium, the sugar concentration in the cell was 6%. 2 Water continued to move across the cell membrane after equilibrium was reached. 3 Osmosis was most rapid when the cell was first placed in the solution.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 56 PART D Biology"
+      },
+      "correct_answer": "G",
+      "raw_text": "62   A cell from the epithelium of an animal was removed. The cytoplasm of this cell can be\n     considered as a 2% sugar solution. The living cell was placed in a 4% sugar solution.\n     Which of the following statements is/are correct?\n           1   At equilibrium, the sugar concentration in the cell was 6%.\n           2   Water continued to move across the cell membrane after equilibrium was reached.\n           3   Osmosis was most rapid when the cell was first placed in the solution.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                  56\n\f                                                                                   PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q63",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 63,
+      "question_text": "63 A piece of DNA is made up of two complementary strands, each 25 bases long. 14% of the bases are adenine. Which two statements are correct? 1 Adenine and cytosine together make up 25 bases. 2 Adenine and guanine together make up 50% of the bases. 3 There are 14 thymine bases present. 4 36 of the bases are guanine.",
+      "has_diagram": false,
+      "options": {
+        "A": "1 and 2 only",
+        "B": "1 and 3 only",
+        "C": "1 and 4 only",
+        "D": "2 and 3 only",
+        "E": "2 and 4 only",
+        "F": "3 and 4 only 57 PART D Biology"
+      },
+      "correct_answer": "A",
+      "raw_text": "63   A piece of DNA is made up of two complementary strands, each 25 bases long.\n     14% of the bases are adenine.\n     Which two statements are correct?\n          1   Adenine and cytosine together make up 25 bases.\n          2   Adenine and guanine together make up 50% of the bases.\n          3   There are 14 thymine bases present.\n          4   36 of the bases are guanine.\n     A   1 and 2 only\n     B   1 and 3 only\n     C   1 and 4 only\n     D   2 and 3 only\n     E   2 and 4 only\n     F   3 and 4 only\n                                              57\n\f                                                                                        PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q64",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 64,
+      "question_text": "64 In a laboratory, the activity of two lipase enzymes on the same type of lipid was studied. One lipase enzyme was produced from a mutation in the gene that coded for the original enzyme. The mutation occurred in the sequence for three adjacent amino acids called serine, aspartic acid and histidine. The graph shows the results of this study. Key lipase mutated lipase total mass of product Q / arbitrary units P 0 0 time of reaction / min Which of the following statements is/are correct? 1 The serine, aspartic acid and histidine amino acids could be in the active site of the enzyme. 2 All mutations affecting the region coding for serine, aspartic acid and histidine amino acids will be expected to have the same effect. 3 At point Q on the graph, the pH of the reaction mixture will be higher than at P.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 58 PART D Biology"
+      },
+      "correct_answer": "B",
+      "raw_text": "64   In a laboratory, the activity of two lipase enzymes on the same type of lipid was studied. One\n     lipase enzyme was produced from a mutation in the gene that coded for the original enzyme.\n     The mutation occurred in the sequence for three adjacent amino acids called serine, aspartic\n     acid and histidine. The graph shows the results of this study.\n              Key\n                        lipase\n                        mutated lipase\n              total mass of product                      Q\n                 / arbitrary units\n                                           P\n                                   0\n                                       0\n                                                               time of reaction / min\n     Which of the following statements is/are correct?\n          1    The serine, aspartic acid and histidine amino acids could be in the active site of the\n               enzyme.\n          2    All mutations affecting the region coding for serine, aspartic acid and histidine amino\n               acids will be expected to have the same effect.\n          3    At point Q on the graph, the pH of the reaction mixture will be higher than at P.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 58\n\f                                                                                       PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q65",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 65,
+      "question_text": "65 The family tree shows a family affected by a dominant genetic condition. All people who carry the mutation show symptoms of the condition. Key male without condition male with condition female without condition female with condition P Q R Which of the following statements could explain the presence of the dominant condition in female R? 1 The mutation occurs in P. 2 The mutation occurs in Q’s father. 3 The mutation occurs in R.",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 59 PART D Biology"
+      },
+      "correct_answer": "F",
+      "raw_text": "65   The family tree shows a family affected by a dominant genetic condition. All people who carry\n     the mutation show symptoms of the condition.\n                                                                   Key\n                                                                         male without condition\n                                                                         male with condition\n                                                                         female without condition\n                                                                         female with condition\n                                   P                Q\n                                           R\n     Which of the following statements could explain the presence of the dominant condition in\n     female R?\n          1    The mutation occurs in P.\n          2    The mutation occurs in Q’s father.\n          3    The mutation occurs in R.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                59\n\f                                                                                       PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q65-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q66",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 66,
+      "question_text": "66 Dolly the sheep was born in 1996. She was unusual because she had no biological father. The diagram shows how she was produced. mammary gland (udder) cell donor egg cell donor P Q nucleus removed cultured mammary gland cells egg cell (gamete) nucleus from ovary nucleus removed nucleus fuses with the egg cell using an electric shock grown in culture early embryo implanted in uterus surrogate mother of a third sheep development lamb (‛Dolly’) Which of the following processes had to occur to produce Dolly? 1 genetic engineering 2 mitosis 3 meiosis 4 differentiation",
+      "has_diagram": true,
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1, 2 and 4 only",
+        "D": "1, 3 and 4 only",
+        "E": "2, 3 and 4 only 60 PART D Biology"
+      },
+      "correct_answer": "E",
+      "raw_text": "66   Dolly the sheep was born in 1996. She was unusual because she had no biological father.\n     The diagram shows how she was produced.\n                                mammary gland (udder)\n                                cell donor                     egg cell donor\n                                        P                              Q\n                                                                           nucleus removed\n               cultured\n            mammary gland\n                 cells                                                       egg cell (gamete)\n                                            nucleus                             from ovary\n                           nucleus\n                                            removed\n                                                            nucleus fuses with the egg cell\n                                                            using an electric shock\n                                     grown in culture      early embryo\n                                      implanted\n                                      in uterus\n                                                              surrogate mother\n                                      of a third\n                                      sheep\n                                      development           lamb (‛Dolly’)\n     Which of the following processes had to occur to produce Dolly?\n            1    genetic engineering\n            2    mitosis\n            3    meiosis\n            4    differentiation\n     A   1 and 2 only\n     B   2 and 3 only\n     C   1, 2 and 4 only\n     D   1, 3 and 4 only\n     E   2, 3 and 4 only\n                                                    60\n\f                                                                                        PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q66-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q67",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 67,
+      "question_text": "67 A student investigated the rate of oxygen bubble release from a pondweed plant at different temperatures. The rates are shown below, with two sections of the graph marked X and Y. In each investigation all other factors were kept constant. rate of oxygen bubble release in pondweed / bubbles per minute Y X temperature / °C Which of the following statements about sections X and Y is/are correct? 1 In section X, the kinetic energy of the reaction molecules is increasing with increasing temperature. 2 In section Y, temperature is the factor which limits that rate of oxygen production. 3 In section Y, the plant’s enzymes may have denatured. 4 Section Y represents the plant’s maximum possible rate of oxygen production under any conditions.",
+      "has_diagram": false,
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "4 only",
+        "E": "1 and 2 only",
+        "F": "1 and 4 only",
+        "G": "2 and 3 only",
+        "H": "3 and 4 only 61 PART D Biology"
+      },
+      "correct_answer": "A",
+      "raw_text": "67   A student investigated the rate of oxygen bubble release from a pondweed plant at different\n     temperatures. The rates are shown below, with two sections of the graph marked X and Y.\n     In each investigation all other factors were kept constant.\n                            rate of oxygen bubble release\n                        in pondweed / bubbles per minute\n                                                                           Y\n                                                            X\n                                                                     temperature / °C\n     Which of the following statements about sections X and Y is/are correct?\n          1    In section X, the kinetic energy of the reaction molecules is increasing with\n               increasing temperature.\n          2    In section Y, temperature is the factor which limits that rate of oxygen production.\n          3    In section Y, the plant’s enzymes may have denatured.\n          4    Section Y represents the plant’s maximum possible rate of oxygen production under\n               any conditions.\n     A   1 only\n     B   2 only\n     C   3 only\n     D   4 only\n     E   1 and 2 only\n     F   1 and 4 only\n     G   2 and 3 only\n     H   3 and 4 only\n                                                                61\n\f                                                                                          PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q68",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 68,
+      "question_text": "68 The diagram below shows a circular piece of bacterial DNA called a plasmid that has been made recombinant by the insertion of a plant gene for herbicide resistance. first part of gene coding for resistance to the antibiotic tetracycline gene for herbicide resistance gene coding for resistance to the antibiotic penicillin second part of gene coding for resistance to the antibiotic tetracycline Bacteria containing only the recombinant plasmid had to be identified from bacteria that contained only the original plasmid. The original plasmid contained a gene coding for resistance to the antibiotic penicillin and a gene coding for resistance to the antibiotic tetracycline. These bacteria were grown on two sets of agar plates. One set used agar that contained the antibiotic penicillin and the other set used agar that contained the antibiotic tetracycline. Which row in the table correctly shows the growth of these bacteria on the two sets of agar? growth on agar growth on agar bacteria containing only containing penicillin containing tetracycline recombinant plasmid yes yes",
+      "has_diagram": true,
+      "options": {
+        "A": "original plasmid no no recombinant plasmid yes yes",
+        "B": "original plasmid yes no recombinant plasmid yes no",
+        "C": "original plasmid yes yes recombinant plasmid no no",
+        "D": "original plasmid yes yes recombinant plasmid yes yes",
+        "E": "original plasmid no yes recombinant plasmid no no",
+        "F": "original plasmid no no recombinant plasmid yes no",
+        "G": "original plasmid no yes 62 PART D Biology"
+      },
+      "correct_answer": "C",
+      "raw_text": "68   The diagram below shows a circular piece of bacterial DNA called a plasmid that has been\n     made recombinant by the insertion of a plant gene for herbicide resistance.\n                                                         first part of gene coding for resistance to\n                                                         the antibiotic tetracycline\n                                                                 gene for herbicide resistance\n      gene coding for resistance to\n      the antibiotic penicillin                                second part of gene coding for resistance\n                                                               to the antibiotic tetracycline\n     Bacteria containing only the recombinant plasmid had to be identified from bacteria that\n     contained only the original plasmid. The original plasmid contained a gene coding for\n     resistance to the antibiotic penicillin and a gene coding for resistance to the antibiotic\n     tetracycline.\n     These bacteria were grown on two sets of agar plates. One set used agar that contained the\n     antibiotic penicillin and the other set used agar that contained the antibiotic tetracycline.\n     Which row in the table correctly shows the growth of these bacteria on the two sets of agar?\n                                         growth on agar                growth on agar\n         bacteria containing only\n                                       containing penicillin        containing tetracycline\n           recombinant plasmid                 yes                            yes\n     A\n              original plasmid                  no                            no\n           recombinant plasmid                 yes                            yes\n     B\n              original plasmid                 yes                            no\n           recombinant plasmid                 yes                            no\n     C\n              original plasmid                 yes                            yes\n           recombinant plasmid                  no                            no\n     D\n              original plasmid                 yes                            yes\n           recombinant plasmid                 yes                            yes\n     E\n              original plasmid                  no                            yes\n           recombinant plasmid                  no                            no\n     F\n              original plasmid                  no                            no\n           recombinant plasmid                 yes                            no\n     G\n              original plasmid                  no                            yes\n                                                  62\n\f                                                                                       PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q68-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q69",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 69,
+      "question_text": "69 A student analysed a gene sequence that had been identified in four different types of organism. The gene codes for a functional protein. A section of the gene’s DNA is shown below. The rest of the DNA from this gene (not shown) is identical in all four different types of organism. organism DNA sequence human ACG CCT CGT CAC GCT AAA oak tree ACG GAA TAT GTA GCT AAA mushroom ACG GAA CTC TTA GCT AAA E.coli bacterium ACG TAC GAT GGG GCT AAA The student then made the following conclusions: 1 This gene does not code for chlorophyll. 2 This gene may be found in the nucleus or cytoplasm. 3 The protein that this gene codes for is likely to be more similar in plants and fungi than in the other organisms. Which of these conclusions is/are correct?",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 63 PART D Biology"
+      },
+      "correct_answer": "H",
+      "raw_text": "69   A student analysed a gene sequence that had been identified in four different types of\n     organism. The gene codes for a functional protein. A section of the gene’s DNA is shown\n     below. The rest of the DNA from this gene (not shown) is identical in all four different types of\n     organism.\n                         organism                        DNA sequence\n                           human          ACG      CCT    CGT CAC           GCT     AAA\n                          oak tree        ACG      GAA     TAT   GTA        GCT     AAA\n                        mushroom          ACG      GAA    CTC    TTA        GCT     AAA\n                      E.coli bacterium    ACG      TAC    GAT GGG           GCT     AAA\n     The student then made the following conclusions:\n           1   This gene does not code for chlorophyll.\n           2   This gene may be found in the nucleus or cytoplasm.\n           3   The protein that this gene codes for is likely to be more similar in plants and fungi\n               than in the other organisms.\n     Which of these conclusions is/are correct?\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                  63\n\f                                                                                            PART D Biology",
+      "diagram_images": [
+        "NSAA-2018-S1-Q69-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q70",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 70,
+      "question_text": "70 The graphs represent the changes in the mass of a healthy human body cell and in the mass of the DNA of that cell over time. Key mass of cell mass of DNA 8 5 7 6 4 mass of a cell body / arbitrary units 5 3 4 3 2 2 mass of DNA in a cell 1 / arbitrary units 1 0 0 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 time / hours Using the graph, which of the following statements is/are correct? 1 Mitosis takes place at 12 and 36 hours. 2 The graph shows two cell divisions. 3 The next cell division should take place at 72 hours.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 64 PART D Biology"
+      },
+      "correct_answer": "G",
+      "raw_text": "70   The graphs represent the changes in the mass of a healthy human body cell and in the mass of\n     the DNA of that cell over time.\n         Key\n                   mass of cell\n                   mass of DNA\n                                  8\n                                                                                  5\n                                  7\n                                  6                                               4\n     mass of a cell body\n      / arbitrary units           5\n                                                                                  3\n                                  4\n                                  3                                               2\n                                  2                                                    mass of DNA in a cell\n                                                                                   1     / arbitrary units\n                                  1\n                                  0                                                0\n                                      0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60\n                                                                      time / hours\n     Using the graph, which of the following statements is/are correct?\n               1    Mitosis takes place at 12 and 36 hours.\n               2    The graph shows two cell divisions.\n               3    The next cell division should take place at 72 hours.\n     A    none of them\n     B    1 only\n     C    2 only\n     D    3 only\n     E    1 and 2 only\n     F    1 and 3 only\n     G    2 and 3 only\n     H    1, 2 and 3\n                                                         64\n\f                                                                                      PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q71",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 71,
+      "question_text": "71 Bt pesticide is used by farmers to kill insect pests. However, widespread use has resulted in the evolution of resistance to this pesticide. A recessive allele causes resistance. Scientists have suggested that in areas where the Bt pesticide is used, a small number of fields are left untreated. These untreated fields are known as refugia. This method has been shown to slow down evolution of resistance to the pesticide. Which of the following statements explain why refugia could slow down the evolution of resistance to Bt pesticide? 1 When resistant insects breed with pesticide-sensitive insects that do not have the allele for resistance, the offspring produced will be sensitive to the pesticide. 2 When fewer insects are exposed to pesticide, fewer mutations occur that produce alleles for resistance. 3 The refugia help to maintain genetic variation in the population of insect pests.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 65 PART D Biology"
+      },
+      "correct_answer": "F",
+      "raw_text": "71   Bt pesticide is used by farmers to kill insect pests. However, widespread use has resulted in\n     the evolution of resistance to this pesticide. A recessive allele causes resistance.\n     Scientists have suggested that in areas where the Bt pesticide is used, a small number of fields\n     are left untreated. These untreated fields are known as refugia. This method has been shown\n     to slow down evolution of resistance to the pesticide.\n     Which of the following statements explain why refugia could slow down the evolution of\n     resistance to Bt pesticide?\n          1    When resistant insects breed with pesticide-sensitive insects that do not have the\n               allele for resistance, the offspring produced will be sensitive to the pesticide.\n          2    When fewer insects are exposed to pesticide, fewer mutations occur that produce\n               alleles for resistance.\n          3    The refugia help to maintain genetic variation in the population of insect pests.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                 65\n\f                                                                                     PART D Biology",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q72",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 72,
+      "question_text": "72 A diploid plant cell divides by mitosis. After mitosis of this cell, a mutation occurs that changes the genotype of one of the daughter cells. This mutant daughter cell produces a non-functional enzyme instead of the functional enzyme produced by the other daughter cell. This mutation has no effect on the phenotype of the plant or the number or length of chromosomes in the plant cell. Which of the following statements describe the daughter cells after the mutation has occurred? 1 The chromosomes in the nucleus of each daughter cell will contain the same genes. 2 Both daughter cells will contain the same alleles for every gene. 3 The sequence of bases along each allele will be the same in each daughter cell. NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 66 PART E Advanced Mathematics and Advanced Physics PART E Advanced Mathematics and Advanced Physics 67 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "B",
+      "raw_text": "72   A diploid plant cell divides by mitosis.\n     After mitosis of this cell, a mutation occurs that changes the genotype of one of the daughter\n     cells. This mutant daughter cell produces a non-functional enzyme instead of the functional\n     enzyme produced by the other daughter cell. This mutation has no effect on the phenotype of\n     the plant or the number or length of chromosomes in the plant cell.\n     Which of the following statements describe the daughter cells after the mutation has occurred?\n           1   The chromosomes in the nucleus of each daughter cell will contain the same genes.\n           2   Both daughter cells will contain the same alleles for every gene.\n           3   The sequence of bases along each allele will be the same in each daughter cell.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                66\n\f                          PART E Advanced Mathematics and Advanced Physics\n   PART E Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             67\n\f                                                 PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q73",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 73,
+      "question_text": "73 Curve C has equation y = 9 – x2 Line L has equation y = 5 What is the area enclosed between C and L ? 32",
+      "has_diagram": false,
+      "options": {
+        "A": "3 62",
+        "B": "3 92",
+        "C": "3 122",
+        "D": "3 152",
+        "E": "3"
+      },
+      "correct_answer": "A",
+      "raw_text": "73   Curve C has equation y = 9 – x2\n     Line L has equation y = 5\n     What is the area enclosed between C and L ?\n          32\n     A\n          3\n          62\n     B\n          3\n          92\n     C\n          3\n         122\n     D\n          3\n         152\n     E\n          3",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q74",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 74,
+      "question_text": "74 An aircraft moves from rest with uniform acceleration along a horizontal runway. After travelling 1600 m it reaches a speed of 80 m s–1. What is the acceleration of the aircraft?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.025 m s–2",
+        "B": "0.050 m s–2",
+        "C": "0.10 m s–2",
+        "D": "0.50 m s–2",
+        "E": "2.0 m s–2",
+        "F": "4.0 m s–2",
+        "G": "10 m s–2",
+        "H": "20 m s–2 68 PART E Advanced Mathematics and Advanced Physics π"
+      },
+      "correct_answer": "E",
+      "raw_text": "74   An aircraft moves from rest with uniform acceleration along a horizontal runway. After travelling\n     1600 m it reaches a speed of 80 m s–1.\n     What is the acceleration of the aircraft?\n     A   0.025 m s–2\n     B   0.050 m s–2\n     C   0.10 m s–2\n     D   0.50 m s–2\n     E   2.0 m s–2\n     F   4.0 m s–2\n     G   10 m s–2\n     H   20 m s–2\n                                                    68\n\f                                              PART E Advanced Mathematics and Advanced Physics\n                                                                                π",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q75",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 75,
+      "question_text": "75 How many solutions of the equation 2sin3 θ = sin θ lie in the interval – ≤θ≤π ? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6",
+        "F": "7"
+      },
+      "correct_answer": "D",
+      "raw_text": "75   How many solutions of the equation 2sin3 θ = sin θ lie in the interval –       ≤θ≤π ?\n                                                                                2\n     A   2\n     B   3\n     C   4\n     D   5\n     E   6\n     F   7",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q76",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 76,
+      "question_text": "76 The diagram represents a mass that is moving in a straight line at constant speed up a slope of constant gradient. constant speed Which statement about the forces acting on the mass must be correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "All the forces acting on the mass are equal in magnitude.",
+        "B": "Only three forces act on the mass.",
+        "C": "The force of friction on the mass is equal to the driving force.",
+        "D": "The weight of the mass acts in the opposite direction to the contact force.",
+        "E": "There is no air resistance acting on the mass.",
+        "F": "There is no resultant force acting on the mass. 69 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "F",
+      "raw_text": "76   The diagram represents a mass that is moving in a straight line at constant speed up a slope of\n     constant gradient.\n                           constant speed\n     Which statement about the forces acting on the mass must be correct?\n     A   All the forces acting on the mass are equal in magnitude.\n     B   Only three forces act on the mass.\n     C   The force of friction on the mass is equal to the driving force.\n     D   The weight of the mass acts in the opposite direction to the contact force.\n     E   There is no air resistance acting on the mass.\n     F   There is no resultant force acting on the mass.\n                                                  69\n\f                                              PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q77",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 77,
+      "question_text": "77 The line y = x + k , where k is a constant, is a tangent to the curve y = 3x2 – 2x + 1 What is the value of k ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–2",
+        "B": "–1 1",
+        "C": "4 1",
+        "D": "3 1",
+        "E": "2 3",
+        "F": "4",
+        "G": "1",
+        "H": "2"
+      },
+      "correct_answer": "C",
+      "raw_text": "77   The line y = x + k , where k is a constant, is a tangent to the curve y = 3x2 – 2x + 1\n     What is the value of k ?\n     A   –2\n     B   –1\n          1\n     C\n          4\n          1\n     D\n          3\n          1\n     E\n          2\n          3\n     F\n          4\n     G   1\n     H   2",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q78",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 78,
+      "question_text": "78 The diagram shows four objects W, X, Y and Z, of masses 3.0 kg, 4.0 kg, 6.0 kg and 2.0 kg respectively, connected by light, inextensible rods. The objects are pulled along a smooth, horizontal surface by a constant force of 30 N in the direction indicated. W X Y Z 30 N 3.0 kg 4.0 kg 6.0 kg 2.0 kg What is the tension in the rod connecting X and Y?",
+      "has_diagram": false,
+      "options": {
+        "A": "8.0 N",
+        "B": "10 N",
+        "C": "12 N",
+        "D": "14 N",
+        "E": "16 N 70 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "D",
+      "raw_text": "78   The diagram shows four objects W, X, Y and Z, of masses 3.0 kg, 4.0 kg, 6.0 kg and 2.0 kg\n     respectively, connected by light, inextensible rods.\n     The objects are pulled along a smooth, horizontal surface by a constant force of 30 N in the\n     direction indicated.\n                    W                  X                  Y                  Z                30 N\n                  3.0 kg             4.0 kg             6.0 kg             2.0 kg\n     What is the tension in the rod connecting X and Y?\n     A   8.0 N\n     B   10 N\n     C   12 N\n     D   14 N\n     E   16 N\n                                                  70\n\f                                                  PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q79",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 79,
+      "question_text": "79 In a particular arithmetic progression: • the 13th term is six times the 1st term • the 11th term is 1 less than twice the 5th term What is the 3rd term of the progression?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 14.5",
+        "B": "– 11 29",
+        "C": "19",
+        "D": "3.5",
+        "E": "11",
+        "F": "14.5"
+      },
+      "correct_answer": "E",
+      "raw_text": "79   In a particular arithmetic progression:\n                   •   the 13th term is six times the 1st term\n                   •   the 11th term is 1 less than twice the 5th term\n     What is the 3rd term of the progression?\n     A    – 14.5\n     B    – 11\n          29\n     C\n          19\n     D    3.5\n     E    11\n     F    14.5",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q80",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 80,
+      "question_text": "80 An object of mass 40 kg is placed on a uniform, horizontal plank of mass 10 kg between two supports X and Y as shown in the diagram. object centre of plank X Y 1.0 m 1.0 m 2.0 m What is the contact force at X? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "15 N",
+        "B": "35 N",
+        "C": "150 N",
+        "D": "250 N",
+        "E": "300 N",
+        "F": "350 N",
+        "G": "375 N 71 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "F",
+      "raw_text": "80   An object of mass 40 kg is placed on a uniform, horizontal plank of mass 10 kg between two\n     supports X and Y as shown in the diagram.\n                               object\n                                                                  centre of plank\n                                     X                                      Y\n                                         1.0 m    1.0 m          2.0 m\n     What is the contact force at X?\n     (gravitational field strength = 10 N kg–1)\n     A   15 N\n     B   35 N\n     C   150 N\n     D   250 N\n     E   300 N\n     F   350 N\n     G   375 N\n                                                     71\n\f                                                  PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": [
+        "NSAA-2018-S1-Q80-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q81",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 81,
+      "question_text": "81 Evaluate 6 log2 ⎜⎛ 5 ⎞⎟ + log2 ⎛⎜ ⎞⎟ + log2 ⎛⎜ 7 ⎞⎟ + … + log2 ⎜⎛ 64 ⎞⎟ ⎝4⎠ ⎝5⎠ ⎝6⎠ ⎝ 63 ⎠",
+      "has_diagram": false,
+      "options": {
+        "A": "–2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "log2 (3!)",
+        "F": "log2 60"
+      },
+      "correct_answer": "C",
+      "raw_text": "81   Evaluate\n                                                    6\n                              log2 ⎜⎛ 5 ⎞⎟ + log2 ⎛⎜ ⎞⎟ + log2 ⎛⎜ 7 ⎞⎟ + … + log2 ⎜⎛ 64 ⎞⎟\n                                   ⎝4⎠           ⎝5⎠           ⎝6⎠                 ⎝ 63 ⎠\n     A   –2\n     B   3\n     C   4\n     D   6\n     E   log2 (3!)\n     F   log2 60",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q82",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 82,
+      "question_text": "82 An object X of mass 2.0 kg is initially moving at a speed of 4.5 m s–1 on a smooth, horizontal surface.",
+      "has_diagram": false,
+      "options": {
+        "A": "1.8 m s–1",
+        "B": "3.0 m s–1",
+        "C": "3.6 m s–1",
+        "D": "4.8 m s–1",
+        "E": "5.4 m s–1 72 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "D",
+      "raw_text": "82   An object X of mass 2.0 kg is initially moving at a speed of 4.5 m s–1 on a smooth, horizontal\n     surface.\n     A 5.0 N force is applied to X in the direction of its motion for 3.0 seconds.\n     A short time later it collides head on with, and sticks to, a stationary object Y of mass 3.0 kg.\n     What is the speed of X and Y as they move off together after the collision?\n     A   1.8 m s–1\n     B   3.0 m s–1\n     C   3.6 m s–1\n     D   4.8 m s–1\n     E   5.4 m s–1\n                                                       72\n\f                                               PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q83",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 83,
+      "question_text": "83 Circle C has equation (x + 3)2 + ( y – 2)2 = 5 The length of the tangent from the circle C to the point P is 5 3 What is the shortest distance from P to C ?",
+      "has_diagram": false,
+      "options": {
+        "A": "5 3",
+        "B": "5 3+ 5",
+        "C": "3 5",
+        "D": "5",
+        "E": "10 73 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "C",
+      "raw_text": "83   Circle C has equation (x + 3)2 + ( y – 2)2 = 5\n     The length of the tangent from the circle C to the point P is 5 3\n     What is the shortest distance from P to C ?\n     A    5 3\n     B    5 3+ 5\n     C    3 5\n     D    5\n     E    10\n                                                      73\n\f                                             PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q84",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 84,
+      "question_text": "84 Two solid spheres X and Y have masses m and 2m respectively. They travel in opposite directions towards each other along the same line with speeds v and 2v respectively and collide head on. The graph shows the variation of velocity with time for sphere X before, during, and after the collision. velocity v 0 time –v Which sketch shows the variation of velocity with time for sphere Y?",
+      "has_diagram": true,
+      "options": {
+        "A": "B velocity velocity 2v 2v 0 0 time time –2v –2v",
+        "C": "D velocity velocity 2v v 0 0 –v time time –2v",
+        "E": "F velocity velocity 2v v 0 0 time –v time –2v 74 PART E Advanced Mathematics and Advanced Physics",
+        "B": "[diagram option]",
+        "D": "[diagram option]",
+        "F": "[diagram option]"
+      },
+      "correct_answer": "F",
+      "raw_text": "84   Two solid spheres X and Y have masses m and 2m respectively. They travel in opposite\n     directions towards each other along the same line with speeds v and 2v respectively and\n     collide head on.\n     The graph shows the variation of velocity with time for sphere X before, during, and after the\n     collision.\n                              velocity\n                                     v\n                                     0\n                                                                        time\n                                    –v\n     Which sketch shows the variation of velocity with time for sphere Y?\n     A                                                 B\n         velocity                                          velocity\n               2v                                                2v\n                0                                                 0\n                                                time                                             time\n             –2v                                               –2v\n     C                                                 D\n         velocity                                          velocity\n               2v\n                                                                  v\n                0                                                 0\n               –v                               time                                             time\n                                                               –2v\n     E                                                 F\n         velocity                                          velocity\n               2v\n                v\n                0                                                0\n                                                time            –v                               time\n                                                               –2v\n                                                 74\n\f                                               PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": [
+        "NSAA-2018-S1-Q84-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q85",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 85,
+      "question_text": "85 What is the coefficient of x3 in the expansion of (1 – 2x)5 (1 + 2x)5 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 6400",
+        "B": "– 640",
+        "C": "– 80",
+        "D": "0",
+        "E": "80",
+        "F": "800",
+        "G": "960"
+      },
+      "correct_answer": "D",
+      "raw_text": "85   What is the coefficient of x3 in the expansion of (1 – 2x)5 (1 + 2x)5 ?\n     A   – 6400\n     B   – 640\n     C   – 80\n     D   0\n     E   80\n     F   800\n     G   960",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q86",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 86,
+      "question_text": "86 A metal ball suspended from a steel cable is held at rest by a horizontal force P. The cable makes an angle of 30° to the vertical as shown in the diagram. The cable exerts a force T on the ball. 30° P What is the magnitude of P ? T",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "T",
+        "C": "2T T",
+        "D": "2 T",
+        "E": "3 2T",
+        "F": "3 3T",
+        "G": "2 75 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "A",
+      "raw_text": "86   A metal ball suspended from a steel cable is held at rest by a horizontal force P. The cable\n     makes an angle of 30° to the vertical as shown in the diagram. The cable exerts a force T on\n     the ball.\n                                                    30°\n                                                                      P\n     What is the magnitude of P ?\n          T\n     A\n          2\n     B   T\n     C   2T\n          T\n     D\n              2\n          T\n     E\n              3\n          2T\n     F\n              3\n              3T\n     G\n              2\n                                                   75\n\f                                           PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q87",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 87,
+      "question_text": "87 Given that 2 16 2 ∫ x dx = m 0 7 and 2 32 2 ∫ x m +1 dx = 0 9 what is the value of m ? 11",
+      "has_diagram": false,
+      "options": {
+        "A": "– 2 9",
+        "B": "– 2 22",
+        "C": "– 29 7",
+        "D": "22 5",
+        "E": "2 7",
+        "F": "2 76 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "E",
+      "raw_text": "87   Given that\n                     2           16 2\n                    ∫ x dx =\n                         m\n                     0             7\n     and\n                     2              32 2\n                    ∫ x\n                          m +1\n                             dx =\n                     0                9\n     what is the value of m ?\n               11\n     A     –\n               2\n               9\n     B     –\n               2\n               22\n     C     –\n               29\n           7\n     D\n           22\n           5\n     E\n           2\n           7\n     F\n           2\n                                              76\n\f                                                 PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q88",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 88,
+      "question_text": "88 A pendulum bob of mass 10 g is suspended by a light, inextensible string of length 50 cm. The bob is released from rest at position X. cm 50 X Y 30 cm What is the speed of the bob as it passes through position Y? (gravitational field strength g = 10 N kg–1; assume that resistive forces are negligible)",
+      "has_diagram": true,
+      "options": {
+        "A": "2 m s–1",
+        "B": "4 m s–1",
+        "C": "6 m s–1",
+        "D": "8 m s–1",
+        "E": "10 m s–1 77 PART E Advanced Mathematics and Advanced Physics"
+      },
+      "correct_answer": "A",
+      "raw_text": "88   A pendulum bob of mass 10 g is suspended by a light, inextensible string of length 50 cm.\n     The bob is released from rest at position X.\n                                        cm\n                                       50\n                          X\n                                                          Y\n                                         30 cm\n     What is the speed of the bob as it passes through position Y?\n     (gravitational field strength g = 10 N kg–1; assume that resistive forces are negligible)\n     A     2 m s–1\n     B     4 m s–1\n     C     6 m s–1\n     D     8 m s–1\n     E     10 m s–1\n                                                    77\n\f                                               PART E Advanced Mathematics and Advanced Physics",
+      "diagram_images": [
+        "NSAA-2018-S1-Q88-fig1.png"
+      ]
+    },
+    {
+      "id": "NSAA-2018-S1-Q89",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 89,
+      "question_text": "89 The dimensions of a solid cuboid, in cm, are x, 2x and y The volume of the cuboid is 576 cm3. At this volume, the surface area of the cuboid has its maximum value. What is the area, in cm2, of the face that has the largest area? 2 3",
+      "has_diagram": false,
+      "options": {
+        "A": "2(288 )",
+        "B": "72",
+        "C": "96",
+        "D": "432 2 3",
+        "E": "4(144 )"
+      },
+      "correct_answer": "C",
+      "raw_text": "89   The dimensions of a solid cuboid, in cm, are x, 2x and y\n     The volume of the cuboid is 576 cm3.\n     At this volume, the surface area of the cuboid has its maximum value.\n     What is the area, in cm2, of the face that has the largest area?\n                    2\n                    3\n     A    2(288 )\n     B   72\n     C   96\n     D   432\n                    2\n                    3\n     E    4(144 )",
+      "diagram_images": []
+    },
+    {
+      "id": "NSAA-2018-S1-Q90",
+      "year": 2018,
+      "paper": "NSAA",
+      "section": "S1",
+      "question_number": 90,
+      "question_text": "90 An object is thrown vertically upwards from ground level with an initial velocity of 40 m s–1. 2.0 seconds later another object is released from a height above the ground and falls vertically from rest. Both of the objects hit the ground at the same time. From what height above the ground was the second object released? (gravitational field strength g = 10 N kg–1; air resistance can be ignored) 80",
+      "has_diagram": false,
+      "options": {
+        "A": "80 m",
+        "B": "180 m",
+        "C": "320 m",
+        "D": "500 m",
+        "E": "900 m 78 79"
+      },
+      "correct_answer": "B",
+      "raw_text": "90   An object is thrown vertically upwards from ground level with an initial velocity of 40 m s–1.\n     2.0 seconds later another object is released from a height above the ground and falls vertically\n     from rest.\n     Both of the objects hit the ground at the same time.\n     From what height above the ground was the second object released?\n     (gravitational field strength g = 10 N kg–1; air resistance can be ignored)\n     A   80 m\n     B   180 m\n     C   320 m\n     D   500 m\n     E   900 m\n                                                   78\n\fBLANK PAGE\n    79\n\f80",
+      "diagram_images": []
+    }
+  ]
+}

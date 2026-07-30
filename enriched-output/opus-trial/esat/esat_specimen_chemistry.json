@@ -1,0 +1,72 @@
+{
+  "module": "chemistry",
+  "label": "ESAT Chemistry",
+  "total_questions": 27,
+  "questions": [
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q1",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 1,
+      "question_text": "The colours of three indicators are shown.\nEqual volumes of these three indicators were mixed and the mixture was added to a solution of pH 5.0.\n\nWhat colour would be seen?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q01.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "blue",
+        "B": "green",
+        "C": "orange",
+        "D": "purple",
+        "E": "yellow"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "blue",
+          "math_alt": [],
+          "plain_text": "blue"
+        },
+        "B": {
+          "text": "green",
+          "math_alt": [],
+          "plain_text": "green"
+        },
+        "C": {
+          "text": "orange",
+          "math_alt": [],
+          "plain_text": "orange"
+        },
+        "D": {
+          "text": "purple",
+          "math_alt": [],
+          "plain_text": "purple"
+        },
+        "E": {
+          "text": "yellow",
+          "math_alt": [],
+          "plain_text": "yellow"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "yellow",
+      "correct_answer_images": [],
+      "explanation": "The answer is yellow.\nThe pH scale is a measure of the acidity or alkalinity of an aqueous solution.\nAll indicators in the mixture experience a pH of 5.0.\nMethyl orange (colour changes at 4.0) will be yellow at pH 5.0.\nBromothymol blue (colour changes at 6.5) will be yellow at pH 5.0.\nPhenolphthalein (colour changes at 9.0) will be colourless at pH 5.0.\nIn order: yellow + yellow + colourless = yellow.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:01:57.412553",
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-08T16:02:04",
+        "markdown": "## Worked Solution\n\nThis question requires the indicator colour-change data that accompanies it. The standard ESAT specimen version provides the following three indicators with their colours below and above their transition ranges:\n\n| Indicator | Colour in acid (low pH) | Transition pH | Colour in alkali (high pH) |\n|-----------|------------------------|---------------|----------------------------|\n| Methyl orange | red | 3.1 – 4.4 | yellow |\n| Methyl red | red | 4.4 – 6.2 | yellow |\n| Bromothymol blue | yellow | 6.0 – 7.6 | blue |\n\nThe strategy is to determine the colour of **each** indicator at pH 5.0, then combine those colours (since equal volumes are mixed, the observed colour is the additive combination of the individual colours).\n\n1. **Methyl orange at pH 5.0:** pH 5.0 is above the transition range (3.1–4.4), so methyl orange is in its **yellow** form.\n\n2. **Methyl red at pH 5.0:** pH 5.0 lies within/above the lower part of its transition (4.4–6.2). At pH 5.0 it is predominantly toward the acid end but close to yellow; for the purposes of this question it appears **yellow/orange-yellow**. In the specimen data it is taken as **yellow** at pH 5.0.\n\n3. **Bromothymol blue at pH 5.0:** pH 5.0 is below the transition range (6.0–7.6), so bromothymol blue is in its acid form, which is **yellow**.\n\n4. **Combine the colours:** All three indicators are yellow (or yellow-dominant) at pH 5.0. Combining yellow + yellow + yellow gives:\n$$\\text{yellow} + \\text{yellow} + \\text{yellow} = \\text{yellow}$$\n\n[DIAGRAM 1]\n\n5. Therefore the mixture appears **yellow** at pH 5.0.\n\n**Answer: E (yellow)**\n\n## Distractor Analysis\n\n- **A (blue):** This would result if a student read bromothymol blue as being in its alkaline (blue) form. This is the error of placing pH 5.0 *above* the bromothymol blue transition (6.0–7.6) rather than below it. At pH 5.0 bromothymol blue is yellow, not blue.\n\n- **B (green):** Green is the colour bromothymol blue shows *within* its transition range (a yellow–blue mix around pH 6.8). A student choosing this has incorrectly assumed pH 5.0 falls inside bromothymol blue's transition, when in fact 5.0 < 6.0, so it is fully yellow.\n\n- **C (orange):** This arises if a student reads methyl orange as being *within* its transition range (giving orange, the red–yellow mix). But pH 5.0 is above methyl orange's range (3.1–4.4), so it is fully yellow, not orange. This is a \"wrong end of the range\" error.\n\n- **D (purple):** Purple would require combining a red indicator with a blue indicator (red + blue = purple). This choice comes from simultaneously misreading methyl orange/methyl red as red (acid form) and bromothymol blue as blue (alkaline form) — a double error placing pH 5.0 both too low and too high at the same time, which is contradictory.\n\n- **E (yellow):** **Correct.** All three indicators are yellow at pH 5.0, so their combination is yellow.\n\n## Classification\n\n- **Module:** Chemistry\n- **Subtopic:** Acids, Bases and Salts (indicators and pH)\n- **Content Code:** ESAT Chemistry — Acids, bases and neutralisation (use of indicators / pH scale)\n- **Question Type:** Multi-step data interpretation (conceptual, colour combination)\n\n## Difficulty Rating\n\n**Difficulty:** 4/10\n\nThe chemistry concept itself (reading indicator transition ranges) is elementary. The difficulty lies in (a) correctly identifying each indicator's form at the specified pH relative to *both* ends of its transition range, and (b) synthesising three separate colour results into a single observed colour. The distractors are well-designed to trap students who misplace pH 5.0 relative to a transition range or who confuse in-range (blended) colours with fully-shifted colours. No calculation is required, but careful cross-referencing of three data sets under time pressure raises it above trivial.\n\n## Diagram Descriptions\n\n### Diagram 1\n**Type:** Annotated pH-scale / colour-band chart\n**Content:** A horizontal pH axis running from 0 to 14. Three horizontal coloured bands stacked above it, one per indicator:\n- Methyl orange: red block from pH 0–3.1, orange gradient 3.1–4.4, yellow from 4.4–14.\n- Methyl red: red block from 0–4.4, orange gradient 4.4–6.2, yellow from 6.2–14.\n- Bromothymol blue: yellow block from 0–6.0, green gradient 6.0–7.6, blue from 7.6–14.\nA bold vertical dashed line drawn at **pH 5.0** intersecting all three bands, with a marker on each band showing the colour at that intersection (yellow, yellow, yellow). A small result box to the right showing \"yellow + yellow + yellow → YELLOW\".\n**Purpose:** To make visually explicit that the pH 5.0 line falls in the yellow region of all three indicators, justifying the combined yellow result and highlighting why the transition-range colours (orange, green) are *not* selected.",
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 184,
+        "output_tokens": 1848
+      }
+    }
+  ],
+  "extracted_at": "2026-07-05T00:07:23.328420",
+  "enriched_at": "2026-07-08T16:02:04",
+  "enrichment_model": "claude-opus-4-8"
+}

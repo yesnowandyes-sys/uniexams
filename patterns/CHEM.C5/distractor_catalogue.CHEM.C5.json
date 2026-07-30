@@ -1,0 +1,52 @@
+{
+  "topic_key": "CHEM.C5",
+  "topic_name": "Oxidation, reduction and redox",
+  "module_code": "C",
+  "corpus_question_count": 15,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Confusing Ion with Atom/Molecule",
+      "frequency": 7,
+      "example_question_id": "Q1",
+      "why_effective": "Students confuse the ionic species in a half-equation (e.g., Cl2 + 2e- \u2192 2Cl-) with a full redox reaction. They see electrons and classify it as redox without checking if oxidation states change for both sides of the reaction (it doesn't).",
+      "generation_strategy": "Include half-equations (with electrons) in a list of 'chemical equations' and ask which are redox reactions. The half-equation itself only shows reduction or oxidation, but not the paired process."
+    },
+    {
+      "distractor_type": "Equation Balance Misdirection",
+      "frequency": 5,
+      "example_question_id": "Q6",
+      "why_effective": "Students assume that if a reaction is balanced (or involves acid/base), it must be redox. Or conversely, if a metal is displaced (e.g., Mg reacting with acid), they focus on the gas production rather than electron transfer.",
+      "generation_strategy": "Present a balanced acid-base or precipitation reaction alongside clearly redox reactions. The distractor option groups the non-redox reaction with a redox one."
+    },
+    {
+      "distractor_type": "Identifying Reactant vs. Agent",
+      "frequency": 4,
+      "example_question_id": "Q1",
+      "why_effective": "Students correctly identify the species being oxidized but fail to invert the terminology to 'reducing agent' (or vice versa). They select the reactant that *is* oxidized rather than the one that *causes* oxidation.",
+      "generation_strategy": "Ask for the 'oxidising agent' in a reaction where the oxidation states of reactants are subtle (e.g., Fe3+ to Fe2+). Students often pick the species that gains electrons (the oxidizing agent) but attribute it to the wrong step of the mechanism."
+    },
+    {
+      "distractor_type": "Disproportionation Distribution Error",
+      "frequency": 3,
+      "example_question_id": "Q7",
+      "why_effective": "In complex ions like tetrathionate (S4O6^2-), students struggle to see how identical atoms can have different oxidation states. They assume symmetry implies identical oxidation states (e.g., all +2.5) rather than the structural reality (some are 0, some +5).",
+      "generation_strategy": "Use ions or molecules with identical central atoms where symmetry is broken (e.g., S in S4O6^2-, or Cl in ClO- + Cl- formation)."
+    },
+    {
+      "distractor_type": "Stoichiometry-Product Confusion",
+      "frequency": 3,
+      "example_question_id": "Q11",
+      "why_effective": "When balancing complex redox equations (e.g., Cu + HNO3), students often memorize products (like NO2) but fail to check the specific mole ratios or oxidation state clues given in the question (e.g., 'oxidation state is one less than in acid').",
+      "generation_strategy": "Provide a set of balanced equations with very similar products (NO vs NO2 vs N2O4) where the key discriminator is a subtle stoichiometric ratio or oxidation state constraint."
+    },
+    {
+      "distractor_type": "Concentration/State Confusion",
+      "frequency": 2,
+      "example_question_id": "Q9",
+      "why_effective": "Students assume oxidizing power is constant, not realizing that concentrated vs dilute changes the product (and thus the redox behavior), or confusing cathode/anode definitions in electrolysis.",
+      "generation_strategy": "Ask about electrolysis products or electrode reactions, swapping 'anode' and 'cathode' or 'molten' vs 'aqueous' to trap students who rely on memorized rules."
+    }
+  ],
+  "_raw": null
+}

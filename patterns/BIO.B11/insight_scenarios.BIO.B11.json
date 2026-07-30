@@ -1,0 +1,59 @@
+{
+  "topic_key": "BIO.B11",
+  "topic_name": "Plant physiology",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A pondweed experiment shows a bubble moving at a constant rate under high light intensity. A student adds an inhibitor to stop respiration. Predict the change in the observed bubble rate (volume of gas produced per minute).",
+      "key_insight": "The observed 'net' bubble rate in plants is $Photosynthesis - Respiration$. Respiration consumes oxygen and produces CO2 (which is often dissolved/buffered). If respiration is inhibited, the consumption of O2 stops. Since the gas released is usually Oxygen, inhibiting the internal consumption of Oxygen (respiration) means the net release increases, even though the rate of photosynthesis (production) is unchanged.",
+      "discrimination_factors": [
+        "Distinguishing Gross vs Net photosynthesis",
+        "Understanding that gas exchange measurements typically measure net flux"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A potometer measures water uptake. A plant is placed in a cabinet with high humidity, high light, and high temperature simultaneously. Explain how the rate of water uptake (bubble movement) compares to a control in dry, dim, cool conditions.",
+      "key_insight": "High light and high temp normally increase transpiration (pulling more water), but high humidity drastically decreases the water potential gradient in the leaf, slowing or stopping transpiration despite the other factors. The student must identify the overriding limiting factor (Humidity -> VPD).",
+      "discrimination_factors": [
+        "Competing environmental variables",
+        "Water Vapor Deficit (VPD) concept",
+        "Transpiration pull mechanics"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A plant shoot is placed on a clinostat (rotated slowly) to disrupt gravity sensing, while illuminated from the side. Predict the growth direction relative to the light source.",
+      "key_insight": "Auxin redistribution is driven by gravity (statoliths settling) and light (PIN protein localization). If gravity is effectively nullified by rotation, the plant cannot use it as a reference. However, phototropism is an independent response mechanism (uneven auxin distribution due to light). The plant will grow toward the light regardless of gravity perception.",
+      "discrimination_factors": [
+        "Mechanism of tropisms (Gravity vs Light)",
+        "Function of a clinostat",
+        "Independence of hormonal stimuli"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Given a graph of Net CO2 uptake vs Temperature for two groups of plants grown at different temperatures (acclimatized), explain why the optimum temperature shifts.",
+      "key_insight": "Plants acclimatize to their environment. Plants grown at higher temps produce enzymes adapted to function better at those higher temps (and potentially less stable at lower temps). This demonstrates that 'optimum temperature' is not a fixed species property but a plastic trait influenced by phenotypic plasticity or enzyme isozyme composition.",
+      "discrimination_factors": [
+        "Enzyme adaptation/acclimatization",
+        "Interpreting shifted curve peaks",
+        "Homeostasis plasticity"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Analyzing a potometer where the bubble moves 40mm in 5 mins in a tube of 1mm diameter. A second experiment uses a tube of 2mm diameter. The student claims the plant is transpiring 4x faster because the bubble moved 40mm in the second tube too.",
+      "key_insight": "Rate is Volume / Time. Volume is $\\pi r^2 d$. If diameter doubles ($r$ doubles), the volume for the same distance increases by $2^2=4$. If the distance/time is the same, the volume/time (rate) is actually 4x higher. The student must recognize that 'distance' is a proxy for volume only if tube dimensions are constant.",
+      "discrimination_factors": [
+        "Geometry of cylinders",
+        "Experimental controls",
+        "Rate definitions"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

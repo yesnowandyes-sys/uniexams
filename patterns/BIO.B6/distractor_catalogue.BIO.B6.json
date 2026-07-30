@@ -1,0 +1,38 @@
+{
+  "topic_key": "BIO.B6",
+  "topic_name": "Gene technologies",
+  "module_code": "B",
+  "corpus_question_count": 6,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Eukaryotic-Prokaryotic Confusion",
+      "frequency": 3,
+      "example_question_id": "Q1, Q4, Q6",
+      "why_effective": "Exploits the common student error of attributing eukaryotic features (nuclei, organelles) to prokaryotic bacteria, or misidentifying the target host of genetic engineering.",
+      "generation_strategy": "Include options describing bacterial nuclei, mitochondrial DNA, or injecting engineered bacteria directly into humans (common misconception for 'drug delivery')."
+    },
+    {
+      "distractor_type": "Selection Marker Paradox",
+      "frequency": 3,
+      "example_question_id": "Q3, Q5",
+      "why_effective": "Tests logic regarding antibiotic resistance. Students often fail to deduce that if a gene is inserted *into* a resistance gene, the resistance is lost (double negative logic: 'Not Resistant' = Sensitive).",
+      "generation_strategy": "Create scenarios where a 'useful' gene disrupts a 'selection' gene. Distractors should suggest the bacteria grow on the selective plate when they actually die, or vice versa."
+    },
+    {
+      "distractor_type": "Potency Misclassification",
+      "frequency": 2,
+      "example_question_id": "Q2",
+      "why_effective": "Relies on vague definitions of 'stem cells' vs 'embryonic cells'. Students confuse 'totipotent' (can make whole organism) with 'pluripotent' (can make any tissue) or assume adult cells are always totipotent.",
+      "generation_strategy": "List processes requiring totipotency (e.g., cloning a whole organism). Include distractors suggesting pluripotent or differentiated cells can perform this feat alone."
+    },
+    {
+      "distractor_type": "Vector Amplification Fallacy",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Appeals to the intuitive but incorrect idea that 'medicine comes from the factory', leading students to select options involving injecting the production host into the patient.",
+      "generation_strategy": "Offer a distractor where the final step of production (insulin from bacteria) is confused with the delivery method (purified insulin injection)."
+    }
+  ],
+  "_raw": null
+}

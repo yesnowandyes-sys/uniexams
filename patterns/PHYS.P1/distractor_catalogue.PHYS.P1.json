@@ -1,0 +1,59 @@
+{
+  "topic_key": "PHYS.P1",
+  "topic_name": "Electricity",
+  "module_code": "P",
+  "corpus_question_count": 78,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inverse Proportionality Traps (Variable Misapplication)",
+      "frequency": "High",
+      "example_question_id": "Q1 (ENGAA-2016-S1-Q8)",
+      "why_effective": "Students often assume that maximizing the current (by minimizing resistance in a variable component) maximizes the power in a fixed series component. However, Power = I\u00b2R, and R_fixed is constant, so maximizing I *does* maximize power. The trap occurs if they confuse this with a voltage divider scenario or if the question asks for power in the *variable* resistor (where P_max occurs at R_var = R_fixed). A common distractor is the power calculated at the minimum resistance setting (e.g., 15W vs correct 45W) or maximum resistance setting, or using P=V\u00b2/R incorrectly with total resistance.",
+      "generation_strategy": "Create a circuit with a fixed resistor and a variable resistor in series. Ask for the maximum power in the *fixed* resistor. Distractors: Power calculated when variable resistor is at max (minimum current), power calculated using total resistance, power calculated if variable resistor was the target (max power transfer theorem)."
+    },
+    {
+      "distractor_type": "Efficiency Directionality Errors",
+      "frequency": "High",
+      "example_question_id": "Q7 (ENGAA-2018-S1-Q10)",
+      "why_effective": "Questions involving efficiency (e.g., 45% efficient) require students to distinguish between Input Energy and Output Energy. High-performing students calculate Output = Efficiency \u00d7 Input. Weak students calculate the 'lost' energy (Wasted = 0.55 \u00d7 Input) and select that option, or incorrectly divide by the efficiency percentage.",
+      "generation_strategy": "Scenario providing Input Power and Efficiency %. Ask for Useful Output Energy or Work Done. Distractors: The energy calculated using (1 - efficiency), or Input Power \u00d7 Time without applying efficiency, or Input Power / Efficiency."
+    },
+    {
+      "distractor_type": "Unit and Order-of-Magnitude Traps (Time Conversion)",
+      "frequency": "High",
+      "example_question_id": "Q21 (ENGAA-2022-S1-Q8)",
+      "why_effective": "Power questions involve time. If the duration is in minutes (e.g., 30 mins) but power is in kW, the numerical conversion (\u00d71800) is complex. Distractors often cater for students who multiply by 60 instead of 3600 (confusing seconds with minutes) or who forget to convert kW to W (factor of 1000), leading to answers that are off by factors of 10 or 100.",
+      "generation_strategy": "Use values like 30 minutes, 0.8 kW. Correct: 0.8kW \u00d7 0.4 (loss) \u00d7 1800s. Distractors: 0.8 \u00d7 0.4 \u00d7 30 (no sec conversion), 800 \u00d7 0.4 \u00d7 1800 (correct), 800 \u00d7 0.4 \u00d7 60 (factors of 60 mismatched)."
+    },
+    {
+      "distractor_type": "Circuit Symmetry Misunderstanding (Series/Parallel)",
+      "frequency": "Medium",
+      "example_question_id": "Q17 (ENGAA-2021-S1-Q8)",
+      "why_effective": "In a series circuit of N lamps, if one fails and short-circuits (resistance 0), the total resistance drops from NR to (N-1)R. Current increases by factor N/(N-1). Power is P_total = I\u00b2R_total. Students often assume P_new = (N-1)/N \u00d7 P_old or P_new = P_old. The correct relationship involves N/(N-1) scaling, leading to specific distractors like (19/20)P or P.",
+      "generation_strategy": "Series circuit with N identical resistors. One is shorted (0 ohm). Ask for new total power. Distractors: Proportional decrease ((N-1)/N), No change (P), Incorrect squared ratio ((N/(N-1))^2)."
+    },
+    {
+      "distractor_type": "Resistance Geometry and Dimensional Analysis",
+      "frequency": "Medium",
+      "example_question_id": "Q19 (ENGAA-2021-S1-Q36)",
+      "why_effective": "Resistance depends on Length and Area (R = \u03c1L/A). When dimensions change (e.g., diameter halved), Area decreases by 4x. If volume is conserved (reformed putty), Length increases by 4x. R_new = \u03c1(4L)/(A/4) = 16R. Students often forget that Area is proportional to diameter squared, resulting in distractors like 2R or 4R.",
+      "generation_strategy": "Change dimensions of a conductor while conserving volume. Ask for new resistance. Distractors: Linear scaling only (e.g., half diameter = 2x resistance), Squared scaling only (4x resistance), inverse relationships."
+    },
+    {
+      "distractor_type": "Parallel Resistance Power Distribution",
+      "frequency": "Medium",
+      "example_question_id": "Q20 (ENGAA-2022-S1-Q4)",
+      "why_effective": "In parallel, voltages are equal. If 2 identical resistors dissipate 0.15W total, one dissipates 0.075W. Moving to a 12V battery doubles the voltage. Since P \u221d V\u00b2, power quadruples. Students often apply linear scaling (doubling voltage = double power) or forget the voltage changes entirely.",
+      "generation_strategy": "Identical resistors in parallel. Calculate individual power. Change voltage. Distractors: P = V*I using wrong current, P scales linearly with V, P scales linearly with V\u00b2 but applied to total power instead of individual."
+    },
+    {
+      "distractor_type": "Internal Resistance and Terminal Voltage Confusion",
+      "frequency": "Low",
+      "example_question_id": "Q2 (ENGAA-2016-S1-Q16)",
+      "why_effective": "In circuits with batteries and series resistors, students often confuse the EMF (battery voltage) with the Terminal PD (voltage across the load). If the question asks for voltage across the heater, and a total resistance is given, students might use the EMF directly instead of calculating the potential divider ratio.",
+      "generation_strategy": "Circuit with battery EMF and total resistance including internal/load. Ask for PD across a specific component. Distractors: EMF value, EMF \u00d7 (R_component/R_total) calculated incorrectly, PD based on current \u00d7 wrong resistance."
+    }
+  ],
+  "_raw": null
+}

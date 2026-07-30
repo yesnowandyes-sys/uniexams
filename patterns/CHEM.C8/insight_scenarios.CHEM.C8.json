@@ -1,0 +1,50 @@
+{
+  "topic_key": "CHEM.C8",
+  "topic_name": "Separation techniques",
+  "module_code": "C",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A chromatogram shows three spots from a single pure dye substance. After the initial run, the paper is rotated 90 degrees and run in a second solvent. One of the three spots splits into two, while the others do not.",
+      "key_insight": "This scenario tests the understanding that a 'single' spot in one solvent might be a mixture of compounds with similar Rf values in that solvent (co-elution). The separation only becomes apparent with a different solvent polarity. It distinguishes 'purity' (observed) from 'actual purity'.",
+      "discrimination_factors": [
+        "Ability to interpret 2D chromatography",
+        "Understanding that Rf values are solvent-dependent",
+        "Avoiding the assumption that one spot = one pure substance"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "During fractional distillation of a miscible mixture, the temperature at the top of the column rises steadily, matches the flask temperature, and then stays constant while distillate is collected.",
+      "key_insight": "Identifying the transition from a mixture boiling over a range to a pure component boiling at a constant temperature. This discriminates between students who think 'constant heat = constant temperature' (beginner) and those who understand the dynamic equilibrium of a boiling pure liquid vs. a boiling mixture (advanced).",
+      "discrimination_factors": [
+        "Thermodynamics of boiling mixtures vs pure substances",
+        "Interpreting temperature gradients in a fractionating column",
+        "Identifying the point of pure component collection"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A student adds a dye to a separating funnel containing water and an organic solvent. The organic layer turns pink, but the water layer remains clear. The student concludes the dye is non-polar.",
+      "key_insight": "Testing the link between 'like dissolves like' and phase separation. The dye partitions into the phase it is most soluble in. However, the distractor comes if the densities are swapped (organic layer is on top or bottom depending on the solvent). The student must identify the 'organic' layer based on density data provided, not just position.",
+      "discrimination_factors": [
+        "Polarity vs. Solubility",
+        "Density determination of layers in a separating funnel",
+        "Deductive reasoning: clear layer doesn't mean no dye was ever there, just that it migrated"
+      ],
+      "difficulty_band": "5-7"
+    },
+    {
+      "scenario_description": "Two different amino acids have identical Rf values in Solvent A, but different Rf values in Solvent B. A mixture containing both is run in Solvent A.",
+      "key_insight": "This scenario explicitly targets the limitation of chromatography. If Rf values are identical in the solvent used, separation fails. It requires the student to suggest a change in solvent (to Solvent B) to resolve the mixture.",
+      "discrimination_factors": [
+        "Understanding Rf is a property of the solute-solvent system",
+        "Problem-solving: identifying the failure of a technique and proposing a valid modification",
+        "Knowledge of amino acid properties"
+      ],
+      "difficulty_band": "6-8"
+    }
+  ],
+  "_raw": null
+}

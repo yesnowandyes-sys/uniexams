@@ -1,0 +1,40 @@
+{
+  "topic_key": "PHYS.P7",
+  "topic_name": "Radioactivity",
+  "module_code": "P",
+  "corpus_question_count": 37,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Hidden Daughter' Scenario",
+      "key_insight": "Recognizing that the quantity of a stable daughter product at time $t$ is the sum of the atoms initially present plus the atoms accumulated from the parent's decay.",
+      "discrimination_factors": [
+        "Ability to track two populations simultaneously (Parent and Daughter).",
+        "Avoiding the trap of calculating only the decayed portion.",
+        "Mental arithmetic for fractions: $Final_R = Initial_R + Initial_X \times (1 - RemainingFraction_X)$."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "The 'Path-Dependent' Nuclide",
+      "key_insight": "Understanding that while the net change in mass/charge is fixed by the total particles emitted, the intermediate states depend on the sequence of emissions. A nuclide might satisfy the net condition but be inaccessible due to the specific decay chain logic.",
+      "discrimination_factors": [
+        "Visualization of decay chains rather than just start-end points.",
+        "Understanding that Beta decay increases Z, Alpha decreases Z.",
+        "Checking if a proposed state requires 'skipping' a step."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Momentum Partitioning in Alpha Decay",
+      "key_insight": "Applying conservation of momentum ($m_1v_1 + m_2v_2 = 0$) to determine that kinetic energy is distributed inversely proportional to mass ($K_1/K_2 = m_2/m_1$).",
+      "discrimination_factors": [
+        "Deriving $v \\propto 1/m$ from momentum conservation.",
+        "Substituting into $K = 0.5mv^2$ to get $K \\propto 1/m$.",
+        "Identifying the correct ratio (Light alpha particle gets the vast majority of energy, specifically $234/238$ of the total E)."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

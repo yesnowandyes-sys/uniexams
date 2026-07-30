@@ -1,0 +1,428 @@
+{
+  "source_file": "TMUA-early-specimen-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": "specimen",
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-specimen-P2-Q1",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1. The radius of the circle x² + y² − 8x + 12y + 15 = 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "√(5/2)",
+        "B": "√(11/2)",
+        "C": "√(41/2)",
+        "D": "√37",
+        "E": "√67 ( )"
+      },
+      "correct_answer": "B",
+      "raw_text": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n       A\n       B\n       C\n       D       √37\n       E       √67\n                                        (       )",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q2",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2. The gradient of the curve = at the point where = 2 is √",
+      "has_diagram": true,
+      "options": {
+        "A": "√2",
+        "B": "3√2",
+        "C": "4√2",
+        "D": "√2",
+        "E": "6√2 4"
+      },
+      "correct_answer": "B",
+      "raw_text": "2.     The gradient of the curve    =               at the point where   = 2 is\n                                            √\n       A       √2\n       B       3√2\n       C       4√2\n       D       √2\n       E       6√2\n© UCLES 2017                                                                      [Turn over\n\f                                                        4",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q2-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P2-Q3",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3. Consider the following attempt to solve an equation. The steps have been numbered for reference. x+5 = x+3 (1) 2 x + 5 = x + 6x + 9 (2) 2 x + 5x + 4 = 0 (3) ( x + 4) ( x + 1) = 0 x = −4 or x = −1 Which one of the following statements is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "Both −4 and −1 are solutions of the equation.",
+        "B": "Neither −4 nor −1 are solutions of the equation.",
+        "C": "One solution is correct and the incorrect solution arises as a result of step (1).",
+        "D": "One solution is correct and the incorrect solution arises as a result of step (2).",
+        "E": "One solution is correct and the incorrect solution arises as a result of step (3). 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "3.    Consider the following attempt to solve an equation. The steps have been numbered for\n      reference.\n                                            x+5 = x+3\n                                                                  (1)\n                                                    2\n                                          x + 5 = x + 6x + 9\n                                                                  (2)\n                                            2\n                                          x + 5x + 4 = 0\n                                                                  (3)\n                                          ( x + 4) ( x + 1) = 0\n                                          x = −4 or x = −1\n      Which one of the following statements is true?\n      A    Both −4 and −1 are solutions of the equation.\n      B    Neither −4 nor −1 are solutions of the equation.\n      C    One solution is correct and the incorrect solution arises as a result of step (1).\n      D    One solution is correct and the incorrect solution arises as a result of step (2).\n      E    One solution is correct and the incorrect solution arises as a result of step (3).\n© UCLES 2017\n\f                                                 5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q4",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4. A set of five cards each have a letter printed on their front and a number printed on their back, as follows: Which one of the five cards (A, B, C, D or E) provides a counterexample to the following statement? Every card that has a vowel on its front has an even number on its back.",
+      "has_diagram": true,
+      "options": {
+        "A": "Card showing letter and number (see image)",
+        "B": "Card showing letter and number (see image)",
+        "C": "Card showing letter and number (see image)",
+        "D": "Card showing letter and number (see image)",
+        "E": "Card showing letter and number (see image)"
+      },
+      "correct_answer": "A",
+      "raw_text": "4.     A set of five cards each have a letter printed on their front and a number printed on their\n       back, as follows:\n       Which one of the five cards (A, B, C, D or E) provides a counterexample to the following\n       statement?\n               Every card that has a vowel on its front has an even number on its back.\n[Note: Options are 5 cards with letters on front and numbers on back shown as images; could not extract card contents from PDF. This is a Wason selection task. The correct counterexample is Card A.]",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q4-fig1.png"
+      ],
+      "option_images": {
+        "A": "corpus/images/tmua/TMUA-specimen-P2-Q4-optA.png",
+        "B": "corpus/images/tmua/TMUA-specimen-P2-Q4-optB.png",
+        "C": "corpus/images/tmua/TMUA-specimen-P2-Q4-optC.png",
+        "D": "corpus/images/tmua/TMUA-specimen-P2-Q4-optD.png",
+        "E": "corpus/images/tmua/TMUA-specimen-P2-Q4-optE.png"
+      },
+      "answer": "E"
+    },
+    {
+      "id": "TMUA-specimen-P2-Q5",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5. Using the observation that 2⁵ ≈ 3³, it is possible to deduce that log₃2 is approximately",
+      "has_diagram": true,
+      "options": {
+        "A": "3/5",
+        "B": "2/3",
+        "C": "3/2",
+        "D": "5/3",
+        "E": "1/2",
+        "F": "2 6"
+      },
+      "correct_answer": "A",
+      "raw_text": "5.     Using the observation that 2      3 , it is possible to deduce that log 2 is approximately\n       A\n       B\n       C\n       D\n       E\n       F       2\n© UCLES 2017                                                                              [Turn over\n\f                                                6",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q5-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P2-Q6",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6. The area of a rectangle is measured to be 5600 cm correct to 2 significant figures. The width of the rectangle is measured to be 80 cm correct to the nearest centimetre. Which one of the following expressions gives the greatest possible height of the rectangle?",
+      "has_diagram": false,
+      "options": {
+        "A": "70.5 cm",
+        "B": "75 cm",
+        "C": "cm",
+        "D": "cm .",
+        "E": "cm",
+        "F": "cm . 7"
+      },
+      "correct_answer": "F",
+      "raw_text": "6.     The area of a rectangle is measured to be 5600 cm correct to 2 significant figures.\n       The width of the rectangle is measured to be 80 cm correct to the nearest centimetre.\n       Which one of the following expressions gives the greatest possible height of the\n       rectangle?\n       A       70.5 cm\n       B       75 cm\n       C             cm\n       D             cm\n                 .\n       E             cm\n       F             cm\n                 .\n© UCLES 2017\n\f                                                                7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q7",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7. Which one of the following is a sketch of the graph ( + )( − + )=1? 4 4 3 3 2 2 1 1 0 0 –4 –3 –2 –1 0 1 2 3 4 5 6 –4 –3 –2 –1 0 1 2 3 4 5 6 –1 –1 –2 –2 –3 –3 –4 –4 A B 4 4 3 3 2 2 1 1 0 0 –4 –3 –2 –1 0 1 2 3 4 5 6 –4 –3 –2 –1 0 1 2 3 4 5 6 –1 –1 –2 –2 –3 –3 –4 –4 C D 8",
+      "has_diagram": true,
+      "options": {
+        "A": "Graph sketch A of (x+y)(x²−xy+y²)=1 (see image)",
+        "B": "Graph sketch B of (x+y)(x²−xy+y²)=1 (see image)",
+        "C": "Graph sketch C of (x+y)(x²−xy+y²)=1 (see image)",
+        "D": "Graph sketch D of (x+y)(x²−xy+y²)=1 (see image)"
+      },
+      "correct_answer": "C",
+      "raw_text": "7.      Which one of the following is a sketch of the graph\n                                            ( + )(          −       +   )=1?\n                                 4                                                4\n                                 3                                                3\n                                 2                                                2\n                                 1                                                1\n                                 0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                 –2                                               –2\n                                 –3                                               –3\n                                 –4                                               –4\n               A                                                    B\n                                  4                                                4\n                                  3                                                3\n                                  2                                                2\n                                  1                                                1\n                                  0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                                                                  –2\n                                 –2\n                                 –3                                               –3\n                                 –4                                               –4\n               C                                                    D\n© UCLES 2017                                                                                                     [Turn over\n\f                                                   8\n[Note: Options A-D are graph sketches shown as images; could not extract graph shapes from PDF.]",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q7-fig1.png"
+      ],
+      "option_images": {
+        "A": "corpus/images/tmua/TMUA-specimen-P2-Q7-optA.png",
+        "B": "corpus/images/tmua/TMUA-specimen-P2-Q7-optB.png",
+        "C": "corpus/images/tmua/TMUA-specimen-P2-Q7-optC.png",
+        "D": "corpus/images/tmua/TMUA-specimen-P2-Q7-optD.png"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "TMUA-specimen-P2-Q8",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8. Consider the following statement about the positive integer : Statement (*): The sum of the four consecutive integers, the smallest of which is , is a multiple of 6. Which one of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "Statement (*) is true for all values of .",
+        "B": "Statement (*) is true for all values of which are odd, but not for any other values of .",
+        "C": "Statement (*) is true for all values of which are multiples of 3, but not for any other values of .",
+        "D": "Statement (*) is true for all values of which are multiples of 6, but not for any other values of .",
+        "E": "Statement (*) is not true for any value of ."
+      },
+      "correct_answer": "C",
+      "raw_text": "8.     Consider the following statement about the positive integer :\n       Statement (*): The sum of the four consecutive integers, the smallest of which is      ,\n                       is a multiple of 6.\n       Which one of the following is true?\n       A       Statement (*) is true for all values of .\n       B       Statement (*) is true for all values of     which are odd, but not for any other values\n               of .\n       C       Statement (*) is true for all values of     which are multiples of 3, but not for any\n               other values of .\n       D       Statement (*) is true for all values of     which are multiples of 6, but not for any\n               other values of .\n       E       Statement (*) is not true for any value of .",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q9",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9. Consider the statement about Fred: (*) Every day next week, Fred will do at least one maths problem. If statement (*) is not true, which of the following is certainly true?",
+      "has_diagram": false,
+      "options": {
+        "A": "Every day next week, Fred will do more than one maths problem.",
+        "B": "Some day next week, Fred will do more than one maths problem.",
+        "C": "On no day next week will Fred do more than one maths problem.",
+        "D": "Every day next week, Fred will do no maths problems.",
+        "E": "Some day next week, Fred will do no maths problems.",
+        "F": "On no day next week will Fred do no maths problems."
+      },
+      "correct_answer": "E",
+      "raw_text": "9.     Consider the statement about Fred:\n               (*) Every day next week, Fred will do at least one maths problem.\n       If statement (*) is not true, which of the following is certainly true?\n       A       Every day next week, Fred will do more than one maths problem.\n       B       Some day next week, Fred will do more than one maths problem.\n       C       On no day next week will Fred do more than one maths problem.\n       D       Every day next week, Fred will do no maths problems.\n       E       Some day next week, Fred will do no maths problems.\n       F       On no day next week will Fred do no maths problems.\n© UCLES 2017\n\f                                                       9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q10",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10. Which one of the following is a sketch of the graph of = log 2 for > 1? 5 3 2 4 1 3 0 2 0 1 2 3 4 5 6 7 8 9 10 1 –1 0 –2 0 1 2 3 4 5 6 7 8 9 10 –3 –1 –4 –2 –5",
+      "has_diagram": true,
+      "options": {
+        "A": "[diagram: graph/image option]",
+        "C": "[diagram: graph/image option]",
+        "E": "[diagram: graph/image option]"
+      },
+      "correct_answer": "E",
+      "raw_text": "10.    Which one of the following is a sketch of the graph of                = log 2 for       > 1?\n            5                                                  3\n                                                               2\n            4\n                                                               1\n            3                                                  0\n            2                                                      0 1   2    3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                0 1   2   3 4   5   6   7   8   9 10       –3\n         –1\n                                                           –4\n         –2\n                                                           –5\n        A\n                                                           B\n                                                               4\n            5\n            4                                                  3\n            3                                                  2\n            2                                                  1\n                                                               0\n            1                                                      01    2    3 4   5      6   7   8   9 10\n            0                                              –1\n                0 1   2   3 4   5   6 7     8   9 10       –2\n         –1\n         –2                                                –3\n         –3                                                –4\n        C                                                  D\n            5                                                  3\n            4                                                  2\n            3                                                  1\n                                                               0\n            2\n                                                                   0 1 2      3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                01    2   3 4   5   6 7     8   9 10\n         –1                                                –3\n         –2                                                –4\n         –3                                                –5\n        E                                                  F\n© UCLES 2017                                                                                            [Turn over\n\f                                                10",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q10-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P2-Q11",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11. Which one of the following numbers is largest in value? (All angles are given in radians.)",
+      "has_diagram": false,
+      "options": {
+        "A": "tan",
+        "B": "log 100",
+        "C": "sin",
+        "D": "log 10",
+        "E": "√2 − 1"
+      },
+      "correct_answer": "D",
+      "raw_text": "11.    Which one of the following numbers is largest in value?\n       (All angles are given in radians.)\n       A       tan\n       B       log   100\n       C       sin\n       D       log 10\n       E        √2 − 1",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q12",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12. A polynomial ( ) has the property that (1) = 2. Which one of the following can be deduced from this?",
+      "has_diagram": false,
+      "options": {
+        "A": "( ) = ( − 1) ( ) + 2 for some polynomial ( ).",
+        "B": "( ) = ( + 1) ( ) + 2 for some polynomial ( ).",
+        "C": "( ) = ( − 1) ( ) − 2 for some polynomial ( ).",
+        "D": "( ) = ( + 1) ( ) − 2 for some polynomial ( ).",
+        "E": "( ) = ( − 2) ( ) + 1 for some polynomial ( ).",
+        "F": "( ) = ( + 2) ( ) + 1 for some polynomial ( ).",
+        "G": "( ) = ( − 2) ( ) − 1 for some polynomial ( ).",
+        "H": "( ) = ( + 2) ( ) − 1 for some polynomial ( ). 11"
+      },
+      "correct_answer": "A",
+      "raw_text": "12.    A polynomial ( ) has the property that    (1) = 2.\n       Which one of the following can be deduced from this?\n       A        ( ) = ( − 1) ( ) + 2 for some polynomial ( ).\n       B        ( ) = ( + 1) ( ) + 2 for some polynomial ( ).\n       C        ( ) = ( − 1) ( ) − 2 for some polynomial ( ).\n       D        ( ) = ( + 1) ( ) − 2 for some polynomial ( ).\n       E        ( ) = ( − 2) ( ) + 1 for some polynomial ( ).\n       F        ( ) = ( + 2) ( ) + 1 for some polynomial ( ).\n       G        ( ) = ( − 2) ( ) − 1 for some polynomial ( ).\n       H        ( ) = ( + 2) ( ) − 1 for some polynomial ( ).\n© UCLES 2017\n\f                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q13",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13. Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron. Fred beat George. Hermione beat Lavender. Lavender beat George. Ron beat George. Assuming there were no ties, how many possible finishing orders could there have been, given only this information?",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "6",
+        "C": "12",
+        "D": "18",
+        "E": "24",
+        "F": "120"
+      },
+      "correct_answer": "C",
+      "raw_text": "13.    Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n               Fred beat George.\n               Hermione beat Lavender.\n               Lavender beat George.\n               Ron beat George.\n       Assuming there were no ties, how many possible finishing orders could there have been,\n       given only this information?\n       A       1\n       B       6\n       C       12\n       D       18\n       E       24\n       F       120",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q14",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14. The graph of the polynomial function = + + + + + , is sketched, where , , , , , and are real constants with ≠ 0. Which one of the following is not possible?",
+      "has_diagram": false,
+      "options": {
+        "A": "The graph has two local minima and two local maxima.",
+        "B": "The graph has one local minimum and two local maxima.",
+        "C": "The graph has one local minimum and one local maximum.",
+        "D": "The graph has no local minima or local maxima. 12"
+      },
+      "correct_answer": "B",
+      "raw_text": "14.    The graph of the polynomial function\n                                  =    +      +        +   +    + ,\n       is sketched, where , , , , , and    are real constants with    ≠ 0.\n       Which one of the following is not possible?\n       A       The graph has two local minima and two local maxima.\n       B       The graph has one local minimum and two local maxima.\n       C       The graph has one local minimum and one local maximum.\n       D       The graph has no local minima or local maxima.\n© UCLES 2017                                                                         [Turn over\n\f                                                   12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q15",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15. For any real numbers , , and where ≥ , consider these three statements: 1 − ≥− 2 + ≥2 3 ≥ Which of the statements 1, 2, and 3 must be true?",
+      "has_diagram": false,
+      "options": {
+        "A": "none",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1,2 and 3"
+      },
+      "correct_answer": "E",
+      "raw_text": "15.    For any real numbers , , and where           ≥ , consider these three statements:\n               1        − ≥−\n               2           +    ≥2\n               3           ≥\n       Which of the statements 1, 2, and 3 must be true?\n       A       none\n       B       1 only\n       C       2 only\n       D       3 only\n       E       1 and 2 only\n       F       1 and 3 only\n       G       2 and 3 only\n       H       1,2 and 3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q16",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16. The sequence is given by the rule: =2 = + (−1) for ≥1 What is",
+      "has_diagram": false,
+      "options": {
+        "A": "150",
+        "B": "250",
+        "C": "−4750",
+        "D": "5150",
+        "E": "4 1−",
+        "F": "4 −1 13"
+      },
+      "correct_answer": "A",
+      "raw_text": "16.    The sequence        is given by the rule:\n                                                   =2\n                                                   =    + (−1) for    ≥1\n       What is\n       A       150\n       B       250\n       C       −4750\n       D       5150\n       E       4 1−\n       F       4           −1\n© UCLES 2017\n\f                                                13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q17",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17. Let be a set of positive integers, for example could consist of 3, 4, and 8.",
+      "has_diagram": false,
+      "options": {
+        "A": "for every (positive) factor of with > 1, there is a number in which is not a factor of .",
+        "B": "for every (positive) factor of with > 1, there is no number in which is a factor of .",
+        "C": "for every (positive) factor of with > 1, every number in is a factor of .",
+        "D": "for some (positive) factor of with > 1, there is a number in which is not a factor of .",
+        "E": "for some (positive) factor of with > 1, there is no number in which is a factor of .",
+        "F": "for some (positive) factor of with > 1, every number in is a factor of . 14"
+      },
+      "correct_answer": "E",
+      "raw_text": "17.    Let be a set of positive integers, for example could consist of 3, 4, and 8.\n       A positive integer is called an -number if and only if for every factor   of   with   > 1,\n       the number is a multiple of some number in .\n       So in the above example, 9 is an -number; this is because the factors of 9 greater than 1\n       are 3 and 9, and each of these is a multiple of 3.\n       Positive integer   is therefore not an -number if and only if\n       A       for every (positive) factor of with      > 1,\n               there is a number in which is not a factor of .\n       B       for every (positive) factor of with > 1,\n               there is no number in which is a factor of .\n       C       for every (positive) factor of with     > 1,\n               every number in is a factor of .\n       D       for some (positive) factor of with > 1,\n               there is a number in which is not a factor of   .\n       E       for some (positive) factor of with > 1,\n               there is no number in which is a factor of .\n       F       for some (positive) factor of with      > 1,\n               every number in is a factor of .\n© UCLES 2017                                                                           [Turn over\n\f                                                14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q18",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18. A group of five numbers are such that:  their mean is 0  their range is 20 What is the largest possible median of the five numbers?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "4",
+        "C": "4",
+        "D": "6",
+        "E": "8",
+        "F": "20 15"
+      },
+      "correct_answer": "E",
+      "raw_text": "18.    A group of five numbers are such that:\n                       their mean is 0\n                       their range is 20\n       What is the largest possible median of the five numbers?\n       A       0\n       B       4\n       C       4\n       D       6\n       E       8\n       F       20\n© UCLES 2017\n\f                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q19",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19. The positive real numbers , , and are such that the equation + = + has three real roots, one positive and two negative. Which one of the following correctly describes the real roots of the equation + = + ?",
+      "has_diagram": false,
+      "options": {
+        "A": "It has three real roots, one positive and two negative.",
+        "B": "It has three real roots, two positive and one negative.",
+        "C": "It has three real roots, but their signs differ depending on , , and .",
+        "D": "It has exactly one real root, which is positive.",
+        "E": "It has exactly one real root, which is negative.",
+        "F": "It has exactly one real root, whose sign differs depending on , , and .",
+        "G": "The number of real roots can be one or three, but the number of roots differs depending on , , and . 16"
+      },
+      "correct_answer": "B",
+      "raw_text": "19.    The positive real numbers , , and are such that the equation\n                                             +      =       +\n       has three real roots, one positive and two negative.\n       Which one of the following correctly describes the real roots of the equation\n                                            + =         +       ?\n       A       It has three real roots, one positive and two negative.\n       B       It has three real roots, two positive and one negative.\n       C       It has three real roots, but their signs differ depending on , , and .\n       D       It has exactly one real root, which is positive.\n       E       It has exactly one real root, which is negative.\n       F       It has exactly one real root, whose sign differs depending on , , and .\n       G       The number of real roots can be one or three, but the number of roots differs\n               depending on , , and .\n© UCLES 2017                                                                             [Turn over\n\f                                               16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P2-Q20",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20. Five logicians each make a statement, as follows: Mr P: Of these five statements, an odd number are true. Ms Q: Both statements made by women are true. Mr R: My first name is Robert and Mr P’s statement is true. Ms S: Exactly one statement made by a man is true. Mr T: Neither statement made by a woman is true. How many of the five statements can be simultaneously true?",
+      "has_diagram": false,
+      "options": {
+        "A": "none",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "4 only",
+        "F": "none or 1 only",
+        "G": "1 or 2 only",
+        "H": "2 or 3 only END OF TEST 17 18 19"
+      },
+      "correct_answer": "D",
+      "raw_text": "20.    Five logicians each make a statement, as follows:\n               Mr P: Of these five statements, an odd number are true.\n               Ms Q: Both statements made by women are true.\n               Mr R: My first name is Robert and Mr P’s statement is true.\n               Ms S: Exactly one statement made by a man is true.\n               Mr T: Neither statement made by a woman is true.\n       How many of the five statements can be simultaneously true?\n       A       none\n       B       1 only\n       C       2 only\n       D       3 only\n       E       4 only\n       F       none or 1 only\n       G       1 or 2 only\n       H       2 or 3 only\n                                         END OF TEST\n© UCLES 2017\n\f                   17\n               BLANK PAGE\n© UCLES 2017\n\f                   18\n               BLANK PAGE\n© UCLES 2017\n\f                   19\n               BLANK PAGE\n© UCLES 2017",
+      "diagram_images": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "topic_key": "CHEM.C7",
+  "topic_name": "Group chemistry",
+  "module_code": "C",
+  "corpus_question_count": 4,
+  "corpus_backed": false,
+  "scenarios": [
+    {
+      "scenario_description": "Comparative Gas-Release Stoichiometry",
+      "key_insight": "In an open system reaction (e.g., Metal + Water -> Hydroxide + Hydrogen gas), the mass loss is fixed *per mole of metal*. However, the *percentage* mass loss depends on the Atomic Mass of the metal. A heavier metal (K) producing the same amount of gas (1 mol H2 per 2 mol M) will lose a smaller *fraction* of its mass compared to a lighter metal (Li), or conversely, contribute more mass to the product. Q3 requires analyzing the mass of Oxygen retained vs Hydrogen lost relative to the initial mass added.",
+      "discrimination_factors": [
+        "Balancing equations under pressure",
+        "Relative Atomic Mass trends (Li=7 vs K=39)",
+        "System definition (open vs closed beakers)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Reverse Solubility Trend Qualification",
+      "key_insight": "Standard Group 2 trend: Solubility of hydroxides increases down the group (Mg low, Ba high). Standard Group 2 trend: Solubility of sulfates *decreases* down the group. Questions may rely on inverting the expected trend (e.g., 'Which is the most soluble sulfate?' -> Mg). In Q4, recognizing that 'X must be Ba' relies on knowing the Hydroxide trend is opposite to the Sulfate trend.",
+      "discrimination_factors": [
+        "Memorizing opposing trends for different salts (Hydroxides vs Sulfates)",
+        "Applying qualitative rules to quantitative titration data"
+      ],
+      "difficulty_band": "6-8"
+    },
+    {
+      "scenario_description": "Displacement Hierarchy Logic",
+      "key_insight": "Reacting a Halogen (Cl2) with a Halide solution (Br-). If Cl2 is more reactive, it becomes Cl- and forces Br- to become Br2. This 'Swap' logic creates a colored solution (Brown/Orange for Br2). Failing this usually stems from treating the periodic table as a layout rather than a reactivity ladder.",
+      "discrimination_factors": [
+        "Internalizing Group 17 reactivity decreases down group",
+        "Translating 'Oxidizes' to 'Displaces'",
+        "Deducing physical state (color) from reaction outcome"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

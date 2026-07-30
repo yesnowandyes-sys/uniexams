@@ -1,0 +1,1607 @@
+{
+  "module": "chemistry",
+  "label": "ESAT Chemistry",
+  "total_questions": 27,
+  "questions": [
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q1",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 1,
+      "question_text": "The colours of three indicators are shown.\nEqual volumes of these three indicators were mixed and the mixture was added to a solution of pH 5.0.\n\nWhat colour would be seen?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q01.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "blue",
+        "B": "green",
+        "C": "orange",
+        "D": "purple",
+        "E": "yellow"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "blue",
+          "math_alt": [],
+          "plain_text": "blue"
+        },
+        "B": {
+          "text": "green",
+          "math_alt": [],
+          "plain_text": "green"
+        },
+        "C": {
+          "text": "orange",
+          "math_alt": [],
+          "plain_text": "orange"
+        },
+        "D": {
+          "text": "purple",
+          "math_alt": [],
+          "plain_text": "purple"
+        },
+        "E": {
+          "text": "yellow",
+          "math_alt": [],
+          "plain_text": "yellow"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "yellow",
+      "correct_answer_images": [],
+      "explanation": "The answer is yellow.\nThe pH scale is a measure of the acidity or alkalinity of an aqueous solution.\nAll indicators in the mixture experience a pH of 5.0.\nMethyl orange (colour changes at 4.0) will be yellow at pH 5.0.\nBromothymol blue (colour changes at 6.5) will be yellow at pH 5.0.\nPhenolphthalein (colour changes at 9.0) will be colourless at pH 5.0.\nIn order: yellow + yellow + colourless = yellow.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:01:57.412553"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q2",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 2,
+      "question_text": "Which one of the following atoms or ions contains the same number of neutrons and electrons as  Ca2+ ?\nCl¯\nCl\nAr\nK+\nK",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q02.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "{}^{35}_{17}\\text{Cl}^-",
+        "B": "{}^{37}_{17}\\text{Cl}",
+        "C": "{}^{40}_{18}\\text{Ar}",
+        "D": "{}^{39}_{19}\\text{K}^+",
+        "E": "{}^{39}_{19}\\text{K}"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[blank presubscript 17 presuperscript 35] Cl¯",
+          "math_alt": [
+            "blank presubscript 17 presuperscript 35"
+          ],
+          "plain_text": "Cl¯"
+        },
+        "B": {
+          "text": "[blank presubscript 17 presuperscript 37] Cl",
+          "math_alt": [
+            "blank presubscript 17 presuperscript 37"
+          ],
+          "plain_text": "Cl"
+        },
+        "C": {
+          "text": "[blank presubscript 18 presuperscript 40] Ar",
+          "math_alt": [
+            "blank presubscript 18 presuperscript 40"
+          ],
+          "plain_text": "Ar"
+        },
+        "D": {
+          "text": "[blank presubscript 19 presuperscript 39] K+",
+          "math_alt": [
+            "blank presubscript 19 presuperscript 39"
+          ],
+          "plain_text": "K+"
+        },
+        "E": {
+          "text": "[blank presubscript 19 presuperscript 39] K",
+          "math_alt": [
+            "blank presubscript 19 presuperscript 39"
+          ],
+          "plain_text": "K"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "blank presubscript 17 presuperscript 37",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "blank presubscript 20 presuperscript 40",
+        "blank presubscript 17 presuperscript 37",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39"
+      ],
+      "explanation": "The lower number is the atomic number and gives the number of protons in the atom/ion. The upper number is the mass number and shows the number of neutrons added to the number of protons in the atom/ion. The difference between the mass number and atomic number gives the number of neutrons in the atom/ion.\nIn an atom the number of protons equals the number of electrons, as all atoms are neutral.\nIn an ion a negative charge shows that electron(s) equal to the size of the charge have been added to the atom, a positive charge shows that electron(s) equal to the size of the charge have been removed from the atom.\nIn  Ca2+ there are 20 neutrons and 18 (20–2) electrons.\nUsing the above information, only  Cl,  K+ and  K have 20 neutrons but of these species only  K+ has 18 electrons (19–1), so the answer is  K+",
+      "explanation_images": [
+        "blank presubscript 20 presuperscript 40",
+        "blank presubscript 17 presuperscript 37",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39",
+        "blank presubscript 19 presuperscript 39"
+      ],
+      "extracted_at": "2026-07-05T00:02:09.909923",
+      "question_images_latex": [
+        "blank presubscript 20 presuperscript 40",
+        "blank presubscript 17 presuperscript 35",
+        "blank presubscript 17 presuperscript 37",
+        "blank presubscript 18 presuperscript 40",
+        "blank presubscript 19 presuperscript 39"
+      ]
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q3",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 3,
+      "question_text": "When concentrated aqueous sodium chloride solution is electrolysed using inert electrodes, a reaction occurs at each electrode.\n\nWhich is the correct combination of elements actually produced at the electrodes in this electrolysis?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q03.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "positive electrode = chlorine; negative electrode = hydrogen",
+        "B": "positive electrode = chlorine; negative electrode = sodium",
+        "C": "positive electrode = oxygen; negative electrode = hydrogen",
+        "D": "positive electrode = oxygen; negative electrode = sodium",
+        "E": "positive electrode = sodium; negative electrode = chlorine"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "positive electrode = chlorine; negative electrode = hydrogen",
+          "math_alt": [],
+          "plain_text": "positive electrode = chlorine; negative electrode = hydrogen"
+        },
+        "B": {
+          "text": "positive electrode = chlorine; negative electrode = sodium",
+          "math_alt": [],
+          "plain_text": "positive electrode = chlorine; negative electrode = sodium"
+        },
+        "C": {
+          "text": "positive electrode = oxygen; negative electrode = hydrogen",
+          "math_alt": [],
+          "plain_text": "positive electrode = oxygen; negative electrode = hydrogen"
+        },
+        "D": {
+          "text": "positive electrode = oxygen; negative electrode = sodium",
+          "math_alt": [],
+          "plain_text": "positive electrode = oxygen; negative electrode = sodium"
+        },
+        "E": {
+          "text": "positive electrode = sodium; negative electrode = chlorine",
+          "math_alt": [],
+          "plain_text": "positive electrode = sodium; negative electrode = chlorine"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "positive electrode = chlorine; negative electrode = hydrogen",
+      "correct_answer_images": [],
+      "explanation": "The answer is: positive electrode = chlorine; negative electrode = hydrogen.\nAqueous sodium chloride contains two cations (Na+ and H+) and two anions (Cl– and OH–).\nThe positive electrode (anode) attracts anions and the negative electrode (cathode) attracts cations.\nWhen two ions are attracted to an electrode, only one can be discharged as atoms. This is called preferential discharge.\nIn this case:\n• chlorine is discharged in preference to oxygen at the positive electrode (anode);\n• hydrogen is discharged in preference to sodium at the negative electrode (cathode).",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:02:22.399616"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q4",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 4,
+      "question_text": "Which substance (A-E) in the table could have a giant covalent structure?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q04.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "substance A, melting point 1700 °C, boiling point 2200 °C, electrical conductivity when solid: none, when molten: none",
+        "B": "substance B, melting point 800 °C, boiling point 1470 °C, electrical conductivity when solid: none, when molten: good",
+        "C": "substance C, melting point 98 °C, boiling point 880 °C, electrical conductivity when solid: good, when molten: good",
+        "D": "substance D, melting point -20 °C, boiling point 58 °C, electrical conductivity when solid: none, when molten: none",
+        "E": "substance E, melting point -39 °C, boiling point 357 °C, electrical conductivity when solid: good, when molten: good"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "substance A, melting point 1700 °C, boiling point 2200 °C, electrical conductivity when solid: none, when molten: none",
+          "math_alt": [],
+          "plain_text": "substance A, melting point 1700 °C, boiling point 2200 °C, electrical conductivity when solid: none, when molten: none"
+        },
+        "B": {
+          "text": "substance B, melting point 800 °C, boiling point 1470 °C, electrical conductivity when solid: none, when molten: good",
+          "math_alt": [],
+          "plain_text": "substance B, melting point 800 °C, boiling point 1470 °C, electrical conductivity when solid: none, when molten: good"
+        },
+        "C": {
+          "text": "substance C, melting point 98 °C, boiling point 880 °C, electrical conductivity when solid: good, when molten: good",
+          "math_alt": [],
+          "plain_text": "substance C, melting point 98 °C, boiling point 880 °C, electrical conductivity when solid: good, when molten: good"
+        },
+        "D": {
+          "text": "substance D, melting point -20 °C, boiling point 58 °C, electrical conductivity when solid: none, when molten: none",
+          "math_alt": [],
+          "plain_text": "substance D, melting point -20 °C, boiling point 58 °C, electrical conductivity when solid: none, when molten: none"
+        },
+        "E": {
+          "text": "substance E, melting point -39 °C, boiling point 357 °C, electrical conductivity when solid: good, when molten: good",
+          "math_alt": [],
+          "plain_text": "substance E, melting point -39 °C, boiling point 357 °C, electrical conductivity when solid: good, when molten: good"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "option A",
+      "correct_answer_images": [],
+      "explanation": "The answer is option A.\nAssessment of each option:\nA. The high melting and boiling points, together with non-conductivity in the solid and molten states, indicates a giant covalent structure.\nB. The high melting and boiling points indicate a giant structure. No conductivity when solid but having conductivity when molten is typical of a giant ionic structure.\nC. Despite the relatively low melting and boiling points, the fact that it conducts electricity when solid and molten means that it is a giant metallic structure.\nD. With low melting and boiling points, no electrical conductivity and being a liquid at room temperature and pressure, the substance is typical of a simple molecular structure.\nE. Despite the very low melting point, the good conductivity when solid and molten indicates a metallic structure. In fact, E is mercury.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:02:35.023652"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q5",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 5,
+      "question_text": "Chemicals A and B react to form products Y and Z. The reaction goes to completion. The equation for the reaction is:\n\n \n\n2A(aq)  +  B(aq)  →  Y(aq)  +  Z(aq)\n\n \n\nEquimolar samples of A and B were mixed and the concentrations of A and Z were measured over time. Which of the following graphs could represent this reaction?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q05.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "Graph 1 only",
+        "B": "Graph 2 only",
+        "C": "Graph 3 only",
+        "D": "Graphs 1 and 2 only",
+        "E": "Graphs 2 and 3 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "Graph 1 only",
+          "math_alt": [],
+          "plain_text": "Graph 1 only"
+        },
+        "B": {
+          "text": "Graph 2 only",
+          "math_alt": [],
+          "plain_text": "Graph 2 only"
+        },
+        "C": {
+          "text": "Graph 3 only",
+          "math_alt": [],
+          "plain_text": "Graph 3 only"
+        },
+        "D": {
+          "text": "Graphs 1 and 2 only",
+          "math_alt": [],
+          "plain_text": "Graphs 1 and 2 only"
+        },
+        "E": {
+          "text": "Graphs 2 and 3 only",
+          "math_alt": [],
+          "plain_text": "Graphs 2 and 3 only"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "Graph 1 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is Graph 1 only.\nThe reaction is stated to go to completion.\nAt the start of the reaction there is a concentration of A of 1.2 mol dm–3. The equation gives the ratio of A : Z as 2 : 1. This means that for every unit of A that is reacted, only 0.5 as much Z is produced.\nIn a complete reaction, all of A will be used up and the final concentration of Z will be 0.6 mol dm–3, so graph 1 must be correct.\nAs the chemical A is reacted, Z is produced. Graph 2 shows that an equilibrium state has been reached with the concentration of A being twice that of Z; this is incorrect.\nGraph 3 shows that an equilibrium state has been reached with equal concentrations of A and Z; this is incorrect.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:02:47.382062"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q6",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 6,
+      "question_text": "In a reversible reaction, gaseous reactants P and Q form gaseous products R and S.\n\nAn increase in temperature was found to increase both the rate of reaction and the yield at equilibrium.\n\nAn increase in pressure was found to increase the rate of reaction but the yield at equilibrium was unaffected.\n\nWhich equation could represent the reaction?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q06.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "3P + Q \\rightleftharpoons 2R + 3S, \\Delta H = +",
+        "B": "P + 3Q \\rightleftharpoons R + 2S, \\Delta H = +",
+        "C": "P + 2Q \\rightleftharpoons 2R + S, \\Delta H = +",
+        "D": "P + 2Q \\rightleftharpoons 3R + S, \\Delta H = -",
+        "E": "P + 2Q \\rightleftharpoons R + S, \\Delta H = -",
+        "F": "2P + Q \\rightleftharpoons R + 2S, \\Delta H = -"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[begin mathsize 16px style 3 straight P space plus space straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space 3 straight S space space space space space space increment H space is space plus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style 3 straight P space plus space straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space 3 straight S space space space space space space increment H space is space plus ve end style"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[begin mathsize 16px style straight P space plus space 3 straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space 2 straight S space space space space space space space space increment H space is space plus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style straight P space plus space 3 straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space 2 straight S space space space space space space space space increment H space is space plus ve end style"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space straight S space space space space space space space space increment H space is space plus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space straight S space space space space space space space space increment H space is space plus ve end style"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 3 straight R space plus space straight S space space space space space space space space increment H space is space minus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 3 straight R space plus space straight S space space space space space space space space increment H space is space minus ve end style"
+          ],
+          "plain_text": ""
+        },
+        "E": {
+          "text": "[begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space straight S space space space space space space space space space space increment H space is space minus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space straight S space space space space space space space space space space increment H space is space minus ve end style"
+          ],
+          "plain_text": ""
+        },
+        "F": {
+          "text": "[begin mathsize 16px style 2 straight P space plus space straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space 2 straight S space space space space space space space space increment H space is space minus ve end style]",
+          "math_alt": [
+            "begin mathsize 16px style 2 straight P space plus space straight Q space rightwards harpoon over leftwards harpoon space straight R space plus space 2 straight S space space space space space space space space increment H space is space minus ve end style"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space straight S space space space space space space increment H space is space plus ve end style",
+      "correct_answer_plain": ":",
+      "correct_answer_images": [
+        "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space straight S space space space space space space increment H space is space plus ve end style"
+      ],
+      "explanation": "For an increase in temperature to increase the yield, according to Le Chatelier’s principle, the reaction must be endothermic in order to shift the equilibrium to the right and so increase the yield.\nFor there to be no increase in yield when the pressure is increased, the reaction must be have the same number of gaseous reactant moles and gaseous product moles.\nBoth increasing temperature and pressure will increase the rate for any gaseous reaction.\nThe answer is:\nThis is the only reaction which is endothermic and equimolar in terms of reactants and products.",
+      "explanation_images": [
+        "begin mathsize 16px style straight P space plus space 2 straight Q space rightwards harpoon over leftwards harpoon space 2 straight R space plus space straight S space space space space space space increment H space is space plus ve end style"
+      ],
+      "extracted_at": "2026-07-05T00:02:59.957862"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q7",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 7,
+      "question_text": "An oxide of iron has the formula Fe3O4 and contains both Fe2+ and Fe3+ ions.\n\nWhich one of the following is the fraction of iron ions that are in the Fe2+ state?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q07.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "\\frac{1}{4}",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{1}{2}",
+        "D": "\\frac{2}{3}",
+        "E": "\\frac{3}{4}"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[begin mathsize 16px style 1 fourth end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 fourth end style"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[begin mathsize 16px style 1 third end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 third end style"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[begin mathsize 16px style 1 half end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 half end style"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[begin mathsize 16px style 2 over 3 end style]",
+          "math_alt": [
+            "begin mathsize 16px style 2 over 3 end style"
+          ],
+          "plain_text": ""
+        },
+        "E": {
+          "text": "[begin mathsize 16px style 3 over 4 end style]",
+          "math_alt": [
+            "begin mathsize 16px style 3 over 4 end style"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "begin mathsize 16px style 1 third end style",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "begin mathsize 16px style 1 third end style",
+        "begin mathsize 16px style 1 third end style"
+      ],
+      "explanation": "The answer is .\nOne method for solving the problem would be as follows:\nThe oxide ion has a charge of −2, O2–.\nA compound formed from Fe3+ and O2– ions must have the formula Fe2O3.\nA compound formed from Fe2+ and O2– ions must have the formula FeO.\nA 1 : 1 mixture of these compounds would give a compound of formula Fe3O4 (Fe2O3 + FeO).\nSo the molar ratio Fe3+ : Fe2+ must be 2 : 1, making Fe2+   of the iron ion total.",
+      "explanation_images": [
+        "begin mathsize 16px style 1 third end style",
+        "begin mathsize 16px style 1 third end style"
+      ],
+      "extracted_at": "2026-07-05T00:03:12.590013"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q8",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 8,
+      "question_text": "An element has a mass number of 40 and an atomic number of 20.\n\nWhich statement(s) about this element is/are correct?\n\n \n\n1. Its atomic nucleus has a relative mass of 20.\n\n2. It is a noble gas.\n\n3. It would form a negative ion.\n\n4. It is in Group 2 of the Periodic Table.\n\n5. It is a non-metallic element.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q08.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1, 2 and 3 only",
+        "B": "1, 3 and 4 only",
+        "C": "1, 4 and 5 only",
+        "D": "2, 3 and 5 only",
+        "E": "4 only",
+        "F": "5 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1, 2 and 3 only",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3 only"
+        },
+        "B": {
+          "text": "1, 3 and 4 only",
+          "math_alt": [],
+          "plain_text": "1, 3 and 4 only"
+        },
+        "C": {
+          "text": "1, 4 and 5 only",
+          "math_alt": [],
+          "plain_text": "1, 4 and 5 only"
+        },
+        "D": {
+          "text": "2, 3 and 5 only",
+          "math_alt": [],
+          "plain_text": "2, 3 and 5 only"
+        },
+        "E": {
+          "text": "4 only",
+          "math_alt": [],
+          "plain_text": "4 only"
+        },
+        "F": {
+          "text": "5 only",
+          "math_alt": [],
+          "plain_text": "5 only"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "4 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is 4 only\nMass number = number of protons + number of neutrons = 40\nAtomic number = number of protons = 20\nNumber of protons = 20, so number of electrons = 20 to balance charge.\nNumber of neutrons = 40 − 20 = 20\nUsing the above information and applying it to each statement:\n1. Incorrect. The relative mass of the nucleus is 40.\n2. Incorrect. A total of 20 electrons would give an electronic configuration of 2,8,8,2. The incomplete outer shell containing two electrons indicates that is in Group 2. Group 2 elements are not noble gases, they are alkaline earth metals.\n3. Incorrect. Group 2 elements form 2+ ions by loss of the outer two electrons.\n4. Correct.\n5. Incorrect. Group 2 elements are metals.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:03:25.155352"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q9",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 9,
+      "question_text": "The reaction between nitrogen and hydrogen to form ammonia is exothermic.\n\nN2(g)  +  3H2(g)  ⇌  2NH3(g)ΔH is negative\n\nThe bond energies in the three molecules are as shown:\n\nN ≡ N     x kJ mol–1\n\nH – H     y kJ mol–1\n\nN – H     z kJ mol–1\n\nWhich statement can be deduced from this information?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q09.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "z > x + y",
+        "B": "2z > x + y",
+        "C": "2z > x + 3y",
+        "D": "6z > x + 3y"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[z space greater than x plus y]",
+          "math_alt": [
+            "z space greater than x plus y"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[2 z space greater than x plus y]",
+          "math_alt": [
+            "2 z space greater than x plus y"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[2 z space greater than x plus 3 y]",
+          "math_alt": [
+            "2 z space greater than x plus 3 y"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[6 z space greater than x plus 3 y]",
+          "math_alt": [
+            "6 z space greater than x plus 3 y"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "6 z space greater than x plus 3 y",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "6 z space greater than x plus 3 y",
+        "6 z space greater than x plus 3 y"
+      ],
+      "explanation": "The answer is\nBond breaking is an endothermic process, whilst bond making is an exothermic process.\nThe reaction is exothermic overall, which means that more energy is released when bonds are made than is needed for bonds to be broken.\nThe bonds to be broken are on the left of the equation (1 × N ≡ N and 3 × N ─ H) and those made are on the right of the equation (2 × 3 × N ─ H). This means that the 6 N ─ H bond energies must be greater than the N2 and 3 × H2 bond energies in total.\nLooking at the number of bonds from the mole ratios in the equation (1 : 3 : 2), the inequality  is satisfied.",
+      "explanation_images": [
+        "6 z space greater than x plus 3 y",
+        "6 z space greater than x plus 3 y"
+      ],
+      "extracted_at": "2026-07-05T00:03:37.526871"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q10",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 10,
+      "question_text": "A chromatogram was produced for 4 separate dyes (W, X, Y and Z) using filter paper and a water solvent.\n\nA second chromatogram was produced using a mixture of two of the dyes, again using filter paper and a water solvent:\n\n \n\n \n\nWhich of the following statements, if any, are correct?\n\n \n\n   1. The concentration of dye W must be twice the concentration of dye Z.\n\n \n\n   2. The mobile phase is the filter paper.\n\n \n\n   3. The mixture in the second chromatogram contained dyes W and Y.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q10.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "3 only",
+      "correct_answer_images": [],
+      "explanation": "Considering the first chromatogram, the distance travelled by dye W is twice that travelled by Z. However, Rf value is not affected by concentration. Statement 1 is incorrect.\nThe filter paper is the stationary phase, the solvent (water) is the mobile phase. Statement 2 is incorrect.\nThe two chromatograms need to be compared. As the distance between baseline and solvent front is different in each case, Rf values must be considered.\nFrom chromatogram 1:\nW:Rf  =  8.2  /  10  =  0.82\nX:Rf   =  3.2  /  10  =  0.32\nY:Rf   =  6.4  /  10  =  0.64\nZ:Rf   =  4.1  /  10  =  0.41\nOn the second chromatogram two spots have developed at 3.2 cm and 4.1 cm\nRf  values are 3.2  /  5  =  0.64 and 4.1  /  5  =  0.82 which correspond to dyes Y and W respectively.\nStatement 3 is therefore correct.\nThe answer is: 3 only.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:03:50.144949"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q11",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 11,
+      "question_text": "In which two of the following equations is the first reactant an oxidising agent?\n\n \n\n1. Mg  +  2HCl  →  MgCl2  +  H2\n\n \n\n2. Cr2O72–  +  6Fe2+  +  14H+  →  2Cr3+  +  6Fe3+  +  7H2O\n\n \n\n3. 2Cu2+  +  4I–  →  2CuI  +  I2\n\n \n\n4. H2SO3  +  2Fe3+  +  H2O  →  H2SO4  +  2Fe2+  +  2H+",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q11.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 and 2",
+        "B": "1 and 4",
+        "C": "2 and 3",
+        "D": "2 and 4",
+        "E": "3 and 4"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 and 2",
+          "math_alt": [],
+          "plain_text": "1 and 2"
+        },
+        "B": {
+          "text": "1 and 4",
+          "math_alt": [],
+          "plain_text": "1 and 4"
+        },
+        "C": {
+          "text": "2 and 3",
+          "math_alt": [],
+          "plain_text": "2 and 3"
+        },
+        "D": {
+          "text": "2 and 4",
+          "math_alt": [],
+          "plain_text": "2 and 4"
+        },
+        "E": {
+          "text": "3 and 4",
+          "math_alt": [],
+          "plain_text": "3 and 4"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2 and 3.",
+      "correct_answer_images": [],
+      "explanation": "The answer is 2 and 3.\nOxidising agents accept electrons. Reducing agents lose (or donate) electrons.\nLooking at each equation for the first reactant in the equation in turn:\n1: Mg is transformed into Mg2+. Electrons are being lost and so Mg is a reducing agent.\n2: The oxidation state of chromium in the first compound is +6 and it is transformed into Cr3+. Electrons are being accepted and so Cr2O72– is an oxidising agent.\n3: Cu2+ is transformed into Cu+. Electrons are being accepted and so Cu2+ is a oxidising agent.\n4: The oxidation state of sulfur in the first compound is +4 and it is transformed into a compound where it is +6. Electrons are being lost and so the first compound is a reducing agent.\nEquations 2 and 3 are correct.\n(Construction of half-equations is another valid solution method with the same conclusion.)",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:04:02.833599"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q12",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 12,
+      "question_text": "What volume of water vapour measured at room temperature and pressure would be produced from an ice cube of mass 6.00 g if it all evaporated?\n\n(Ar values: H = 1; O = 16. Molar volume of a gas at room temperature and pressure = 24 dm3)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q12.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "240 cm3",
+        "B": "1800 cm3",
+        "C": "4800 cm3",
+        "D": "8000 cm3",
+        "E": "24 000 cm3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "240 cm3",
+          "math_alt": [],
+          "plain_text": "240 cm3"
+        },
+        "B": {
+          "text": "1800 cm3",
+          "math_alt": [],
+          "plain_text": "1800 cm3"
+        },
+        "C": {
+          "text": "4800 cm3",
+          "math_alt": [],
+          "plain_text": "4800 cm3"
+        },
+        "D": {
+          "text": "8000 cm3",
+          "math_alt": [],
+          "plain_text": "8000 cm3"
+        },
+        "E": {
+          "text": "24 000 cm3",
+          "math_alt": [],
+          "plain_text": "24 000 cm3"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "begin mathsize 16px style 6 over 18 equals 1 third end style",
+      "correct_answer_plain": "8000 cm3.",
+      "correct_answer_images": [
+        "begin mathsize 16px style 6 over 18 equals 1 third end style",
+        "begin mathsize 16px style 24 over 3 end style"
+      ],
+      "explanation": "The answer is 8000 cm3.\n1 mole of H2O has a mass of (2 × 1) + 16 = 18 g\nThe volume of 1 mole of a gas at room temperature and pressure is 24 dm3\n6.00 g of H2O is  mol, and therefore occupies a volume of = 8 dm3\n8 dm3 = 8000 cm3",
+      "explanation_images": [
+        "begin mathsize 16px style 6 over 18 equals 1 third end style",
+        "begin mathsize 16px style 24 over 3 end style"
+      ],
+      "extracted_at": "2026-07-05T00:04:15.214648"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q13",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 13,
+      "question_text": "A compound of iodine and oxygen contains 63.5 g of iodine and 20.0 g of oxygen.\n\nWhich one of the following is its empirical formula?\n\n(Ar values: I = 127; O = 16)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q13.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "IO",
+        "B": "IO2",
+        "C": "I2O",
+        "D": "I2O3",
+        "E": "I2O5",
+        "F": "I5O2"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "IO",
+          "math_alt": [],
+          "plain_text": "IO"
+        },
+        "B": {
+          "text": "IO2",
+          "math_alt": [],
+          "plain_text": "IO2"
+        },
+        "C": {
+          "text": "I2O",
+          "math_alt": [],
+          "plain_text": "I2O"
+        },
+        "D": {
+          "text": "I2O3",
+          "math_alt": [],
+          "plain_text": "I2O3"
+        },
+        "E": {
+          "text": "I2O5",
+          "math_alt": [],
+          "plain_text": "I2O5"
+        },
+        "F": {
+          "text": "I5O2",
+          "math_alt": [],
+          "plain_text": "I5O2"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "I2O5.",
+      "correct_answer_images": [],
+      "explanation": "The answer is I2O5.\nThere are several methods that will give the correct answer, of which one is shown below:\nTherefore the empirical formula is I2O5.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:04:27.651468"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q14",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 14,
+      "question_text": "Copper, Cu, reacts with concentrated nitric acid, HNO3, to produce a solution of copper(II) nitrate, water and compound X.\n\nCompound X does not contain copper or hydrogen.\n\nThe balanced equation for the reaction shows 3 moles of copper reacting with HNO3 to produce 4 moles of water.\n\nWhat is the identity of compound X?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q14.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "NO",
+        "B": "NO2",
+        "C": "NO3",
+        "D": "N2O5",
+        "E": "N2O8"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "NO",
+          "math_alt": [],
+          "plain_text": "NO"
+        },
+        "B": {
+          "text": "NO2",
+          "math_alt": [],
+          "plain_text": "NO2"
+        },
+        "C": {
+          "text": "NO3",
+          "math_alt": [],
+          "plain_text": "NO3"
+        },
+        "D": {
+          "text": "N2O5",
+          "math_alt": [],
+          "plain_text": "N2O5"
+        },
+        "E": {
+          "text": "N2O8",
+          "math_alt": [],
+          "plain_text": "N2O8"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "NO",
+      "correct_answer_plain": "NO",
+      "correct_answer_images": [],
+      "explanation": "The formula of copper(II) nitrate is Cu(NO3)2\nHence the equation as we have it at the moment is: 3Cu  +  ?HNO3  →  ?Cu(NO3)2  +  X  +  4H2O\nTo balance the H’s we need 8HNO3\nTo balance the Cu’s we need 3Cu(NO3)2\nSo the equation now looks like: 3Cu  +  8HNO3  →  3Cu(NO3)2  +  X  +  4H2O\nTo balance the equation X must contain 2N’s and 2O’s\nX must be N2O2 or NO (i.e. 2NO in the equation). Hence the only correct answer is NO",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:04:40.133420"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q15",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 15,
+      "question_text": "Listed are the electron configurations for the atoms of different elements.\n\nWhich one represents the most reactive non-metal?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q15.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "2,4",
+        "B": "2,6",
+        "C": "2,7",
+        "D": "2,8,1",
+        "E": "2,8,6",
+        "F": "2,8,7"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "2,4",
+          "math_alt": [],
+          "plain_text": "2,4"
+        },
+        "B": {
+          "text": "2,6",
+          "math_alt": [],
+          "plain_text": "2,6"
+        },
+        "C": {
+          "text": "2,7",
+          "math_alt": [],
+          "plain_text": "2,7"
+        },
+        "D": {
+          "text": "2,8,1",
+          "math_alt": [],
+          "plain_text": "2,8,1"
+        },
+        "E": {
+          "text": "2,8,6",
+          "math_alt": [],
+          "plain_text": "2,8,6"
+        },
+        "F": {
+          "text": "2,8,7",
+          "math_alt": [],
+          "plain_text": "2,8,7"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2,7",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 2,7\nElectron configurations of atoms can be used to identify the position of an element in the Periodic Table. The number of electrons in the outer shell determines the group. The number of shells determines in which period the element is.\nIf we label each option from A to F, and consider the position in the Periodic Table of each element:\nA: 2,4 Group 14, where non-metals are at the top of the group and metals are at the bottom\nB: 2,6 Group 16, a non-metal\nC: 2,7 Group 17, a non-metal\nD: 2,8,1 Group 1, a metal\nE: 2,8,6 Group 16, a non-metal\nF: 2,8,7 Group 17, a non-metal\nOnly option D can be eliminated.\nNon-metals react to gain electrons and acquire the configurations of noble gases.\nThe fewer the electrons to gain, the more reactive the element. This narrows the choice down to option C and option F, as both atoms only need to gain one electron.\nOption C is the smaller atom (two shells) so there is more attraction between the nucleus and the electron to be gained, compared with option F. Option C will therefore be more reactive. (The element is fluorine.)",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:04:52.879894"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q16",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 16,
+      "question_text": "Naturally occurring chlorine is a mixture of two isotopes with mass numbers 35 and 37. The isotope with mass number 35 is three times as common as the isotope with mass number 37.\n\nNaturally occurring bromine is a mixture of two isotopes with mass numbers 79 and 81. They are present in equal amounts.\n\nWhat fraction of the naturally occurring compound CH2BrCl has a relative molecular mass of 128?\n\n(Ar values: H = 1; C = 12)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q16.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "\\frac{1}{8}",
+        "B": "\\frac{1}{4}",
+        "C": "\\frac{3}{8}",
+        "D": "\\frac{1}{2}",
+        "E": "\\frac{5}{8}"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[begin mathsize 16px style 1 over 8 end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 over 8 end style"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[begin mathsize 16px style 1 fourth end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 fourth end style"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[begin mathsize 16px style 3 over 8 end style]",
+          "math_alt": [
+            "begin mathsize 16px style 3 over 8 end style"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[begin mathsize 16px style 1 half end style]",
+          "math_alt": [
+            "begin mathsize 16px style 1 half end style"
+          ],
+          "plain_text": ""
+        },
+        "E": {
+          "text": "[begin mathsize 16px style 5 over 8 end style]",
+          "math_alt": [
+            "begin mathsize 16px style 5 over 8 end style"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "begin mathsize 16px style 3 over 8 end style",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "begin mathsize 16px style 3 over 8 end style",
+        "begin mathsize 16px style 3 over 4 end style",
+        "begin mathsize 16px style 1 fourth end style",
+        "begin mathsize 16px style 1 half end style",
+        "begin mathsize 16px style 1 half cross times 3 over 4 equals 3 over 8 end style"
+      ],
+      "explanation": "The answer is .\nThis question is about identifying which possible isotopes can give rise to CH2BrCl with Mr = 128, and the proportion of these isotopes that exist, to identify which isotope combinations give Mr = 128 and those that do not.\nThe combined total mass of bromine and chlorine (removing CH2) must total 128 − 14 = 114\nThe only combination of isotopes with this total mass is 79Br combined with 35Cl. As these are the isotopes with the lowest mass for each element, any other possibilities would result in a higher Mr for the compound.\nThe fraction occurring is directly related to probability. We want the probability that Br = 79Br AND Cl = 35Cl, in CH2BrCl, and these events are independent of each other.\n35Cl is three times as common as 37Cl, and the question states that there are only two isotopes to be considered (3 : 1), so the relative frequency of 35Cl is , and for 37Cl it is . We can treat these as probabilities.\nFor bromine, the relative frequency of 79Br is , and it is the same for 81Br.\nHence P (79Br AND 35Cl) = P (Br=79Br) × P (Cl=35Cl) =",
+      "explanation_images": [
+        "begin mathsize 16px style 3 over 8 end style",
+        "begin mathsize 16px style 3 over 4 end style",
+        "begin mathsize 16px style 1 fourth end style",
+        "begin mathsize 16px style 1 half end style",
+        "begin mathsize 16px style 1 half cross times 3 over 4 equals 3 over 8 end style"
+      ],
+      "extracted_at": "2026-07-05T00:05:05.308310"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q17",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 17,
+      "question_text": "The heat energy change for a reaction is − 100 kJ mol–1, and the activation energy is + 150 kJ mol–1.\n\n \n\nWhat is the activation energy for the reverse reaction?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q17.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "− 250 kJ mol–1",
+        "B": "− 150 kJ mol–1",
+        "C": "− 50 kJ mol–1",
+        "D": "+ 50 kJ mol–1",
+        "E": "+ 150 kJ mol–1",
+        "F": "+ 250 kJ mol–1"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "− 250 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "− 250 kJ mol–1"
+        },
+        "B": {
+          "text": "− 150 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "− 150 kJ mol–1"
+        },
+        "C": {
+          "text": "− 50 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "− 50 kJ mol–1"
+        },
+        "D": {
+          "text": "+ 50 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "+ 50 kJ mol–1"
+        },
+        "E": {
+          "text": "+ 150 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "+ 150 kJ mol–1"
+        },
+        "F": {
+          "text": "+ 250 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "+ 250 kJ mol–1"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "+ 250 kJ mol–1",
+      "correct_answer_plain": "+ 250 kJ mol–1",
+      "correct_answer_images": [],
+      "explanation": "As this reaction gives out heat it must be exothermic, as shown in the diagram and as indicated by the negative value of the heat energy change (∆H ). Ea denotes activation energy.\nThe reverse reaction will have the same profile but it will go in the opposite direction. This means that the activation energy will be the sum of the heat energy taken in the reverse reaction (+ 100 kJ mol–1) and the activation energy for the forward reaction (+ 150 kJ mol–1), which equals + 250 kJ mol–1.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:05:17.696763"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q18",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 18,
+      "question_text": "A mixture of equal parts of hexane (bp 68 °C) and heptane (bp 98 °C) is distilled using a fractionating column.\n\n \n\nThe temperature of the liquid in the flask and the temperature at the top of the fractionating column are measured.\n\n \n\nWhich one of the following shows the likely temperatures when the first drops of distillate are collected?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q18.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "temperature in flask / °C: 83, temperature at top of column / °C: 68",
+        "B": "temperature in flask / °C: 98, temperature at top of column / °C: 68",
+        "C": "temperature in flask / °C: 83, temperature at top of column / °C: 83",
+        "D": "temperature in flask / °C: 98, temperature at top of column / °C: 83",
+        "E": "temperature in flask / °C: 98, temperature at top of column / °C: 98"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "temperature in flask / °C: 83, temperature at top of column / °C: 68",
+          "math_alt": [],
+          "plain_text": "temperature in flask / °C: 83, temperature at top of column / °C: 68"
+        },
+        "B": {
+          "text": "temperature in flask / °C: 98, temperature at top of column / °C: 68",
+          "math_alt": [],
+          "plain_text": "temperature in flask / °C: 98, temperature at top of column / °C: 68"
+        },
+        "C": {
+          "text": "temperature in flask / °C: 83, temperature at top of column / °C: 83",
+          "math_alt": [],
+          "plain_text": "temperature in flask / °C: 83, temperature at top of column / °C: 83"
+        },
+        "D": {
+          "text": "temperature in flask / °C: 98, temperature at top of column / °C: 83",
+          "math_alt": [],
+          "plain_text": "temperature in flask / °C: 98, temperature at top of column / °C: 83"
+        },
+        "E": {
+          "text": "temperature in flask / °C: 98, temperature at top of column / °C: 98",
+          "math_alt": [],
+          "plain_text": "temperature in flask / °C: 98, temperature at top of column / °C: 98"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "option A",
+      "correct_answer_images": [],
+      "explanation": "The answer is option A.\nWhen using a fractionating column, the flask is at the bottom and is heated. The temperature is highest at the bottom of the column and lowest at the top.\nThe hexane has the lowest boiling point and so will evaporate first in the flask and will rise to the top of the column first (68 °C). The liquid mixture in the flask must be boiling so the temperature must be at least 68 °C, but less than 98 °C, so that only the hexane is vapourised.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:05:30.277648"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q19",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 19,
+      "question_text": "The following tests were carried out on separate samples of two monoprotic acids, HX and HY. HX is a strong acid and HY is a weak acid. Both acids had a concentration of 1 mol dm–3.\n\n \n\n   1. Measure the time taken for a 1 cm strip of magnesium to react completely when added to 25 cm3 of each acid.\n\n \n\n   2. Measure the volume of 1 mol dm–3 sodium hydroxide solution needed to completely neutralise 20 cm3 of each acid.\n\n \n\n   3. Measure the electrical conductance of each acid using a conductivity meter.\n\n \n\nEach test was carried out under the same conditions.\n\nWhich of the tests, considered independently, if any, would show that HX was a stronger acid than HY?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q19.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "1 and 3 only",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "An acid is a substance that dissolves in water to release hydrogen ions.\nHX  +  aq  ⇌  H+(aq)  +  X–(aq)\nThe strength of an acid depends on the extent of the ionisation of the acid molecules in water. A strong acid will ionise completely. In a weak acid only a small fraction of the molecules will ionise.\nTest 1 will work because the rate of reaction between the acid and the magnesium depends on the concentration of hydrogen ions.\n2H+(aq)  +  Mg(s)  →  H2(g)  +  Mg2+(aq)\nTest 2 will not work as two acids with the same concentration and volume will react to produce the same moles of hydrogen ions, therefore they will need the same volume of 1 mol dm–3 sodium hydroxide solution for complete neutralisation.\nNaOH  +  HX  →  NaX  +  H2O\nTest 3 will work because the electrical conductivity of a solution depends on the concentration of ions. A weak acid will have a lower number of ions per mole of acid than a strong acid.\nThe correct answer is: 1 and 3 only.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:05:43.001859"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q20",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 20,
+      "question_text": "Carbon, in the form of coke, is used to reduce iron oxide in a blast furnace. The three stages are shown below:\n\n \n\n   1.   C  +  O2  →  CO2\n\n \n\n   2.   CO2  +  C  →  2CO\n\n \n\n   3.   3CO  +  Fe2O3  →  2Fe  +  3CO2\n\nIf 12 g of carbon is used in stage 2 and all the carbon monoxide produced is used in stage 3, what mass of carbon dioxide is produced in stage 3?\n\n(Ar values: C = 12; O = 16)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q20.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "17.8 g",
+        "B": "35.6 g",
+        "C": "44 g",
+        "D": "88 g",
+        "E": "132 g"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "17.8 g",
+          "math_alt": [],
+          "plain_text": "17.8 g"
+        },
+        "B": {
+          "text": "35.6 g",
+          "math_alt": [],
+          "plain_text": "35.6 g"
+        },
+        "C": {
+          "text": "44 g",
+          "math_alt": [],
+          "plain_text": "44 g"
+        },
+        "D": {
+          "text": "88 g",
+          "math_alt": [],
+          "plain_text": "88 g"
+        },
+        "E": {
+          "text": "132 g",
+          "math_alt": [],
+          "plain_text": "132 g"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "88 g",
+      "correct_answer_images": [],
+      "explanation": "The answer is 88 g.\nIn this question, stage 1 can be ignored.\nIn stage 2, the stoichiometry of the equation shows that 1 mole of C will produce 2 moles of CO.\n12 g of C (Ar 12) is 1 mole.\nMr of CO is 12+16 = 28, so 2 moles of CO is 28×2 = 56 g.\nIn stage 3, the stoichiometry of the equation shows that 3 moles of CO will produce 3 moles of CO2, i.e. a 1 : 1 molar ratio.\n56 g (2 moles) of CO will make 2 moles of CO2.\nMr of CO2 is 12+(16×2) = 44, so 2 moles of CO2 is 44×2 = 88 g.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:05:55.386340"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q21",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 21,
+      "question_text": "The following exothermic, reversible reaction is used in the manufacture of sulfuric acid from sulfur dioxide and oxygen:\n\n2SO2(g)  +  O2(g)  ⇌  2SO3(g)\n\nWhich one of the following statements about this reaction is correct?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q21.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "Pressure has no effect on the position of equilibrium.",
+        "B": "Raising the temperature moves the equilibrium to the right.",
+        "C": "At equilibrium, no sulfur dioxide is being changed into sulfur trioxide.",
+        "D": "The addition of a catalyst speeds up the forward reaction more than the backward reaction.",
+        "E": "Before equilibrium is reached, the rate of the forward reaction is greater than the rate of the backward reaction."
+      },
+      "options_detailed": {
+        "A": {
+          "text": "Pressure has no effect on the position of equilibrium.",
+          "math_alt": [],
+          "plain_text": "Pressure has no effect on the position of equilibrium."
+        },
+        "B": {
+          "text": "Raising the temperature moves the equilibrium to the right.",
+          "math_alt": [],
+          "plain_text": "Raising the temperature moves the equilibrium to the right."
+        },
+        "C": {
+          "text": "At equilibrium, no sulfur dioxide is being changed into sulfur trioxide.",
+          "math_alt": [],
+          "plain_text": "At equilibrium, no sulfur dioxide is being changed into sulfur trioxide."
+        },
+        "D": {
+          "text": "The addition of a catalyst speeds up the forward reaction more than the backward reaction.",
+          "math_alt": [],
+          "plain_text": "The addition of a catalyst speeds up the forward reaction more than the backward reaction."
+        },
+        "E": {
+          "text": "Before equilibrium is reached, the rate of the forward reaction is greater than the rate of the backward reaction.",
+          "math_alt": [],
+          "plain_text": "Before equilibrium is reached, the rate of the forward reaction is greater than the rate of the backward reaction."
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "Before equilibrium is reached, the rate of the forward reaction is greater than the rate of the backward reaction",
+      "correct_answer_images": [],
+      "explanation": "The answer is: Before equilibrium is reached, the rate of the forward reaction is greater than the rate of the backward reaction.\nThe first statement is false. There is a different number of molecules on the two sides of the equation so altering the pressure will shift the equilibrium position.\nThe second statement is false. The reaction is exothermic and so increasing the temperature will move the equilibrium position to the left.\nThe third statement is false. Chemical equilibrium is dynamic so reactants are constantly changing to products and products are constantly changing back to reactants.\nThe fourth statement is false. A catalyst increases the rate at which equilibrium is reached but does not shift the position of equilibrium.\nThe fifth statement is correct. Until equilibrium is reached, the forward reaction will be faster than the backward reaction.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:06:07.757148"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q22",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 22,
+      "question_text": "An impure sample of sodium hydroxide has a mass of 1.20 g. All the sodium hydroxide completely reacts with a minimum of 50.0 cm3 of 0.50 mol dm–3 hydrochloric acid.\n\nWhat is the percentage purity of the sodium hydroxide sample?\n\n(Ar values: H = 1; O = 16; Na = 23; Cl = 35.5)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q22.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "37.5%",
+        "B": "41.6%",
+        "C": "72.7%",
+        "D": "75.0%",
+        "E": "83.3%",
+        "F": "90.4%"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "37.5%",
+          "math_alt": [],
+          "plain_text": "37.5%"
+        },
+        "B": {
+          "text": "41.6%",
+          "math_alt": [],
+          "plain_text": "41.6%"
+        },
+        "C": {
+          "text": "72.7%",
+          "math_alt": [],
+          "plain_text": "72.7%"
+        },
+        "D": {
+          "text": "75.0%",
+          "math_alt": [],
+          "plain_text": "75.0%"
+        },
+        "E": {
+          "text": "83.3%",
+          "math_alt": [],
+          "plain_text": "83.3%"
+        },
+        "F": {
+          "text": "90.4%",
+          "math_alt": [],
+          "plain_text": "90.4%"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "begin mathsize 16px style fraction numerator vol. space in space cm cubed over denominator 1000 end fraction end style",
+      "correct_answer_plain": "83.3%",
+      "correct_answer_images": [
+        "begin mathsize 16px style fraction numerator vol. space in space cm cubed over denominator 1000 end fraction end style",
+        "begin mathsize 16px style fraction numerator 50.0 over denominator 1000 end fraction end style",
+        "begin mathsize 16px style fraction numerator 1.0 over denominator 1.20 end fraction cross times 100 end style"
+      ],
+      "explanation": "The answer is 83.3%.\nThe chemical equation for the reaction is: NaOH  +  HCl  →  NaCl  +  H2O\nMolar ratio is 1 NaOH : 1 HCl\nNumber of moles of HCl =  × conc. =  × 0.5 = 0.025\nTherefore, the number of moles of NaOH is also 0.025\nAr of NaOH is 23 + 1 + 16 = 40, so 1 mole of NaOH has a mass of 40 g\nIn the question, the number of moles of NaOH present = 0.025 × 40 = 1.0 g\nPercentage purity =   = 83.3%",
+      "explanation_images": [
+        "begin mathsize 16px style fraction numerator vol. space in space cm cubed over denominator 1000 end fraction end style",
+        "begin mathsize 16px style fraction numerator 50.0 over denominator 1000 end fraction end style",
+        "begin mathsize 16px style fraction numerator 1.0 over denominator 1.20 end fraction cross times 100 end style"
+      ],
+      "extracted_at": "2026-07-05T00:06:20.541798"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q23",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 23,
+      "question_text": "A sample of an alkali XOH of mass 2.8 g was dissolved in water.\n\nThis solution was neutralised by 12.5 cm3 of sulfuric acid of concentration 2.0 mol dm–3.\n\n2XOH(aq)  +  H2SO4(aq)  →  X2SO4(aq)  +  2H2O(l)\n\nWhat is the relative atomic mass of X?\n\n(Ar values: H = 1; O = 16; S = 32)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q23.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "13",
+        "B": "26",
+        "C": "39",
+        "D": "52",
+        "E": "65",
+        "F": "78"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "13",
+          "math_alt": [],
+          "plain_text": "13"
+        },
+        "B": {
+          "text": "26",
+          "math_alt": [],
+          "plain_text": "26"
+        },
+        "C": {
+          "text": "39",
+          "math_alt": [],
+          "plain_text": "39"
+        },
+        "D": {
+          "text": "52",
+          "math_alt": [],
+          "plain_text": "52"
+        },
+        "E": {
+          "text": "65",
+          "math_alt": [],
+          "plain_text": "65"
+        },
+        "F": {
+          "text": "78",
+          "math_alt": [],
+          "plain_text": "78"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "begin mathsize 16px style fraction numerator 12.5 over denominator 1000 end fraction space cross times space 2.0 space equals space 0.025 end style",
+      "correct_answer_plain": "39.",
+      "correct_answer_images": [
+        "begin mathsize 16px style fraction numerator 12.5 over denominator 1000 end fraction space cross times space 2.0 space equals space 0.025 end style",
+        "begin mathsize 16px style fraction numerator mass space in space straight g over denominator M subscript straight r end fraction end style",
+        "begin mathsize 16px style fraction numerator 2.8 over denominator M subscript straight r end fraction end style",
+        "begin mathsize 16px style M subscript straight r equals fraction numerator 2.8 over denominator 0.05 end fraction equals fraction numerator 28 over denominator 0.5 end fraction equals 56 end style"
+      ],
+      "explanation": "The answer is 39.\nVarious approaches can be used to calculate the correct answer, of which one is shown below.\nNumber of moles H2SO4 used  =\nMolar ratio in the reaction is 2 XOH : 1 H2SO4\nSo, the number of moles of XOH present  =  0.025  ×  2  =  0.05\nNumber of moles  = , so  0.05  =\nRearranging,\nMr of XOH  =  Ar (X)  +  16  +  1  =  56\nAr (X)  =  39",
+      "explanation_images": [
+        "begin mathsize 16px style fraction numerator 12.5 over denominator 1000 end fraction space cross times space 2.0 space equals space 0.025 end style",
+        "begin mathsize 16px style fraction numerator mass space in space straight g over denominator M subscript straight r end fraction end style",
+        "begin mathsize 16px style fraction numerator 2.8 over denominator M subscript straight r end fraction end style",
+        "begin mathsize 16px style M subscript straight r equals fraction numerator 2.8 over denominator 0.05 end fraction equals fraction numerator 28 over denominator 0.5 end fraction equals 56 end style"
+      ],
+      "extracted_at": "2026-07-05T00:06:33.117722"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q24",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 24,
+      "question_text": "The equation summarises the reaction of copper and dilute nitric acid.\n\nCu  +  r HNO3  →  Cu(NO3)2  +  s H2O  +  t NO2\n\nWhat values of s and t are needed to balance the equation?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q24.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "s: 1, t: 1",
+        "B": "s: 2, t: 1",
+        "C": "s: 4, t: 1",
+        "D": "s: 2, t: 2",
+        "E": "s: 4, t: 2"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "s: 1, t: 1",
+          "math_alt": [],
+          "plain_text": "s: 1, t: 1"
+        },
+        "B": {
+          "text": "s: 2, t: 1",
+          "math_alt": [],
+          "plain_text": "s: 2, t: 1"
+        },
+        "C": {
+          "text": "s: 4, t: 1",
+          "math_alt": [],
+          "plain_text": "s: 4, t: 1"
+        },
+        "D": {
+          "text": "s: 2, t: 2",
+          "math_alt": [],
+          "plain_text": "s: 2, t: 2"
+        },
+        "E": {
+          "text": "s: 4, t: 2",
+          "math_alt": [],
+          "plain_text": "s: 4, t: 2"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "option D",
+      "correct_answer_images": [],
+      "explanation": "The answer is option D.\nThe number of moles of each element on each side of the equation is:\nH\nN\nO\nleft-hand side\nr\nr\n3r\nright-hand side\n2s\n2 + t\n6 + s + 2t\nThese numbers must balance for each element:\nFor H,  r = 2s\nFor N,  r = 2 + t\nFor O,  3r = 6 + s + 2t\nSubstituting r = 2s into 3r = 6 + s + 2t, we get 3 × (2 + t ) = 6 + s + 2t\nRearranging: 6 + 3t = 6 + s + 2t, therefore t = s\nMoles of H and N are equal (r ), so 2s = 2 + t\nSubstituting t = s into this, we get 2s = 2 + s and therefore s = 2\nIt follows that t = 2 and r = 4",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:06:45.613039"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q25",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 25,
+      "question_text": "The structure of ethanol is given below:\n\n \n\n \n\nGiven the equation below and the overall enthalpy change for the reaction, which option correctly identifies the bond energy of the C–O bond in ethanol?\n\nH2C═CH2(g)  +  H2O(g)  →  C2H5OH(g)       ΔH = − 45 kJ mol–1\n\n \n\n(Mean bond energy (kJ mol–1): H–H = + 436; C–C = + 346; C–H = + 413; O–H = + 464; C═C = + 611)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q25.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "103 kJ mol–1",
+        "B": "316 kJ mol–1",
+        "C": "361 kJ mol–1",
+        "D": "707 kJ mol–1",
+        "E": "825 kJ mol–1"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "103 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "103 kJ mol–1"
+        },
+        "B": {
+          "text": "316 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "316 kJ mol–1"
+        },
+        "C": {
+          "text": "361 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "361 kJ mol–1"
+        },
+        "D": {
+          "text": "707 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "707 kJ mol–1"
+        },
+        "E": {
+          "text": "825 kJ mol–1",
+          "math_alt": [],
+          "plain_text": "825 kJ mol–1"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "361 kJ mol–1",
+      "correct_answer_plain": "361 kJ mol–1",
+      "correct_answer_images": [],
+      "explanation": "We can calculate the energy change for a reaction using the equation:\nenthalpy change = sum of bonds broken in reactants (energy absorbed) – sum of bonds formed in products (energy released)\nThe value for the C–O bond in ethanol is then as follows:\nH2C═CH2(g) + H2O(g) → C2H5OH(g)       ΔH = − 45 kJ mol–1\nSum of energy absorbed / bonds broken in reactants:\n1  x  C=C  =  611\n4  x  C–H  =  4  x  413  =  1652\n2  x  O–H  =  2  x  464  =  928\nTotal  =  3191\nSum of energy released / bonds formed in ethanol (excluding unknown C–O bond):\n1  x  C–C  =  346\n5  x  C–H  =  5  x  413  =  2065\n1  x  O–H  =  464\nTotal  =  2875\n3191  –  (2875  +  x)  =  – 45\nTherefore, to find the unknown C–O bond value (x) we must re-arrange the equation so that:\n(2875  +  x)  =  3191  –  (– 45)\nx  =  3191  –  (– 45)  –  2875\nx  =  361\nHence, the correct answer is: 361 kJ mol–1",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:06:58.102625"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q26",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 26,
+      "question_text": "Complete combustion of 35 cm3 of a straight-chain alkane vapour gave 105 cm3 of carbon dioxide gas. Both gas volumes were measured at the same temperature and pressure.\n\nWhich of the following is the molecular formula of the alkane?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q26.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "C2H4",
+        "B": "C2H6",
+        "C": "C3H6",
+        "D": "C3H8",
+        "E": "C4H10"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "C2H4",
+          "math_alt": [],
+          "plain_text": "C2H4"
+        },
+        "B": {
+          "text": "C2H6",
+          "math_alt": [],
+          "plain_text": "C2H6"
+        },
+        "C": {
+          "text": "C3H6",
+          "math_alt": [],
+          "plain_text": "C3H6"
+        },
+        "D": {
+          "text": "C3H8",
+          "math_alt": [],
+          "plain_text": "C3H8"
+        },
+        "E": {
+          "text": "C4H10",
+          "math_alt": [],
+          "plain_text": "C4H10"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "C3H8.",
+      "correct_answer_images": [],
+      "explanation": "The answer is C3H8.\nThe volume of CO2 gas produced (105 cm3) is three times that of the alkane vapour (35 cm3) at the same temperature and pressure.\nUsing the reacting volumes of gases ratio, the mole ratio of alkane : CO2 is 1 : 3\nAs this is complete combustion, all of the carbon atoms in the alkane will form CO2 , so it can be deduced that there are 3 carbon atoms in the alkane molecule.\nThe general formula of alkanes is CnH2n+2 , so the alkane formula is C3H8.\nC3H8  +  5O2  →  3CO2  +  4H2O",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:07:10.875167"
+    },
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q27",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 27,
+      "question_text": "Calcium carbonate reacts with hydrochloric acid. The reaction gives off carbon dioxide gas.\n\nLine X on the graph shows the volume of carbon dioxide formed against time when 100 cm3 of 1.0 mol dm–3 of hydrochloric acid reacts with calcium carbonate chips at 20 °C. There was an excess of calcium carbonate chips.\n\nCaCO3  +  2HCl  →  CaCl2  +  CO2  +  H2O(l)\n\nWhich line best represents the volume of carbon dioxide formed against time when the reaction is repeated with 50 cm3 of 2.0 mol dm–3 of hydrochloric acid reacting with excess calcium carbonate chips at 20 °C?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q27.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "line A",
+        "B": "line B",
+        "C": "line C",
+        "D": "line D",
+        "E": "line E"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "line A",
+          "math_alt": [],
+          "plain_text": "line A"
+        },
+        "B": {
+          "text": "line B",
+          "math_alt": [],
+          "plain_text": "line B"
+        },
+        "C": {
+          "text": "line C",
+          "math_alt": [],
+          "plain_text": "line C"
+        },
+        "D": {
+          "text": "line D",
+          "math_alt": [],
+          "plain_text": "line D"
+        },
+        "E": {
+          "text": "line E",
+          "math_alt": [],
+          "plain_text": "line E"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "line B",
+      "correct_answer_images": [],
+      "explanation": "The answer is line B.\nThe reaction is faster than the original as it is hotter and the acid is more concentrated. The number of moles of acid reacting is the same, as the volume is half of the original but the concentration is double. Given that the acid is the limiting reagent with the calcium carbonate in excess, the volume of carbon dioxide formed will be the same as the original.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:07:23.318702"
+    }
+  ],
+  "extracted_at": "2026-07-05T00:07:23.328420"
+}

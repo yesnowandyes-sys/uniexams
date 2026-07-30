@@ -1,0 +1,47 @@
+{
+  "topic_key": "MATHS1.M6",
+  "topic_name": "Statistics",
+  "module_code": "M1",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A set of numbers has a fixed mean and range. The student is asked to maximize or minimize the median.",
+      "key_insight": "The median is the middle value. To maximize it, one must 'push' values as high as possible while respecting the fixed mean (sum constraint) and range (min/max constraint). For Mean 0, Range 20: values must be in [-10, 10]. To maximize the median of 5 numbers, we need the 3rd number as high as possible. Strategy: Set two numbers to the minimum (-10) to 'free up' sum for the others.",
+      "discrimination_factors": [
+        "Abstract reasoning",
+        "Optimization under constraints",
+        "Understanding the relationship between mean/sum and distribution"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Two groups with different sizes and means are combined. Determine the bounds of the new range.",
+      "key_insight": "While the combined mean is a fixed weighted average, the combined range is probabilistic. It is at least the maximum of the individual ranges (21 in Q9) but could be much larger depending on the overlap of the data sets. Students must recognize that the range is strictly determined by the global min/max, which are unknowns unless the sets are disjoint.",
+      "discrimination_factors": [
+        "Distinguishing between exact and probabilistic outcomes",
+        "Understanding weighted means vs aggregate range"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Analyzing a two-way table where the provided information requires inverse operations (e.g., 'Of the women, 143 said they did NOT pass').",
+      "key_insight": "Completing the contingency table requires finding the missing marginal or cell value using subtraction. The total passed (167) is the sum of (Women Passed) and (Men Passed). Finding Women Passed requires (Total Women - Women Did Not Pass). This sequential dependency tests reading comprehension and arithmetic logic flow.",
+      "discrimination_factors": [
+        "Parsing negations in word problems",
+        "Multi-step arithmetic planning"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A list of five numbers has mean x, median y, range z. A number > x is added. Determine which properties (mean, median, range) *must* change.",
+      "key_insight": "Tests rigorous definitions. Mean *must* increase (arithmetic proof). Range *might* increase (if new number > old max), but doesn't have to. Median *might* change, but doesn't have to (e.g., adding a number to the right of the center of an odd-sized set doesn't shift the middle). The 'must be true' constraint eliminates 'likely true' distractors.",
+      "discrimination_factors": [
+        "Logical necessity vs possibility",
+        "Edge case awareness"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,52 @@
+{
+  "topic_key": "CHEM.C10",
+  "topic_name": "Rates of reaction",
+  "module_code": "C",
+  "corpus_question_count": 18,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Kinetic Misinterpretation of Equilibrium",
+      "frequency": "High",
+      "example_question_id": "Q4, Q2",
+      "why_effective": "Exploits the confusion between thermodynamics (yield/equilibrium position) and kinetics (reaction rate). Students often intuit that if a reaction is 'faster' or catalysts are used, the 'amount' of product must change.",
+      "generation_strategy": "Ask about the effect of changes (catalyst, temp, pressure) on both rate and yield. Include options where Yield increases but Rate decreases, or vice versa, to test separation of concepts. Include options where catalysts are claimed to shift equilibrium (e.g., Option D in Q4)."
+    },
+    {
+      "distractor_type": "Sign Convention Reversal",
+      "frequency": "Medium",
+      "example_question_id": "Q3",
+      "why_effective": "Students struggle with the directional nature of enthalpy and activation energies in reversible reactions. It is easy to mix up $\\Delta H$ (forward - reverse) and $E_a$ (energy barrier), leading to subtraction instead of addition of magnitudes.",
+      "generation_strategy": "Provide a Hess's Cycle style problem or energy profile. Give an exothermic $\\Delta H$ and a forward $E_a$. Include distractors that subtract $\\Delta H$ from $E_a$ (50 kJ) instead of adding, or that swap the sign of the final result."
+    },
+    {
+      "distractor_type": "Limiting Reagent/Stoichiometry Errors",
+      "frequency": "High",
+      "example_question_id": "Q5, Q13",
+      "why_effective": "Students focus solely on the 'double' concentration or volume and forget to calculate the total moles. They might select the steeper curve (faster rate) but fail to check if the final volume (product yield) is actually the same.",
+      "generation_strategy": "Compare two experiments: one with standard conditions, and one with doubled concentration but halved volume. The correct graph has a steeper gradient (higher initial rate) but the same plateau (total moles). Distractors should show: same slope/higher plateau, higher slope/higher plateau, or same slope/different plateau."
+    },
+    {
+      "distractor_type": "Physical vs. Chemical Misconception",
+      "frequency": "Medium",
+      "example_question_id": "Q16",
+      "why_effective": "Students conflate pressure/temperature effects on Kinetic Energy with their effects on Collision Frequency.",
+      "generation_strategy": "Ask for the reason behind a rate change. Provide options that correctly identify the rate change (slower at low pressure) but attribute it to the wrong physical property (lower Kinetic Energy instead of lower Collision Frequency)."
+    },
+    {
+      "distractor_type": "Extrapolation of Linear Trends",
+      "frequency": "Medium",
+      "example_question_id": "Q14",
+      "why_effective": "Reaction data often looks linear in the early stages. Students assume the rate stays constant and extrapolate linearly (5, 10, 15...), ignoring the depletion of reactants and the asymptotic nature of reaction completion.",
+      "generation_strategy": "Provide a table of gas produced over time. The correct sequence should show a decreasing increment (e.g., 5, 4, 3, 2, 1) or a plateau. Distractors should be purely arithmetic progressions based on the initial rate."
+    },
+    {
+      "distractor_type": "Unit Conversions and Scaling",
+      "frequency": "High",
+      "example_question_id": "Q11",
+      "why_effective": "Requires multi-step calculation: Volume of Gas -> Moles -> Mass -> Rate per second. Missing a step (e.g., using mass directly or forgetting the time factor) yields options that are likely present in the list.",
+      "generation_strategy": "Require a rate calculation in non-standard units (e.g., g/s instead of cm3/s). Include distractors that are $10\times$ or $100\times$ the correct answer to catch decimal shifts, or simply the initial volume/mass without the time division."
+    }
+  ],
+  "parse_repaired": true
+}

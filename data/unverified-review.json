@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-07-19T07:38:45.156456+00:00",
+  "model": "glm-4.7-flash",
+  "total_questions": 3,
+  "total_issues_assessed": 1,
+  "total_tokens": {
+    "input": 1438,
+    "output": 2770
+  },
+  "results": [
+    {
+      "question_id": "ENGAA-2016-S1-Q30",
+      "error": "substring not found",
+      "tokens": null
+    },
+    {
+      "question_id": "ENGAA-2016-S1-Q42",
+      "total_issues": 1,
+      "issues": [
+        {
+          "original_flag": "The worked solution calculates the tension as 9600 N (option C), but the question states the correct answer is option A (6400 N)... The physics and calculation in the worked solution are correct for an upward acceleration of 2 m/s^2, resulting in 9600 N tension, so the stated correct answer (A) is incorrect.",
+          "plain_english": "The metadata lists the correct answer as Option A (6400 N), but the worked solution and distractor analysis correctly determine the answer is Option C (9600 N). Calculating 6400 N would require $T = m(g - a)$, meaning the crate is accelerating downwards, which contradicts the problem statement that the helicopter and crate are 'accelerating upwards'.",
+          "fix_type": "enrichment_correction",
+          "suggested_fix": "Update the 'Stated Correct Answer' field from 'A' to 'C'."
+        }
+      ],
+      "overall_assessment": "The 'Stated Correct Answer' metadata contradicts the correct solution; changing it to 'C' resolves the physics inconsistency.",
+      "raw_response": "```json\n{\n  \"question_id\": \"ENGAA-2016-S1-Q42\",\n  \"total_issues\": 1,\n  \"issues\": [\n    {\n      \"original_flag\": \"The worked solution calculates the tension as 9600 N (option C), but the question states the correct answer is option A (6400 N)... The physics and calculation in the worked solution are correct for an upward acceleration of 2 m/s^2, resulting in 9600 N tension, so the stated correct answer (A) is incorrect.\",\n      \"plain_english\": \"The metadata lists the correct answer as Option A (6400 N), but the worked solution and distractor analysis correctly determine the answer is Option C (9600 N). Calculating 6400 N would require $T = m(g - a)$, meaning the crate is accelerating downwards, which contradicts the problem statement that the helicopter and crate are 'accelerating upwards'.\",\n      \"fix_type\": \"enrichment_correction\",\n      \"suggested_fix\": \"Update the 'Stated Correct Answer' field from 'A' to 'C'.\"\n    }\n  ],\n  \"overall_assessment\": \"The 'Stated Correct Answer' metadata contradicts the correct solution; changing it to 'C' resolves the physics inconsistency.\"\n}\n```",
+      "tokens": {
+        "input": 1438,
+        "output": 2770
+      }
+    },
+    {
+      "question_id": "ENGAA-2017-S1-Q30",
+      "error": "substring not found",
+      "tokens": null
+    }
+  ]
+}

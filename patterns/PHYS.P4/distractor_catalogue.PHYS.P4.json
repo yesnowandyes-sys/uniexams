@@ -1,0 +1,59 @@
+{
+  "topic_key": "PHYS.P4",
+  "topic_name": "Thermal physics",
+  "module_code": "P",
+  "corpus_question_count": 28,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inverse Variable Misapplication",
+      "frequency": "High",
+      "example_question_id": "Q1, Q12, Q19, Q24",
+      "why_effective": "Thermal conduction and radiation formulas involve variables that are inversely proportional (e.g., length $l$ for conduction, or radius/temperature relationships for stellar evolution). Students often intuitively treat all variables as directly proportional, leading to overestimation or underestimation of the final quantity.",
+      "generation_strategy": "Create a problem requiring the application of $P \\propto A \\Delta T / l$ or $P = kR^2 T^4$. Ask for the new value after changing parameters. Include distractors calculated by assuming direct proportionality for inverse variables (e.g., doubling length doubles power) or by using linear scaling instead of power-law scaling (e.g., doubling radius doubles power instead of quadrupling it)."
+    },
+    {
+      "distractor_type": "Energy Conservation Omission",
+      "frequency": "High",
+      "example_question_id": "Q5, Q20",
+      "why_effective": "In heater problems (e.g., soldering iron), students often calculate the total energy supplied ($Power \times Time$) or the energy retained ($mc\\Delta T$) but fail to recognize that the difference is energy lost to the surroundings. They frequently select the total input energy or the retained energy as the answer.",
+      "generation_strategy": "Use a setup where a heater supplies energy to an object with a known temperature change. The question asks for the energy lost/transferred to surroundings. Distractors should be: 1) The total Energy Input ($P \times t$), 2) The Energy Stored ($mc\\Delta T$), and 3) The sum of Input + Stored. The correct answer is Input - Stored."
+    },
+    {
+      "distractor_type": "Surface Property vs. Temperature Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q2, Q13, Q15",
+      "why_effective": "Students memorize 'dull/black emits best' and 'shiny reflects best'. In questions where a cooler object has a dull surface and a hotter object has a shiny surface, students often default to surface property rules rather than the Stefan-Boltzmann law ($P \\propto T^4$), where temperature dominates.",
+      "generation_strategy": "Compare two objects (one hot/shiny, one cooler/dull). Ask which emits more radiation. The correct answer relies on $T^4$ (hot/shiny wins). The distractor relies on emissivity (cooler/dull wins)."
+    },
+    {
+      "distractor_type": "Specific Heat Ratio Inversion",
+      "frequency": "Medium",
+      "example_question_id": "Q7, Q23",
+      "why_effective": "In calorimetry mixing problems, the final temperature is weighted by the product $mc$. Students often set up the equation $c_1m_1(T_f - T_1) = c_2m_2(T_2 - T_f)$ but solve for $T_f$ incorrectly by swapping the coefficients or failing to sum the 'heat capacity' terms in the denominator, leading to a weighted average error.",
+      "generation_strategy": "Mix two substances (e.g., ice/water or hot metal/cold water) with given masses and specific heats. Include distractors derived from: 1) Simple average of temperatures, 2) Weighted average using just mass (ignoring specific heat), 3) Weighted average using just specific heat (ignoring mass)."
+    },
+    {
+      "distractor_type": "Phase Change Energy Accounting",
+      "frequency": "Medium",
+      "example_question_id": "Q18, Q27",
+      "why_effective": "Students often forget that during a phase change (melting/boiling), added energy increases latent heat but not temperature. They may calculate the energy required for the phase change but forget to subtract it from the total available energy before calculating the remaining temperature rise.",
+      "generation_strategy": "Provide a scenario with a heating curve or total energy added to a substance at its melting point. Include a distractor that assumes all energy goes into raising the temperature ($Q=mc\\Delta T$) without accounting for the latent heat 'plateau'. Alternatively, in mixture problems, include a distractor where the ice doesn't fully melt (or fully melts) when the opposite is true."
+    },
+    {
+      "distractor_type": "Graphical Gradient Misinterpretation",
+      "frequency": "Medium",
+      "example_question_id": "Q10, Q26",
+      "why_effective": "In composite systems (metal + insulator), thermal conductivity $k$ differs. Students assume a linear temperature gradient across the whole system. The correct graph requires a 'kink' (change in slope) at the interface, with the steeper slope in the material with lower conductivity (insulator).",
+      "generation_strategy": "Describe a composite wall of two layers. Ask for the Temperature vs. Distance graph. The distractor is a straight line (constant gradient). The correct answer shows two segments with different gradients. Alternatively, swap the slopes (steeper in the conductor)."
+    },
+    {
+      "distractor_type": "Non-Linear Depth/Volume Relationship",
+      "frequency": "Low",
+      "example_question_id": "Q28",
+      "why_effective": "Pressure increases linearly with depth ($P = \rho g h$), but volume is inversely proportional to pressure ($PV = \text{constant}$). Students often assume volume is linear with depth (e.g., halving depth halves volume) or miscalculate the 'halfway' point in terms of pressure.",
+      "generation_strategy": "Use a gas trapped at depth $h$ with volume $V$. Move it to depth $h/2$. Distractors should be linear interpolations of volume ($V_{avg} = (V_{top} + V_{bottom})/2$) or incorrect reciprocals. The correct solution involves finding pressure at depth $h/2$ as average of top and bottom pressures, then finding volume."
+    }
+  ],
+  "parse_repaired": true
+}

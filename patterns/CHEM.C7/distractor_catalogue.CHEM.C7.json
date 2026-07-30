@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C7",
+  "topic_name": "Group chemistry",
+  "module_code": "C",
+  "corpus_question_count": 4,
+  "corpus_backed": false,
+  "distractors": [
+    {
+      "distractor_type": "Inverse Property Trend",
+      "frequency": 2,
+      "example_question_id": "Q2",
+      "why_effective": "Students often memorize trends (e.g., boiling point increases down Group 17) but fail to account for exceptions or specific state changes (e.g., Fluorine is gas, Chlorine is gas, Bromine is liquid). In Q2, statement 2 claims Bromine has a lower boiling point than Chlorine, which is false (Bromine is liquid, Chlorine is gas). This exploits rote memorization without conceptual visualization.",
+      "generation_strategy": "Take a standard trend (e.g., MP/BP increases down group), and ask about the transition point between states (gas to liquid) or exceptions, or simply invert the fact and see if the student checks it."
+    },
+    {
+      "distractor_type": "False Chemical Displacement",
+      "frequency": 2,
+      "example_question_id": "Q2",
+      "why_effective": "Tests the reactivity series of halogens. Students often confuse 'reactivity' with 'ability to act as an oxidizing agent' or forget that reactivity decreases down the group. In Q2, statement 1 ('Bromine will oxidise chloride ions') is false because Bromine is less reactive than Chlorine.",
+      "generation_strategy": "Present a halogen lower in the group (e.g., Br) attempting to displace a halide higher in the group (e.g., Cl-). The resulting 'impossible' product creates a plausible but chemically incorrect scenario."
+    },
+    {
+      "distractor_type": "Mole Calculation Artifacts",
+      "frequency": 2,
+      "example_question_id": "Q4",
+      "why_effective": "In multi-step questions, students often perform the first step correctly (limiting reagent/stoichiometry) but fail to check the final compound validity. In Q4, options C and D have the *correct* mole amount (0.005 mol) but identify the wrong cation (Mg) based on the initial 'Element X' solubility premise.",
+      "generation_strategy": "Generate options that use the correct numerical answer (from stoichiometry) but pair it with the wrong element from the premise (e.g., using Group 2 metal from the 'wrong' end of the period or a non-hydroxide soluble group)."
+    },
+    {
+      "distractor_type": "Stoichiometric Magnitude Errors",
+      "frequency": 1,
+      "example_question_id": "Q4",
+      "why_effective": "Standard math traps. Option F (0.1 mol) represents a failure to balance the acid-base neutralization equation correctly (1:1 acid:base vs 1:2 volume ratio).",
+      "generation_strategy": "Include answers derived from incorrect concentration dilution factors or incorrect mole ratios (e.g., ignoring the 1:2 acid:base ratio)."
+    },
+    {
+      "distractor_type": "Mass Balance Misconception",
+      "frequency": 1,
+      "example_question_id": "Q3",
+      "why_effective": "Students intuitively think 'more reaction = less mass' or 'more bubbles = mass loss'. In Q3, the system is open; hydrogen gas leaves. However, the question compares the *net* change or the *final* mass relative to reagent input. Distractors A/B/C rely on the student correlating 'reactivity' (vigorous bubbling) with 'mass loss', failing to realize that if the reaction is 2M + 2H2O -> 2MOH + H2, the mass *gain* from oxygen uptake outweighs the hydrogen loss if the metal is heavy, or simply that the stoichiometry dictates the fixed mass change per gram of metal.",
+      "generation_strategy": "Frame a question about an open system mass change. Distractors should correlate the 'vigour' of the reaction (visual cue) with the magnitude of mass change, ignoring the atomic masses and stoichiometry."
+    }
+  ],
+  "_raw": null
+}

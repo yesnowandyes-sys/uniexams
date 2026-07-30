@@ -1,0 +1,845 @@
+{
+  "source_file": "ENGAA_2020_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2020,
+  "section": "Section1",
+  "total_questions": 40,
+  "questions": [
+    {
+      "id": "ENGAA-2020-S1-Q1",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 The admission charge to a cinema is different for adults and children. Admission for 2 adults and 3 children costs £20. Admission for 4 adults and 4 children costs £34. What does admission cost for 6 adults and 2 children?",
+      "has_diagram": false,
+      "options": {
+        "A": "£27",
+        "B": "£29",
+        "C": "£33",
+        "D": "£39",
+        "E": "£44",
+        "F": "£48",
+        "G": "£72"
+      },
+      "correct_answer": "D",
+      "raw_text": "1   The admission charge to a cinema is different for adults and children.\n    Admission for 2 adults and 3 children costs £20.\n    Admission for 4 adults and 4 children costs £34.\n    What does admission cost for 6 adults and 2 children?\n    A   £27\n    B   £29\n    C   £33\n    D   £39\n    E   £44\n    F   £48\n    G   £72",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q2",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 A soldering iron has a copper tip of mass 2.0 g. The tip is heated with 30 W of thermal power. In 50 s, the temperature of the tip increases by 200 °C. How much energy is transferred from the tip to the surroundings in this time? (specific heat capacity of copper = 400 J kg–1 °C–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "160 J",
+        "B": "500 J",
+        "C": "1340 J",
+        "D": "1500 J",
+        "E": "1660 J",
+        "F": "1840 J",
+        "G": "2500 J 4"
+      },
+      "correct_answer": "C",
+      "raw_text": "2   A soldering iron has a copper tip of mass 2.0 g.\n    The tip is heated with 30 W of thermal power. In 50 s, the temperature of the tip increases by\n    200 °C.\n    How much energy is transferred from the tip to the surroundings in this time?\n    (specific heat capacity of copper = 400 J kg–1 °C–1)\n    A   160 J\n    B   500 J\n    C   1340 J\n    D   1500 J\n    E   1660 J\n    F   1840 J\n    G   2500 J\n                                                  4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q3",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 A fair spinner has eight equal sections. Each section has one number written on it, as shown. 3 1 1 3 3 2 1 3 The spinner is spun twice, and the two numbers scored are added. What is the probability that the sum of the two numbers is 5? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "8 5",
+        "B": "8 1",
+        "C": "16",
+        "D": "16 25",
+        "E": "64 55",
+        "F": "64 5"
+      },
+      "correct_answer": "A",
+      "raw_text": "3   A fair spinner has eight equal sections.\n    Each section has one number written on it, as shown.\n                                               3        1\n                                       1                        3\n                                       3                        2\n                                               1        3\n    The spinner is spun twice, and the two numbers scored are added.\n    What is the probability that the sum of the two numbers is 5?\n         1\n    A\n         8\n         5\n    B\n         8\n         1\n    C\n        16\n         3\n    D\n        16\n         25\n    E\n         64\n         55\n    F\n         64\n                                                   5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q4",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 Uranium-238 ( U) decays by a series of alpha and beta (β ) emissions to become the stable 238 92 – isotope lead-206 ( Pb ) . 206 82 How many beta (β –) particles are emitted in the decay of one uranium-238 nucleus to lead-206?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "14",
+        "F": "16"
+      },
+      "correct_answer": "A",
+      "raw_text": "4   Uranium-238   ( U) decays by a series of alpha and beta (β ) emissions to become the stable\n                    238\n                     92\n                                                               –\n    isotope lead-206 ( Pb ) .\n                          206\n                           82\n    How many beta (β –) particles are emitted in the decay of one uranium-238 nucleus to\n    lead-206?\n    A   6\n    B   8\n    C   10\n    D   12\n    E   14\n    F   16",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q5",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 Consider the four lines with the following equations. 1 2x + 6y = 3 2 9y = 3x – 4 3 2y = 6x + 3 4 4x + 6y – 9 = 0 Which two lines are perpendicular?",
+      "has_diagram": false,
+      "options": {
+        "A": "1 and 2",
+        "B": "1 and 3",
+        "C": "1 and 4",
+        "D": "2 and 3",
+        "E": "2 and 4",
+        "F": "3 and 4 6"
+      },
+      "correct_answer": "B",
+      "raw_text": "5   Consider the four lines with the following equations.\n            1   2x + 6y = 3\n            2   9y = 3x – 4\n            3   2y = 6x + 3\n            4   4x + 6y – 9 = 0\n    Which two lines are perpendicular?\n    A   1 and 2\n    B   1 and 3\n    C   1 and 4\n    D   2 and 3\n    E   2 and 4\n    F   3 and 4\n                                                 6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q6",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 A dc electricity transmission system uses an undersea cable to send electricity from one country to another. On a particular day, the first country supplies electricity at a voltage of 400 kV and 2000 A to the transmission system. The second country receives electricity from the transmission system at 160 kV and 4000 A. What is the percentage efficiency of the system and how much energy is wasted every minute? energy wasted efficiency % every minute / J",
+      "has_diagram": true,
+      "options": {
+        "A": "20 9.6 × 109",
+        "B": "20 3.84 × 1010",
+        "C": "20 4.8 × 1010",
+        "D": "80 9.6 × 109",
+        "E": "80 3.84 × 1010",
+        "F": "80 4.8 × 1010"
+      },
+      "correct_answer": "D",
+      "raw_text": "6   A dc electricity transmission system uses an undersea cable to send electricity from one\n    country to another. On a particular day, the first country supplies electricity at a voltage of\n    400 kV and 2000 A to the transmission system. The second country receives electricity from the\n    transmission system at 160 kV and 4000 A.\n    What is the percentage efficiency of the system and how much energy is wasted every minute?\n                                  energy wasted\n               efficiency %\n                                  every minute / J\n    A              20                   9.6 × 109\n    B              20                  3.84 × 1010\n    C              20                  4.8 × 1010\n    D              80                   9.6 × 109\n    E              80                  3.84 × 1010\n    F              80                  4.8 × 1010",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q6-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2020-S1-Q7",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 Find the sum of the solutions of 2 ⎛x ⎞ ⎛x ⎞ 2 ⎜ + 3 ⎟ − ⎜ + 3 ⎟ − 36 = 0 ⎝4 ⎠ ⎝4 ⎠",
+      "has_diagram": false,
+      "options": {
+        "A": "2 3",
+        "B": "2 1",
+        "C": "2",
+        "D": "–4",
+        "E": "– 13",
+        "F": "– 22",
+        "G": "– 26",
+        "H": "– 34"
+      },
+      "correct_answer": "F",
+      "raw_text": "7   Find the sum of the solutions of\n                                                2\n                                         ⎛x    ⎞   ⎛x    ⎞\n                                       2 ⎜ + 3 ⎟ − ⎜ + 3 ⎟ − 36 = 0\n                                         ⎝4    ⎠   ⎝4    ⎠\n    A   2\n        3\n    B\n        2\n         1\n    C\n         2\n    D   –4\n    E   – 13\n    F   – 22\n    G   – 26\n    H   – 34\n                                                     7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q8",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 Two fixed horizontal metal rails are side by side and 12 cm apart. The rails are connected to a dc power supply by a switch that is initially open.",
+      "has_diagram": true,
+      "options": {
+        "A": "0.36 to the left",
+        "B": "0.36 to the right",
+        "C": "0.60 to the left",
+        "D": "0.60 to the right",
+        "E": "3.6 to the left",
+        "F": "3.6 to the right",
+        "G": "6.0 to the left",
+        "H": "6.0 to the right"
+      },
+      "correct_answer": "F",
+      "raw_text": "8   Two fixed horizontal metal rails are side by side and 12 cm apart. The rails are connected to a\n    dc power supply by a switch that is initially open.\n    A freely moveable metal rod of length 20 cm is placed on the rails as shown in the diagram.\n    The diagram shows the arrangement seen from above.\n    The angle between the rod and the rails is 90°.\n                                 moveable rod\n                                 +                         12 cm      20 cm\n                                 –\n                                 fixed rails\n    The whole arrangement is placed in a uniform magnetic field of magnitude 0.50 T that is\n    directed perpendicularly into the page.\n    The moveable rod has a weight of 0.40 N.\n    The switch is now closed. As a result, there is a current of 2.4 A in the circuit and the rod\n    moves.\n    What is the initial magnitude of the acceleration of the rod and what is its direction?\n    (gravitational field strength = 10 N kg–1)\n          acceleration / m s–2           direction\n    A            0.36                   to the left\n    B            0.36                   to the right\n    C            0.60                   to the left\n    D            0.60                   to the right\n    E             3.6                   to the left\n    F             3.6                   to the right\n    G             6.0                   to the left\n    H             6.0                   to the right\n                                                       8",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q8-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2020-S1-Q9",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 When the expression (2 x + 3)2 – ( x – 3)2 is written in the form p ( x + q )2 + r, where p, q and r are constants, what is the value of r ?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 27",
+        "B": "–9",
+        "C": "0",
+        "D": "3",
+        "E": "15"
+      },
+      "correct_answer": "A",
+      "raw_text": "9    When the expression\n                                               (2 x + 3)2 – ( x – 3)2\n     is written in the form p ( x + q )2 + r, where p, q and r are constants, what is the value of r ?\n     A   – 27\n     B   –9\n     C   0\n     D   3\n     E   15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q10",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 Two trolleys are moving towards each other along a straight horizontal track. One trolley has mass 8.0 kg and is travelling to the right at 4.0 m s−1. The other trolley has mass 2.0 kg and is travelling to the left at 1.0 m s−1. When the trolleys collide they stick together. How much kinetic energy is transferred to other forms of energy in the collision?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.0 J",
+        "B": "18 J",
+        "C": "20 J",
+        "D": "28 J",
+        "E": "35 J",
+        "F": "40 J",
+        "G": "45 J",
+        "H": "65 J 9"
+      },
+      "correct_answer": "C",
+      "raw_text": "10   Two trolleys are moving towards each other along a straight horizontal track.\n     One trolley has mass 8.0 kg and is travelling to the right at 4.0 m s−1.\n     The other trolley has mass 2.0 kg and is travelling to the left at 1.0 m s−1.\n     When the trolleys collide they stick together.\n     How much kinetic energy is transferred to other forms of energy in the collision?\n     A   2.0 J\n     B   18 J\n     C   20 J\n     D   28 J\n     E   35 J\n     F   40 J\n     G   45 J\n     H   65 J\n                                                      9",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q11",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 The number of pairs of winter boots sold on a day is inversely proportional to the cube of the outside temperature on that day, measured in °C. On a day when the outside temperature is 8 °C, 250 pairs of boots are sold. The next day, when the outside temperature is x °C, the number of pairs of boots sold is 700% more than on the previous day. What is the value of x ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "4 8",
+        "C": "3 7",
+        "D": "83 7",
+        "E": "16 10"
+      },
+      "correct_answer": "B",
+      "raw_text": "11   The number of pairs of winter boots sold on a day is inversely proportional to the cube of the\n     outside temperature on that day, measured in °C.\n     On a day when the outside temperature is 8 °C, 250 pairs of boots are sold.\n     The next day, when the outside temperature is x °C, the number of pairs of boots sold is 700%\n     more than on the previous day.\n     What is the value of x ?\n     A   2\n     B   4\n              8\n     C    3\n              7\n     D   83 7\n     E   16\n                                                 10",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q12",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 A car of mass 800 kg travels in a straight line along a horizontal road. The car accelerates non-uniformly from rest for 5.0 seconds and then moves at constant speed, as shown in the distance–time graph: distance / m 40 10 0 0 5 10 time / s What is the average resultant force acting on the car over the time for which it is accelerating?",
+      "has_diagram": false,
+      "options": {
+        "A": "320 N",
+        "B": "480 N",
+        "C": "640 N",
+        "D": "960 N",
+        "E": "1600 N",
+        "F": "3200 N",
+        "G": "4800 N 11"
+      },
+      "correct_answer": "D",
+      "raw_text": "12   A car of mass 800 kg travels in a straight line along a horizontal road.\n     The car accelerates non-uniformly from rest for 5.0 seconds and then moves at constant\n     speed, as shown in the distance–time graph:\n            distance / m   40\n                           10\n                            0\n                                0                            5                               10\n                                                                                     time / s\n     What is the average resultant force acting on the car over the time for which it is accelerating?\n     A   320 N\n     B   480 N\n     C   640 N\n     D   960 N\n     E   1600 N\n     F   3200 N\n     G   4800 N\n                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q13",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 In a sale, all prices are reduced by 25%.",
+      "has_diagram": false,
+      "options": {
+        "A": "£180",
+        "B": "£195",
+        "C": "£210",
+        "D": "£225",
+        "E": "£240"
+      },
+      "correct_answer": "E",
+      "raw_text": "13   In a sale, all prices are reduced by 25%.\n     A customer calculates the pre-sale price of a bicycle incorrectly by increasing the marked sale\n     price by 25%.\n     The customer’s calculated pre-sale price is incorrect by £15.\n     What is the correct pre-sale price of the bicycle?\n     A   £180\n     B   £195\n     C   £210\n     D   £225\n     E   £240",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q14",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 P and Q are two fixed points on the surface of the ocean which are 6.0 m apart. An ocean wave travels in the direction P to Q. The wave has a frequency of 0.50 Hz and travels at a constant speed.",
+      "has_diagram": false,
+      "options": {
+        "A": "2.1 m s–1",
+        "B": "3.4 m s–1",
+        "C": "5.0 m s–1",
+        "D": "7.5 m s–1",
+        "E": "20 m s–1 12"
+      },
+      "correct_answer": "C",
+      "raw_text": "14   P and Q are two fixed points on the surface of the ocean which are 6.0 m apart.\n     An ocean wave travels in the direction P to Q.\n     The wave has a frequency of 0.50 Hz and travels at a constant speed.\n     A wave peak passes Q at time t = 0 s.\n     The next wave peak travelling towards Q passes P at time t = 0.80 s.\n     What is the speed of the wave?\n     A   2.1 m s–1\n     B   3.4 m s–1\n     C   5.0 m s–1\n     D   7.5 m s–1\n     E   20 m s–1\n                                                  12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q15",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 Q y z 61° P x S R [diagram not to scale] In the diagram, QS is perpendicular to PR. PS = x cm PQ = y cm QR = z cm angle QRS = 61° PSR is a straight line. Which one of the following is an expression for the length z, in cm? 2 2",
+      "has_diagram": false,
+      "options": {
+        "A": "y + x sin 61° 2 2",
+        "B": "y − x sin 61° 2 2",
+        "C": "y + x cos 61° 2 2",
+        "D": "y − x cos 61° 2 2 y +x",
+        "E": "sin 61° 2 2 y −x",
+        "F": "sin 61° 2 2 y +x",
+        "G": "cos 61° 2 2 y −x",
+        "H": "cos 61° 13"
+      },
+      "correct_answer": "F",
+      "raw_text": "15                                                        Q\n                                            y                      z\n                                                                   61°\n                                  P          x            S              R\n                                          [diagram not to scale]\n     In the diagram, QS is perpendicular to PR.\n     PS = x cm\n     PQ = y cm\n     QR = z cm\n     angle QRS = 61°\n     PSR is a straight line.\n     Which one of the following is an expression for the length z, in cm?\n             2    2\n     A     y + x sin 61°\n             2    2\n     B     y − x sin 61°\n             2    2\n     C     y + x cos 61°\n             2    2\n     D     y − x cos 61°\n             2       2\n           y +x\n     E\n           sin 61°\n             2       2\n            y −x\n     F\n           sin 61°\n             2       2\n            y +x\n     G\n           cos 61°\n             2       2\n            y −x\n     H\n           cos 61°\n                                                  13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q16",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 A parachutist of mass 80.0 kg drops from a plane travelling at 40.0 m s–1, 2000 m above the Earth’s surface. The parachutist hits the ground at a speed of 5.00 m s–1. How much work is done by the parachutist against drag forces during the fall? (Take the Earth’s gravitational field strength to be 10.0 N kg–1.)",
+      "has_diagram": false,
+      "options": {
+        "A": "1 535 000 J",
+        "B": "1 624 000 J",
+        "C": "1 649 000 J",
+        "D": "1 663 000 J",
+        "E": "1 726 000 J"
+      },
+      "correct_answer": "D",
+      "raw_text": "16   A parachutist of mass 80.0 kg drops from a plane travelling at 40.0 m s–1, 2000 m above the\n     Earth’s surface.\n     The parachutist hits the ground at a speed of 5.00 m s–1.\n     How much work is done by the parachutist against drag forces during the fall?\n     (Take the Earth’s gravitational field strength to be 10.0 N kg–1.)\n     A   1 535 000 J\n     B   1 624 000 J\n     C   1 649 000 J\n     D   1 663 000 J\n     E   1 726 000 J",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q17",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 Two vertices of a square are at (1, 1) and (3, 5). What is the difference between the perimeters of the largest and smallest possible squares that can be drawn with these points as two of their vertices?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "( 4 3 2− 2 )",
+        "C": "4 3 ( 2 − 1)",
+        "D": "4 5 (2 − 2 )",
+        "E": "4 5 ( 2 − 1)",
+        "F": "4 13 (2 − 2 )",
+        "G": "4 13 ( 2 − 1)",
+        "H": "4 3 5 (2 − 2 ) 14"
+      },
+      "correct_answer": "D",
+      "raw_text": "17   Two vertices of a square are at (1, 1) and (3, 5).\n     What is the difference between the perimeters of the largest and smallest possible squares that\n     can be drawn with these points as two of their vertices?\n     A   0\n     B        (\n          4 3 2− 2    )\n     C    4 3 ( 2 − 1)\n     D    4 5 (2 − 2 )\n     E    4 5 ( 2 − 1)\n     F    4 13 (2 − 2 )\n     G    4 13 ( 2 − 1)\n     H    4 3 5 (2 − 2 )\n                                                   14",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q18",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A light spring of unstretched length 0.10 m has a spring constant of 20 N m–1. The spring is suspended so that it is vertical and a load of mass 0.050 kg is attached to the end of the spring. The load is pulled vertically downwards until the length of the spring is 0.30 m. The load is then released. What is the speed of the load at the instant that the spring returns to its unstretched length? (gravitational field strength = 10 N kg–1; assume that resistive forces are negligible)",
+      "has_diagram": false,
+      "options": {
+        "A": "0 m s–1",
+        "B": "4.0 m s–1",
+        "C": "6.0 m s–1",
+        "D": "12 m s–1",
+        "E": "16 m s–1",
+        "F": "6 m s–1",
+        "G": "12 m s–1",
+        "H": "30 m s–1"
+      },
+      "correct_answer": "G",
+      "raw_text": "18   A light spring of unstretched length 0.10 m has a spring constant of 20 N m–1. The spring is\n     suspended so that it is vertical and a load of mass 0.050 kg is attached to the end of the spring.\n     The load is pulled vertically downwards until the length of the spring is 0.30 m. The load is then\n     released.\n     What is the speed of the load at the instant that the spring returns to its unstretched length?\n     (gravitational field strength = 10 N kg–1; assume that resistive forces are negligible)\n     A   0 m s–1\n     B   4.0 m s–1\n     C   6.0 m s–1\n     D   12 m s–1\n     E   16 m s–1\n     F       6 m s–1\n     G       12 m s–1\n     H       30 m s–1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q19",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 The quadratic equation 2 x 2 – p x – 4 = 0, where p is a positive constant, has two solutions that differ by 6. What is the value of p ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "4 7",
+        "C": "12",
+        "D": "4 11",
+        "E": "4 34",
+        "F": "6 30 15"
+      },
+      "correct_answer": "B",
+      "raw_text": "19   The quadratic equation 2 x 2 – p x – 4 = 0, where p is a positive constant, has two solutions that\n     differ by 6.\n     What is the value of p ?\n     A   2\n     B    4 7\n     C   12\n     D    4 11\n     E    4 34\n     F    6 30\n                                                   15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q20",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 A rocket travelling in space is burning its fuel at a constant rate. By expelling the burnt fuel through a nozzle, the engine is applying a constant force to the rocket. What is happening to the magnitude of the acceleration of the rocket? PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number.",
+      "has_diagram": false,
+      "options": {
+        "A": "It is increasing at an increasing rate.",
+        "B": "It is increasing at a constant rate.",
+        "C": "It is increasing at a decreasing rate.",
+        "D": "It is not changing.",
+        "E": "It is decreasing at an increasing rate.",
+        "F": "It is decreasing at a constant rate.",
+        "G": "It is decreasing at a decreasing rate. 16 17"
+      },
+      "correct_answer": "A",
+      "raw_text": "20   A rocket travelling in space is burning its fuel at a constant rate. By expelling the burnt fuel\n     through a nozzle, the engine is applying a constant force to the rocket.\n     What is happening to the magnitude of the acceleration of the rocket?\n     A   It is increasing at an increasing rate.\n     B   It is increasing at a constant rate.\n     C   It is increasing at a decreasing rate.\n     D   It is not changing.\n     E   It is decreasing at an increasing rate.\n     F   It is decreasing at a constant rate.\n     G   It is decreasing at a decreasing rate.\n                                                   16\n\fPART B Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q21",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 ( x – 1) and ( x – 2) are both factors of x 4 + a x 3 + b x 2 – 12 x + 4 What are the values of a and b ?",
+      "has_diagram": false,
+      "options": {
+        "A": "a = – 6 and b = – 23",
+        "B": "a = – 6 and b = 13",
+        "C": "a = 6 and b = –11",
+        "D": "a = 6 and b = 1"
+      },
+      "correct_answer": "B",
+      "raw_text": "21   ( x – 1) and ( x – 2) are both factors of x 4 + a x 3 + b x 2 – 12 x + 4\n     What are the values of a and b ?\n     A    a = – 6 and b = – 23\n     B    a = – 6 and b = 13\n     C    a = 6 and b = –11\n     D    a = 6 and b = 1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q22",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 A block of mass m slides down a rough slope. At position 1 the velocity of the block is v1. At position 2, which is a vertical distance h below position 1, the velocity of the block is v2. 1 v1 2 h v2 Which expression gives the work done against friction by the block as it slides from position 1 to position 2? (gravitational field strength = g ; assume that air resistance is negligible)",
+      "has_diagram": false,
+      "options": {
+        "A": "mgh + 21 m (v 2 2 – v 1 2)",
+        "B": "mgh − 21 m (v 2 2 – v 1 2)",
+        "C": "mgh + 21 m (v 2 – v 1)2",
+        "D": "mgh − 21 m (v 2 – v 1)2 1 m (v 2 – v 2) – mgh",
+        "E": "2 2 1 1 m (v 2 – v 2) – mgh",
+        "F": "2 1 2 1 m (v – v )2 – mgh",
+        "G": "2 2 1 1 m (v – v )2 – mgh",
+        "H": "2 1 2 18 2"
+      },
+      "correct_answer": "B",
+      "raw_text": "22   A block of mass m slides down a rough slope.\n     At position 1 the velocity of the block is v1.\n     At position 2, which is a vertical distance h below position 1, the velocity of the block is v2.\n                                                                    1\n                                                              v1\n                                                2\n                                                                     h\n                                           v2\n     Which expression gives the work done against friction by the block as it slides from position 1\n     to position 2?\n     (gravitational field strength = g ; assume that air resistance is negligible)\n     A    mgh + 21 m (v 2 2 – v 1 2)\n     B    mgh − 21 m (v 2 2 – v 1 2)\n     C    mgh + 21 m (v 2 – v 1)2\n     D    mgh − 21 m (v 2 – v 1)2\n          1 m (v 2 – v 2) – mgh\n     E    2     2     1\n          1 m (v 2 – v 2) – mgh\n     F    2     1     2\n          1 m (v – v )2 – mgh\n     G    2     2   1\n          1 m (v – v )2 – mgh\n     H    2     1   2\n                                                       18\n\f                                                                         2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q23",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 What is the area of the region enclosed between the curve y = 21 x , the line y = – x , and the lines x = 1 and x = 3 ? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "6 25",
+        "E": "3 28",
+        "F": "3 19"
+      },
+      "correct_answer": "E",
+      "raw_text": "23   What is the area of the region enclosed between the curve y = 21 x , the line y = – x , and the\n     lines x = 1 and x = 3 ?\n          1\n     A\n          3\n     B   2\n     C   4\n     D   6\n          25\n     E\n          3\n          28\n     F\n           3\n                                                  19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q24",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 The braking system of a car includes two cylinders containing an incompressible oil, linked by a flexible tube that also contains oil. There is a freely moving piston in each cylinder. One piston is labelled X, and the other is labelled Y in the diagram. oil piston X piston Y flexible tube When the driver presses on the brake pedal, a force is exerted on piston X. The pressure produced in the oil by this force is transmitted through the oil so that it causes a force to act on piston Y. This presses the brakes against the moving parts. The diameter of piston X is 4.0 cm. The diameter of piston Y is 12.0 cm. The driver exerts a force of 36.0 N on piston X and it moves a distance of 5.4 cm to the right. What is the resultant force on piston Y and how far does it move along the cylinder? force on piston Y / N distance moved by piston Y / cm",
+      "has_diagram": true,
+      "options": {
+        "A": "4.0 0.60",
+        "B": "4.0 48.6",
+        "C": "12.0 1.80",
+        "D": "12.0 16.2",
+        "E": "108 1.80",
+        "F": "108 16.2",
+        "G": "324 0.60",
+        "H": "324 48.6 20"
+      },
+      "correct_answer": "G",
+      "raw_text": "24   The braking system of a car includes two cylinders containing an incompressible oil, linked by a\n     flexible tube that also contains oil. There is a freely moving piston in each cylinder. One piston\n     is labelled X, and the other is labelled Y in the diagram.\n                                                  oil\n            piston X\n                                                                                         piston Y\n                                           flexible tube\n     When the driver presses on the brake pedal, a force is exerted on piston X. The pressure\n     produced in the oil by this force is transmitted through the oil so that it causes a force to act on\n     piston Y. This presses the brakes against the moving parts.\n     The diameter of piston X is 4.0 cm. The diameter of piston Y is 12.0 cm.\n     The driver exerts a force of 36.0 N on piston X and it moves a distance of 5.4 cm to the right.\n     What is the resultant force on piston Y and how far does it move along the cylinder?\n              force on piston Y / N        distance moved by piston Y / cm\n     A                 4.0                                 0.60\n     B                 4.0                                 48.6\n     C                 12.0                                1.80\n     D                 12.0                                16.2\n     E                 108                                 1.80\n     F                 108                                 16.2\n     G                 324                                 0.60\n     H                 324                                 48.6\n                                                   20",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q24-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2020-S1-Q25",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 A line with non-zero gradient m is reflected in the line y = x What is the gradient of the reflected line?",
+      "has_diagram": false,
+      "options": {
+        "A": "m",
+        "B": "–m 1",
+        "C": "m 1",
+        "D": "– m 21"
+      },
+      "correct_answer": "C",
+      "raw_text": "25   A line with non-zero gradient m is reflected in the line y = x\n     What is the gradient of the reflected line?\n     A   m\n     B   –m\n          1\n     C\n          m\n              1\n     D   –\n             m\n                                                   21",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q26",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 The graph shows how the displacement due to a wave in air varies with time. displacement 0 0 1 2 3 4 5 6 7 8 9 time / 10–3 s The speed of the wave in air is 300 m s–1. The wave now travels into water. wave speed in air = 0.2 wave speed in water What is the wavelength of the wave in water? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "m 6 2",
+        "B": "m 9 5",
+        "C": "m 6 9",
+        "D": "m 10 10",
+        "E": "m 9 6",
+        "F": "m 5 9",
+        "G": "m 2",
+        "H": "6m 22"
+      },
+      "correct_answer": "H",
+      "raw_text": "26   The graph shows how the displacement due to a wave in air varies with time.\n                       displacement\n                                   0\n                                       0   1      2        3   4   5   6   7     8    9\n                                                                           time / 10–3 s\n     The speed of the wave in air is 300 m s–1.\n     The wave now travels into water.\n      wave speed in air\n                         = 0.2\n     wave speed in water\n     What is the wavelength of the wave in water?\n          1\n     A      m\n          6\n          2\n     B      m\n          9\n          5\n     C      m\n          6\n          9\n     D      m\n         10\n         10\n     E      m\n          9\n          6\n     F      m\n          5\n          9\n     G      m\n          2\n     H   6m\n                                                      22",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q27",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 The sum of the first 20 terms of an arithmetic progression is 50. The sum of the next 20 terms of the arithmetic progression is – 50. What is the sum of the first 100 terms of the arithmetic progression?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 750",
+        "B": "– 350",
+        "C": "– 50 159",
+        "D": "– 8 159",
+        "E": "8",
+        "F": "50",
+        "G": "350",
+        "H": "750 23"
+      },
+      "correct_answer": "A",
+      "raw_text": "27   The sum of the first 20 terms of an arithmetic progression is 50.\n     The sum of the next 20 terms of the arithmetic progression is – 50.\n     What is the sum of the first 100 terms of the arithmetic progression?\n     A   – 750\n     B   – 350\n     C   – 50\n             159\n     D   –\n              8\n         159\n     E\n          8\n     F   50\n     G   350\n     H   750\n                                                 23",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q28",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 A flat rectangular coil of wire with sides of length 30 cm and 20 cm is freely pivoted about an axle. The axle passes through the middle of the sides of length 30 cm. Part of the coil is between the poles of a U-shaped magnet as shown in the diagram. The poles are 4.0 cm long. The magnetic field can be considered uniform between the poles, and zero elsewhere. The coil is connected to a power supply so that there is a current in it. flat coil of wire to circuit axle 4 cm N S 20 cm 30 cm [diagram not to scale] The current is 0.60 A and the magnetic flux density is 0.050 T. There are 50 turns of wire in the coil. What is the moment about the axle, in N cm, produced by the magnetic force acting on the coil?",
+      "has_diagram": true,
+      "options": {
+        "A": "0.018 N cm",
+        "B": "0.036 N cm",
+        "C": "0.045 N cm",
+        "D": "0.90 N cm",
+        "E": "1.8 N cm",
+        "F": "2.25 N cm",
+        "G": "4.5 N cm 24"
+      },
+      "correct_answer": "D",
+      "raw_text": "28   A flat rectangular coil of wire with sides of length 30 cm and 20 cm is freely pivoted about an\n     axle. The axle passes through the middle of the sides of length 30 cm.\n     Part of the coil is between the poles of a U-shaped magnet as shown in the diagram. The poles\n     are 4.0 cm long. The magnetic field can be considered uniform between the poles, and zero\n     elsewhere.\n     The coil is connected to a power supply so that there is a current in it.\n                                                              flat coil of wire\n                                     to circuit\n                                                       axle\n                              4 cm    N       S                            20 cm\n                                                    30 cm\n                                            [diagram not to scale]\n     The current is 0.60 A and the magnetic flux density is 0.050 T. There are 50 turns of wire in the\n     coil.\n     What is the moment about the axle, in N cm, produced by the magnetic force acting on the coil?\n     A   0.018 N cm\n     B   0.036 N cm\n     C   0.045 N cm\n     D   0.90 N cm\n     E   1.8 N cm\n     F   2.25 N cm\n     G   4.5 N cm\n                                                  24",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q28-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2020-S1-Q29",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 The line L with equation y = m x + c, where m > 0 and c ≥ 0, passes through the point (2, 4).",
+      "has_diagram": false,
+      "options": {
+        "A": "– 0.5",
+        "B": "0.5",
+        "C": "1.25",
+        "D": "2",
+        "E": "5 25"
+      },
+      "correct_answer": "D",
+      "raw_text": "29   The line L with equation y = m x + c, where m > 0 and c ≥ 0, passes through the point (2, 4).\n     A line is drawn through the point (2, 4) perpendicular to L.\n     The triangle enclosed between the two lines and the y-axis has area 5 square units.\n     What is the larger of the two possible values of m ?\n     A   – 0.5\n     B   0.5\n     C   1.25\n     D   2\n     E   5\n                                                  25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q30",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 A box of mass 3.0 kg is pulled a distance 5.0 m directly up a smooth slope by a constant applied force of 30 N acting parallel to the slope. The initial speed of the box is 3.0 m s–1 and the final speed is 7.0 m s–1. Its acceleration is constant. 5.0 m 30 N box What is the component of the weight acting down the slope? (gravitational field strength = 10 N kg –1; air resistance is negligible)",
+      "has_diagram": false,
+      "options": {
+        "A": "12 N",
+        "B": "18 N",
+        "C": "22 N",
+        "D": "28 N",
+        "E": "29 N",
+        "F": "42 N",
+        "G": "90 N 26"
+      },
+      "correct_answer": "B",
+      "raw_text": "30   A box of mass 3.0 kg is pulled a distance 5.0 m directly up a smooth slope by a constant\n     applied force of 30 N acting parallel to the slope.\n     The initial speed of the box is 3.0 m s–1 and the final speed is 7.0 m s–1. Its acceleration is\n     constant.\n                                                   5.0 m\n                                               30 N\n                                   box\n     What is the component of the weight acting down the slope?\n     (gravitational field strength = 10 N kg –1; air resistance is negligible)\n     A   12 N\n     B   18 N\n     C   22 N\n     D   28 N\n     E   29 N\n     F   42 N\n     G   90 N\n                                                      26",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q31",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 P and Q are two different geometric progressions. The 3rd term of each geometric progression is 4. The 5th term of each geometric progression is 2. What is the modulus of the difference between the sums to infinity of P and Q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "8",
+        "C": "8 2",
+        "D": "16",
+        "E": "16 2",
+        "F": "32",
+        "G": "32 2 27"
+      },
+      "correct_answer": "E",
+      "raw_text": "31   P and Q are two different geometric progressions.\n     The 3rd term of each geometric progression is 4.\n     The 5th term of each geometric progression is 2.\n     What is the modulus of the difference between the sums to infinity of P and Q ?\n     A   0\n     B   8\n     C   8 2\n     D   16\n     E   16 2\n     F   32\n     G   32 2\n                                                27",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q32",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 Electrical power is supplied through a dc transmission line that consists of two metal wires. Each wire is 8.0 km long and has a cross-sectional area of 1.0 cm2. wires current The resistivity of the metal from which the wires are made is 2.5 × 10–7 Ω m. Electrical power is transmitted to the transmission line at a potential difference of 24 000 V. At what rate is energy being wasted as heat in the wires when the power supplied to the transmission line is 120 kW?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.40 W",
+        "B": "0.80 W",
+        "C": "1.6 W",
+        "D": "250 W",
+        "E": "500 W",
+        "F": "1000 W",
+        "G": "1.44 × 107 W",
+        "H": "5.76 × 107 W 28"
+      },
+      "correct_answer": "F",
+      "raw_text": "32   Electrical power is supplied through a dc transmission line that consists of two metal wires.\n     Each wire is 8.0 km long and has a cross-sectional area of 1.0 cm2.\n                                                              wires\n                                       current\n     The resistivity of the metal from which the wires are made is 2.5 × 10–7 Ω m.\n     Electrical power is transmitted to the transmission line at a potential difference of 24 000 V.\n     At what rate is energy being wasted as heat in the wires when the power supplied to the\n     transmission line is 120 kW?\n     A   0.40 W\n     B   0.80 W\n     C   1.6 W\n     D   250 W\n     E   500 W\n     F   1000 W\n     G   1.44 × 107 W\n     H   5.76 × 107 W\n                                                  28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q33",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 The curve 2 y = x 3 + 3 5 px + 3 p x + 13 has two distinct turning points. What are all the possible values of p ?",
+      "has_diagram": false,
+      "options": {
+        "A": "p < 0 , p > 0.2",
+        "B": "p ≤ 0 , p ≥ 0.2",
+        "C": "0 < p < 0.2",
+        "D": "0 ≤ p ≤ 0.2",
+        "E": "p < 0 , p > 1.2",
+        "F": "p ≤ 0 , p ≥ 1.2",
+        "G": "0 < p < 1.2",
+        "H": "0 ≤ p ≤ 1.2"
+      },
+      "correct_answer": "A",
+      "raw_text": "33   The curve\n                                                            2\n                                            y = x 3 + 3 5 px + 3 p x + 13\n     has two distinct turning points.\n     What are all the possible values of p ?\n     A   p < 0 , p > 0.2\n     B   p ≤ 0 , p ≥ 0.2\n     C   0 < p < 0.2\n     D   0 ≤ p ≤ 0.2\n     E   p < 0 , p > 1.2\n     F   p ≤ 0 , p ≥ 1.2\n     G   0 < p < 1.2\n     H   0 ≤ p ≤ 1.2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q34",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 A tennis ball travelling at 24.0 m s–1 is hit by a racket. As a result of the impact, the ball returns back along its original path having undergone a change in velocity of 48.0 m s–1. The acceleration of the ball whilst in contact with the racket is constant with magnitude 6000 m s–2. What is the total distance travelled by the ball whilst in contact with the racket?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.00 cm",
+        "B": "4.80 cm",
+        "C": "9.60 cm",
+        "D": "14.4 cm",
+        "E": "19.2 cm 29"
+      },
+      "correct_answer": "C",
+      "raw_text": "34   A tennis ball travelling at 24.0 m s–1 is hit by a racket. As a result of the impact, the ball returns\n     back along its original path having undergone a change in velocity of 48.0 m s–1. The\n     acceleration of the ball whilst in contact with the racket is constant with magnitude 6000 m s–2.\n     What is the total distance travelled by the ball whilst in contact with the racket?\n     A   0.00 cm\n     B   4.80 cm\n     C   9.60 cm\n     D   14.4 cm\n     E   19.2 cm\n                                                    29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q35",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 Find the number of solutions of the equation 14 cos3 x + 10 sin2 x cos x = 13 cos x in the range – 2π ≤ x ≤ 2π",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10",
+        "E": "12",
+        "F": "14 30"
+      },
+      "correct_answer": "E",
+      "raw_text": "35   Find the number of solutions of the equation\n                                        14 cos3 x + 10 sin2 x cos x = 13 cos x\n     in the range – 2π ≤ x ≤ 2π\n     A   4\n     B   6\n     C   8\n     D   10\n     E   12\n     F   14\n                                                 30",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q36",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 The diagram shows the relative positions of two identical light springs, both in equilibrium. The springs are supporting loads of mass 0.20 kg and 1.0 kg as shown. 4.0 cm 0.20 kg 1.0 kg [diagram not to scale] The same two springs are now connected in parallel, supporting a 2.0 kg mass as shown. 2.0 kg [diagram not to scale] In this parallel arrangement, what is the total strain energy in the springs? (gravitational field strength = 10 N kg–1; assume that the springs obey Hooke’s law)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.25 J",
+        "B": "0.40 J",
+        "C": "0.50 J",
+        "D": "1.0 J",
+        "E": "25 J",
+        "F": "40 J",
+        "G": "50 J",
+        "H": "100 J 31"
+      },
+      "correct_answer": "C",
+      "raw_text": "36   The diagram shows the relative positions of two identical light springs, both in equilibrium.\n     The springs are supporting loads of mass 0.20 kg and 1.0 kg as shown.\n                                      4.0 cm\n                                               0.20 kg\n                                                             1.0 kg\n                                           [diagram not to scale]\n     The same two springs are now connected in parallel, supporting a 2.0 kg mass as shown.\n                                                    2.0 kg\n                                           [diagram not to scale]\n     In this parallel arrangement, what is the total strain energy in the springs?\n     (gravitational field strength = 10 N kg–1; assume that the springs obey Hooke’s law)\n     A   0.25 J\n     B   0.40 J\n     C   0.50 J\n     D   1.0 J\n     E   25 J\n     F   40 J\n     G   50 J\n     H   100 J\n                                                  31",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q36-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2020-S1-Q37",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 Find the product of the real roots of the equation 2 2 (log x ) + log x = 3 10 10 −3",
+      "has_diagram": false,
+      "options": {
+        "A": "10 2 −1",
+        "B": "10 −1",
+        "C": "10 2 −1",
+        "D": "10 4 3",
+        "E": "10 5 1",
+        "F": "10 32"
+      },
+      "correct_answer": "D",
+      "raw_text": "37   Find the product of the real roots of the equation\n                                                 2 2\n                                        (log x ) + log x = 3\n                                            10            10\n              −3\n     A   10 2\n              −1\n     B   10\n              −1\n     C   10 2\n              −1\n     D   10 4\n              3\n     E   10 5\n              1\n     F   10\n                                                   32",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q38",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 An object of mass 2.5 kg is at rest at time = 0 s. A resultant force acts on the object in a constant direction. The magnitude of the resultant force acting on the object varies with time as shown by the graph. 24 force / N 16 8 0 0 0.04 0.08 0.12 0.16 0.20 time / s What is the kinetic energy of the object at time = 0.20 s?",
+      "has_diagram": false,
+      "options": {
+        "A": "0J",
+        "B": "0.80 J",
+        "C": "1.0 J",
+        "D": "1.6 J",
+        "E": "2.0 J",
+        "F": "3.2 J",
+        "G": "6.4 J 33"
+      },
+      "correct_answer": "B",
+      "raw_text": "38   An object of mass 2.5 kg is at rest at time = 0 s. A resultant force acts on the object in a\n     constant direction.\n     The magnitude of the resultant force acting on the object varies with time as shown by the\n     graph.\n                            24\n                   force / N\n                            16\n                               8\n                               0\n                                   0     0.04       0.08       0.12        0.16         0.20\n                                                                                  time / s\n     What is the kinetic energy of the object at time = 0.20 s?\n     A   0J\n     B   0.80 J\n     C   1.0 J\n     D   1.6 J\n     E   2.0 J\n     F   3.2 J\n     G   6.4 J\n                                                   33",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q39",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 Find the maximum value of the gradient of the curve with equation 3 y = 2 – 4 x + 4x – x 2 2 where x > 0",
+      "has_diagram": false,
+      "options": {
+        "A": "–4 8",
+        "B": "– 9 1",
+        "C": "2",
+        "D": "2",
+        "E": "4 34"
+      },
+      "correct_answer": "C",
+      "raw_text": "39   Find the maximum value of the gradient of the curve with equation\n                                                         3\n                                         y = 2 – 4 x + 4x – x 2\n                                                         2\n     where x > 0\n     A   –4\n             8\n     B   –\n             9\n         1\n     C\n         2\n     D   2\n     E   4\n                                               34",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2020-S1-Q40",
+      "year": 2020,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 In the following circuit, the ammeter records a current of zero. 100 Ω 1200 Ω 6.0 V 16 V 200 Ω R A What is the resistance of resistor R? 36",
+      "has_diagram": true,
+      "options": {
+        "A": "0Ω",
+        "B": "200 Ω",
+        "C": "300 Ω",
+        "D": "400 Ω",
+        "E": "600 Ω",
+        "F": "1200 Ω",
+        "G": "1800 Ω",
+        "H": "2400 Ω END OF TEST 35"
+      },
+      "correct_answer": "D",
+      "raw_text": "40   In the following circuit, the ammeter records a current of zero.\n                                              100 Ω        1200 Ω\n                           6.0 V                                        16 V\n                                              200 Ω            R\n                                                       A\n     What is the resistance of resistor R?\n     A   0Ω\n     B   200 Ω\n     C   300 Ω\n     D   400 Ω\n     E   600 Ω\n     F   1200 Ω\n     G   1800 Ω\n     H   2400 Ω\n                                             END OF TEST\n                                                  35\n\f36",
+      "diagram_images": [
+        "ENGAA-2020-S1-Q40-fig1.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "source_file": "TMUA-2023-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2023,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2023-P2-Q1",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1 Given that 1 1 3 − = x −6 x +6 11 what is the value of x ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2 15",
+        "B": "4 5",
+        "C": "5 2",
+        "D": "58",
+        "E": "50",
+        "F": "58",
+        "G": "60",
+        "H": "80 3"
+      },
+      "correct_answer": "H",
+      "raw_text": "1   Given that\n                                1        1     3\n                                    −        =\n                               x −6     x +6   11\n    what is the value of x ?\n    A    2 15\n    B    4 5\n    C   5 2\n    D     58\n    E   50\n    F   58\n    G   60\n    H   80\n                                    3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q2",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2 Evaluate 16 2 16 2 ⎛ 1 ⎞ ⎛ 1 ⎞ ∫ ⎜ 9 ⎝ x + x ⎟ dx − ⎜ ⎠ ∫ 9 ⎝ x − x ⎟ dx ⎠",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "4",
+        "D": "7",
+        "E": "14",
+        "F": "28",
+        "G": "75",
+        "H": "175 4"
+      },
+      "correct_answer": "F",
+      "raw_text": "2   Evaluate\n               16           2       16          2\n                 ⎛ 1        ⎞        ⎛ 1        ⎞\n               ∫ ⎜\n               9 ⎝\n                    x\n                      +   x ⎟ dx − ⎜\n                            ⎠\n                                    ∫\n                                   9 ⎝\n                                        x\n                                          −   x ⎟ dx\n                                                ⎠\n    A   0\n    B   2\n    C   4\n    D   7\n    E   14\n    F   28\n    G   75\n    H   175\n                                4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q3",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3 Consider the claim: For all positive real numbers x and y, xy = x y Which of the following is/are a counterexample to the claim? I x = 1, y = 16 II x = 2, y = 8 III x = 3, y = 4",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   Consider the claim:\n             For all positive real numbers x and y,\n                                                      xy = x y\n    Which of the following is/are a counterexample to the claim?\n         I        x = 1, y = 16\n         II       x = 2, y = 8\n         III      x = 3, y = 4\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G   II and III only\n    H   I, II and III\n                                                  5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q4",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4 A student attempts to answer the following question. What is the largest number of consecutive odd integers that are all prime? The student’s attempt is as follows: I There are two consecutive odd integers that are prime (for example: 17, 19). II Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for some n. III If n is one more than a multiple of 3, then n + 2 is a multiple of 3. IV If n is two more than a multiple of 3, then n – 2 is a multiple of 3. V The only other possibility is that n is a multiple of 3. VI In each case, one of the integers is a multiple of 3, so not prime. VII Therefore the largest number of consecutive odd integers that are all prime is two. Which of the following best describes this attempt?",
+      "has_diagram": false,
+      "options": {
+        "A": "It is completely correct.",
+        "B": "It is incorrect, and the first error is on line I.",
+        "C": "It is incorrect, and the first error is on line II.",
+        "D": "It is incorrect, and the first error is on line III.",
+        "E": "It is incorrect, and the first error is on line IV.",
+        "F": "It is incorrect, and the first error is on line V.",
+        "G": "It is incorrect, and the first error is on line VI.",
+        "H": "It is incorrect, and the first error is on line VII. 6"
+      },
+      "correct_answer": "G",
+      "raw_text": "4   A student attempts to answer the following question.\n             What is the largest number of consecutive odd integers that are all prime?\n    The student’s attempt is as follows:\n         I       There are two consecutive odd integers that are prime (for example: 17, 19).\n         II      Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for\n                 some n.\n         III     If n is one more than a multiple of 3, then n + 2 is a multiple of 3.\n         IV      If n is two more than a multiple of 3, then n – 2 is a multiple of 3.\n         V       The only other possibility is that n is a multiple of 3.\n         VI      In each case, one of the integers is a multiple of 3, so not prime.\n         VII     Therefore the largest number of consecutive odd integers that are all prime is two.\n    Which of the following best describes this attempt?\n    A   It is completely correct.\n    B   It is incorrect, and the first error is on line I.\n    C   It is incorrect, and the first error is on line II.\n    D   It is incorrect, and the first error is on line III.\n    E   It is incorrect, and the first error is on line IV.\n    F   It is incorrect, and the first error is on line V.\n    G   It is incorrect, and the first error is on line VI.\n    H   It is incorrect, and the first error is on line VII.\n                                                      6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q5",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5 Consider the two statements R: k is an integer multiple of π k S: ∫ sin 2 x dx = 0 0 Which of the following statements is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "R is necessary and sufficient for S.",
+        "B": "R is necessary but not sufficient for S.",
+        "C": "R is sufficient but not necessary for S.",
+        "D": "R is not necessary and not sufficient for S. 7"
+      },
+      "correct_answer": "A",
+      "raw_text": "5   Consider the two statements\n           R:   k is an integer multiple of π\n                  k\n           S:    ∫ sin 2 x dx = 0\n                  0\n    Which of the following statements is true?\n    A   R is necessary and sufficient for S.\n    B   R is necessary but not sufficient for S.\n    C   R is sufficient but not necessary for S.\n    D   R is not necessary and not sufficient for S.\n                                                 7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q6",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6 Consider the following equation where a is a real number and a > 1: (∗) ax = x Which of the following equations must have the same number of real solutions as (∗)? I loga x = x II a 2x = x 2 III a 2x = 2x",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 8"
+      },
+      "correct_answer": "F",
+      "raw_text": "6   Consider the following equation where a is a real number and a > 1:\n                                             (∗)   ax = x\n    Which of the following equations must have the same number of real solutions as (∗)?\n         I        loga x = x\n         II       a 2x = x 2\n         III      a 2x = 2x\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G   II and III only\n    H   I, II and III\n                                               8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q7",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7 The graph of the line ax + by = c is drawn, where a, b and c are real non-zero constants. Which one of the following is a necessary but not sufficient condition for the line to have a positive gradient and a positive y-intercept? c a",
+      "has_diagram": false,
+      "options": {
+        "A": "> 0 and <0 b b c a",
+        "B": "< 0 and >0 b b",
+        "C": "a>b>c",
+        "D": "a<b<c",
+        "E": "a and c have opposite signs",
+        "F": "a and c have the same sign 9"
+      },
+      "correct_answer": "E",
+      "raw_text": "7   The graph of the line ax + by = c is drawn, where a, b and c are real non-zero constants.\n    Which one of the following is a necessary but not sufficient condition for the line to have a\n    positive gradient and a positive y-intercept?\n        c         a\n    A     > 0 and   <0\n        b         b\n        c         a\n    B     < 0 and   >0\n        b         b\n    C   a>b>c\n    D   a<b<c\n    E   a and c have opposite signs\n    F   a and c have the same sign\n                                                9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q8",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8 A student draws a triangle that is acute-angled or obtuse-angled but not right-angled. The student counts the number of straight lines that divide the triangle into two triangles, at least one of which is right-angled. Which of the following statements is/are true? I The student can draw a triangle for which there is exactly 1 such straight line. II The student can draw a triangle for which there are exactly 2 such straight lines. III The student can draw a triangle for which there are exactly 3 such straight lines.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 10"
+      },
+      "correct_answer": "D",
+      "raw_text": "8   A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n    The student counts the number of straight lines that divide the triangle into two triangles, at\n    least one of which is right-angled.\n    Which of the following statements is/are true?\n          I       The student can draw a triangle for which there is exactly 1 such straight line.\n          II      The student can draw a triangle for which there are exactly 2 such straight lines.\n          III     The student can draw a triangle for which there are exactly 3 such straight lines.\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G   II and III only\n    H   I, II and III\n                                                   10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q9",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9 Consider the following statement about a pentagon P: (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P form an arithmetic sequence. Which of the following is/are true? I The statement (∗) II The contrapositive of (∗) III The converse of (∗)",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 11 4 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "9   Consider the following statement about a pentagon P:\n              (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P\n                  form an arithmetic sequence.\n    Which of the following is/are true?\n          I       The statement (∗)\n          II      The contrapositive of (∗)\n          III     The converse of (∗)\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G   II and III only\n    H   I, II and III\n                                                     11\n\f                                                      4           2",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q10",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10 Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square: x 4 – 2x 2 – 3 < 0 4 2 I if and only if x – 2x + 1 < 4 2 2 II if and only if (x – 1) < 4 2 III if and only if –2 < x – 1 < 2 2 IV if and only if x – 1 < 2 2 V if and only if x < 3 VI if and only if − 3 < x < 3 Which of the following statements is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "The argument is completely correct.",
+        "B": "The first error occurs in line I.",
+        "C": "The first error occurs in line II.",
+        "D": "The first error occurs in line III.",
+        "E": "The first error occurs in line IV.",
+        "F": "The first error occurs in line V.",
+        "G": "The first error occurs in line VI. 12"
+      },
+      "correct_answer": "A",
+      "raw_text": "10   Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square:\n                                 x 4 – 2x 2 – 3 < 0\n                                                  4        2\n                           I     if and only if x – 2x + 1 < 4\n                                                  2           2\n                           II    if and only if (x – 1) < 4\n                                                          2\n                           III   if and only if –2 < x – 1 < 2\n                                                  2\n                           IV    if and only if x – 1 < 2\n                                                  2\n                           V     if and only if x < 3\n                           VI    if and only if − 3 < x <             3\n     Which of the following statements is true?\n     A   The argument is completely correct.\n     B   The first error occurs in line I.\n     C   The first error occurs in line II.\n     D   The first error occurs in line III.\n     E   The first error occurs in line IV.\n     F   The first error occurs in line V.\n     G   The first error occurs in line VI.\n                                                      12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q11",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11 In this question, k is a positive integer. Consider the following theorem: k If 2 + 1 is a prime, then k is a power of 2. (∗) Which of the following statements, taken individually, is/are equivalent to (∗)? k I If k is a power of 2, then 2 + 1 is prime. k II 2 + 1 is not prime only if k is not a power of 2. k III A sufficient condition for k to be a power of 2 is that 2 + 1 is prime. Statement I is Statement II is Statement III is equivalent to (∗) equivalent to (∗) equivalent to (∗)",
+      "has_diagram": true,
+      "options": {
+        "A": "Yes Yes Yes",
+        "B": "Yes Yes No",
+        "C": "Yes No Yes",
+        "D": "Yes No No",
+        "E": "No Yes Yes",
+        "F": "No Yes No",
+        "G": "No No Yes",
+        "H": "No No No 13"
+      },
+      "correct_answer": "G",
+      "raw_text": "11   In this question, k is a positive integer.\n     Consider the following theorem:\n                                     k\n                                 If 2 + 1 is a prime, then k is a power of 2.   (∗)\n     Which of the following statements, taken individually, is/are equivalent to (∗)?\n                                               k\n           I       If k is a power of 2, then 2 + 1 is prime.\n                    k\n           II      2 + 1 is not prime only if k is not a power of 2.\n                                                                            k\n           III     A sufficient condition for k to be a power of 2 is that 2 + 1 is prime.\n                  Statement I is             Statement II is            Statement III is\n                 equivalent to (∗)          equivalent to (∗)           equivalent to (∗)\n     A                  Yes                        Yes                          Yes\n     B                  Yes                        Yes                          No\n     C                  Yes                        No                           Yes\n     D                  Yes                        No                           No\n     E                  No                         Yes                          Yes\n     F                  No                         Yes                          No\n     G                  No                         No                           Yes\n     H                  No                         No                           No\n                                                     13",
+      "diagram_images": [
+        "TMUA-2023-P2-Q11-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-2023-P2-Q12",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12 In this question, p is a real constant. The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π Which of the following statements is/are true? I n = 3 is sufficient for p > 1 II n = 7 only if –1 < p < 1",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "I and II 14"
+      },
+      "correct_answer": "C",
+      "raw_text": "12   In this question, p is a real constant.\n     The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π\n     Which of the following statements is/are true?\n           I      n = 3 is sufficient for p > 1\n           II     n = 7 only if –1 < p < 1\n     A   none of them\n     B   I only\n     C   II only\n     D   I and II\n                                                   14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q13",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13 Let x be a real number. Which one of the following statements is a sufficient condition for exactly three of the other four statements?",
+      "has_diagram": false,
+      "options": {
+        "A": "x≥0",
+        "B": "x=1",
+        "C": "x = 0 or x = 1",
+        "D": "x ≥ 0 or x ≤ 1",
+        "E": "x ≥ 0 and x ≤ 1 15"
+      },
+      "correct_answer": "C",
+      "raw_text": "13   Let x be a real number.\n     Which one of the following statements is a sufficient condition for exactly three of the other\n     four statements?\n     A   x≥0\n     B   x=1\n     C   x = 0 or x = 1\n     D   x ≥ 0 or x ≤ 1\n     E   x ≥ 0 and x ≤ 1\n                                                 15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q14",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14 Three lines are given by the equations: ax + by + c = 0 bx + cy + a = 0 cx + ay + b = 0 where a, b and c are non-zero real numbers. Which one of the following is correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "If two of the lines are parallel, then all three are parallel.",
+        "B": "If two of the lines are parallel, then the third is perpendicular to the other two.",
+        "C": "If two of the lines are parallel, then the third is parallel to y = x.",
+        "D": "If two of the lines are parallel, then the third is perpendicular to y = x.",
+        "E": "If two of the lines are perpendicular, then all three meet at a point.",
+        "F": "If two of the lines are perpendicular, then the third is parallel to y = x.",
+        "G": "If two of the lines are perpendicular, then the third is perpendicular to y = x. 16"
+      },
+      "correct_answer": "F",
+      "raw_text": "14   Three lines are given by the equations:\n                                                 ax + by + c = 0\n                                                 bx + cy + a = 0\n                                                 cx + ay + b = 0\n     where a, b and c are non-zero real numbers.\n     Which one of the following is correct?\n     A   If two of the lines are parallel, then all three are parallel.\n     B   If two of the lines are parallel, then the third is perpendicular to the other two.\n     C   If two of the lines are parallel, then the third is parallel to y = x.\n     D   If two of the lines are parallel, then the third is perpendicular to y = x.\n     E   If two of the lines are perpendicular, then all three meet at a point.\n     F   If two of the lines are perpendicular, then the third is parallel to y = x.\n     G   If two of the lines are perpendicular, then the third is perpendicular to y = x.\n                                                    16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q15",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15 The base 10 number 0.03841 has the value 0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841 Similarly, the base 2 number 0.01101 has the value 13 0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 = 32 . . What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "3 1",
+        "B": "5 1",
+        "C": "2",
+        "D": "4",
+        "E": "3",
+        "F": "16 5",
+        "G": "16 6",
+        "H": "31 17"
+      },
+      "correct_answer": "B",
+      "raw_text": "15   The base 10 number 0.03841 has the value\n                  0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841\n     Similarly, the base 2 number 0.01101 has the value\n                                                                            13\n                        0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 =\n                                                                            32\n                                                          .   .\n     What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ?\n         1\n     A\n         3\n         1\n     B\n         5\n          1\n     C\n         15\n          2\n     D\n         15\n          4\n     E\n         15\n          3\n     F\n         16\n          5\n     G\n         16\n         6\n     H\n         31\n                                               17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q16",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16 A sequence is defined by: u1 = a u2 = b un+2 = un + un+1 for n ≥ 1 where a and b are positive integers. The highest common factor of a and b is 7. Which of the following statements must be true? I u2023 is a multiple of 7 II If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1 III The highest common factor of u1 and u5 is 7",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 18"
+      },
+      "correct_answer": "B",
+      "raw_text": "16   A sequence is defined by:\n                                                        u1 = a\n                                                        u2 = b\n                                                      un+2 = un + un+1 for n ≥ 1\n     where a and b are positive integers. The highest common factor of a and b is 7.\n     Which of the following statements must be true?\n          I        u2023 is a multiple of 7\n          II       If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1\n          III      The highest common factor of u1 and u5 is 7\n     A   none of them\n     B   I only\n     C   II only\n     D   III only\n     E   I and II only\n     F   I and III only\n     G   II and III only\n     H   I, II and III\n                                                       18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q17",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17 The ceiling of x, written ⌈ x ⌉, is defined to be the value of x rounded up to the nearest integer. For example: ⌈ π ⌉ = 4, ⌈ 2.1 ⌉ = 3, ⌈8 ⌉ = 8 What is the value of the following integral? 99 ∫ 2 dx ⎢⎡ x ⎥⎤ 0",
+      "has_diagram": false,
+      "options": {
+        "A": "299",
+        "B": "299 – 1",
+        "C": "299 – 2",
+        "D": "2100",
+        "E": "2100 – 1",
+        "F": "2100 – 2 19"
+      },
+      "correct_answer": "F",
+      "raw_text": "17   The ceiling of x, written ⌈ x ⌉, is defined to be the value of x rounded up to the nearest integer.\n     For example: ⌈ π ⌉ = 4,     ⌈ 2.1 ⌉ = 3,   ⌈8 ⌉ = 8\n     What is the value of the following integral?\n                                                    99\n                                                    ∫ 2 dx\n                                                           ⎢⎡ x ⎥⎤\n                                                    0\n     A   299\n     B   299 – 1\n     C   299 – 2\n     D   2100\n     E   2100 – 1\n     F   2100 – 2\n                                                    19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q18",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18 The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following conditions is satisfied?",
+      "has_diagram": false,
+      "options": {
+        "A": "b 2 > 4c",
+        "B": "b 2 < 4c",
+        "C": "c > 0 and b > 2 c",
+        "D": "c > 0 and b < −2 c",
+        "E": "c < 0 and b < 0",
+        "F": "c < 0 and b > 0 20"
+      },
+      "correct_answer": "D",
+      "raw_text": "18   The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following\n     conditions is satisfied?\n     A   b 2 > 4c\n     B   b 2 < 4c\n     C   c > 0 and b > 2 c\n     D   c > 0 and b < −2 c\n     E   c < 0 and b < 0\n     F   c < 0 and b > 0\n                                                  20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q19",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19 In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x) f (x) = 0 for exactly M real values of x. g(x) = 0 for exactly N real values of x. Which of the following statements is/are true? I It is possible that M < N II It is possible that M = N III It is possible that M > N",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 21"
+      },
+      "correct_answer": "H",
+      "raw_text": "19   In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x)\n     f (x) = 0 for exactly M real values of x.\n     g(x) = 0 for exactly N real values of x.\n     Which of the following statements is/are true?\n           I       It is possible that M < N\n           II      It is possible that M = N\n           III     It is possible that M > N\n     A   none of them\n     B   I only\n     C   II only\n     D   III only\n     E   I and II only\n     F   I and III only\n     G   II and III only\n     H   I, II and III\n                                                   21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P2-Q20",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20 Let f be a polynomial with real coefficients. The integral Ip,q where p < q is defined by q Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx 2 2 p Which of the following statements must be true? 1 Ip,q = 0 only if 0 < p 2 f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0 3 Ip,q > 0 only if p < 0",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 22 23 24"
+      },
+      "correct_answer": "D",
+      "raw_text": "20   Let f be a polynomial with real coefficients.\n     The integral Ip,q where p < q is defined by\n                                                  q\n                                         Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx\n                                                            2              2\n                                                  p\n     Which of the following statements must be true?\n           1   Ip,q = 0 only if 0 < p\n           2   f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0\n           3   Ip,q > 0 only if p < 0\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                       22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

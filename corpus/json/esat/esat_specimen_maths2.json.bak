@@ -1,0 +1,2282 @@
+{
+    "module": "maths2",
+    "label": "ESAT Mathematics 2",
+    "total_questions": 27,
+    "questions": [
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q1",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 1,
+            "question_text": "What is the gradient of the curve\n\n \n\n  \n\n \n\nat the point where x = 2 ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q01.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style 3 over 2 square root of 2 end style]",
+                "B": "[begin mathsize 16px style 3 square root of 2 end style]",
+                "C": "[begin mathsize 16px style 4 square root of 2 end style]",
+                "D": "[begin mathsize 16px style 9 over 2 square root of 2 end style]",
+                "E": "[begin mathsize 16px style 6 square root of 2 end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style 3 over 2 square root of 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 3 over 2 square root of 2 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 3 square root of 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 3 square root of 2 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 4 square root of 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 4 square root of 2 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 9 over 2 square root of 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 9 over 2 square root of 2 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style 6 square root of 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 6 square root of 2 end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "B",
+            "correct_answer_raw": "3 square root of 2",
+            "correct_answer_images": [
+                "3 square root of 2",
+                "open parentheses 9 x squared space minus space 12 x space plus space 4 close parentheses space x to the power of negative begin inline style 3 over 2 end style end exponent",
+                "9 x to the power of begin inline style fraction numerator 1 over denominator 2 space end fraction end style end exponent minus space 12 x to the power of negative begin inline style fraction numerator 1 over denominator 2 space end fraction end style end exponent plus space 4 x to the power of negative begin inline style 3 over 2 end style end exponent",
+                "9 over 2 x to the power of negative fraction numerator 1 over denominator 2 space end fraction end exponent plus space 6 x to the power of negative begin inline style fraction numerator 3 over denominator 2 space end fraction end style end exponent minus space 6 x to the power of begin inline style 5 over 2 end style end exponent",
+                "x equals 2",
+                "fraction numerator 9 over denominator 2 square root of 2 end fraction plus fraction numerator 6 over denominator 2 square root of 2 end fraction minus fraction numerator 6 over denominator 4 square root of 2 end fraction space equals space fraction numerator 12 over denominator 2 square root of 2 end fraction space space equals space space 3 square root of 2"
+            ],
+            "explanation": "The answer is\nMultiply out the bracket and bring all terms to the numerator:\nMultiply out:\nDifferentiate:\nSubstitute :",
+            "explanation_images": [
+                "3 square root of 2",
+                "open parentheses 9 x squared space minus space 12 x space plus space 4 close parentheses space x to the power of negative begin inline style 3 over 2 end style end exponent",
+                "9 x to the power of begin inline style fraction numerator 1 over denominator 2 space end fraction end style end exponent minus space 12 x to the power of negative begin inline style fraction numerator 1 over denominator 2 space end fraction end style end exponent plus space 4 x to the power of negative begin inline style 3 over 2 end style end exponent",
+                "9 over 2 x to the power of negative fraction numerator 1 over denominator 2 space end fraction end exponent plus space 6 x to the power of negative begin inline style fraction numerator 3 over denominator 2 space end fraction end style end exponent minus space 6 x to the power of begin inline style 5 over 2 end style end exponent",
+                "x equals 2",
+                "fraction numerator 9 over denominator 2 square root of 2 end fraction plus fraction numerator 6 over denominator 2 square root of 2 end fraction minus fraction numerator 6 over denominator 4 square root of 2 end fraction space equals space fraction numerator 12 over denominator 2 square root of 2 end fraction space space equals space space 3 square root of 2"
+            ],
+            "extracted_at": "2026-07-04T22:13:36.221995",
+            "options_latex": {
+                "A": "\\frac{3}{2}\\sqrt{2}",
+                "B": "3\\sqrt{2}",
+                "C": "4\\sqrt{2}",
+                "D": "\\frac{9}{2}\\sqrt{2}",
+                "E": "6\\sqrt{2}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q2",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 2,
+            "question_text": "Which one of the following is a simplification of\n\n \n\n  \n\n \n\nwhere x ≠ 2 and x ≠ 0 ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q02.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[fraction numerator x minus 4 over denominator x minus 2 end fraction]",
+                "B": "[fraction numerator x minus 2 over denominator x end fraction]",
+                "C": "[2 over x]",
+                "D": "[fraction numerator x plus 2 over denominator x end fraction]",
+                "E": "[fraction numerator x plus 2 over denominator x plus 1 end fraction]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[fraction numerator x minus 4 over denominator x minus 2 end fraction]",
+                    "math_alt": [
+                        "fraction numerator x minus 4 over denominator x minus 2 end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[fraction numerator x minus 2 over denominator x end fraction]",
+                    "math_alt": [
+                        "fraction numerator x minus 2 over denominator x end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[2 over x]",
+                    "math_alt": [
+                        "2 over x"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[fraction numerator x plus 2 over denominator x end fraction]",
+                    "math_alt": [
+                        "fraction numerator x plus 2 over denominator x end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[fraction numerator x plus 2 over denominator x plus 1 end fraction]",
+                    "math_alt": [
+                        "fraction numerator x plus 2 over denominator x plus 1 end fraction"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "D",
+            "correct_answer_raw": "fraction numerator x plus 2 over denominator x end fraction",
+            "correct_answer_images": [
+                "fraction numerator x plus 2 over denominator x end fraction",
+                "fraction numerator left parenthesis x minus 2 right parenthesis left parenthesis x plus 2 right parenthesis over denominator x left parenthesis x minus 2 right parenthesis end fraction",
+                "open parentheses x minus 2 close parentheses",
+                "fraction numerator x plus 2 over denominator x end fraction"
+            ],
+            "explanation": "The answer is\nFactorise the numerator and denominator:\nCancel the    factor to leave:",
+            "explanation_images": [
+                "fraction numerator x plus 2 over denominator x end fraction",
+                "fraction numerator left parenthesis x minus 2 right parenthesis left parenthesis x plus 2 right parenthesis over denominator x left parenthesis x minus 2 right parenthesis end fraction",
+                "open parentheses x minus 2 close parentheses",
+                "fraction numerator x plus 2 over denominator x end fraction"
+            ],
+            "extracted_at": "2026-07-04T22:13:44.821502",
+            "options_latex": {
+                "A": "\\frac{x - 4}{x - 2}",
+                "B": "\\frac{x - 2}{x}",
+                "C": "\\frac{2}{x}",
+                "D": "\\frac{x + 2}{x}",
+                "E": "\\frac{x + 2}{x + 1}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q3",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 3,
+            "question_text": "When x = 2 is substituted in the expression x3 + px2 + qx + p2, the result is 0.\n\nWhen x = 1 is substituted into the same expression, the result is − 3.5.\n\nWhat are all the possible value(s) of p ?\nor",
+            "question_images": [
+                "space p space equals space 1",
+                "space p space equals space minus 3"
+            ],
+            "screenshot": "esat_screenshots/maths2/q03.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[space p space equals space minus 1 plus-or-minus fraction numerator square root of 6 over denominator 3 end fraction]",
+                "B": "[space p space equals space minus 3] [space p space equals space 1] or",
+                "C": "[space p space equals space 1]",
+                "D": "[space p space equals space 1 plus-or-minus square root of 7]",
+                "E": "There are no values for p."
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[space p space equals space minus 1 plus-or-minus fraction numerator square root of 6 over denominator 3 end fraction]",
+                    "math_alt": [
+                        "space p space equals space minus 1 plus-or-minus fraction numerator square root of 6 over denominator 3 end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[space p space equals space minus 3] [space p space equals space 1] or",
+                    "math_alt": [
+                        "space p space equals space 1",
+                        "space p space equals space minus 3"
+                    ],
+                    "plain_text": "or"
+                },
+                "C": {
+                    "text": "[space p space equals space 1]",
+                    "math_alt": [
+                        "space p space equals space 1"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[space p space equals space 1 plus-or-minus square root of 7]",
+                    "math_alt": [
+                        "space p space equals space 1 plus-or-minus square root of 7"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "There are no values for p.",
+                    "math_alt": [],
+                    "plain_text": "There are no values for p."
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "left parenthesis straight i right parenthesis space space space space space space 8 plus 4 p plus 2 q plus p squared equals 0",
+            "correct_answer_images": [
+                "left parenthesis straight i right parenthesis space space space space space space 8 plus 4 p plus 2 q plus p squared equals 0",
+                "space 1 plus p plus q plus p squared equals negative 3.5",
+                "left parenthesis ii right parenthesis space space space space space space minus 2 minus 2 p minus 2 q minus 2 p squared equals 7",
+                "6 plus 2 p minus p squared equals 7",
+                "p squared minus 2 p plus 1 equals 0",
+                "left parenthesis p minus 1 right parenthesis squared equals 0"
+            ],
+            "explanation": "The answer is p = 1\nSubstitute x = 2 into the equation and use the remainder theorem:\nSubstitute x = 1 into the equation and use the remainder theorem:\nMultiply this by – 2 to give\nAdd (i) and (ii) to give\nRearrange\nwhich gives\nand so p = 1",
+            "explanation_images": [
+                "left parenthesis straight i right parenthesis space space space space space space 8 plus 4 p plus 2 q plus p squared equals 0",
+                "space 1 plus p plus q plus p squared equals negative 3.5",
+                "left parenthesis ii right parenthesis space space space space space space minus 2 minus 2 p minus 2 q minus 2 p squared equals 7",
+                "6 plus 2 p minus p squared equals 7",
+                "p squared minus 2 p plus 1 equals 0",
+                "left parenthesis p minus 1 right parenthesis squared equals 0"
+            ],
+            "extracted_at": "2026-07-04T22:13:53.259286",
+            "options_latex": {
+                "A": "[space p space equals space minus 1 plus-or-minus fraction numerator square root of 6 over denominator 3 end fraction]",
+                "B": "[space p space equals space minus 3] [space p space equals space 1] or",
+                "C": "[space p space equals space 1]",
+                "D": "[space p space equals space 1 plus-or-minus square root of 7]",
+                "E": "There are no values for p."
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q4",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 4,
+            "question_text": "You are given that\n\n \n\n \n\n \n\nwhere a, b, and c are positive real numbers.\n\n \n\nWhich one of the following is a correct expression for x ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q04.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[log subscript 10 open parentheses fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction close parentheses space]",
+                "B": "[fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction]",
+                "C": "[fraction numerator 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction]",
+                "D": "[fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction]",
+                "E": "[log subscript 10 open parentheses fraction numerator 2 over denominator a b squared c cubed end fraction close parentheses]",
+                "F": "[fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction]",
+                "G": "[fraction numerator 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction]",
+                "H": "[fraction numerator 2 over denominator a b squared c cubed end fraction]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[log subscript 10 open parentheses fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction close parentheses space]",
+                    "math_alt": [
+                        "log subscript 10 open parentheses fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction close parentheses space"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction]",
+                    "math_alt": [
+                        "fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[fraction numerator 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction]",
+                    "math_alt": [
+                        "fraction numerator 2 over denominator log subscript 10 left parenthesis a plus 2 b plus 3 c right parenthesis end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction]",
+                    "math_alt": [
+                        "fraction numerator 2 over denominator a plus 2 b plus 3 c end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[log subscript 10 open parentheses fraction numerator 2 over denominator a b squared c cubed end fraction close parentheses]",
+                    "math_alt": [
+                        "log subscript 10 open parentheses fraction numerator 2 over denominator a b squared c cubed end fraction close parentheses"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction]",
+                    "math_alt": [
+                        "fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "G": {
+                    "text": "[fraction numerator 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction]",
+                    "math_alt": [
+                        "fraction numerator 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "H": {
+                    "text": "[fraction numerator 2 over denominator a b squared c cubed end fraction]",
+                    "math_alt": [
+                        "fraction numerator 2 over denominator a b squared c cubed end fraction"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "F",
+            "correct_answer_raw": "fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction",
+            "correct_answer_images": [
+                "fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction",
+                "x log subscript 10 a space plus space 2 x log subscript 10 b space plus space 3 x log subscript 10 c space equals space log subscript 10 2",
+                "x open parentheses log subscript 10 a space plus space 2 log subscript 10 b space plus space 3 log subscript 10 c space close parentheses space equals space log subscript 10 space 2",
+                "x log subscript 10 open parentheses a b squared c cubed close parentheses space equals space log subscript 10 2",
+                "x space equals space fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction",
+                "open parentheses a to the power of x b to the power of 2 x end exponent c to the power of 3 x end exponent close parentheses space equals space open parentheses a to the power of 1 b squared c cubed close parentheses to the power of x"
+            ],
+            "explanation": "The answer is\nTake logs of each side and separate out the LHS:\nFactorise the LHS:\nCombine the logs in the bracket using log rules to give:\nand hence\nIt is slightly more efficient to note that\nand then take logs of both sides of the original expression.",
+            "explanation_images": [
+                "fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction",
+                "x log subscript 10 a space plus space 2 x log subscript 10 b space plus space 3 x log subscript 10 c space equals space log subscript 10 2",
+                "x open parentheses log subscript 10 a space plus space 2 log subscript 10 b space plus space 3 log subscript 10 c space close parentheses space equals space log subscript 10 space 2",
+                "x log subscript 10 open parentheses a b squared c cubed close parentheses space equals space log subscript 10 2",
+                "x space equals space fraction numerator log subscript 10 2 over denominator log subscript 10 left parenthesis a b squared c cubed right parenthesis end fraction",
+                "open parentheses a to the power of x b to the power of 2 x end exponent c to the power of 3 x end exponent close parentheses space equals space open parentheses a to the power of 1 b squared c cubed close parentheses to the power of x"
+            ],
+            "extracted_at": "2026-07-04T22:14:01.742139",
+            "options_latex": {
+                "A": "\\log_{10} \\left( \\frac{2}{a + 2b + 3c} \\right)",
+                "B": "\\frac{\\log_{10} 2}{\\log_{10} (a + 2b + 3c)}",
+                "C": "\\frac{2}{\\log_{10} (a + 2b + 3c)}",
+                "D": "\\frac{2}{a + 2b + 3c}",
+                "E": "\\log_{10} \\left( \\frac{2}{ab^2 c^3} \\right)",
+                "F": "\\frac{\\log_{10} 2}{\\log_{10} (ab^2 c^3)}",
+                "G": "\\frac{2}{\\log_{10} (ab^2 c^3)}",
+                "H": "\\frac{2}{ab^2 c^3}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q5",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 5,
+            "question_text": "Given the roots of the equation differ by 2, what is the value of c ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q05.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style 105 over 8 end style]",
+                "B": "[begin mathsize 16px style 113 over 8 end style]",
+                "C": "[begin mathsize 16px style 117 over 8 end style]",
+                "D": "[begin mathsize 16px style 119 over 8 end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style 105 over 8 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 105 over 8 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 113 over 8 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 113 over 8 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 117 over 8 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 117 over 8 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 119 over 8 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 119 over 8 end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "begin mathsize 16px style 105 over 8 end style",
+            "correct_answer_images": [
+                "begin mathsize 16px style 105 over 8 end style",
+                "x space equals space fraction numerator 11 plus-or-minus square root of 121 minus 8 c end root over denominator 4 end fraction",
+                "1 half square root of 121 minus 8 c end root space equals space 2",
+                "square root of 121 minus 8 c end root space equals space 4",
+                "equals 105 over 8"
+            ],
+            "explanation": "The answer is\nThe two roots are given by:\nAnd so the difference in roots, which is equal to 2, is\nfrom this we obtain\nand rearranging this gives 8c = 105, and hence c",
+            "explanation_images": [
+                "begin mathsize 16px style 105 over 8 end style",
+                "x space equals space fraction numerator 11 plus-or-minus square root of 121 minus 8 c end root over denominator 4 end fraction",
+                "1 half square root of 121 minus 8 c end root space equals space 2",
+                "square root of 121 minus 8 c end root space equals space 4",
+                "equals 105 over 8"
+            ],
+            "extracted_at": "2026-07-04T22:14:09.972096",
+            "options_latex": {
+                "A": "\\frac{105}{8}",
+                "B": "\\frac{113}{8}",
+                "C": "\\frac{117}{8}",
+                "D": "\\frac{119}{8}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q6",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 6,
+            "question_text": "A square PQRS is drawn above the x-axis with the side PQ on the x-axis.\n\n \n\nP is the point (− 5, 0) and Q is the point (1, 0).\n\n \n\nA circle is drawn inside the square with diameter equal in length to the side of the square.\n\n \n\nWhich one of the following is an equation of the circle?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q06.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[x squared plus y squared minus 4 x plus 6 y plus 4 equals 0]",
+                "B": "[x squared plus y squared minus 4 x plus 6 y plus 9 equals 0]",
+                "C": "[x squared plus y squared plus 4 x minus 6 y plus 4 equals 0]",
+                "D": "[x squared plus y squared plus 4 x minus 6 y plus 9 equals 0]",
+                "E": "[x squared plus y squared minus 6 x minus 4 y plus 9 equals 0]",
+                "F": "[x squared plus y squared minus 6 x plus 4 y plus 4 equals 0]",
+                "G": "[x squared plus y squared plus 6 x minus 4 y plus 4 equals 0]",
+                "H": "[x squared plus y squared plus 6 x plus 4 y plus 9 equals 0]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[x squared plus y squared minus 4 x plus 6 y plus 4 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared minus 4 x plus 6 y plus 4 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[x squared plus y squared minus 4 x plus 6 y plus 9 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared minus 4 x plus 6 y plus 9 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[x squared plus y squared plus 4 x minus 6 y plus 4 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared plus 4 x minus 6 y plus 4 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[x squared plus y squared plus 4 x minus 6 y plus 9 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared plus 4 x minus 6 y plus 9 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[x squared plus y squared minus 6 x minus 4 y plus 9 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared minus 6 x minus 4 y plus 9 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[x squared plus y squared minus 6 x plus 4 y plus 4 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared minus 6 x plus 4 y plus 4 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "G": {
+                    "text": "[x squared plus y squared plus 6 x minus 4 y plus 4 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared plus 6 x minus 4 y plus 4 equals 0"
+                    ],
+                    "plain_text": ""
+                },
+                "H": {
+                    "text": "[x squared plus y squared plus 6 x plus 4 y plus 9 equals 0]",
+                    "math_alt": [
+                        "x squared plus y squared plus 6 x plus 4 y plus 9 equals 0"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "C",
+            "correct_answer_raw": "x squared space plus space y squared space plus space 4 x space minus space 6 y space plus space 4 space equals space 0",
+            "correct_answer_images": [
+                "x squared space plus space y squared space plus space 4 x space minus space 6 y space plus space 4 space equals space 0",
+                "open parentheses x minus space minus space 2 close parentheses squared space plus space open parentheses y minus 3 close parentheses squared space equals space 3 squared space equals space 9",
+                "x squared space plus space 4 x space plus space 4 space plus space y squared space minus space 6 y space plus space 9 space equals space 9",
+                "x squared space plus space y squared space plus space 4 x space minus space 6 y space plus space 4 space equals space 0"
+            ],
+            "explanation": "The answer is\nThe side of the box is of length 1 –  – 5 = 6\nThe x-coordinate of the centre of the box is half way between (– 5, 0) and (1, 0), so is at  x = – 2\nThe y-coordinate of the centre of the square is y = 3\nThe centre of the circle coincides with the centre of the square. Thus the centre of the circle is at  (– 2, 3).\nThe radius of the circle is equal to half the width of the square: 6/2 = 3\nThe equation of the circle must be:\nSimplifying this:\nGiving:",
+            "explanation_images": [
+                "x squared space plus space y squared space plus space 4 x space minus space 6 y space plus space 4 space equals space 0",
+                "open parentheses x minus space minus space 2 close parentheses squared space plus space open parentheses y minus 3 close parentheses squared space equals space 3 squared space equals space 9",
+                "x squared space plus space 4 x space plus space 4 space plus space y squared space minus space 6 y space plus space 9 space equals space 9",
+                "x squared space plus space y squared space plus space 4 x space minus space 6 y space plus space 4 space equals space 0"
+            ],
+            "extracted_at": "2026-07-04T22:14:18.604005",
+            "options_latex": {
+                "A": "x^2 + y^2 - 4x + 6y + 4 = 0",
+                "B": "x^2 + y^2 - 4x + 6y + 9 = 0",
+                "C": "x^2 + y^2 + 4x - 6y + 4 = 0",
+                "D": "x^2 + y^2 + 4x - 6y + 9 = 0",
+                "E": "x^2 + y^2 - 6x - 4y + 9 = 0",
+                "F": "x^2 + y^2 - 6x + 4y + 4 = 0",
+                "G": "x^2 + y^2 + 6x - 4y + 4 = 0",
+                "H": "x^2 + y^2 + 6x + 4y + 9 = 0"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q7",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 7,
+            "question_text": "Which one of the following numbers is largest in value?\n\n \n\n(All angles are given in radians.)",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q07.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses]",
+                "B": "[log subscript 10 100]",
+                "C": "[sin to the power of 10 open parentheses straight pi over 2 close parentheses space]",
+                "D": "[log subscript 2 space 10]",
+                "E": "[open parentheses square root of 2 minus 1 close parentheses to the power of 10]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses]",
+                    "math_alt": [
+                        "tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[log subscript 10 100]",
+                    "math_alt": [
+                        "log subscript 10 100"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[sin to the power of 10 open parentheses straight pi over 2 close parentheses space]",
+                    "math_alt": [
+                        "sin to the power of 10 open parentheses straight pi over 2 close parentheses space"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[log subscript 2 space 10]",
+                    "math_alt": [
+                        "log subscript 2 space 10"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[open parentheses square root of 2 minus 1 close parentheses to the power of 10]",
+                    "math_alt": [
+                        "open parentheses square root of 2 minus 1 close parentheses to the power of 10"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "log subscript 2 10",
+            "correct_answer_images": [
+                "log subscript 2 10",
+                "tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses space equals negative 1",
+                "log subscript 10 100 space equals space 2",
+                "sin to the power of 10 x space less or equal than space 1",
+                "log subscript 2 10 space greater than space log subscript 2 8 space equals space 3",
+                "0 space less than space square root of 2 minus 1 space less than space 1",
+                "1 space less than space square root of 2 space end root less than space 2",
+                "log subscript 2 10"
+            ],
+            "explanation": "The correct answer is:\nfor any x; in this case it equals 1\n(as  ), so raising it to the power of 10 gives a number less than 1\nSo the largest of the five numbers is",
+            "explanation_images": [
+                "log subscript 2 10",
+                "tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses space equals negative 1",
+                "log subscript 10 100 space equals space 2",
+                "sin to the power of 10 x space less or equal than space 1",
+                "log subscript 2 10 space greater than space log subscript 2 8 space equals space 3",
+                "0 space less than space square root of 2 minus 1 space less than space 1",
+                "1 space less than space square root of 2 space end root less than space 2",
+                "log subscript 2 10"
+            ],
+            "extracted_at": "2026-07-04T22:14:27.211263",
+            "options_latex": {
+                "A": "[tan open parentheses fraction numerator 3 straight pi over denominator 4 end fraction close parentheses]",
+                "B": "[log subscript 10 100]",
+                "C": "[sin to the power of 10 open parentheses straight pi over 2 close parentheses space]",
+                "D": "[log subscript 2 space 10]",
+                "E": "[open parentheses square root of 2 minus 1 close parentheses to the power of 10]"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q8",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 8,
+            "question_text": "What is the sum of the roots of",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q08.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "3",
+                "B": "8",
+                "C": "[2 log subscript 10 2]",
+                "D": "[log subscript 10 open parentheses 15 over 4 close parentheses space]",
+                "E": "[fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "3",
+                    "math_alt": [],
+                    "plain_text": "3"
+                },
+                "B": {
+                    "text": "8",
+                    "math_alt": [],
+                    "plain_text": "8"
+                },
+                "C": {
+                    "text": "[2 log subscript 10 2]",
+                    "math_alt": [
+                        "2 log subscript 10 2"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[log subscript 10 open parentheses 15 over 4 close parentheses space]",
+                    "math_alt": [
+                        "log subscript 10 open parentheses 15 over 4 close parentheses space"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction]",
+                    "math_alt": [
+                        "fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "E",
+            "correct_answer_raw": "fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction",
+            "correct_answer_images": [
+                "fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction",
+                "y equals 2 to the power of x",
+                "y squared minus 8 y plus 15 equals 0",
+                "y equals 2 to the power of x",
+                "2 to the power of x space equals space 3",
+                "x equals fraction numerator log subscript 10 3 over denominator log subscript 10 2 end fraction",
+                "x equals fraction numerator log subscript 10 5 over denominator log subscript 10 2 space end fraction",
+                "fraction numerator log subscript 10 3 space plus space log subscript 10 5 over denominator log subscript 10 2 end fraction space equals space fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction"
+            ],
+            "explanation": "The answer is\nLet , then\nSolve this quadratic in y to give y = 3 or y = 5\nand y = 3 together give  which, on taking logs, gives:\nSimilarly, when y = 5 we get:\nSo, adding these roots together and using log rules gives us the answer:",
+            "explanation_images": [
+                "fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction",
+                "y equals 2 to the power of x",
+                "y squared minus 8 y plus 15 equals 0",
+                "y equals 2 to the power of x",
+                "2 to the power of x space equals space 3",
+                "x equals fraction numerator log subscript 10 3 over denominator log subscript 10 2 end fraction",
+                "x equals fraction numerator log subscript 10 5 over denominator log subscript 10 2 space end fraction",
+                "fraction numerator log subscript 10 3 space plus space log subscript 10 5 over denominator log subscript 10 2 end fraction space equals space fraction numerator log subscript 10 15 over denominator log subscript 10 2 end fraction"
+            ],
+            "extracted_at": "2026-07-04T22:14:35.606389",
+            "options_latex": {
+                "D": "\\log_{10}\\left(\\frac{15}{4}\\right)",
+                "E": "\\frac{\\log_{10} 15}{\\log_{10} 2}",
+                "A": "3",
+                "B": "8",
+                "C": "[2 log subscript 10 2]"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q9",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 9,
+            "question_text": "The graph of the polynomial function\n\n \n\n      \n\n \n\nis sketched, where  a, b, c, d, e  and  f  are real constants with .\n\nWhich one of the following is not possible?",
+            "question_images": [
+                "a not equal to 0"
+            ],
+            "screenshot": "esat_screenshots/maths2/q09.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "The graph has two local minima and two local maxima.",
+                "B": "The graph has one local minimum and two local maxima.",
+                "C": "The graph has one local minimum and one local maximum.",
+                "D": "The graph has no local minima or local maxima."
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "The graph has two local minima and two local maxima.",
+                    "math_alt": [],
+                    "plain_text": "The graph has two local minima and two local maxima."
+                },
+                "B": {
+                    "text": "The graph has one local minimum and two local maxima.",
+                    "math_alt": [],
+                    "plain_text": "The graph has one local minimum and two local maxima."
+                },
+                "C": {
+                    "text": "The graph has one local minimum and one local maximum.",
+                    "math_alt": [],
+                    "plain_text": "The graph has one local minimum and one local maximum."
+                },
+                "D": {
+                    "text": "The graph has no local minima or local maxima.",
+                    "math_alt": [],
+                    "plain_text": "The graph has no local minima or local maxima."
+                }
+            },
+            "correct_answer": "B",
+            "correct_answer_raw": "fraction numerator straight d y over denominator straight d x end fraction",
+            "correct_answer_images": [
+                "fraction numerator straight d y over denominator straight d x end fraction",
+                "plus infinity",
+                "x rightwards arrow plus-or-minus infinity",
+                "negative infinity",
+                "fraction numerator straight d y over denominator straight d x end fraction",
+                "fraction numerator straight d y over denominator straight d x end fraction"
+            ],
+            "explanation": "It is not possible that: The graph has one local minimum and two local maxima.\nAs the polynomial has degree 5, its derivative will have degree 4 so may have up to four real roots, and so our graph may have up to four stationary points.\nThe graph of  either tends to  as  or it tends to  for both; either way, it must cross the x-axis an even number of times. (Touching the axis without crossing results in a point of inflection, which we are not considering in this question.)\nSo the possibilities for the graph of  to cross the x-axis, along with a description of the corresponding turning points for y, are:\nor the graph of  does not cross the x-axis at all, in which case there are no stationary points.\nSo one local minimum and two local maxima is impossible.",
+            "explanation_images": [
+                "fraction numerator straight d y over denominator straight d x end fraction",
+                "plus infinity",
+                "x rightwards arrow plus-or-minus infinity",
+                "negative infinity",
+                "fraction numerator straight d y over denominator straight d x end fraction",
+                "fraction numerator straight d y over denominator straight d x end fraction"
+            ],
+            "extracted_at": "2026-07-04T22:14:43.780510",
+            "options_latex": {
+                "A": "The graph has two local minima and two local maxima.",
+                "B": "The graph has one local minimum and two local maxima.",
+                "C": "The graph has one local minimum and one local maximum.",
+                "D": "The graph has no local minima or local maxima."
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q10",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 10,
+            "question_text": "The sequence  is given by the rule:\n\n \n\n \n\n \n\n \n\nFind the value of",
+            "question_images": [
+                "a subscript n",
+                "sum from n equals 1 to 100 of a subscript n"
+            ],
+            "screenshot": "esat_screenshots/maths2/q10.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "150",
+                "B": "250",
+                "C": "– 4750",
+                "D": "5150",
+                "E": "[begin mathsize 16px style 4 open parentheses 1 minus open parentheses 1 half close parentheses to the power of 100 close parentheses end style]",
+                "F": "[begin mathsize 16px style 4 open parentheses open parentheses 3 over 2 close parentheses to the power of 100 minus 1 close parentheses end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "150",
+                    "math_alt": [],
+                    "plain_text": "150"
+                },
+                "B": {
+                    "text": "250",
+                    "math_alt": [],
+                    "plain_text": "250"
+                },
+                "C": {
+                    "text": "– 4750",
+                    "math_alt": [],
+                    "plain_text": "– 4750"
+                },
+                "D": {
+                    "text": "5150",
+                    "math_alt": [],
+                    "plain_text": "5150"
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style 4 open parentheses 1 minus open parentheses 1 half close parentheses to the power of 100 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 4 open parentheses 1 minus open parentheses 1 half close parentheses to the power of 100 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[begin mathsize 16px style 4 open parentheses open parentheses 3 over 2 close parentheses to the power of 100 minus 1 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 4 open parentheses open parentheses 3 over 2 close parentheses to the power of 100 minus 1 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "150",
+            "correct_answer_images": [],
+            "explanation": "The answer is 150\nThe sequence begins a1 = 2,  a2 = 2 + ( – 1 ) = 1,  a3 = 2 = 1 + ( – 1 )2,  a4 = 1,  etc...\nSo the sum of the first 100 terms is 2 + 1 + 2 + 1 + ... = 50 x 2 + 50 x 1 = 150",
+            "explanation_images": [],
+            "extracted_at": "2026-07-04T22:14:52.071653",
+            "options_latex": {
+                "E": "4 \\left( 1 - \\left( \\frac{1}{2} \\right)^{100} \\right)",
+                "F": "4 \\left( \\left( \\frac{3}{2} \\right)^{100} - 1 \\right)",
+                "A": "150",
+                "B": "250",
+                "C": "– 4750",
+                "D": "5150"
+            },
+            "correct_answer_plain": "150"
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q11",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 11,
+            "question_text": "Tangents are drawn from a point P to a circle of radius 10 cm.\n\n \n\nThe centre of the circle is C and the distance PC is 20 cm.\n\n \n\n      \n\n \n\nWhich one of the following is an expression for the shaded area in square centimetres?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q11.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style]",
+                "B": "[begin mathsize 16px style 100 over 3 open parentheses 3 square root of 5 minus straight pi close parentheses end style]",
+                "C": "[begin mathsize 16px style 50 over 3 open parentheses 6 square root of 3 minus straight pi close parentheses end style]",
+                "D": "[begin mathsize 16px style 50 over 3 open parentheses 6 square root of 5 minus straight pi close parentheses end style]",
+                "E": "[begin mathsize 16px style 50 over 3 open parentheses square root of 3 minus 2 straight pi close parentheses end style]",
+                "F": "[begin mathsize 16px style 50 over 3 open parentheses 2 straight pi minus square root of 3 close parentheses end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 100 over 3 open parentheses 3 square root of 5 minus straight pi close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 100 over 3 open parentheses 3 square root of 5 minus straight pi close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 50 over 3 open parentheses 6 square root of 3 minus straight pi close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 50 over 3 open parentheses 6 square root of 3 minus straight pi close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 50 over 3 open parentheses 6 square root of 5 minus straight pi close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 50 over 3 open parentheses 6 square root of 5 minus straight pi close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style 50 over 3 open parentheses square root of 3 minus 2 straight pi close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 50 over 3 open parentheses square root of 3 minus 2 straight pi close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[begin mathsize 16px style 50 over 3 open parentheses 2 straight pi minus square root of 3 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 50 over 3 open parentheses 2 straight pi minus square root of 3 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style",
+            "correct_answer_images": [
+                "begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style",
+                "begin mathsize 16px style PT squared plus 10 squared space equals space PC squared comma space and space hence space space PT equals square root of 400 space minus space 100 end root equals square root of 300 equals 10 square root of 3 end style",
+                "1 half cross times 10 square root of 3 cross times 10 cross times 2 minus fraction numerator 2 straight pi divided by 3 over denominator 2 straight pi end fraction cross times straight pi cross times 10 squared space equals space 100 square root of 3 minus 100 over 3 straight pi",
+                "100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses"
+            ],
+            "explanation": "The correct answer is\nLet the tangent touch the circle at T and S.\nThe line PT is at right angles to the radius TC.\nUsing Pythagoras:\n.\nThe angle PCT = 60° because the cosine of angle PCT = 10/20 = 1/2.\nThe required area is the area of PTCS – the area of the sector SCT, and this gives\nAnd this factorises to",
+            "explanation_images": [
+                "begin mathsize 16px style 100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses end style",
+                "begin mathsize 16px style PT squared plus 10 squared space equals space PC squared comma space and space hence space space PT equals square root of 400 space minus space 100 end root equals square root of 300 equals 10 square root of 3 end style",
+                "1 half cross times 10 square root of 3 cross times 10 cross times 2 minus fraction numerator 2 straight pi divided by 3 over denominator 2 straight pi end fraction cross times straight pi cross times 10 squared space equals space 100 square root of 3 minus 100 over 3 straight pi",
+                "100 over 3 open parentheses 3 square root of 3 minus straight pi close parentheses"
+            ],
+            "extracted_at": "2026-07-04T22:15:00.459093",
+            "options_latex": {
+                "A": "\\frac{100}{3}(3\\sqrt{3}-\\pi)",
+                "B": "\\frac{100}{3}(3\\sqrt{5}-\\pi)",
+                "C": "\\frac{50}{3}(6\\sqrt{3}-\\pi)",
+                "D": "\\frac{50}{3}(6\\sqrt{5}-\\pi)",
+                "E": "\\frac{50}{3}(\\sqrt{3}-2\\pi)",
+                "F": "\\frac{50}{3}(2\\pi-\\sqrt{3})"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q12",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 12,
+            "question_text": "How many distinct real roots does the equation have?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q12.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "4"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "0",
+                    "math_alt": [],
+                    "plain_text": "0"
+                },
+                "B": {
+                    "text": "1",
+                    "math_alt": [],
+                    "plain_text": "1"
+                },
+                "C": {
+                    "text": "2",
+                    "math_alt": [],
+                    "plain_text": "2"
+                },
+                "D": {
+                    "text": "3",
+                    "math_alt": [],
+                    "plain_text": "3"
+                },
+                "E": {
+                    "text": "4",
+                    "math_alt": [],
+                    "plain_text": "4"
+                }
+            },
+            "correct_answer": "C",
+            "correct_answer_raw": "y space equals space x to the power of 4 minus 4 x cubed plus 4 x squared minus 10",
+            "correct_answer_plain": "2.",
+            "correct_answer_images": [
+                "y space equals space x to the power of 4 minus 4 x cubed plus 4 x squared minus 10",
+                "4 x blank cubed minus 12 x squared plus 8 x space equals space 0",
+                "4 x open parentheses x squared minus 3 x plus 2 close parentheses space equals space 4 x open parentheses x minus 1 close parentheses open parentheses x minus 2 close parentheses space equals space 0"
+            ],
+            "explanation": "The answer is 2.\nTo determine how many roots the equation has, we can investigate how many times the graph of  intersects the x-axis. To help us do this we can find where the graph has turning points:\nDifferentiating to find the turning points gives:\nSolving this:\ngiving x = 0, 1, 2\nSo, the coordinates of the turning points are: (0, −10), (1, −9), (2, −10).\nFrom this, and knowing the general shapes of quartic graphs, we can deduce that the curve will intersect the x-axis at two distinct places and so the original quartic must have two distinct real roots.",
+            "explanation_images": [
+                "y space equals space x to the power of 4 minus 4 x cubed plus 4 x squared minus 10",
+                "4 x blank cubed minus 12 x squared plus 8 x space equals space 0",
+                "4 x open parentheses x squared minus 3 x plus 2 close parentheses space equals space 4 x open parentheses x minus 1 close parentheses open parentheses x minus 2 close parentheses space equals space 0"
+            ],
+            "extracted_at": "2026-07-06T08:43:26.847033",
+            "options_latex": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "4"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q13",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 13,
+            "question_text": "A box is a hollow pyramid. The base of the box is a square with sides 10 cm and all the slant edges of the box are 12 cm long.\n\n \n\n \n\n \n\nWhat is the angle made by the slant edge TP with the base PQRS ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q13.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[sin to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction]",
+                "B": "[sin to the power of negative 1 end exponent 5 over 12]",
+                "C": "[sin to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction]",
+                "D": "[cos to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction]",
+                "E": "[cos to the power of negative 1 end exponent 5 over 12]",
+                "F": "[cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[sin to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction]",
+                    "math_alt": [
+                        "sin to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[sin to the power of negative 1 end exponent 5 over 12]",
+                    "math_alt": [
+                        "sin to the power of negative 1 end exponent 5 over 12"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[sin to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction]",
+                    "math_alt": [
+                        "sin to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[cos to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction]",
+                    "math_alt": [
+                        "cos to the power of negative 1 end exponent fraction numerator 2 square root of 5 over denominator 12 end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[cos to the power of negative 1 end exponent 5 over 12]",
+                    "math_alt": [
+                        "cos to the power of negative 1 end exponent 5 over 12"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction]",
+                    "math_alt": [
+                        "cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "F",
+            "correct_answer_raw": "cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction",
+                "begin mathsize 16px style PX squared equals 5 squared plus 5 squared equals 50 end style",
+                "begin mathsize 16px style PX equals square root of 50 equals 5 square root of 2 end style",
+                "begin mathsize 16px style cos space TPX space equals space fraction numerator 5 square root of 2 over denominator 12 end fraction end style",
+                "begin mathsize 16px style TPX space equals cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction end style"
+            ],
+            "explanation": "The correct answer is\nWe need to find the angle TPX.\nDraw a perpendicular from T to X (midpoint of square PQRS), then find PX.\nUsing Pythagoras' Theorem\nso\nfrom this we see that\nand so",
+            "explanation_images": [
+                "cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction",
+                "begin mathsize 16px style PX squared equals 5 squared plus 5 squared equals 50 end style",
+                "begin mathsize 16px style PX equals square root of 50 equals 5 square root of 2 end style",
+                "begin mathsize 16px style cos space TPX space equals space fraction numerator 5 square root of 2 over denominator 12 end fraction end style",
+                "begin mathsize 16px style TPX space equals cos to the power of negative 1 end exponent fraction numerator 5 square root of 2 over denominator 12 end fraction end style"
+            ],
+            "extracted_at": "2026-07-06T08:43:43.710715",
+            "options_latex": {
+                "A": "\\sin^{-1}\\left(\\frac{2\\sqrt{5}}{12}\\right)",
+                "B": "\\sin^{-1}\\left(\\frac{5}{12}\\right)",
+                "C": "\\sin^{-1}\\left(\\frac{5\\sqrt{2}}{12}\\right)",
+                "D": "\\cos^{-1}\\left(\\frac{2\\sqrt{5}}{12}\\right)",
+                "E": "\\cos^{-1}\\left(\\frac{5}{12}\\right)",
+                "F": "\\cos^{-1}\\left(\\frac{5\\sqrt{2}}{12}\\right)"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q14",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 14,
+            "question_text": "Given that\n\n \n\n  \n\n \n\n which one of the following is true?",
+            "question_images": [
+                "7 cos space theta minus 3 tan space theta space sin space theta space equals space 1"
+            ],
+            "screenshot": "esat_screenshots/maths2/q14.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[cos space theta space equals negative 3 over 5 space space space or space space space cos space theta space equals space minus 1 half]",
+                "B": "[cos space theta space equals space minus 3 over 5 space space space or space space space cos space theta space equals space 1 half]",
+                "C": "[cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space 1 half]",
+                "D": "[cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[cos space theta space equals negative 3 over 5 space space space or space space space cos space theta space equals space minus 1 half]",
+                    "math_alt": [
+                        "cos space theta space equals negative 3 over 5 space space space or space space space cos space theta space equals space minus 1 half"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[cos space theta space equals space minus 3 over 5 space space space or space space space cos space theta space equals space 1 half]",
+                    "math_alt": [
+                        "cos space theta space equals space minus 3 over 5 space space space or space space space cos space theta space equals space 1 half"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space 1 half]",
+                    "math_alt": [
+                        "cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space 1 half"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half]",
+                    "math_alt": [
+                        "cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "D",
+            "correct_answer_raw": "cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half",
+                "7 cos space theta minus 3 tan space theta space sin space theta equals 1",
+                "tan space theta space equals fraction numerator sin space theta over denominator cos space theta end fraction",
+                "cos space theta",
+                "7 cos squared space theta minus 3 sin space theta space sin space theta space equals space cos space theta",
+                "7 cos squared space theta minus 3 sin squared space theta minus cos space theta space equals space 0",
+                "sin squared space theta plus cos squared space theta equals 1",
+                "10 cos squared space theta minus cos space theta minus 3 equals 0",
+                "open parentheses 5 cos space theta minus 3 close parentheses open parentheses 2 cos space theta plus 1 close parentheses equals 0",
+                "cos space theta space equals space 3 over 5 space space space space or space space space cos space theta space equals space minus 1 half"
+            ],
+            "explanation": "The correct answer is\nStarting with\nsubstitute :\nand then multiply through by  to give\nSimplify this to give\nThen, using , this becomes\nwhich factorises to give\nand hence",
+            "explanation_images": [
+                "cos space theta space equals space 3 over 5 space space space or space space space cos space theta space equals space minus 1 half",
+                "7 cos space theta minus 3 tan space theta space sin space theta equals 1",
+                "tan space theta space equals fraction numerator sin space theta over denominator cos space theta end fraction",
+                "cos space theta",
+                "7 cos squared space theta minus 3 sin space theta space sin space theta space equals space cos space theta",
+                "7 cos squared space theta minus 3 sin squared space theta minus cos space theta space equals space 0",
+                "sin squared space theta plus cos squared space theta equals 1",
+                "10 cos squared space theta minus cos space theta minus 3 equals 0",
+                "open parentheses 5 cos space theta minus 3 close parentheses open parentheses 2 cos space theta plus 1 close parentheses equals 0",
+                "cos space theta space equals space 3 over 5 space space space space or space space space cos space theta space equals space minus 1 half"
+            ],
+            "extracted_at": "2026-07-06T08:44:00.437462",
+            "options_latex": {
+                "A": "\\cos \\theta = -\\frac{3}{5} \\text{ or } \\cos \\theta = -\\frac{1}{2}",
+                "B": "\\cos \\theta = -\\frac{3}{5} \\text{ or } \\cos \\theta = \\frac{1}{2}",
+                "C": "\\cos \\theta = \\frac{3}{5} \\text{ or } \\cos \\theta = \\frac{1}{2}",
+                "D": "\\cos \\theta = \\frac{3}{5} \\text{ or } \\cos \\theta = -\\frac{1}{2}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q15",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 15,
+            "question_text": "The variables x and y and the constants a and b are real and positive. The variables x and y are related.\n\n \n\nA graph of log y against log x is drawn.\n\n \n\nFor which one of the following relationships will this graph be a straight line?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q15.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[y to the power of 6 equals a to the power of x]",
+                "B": "[y equals a b to the power of x]",
+                "C": "[y squared equals a plus x to the power of b]",
+                "D": "[y equals a x to the power of b]",
+                "E": "[y to the power of x equals a to the power of b]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[y to the power of 6 equals a to the power of x]",
+                    "math_alt": [
+                        "y to the power of 6 equals a to the power of x"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[y equals a b to the power of x]",
+                    "math_alt": [
+                        "y equals a b to the power of x"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[y squared equals a plus x to the power of b]",
+                    "math_alt": [
+                        "y squared equals a plus x to the power of b"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[y equals a x to the power of b]",
+                    "math_alt": [
+                        "y equals a x to the power of b"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[y to the power of x equals a to the power of b]",
+                    "math_alt": [
+                        "y to the power of x equals a to the power of b"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "D",
+            "correct_answer_raw": "y equals a x blank to the power of b",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "y equals a x blank to the power of b",
+                "y space equals space log space a space plus space b log space x"
+            ],
+            "explanation": "The answer is\nWe can see this by taking logs of the equation and comparing it with the standard equation of a line, y = mx + c\nTaking logs of both sides of the answer gives:\nComparing with y = mx + c, we can see that plotting log y the y-axis and log x the x-axis would give us a straight line with a gradient of b and a y-intercept of log a\nNote that none of the other options, on taking logs, would give an expression involving constants and log x and log y",
+            "explanation_images": [
+                "y equals a x blank to the power of b",
+                "y space equals space log space a space plus space b log space x"
+            ],
+            "extracted_at": "2026-07-06T08:44:17.222562",
+            "options_latex": {
+                "C": "y^2 = a + x^b",
+                "A": "[y to the power of 6 equals a to the power of x]",
+                "B": "[y equals a b to the power of x]",
+                "D": "[y equals a x to the power of b]",
+                "E": "[y to the power of x equals a to the power of b]"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q16",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 16,
+            "question_text": "Given that\n\n \n\n \n\nwhat is the coefficient of x3 in  ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q16.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "240",
+                "B": "4320",
+                "C": "4860",
+                "D": "12960",
+                "E": "19440"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "240",
+                    "math_alt": [],
+                    "plain_text": "240"
+                },
+                "B": {
+                    "text": "4320",
+                    "math_alt": [],
+                    "plain_text": "4320"
+                },
+                "C": {
+                    "text": "4860",
+                    "math_alt": [],
+                    "plain_text": "4860"
+                },
+                "D": {
+                    "text": "12960",
+                    "math_alt": [],
+                    "plain_text": "12960"
+                },
+                "E": {
+                    "text": "19440",
+                    "math_alt": [],
+                    "plain_text": "19440"
+                }
+            },
+            "correct_answer": "E",
+            "correct_answer_raw": "open parentheses 2 plus 3 x close parentheses to the power of 6 space equals space",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "open parentheses 2 plus 3 x close parentheses to the power of 6 space equals space",
+                "left parenthesis 2 to the power of 6 left parenthesis 3 x right parenthesis to the power of 0 plus 6 cross times 2 to the power of 5 cross times left parenthesis 3 x right parenthesis to the power of 1 plus 15 cross times 2 to the power of 4 cross times left parenthesis 3 x right parenthesis squared plus 20 cross times 2 cubed cross times left parenthesis 3 x right parenthesis cubed plus 15 cross times 2 squared cross times left parenthesis 3 x right parenthesis to the power of 4 plus 6 cross times 2 to the power of 1 cross times left parenthesis 3 x right parenthesis to the power of 5 plus 2 to the power of 0 cross times left parenthesis 3 x right parenthesis to the power of 6 space right parenthesis",
+                "fraction numerator straight d over denominator straight d x end fraction open square brackets 15 cross times 2 squared cross times open parentheses 3 x close parentheses to the power of 4 close square brackets",
+                "equals space fraction numerator straight d over denominator straight d x end fraction open square brackets 15 cross times 4 cross times 3 to the power of 4 cross times x to the power of 4 close square brackets",
+                "equals space fraction numerator straight d over denominator straight d x end fraction open square brackets 4860 x to the power of 4 close square brackets",
+                "equals space 4860 cross times 4 x cubed",
+                "equals space 19440 x cubed"
+            ],
+            "explanation": "The correct answer is 19440\nThis question can be tackled by use of the binomial expansion followed by differentiation or by differentiation followed by use of the binomial expansion.\nLet’s look at use of the binomial expansion followed by differentiation:\nWe only need to consider the term in x4 as this is the term that will differentiate to x3.",
+            "explanation_images": [
+                "open parentheses 2 plus 3 x close parentheses to the power of 6 space equals space",
+                "left parenthesis 2 to the power of 6 left parenthesis 3 x right parenthesis to the power of 0 plus 6 cross times 2 to the power of 5 cross times left parenthesis 3 x right parenthesis to the power of 1 plus 15 cross times 2 to the power of 4 cross times left parenthesis 3 x right parenthesis squared plus 20 cross times 2 cubed cross times left parenthesis 3 x right parenthesis cubed plus 15 cross times 2 squared cross times left parenthesis 3 x right parenthesis to the power of 4 plus 6 cross times 2 to the power of 1 cross times left parenthesis 3 x right parenthesis to the power of 5 plus 2 to the power of 0 cross times left parenthesis 3 x right parenthesis to the power of 6 space right parenthesis",
+                "fraction numerator straight d over denominator straight d x end fraction open square brackets 15 cross times 2 squared cross times open parentheses 3 x close parentheses to the power of 4 close square brackets",
+                "equals space fraction numerator straight d over denominator straight d x end fraction open square brackets 15 cross times 4 cross times 3 to the power of 4 cross times x to the power of 4 close square brackets",
+                "equals space fraction numerator straight d over denominator straight d x end fraction open square brackets 4860 x to the power of 4 close square brackets",
+                "equals space 4860 cross times 4 x cubed",
+                "equals space 19440 x cubed"
+            ],
+            "extracted_at": "2026-07-06T08:44:34.099788",
+            "options_latex": {
+                "A": "240",
+                "B": "4320",
+                "C": "4860",
+                "D": "12960",
+                "E": "19440"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q17",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 17,
+            "question_text": "What is the smallest possible value of as a varies?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q17.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style 1 over 12 end style]",
+                "B": "[begin mathsize 16px style 1 third end style]",
+                "C": "[begin mathsize 16px style 1 half end style]",
+                "D": "[begin mathsize 16px style 7 over 12 end style]",
+                "E": "2"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style 1 over 12 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 1 over 12 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 1 third end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 1 third end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 7 over 12 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 7 over 12 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "2",
+                    "math_alt": [],
+                    "plain_text": "2"
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "begin mathsize 16px style 1 over 12 end style",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "begin mathsize 16px style 1 over 12 end style",
+                "open square brackets x cubed over 3 minus a x squared plus a squared x close square brackets subscript space 0 end subscript superscript space 1 end superscript",
+                "open square brackets open parentheses x minus a close parentheses cubed over 3 space close square brackets subscript space 0 end subscript superscript space 1 end superscript",
+                "a squared minus a plus 1 third",
+                "open parentheses a minus 1 half close parentheses squared plus 1 over 12",
+                "begin mathsize 16px style 1 over 12 end style"
+            ],
+            "explanation": "The answer is\nFirst we find what the value of the integral is in terms of a:\nWe start by multiplying out the bracket in the integral and then we integrate term by term to get\nOr we could integrate directly to get\nWe then substitute limits 0 and 1 to get the value of the integral in terms of a:\nAnd then to find the smallest value of this expression we complete the square\nwhich tells us that the minimum value as a varies is",
+            "explanation_images": [
+                "begin mathsize 16px style 1 over 12 end style",
+                "open square brackets x cubed over 3 minus a x squared plus a squared x close square brackets subscript space 0 end subscript superscript space 1 end superscript",
+                "open square brackets open parentheses x minus a close parentheses cubed over 3 space close square brackets subscript space 0 end subscript superscript space 1 end superscript",
+                "a squared minus a plus 1 third",
+                "open parentheses a minus 1 half close parentheses squared plus 1 over 12",
+                "begin mathsize 16px style 1 over 12 end style"
+            ],
+            "extracted_at": "2026-07-06T08:44:50.972583",
+            "options_latex": {
+                "A": "\\frac{1}{12}",
+                "B": "\\frac{1}{3}",
+                "C": "\\frac{1}{2}",
+                "D": "\\frac{7}{12}",
+                "E": "2"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q18",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 18,
+            "question_text": "A group of five numbers are such that:\n\n \n\n   • their mean is 0\n\n \n\n   • their range is 20\n\nWhat is the largest possible median of the five numbers?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q18.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "0",
+                "B": "4",
+                "C": "[begin mathsize 16px style 4 1 half end style]",
+                "D": "[begin mathsize 16px style 6 1 half end style]",
+                "E": "8",
+                "F": "20"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "0",
+                    "math_alt": [],
+                    "plain_text": "0"
+                },
+                "B": {
+                    "text": "4",
+                    "math_alt": [],
+                    "plain_text": "4"
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 4 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 4 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 6 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 6 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "8",
+                    "math_alt": [],
+                    "plain_text": "8"
+                },
+                "F": {
+                    "text": "20",
+                    "math_alt": [],
+                    "plain_text": "20"
+                }
+            },
+            "correct_answer": "E",
+            "correct_answer_raw": "20 space greater or equal than space a space greater or equal than space b space greater or equal than space c space greater or equal than space 0",
+            "correct_answer_plain": "8.",
+            "correct_answer_images": [
+                "20 space greater or equal than space a space greater or equal than space b space greater or equal than space c space greater or equal than space 0",
+                "5 u minus left parenthesis 20 plus a plus b plus c right parenthesis space equals space 0",
+                "u equals 4 plus 1 fifth open parentheses a plus b plus c close parentheses",
+                "u minus b equals 4 plus 1 fifth open parentheses a minus 4 b plus c close parentheses",
+                "b greater or equal than c",
+                "b minus c greater or equal than 0",
+                "u minus b equals 4 minus 4 over 5 open parentheses b minus c close parentheses plus 1 fifth a minus 3 over 5 c",
+                "u space equals space 4 plus 1 fifth open parentheses 20 plus 0 plus 0 close parentheses space equals space 8"
+            ],
+            "explanation": "The answer is 8.\nThe largest median will be if the middle number is as large as possible.\nIf the largest of the five numbers is u, then we will make the third number also u. Since the range is 20, the smallest number is 20 − u. To make the median u as large as possible, we want the second smallest number to be 20 − u too.\nSo the five numbers are\nu − 20, u − 20, u, u, u\nTheir sum is 5u − 40 = 0 as the mean is 0, so u = 8, which is the largest possible median.\nThus the answer is 8.\nThe first part of the argument can be justified algebraically as follows:\nLet the five numbers, in order from smallest to largest, be\nu − 20,  u − a,  u − b,  u − c,  u\nwhere . We need the sum to be 0, and wish to make u − b as large as possible.\nThe sum is , so rearranging, we obtain\nThis gives our median as\nWe know that , so we can rewrite the right-hand side in terms of    to get\nThis will be maximum when  b – c = 0 (as small as possible), a = 20 (as large as possible) and c = 0 (as small as possible).\nThis gives a = 20, b = c = 0, which gives\nand so the five numbers are indeed −12, −12, 8, 8, 8 as we justified non-algebraically at the start.",
+            "explanation_images": [
+                "20 space greater or equal than space a space greater or equal than space b space greater or equal than space c space greater or equal than space 0",
+                "5 u minus left parenthesis 20 plus a plus b plus c right parenthesis space equals space 0",
+                "u equals 4 plus 1 fifth open parentheses a plus b plus c close parentheses",
+                "u minus b equals 4 plus 1 fifth open parentheses a minus 4 b plus c close parentheses",
+                "b greater or equal than c",
+                "b minus c greater or equal than 0",
+                "u minus b equals 4 minus 4 over 5 open parentheses b minus c close parentheses plus 1 fifth a minus 3 over 5 c",
+                "u space equals space 4 plus 1 fifth open parentheses 20 plus 0 plus 0 close parentheses space equals space 8"
+            ],
+            "extracted_at": "2026-07-06T08:45:07.758415",
+            "options_latex": {
+                "C": "4\\frac{1}{2}",
+                "D": "6\\frac{1}{2}",
+                "A": "0",
+                "B": "4",
+                "E": "8",
+                "F": "20"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q19",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 19,
+            "question_text": "The straight line with equation y = mx + 3 , where m > 0, m ≠ 1, is perpendicular to the line with equation y = px + 2\n\n \n\nThe lines cut the x-axis at the points L and M respectively. The length of LM is 5 units.\n\n \n\nWhat is the value of m + p given that m > 1 ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q19.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style negative 8 over 3 end style]",
+                "B": "[begin mathsize 16px style negative 13 over 6 end style]",
+                "C": "[begin mathsize 16px style negative 5 over 6 end style]",
+                "D": "[begin mathsize 16px style 5 over 6 end style]",
+                "E": "[begin mathsize 16px style 13 over 6 end style]",
+                "F": "[begin mathsize 16px style 8 over 3 end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style negative 8 over 3 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style negative 8 over 3 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style negative 13 over 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style negative 13 over 6 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style negative 5 over 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style negative 5 over 6 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 5 over 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 5 over 6 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style 13 over 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 13 over 6 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[begin mathsize 16px style 8 over 3 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 8 over 3 end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "D",
+            "correct_answer_raw": "begin mathsize 16px style 5 over 6 end style",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "begin mathsize 16px style 5 over 6 end style",
+                "m p equals negative 1",
+                "space p equals negative 1 over m",
+                "m x plus 3 equals 0",
+                "x equals negative 3 over m",
+                "space p x plus 2 equals 0",
+                "x equals negative 2 over p",
+                "space p equals negative 1 over m",
+                "x equals 2 m",
+                "2 m plus 3 over m equals 5",
+                "2 m squared space minus space 5 m space plus 3 equals 0",
+                "open parentheses 2 m minus 3 close parentheses open parentheses m minus 1 close parentheses equals 0 comma space m space equals 3 over 2 space or space space 1",
+                "m not equal to 1",
+                "m equals 3 over 2",
+                "p space equals space minus 2 over 3",
+                "m plus p equals 3 over 2 minus 2 over 3 equals 5 over 6"
+            ],
+            "explanation": "The correct answer is\nAs the lines are perpendicular then the product of the gradients is –1.\nThis gives   and so\nThe lines intersect the x-axis at L and M (when y = 0) so:\ngiving\ngiving  but as  we get\nAs the distance between these points equals 5 then\nRearranging this [multiply through by m ]:\nThis factorises to\nAs   then  giving\nAnd so",
+            "explanation_images": [
+                "begin mathsize 16px style 5 over 6 end style",
+                "m p equals negative 1",
+                "space p equals negative 1 over m",
+                "m x plus 3 equals 0",
+                "x equals negative 3 over m",
+                "space p x plus 2 equals 0",
+                "x equals negative 2 over p",
+                "space p equals negative 1 over m",
+                "x equals 2 m",
+                "2 m plus 3 over m equals 5",
+                "2 m squared space minus space 5 m space plus 3 equals 0",
+                "open parentheses 2 m minus 3 close parentheses open parentheses m minus 1 close parentheses equals 0 comma space m space equals 3 over 2 space or space space 1",
+                "m not equal to 1",
+                "m equals 3 over 2",
+                "p space equals space minus 2 over 3",
+                "m plus p equals 3 over 2 minus 2 over 3 equals 5 over 6"
+            ],
+            "extracted_at": "2026-07-06T08:45:24.701687",
+            "options_latex": {
+                "A": "-\\frac{8}{3}",
+                "B": "-\\frac{13}{6}",
+                "C": "-\\frac{5}{6}",
+                "D": "\\frac{5}{6}",
+                "E": "\\frac{13}{6}",
+                "F": "\\frac{8}{3}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q20",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 20,
+            "question_text": "For what values of the non-zero real number a does the quadratic equation\n\n \n\n   a x 2 + (a – 2) x = 2\n\n \n\nhave distinct real roots?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q20.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "all values of a",
+                "B": "a = – 2",
+                "C": "a > – 2",
+                "D": "a ≠ – 2",
+                "E": "no values of a"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "all values of a",
+                    "math_alt": [],
+                    "plain_text": "all values of a"
+                },
+                "B": {
+                    "text": "a = – 2",
+                    "math_alt": [],
+                    "plain_text": "a = – 2"
+                },
+                "C": {
+                    "text": "a > – 2",
+                    "math_alt": [],
+                    "plain_text": "a > – 2"
+                },
+                "D": {
+                    "text": "a ≠ – 2",
+                    "math_alt": [],
+                    "plain_text": "a ≠ – 2"
+                },
+                "E": {
+                    "text": "no values of a",
+                    "math_alt": [],
+                    "plain_text": "no values of a"
+                }
+            },
+            "correct_answer": "B",
+            "correct_answer_raw": "open parentheses a minus 2 close parentheses squared greater than 4 a open parentheses negative 2 close parentheses",
+            "correct_answer_plain": "a ≠ – 2",
+            "correct_answer_images": [
+                "open parentheses a minus 2 close parentheses squared greater than 4 a open parentheses negative 2 close parentheses",
+                "open parentheses a minus 2 close parentheses squared minus 4 a open parentheses negative 2 close parentheses greater than 0",
+                "a squared plus 4 a plus 4 greater than 0",
+                "open parentheses a plus 2 close parentheses squared greater than 0"
+            ],
+            "explanation": "The answer is a ≠ – 2\nFor real distinct roots the discriminant condition gives:\nor\nhence\nand factorising\nand this is true for all values of a except – 2",
+            "explanation_images": [
+                "open parentheses a minus 2 close parentheses squared greater than 4 a open parentheses negative 2 close parentheses",
+                "open parentheses a minus 2 close parentheses squared minus 4 a open parentheses negative 2 close parentheses greater than 0",
+                "a squared plus 4 a plus 4 greater than 0",
+                "open parentheses a plus 2 close parentheses squared greater than 0"
+            ],
+            "extracted_at": "2026-07-06T08:45:41.435350",
+            "options_latex": {
+                "A": "all values of a",
+                "B": "a = – 2",
+                "C": "a > – 2",
+                "D": "a ≠ – 2",
+                "E": "no values of a"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q21",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 21,
+            "question_text": "A triangle is to be drawn with sides that are integer lengths in centimetres, and a total perimeter of 12 cm.\n\n \n\nHow many different (non-congruent) triangles can be drawn?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q21.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "10",
+                "E": "12"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "1",
+                    "math_alt": [],
+                    "plain_text": "1"
+                },
+                "B": {
+                    "text": "2",
+                    "math_alt": [],
+                    "plain_text": "2"
+                },
+                "C": {
+                    "text": "3",
+                    "math_alt": [],
+                    "plain_text": "3"
+                },
+                "D": {
+                    "text": "10",
+                    "math_alt": [],
+                    "plain_text": "10"
+                },
+                "E": {
+                    "text": "12",
+                    "math_alt": [],
+                    "plain_text": "12"
+                }
+            },
+            "correct_answer": "C",
+            "correct_answer_raw": "3",
+            "correct_answer_plain": "3",
+            "correct_answer_images": [],
+            "explanation": "The correct answer is 3.\nIf the three (integer) sides are equal, there is the 4-4-4 (equilateral) triangle.\nIf the largest side is 5 cm, then we have two essentially different (non-congruent) triangles possible:\na (right-angled) 3-4-5 triangle (noting that the order of sides is unimportant);\nand a 2-5-5 (isosceles) triangle.\nNote that in every other combination of whole numbers [adding to 12], the largest number is not exceeded by the sum of the other two numbers and so cannot be the lengths of sides of a triangle: if you imagine constructing the 'triangle' by drawing the long side first and then the shorter sides, one at each end of longest one, then the shorter sides would not meet. So there cannot be a triangle with a side greater than or equal to 6.",
+            "explanation_images": [],
+            "extracted_at": "2026-07-06T08:45:58.035575",
+            "options_latex": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "10",
+                "E": "12"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q22",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 22,
+            "question_text": "Find the complete set of values of x for which",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q22.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[x less than 0 comma space space space space x greater than 4]",
+                "B": "[0 less than x less than 4]",
+                "C": "[0 less than x less than 1 comma space space space space x less than 4]",
+                "D": "[x less than 0 comma space space space space 1 less than x less than 4]",
+                "E": "[x less than 1 comma space space space space x greater than 4]",
+                "F": "[1 less than x less than 4]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[x less than 0 comma space space space space x greater than 4]",
+                    "math_alt": [
+                        "x less than 0 comma space space space space x greater than 4"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[0 less than x less than 4]",
+                    "math_alt": [
+                        "0 less than x less than 4"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[0 less than x less than 1 comma space space space space x less than 4]",
+                    "math_alt": [
+                        "0 less than x less than 1 comma space space space space x less than 4"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[x less than 0 comma space space space space 1 less than x less than 4]",
+                    "math_alt": [
+                        "x less than 0 comma space space space space 1 less than x less than 4"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[x less than 1 comma space space space space x greater than 4]",
+                    "math_alt": [
+                        "x less than 1 comma space space space space x greater than 4"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[1 less than x less than 4]",
+                    "math_alt": [
+                        "1 less than x less than 4"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "x less than 0 comma space space space space x greater than 4",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "x less than 0 comma space space space space x greater than 4",
+                "x cubed minus 6 x squared plus 9 x minus 4 space equals space left parenthesis x minus 1 right parenthesis left parenthesis x squared minus 5 x plus 4 right parenthesis space equals space left parenthesis x minus 1 right parenthesis left parenthesis x minus 1 right parenthesis left parenthesis x minus 4 right parenthesis",
+                "fraction numerator left parenthesis x minus 1 right parenthesis squared left parenthesis x minus 4 right parenthesis over denominator x end fraction",
+                "open parentheses x minus 1 close parentheses squared",
+                "fraction numerator left parenthesis x minus 1 right parenthesis squared left parenthesis x minus 4 right parenthesis over denominator x end fraction",
+                "fraction numerator x minus 4 over denominator x end fraction",
+                "fraction numerator left parenthesis x minus 4 right parenthesis over denominator x end fraction greater than 0",
+                "fraction numerator left parenthesis x minus 4 right parenthesis over denominator x end fraction"
+            ],
+            "explanation": "The correct answer is\nFactorise, using factor theorem; for example, by spotting 1 as a root:\nWe need to find what values of x make the expression greater than 0\nTo do this, we consider the sign of\nWe note that  is positive or zero for all values of x\nAnd we also note that  is 0 when x = 1 and undefined when x = 0\nSo we need only consider the sign of   and we require   and x ≠ 0, 1\nWe notice that  is positive when x > 4 and when x < 0\nSo the answer is x < 0,   x > 4",
+            "explanation_images": [
+                "x less than 0 comma space space space space x greater than 4",
+                "x cubed minus 6 x squared plus 9 x minus 4 space equals space left parenthesis x minus 1 right parenthesis left parenthesis x squared minus 5 x plus 4 right parenthesis space equals space left parenthesis x minus 1 right parenthesis left parenthesis x minus 1 right parenthesis left parenthesis x minus 4 right parenthesis",
+                "fraction numerator left parenthesis x minus 1 right parenthesis squared left parenthesis x minus 4 right parenthesis over denominator x end fraction",
+                "open parentheses x minus 1 close parentheses squared",
+                "fraction numerator left parenthesis x minus 1 right parenthesis squared left parenthesis x minus 4 right parenthesis over denominator x end fraction",
+                "fraction numerator x minus 4 over denominator x end fraction",
+                "fraction numerator left parenthesis x minus 4 right parenthesis over denominator x end fraction greater than 0",
+                "fraction numerator left parenthesis x minus 4 right parenthesis over denominator x end fraction"
+            ],
+            "extracted_at": "2026-07-06T08:46:14.856462",
+            "options_latex": {
+                "A": "x < 0, x > 4",
+                "C": "0 < x < 1, x < 4",
+                "D": "x < 0, 1 < x < 4",
+                "E": "x < 1, x > 4",
+                "B": "[0 less than x less than 4]",
+                "F": "[1 less than x less than 4]"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q23",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 23,
+            "question_text": "The triangle PQR has a right angle at R.\n\n \n\nThe length of PQ is 4 cm, correct to the nearest centimetre.\n\n \n\nThe length of PR is 2 cm, correct to the nearest centimetre.\n\n \n\nWhat is the greatest lower bound, in centimetres, of the length of QR?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q23.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style square root of 6 minus 1 half end style]",
+                "B": "[begin mathsize 16px style 2 square root of 3 minus 1 half end style]",
+                "C": "[begin mathsize 16px style 2 square root of 5 minus 1 half end style]",
+                "D": "[begin mathsize 16px style 2 square root of 5 end style]",
+                "E": "[begin mathsize 16px style 2 square root of 3 end style]",
+                "F": "[begin mathsize 16px style square root of 6 end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style square root of 6 minus 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style square root of 6 minus 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 2 square root of 3 minus 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 square root of 3 minus 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 2 square root of 5 minus 1 half end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 square root of 5 minus 1 half end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 2 square root of 5 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 square root of 5 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style 2 square root of 3 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 square root of 3 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[begin mathsize 16px style square root of 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style square root of 6 end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "A",
+            "correct_answer_raw": "begin mathsize 16px style square root of 6 end style",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "begin mathsize 16px style square root of 6 end style",
+                "begin mathsize 16px style QR equals square root of 6 end style"
+            ],
+            "explanation": "The correct answer is\nSince lengths are given to the nearest cm, the lower bound of the length of PQ and the upper bound of the length of PR are 3.5 and 2.5 respectively.\nUse these values in Pythagoras' Theorem: QR2 = 3.52 – 2.52 = 12.25 – 6.25 = 6\nTake square root:",
+            "explanation_images": [
+                "begin mathsize 16px style square root of 6 end style",
+                "begin mathsize 16px style QR equals square root of 6 end style"
+            ],
+            "extracted_at": "2026-07-06T08:46:31.599376",
+            "options_latex": {
+                "A": "\\sqrt{6} - \\frac{1}{2}",
+                "B": "2\\sqrt{3} - \\frac{1}{2}",
+                "C": "2\\sqrt{5} - \\frac{1}{2}",
+                "D": "2\\sqrt{5}",
+                "E": "2\\sqrt{3}",
+                "F": "\\sqrt{6}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q24",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 24,
+            "question_text": "A bag contains only x red balls, y blue balls and z yellow balls.\n\nOne ball is taken out at random; this ball is then placed back in the bag. Then once again, a ball is taken out at random from the bag.\n\n \n\nIf the balls are identical in all respects except colour and are well mixed, what is the probability that the first ball was red and the second blue?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q24.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses end fraction]",
+                "B": "[fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses squared end fraction]",
+                "C": "[fraction numerator x y over denominator open parentheses y plus z close parentheses open parentheses x plus z close parentheses end fraction]",
+                "D": "[fraction numerator x y over denominator open parentheses x plus y plus z close parentheses open parentheses x plus z close parentheses end fraction]",
+                "E": "[fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses end fraction]",
+                    "math_alt": [
+                        "fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses squared end fraction]",
+                    "math_alt": [
+                        "fraction numerator open parentheses x plus y close parentheses over denominator open parentheses x plus y plus z close parentheses squared end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[fraction numerator x y over denominator open parentheses y plus z close parentheses open parentheses x plus z close parentheses end fraction]",
+                    "math_alt": [
+                        "fraction numerator x y over denominator open parentheses y plus z close parentheses open parentheses x plus z close parentheses end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[fraction numerator x y over denominator open parentheses x plus y plus z close parentheses open parentheses x plus z close parentheses end fraction]",
+                    "math_alt": [
+                        "fraction numerator x y over denominator open parentheses x plus y plus z close parentheses open parentheses x plus z close parentheses end fraction"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction]",
+                    "math_alt": [
+                        "fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "E",
+            "correct_answer_raw": "fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction",
+                "fraction numerator x over denominator x plus y plus z end fraction",
+                "fraction numerator y over denominator x plus y plus z end fraction",
+                "fraction numerator x over denominator x plus y plus z end fraction cross times fraction numerator y over denominator x plus y plus z end fraction space equals space fraction numerator x y over denominator left parenthesis x plus y plus z right parenthesis squared end fraction"
+            ],
+            "explanation": "The answer is\nThe probability that the first ball is red is\nThe probability that the second ball is blue is\nThe probability that the first ball is red and the second is blue is given by:",
+            "explanation_images": [
+                "fraction numerator x y over denominator open parentheses x plus y plus z close parentheses squared end fraction",
+                "fraction numerator x over denominator x plus y plus z end fraction",
+                "fraction numerator y over denominator x plus y plus z end fraction",
+                "fraction numerator x over denominator x plus y plus z end fraction cross times fraction numerator y over denominator x plus y plus z end fraction space equals space fraction numerator x y over denominator left parenthesis x plus y plus z right parenthesis squared end fraction"
+            ],
+            "extracted_at": "2026-07-06T08:46:48.358378",
+            "options_latex": {
+                "A": "\\frac{(x+y)}{(x+y+z)}",
+                "B": "\\frac{(x+y)}{(x+y+z)^2}",
+                "C": "\\frac{xy}{(y+z)(x+z)}",
+                "D": "\\frac{xy}{(x+y+z)(x+z)}",
+                "E": "\\frac{xy}{(x+y+z)^2}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q25",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 25,
+            "question_text": "The angle x is measured in radians and is such that 0 ≤ x ≤ π.\n\n \n\nWhat is the total length of the interval for which both – 1 ≤ tan x ≤ 1 and sin 2x ≥ 0.5 ?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q25.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style straight pi over 12 end style]",
+                "B": "[begin mathsize 16px style straight pi over 6 end style]",
+                "C": "[begin mathsize 16px style straight pi over 4 end style]",
+                "D": "[begin mathsize 16px style straight pi over 3 end style]",
+                "E": "[begin mathsize 16px style fraction numerator 5 straight pi over denominator 12 end fraction end style]",
+                "F": "[begin mathsize 16px style straight pi over 2 end style]",
+                "G": "[begin mathsize 16px style fraction numerator 5 straight pi over denominator 6 end fraction end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style straight pi over 12 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style straight pi over 12 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style straight pi over 6 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style straight pi over 6 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style straight pi over 4 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style straight pi over 4 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style straight pi over 3 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style straight pi over 3 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[begin mathsize 16px style fraction numerator 5 straight pi over denominator 12 end fraction end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style fraction numerator 5 straight pi over denominator 12 end fraction end style"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[begin mathsize 16px style straight pi over 2 end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style straight pi over 2 end style"
+                    ],
+                    "plain_text": ""
+                },
+                "G": {
+                    "text": "[begin mathsize 16px style fraction numerator 5 straight pi over denominator 6 end fraction end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style fraction numerator 5 straight pi over denominator 6 end fraction end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "B",
+            "correct_answer_raw": "begin mathsize 16px style straight pi over 6 end style",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "begin mathsize 16px style straight pi over 6 end style",
+                "0 space less or equal than space x space less or equal than straight pi over 4",
+                "fraction numerator 3 straight pi over denominator 4 end fraction space less or equal than space x space less or equal than straight pi",
+                "straight pi over 6 space less or equal than space 2 x space less or equal than fraction numerator 5 straight pi over denominator 6 end fraction",
+                "straight pi over 12 less or equal than x less or equal than fraction numerator 5 straight pi over denominator 12 end fraction",
+                "straight pi over 12 less or equal than x less or equal than straight pi over 4",
+                "begin mathsize 16px style equals straight pi over 6 end style"
+            ],
+            "explanation": "The correct answer is\n–1 ≤ tan x ≤ –1 is satisfied when  and\nsin 2x ≥ 0.5 is satisfied when  so\nSo both are satisfied together when\nThe length of the interval",
+            "explanation_images": [
+                "begin mathsize 16px style straight pi over 6 end style",
+                "0 space less or equal than space x space less or equal than straight pi over 4",
+                "fraction numerator 3 straight pi over denominator 4 end fraction space less or equal than space x space less or equal than straight pi",
+                "straight pi over 6 space less or equal than space 2 x space less or equal than fraction numerator 5 straight pi over denominator 6 end fraction",
+                "straight pi over 12 less or equal than x less or equal than fraction numerator 5 straight pi over denominator 12 end fraction",
+                "straight pi over 12 less or equal than x less or equal than straight pi over 4",
+                "begin mathsize 16px style equals straight pi over 6 end style"
+            ],
+            "extracted_at": "2026-07-06T08:47:05.482390",
+            "options_latex": {
+                "A": "\\frac{\\pi}{12}",
+                "B": "\\frac{\\pi}{6}",
+                "C": "\\frac{\\pi}{4}",
+                "D": "\\frac{\\pi}{3}",
+                "E": "\\frac{5\\pi}{12}",
+                "F": "\\frac{\\pi}{2}",
+                "G": "\\frac{5\\pi}{6}"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q26",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 26,
+            "question_text": "The curve y = x 2 is translated by the vector and then reflected in the line y = – 1.\n\n \n\nWhich one of the following is an equation of the resulting curve?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q26.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[y equals negative 3 minus open parentheses x minus 4 close parentheses squared]",
+                "B": "[y equals negative 3 plus open parentheses x plus 4 close parentheses squared]",
+                "C": "[y equals 3 minus open parentheses x plus 4 close parentheses squared]",
+                "D": "[y equals 3 plus open parentheses x minus 4 close parentheses squared]",
+                "E": "[y equals negative 5 minus open parentheses x minus 4 close parentheses squared]",
+                "F": "[y equals negative 5 plus open parentheses x plus 4 close parentheses squared]",
+                "G": "[y equals 5 minus open parentheses x plus 4 close parentheses squared]",
+                "H": "[y equals 5 plus open parentheses x minus 4 close parentheses squared]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[y equals negative 3 minus open parentheses x minus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals negative 3 minus open parentheses x minus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[y equals negative 3 plus open parentheses x plus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals negative 3 plus open parentheses x plus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[y equals 3 minus open parentheses x plus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals 3 minus open parentheses x plus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[y equals 3 plus open parentheses x minus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals 3 plus open parentheses x minus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "E": {
+                    "text": "[y equals negative 5 minus open parentheses x minus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals negative 5 minus open parentheses x minus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "F": {
+                    "text": "[y equals negative 5 plus open parentheses x plus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals negative 5 plus open parentheses x plus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "G": {
+                    "text": "[y equals 5 minus open parentheses x plus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals 5 minus open parentheses x plus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                },
+                "H": {
+                    "text": "[y equals 5 plus open parentheses x minus 4 close parentheses squared]",
+                    "math_alt": [
+                        "y equals 5 plus open parentheses x minus 4 close parentheses squared"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "E",
+            "correct_answer_raw": "y equals negative 5 minus open parentheses x minus 4 close parentheses squared",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "y equals negative 5 minus open parentheses x minus 4 close parentheses squared",
+                "y equals negative x squared",
+                "begin mathsize 16px style open parentheses table row 4 row cell negative 5 end cell end table close parentheses end style",
+                "y plus 5 equals negative open parentheses x minus 4 close parentheses squared",
+                "y equals negative 5 minus open parentheses x minus 4 close parentheses squared"
+            ],
+            "explanation": "The correct answer is\nThe translation takes the minimum point from (0, 0) to (4, 3). The reflection flips the curve over and the minimum point becomes a maximum at (4, –5). So, the final curve is now equivalent to  translated by   and this has an equation given by:\nGiving",
+            "explanation_images": [
+                "y equals negative 5 minus open parentheses x minus 4 close parentheses squared",
+                "y equals negative x squared",
+                "begin mathsize 16px style open parentheses table row 4 row cell negative 5 end cell end table close parentheses end style",
+                "y plus 5 equals negative open parentheses x minus 4 close parentheses squared",
+                "y equals negative 5 minus open parentheses x minus 4 close parentheses squared"
+            ],
+            "extracted_at": "2026-07-06T08:47:22.303827",
+            "options_latex": {
+                "A": "y = -3 - (x - 4)^2",
+                "B": "y = -3 + (x + 4)^2",
+                "C": "y = 3 - (x + 4)^2",
+                "D": "y = 3 + (x - 4)^2",
+                "E": "y = -5 - (x - 4)^2",
+                "F": "y = -5 + (x + 4)^2",
+                "G": "y = 5 - (x + 4)^2",
+                "H": "y = 5 + (x - 4)^2"
+            }
+        },
+        {
+            "id": "ESAT-SPECIMEN-MATHS2-Q27",
+            "year": "specimen",
+            "paper": "ESAT",
+            "module": "maths2",
+            "question_number": 27,
+            "question_text": "A geometric series has first term 4 and common ratio r, where 0 < r < 1.\n\n \n\nThe first, second, and fourth terms of this geometric series form three successive terms of an arithmetic series.\n\n \n\nWhat is the sum to infinity of the geometric series?",
+            "question_images": [],
+            "screenshot": "esat_screenshots/maths2/q27.png",
+            "explanation_screenshot": "",
+            "options": {
+                "A": "[begin mathsize 16px style 1 half open parentheses square root of 5 minus 1 close parentheses end style]",
+                "B": "[begin mathsize 16px style 2 open parentheses 3 minus square root of 5 close parentheses end style]",
+                "C": "[begin mathsize 16px style 2 open parentheses 1 plus square root of 5 close parentheses end style]",
+                "D": "[begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style]"
+            },
+            "options_detailed": {
+                "A": {
+                    "text": "[begin mathsize 16px style 1 half open parentheses square root of 5 minus 1 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 1 half open parentheses square root of 5 minus 1 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "B": {
+                    "text": "[begin mathsize 16px style 2 open parentheses 3 minus square root of 5 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 open parentheses 3 minus square root of 5 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "C": {
+                    "text": "[begin mathsize 16px style 2 open parentheses 1 plus square root of 5 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 open parentheses 1 plus square root of 5 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                },
+                "D": {
+                    "text": "[begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style]",
+                    "math_alt": [
+                        "begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style"
+                    ],
+                    "plain_text": ""
+                }
+            },
+            "correct_answer": "D",
+            "correct_answer_raw": "begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style",
+            "correct_answer_plain": "",
+            "correct_answer_images": [
+                "begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style",
+                "4 r minus 4 equals 4 r cubed minus 4 r",
+                "4 open parentheses r minus 1 close parentheses equals 4 r open parentheses r squared minus 1 close parentheses",
+                "4 open parentheses r minus 1 close parentheses",
+                "r not equal to 1",
+                "1 equals r open parentheses r plus 1 close parentheses",
+                "r squared plus r minus 1 equals 0",
+                "r equals 1 half open parentheses square root of 5 minus 1 close parentheses",
+                "equals space fraction numerator a over denominator 1 minus r end fraction space equals space fraction numerator 4 over denominator 1 minus space begin display style 1 half end style open parentheses square root of 5 minus 1 close parentheses end fraction space equals space fraction numerator 8 over denominator 3 minus square root of 5 end fraction space equals space fraction numerator 8 over denominator 3 minus square root of 5 space end root end fraction space cross times fraction numerator 3 plus square root of 5 over denominator 3 plus square root of 5 end fraction space equals space fraction numerator 8 left parenthesis 3 plus square root of 5 space right parenthesis over denominator 9 minus 5 end fraction space equals space 2 open parentheses 3 plus square root of 5 close parentheses"
+            ],
+            "explanation": "The answer is\nThe first, second, and fourth terms of the GP are 4, 4r and 4r3, respectively.\nSince the terms are also in arithmetic series, the common difference is constant, so we can write:\nFactorising this:\nDividing by  since  gives:\nand simplifying this:\nSolving:\nhence we can calculate the sum to infinity and then rationalise:",
+            "explanation_images": [
+                "begin mathsize 16px style 2 open parentheses 3 plus square root of 5 close parentheses end style",
+                "4 r minus 4 equals 4 r cubed minus 4 r",
+                "4 open parentheses r minus 1 close parentheses equals 4 r open parentheses r squared minus 1 close parentheses",
+                "4 open parentheses r minus 1 close parentheses",
+                "r not equal to 1",
+                "1 equals r open parentheses r plus 1 close parentheses",
+                "r squared plus r minus 1 equals 0",
+                "r equals 1 half open parentheses square root of 5 minus 1 close parentheses",
+                "equals space fraction numerator a over denominator 1 minus r end fraction space equals space fraction numerator 4 over denominator 1 minus space begin display style 1 half end style open parentheses square root of 5 minus 1 close parentheses end fraction space equals space fraction numerator 8 over denominator 3 minus square root of 5 end fraction space equals space fraction numerator 8 over denominator 3 minus square root of 5 space end root end fraction space cross times fraction numerator 3 plus square root of 5 over denominator 3 plus square root of 5 end fraction space equals space fraction numerator 8 left parenthesis 3 plus square root of 5 space right parenthesis over denominator 9 minus 5 end fraction space equals space 2 open parentheses 3 plus square root of 5 close parentheses"
+            ],
+            "extracted_at": "2026-07-06T08:47:39.112429",
+            "options_latex": {
+                "A": "\\frac{1}{2}(\\sqrt{5} - 1)",
+                "B": "2(3 - \\sqrt{5})",
+                "C": "2(1 + \\sqrt{5})",
+                "D": "2(3 + \\sqrt{5})"
+            }
+        }
+    ],
+    "extracted_at": "2026-07-06T08:48:21.155397"
+}

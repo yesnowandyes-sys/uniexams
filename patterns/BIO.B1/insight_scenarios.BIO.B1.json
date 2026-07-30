@@ -1,0 +1,55 @@
+{
+  "topic_key": "BIO.B1",
+  "topic_name": "Cells",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is asked to evaluate the presence of the 'Insulin Gene' and 'Insulin Protein' in a 'Liver Cell' extracted from a healthy human.",
+      "key_insight": "Genomic Potential vs. Proteomic Expression. Every somatic nucleus contains the insulin gene (genomic equivalence), but only pancreas cells actually transcribe/translate it (proteomic differentiation).",
+      "discrimination_factors": [
+        "Distinguishing 'Gene' (DNA) from 'Protein' (Product).",
+        "Understanding that 'Specialized' cells lose the *ability/function* to express certain genes, not the genes themselves (mostly)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Comparing a 'Sperm Cell', 'Bacterial Cell', and 'Mature Red Blood Cell' in terms of respiration and genetic material.",
+      "key_insight": "Functional exceptions to organelle rules. RBCs have no mitochondria (anaerobic only) and no nucleus (post-transcriptional). Sperm cells have mitochondria (for motility) but haploid nucleus. Bacteria have no nucleus but have 'chromosomal' DNA and 70S ribosomes.",
+      "discrimination_factors": [
+        "Identifying RBCs as the only eukaryotes without mitochondria/nuclei.",
+        "Knowing Bacteria reproduce by binary fission (not mitosis)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating the actual size of a structure from a diagram where the ruler is in centimeters and the scale bar is in micrometers, requiring unit analysis.",
+      "key_insight": "Unit Conversion & Magnification Logic. $Magnification = Image / Real$. If $Image$ is $50,000 \\mu m$ and $Real$ is $0.5 \\mu m$, the answer is $10^5$. Students must confidently navigate the $10^{-6}$ scale of biology.",
+      "discrimination_factors": [
+        "Converting $mm \to \\mu m$.",
+        "Correctly arranging the ratio to avoid inverses (e.g., $10^{-4}$ instead of $10^4$)."
+      ],
+      "difficulty_band": "1-3"
+    },
+    {
+      "scenario_description": "Analyzing a binary fission scenario where a bacterium divides every 20 minutes. Students must determine if variation is possible or calculate population size after 24 hours.",
+      "key_insight": "Asexual Reproduction Nuance. Binary fission *can* lead to variation via mutation, despite being asexual. Population growth is exponential ($2^n$).",
+      "discrimination_factors": [
+        "Resisting the misconception that Asexual = No Variation.",
+        "Calculating $2^{72}$ (which is huge) or recognizing the pattern of doubling."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A 'Stem Cell' diagram question showing division outcomes (e.g., Symmetric vs Asymmetric division).",
+      "key_insight": "Modes of Cell Division. Stem cells can divide to produce two stem cells (expansion) or one stem + one specialized (maintenance). Cancer represents a loss of regulation, not the division type itself.",
+      "discrimination_factors": [
+        "Interpreting graphical abstracts of cell division.",
+        "Linking 'Cancer' to uncontrolled mitosis rather than a specific 'cancer cell division type'."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,50 @@
+{
+  "topic_key": "CHEM.C13",
+  "topic_name": "Carbon/Organic chemistry",
+  "module_code": "C",
+  "corpus_question_count": 25,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Given a hydrocarbon 'X' with mass spectrum data and combustion volume ratios (CO2:O2 or CO2:H2O), determine the unique structure that fits both the molecular formula constraint and a qualitative reactivity constraint (e.g., 'does not react with bromine').",
+      "key_insight": "Student must use the Degree of Unsaturation (DoU) formula implicitly. For a hydrocarbon CnHm, a ratio of H2O:CO2 = 1 indicates an alkane. A ratio < 1 indicates unsaturation or rings. Combining this with mass spec fragments (e.g., M+ peak) forces the distinction between isomers like cyclohexane vs hexene.",
+      "discrimination_factors": [
+        "DoU Calculation",
+        "Mass Spec Interpretation",
+        "Reactivity Rules (Bromine test)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A multi-step synthesis starting from a halogenoalkane involves Grignard-style addition or nitrile substitution followed by hydrolysis and oxidation. The student is asked to identify the starting material or an intermediate based on the final product's properties (e.g., 'T does not react with Na2CO3').",
+      "key_insight": "Requires reverse engineering the reaction pathway. The fact that the final product 'does not react with Na2CO3' (a carboxylic acid test) implies it is a Ketone, not a Carboxylic Acid. This means the oxidation of the secondary alcohol stopped at the ketone stage, informing the structure of the precursor.",
+      "discrimination_factors": [
+        "Reverse Synthesis",
+        "Functional Group Test Logic",
+        "Oxidation State Knowledge"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Analysis of a set of structural isomers (e.g., C5H12O). Students must calculate how many of these isomers satisfy two distinct, unrelated reaction conditions (e.g., 'forms yellow precipitate with I2/alkali' AND 'produces silver mirror upon mild oxidation').",
+      "key_insight": "This is a combinatorial classification problem. Student must enumerate all isomers mentally, categorize them by functional group location (primary/secondary/tertiary alcohol or aldehyde), and filter based on reactivity rules (e.g., only methyl ketones or CH3CH(OH)- groups give the iodoform reaction).",
+      "discrimination_factors": [
+        "Isomer Enumeration",
+        "Specific Functional Group Reactivity (Iodoform/Tollens)",
+        "Systematic Counting"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Deducing the repeating unit of an addition polymer from a complex alkene monomer with branching, or vice versa (e.g., Poly(pent-2-ene)).",
+      "key_insight": "Students often focus solely on the carbon count and miss the preserved substituents on the double bond. The repeating unit retains the side chains of the original monomer in the same relative positions (cis/trans is lost, but connectivity remains).",
+      "discrimination_factors": [
+        "Polymerization Mechanism",
+        "Structural Representation",
+        "Branching Preservation"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

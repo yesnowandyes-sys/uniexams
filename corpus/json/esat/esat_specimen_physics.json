@@ -1,0 +1,1727 @@
+{
+  "module": "physics",
+  "label": "ESAT Physics",
+  "total_questions": 27,
+  "questions": [
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q1",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 1,
+      "question_text": "Shortly after opening her parachute, a free-fall parachutist of mass 60 kg (including equipment) experiences the forces shown in the diagram.\n\n \n\n \n\n \n\nWhich line in the table gives the size and direction of the acceleration of the parachutist at this instant ?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q01.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "size of acceleration / m s⁻²: 5.0, direction of acceleration: downwards",
+        "B": "size of acceleration / m s⁻²: 10.0, direction of acceleration: downwards",
+        "C": "size of acceleration / m s⁻²: 5.0, direction of acceleration: upwards",
+        "D": "size of acceleration / m s⁻²: 10.0, direction of acceleration: upwards",
+        "E": "size of acceleration / m s⁻²: 0.0, direction of acceleration: —"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "size of acceleration / m s⁻²: 5.0, direction of acceleration: downwards",
+          "math_alt": [],
+          "plain_text": "size of acceleration / m s⁻²: 5.0, direction of acceleration: downwards"
+        },
+        "B": {
+          "text": "size of acceleration / m s⁻²: 10.0, direction of acceleration: downwards",
+          "math_alt": [],
+          "plain_text": "size of acceleration / m s⁻²: 10.0, direction of acceleration: downwards"
+        },
+        "C": {
+          "text": "size of acceleration / m s⁻²: 5.0, direction of acceleration: upwards",
+          "math_alt": [],
+          "plain_text": "size of acceleration / m s⁻²: 5.0, direction of acceleration: upwards"
+        },
+        "D": {
+          "text": "size of acceleration / m s⁻²: 10.0, direction of acceleration: upwards",
+          "math_alt": [],
+          "plain_text": "size of acceleration / m s⁻²: 10.0, direction of acceleration: upwards"
+        },
+        "E": {
+          "text": "size of acceleration / m s⁻²: 0.0, direction of acceleration: —",
+          "math_alt": [],
+          "plain_text": "size of acceleration / m s⁻²: 0.0, direction of acceleration: —"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "C",
+      "correct_answer_images": [],
+      "explanation": "The answer is C.\nThe forces on the parachutist are 600 N downwards and 900 N upwards.\nThese cause a resultant force on the parachutist of 900 N − 600 N = 300 N upwards.\nacceleration = resultant force / mass = 300 / 60 = 5.0 m s–2 upwards.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:56:04.646905"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q2",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 2,
+      "question_text": "In the 1920s scientists discovered that the universe is expanding. One consequence of this expansion is that the intense gamma-ray radiation that filled the early universe has now been shifted to the microwave region of the electromagnetic spectrum.\n\nWhich line of the table describes how the expansion of the universe has affected the frequency and wavelength of these electromagnetic waves?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q02.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "effect on frequency: decrease, effect on wavelength: decrease",
+        "B": "effect on frequency: decrease, effect on wavelength: increase",
+        "C": "effect on frequency: increase, effect on wavelength: decrease",
+        "D": "effect on frequency: increase, effect on wavelength: increase",
+        "E": "effect on frequency: no effect, effect on wavelength: decrease",
+        "F": "effect on frequency: no effect, effect on wavelength: increase"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "effect on frequency: decrease, effect on wavelength: decrease",
+          "math_alt": [],
+          "plain_text": "effect on frequency: decrease, effect on wavelength: decrease"
+        },
+        "B": {
+          "text": "effect on frequency: decrease, effect on wavelength: increase",
+          "math_alt": [],
+          "plain_text": "effect on frequency: decrease, effect on wavelength: increase"
+        },
+        "C": {
+          "text": "effect on frequency: increase, effect on wavelength: decrease",
+          "math_alt": [],
+          "plain_text": "effect on frequency: increase, effect on wavelength: decrease"
+        },
+        "D": {
+          "text": "effect on frequency: increase, effect on wavelength: increase",
+          "math_alt": [],
+          "plain_text": "effect on frequency: increase, effect on wavelength: increase"
+        },
+        "E": {
+          "text": "effect on frequency: no effect, effect on wavelength: decrease",
+          "math_alt": [],
+          "plain_text": "effect on frequency: no effect, effect on wavelength: decrease"
+        },
+        "F": {
+          "text": "effect on frequency: no effect, effect on wavelength: increase",
+          "math_alt": [],
+          "plain_text": "effect on frequency: no effect, effect on wavelength: increase"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "effect on frequency: decrease, effect on wavelength: increase",
+      "correct_answer_plain": "effect on frequency: decrease, effect on wavelength: increase",
+      "correct_answer_images": [],
+      "explanation": "Gamma rays have very high frequency and very short wavelengths. Microwaves have lower frequency and longer wavelengths. This could also be deduced from the idea of expansion. The expansion of the universe stretches the wavelengths of electromagnetic (EM) waves so wavelengths have increased with time. All EM waves travel at the speed of light so an increase in wavelength must be accompanied by a decrease in frequency because c = f l.\nTherefore the answer is B.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:56:17.473186"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q3",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 3,
+      "question_text": "The displacement–time graph shown represents a wave of wavelength 1.5 cm.\n\n \n\n   \n\n \n\nWhat is the speed of the wave?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q03.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "0.33 cm s–1",
+        "B": "0.67 cm s–1",
+        "C": "0.75 cm s–1",
+        "D": "1.33 cm s–1",
+        "E": "1.5 cm s–1",
+        "F": "3.0 cm s–1"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "0.33 cm s–1",
+          "math_alt": [],
+          "plain_text": "0.33 cm s–1"
+        },
+        "B": {
+          "text": "0.67 cm s–1",
+          "math_alt": [],
+          "plain_text": "0.67 cm s–1"
+        },
+        "C": {
+          "text": "0.75 cm s–1",
+          "math_alt": [],
+          "plain_text": "0.75 cm s–1"
+        },
+        "D": {
+          "text": "1.33 cm s–1",
+          "math_alt": [],
+          "plain_text": "1.33 cm s–1"
+        },
+        "E": {
+          "text": "1.5 cm s–1",
+          "math_alt": [],
+          "plain_text": "1.5 cm s–1"
+        },
+        "F": {
+          "text": "3.0 cm s–1",
+          "math_alt": [],
+          "plain_text": "3.0 cm s–1"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "f equals 1 over T space",
+      "correct_answer_plain": "0.75 cm s–1",
+      "correct_answer_images": [
+        "f equals 1 over T space",
+        "begin mathsize 16px style equals fraction numerator 1 over denominator 2.0 end fraction equals 0.50 space Hz end style"
+      ],
+      "explanation": "The answer is 0.75 cm s–1\nFrom the graph, period T = 2.0 s\nUsing the relationship between frequency f and period T :\nSo, using\nspeed  =  frequency  ×  wavelength\nwe get\nspeed  =  0.50  × 1.5  =  0.75 cm s–1",
+      "explanation_images": [
+        "f equals 1 over T space",
+        "begin mathsize 16px style equals fraction numerator 1 over denominator 2.0 end fraction equals 0.50 space Hz end style"
+      ],
+      "extracted_at": "2026-07-04T23:56:30.066351"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q4",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 4,
+      "question_text": "A nuclide   Pb changes by radioactive decay into the nuclide Pb.\n\nWhich combination of emissions produces this change?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q04.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "3 alpha",
+        "B": "2 alpha and 1 beta",
+        "C": "2 alpha and 2 beta",
+        "D": "1 alpha and 2 beta",
+        "E": "3 beta"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "3 alpha",
+          "math_alt": [],
+          "plain_text": "3 alpha"
+        },
+        "B": {
+          "text": "2 alpha and 1 beta",
+          "math_alt": [],
+          "plain_text": "2 alpha and 1 beta"
+        },
+        "C": {
+          "text": "2 alpha and 2 beta",
+          "math_alt": [],
+          "plain_text": "2 alpha and 2 beta"
+        },
+        "D": {
+          "text": "1 alpha and 2 beta",
+          "math_alt": [],
+          "plain_text": "1 alpha and 2 beta"
+        },
+        "E": {
+          "text": "3 beta",
+          "math_alt": [],
+          "plain_text": "3 beta"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "blank presubscript 82 presuperscript 214",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "blank presubscript 82 presuperscript 214",
+        "blank presubscript 82 presuperscript 210"
+      ],
+      "explanation": "Alpha decay involves the emission of a helium nucleus: 2 protons and 2 neutrons. The atomic number of the emitting nucleus goes down by two, and the atomic mass (nucleon number) goes down by four.\nBeta decay involves the emission of an electron from the nucleus. In this process a neutron changes into a proton; the atomic number of the emitting nucleus goes up by one, and the atomic mass remains the same.\nThe atomic mass of Pb has decreased by 4 to give Pb, so an alpha particle has been emitted. Since the atomic number has not changed, the two protons lost by alpha emission must have been replaced by the emission of two beta particles.\nThe correct answer is therefore 1 alpha and 2 beta.",
+      "explanation_images": [
+        "blank presubscript 82 presuperscript 214",
+        "blank presubscript 82 presuperscript 210"
+      ],
+      "extracted_at": "2026-07-04T23:56:42.482208",
+      "question_images_latex": [
+        "blank presubscript 82 presuperscript 214",
+        "blank presubscript 82 presuperscript 210"
+      ]
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q5",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 5,
+      "question_text": "A point mass travelling at a constant speed has a momentum of 30 N s and a kinetic energy of 150 J.\n\nWhat is the mass of the object?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q05.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "2 kg",
+        "B": "3 kg",
+        "C": "5 kg",
+        "D": "6 kg",
+        "E": "10 kg",
+        "F": "15 kg"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "2 kg",
+          "math_alt": [],
+          "plain_text": "2 kg"
+        },
+        "B": {
+          "text": "3 kg",
+          "math_alt": [],
+          "plain_text": "3 kg"
+        },
+        "C": {
+          "text": "5 kg",
+          "math_alt": [],
+          "plain_text": "5 kg"
+        },
+        "D": {
+          "text": "6 kg",
+          "math_alt": [],
+          "plain_text": "6 kg"
+        },
+        "E": {
+          "text": "10 kg",
+          "math_alt": [],
+          "plain_text": "10 kg"
+        },
+        "F": {
+          "text": "15 kg",
+          "math_alt": [],
+          "plain_text": "15 kg"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "p equals m v",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "p equals m v",
+        "v equals p over m",
+        "K E space equals space 1 half m v squared",
+        "K E space equals space 1 half p squared over m",
+        "m space equals space fraction numerator p squared over denominator 2 K E end fraction space equals space 900 over 300 space equals space 3.0 space kg",
+        "1 half m v squared space equals space 1 half space cross times space 3 space cross times space 10 squared space equals space 150 space straight J"
+      ],
+      "explanation": "Momentum p is given by:\nrearranging this gives:\nand because kinetic energy (KE) is given by:\nwe can find another expression for kinetic energy:\nThis expression for kinetic energy allows us to use the information given to calculate a value for the mass:\nand so the answer is 3 kg.\nFinally, it is good practice to verify this answer by substituting it back into the kinetic energy equation:\nwhich is as expected.",
+      "explanation_images": [
+        "p equals m v",
+        "v equals p over m",
+        "K E space equals space 1 half m v squared",
+        "K E space equals space 1 half p squared over m",
+        "m space equals space fraction numerator p squared over denominator 2 K E end fraction space equals space 900 over 300 space equals space 3.0 space kg",
+        "1 half m v squared space equals space 1 half space cross times space 3 space cross times space 10 squared space equals space 150 space straight J"
+      ],
+      "extracted_at": "2026-07-04T23:56:55.113189"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q6",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 6,
+      "question_text": "A cylindrical copper bar X of length l has a cross-sectional area A. The colder end of the bar is kept at temperature T1 and the hotter end is kept at temperature T2.\n\n \n\n \n\n \n\nThe curved surface of the bar is perfectly insulated and thermal energy is conducted from the hotter end of the bar to the colder end.\n\nChanges in l, A, T1 and T2 may alter the rate at which thermal energy is conducted along the copper bar.\n\nIn which case is the rate of conduction of thermal energy along the insulated bar the same as for bar X ?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q06.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "change in A: doubles, change in l: no change, change in T₁: no change, change in T₂: no change",
+        "B": "change in A: halves, change in l: no change, change in T₁: no change, change in T₂: no change",
+        "C": "change in A: no change, change in l: doubles, change in T₁: no change, change in T₂: no change",
+        "D": "change in A: no change, change in l: halves, change in T₁: no change, change in T₂: no change",
+        "E": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: increases by 10 °C",
+        "F": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: no change",
+        "G": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: decreases by 10 °C",
+        "H": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: increases by 10 °C"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "change in A: doubles, change in l: no change, change in T₁: no change, change in T₂: no change",
+          "math_alt": [],
+          "plain_text": "change in A: doubles, change in l: no change, change in T₁: no change, change in T₂: no change"
+        },
+        "B": {
+          "text": "change in A: halves, change in l: no change, change in T₁: no change, change in T₂: no change",
+          "math_alt": [],
+          "plain_text": "change in A: halves, change in l: no change, change in T₁: no change, change in T₂: no change"
+        },
+        "C": {
+          "text": "change in A: no change, change in l: doubles, change in T₁: no change, change in T₂: no change",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: doubles, change in T₁: no change, change in T₂: no change"
+        },
+        "D": {
+          "text": "change in A: no change, change in l: halves, change in T₁: no change, change in T₂: no change",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: halves, change in T₁: no change, change in T₂: no change"
+        },
+        "E": {
+          "text": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: increases by 10 °C",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: increases by 10 °C"
+        },
+        "F": {
+          "text": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: no change",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: no change, change in T₁: decreases by 10 °C, change in T₂: no change"
+        },
+        "G": {
+          "text": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: decreases by 10 °C",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: decreases by 10 °C"
+        },
+        "H": {
+          "text": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: increases by 10 °C",
+          "math_alt": [],
+          "plain_text": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: increases by 10 °C"
+        }
+      },
+      "correct_answer": "H",
+      "correct_answer_raw": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: increases by 10 °C",
+      "correct_answer_plain": "change in A: no change, change in l: no change, change in T₁: increases by 10 °C, change in T₂: increases by 10 °C",
+      "correct_answer_images": [],
+      "explanation": "The rate of conduction along a copper cylinder is determined by its cross-sectional area A, its length l and the temperature difference (T2 – T1) between the two ends. If we change one of these quantities, the rate of conduction will also change.\nIn case H, the temperatures of both ends of the bar increase by the same amount and so here, there is no change to the temperature difference or to either of the other quantities. As a result, the rate of conduction of thermal energy does not change and is the same as the value for bar X.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:57:08.017762"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q7",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 7,
+      "question_text": "Which of the following is a correct unit of potential difference (voltage)?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q07.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "amp per ohm",
+        "B": "coulomb per joule",
+        "C": "joule per second",
+        "D": "newton per coulomb",
+        "E": "watt per amp"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "amp per ohm",
+          "math_alt": [],
+          "plain_text": "amp per ohm"
+        },
+        "B": {
+          "text": "coulomb per joule",
+          "math_alt": [],
+          "plain_text": "coulomb per joule"
+        },
+        "C": {
+          "text": "joule per second",
+          "math_alt": [],
+          "plain_text": "joule per second"
+        },
+        "D": {
+          "text": "newton per coulomb",
+          "math_alt": [],
+          "plain_text": "newton per coulomb"
+        },
+        "E": {
+          "text": "watt per amp",
+          "math_alt": [],
+          "plain_text": "watt per amp"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "V equals I R",
+      "correct_answer_plain": "therefore watt per amp",
+      "correct_answer_images": [
+        "V equals I R",
+        "P equals V I",
+        "V equals P over I"
+      ],
+      "explanation": "We shall examine each option in turn, recalling that 1 volt is 1 joule per coulomb:\namp per ohm\nWe know ,  which tells us that volts are amp × ohm, and not amp per ohm.\ncoulomb per joule\nThe volt is defined as a joule per coulomb; so here we can deduce that \"coulomb per joule\" is the same as 1 / volt.\njoule per second\nThe joule per second is the unit of power, and the unit of power is the watt.\nnewton per coulomb\nHere it would be useful to express newtons in terms of joules: we do this by noticing that \"work done [joules] is force applied [newtons] × distance moved [metres]\" ; this gives us: joule = newton × metre, or newton is joule per metre.\nAnd so, newton per coulomb is equivalent to joule per metre per coulomb. This is not the same as joule per coulomb and so is not equivalent to volts.\nwatt per amp\nWatt is the unit of power and so we can use ;  this gives which shows us that volt is watt per amp. This is the correct option.\nThe answer is therefore watt per amp.",
+      "explanation_images": [
+        "V equals I R",
+        "P equals V I",
+        "V equals P over I"
+      ],
+      "extracted_at": "2026-07-04T23:57:20.476050"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q8",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 8,
+      "question_text": "A radioactive isotope decays to a stable product. A sample of this isotope is placed near to a radiation detector in a laboratory.\n\nA graph of count rate against time was plotted to display the data from the detector.\n\n \n\n \n\n \n\nWhat is the approximate count rate due to background radiation for this experiment?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q08.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "5 counts per minute",
+        "B": "25 counts per minute",
+        "C": "45 counts per minute",
+        "D": "50 counts per minute",
+        "E": "200 counts per minute",
+        "F": "225 counts per minute"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "5 counts per minute",
+          "math_alt": [],
+          "plain_text": "5 counts per minute"
+        },
+        "B": {
+          "text": "25 counts per minute",
+          "math_alt": [],
+          "plain_text": "25 counts per minute"
+        },
+        "C": {
+          "text": "45 counts per minute",
+          "math_alt": [],
+          "plain_text": "45 counts per minute"
+        },
+        "D": {
+          "text": "50 counts per minute",
+          "math_alt": [],
+          "plain_text": "50 counts per minute"
+        },
+        "E": {
+          "text": "200 counts per minute",
+          "math_alt": [],
+          "plain_text": "200 counts per minute"
+        },
+        "F": {
+          "text": "225 counts per minute",
+          "math_alt": [],
+          "plain_text": "225 counts per minute"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "50 counts per minute",
+      "correct_answer_images": [],
+      "explanation": "The answer is 50 counts per minute.\nThe background count per minute is taken from the part of the graph where the curve reaches a constant value, after 6 hours.\nThe graph will never reach zero counts per minute because the background count per minute from the environment will always be present.\nSince the graph levels off at 50 counts per minute, this is the approximate background radiation count rate for this experiment.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:57:32.801867"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q9",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 9,
+      "question_text": "An object of mass 5.0 kg falls from rest and hits the ground at a speed of 20 m s–1. Air resistance is negligible.\n\nFrom what height has the object fallen?\n\n \n\n(gravitational field strength = 10 N kg–1)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q09.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "10 m",
+        "B": "20 m",
+        "C": "50 m",
+        "D": "100 m",
+        "E": "200 m",
+        "F": "1000 m"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "10 m",
+          "math_alt": [],
+          "plain_text": "10 m"
+        },
+        "B": {
+          "text": "20 m",
+          "math_alt": [],
+          "plain_text": "20 m"
+        },
+        "C": {
+          "text": "50 m",
+          "math_alt": [],
+          "plain_text": "50 m"
+        },
+        "D": {
+          "text": "100 m",
+          "math_alt": [],
+          "plain_text": "100 m"
+        },
+        "E": {
+          "text": "200 m",
+          "math_alt": [],
+          "plain_text": "200 m"
+        },
+        "F": {
+          "text": "1000 m",
+          "math_alt": [],
+          "plain_text": "1000 m"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "m g h equals 1 half m v squared",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "m g h equals 1 half m v squared",
+        "h space equals space fraction numerator v squared over denominator 2 g end fraction space equals space 400 divided by 20 space equals space 20 space straight m"
+      ],
+      "explanation": "Since air resistance is negligible, all of the initial gravitational potential energy is transferred to kinetic energy so:\nRearranging this equation gives:\nSo the correct answer is 20 m.",
+      "explanation_images": [
+        "m g h equals 1 half m v squared",
+        "h space equals space fraction numerator v squared over denominator 2 g end fraction space equals space 400 divided by 20 space equals space 20 space straight m"
+      ],
+      "extracted_at": "2026-07-04T23:57:45.413108"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q10",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 10,
+      "question_text": "A cyclist and a bike have a combined mass of 100 kg. The cyclist free-wheels (rolls without pedalling) at a constant speed of 0.80 m s–1 down a slope where the cyclist descends 1.0 m for each 10 m travelled along the road, as shown in the diagram.\n\n \n\n  \n\n \n\n \n\nCalculate the loss in gravitational potential energy as the cyclist loses 100 m in vertical height, and calculate the total resistive force on the cyclist and bike.\n\n(gravitational field strength = 10 N kg–1)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q10.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √101",
+        "B": "loss of gravitational potential energy / J: 3200, resistive force / N: 3.2",
+        "C": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √99",
+        "D": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √101",
+        "E": "loss of gravitational potential energy / J: 100 000, resistive force / N: 100",
+        "F": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √99"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √101",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √101"
+        },
+        "B": {
+          "text": "loss of gravitational potential energy / J: 3200, resistive force / N: 3.2",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 3200, resistive force / N: 3.2"
+        },
+        "C": {
+          "text": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √99",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 3200, resistive force / N: 32 / √99"
+        },
+        "D": {
+          "text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √101",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √101"
+        },
+        "E": {
+          "text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 100",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 100"
+        },
+        "F": {
+          "text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √99",
+          "math_alt": [],
+          "plain_text": "loss of gravitational potential energy / J: 100 000, resistive force / N: 1000 / √99"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "E",
+      "correct_answer_images": [],
+      "explanation": "The answer is E.\nAs the cyclist loses 100 m of height, he loses gravitational potential energy\n= mgh\n= 100 × 10 × 100\n= 100 000 J\nThe cyclist is descending the slope at a constant speed, which means that all of this potential energy becomes heat as work is done on the cyclist by the resistive forces.\nTherefore, work done by resistive forces = 100 000 J\ndistance travelled along the slope whilst descending 100 m height = 100 × 10 = 1000 m\nTherefore, resistive force = work done / distance = 100 000 / 1000 = 100 N\nAlternatively, since the cyclist is moving at a constant velocity he must be in equilibrium. Therefore the drag force must be equal and opposite to the component of weight acting down the slope (mg sin θ). In this case, sin θ = 10 / 100 = 0.1 so the drag force is 0.1mg = 0.1 × 100 × 10 = 100 N.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:57:58.015730"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q11",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 11,
+      "question_text": "An electric motor is used to lift a load of 3.0 kg from rest through a height of 5.0 m in a time of 1.5 s. At the end of the lift the load is at rest again. The motor is connected to a 25 V dc supply.\n\nAssuming that the system is 100% efficient, what is the average current in the motor during the lift?\n\n(gravitational field strength = 10 N kg–1 )",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q11.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "0.40 A",
+        "B": "0.60 A",
+        "C": "0.80 A",
+        "D": "4.0 A",
+        "E": "9.0 A"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "0.40 A",
+          "math_alt": [],
+          "plain_text": "0.40 A"
+        },
+        "B": {
+          "text": "0.60 A",
+          "math_alt": [],
+          "plain_text": "0.60 A"
+        },
+        "C": {
+          "text": "0.80 A",
+          "math_alt": [],
+          "plain_text": "0.80 A"
+        },
+        "D": {
+          "text": "4.0 A",
+          "math_alt": [],
+          "plain_text": "4.0 A"
+        },
+        "E": {
+          "text": "9.0 A",
+          "math_alt": [],
+          "plain_text": "9.0 A"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "4.0 A",
+      "correct_answer_images": [],
+      "explanation": "The answer is 4.0 A.\nWork done by the motor in lifting the load through 5.0 m = mgh = 3.0 × 10 × 5.0 = 150 J\nTherefore, output power of motor = work done / time taken = 150 / 1.5 = 100 W\nMotor is 100% efficient so the electrical input power to the motor is also 100 W\nTherefore, average current in motor = power / voltage = 100 / 25 = 4.0 A\nAlternatively, since the process is 100% efficient, the power output of the motor (P = IV ) will equal the power used to lift the mass (P = mgh / t).\nEquating and rearranging we have: IV = mgh / t  so  I = mgh / Vt = (3 × 10 × 5) / (25 × 1.5) = 4.0 A",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:58:10.351040"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q12",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 12,
+      "question_text": "The total power P radiated by a star is given by:\n\n \n\n                                                                   \n\n \n\nwhere R is the radius of the star, T is its surface temperature and k is a constant.\n\nThe power currently radiated by the Sun is 4.0 × 1026 W. Towards the end of the Sun’s life, its radius will increase by a factor of a hundred and its surface temperature will decrease by a factor of two.\n\nWhat will be the power radiated by the Sun when these changes have occurred?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q12.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "2.5 × 1027 W",
+        "B": "1.0 × 1028 W",
+        "C": "2.0 × 1028 W",
+        "D": "2.5 × 1029 W",
+        "E": "1.0 × 1030 W",
+        "F": "2.0 × 1030 W",
+        "G": "2.5 × 1033 W",
+        "H": "1.0 × 1034 W"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "2.5 × 1027 W",
+          "math_alt": [],
+          "plain_text": "2.5 × 1027 W"
+        },
+        "B": {
+          "text": "1.0 × 1028 W",
+          "math_alt": [],
+          "plain_text": "1.0 × 1028 W"
+        },
+        "C": {
+          "text": "2.0 × 1028 W",
+          "math_alt": [],
+          "plain_text": "2.0 × 1028 W"
+        },
+        "D": {
+          "text": "2.5 × 1029 W",
+          "math_alt": [],
+          "plain_text": "2.5 × 1029 W"
+        },
+        "E": {
+          "text": "1.0 × 1030 W",
+          "math_alt": [],
+          "plain_text": "1.0 × 1030 W"
+        },
+        "F": {
+          "text": "2.0 × 1030 W",
+          "math_alt": [],
+          "plain_text": "2.0 × 1030 W"
+        },
+        "G": {
+          "text": "2.5 × 1033 W",
+          "math_alt": [],
+          "plain_text": "2.5 × 1033 W"
+        },
+        "H": {
+          "text": "1.0 × 1034 W",
+          "math_alt": [],
+          "plain_text": "1.0 × 1034 W"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "2.5 × 1027 W",
+      "correct_answer_plain": "2.5 × 1027 W",
+      "correct_answer_images": [],
+      "explanation": "Power is proportional to radius squared and temperature to the 4th power. Radius increases by a factor of 102. This alone would increase the power by a factor of 104. Temperature is reduced by a factor of 2. This alone would reduce the power by a factor of 24. The combined effect is to change the power by a factor of 104 ÷ 24. The total power is therefore:\n104 × 4.0 × 1026 ÷ 24  =  2.5 × 1029 W",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:58:22.863313",
+      "question_images_latex": [
+        "P space equals space k space R squared space T to the power of 4"
+      ]
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q13",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 13,
+      "question_text": "A ball is thrown vertically upwards and leaves the thrower’s hand with a speed of 12 m s–1. You may assume that all of the initial kinetic energy of the ball has been converted into gravitational potential energy when the ball reaches its highest point.\n\nWhat is the height above the thrower’s hand to which the ball rises?\n\n \n\n(gravitational field strength = 10 N kg–1)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q13.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "7.2 m",
+        "B": "14.4 m",
+        "C": "24 m",
+        "D": "60 m",
+        "E": "120 m"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "7.2 m",
+          "math_alt": [],
+          "plain_text": "7.2 m"
+        },
+        "B": {
+          "text": "14.4 m",
+          "math_alt": [],
+          "plain_text": "14.4 m"
+        },
+        "C": {
+          "text": "24 m",
+          "math_alt": [],
+          "plain_text": "24 m"
+        },
+        "D": {
+          "text": "60 m",
+          "math_alt": [],
+          "plain_text": "60 m"
+        },
+        "E": {
+          "text": "120 m",
+          "math_alt": [],
+          "plain_text": "120 m"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "equals space 1 half m v squared space equals space 1 half space cross times space m space cross times space 12 squared space space equals space 1 half space cross times space 144 space cross times space m space space equals space 72 m space",
+      "correct_answer_plain": "7.2 metres",
+      "correct_answer_images": [
+        "equals space 1 half m v squared space equals space 1 half space cross times space m space cross times space 12 squared space space equals space 1 half space cross times space 144 space cross times space m space space equals space 72 m space",
+        "space open parentheses 1 half m v squared close parentheses",
+        "m g h equals 1 half m v squared",
+        "h space equals space fraction numerator v squared over denominator 2 g end fraction space equals space"
+      ],
+      "explanation": "The answer is 7.2 metres.\nLet the mass of the ball in kg be m. (Its value is not needed to do the question.)\nkinetic energy at the point of release  joules\nAt the highest point, all of this kinetic energy has turned into gravitational potential energy.\nTherefore, at the highest point, gravitational potential energy = 72m joules\nThis is also equal to mgh, where h is the height reached.\nTherefore, 10mh = 72m. Notice that m cancels out here (as expected), leaving 10h = 72\nTherefore, height reached h = 72 / 10 = 7.2 metres\nAlternatively, since all of the initial kinetic energy  is transferred to gravitational potential energy (mgh) at the top of the motion:\nand so\n122 /20 = 7.2 metres",
+      "explanation_images": [
+        "equals space 1 half m v squared space equals space 1 half space cross times space m space cross times space 12 squared space space equals space 1 half space cross times space 144 space cross times space m space space equals space 72 m space",
+        "space open parentheses 1 half m v squared close parentheses",
+        "m g h equals 1 half m v squared",
+        "h space equals space fraction numerator v squared over denominator 2 g end fraction space equals space"
+      ],
+      "extracted_at": "2026-07-04T23:58:35.491042"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q14",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 14,
+      "question_text": "A transverse wave travelling through a medium has a frequency of 5.0 Hz, a wavelength of 4.0 cm and an amplitude of 3.0 cm.\n\nWhat is the total distance travelled by a particle of the medium in one minute?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q14.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "900 cm",
+        "B": "1200 cm",
+        "C": "1800 cm",
+        "D": "2400 cm",
+        "E": "3600 cm",
+        "F": "4800 cm"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "900 cm",
+          "math_alt": [],
+          "plain_text": "900 cm"
+        },
+        "B": {
+          "text": "1200 cm",
+          "math_alt": [],
+          "plain_text": "1200 cm"
+        },
+        "C": {
+          "text": "1800 cm",
+          "math_alt": [],
+          "plain_text": "1800 cm"
+        },
+        "D": {
+          "text": "2400 cm",
+          "math_alt": [],
+          "plain_text": "2400 cm"
+        },
+        "E": {
+          "text": "3600 cm",
+          "math_alt": [],
+          "plain_text": "3600 cm"
+        },
+        "F": {
+          "text": "4800 cm",
+          "math_alt": [],
+          "plain_text": "4800 cm"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "3600 cm",
+      "correct_answer_plain": "3600 cm",
+      "correct_answer_images": [],
+      "explanation": "The amplitude of a transverse wave is the displacement of the crest (or trough) from the rest position, so each particle of the medium travels 4 × 3.0 = 12 cm during one complete oscillation.\nFrequency is the number of complete oscillations per second, so each particle performs 5.0 oscillations in one second, and therefore 300 oscillations in one minute, travelling a total distance of 300 × 12 = 3600 cm.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:58:48.135082"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q15",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 15,
+      "question_text": "A lorry of mass m, and travelling initially at speed v along a horizontal road, is brought to rest by an average horizontal braking force F in time t.\n\nIgnoring any other resistive forces, what distance is travelled by the lorry during this time?\n\n \n\n(gravitational field strength = g)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q15.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "\\frac{F}{mg}",
+        "B": "\\frac{mgv}{F}",
+        "C": "\\frac{mv^2}{2F}",
+        "D": "\\frac{v^2}{2g}",
+        "E": "[v t]",
+        "F": "[2 v t]"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[fraction numerator F over denominator m g end fraction]",
+          "math_alt": [
+            "fraction numerator F over denominator m g end fraction"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[fraction numerator m g v over denominator F end fraction]",
+          "math_alt": [
+            "fraction numerator m g v over denominator F end fraction"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[fraction numerator m v squared over denominator 2 F end fraction]",
+          "math_alt": [
+            "fraction numerator m v squared over denominator 2 F end fraction"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[fraction numerator v squared over denominator 2 g end fraction]",
+          "math_alt": [
+            "fraction numerator v squared over denominator 2 g end fraction"
+          ],
+          "plain_text": ""
+        },
+        "E": {
+          "text": "[v t]",
+          "math_alt": [
+            "v t"
+          ],
+          "plain_text": ""
+        },
+        "F": {
+          "text": "[2 v t]",
+          "math_alt": [
+            "2 v t"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "fraction numerator m v squared over denominator 2 F end fraction",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "fraction numerator m v squared over denominator 2 F end fraction",
+        "1 half m v squared",
+        "1 half m v squared",
+        "space equals space open parentheses 1 half m v squared close parentheses divided by space F space equals space fraction numerator m v squared over denominator 2 F end fraction"
+      ],
+      "explanation": "The answer is\nThe initial kinetic energy of the lorry is given by\nAs the lorry is moving along a horizontal road, the resistive forces need to convert all this initial kinetic energy and no more. We know that the work done by the resistive force must be \"resistive force (F) × distance\", so we can write:\nF × distance  =\nand we can rearrange this to find the distance required:\ndistance",
+      "explanation_images": [
+        "fraction numerator m v squared over denominator 2 F end fraction",
+        "1 half m v squared",
+        "1 half m v squared",
+        "space equals space open parentheses 1 half m v squared close parentheses divided by space F space equals space fraction numerator m v squared over denominator 2 F end fraction"
+      ],
+      "extracted_at": "2026-07-04T23:59:00.622223"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q16",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 16,
+      "question_text": "Nuclide   is an unstable isotope which decays in two stages into nuclide Z as shown:\n\n                              \n\n \n\nWhat are the values of P and Q ?\n\n(Consider only alpha and beta decays.)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q16.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "P: N-4, Q: R+1",
+        "B": "P: N-4, Q: R-1",
+        "C": "P: N-4, Q: R-2",
+        "D": "P: N, Q: R-1",
+        "E": "P: N, Q: R-2",
+        "F": "P: N, Q: R-4"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "P: N-4, Q: R+1",
+          "math_alt": [],
+          "plain_text": "P: N-4, Q: R+1"
+        },
+        "B": {
+          "text": "P: N-4, Q: R-1",
+          "math_alt": [],
+          "plain_text": "P: N-4, Q: R-1"
+        },
+        "C": {
+          "text": "P: N-4, Q: R-2",
+          "math_alt": [],
+          "plain_text": "P: N-4, Q: R-2"
+        },
+        "D": {
+          "text": "P: N, Q: R-1",
+          "math_alt": [],
+          "plain_text": "P: N, Q: R-1"
+        },
+        "E": {
+          "text": "P: N, Q: R-2",
+          "math_alt": [],
+          "plain_text": "P: N, Q: R-2"
+        },
+        "F": {
+          "text": "P: N, Q: R-4",
+          "math_alt": [],
+          "plain_text": "P: N, Q: R-4"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "B",
+      "correct_answer_images": [],
+      "explanation": "The answer is B.\nAn alpha particle consists of two protons and two neutrons so alpha emission results in the reduction of atomic number (bottom) by 2 and the reduction of nucleon number (top) by 4.\nA beta-minus particle is an electron emitted when a neutron in the nucleus changes into a proton. This increases atomic number (bottom) by 1 but has no effect on nucleon number (since both protons and neutrons are nucleons).\nThe decay from X to Y involves the atomic number going down by 2 (from R to R − 2). This means that this stage must be alpha decay, and therefore that the mass number must drop by 4. The mass number of Y must therefore be N − 4, and this is the value of P.\nThe decay from Y to Z involves the mass number remaining the same (P in both cases). This means that this stage must be beta decay, and therefore that the atomic number of Z must be one higher than that of Y. As the atomic number of Y  is R − 2, the atomic number of Z must be (R − 2) + 1 = R − 1, and this is the value of Q.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:59:13.107827",
+      "question_images_latex": [
+        "begin mathsize 20px style straight X presubscript R presuperscript N end style",
+        "begin mathsize 22px style space straight X presubscript R presuperscript N space rightwards arrow straight Y presubscript space R minus 2 end presubscript presuperscript P space rightwards arrow space straight Z presubscript Q presuperscript P end style"
+      ]
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q17",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 17,
+      "question_text": "A pulse of frequency 100 kHz is emitted from an ultrasound scanner, and is reflected from a foetus 10 cm below the transmitter placed on the mother’s abdomen. The speed of sound within the mother’s body is 500 m s–1.\n\nHow long after its emission from the scanner does it take for the pulse to reach the receiver which is adjacent to the transmitter?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q17.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "0.20 ms",
+        "B": "0.40 ms",
+        "C": "0.50  ms",
+        "D": "0.80  ms",
+        "E": "1.0 ms"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "0.20 ms",
+          "math_alt": [],
+          "plain_text": "0.20 ms"
+        },
+        "B": {
+          "text": "0.40 ms",
+          "math_alt": [],
+          "plain_text": "0.40 ms"
+        },
+        "C": {
+          "text": "0.50  ms",
+          "math_alt": [],
+          "plain_text": "0.50  ms"
+        },
+        "D": {
+          "text": "0.80  ms",
+          "math_alt": [],
+          "plain_text": "0.80  ms"
+        },
+        "E": {
+          "text": "1.0 ms",
+          "math_alt": [],
+          "plain_text": "1.0 ms"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "0.40 ms",
+      "correct_answer_images": [],
+      "explanation": "The answer is 0.40 ms.\nThis question is simply a straightforward application of speed = distance / time, and the frequency of the pulse is irrelevant.\nThe distance travelled by pulse from transmitter to foetus and back again to receiver is given by 2 × 10 = 20 cm = 0.20 m\nTherefore, time taken = distance / speed = 0.20 / 500 = 0.0004 s = 0.40 ms",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:59:25.690406"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q18",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 18,
+      "question_text": "A cubic block has a hole through it with a square cross-section. The dimensions are shown on the diagram. The weight of the block is 30 N.\n\n \n\n \n\n \n\nWhat is the density of the material from which the block is made?\n\n(The gravitational field strength g is 10 N kg–1.)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q18.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "0.30 g cm–3",
+        "B": "0.40 g cm–3",
+        "C": "0.60 g cm–3",
+        "D": "1.2 g cm–3",
+        "E": "3.0 g cm–3",
+        "F": "4.0 g cm–3",
+        "G": "6.0 g cm–3",
+        "H": "12 g cm–3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "0.30 g cm–3",
+          "math_alt": [],
+          "plain_text": "0.30 g cm–3"
+        },
+        "B": {
+          "text": "0.40 g cm–3",
+          "math_alt": [],
+          "plain_text": "0.40 g cm–3"
+        },
+        "C": {
+          "text": "0.60 g cm–3",
+          "math_alt": [],
+          "plain_text": "0.60 g cm–3"
+        },
+        "D": {
+          "text": "1.2 g cm–3",
+          "math_alt": [],
+          "plain_text": "1.2 g cm–3"
+        },
+        "E": {
+          "text": "3.0 g cm–3",
+          "math_alt": [],
+          "plain_text": "3.0 g cm–3"
+        },
+        "F": {
+          "text": "4.0 g cm–3",
+          "math_alt": [],
+          "plain_text": "4.0 g cm–3"
+        },
+        "G": {
+          "text": "6.0 g cm–3",
+          "math_alt": [],
+          "plain_text": "6.0 g cm–3"
+        },
+        "H": {
+          "text": "12 g cm–3",
+          "math_alt": [],
+          "plain_text": "12 g cm–3"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "4.0 g cm–3",
+      "correct_answer_plain": "4.0 g cm–3",
+      "correct_answer_images": [],
+      "explanation": "The volume of material in the block =  (10 × 10 × 10) – (5.0 × 5.0 × 10)  =  1000 – 250   =  750 cm3\nThe mass of the block  =  weight of block ÷ g  =  30 ÷ 10  =  3.0 kg  =  3000 g\nDensity of material of the block  =  mass ÷ volume  =  3000 ÷ 750  =  4.0 g cm–3",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:59:38.119585"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q19",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 19,
+      "question_text": "The diagrams below show either velocity–time or distance–time graphs for four different objects, P, Q, R and S.\n\n \n\n \n\nWhich graph(s) show an object accelerating at 2.4 m s–2?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q19.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "P only",
+        "B": "Q only",
+        "C": "R only",
+        "D": "S only",
+        "E": "P and Q only",
+        "F": "Q and R only",
+        "G": "P and S only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "P only",
+          "math_alt": [],
+          "plain_text": "P only"
+        },
+        "B": {
+          "text": "Q only",
+          "math_alt": [],
+          "plain_text": "Q only"
+        },
+        "C": {
+          "text": "R only",
+          "math_alt": [],
+          "plain_text": "R only"
+        },
+        "D": {
+          "text": "S only",
+          "math_alt": [],
+          "plain_text": "S only"
+        },
+        "E": {
+          "text": "P and Q only",
+          "math_alt": [],
+          "plain_text": "P and Q only"
+        },
+        "F": {
+          "text": "Q and R only",
+          "math_alt": [],
+          "plain_text": "Q and R only"
+        },
+        "G": {
+          "text": "P and S only",
+          "math_alt": [],
+          "plain_text": "P and S only"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "Q only",
+      "correct_answer_images": [],
+      "explanation": "The answer is Q only.\nBoth graphs P and Q show an object accelerating with constant acceleration. The value of that acceleration is the gradient of the velocity–time graph.\nGraph P: Gradient = 10 / 24, which is not 2.4 m s–2. (You don’t need to evaluate 10 / 24 to see that.)\nGraph Q: Gradient = (58 − 10) / 20 = 48 / 20 = 2.4 m s–2. So graph Q is correct.\nGraphs R and S are both distance–time graphs which are straight lines, signifying constant speed.\nConstant speed means zero acceleration, and so neither of these graphs shows an acceleration of 2.4 m s–2.\nThe correct answer is therefore that only graph Q shows an acceleration of 2.4 m s–2.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-04T23:59:50.517511"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q20",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 20,
+      "question_text": "The diagram shows four solid steel balls P, Q, R and S which are of identical size.\n\nBalls P and R have shiny surfaces. Balls Q and S have dull surfaces.\n\n \n\nBalls P and Q are in a room at 20 °C. Balls R and S are in a room at 40 °C.\n\n \n\nThe temperature of each ball at a given moment in time is shown on the diagram.\n\n \n\n \n\n \n\n \n\nWhich two balls lose thermal energy by convection, and which ball emits thermal radiation at the greatest rate?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q20.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: P",
+        "B": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: Q",
+        "C": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: R",
+        "D": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: S",
+        "E": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: P",
+        "F": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: Q",
+        "G": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: R",
+        "H": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: S"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: P",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: P"
+        },
+        "B": {
+          "text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: Q",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: Q"
+        },
+        "C": {
+          "text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: R",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: R"
+        },
+        "D": {
+          "text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: S",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: S"
+        },
+        "E": {
+          "text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: P",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: P"
+        },
+        "F": {
+          "text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: Q",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: Q"
+        },
+        "G": {
+          "text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: R",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: R"
+        },
+        "H": {
+          "text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: S",
+          "math_alt": [],
+          "plain_text": "lose thermal energy by convection: R and S, greatest rate of emission of thermal radiation: S"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: S",
+      "correct_answer_plain": "lose thermal energy by convection: P and Q, greatest rate of emission of thermal radiation: S",
+      "correct_answer_images": [],
+      "explanation": "For loss of thermal energy to occur by convection, air in contact with a ball must be heated by the ball. This decreases the density of the air, causing it to rise away from the ball; cooler, more dense air moves in to take its place. For the two balls in the room at 40 °C (R and S), there is no temperature difference between either ball and the surroundings (both at 40 °C), so thermal energy will not flow into the air in contact with the ball, so there will be no convection.\nDull surfaces emit thermal radiation at a greater rate than shiny surfaces. Also, a surface at a higher temperature emits thermal radiation at a greater rate than one at a lower temperature. Ball S has a dull surface and is at a higher temperature than the other similar ball Q, so ball S emits at the greatest rate. (This does not mean that it will necessarily have a greater net loss, because it may also be absorbing radiation. The question is asking purely about emission.)\nTherefore, the correct answer is D.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:00:03.247091"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q21",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 21,
+      "question_text": "Consider the following graph, where the scales on the x-axis and y-axis are each in SI units:\n\n \n\n \n\nWhich one of the following situations could not be represented by this graph?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q21.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "The variation of the acceleration ( y-axis) of a body of mass 5.0 kg with the resultant force acting on the body (x-axis).",
+        "B": "The variation of the current ( y-axis) through a 5.0 Ω resistor with the applied voltage (x-axis).",
+        "C": "The variation of the kinetic energy ( y-axis) of a body of mass 0.4 kg with the square of its speed (x-axis).",
+        "D": "The variation of the wavelength ( y-axis) of waves with a speed of 0.2 m s–1 with their frequency (x-axis).",
+        "E": "The variation of the work done ( y-axis) by a force of 0.2 N with the distance it moves through in the direction of the force (x-axis)."
+      },
+      "options_detailed": {
+        "A": {
+          "text": "The variation of the acceleration ( y-axis) of a body of mass 5.0 kg with the resultant force acting on the body (x-axis).",
+          "math_alt": [],
+          "plain_text": "The variation of the acceleration ( y-axis) of a body of mass 5.0 kg with the resultant force acting on the body (x-axis)."
+        },
+        "B": {
+          "text": "The variation of the current ( y-axis) through a 5.0 Ω resistor with the applied voltage (x-axis).",
+          "math_alt": [],
+          "plain_text": "The variation of the current ( y-axis) through a 5.0 Ω resistor with the applied voltage (x-axis)."
+        },
+        "C": {
+          "text": "The variation of the kinetic energy ( y-axis) of a body of mass 0.4 kg with the square of its speed (x-axis).",
+          "math_alt": [],
+          "plain_text": "The variation of the kinetic energy ( y-axis) of a body of mass 0.4 kg with the square of its speed (x-axis)."
+        },
+        "D": {
+          "text": "The variation of the wavelength ( y-axis) of waves with a speed of 0.2 m s–1 with their frequency (x-axis).",
+          "math_alt": [],
+          "plain_text": "The variation of the wavelength ( y-axis) of waves with a speed of 0.2 m s–1 with their frequency (x-axis)."
+        },
+        "E": {
+          "text": "The variation of the work done ( y-axis) by a force of 0.2 N with the distance it moves through in the direction of the force (x-axis).",
+          "math_alt": [],
+          "plain_text": "The variation of the work done ( y-axis) by a force of 0.2 N with the distance it moves through in the direction of the force (x-axis)."
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "1 half m v squared",
+      "correct_answer_plain": "The variation of the wavelength ( y-axis) of waves with a speed of 0.2 m s–1 with their frequency (x-axis)",
+      "correct_answer_images": [
+        "1 half m v squared",
+        "1 half m",
+        "1 half m space"
+      ],
+      "explanation": "The answer is: The variation of the wavelength ( y-axis) of waves with a speed of 0.2 m s–1 with their frequency (x-axis).\nThis question is all about the significance of the gradient of a straight–line graph. The gradient of the graph shown is 20 / 100 = 0.20 in the units of the y-axis divided by the units of the x-axis.\nConsidering each option in turn:\nAs F = ma, and therefore a = F / m, a graph of acceleration against force will give a straight line with a gradient of 1 / m. If m = 5 kg then 1 / m = 1 / 5 = 0.2 kg–1. So here, the graphical representation is correct.\nAs V = IR, and therefore I = V / R, a graph of current against voltage will give a straight line with a gradient of 1 / R.  If R = 5 Ω then 1 / R = 1 / 5 = 0.2 Ω–1. So here, the graphical representation is correct.\nAs kinetic energy =  a graph of kinetic energy against speed squared will give a straight line with a gradient of . If m = 0.4 kg then = 0.2 kg. So here, the graphical representation is correct.\nAs v = f λ, and therefore λ = v / f , a graph would need to be plotted of wavelength against 1 / frequency to get a straight line. A graph of wavelength against frequency will not give a straight line. So here, the graphical representation is not correct.\nAs W = Fd, a graph of work done against distance moved will give a straight line with a gradient of F. If F = 0.2 N then the graphical representation is correct.",
+      "explanation_images": [
+        "1 half m v squared",
+        "1 half m",
+        "1 half m space"
+      ],
+      "extracted_at": "2026-07-05T00:00:15.771579"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q22",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 22,
+      "question_text": "The nucleus of the ion Q2+ contains x neutrons and x – 3 protons.\n\nHow many electrons does the Q2+ ion contain?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q22.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "x – 1",
+        "B": "x – 2",
+        "C": "x – 5",
+        "D": "2x – 1",
+        "E": "2x – 5"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "x – 1",
+          "math_alt": [],
+          "plain_text": "x – 1"
+        },
+        "B": {
+          "text": "x – 2",
+          "math_alt": [],
+          "plain_text": "x – 2"
+        },
+        "C": {
+          "text": "x – 5",
+          "math_alt": [],
+          "plain_text": "x – 5"
+        },
+        "D": {
+          "text": "2x – 1",
+          "math_alt": [],
+          "plain_text": "2x – 1"
+        },
+        "E": {
+          "text": "2x – 5",
+          "math_alt": [],
+          "plain_text": "2x – 5"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "x – 5.",
+      "correct_answer_images": [],
+      "explanation": "The answer is x – 5.\nFor the charge of the ion to be 2+, it must have two more protons than electrons. The number of protons is given as x – 3.\nThe number of electrons is therefore (x – 3) – 2 = x – 5",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:00:28.154108"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q23",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 23,
+      "question_text": "Two resistors with resistance R1 ohms and R2 ohms are connected in series with a battery that has a voltage V across its terminals.\n\nWhich formula gives the power dissipated by the resistor with resistance R1 ohms?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q23.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "\\frac{VR_{1}}{R_{1} + R_{2}}",
+        "B": "\\frac{V^{2}R_{1}}{R_{1} + R_{2}}",
+        "C": "\\frac{VR_{1}}{(R_{1} + R_{2})^{2}}",
+        "D": "\\frac{V^{2}R_{1}}{(R_{1} + R_{2})^{2}}",
+        "E": "\\frac{VR_{1}^{2}}{R_{1} + R_{2}}",
+        "F": "\\frac{V^{2}R_{1}^{2}}{(R_{1} + R_{2})^{2}}"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "[fraction numerator V R subscript 1 over denominator R subscript 1 space plus space R subscript 2 end fraction]",
+          "math_alt": [
+            "fraction numerator V R subscript 1 over denominator R subscript 1 space plus space R subscript 2 end fraction"
+          ],
+          "plain_text": ""
+        },
+        "B": {
+          "text": "[fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator R subscript 1 space plus space R subscript 2 end fraction]",
+          "math_alt": [
+            "fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator R subscript 1 space plus space R subscript 2 end fraction"
+          ],
+          "plain_text": ""
+        },
+        "C": {
+          "text": "[fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction]",
+          "math_alt": [
+            "fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction"
+          ],
+          "plain_text": ""
+        },
+        "D": {
+          "text": "[fraction numerator V blank to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction]",
+          "math_alt": [
+            "fraction numerator V blank to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction"
+          ],
+          "plain_text": ""
+        },
+        "E": {
+          "text": "[fraction numerator V R subscript 1 squared over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses end fraction]",
+          "math_alt": [
+            "fraction numerator V R subscript 1 squared over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses end fraction"
+          ],
+          "plain_text": ""
+        },
+        "F": {
+          "text": "[fraction numerator V to the power of space 2 end exponent R subscript 1 squared over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction]",
+          "math_alt": [
+            "fraction numerator V to the power of space 2 end exponent R subscript 1 squared over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction"
+          ],
+          "plain_text": ""
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "fraction numerator V blank to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction",
+      "correct_answer_plain": "",
+      "correct_answer_images": [
+        "fraction numerator V blank to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction",
+        "I space equals V over R subscript t o t a l end subscript",
+        "equals fraction numerator V over denominator R subscript 1 plus R subscript 2 end fraction",
+        "V space equals space I R subscript 2",
+        "equals fraction numerator V over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction space cross times space R subscript 1",
+        "equals fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction",
+        "equals fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction space cross times space fraction numerator V over denominator R subscript 1 plus R subscript 2 end fraction",
+        "equals fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses squared end fraction",
+        "fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction"
+      ],
+      "explanation": "The answer is\nTotal resistance of circuit  =  sum of separate resistances  =  R2 + R1\nCurrent in circuit is therefore\nThis current is the same in both resistors.\nVoltage across R1 is therefore\nTherefore power dissipated in R1 is P = VI\nAlternatively, a solution can be reached more quickly by considering dimensions: the power dissipated by a resistor is given by (voltage across resistor)2 / (resistance). The only option with a voltage-squared divided by a resistance is",
+      "explanation_images": [
+        "fraction numerator V blank to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction",
+        "I space equals V over R subscript t o t a l end subscript",
+        "equals fraction numerator V over denominator R subscript 1 plus R subscript 2 end fraction",
+        "V space equals space I R subscript 2",
+        "equals fraction numerator V over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction space cross times space R subscript 1",
+        "equals fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction",
+        "equals fraction numerator V R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses end fraction space cross times space fraction numerator V over denominator R subscript 1 plus R subscript 2 end fraction",
+        "equals fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 plus R subscript 2 space end subscript close parentheses squared end fraction",
+        "fraction numerator V to the power of space 2 end exponent R subscript 1 over denominator open parentheses R subscript 1 space plus space R subscript 2 space end subscript close parentheses squared end fraction"
+      ],
+      "extracted_at": "2026-07-05T00:00:40.680338"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q24",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 24,
+      "question_text": "The graph represents the motion of a vehicle during part of a journey.\n\n \n\n \n\n \n\nWhat is the best estimate of the distance travelled during the part of the journey shown?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q24.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "100.00 m",
+        "B": "107.50 m",
+        "C": "115.00 m",
+        "D": "6.00 km",
+        "E": "6.45 km",
+        "F": "6.90 km"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "100.00 m",
+          "math_alt": [],
+          "plain_text": "100.00 m"
+        },
+        "B": {
+          "text": "107.50 m",
+          "math_alt": [],
+          "plain_text": "107.50 m"
+        },
+        "C": {
+          "text": "115.00 m",
+          "math_alt": [],
+          "plain_text": "115.00 m"
+        },
+        "D": {
+          "text": "6.00 km",
+          "math_alt": [],
+          "plain_text": "6.00 km"
+        },
+        "E": {
+          "text": "6.45 km",
+          "math_alt": [],
+          "plain_text": "6.45 km"
+        },
+        "F": {
+          "text": "6.90 km",
+          "math_alt": [],
+          "plain_text": "6.90 km"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "6.00 km",
+      "correct_answer_images": [],
+      "explanation": "The answer is 6.00 km.\nThe distance travelled is the area under the graph, but you also need to match the units. The speeds on the graph are in m s–1 but the times are in minutes. For the area under the graph to represent distance in metres, the times therefore need to be converted to seconds. This can be done all in one go by multiplying by 60 at the end.\nNow consider the areas under each section of the graph.\n0–1 minutes: Area = (16 + 20) / 2 × 1 = 18 (m s–1) min\n1–4 minutes: Area = 20 × 3 = 60 (m s–1) min\n4–5 minutes: Area = (20 + 10) / 2 × 1 = 15 (m s–1) min\n5–6 minutes: Area ≈ (10 + 2) / 2 × 1 = 6 (m s–1) min\n6–7 minutes: Area ≈ (2 + 0) / 2 × 1 = 1 (m s–1) min\n(Note there are various ways of approximating the areas under the last two curved sections of the graph. For instance, another way could be to consider 5–6 minutes as being a trapezium from 10 down to 5 m s–1, effectively importing the last section into the preceding one, and then ignoring the 6–7 minute section. Each method of approximation will produce a slightly different estimate; one such method is shown. All estimates will, however, be within a reasonable range of the key).\nAdding these together, total area ≈ 18 + 60 + 15 + 6 + 1 = 100 (m s–1) min\nAt this point it is now convenient to deal with the necessary unit conversion by multiplying by 60, to give a total area ≈ 100 × 60 = 6000 m = 6.00 km.\n(Note the technique of waiting until the end to multiply by 60 both saves time and avoids dealing with large numbers along the way. It is perfectly legitimate to multiply each time by 60 before working out each individual area, but this will make the numbers more awkward to work with and will result in the question taking a lot longer to do.)",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:00:53.441907"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q25",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 25,
+      "question_text": "A sound wave is produced by a loudspeaker cone, which creates pulses of pressure by moving back and forth between two points X  and Y  as shown in the diagram.\n\n \n\n  \n\n \n\nThe distance between points X and Y is 5.0 mm and the loudspeaker produces pulses of high pressure every 0.20 milliseconds.\n\nThe following statements about the sound wave produced are made:\nWhich of these statements can be correctly deduced from the information given?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q25.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "P only",
+        "B": "S only",
+        "C": "P and Q only",
+        "D": "P and R only",
+        "E": "Q and S only",
+        "F": "R and S only",
+        "G": "P, R and S only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "P only",
+          "math_alt": [],
+          "plain_text": "P only"
+        },
+        "B": {
+          "text": "S only",
+          "math_alt": [],
+          "plain_text": "S only"
+        },
+        "C": {
+          "text": "P and Q only",
+          "math_alt": [],
+          "plain_text": "P and Q only"
+        },
+        "D": {
+          "text": "P and R only",
+          "math_alt": [],
+          "plain_text": "P and R only"
+        },
+        "E": {
+          "text": "Q and S only",
+          "math_alt": [],
+          "plain_text": "Q and S only"
+        },
+        "F": {
+          "text": "R and S only",
+          "math_alt": [],
+          "plain_text": "R and S only"
+        },
+        "G": {
+          "text": "P, R and S only",
+          "math_alt": [],
+          "plain_text": "P, R and S only"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "S only",
+      "correct_answer_images": [],
+      "explanation": "The answer is S only.\nConsider each statement in turn:\nP\nWe have no information about the wavelength of the sound waves produced, and nor do we know how far the waves travel in a given time. It is therefore not possible to deduce the speed from the information given. Statement P cannot be deduced.\nQ\nThe maximum distance of oscillation from compression to rarefaction is 5.0 mm, but the amplitude of the wave is from the equilibrium position to the maxima. The amplitude is therefore half of this (2.5 mm) and statement Q is incorrect.\nR\nWe cannot deduce the wavelength from the information given, and hence cannot deduce statement R.\nS\nThe period of the pulses produced is 0.2 ms = 0.0002 s. This means the frequency of the wave is 1 / period = 1 / 0.0002 = 5000 Hz. Statement S therefore can be correctly deduced from the information given.\nThe correct answer is that statement S only can be correctly deduced.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:01:06.173927"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q26",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 26,
+      "question_text": "The diagram shows a truck on a section of a roller coaster ride.\n\n \n\n \n\n \n\nThe truck is launched from position P as shown, and moves along frictionless rails towards position Q.\n\nThe values of the Earth’s gravitational field strength and the initial speed of the truck are known.\n\nWhich single additional piece of information is needed to be able to calculate the speed of the truck at Q?\n\n(Assume air resistance is negligible and the truck has no internal power source.)",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q26.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "mass of the truck",
+        "B": "distance x",
+        "C": "distance y",
+        "D": "distance z",
+        "E": "distance from P to Q along the rails",
+        "F": "straight line distance from P to Q"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "mass of the truck",
+          "math_alt": [],
+          "plain_text": "mass of the truck"
+        },
+        "B": {
+          "text": "distance x",
+          "math_alt": [],
+          "plain_text": "distance x"
+        },
+        "C": {
+          "text": "distance y",
+          "math_alt": [],
+          "plain_text": "distance y"
+        },
+        "D": {
+          "text": "distance z",
+          "math_alt": [],
+          "plain_text": "distance z"
+        },
+        "E": {
+          "text": "distance from P to Q along the rails",
+          "math_alt": [],
+          "plain_text": "distance from P to Q along the rails"
+        },
+        "F": {
+          "text": "straight line distance from P to Q",
+          "math_alt": [],
+          "plain_text": "straight line distance from P to Q"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "m g h equals 1 half m v squared minus 1 half m u squared",
+      "correct_answer_plain": "distance z",
+      "correct_answer_images": [
+        "m g h equals 1 half m v squared minus 1 half m u squared",
+        "g h plus 1 half u squared equals 1 half v squared"
+      ],
+      "explanation": "The answer is distance z.\nLet us assume that the truck has a mass, m and g is the gravitational field strength, v is the final velocity [that is what we want to calculate] of the truck and h is the vertical difference in height between the two positions P and Q. The truck is moving forward at the initial position P with velocity u.\nThe difference in gravitational potential energy between P and Q  = mgh\nThe gravitational potential energy lost on moving from P to Q must be equal to the kinetic energy gained [as the track is frictionless and air resistance is negligible] so if u is the initial velocity, we can write:\nThe value of mass, m, cancels, leaving h as the unknown quantity.\nSo to calculate v we need to know u, g and h. We are told in the question that we know u and g so the additional single piece of information we need is the value of h which is z in the diagram.",
+      "explanation_images": [
+        "m g h equals 1 half m v squared minus 1 half m u squared",
+        "g h plus 1 half u squared equals 1 half v squared"
+      ],
+      "extracted_at": "2026-07-05T00:01:18.580560"
+    },
+    {
+      "id": "ESAT-SPECIMEN-PHYSICS-Q27",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "physics",
+      "question_number": 27,
+      "question_text": "The radioactive isotope carbon-14 is found in living material in small quantities. There are approximately 1000 carbon-14 atoms for every 1015 carbon-12 atoms. Whilst the material is still living this ratio remains constant, because even though the carbon-14 is decaying, it is being constantly replenished. When the material dies the carbon-14 decays and is not replaced. The half-life of carbon-14 is about 6000 years.\n\n \n\nIn a bone the ratio of carbon-14 to carbon-12 atoms is found to be 100 : 1015.\n\n \n\nWhich of the following is the closest estimate of the age of the bone?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/physics/q27.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "60 years",
+        "B": "600 years",
+        "C": "1000 years",
+        "D": "10 000 years",
+        "E": "20 000 years",
+        "F": "30 000 years",
+        "G": "50 000 years",
+        "H": "60 000 years"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "60 years",
+          "math_alt": [],
+          "plain_text": "60 years"
+        },
+        "B": {
+          "text": "600 years",
+          "math_alt": [],
+          "plain_text": "600 years"
+        },
+        "C": {
+          "text": "1000 years",
+          "math_alt": [],
+          "plain_text": "1000 years"
+        },
+        "D": {
+          "text": "10 000 years",
+          "math_alt": [],
+          "plain_text": "10 000 years"
+        },
+        "E": {
+          "text": "20 000 years",
+          "math_alt": [],
+          "plain_text": "20 000 years"
+        },
+        "F": {
+          "text": "30 000 years",
+          "math_alt": [],
+          "plain_text": "30 000 years"
+        },
+        "G": {
+          "text": "50 000 years",
+          "math_alt": [],
+          "plain_text": "50 000 years"
+        },
+        "H": {
+          "text": "60 000 years",
+          "math_alt": [],
+          "plain_text": "60 000 years"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "20 000 years",
+      "correct_answer_images": [],
+      "explanation": "The answer is 20 000 years.\nThere are originally 1000 carbon-14 atoms in the sample living material.\nThe number of atoms in the sample is 100.\nThe half-life is 6000 years, so the number of atoms after 6000 years is 500. After a further 6000 years it is 250, and after a further 6000 years it is 125 atoms.\nAfter 3 half-lives amounting to 18 000 years, the number of atoms will be 125.\nThis is the nearest estimate to 100 atoms and the nearest estimate to 20 000 years.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:01:31.243379"
+    }
+  ],
+  "extracted_at": "2026-07-05T00:01:31.256581"
+}

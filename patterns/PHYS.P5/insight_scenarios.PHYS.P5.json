@@ -1,0 +1,47 @@
+{
+  "topic_key": "PHYS.P5",
+  "topic_name": "Matter",
+  "module_code": "P",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A set of wires made of the same material have equal masses but different unstretched lengths. They are subjected to the same tension. Determine the relationship between unstretched length and extension.",
+      "key_insight": "Extension depends on Length and Area: $ \\Delta L = \frac{FL}{EA} $. For equal mass, Volume is constant, so Area is inversely proportional to Length ($ A \\propto \frac{1}{L} $). Substituting $ A $ into the extension formula yields $ \\Delta L \\propto \frac{L}{1/L} = L^2 $. The extension is proportional to the square of the length.",
+      "discrimination_factors": [
+        "Ability to link Mass -> Volume -> Area relationships",
+        "Avoiding the 'intuitive' but incorrect linear proportionality"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Calculating the density of a gas in a vertical cylinder fitted with a heavy piston that falls slowly, compressing the gas isothermally.",
+      "key_insight": "Isothermal compression implies $ PV = \text{constant} $ and $ \rho = \frac{m}{V} $. Since mass is constant, $ \rho \\propto \frac{1}{V} $, and thus $ \rho \\propto P $. However, the new pressure is $ P_{atm} + \frac{Mg}{A} $. Students must calculate this total pressure and scale the density by the pressure ratio $ \frac{P_{new}}{P_{initial}} $.",
+      "discrimination_factors": [
+        "Correctly adding atmospheric and gauge pressures",
+        "Applying the proportionality of density and pressure under isothermal conditions"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A rope is fixed horizontally between two points. A mass is suspended from the midpoint, causing a vertical displacement. Calculate the Young's Modulus.",
+      "key_insight": "This requires bridging geometry and mechanics. The tension in the rope supports the weight: $ 2T \\sin(\theta) = mg $. The extension $ \\Delta L $ is found via Pythagoras on the triangle formed by the displaced rope. Finally, Young's Modulus $ E = \frac{\text{Stress}}{\text{Strain}} = \frac{T/A}{\\Delta L / L_0} $. It tests the ability to resolve forces and handle lengths in 2D space.",
+      "discrimination_factors": [
+        "Resolving forces at an angle",
+        "Calculating strain from geometric displacement rather than direct elongation",
+        "Multi-step algebraic manipulation"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A saucepan of water is heated from below. Identify which physical statements (mass of fixed volume, density of fixed mass, volume of fixed mass) explain convection currents.",
+      "key_insight": "Convection is driven by density changes causing buoyancy. As water heats, a fixed mass expands (Volume increases), so a fixed volume contains less mass (Density decreases). The 'heavier' (denser) cold water sinks, displacing the 'lighter' (less dense) warm water. Statements 2 and 3 are correct; Statement 1 (mass of fixed volume increasing) contradicts thermal expansion.",
+      "discrimination_factors": [
+        "Distinguishing between 'fixed mass' and 'fixed volume' formulations",
+        "Understanding the causal link between expansion and buoyancy"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,476 @@
+{
+  "source_file": "TMUA-2019-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2019,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2019-P1-Q1",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "f(x) is a quadratic function in x. The graph of y = f(x) passes through the point (1, -1) and has a turning point at (-1, 3). Find an expression for f(x).",
+      "has_diagram": false,
+      "options": {
+        "A": "-x^{2} - 2x + 2",
+        "B": "-x^{2} + 2x + 3",
+        "C": "x^{2} - 2x",
+        "D": "x^{2} + 2x - 4",
+        "E": "2x^{2} + 4x + 1",
+        "F": "-2x^{2} - 4x + 5"
+      },
+      "correct_answer": "A",
+      "raw_text": "1   f(x) is a quadratic function in x.\n    The graph of y = f(x) passes through the point (1, −1) and has a turning point at\n    (−1, 3).\n    Find an expression for f(x).\n    A −x2 − 2x + 2\n    B −x2 + 2x + 3\n    C x2 − 2x\n    D x2 + 2x − 4\n    E 2x2 + 4x + 1\n    F −2x2 − 4x + 5\n                                           3",
+      "diagram_images": [],
+      "question_text_latex": "$f(x)$ is a quadratic function in $x$. The graph of $y = f(x)$ passes through the point $(1, -1)$ and has a turning point at $(-1, 3)$. Find an expression for $f(x)$.",
+      "options_latex": {
+        "A": "$-x^{2} - 2x + 2$",
+        "B": "$-x^{2} + 2x + 3$",
+        "C": "$x^{2} - 2x$",
+        "D": "$x^{2} + 2x - 4$",
+        "E": "$2x^{2} + 4x + 1$",
+        "F": "$-2x^{2} - 4x + 5$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q2",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "Find the complete set of values of the real constant $k$ for which the expression $x^{2} + kx + 2x + 1 - 2k$ is positive for all real values of $x$.",
+      "has_diagram": false,
+      "options": {
+        "A": "-12 < k < 0",
+        "B": "k < -12 or k > 0",
+        "C": "-\\sqrt{6} - 3 < k < \\sqrt{6} - 3",
+        "D": "k < -\\sqrt{6} - 3 or k > \\sqrt{6} - 3",
+        "E": "-2 < k < \\frac{1}{2}",
+        "F": "k < -2 or k > \\frac{1}{2}",
+        "G": "0 < k < 4",
+        "H": "k < 0 or k > 4"
+      },
+      "correct_answer": "A",
+      "raw_text": "2   Find the complete set of values of the real constant k for which the expression\n                                       x2 + kx + 2x + 1 − 2k\n    is positive for all real values of x.\n    A −12 < k < 0\n    B k < −12 or k > 0\n        √          √\n    C − 6−3<k < 6−3\n           √            √\n    D k < − 6 − 3 or k > 6 − 3\n    E −2 < k < 12\n    F k < −2 or k > 12\n    G 0<k<4\n    H k < 0 or k > 4\n                                               4",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$-12 < k < 0$",
+        "B": "$k < -12$ or $k > 0$",
+        "G": "$0 < k < 4$",
+        "H": "$k < 0$ or $k > 4$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q3",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "Find the coefficient of $x$ in the expression: $(1 + x)^{0} + (1 + x)^{1} + (1 + x)^{2} + (1 + x)^{3} + \\cdots + (1 + x)^{79} + (1 + x)^{80}$",
+      "has_diagram": false,
+      "options": {
+        "A": "80",
+        "B": "81",
+        "C": "324",
+        "D": "628",
+        "E": "3240",
+        "F": "3321",
+        "G": "6480",
+        "H": "6642"
+      },
+      "correct_answer": "E",
+      "raw_text": "3   Find the coeﬃcient of x in the expression:\n            (1 + x)0 + (1 + x)1 + (1 + x)2 + (1 + x)3 + · · · + (1 + x)79 + (1 + x)80\n    A 80\n    B 81\n    C 324\n    D 628\n    E 3240\n    F 3321\n    G 6480\n    H 6642\n                                              5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q4",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "The sequence $x_n$ is given by: $x_1 = 10$ $x_{n+1} = \\sqrt{x_n}$ for $n \\geq 1$ What is the value of $x_{100}$? [Note that $a^{b^c}$ means $a^{(b^c)}$]",
+      "has_diagram": false,
+      "options": {
+        "A": "10^{2^{99}}",
+        "B": "10^{2^{100}}",
+        "C": "10^{2^{-99}}",
+        "D": "10^{2^{-100}}",
+        "E": "10^{-2^{99}}",
+        "F": "10^{-2^{100}}",
+        "G": "10^{-2^{-99}}",
+        "H": "10^{-2^{-100}}"
+      },
+      "correct_answer": "C",
+      "raw_text": "4   The sequence xn is given by:\n                                    x1 = 10\n                                            √\n                                   xn+1 =       xn for n ≥ 1\n    What is the value of x100 ?\n                    c       c\n    [Note that ab means a(b ) ]\n            99\n    A 102\n            100\n    B 102\n            −99\n    C 102\n            −100\n    D 102\n             99\n    E 10−2\n             100\n    F 10−2\n             −99\n    G 10−2\n             −100\n    H 10−2\n                                            6",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$10^{2^{99}}$",
+        "B": "$10^{2^{100}}$",
+        "C": "$10^{2^{-99}}$",
+        "D": "$10^{2^{-100}}$",
+        "E": "$10^{-2^{99}}$",
+        "F": "$10^{-2^{100}}$",
+        "G": "$10^{-2^{-99}}$",
+        "H": "$10^{-2^{-100}}$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q5",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "S is a geometric sequence. The sum of the first 6 terms of S is equal to 9 times the sum of the first 3 terms of S. The 7^{\text{th}} term of S is 360. Find the 1^{\text{st}} term of S.",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{40}{27}",
+        "B": "\\frac{40}{9}",
+        "C": "\\frac{40}{3}",
+        "D": "\\frac{45}{16}",
+        "E": "\\frac{45}{8}",
+        "F": "\\frac{45}{4}"
+      },
+      "correct_answer": "E",
+      "raw_text": "5   S is a geometric sequence.\n    The sum of the ﬁrst 6 terms of S is equal to 9 times the sum of the ﬁrst 3 terms of S.\n    The 7th term of S is 360.\n    Find the 1st term of S.\n        40\n    A   27\n        40\n    B   9\n        40\n    C   3\n        45\n    D   16\n        45\n    E   8\n        45\n    F   4\n                                            7",
+      "diagram_images": [],
+      "question_text_latex": "$S$ is a geometric sequence. The sum of the first $6$ terms of $S$ is equal to $9$ times the sum of the first $3$ terms of $S$. The $7^{\\text{th}}$ term of $S$ is $360$. Find the $1^{\\text{st}}$ term of $S$."
+    },
+    {
+      "id": "TMUA-2019-P1-Q6",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "The circles with equations $(x + 4)^{2} + (y + 1)^{2} = 64$ and $(x - 8)^{2} + (y - 4)^{2} = r^{2}$ where $r > 0$ have exactly one point in common. Find the difference between the two possible values of $r$.",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "10",
+        "C": "16",
+        "D": "26",
+        "E": "50"
+      },
+      "correct_answer": "C",
+      "raw_text": "6   The circles with equations\n                           (x + 4)2 + (y + 1)2 = 64 and\n                           (x − 8)2 + (y − 4)2 = r2 where r > 0\n    have exactly one point in common.\n    Find the diﬀerence between the two possible values of r.\n    A 4\n    B 10\n    C 16\n    D 26\n    E 50\n                                           8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q7",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "A curve has equation y = (2q - x^{2})(2qx + 3). The gradient of the curve at x = -1 is a function of q. Find the value of q which minimises the gradient of the curve at x = -1.",
+      "has_diagram": false,
+      "options": {
+        "A": "-1",
+        "B": "-\\frac{3}{4}",
+        "C": "-\\frac{1}{2}",
+        "D": "0",
+        "E": "\\frac{1}{2}",
+        "F": "\\frac{3}{4}",
+        "G": "1"
+      },
+      "correct_answer": "F",
+      "raw_text": "7   A curve has equation\n                                   y = (2q − x2 )(2qx + 3)\n    The gradient of the curve at x = −1 is a function of q.\n    Find the value of q which minimises the gradient of the curve at x = −1.\n    A −1\n    B − 34\n    C − 12\n    D    0\n         1\n    E    2\n         3\n    F    4\n    G    1\n                                            9",
+      "diagram_images": [],
+      "question_text_latex": "A curve has equation $y = (2q - x^{2})(2qx + 3)$. The gradient of the curve at $x = -1$ is a function of $q$. Find the value of $q$ which minimises the gradient of the curve at $x = -1$."
+    },
+    {
+      "id": "TMUA-2019-P1-Q8",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "The function f is such that 0 < f(x) < 1 for 0 \\leq  x \\leq  1. The trapezium rule with n equal intervals is used to estimate \\int_0^{1} f(x) dx and produces an underestimate. Using the same number of equal intervals, for which one of the following does the trapezium rule produce an overestimate?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\int_0^{1} (f(x) + 1) dx",
+        "B": "\\int_0^{1} 2f(x) dx",
+        "C": "\\int_{-1}^{0} f(x + 1) dx",
+        "D": "\\int_{-1}^{0} f(-x) dx",
+        "E": "\\int_0^{1} (1 - f(x)) dx"
+      },
+      "correct_answer": "E",
+      "raw_text": "8   The function f is such that 0 < f(x) < 1 for 0 ≤ x ≤ 1.\n                                                                    \u00021\n    The trapezium rule with n equal intervals is used to estimate   0\n                                                                         f(x) dx and\n    produces an underestimate.\n    Using the same number of equal intervals, for which one of the following does the\n    trapezium rule produce an overestimate?\n        \u00021\n    A    0\n             (f(x) + 1) dx\n        \u00021\n    B    0\n             2f(x) dx\n        \u00020\n    C    −1\n              f(x + 1) dx\n        \u00020\n    D    −1\n              f(−x) dx\n        \u00021\n    E    0\n             (1 − f(x)) dx\n                                           10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q9",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "p is a positive constant. Find the area enclosed between the curves y = p\\sqrt{x} and x = p\\sqrt{y}",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{2}{3}p^{\\frac{5}{2}} - \\frac{1}{2}p^{2}",
+        "B": "\\frac{4}{3}p^{\\frac{5}{2}} - p^{2}",
+        "C": "\\frac{p^4}{6}",
+        "D": "\\frac{p^4}{3}",
+        "E": "\\frac{2}{3}p^{3} - \\frac{1}{2}p^{4}",
+        "F": "\\frac{4}{3}p^{3} - p^{4}",
+        "G": "2p^{4}"
+      },
+      "correct_answer": "D",
+      "raw_text": "9   p is a positive constant.\n                                                   √           √\n    Find the area enclosed between the curves y = p x and x = p y\n        2 52\n    A   3\n          p − 12 p2\n        4 52\n    B   3\n          p − p2\n        p4\n    C   6\n        p4\n    D   3\n        2 3\n    E   3\n          p − 12 p4\n        4 3\n    F   3\n          p − p4\n    G 2p4\n                                        11",
+      "diagram_images": [],
+      "options_latex": {
+        "G": "$2p^{4}$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q10",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "Evaluate \\int_{-1}^{3} |x|(1 - x) \\, dx",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{17}{3}",
+        "B": "-\\frac{17}{3}",
+        "C": "\\frac{16}{3}",
+        "D": "-\\frac{16}{3}",
+        "E": "\\frac{11}{3}",
+        "F": "-\\frac{11}{3}"
+      },
+      "correct_answer": "F",
+      "raw_text": "10   Evaluate\n                \u0003 3\n                      |x|(1 − x) dx\n                 −1\n          17\n     A    3\n     B − 17\n         3\n          16\n     C    3\n     D − 16\n         3\n          11\n     E    3\n     F − 11\n         3\n                       12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q11",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "Find the sum of the real values of x that satisfy the simultaneous equations: \\log_3(xy^{2}) = 1, (\\log_3 x)(\\log_3 y) = -3",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "1",
+        "C": "3",
+        "D": "3\\frac{1}{9}",
+        "E": "9\\frac{1}{27}",
+        "F": "9\\frac{1}{3}",
+        "G": "27",
+        "H": "27\\frac{1}{9}"
+      },
+      "correct_answer": "H",
+      "raw_text": "11   Find the sum of the real values of x that satisfy the simultaneous equations:\n                                           log3 (xy 2 ) = 1\n                                     (log3 x)(log3 y) = −3\n         1\n     A   3\n     B 1\n     C 3\n     D 3 19\n         1\n     E 9 27\n     F 9 13\n     G 27\n     H 27 19\n                                             13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q12",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "It is given that \\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})} for t \\geq 1 and V = 7 when t = 1. Find the value of V when t = 9.",
+      "has_diagram": false,
+      "options": {
+        "A": "208\\pi + 7",
+        "B": "216\\pi + 7",
+        "C": "224\\pi + 7",
+        "D": "416\\pi + 7",
+        "E": "608\\pi + 7",
+        "F": "744\\pi + 7"
+      },
+      "correct_answer": "C",
+      "raw_text": "12   It is given that\n                                dV   24π(t − 1)\n                                   =      √     for t ≥ 1\n                                dt   (1 + t )\n     and V = 7 when t = 1.\n     Find the value of V when t = 9.\n     A 208π + 7\n     B 216π + 7\n     C 224π + 7\n     D 416π + 7\n     E 608π + 7\n     F 744π + 7\n                                         14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q13",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "Find the maximum value of $4^{\\sin x} - 4 \\times 2^{\\sin x} + \\frac{17}{4}$ for real $x$.",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{4}",
+        "B": "\\frac{5}{2}",
+        "C": "\\frac{13}{2}",
+        "D": "\\frac{21}{2}",
+        "E": "\\frac{65}{4}",
+        "F": "There is no maximum value."
+      },
+      "correct_answer": "B",
+      "raw_text": "13   Find the maximum value of\n                                 4sin x − 4 × 2sin x + 17\n                                                       4\n     for real x.\n         1\n     A   4\n         5\n     B   2\n         13\n     C   2\n         21\n     D   2\n         65\n     E   4\n     F There is no maximum value.\n                                         15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q14",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "x satisfies the simultaneous equations \\sin 2x + \\sqrt{3} \\cos 2x = -1 and \\sqrt{3} \\sin 2x - \\cos 2x = \\sqrt{3} where 0^\\circ \\leq x \\leq 360^\\circ. Find the sum of the possible values of x.",
+      "has_diagram": false,
+      "options": {
+        "A": "210^\\circ",
+        "B": "330^\\circ",
+        "C": "390^\\circ",
+        "D": "660^\\circ",
+        "E": "780^\\circ",
+        "F": "930^\\circ"
+      },
+      "correct_answer": "B",
+      "raw_text": "14   x satisﬁes the simultaneous equations\n                                              √\n                                   sin 2x +    3 cos 2x = −1\n     and                           √                         √\n                                       3 sin 2x − cos 2x =       3\n     where 0◦ ≤ x ≤ 360◦ .\n     Find the sum of the possible values of x.\n     A 210◦\n     B 330◦\n     C 390◦\n     D 660◦\n     E 780◦\n     F 930◦\n                                              16",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$210^\\circ$",
+        "B": "$330^{\\circ}$",
+        "C": "$390^\\circ$",
+        "D": "$660^\\circ$",
+        "E": "$780^{\\circ}$",
+        "F": "$930^\\circ$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q15",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "Find the real non-zero solution to the equation \\frac{2^{(9^x)}}{8^{(3^x)}} = \\frac{1}{4}",
+      "has_diagram": false,
+      "options": {
+        "A": "\\log_3 2",
+        "B": "2 \\log_3 2",
+        "C": "1",
+        "D": "2",
+        "E": "\\log_2 3",
+        "F": "2 \\log_2 3"
+      },
+      "correct_answer": "A",
+      "raw_text": "15   Find the real non-zero solution to the equation\n                                              x\n                                           2(9 )     1\n                                             (3 x) =\n                                           8         4\n     A log3 2\n     B 2 log3 2\n     C 1\n     D 2\n     E log2 3\n     F 2 log2 3\n                                            17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q16",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "Given that \\\\2 \\\\int_{0}^{1} f(x) \\\\, dx + 5 \\\\int_{1}^{2} f(x) \\\\, dx = 14 and \\\\int_{0}^{1} f(x + 1) \\\\, dx = 6 find the value of \\\\int_{0}^{2} f(x) \\\\, dx",
+      "has_diagram": false,
+      "options": {
+        "A": "-8",
+        "B": "-4",
+        "C": "-2",
+        "D": "2",
+        "E": "4",
+        "F": "\\\\frac{29}{5}",
+        "G": "\\\\frac{32}{5}",
+        "H": "14"
+      },
+      "correct_answer": "C",
+      "raw_text": "16   Given that             \u0003 1                    \u0003 2\n                        2         f(x) dx + 5            f(x) dx = 14\n                             0                      1\n     and                           \u0003 1\n                                         f(x + 1) dx = 6\n                                    0\n     ﬁnd the value of\n                                         \u0003 2\n                                               f(x) dx\n                                          0\n     A −8\n     B −4\n     C −2\n     D 2\n     E 4\n           29\n     F     5\n           32\n     G     5\n     H 14\n                                              18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q17",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "Find the fraction of the interval $0 \\leq \\theta \\leq \\pi$ for which the inequality $(\\sin(2\\theta) - \\frac{1}{2})(\\sin\\theta - \\cos\\theta) \\geq 0$ is satisfied.",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{12}",
+        "B": "\\frac{1}{6}",
+        "C": "\\frac{1}{4}",
+        "D": "\\frac{5}{12}",
+        "E": "\\frac{7}{12}",
+        "F": "\\frac{3}{4}",
+        "G": "\\frac{5}{6}",
+        "H": "\\frac{11}{12}"
+      },
+      "correct_answer": "C",
+      "raw_text": "17   Find the fraction of the interval 0 ≤ θ ≤ π for which the inequality\n                                \u0004            \u0005\u0004            \u0005\n                                 sin(2θ) − 12 sin θ − cos θ ≥ 0\n     is satisﬁed.\n         1\n     A   12\n         1\n     B   6\n         1\n     C   4\n         5\n     D   12\n         7\n     E   12\n         3\n     F   4\n         5\n     G   6\n         11\n     H   12\n                                             19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P1-Q18",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "Find the shortest distance between the curve y = x^{2} + 4 and the line y = 2x - 2.",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "\\sqrt{5}",
+        "C": "\\frac{6\\sqrt{5}}{5}",
+        "D": "3",
+        "E": "\\frac{5\\sqrt{5}}{3}",
+        "F": "5",
+        "G": "6"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   Find the shortest distance between the curve y = x2 + 4 and the line y = 2x − 2.\n     A 2\n       √\n     B   5\n          √\n         6 5\n     C    5\n     D 3\n          √\n         5 5\n     E    3\n     F 5\n     G 6\n                                            20",
+      "diagram_images": [],
+      "question_text_latex": "Find the shortest distance between the curve $y = x^{2} + 4$ and the line $y = 2x - 2$."
+    },
+    {
+      "id": "TMUA-2019-P1-Q19",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "Find the value of \\sum_{k=0}^{90} \\sin(10 + 90k)^\\circ",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "\\sin 10^\\circ",
+        "C": "\\sin 100^\\circ",
+        "D": "\\sin 190^\\circ",
+        "E": "\\sin 280^\\circ",
+        "F": "1"
+      },
+      "correct_answer": "C",
+      "raw_text": "19   Find the value of\n                         \u0006\n                         90\n                               sin(10 + 90k)◦\n                         k=0\n     A 0\n     B sin 10◦\n     C sin 100◦\n     D sin 190◦\n     E sin 280◦\n     F 1\n                                 21",
+      "diagram_images": [],
+      "options_latex": {
+        "B": "$\\sin 10^\\circ$",
+        "C": "$\\sin 100^\\circ$",
+        "D": "$\\sin 190^\\circ$",
+        "E": "$\\sin 280^\\circ$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P1-Q20",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "What is the complete range of values of k for which the curves with equations \\( y = x^{3} - 12x \\) and \\( y = k - (x - 2)^{2} \\) intersect at three distinct points, of which exactly two have positive x-coordinates?",
+      "has_diagram": false,
+      "options": {
+        "A": "-4 < k < 0",
+        "B": "-4 < k < 4",
+        "C": "-4 < k < 16",
+        "D": "-16 < k < 0",
+        "E": "-16 < k < 4",
+        "F": "-16 < k < 16"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   What is the complete range of values of k for which the curves with equations\n                                         y = x3 − 12x\n     and\n                                       y = k − (x − 2)2\n     intersect at three distinct points, of which exactly two have positive x-coordinates?\n     A −4 < k < 0\n     B −4 < k < 4\n     C −4 < k < 16\n     D −16 < k < 0\n     E −16 < k < 4\n     F −16 < k < 16\n                                            22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": [],
+      "question_text_latex": "What is the complete range of values of $k$ for which the curves with equations $y = x^{3} - 12x$ and $y = k - (x - 2)^{2}$ intersect at three distinct points, of which exactly two have positive $x$-coordinates?",
+      "options_latex": {
+        "A": "$-4 < k < 0$",
+        "B": "$-4 < k < 4$",
+        "C": "$-4 < k < 16$",
+        "D": "$-16 < k < 0$",
+        "E": "$-16 < k < 4$",
+        "F": "$-16 < k < 16$"
+      }
+    }
+  ]
+}

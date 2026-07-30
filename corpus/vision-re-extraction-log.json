@@ -1,0 +1,417 @@
+{
+  "started": "2026-07-09T20:20:44.081034+00:00",
+  "model": "glm-4.6v",
+  "papers": [
+    {
+      "label": "ENGAA 2016 S1",
+      "exam": "engaa",
+      "total": 54,
+      "updated": 48,
+      "missing": [
+        30,
+        32,
+        34,
+        38,
+        40,
+        42
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T20:42:24.516677+00:00"
+    },
+    {
+      "label": "ENGAA 2017 S1",
+      "exam": "engaa",
+      "total": 54,
+      "updated": 47,
+      "missing": [
+        32,
+        36,
+        46,
+        48,
+        50,
+        52,
+        54
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T20:59:27.332621+00:00"
+    },
+    {
+      "label": "ENGAA 2018 S1",
+      "exam": "engaa",
+      "total": 54,
+      "updated": 51,
+      "missing": [
+        44,
+        48,
+        52
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T21:15:52.599539+00:00"
+    },
+    {
+      "label": "ENGAA 2019 S1",
+      "exam": "engaa",
+      "total": 40,
+      "updated": 36,
+      "missing": [
+        28,
+        30,
+        34,
+        40
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T21:29:06.334583+00:00"
+    },
+    {
+      "label": "ENGAA 2020 S1",
+      "exam": "engaa",
+      "total": 40,
+      "updated": 32,
+      "missing": [
+        24,
+        26,
+        28,
+        30,
+        32,
+        36,
+        38,
+        40
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T21:41:38.936777+00:00"
+    },
+    {
+      "label": "ENGAA 2021 S1",
+      "exam": "engaa",
+      "total": 40,
+      "updated": 37,
+      "missing": [
+        26,
+        28,
+        40
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T21:53:44.192331+00:00"
+    },
+    {
+      "label": "ENGAA 2022 S1",
+      "exam": "engaa",
+      "total": 40,
+      "updated": 34,
+      "missing": [
+        24,
+        26,
+        28,
+        32,
+        34,
+        36
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T22:08:14.555814+00:00"
+    },
+    {
+      "label": "ENGAA 2023 S1",
+      "exam": "engaa",
+      "total": 40,
+      "updated": 36,
+      "missing": [
+        28,
+        30,
+        34,
+        38
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T22:18:13.596691+00:00"
+    },
+    {
+      "label": "NSAA 2016 S1",
+      "exam": "nsaa",
+      "total": 90,
+      "updated": 85,
+      "missing": [
+        74,
+        76,
+        78,
+        82,
+        90
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T22:44:25.140749+00:00"
+    },
+    {
+      "label": "NSAA 2017 S1",
+      "exam": "nsaa",
+      "total": 90,
+      "updated": 87,
+      "missing": [
+        74,
+        84,
+        86
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T23:14:33.111106+00:00"
+    },
+    {
+      "label": "NSAA 2018 S1",
+      "exam": "nsaa",
+      "total": 90,
+      "updated": 88,
+      "missing": [
+        84,
+        88
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-09T23:47:20.681851+00:00"
+    },
+    {
+      "label": "NSAA 2019 S1",
+      "exam": "nsaa",
+      "total": 90,
+      "updated": 87,
+      "missing": [
+        80,
+        82,
+        86
+      ],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": false,
+      "timestamp": "2026-07-10T00:13:27.751395+00:00"
+    },
+    {
+      "label": "NSAA 2020 S1",
+      "exam": "nsaa",
+      "total": 80,
+      "updated": 80,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T00:42:24.791263+00:00"
+    },
+    {
+      "label": "NSAA 2021 S1",
+      "exam": "nsaa",
+      "total": 80,
+      "updated": 80,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T01:12:44.402396+00:00"
+    },
+    {
+      "label": "NSAA 2022 S1",
+      "exam": "nsaa",
+      "total": 80,
+      "updated": 80,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T01:46:59.206024+00:00"
+    },
+    {
+      "label": "NSAA 2023 S1",
+      "exam": "nsaa",
+      "total": 80,
+      "updated": 80,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T02:23:59.200161+00:00"
+    },
+    {
+      "label": "TMUA 2017_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T02:33:23.867892+00:00"
+    },
+    {
+      "label": "TMUA 2018_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T02:38:37.670122+00:00"
+    },
+    {
+      "label": "TMUA 2018_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T02:47:55.858517+00:00"
+    },
+    {
+      "label": "TMUA 2019_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T02:53:50.812595+00:00"
+    },
+    {
+      "label": "TMUA 2019_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:03:32.482015+00:00"
+    },
+    {
+      "label": "TMUA 2020_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:10:34.286865+00:00"
+    },
+    {
+      "label": "TMUA 2020_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:20:49.133210+00:00"
+    },
+    {
+      "label": "TMUA 2021_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:28:41.755103+00:00"
+    },
+    {
+      "label": "TMUA 2021_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:37:54.707718+00:00"
+    },
+    {
+      "label": "TMUA 2022_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:45:39.892454+00:00"
+    },
+    {
+      "label": "TMUA 2022_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:53:32.475196+00:00"
+    },
+    {
+      "label": "TMUA 2023_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T03:59:44.736314+00:00"
+    },
+    {
+      "label": "TMUA 2023_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T04:07:39.431178+00:00"
+    },
+    {
+      "label": "TMUA specimen_p1",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T04:11:58.849382+00:00"
+    },
+    {
+      "label": "TMUA specimen_p2",
+      "exam": "tmua",
+      "total": 20,
+      "updated": 20,
+      "missing": [],
+      "parse_errors": 0,
+      "api_errors": 0,
+      "success": true,
+      "timestamp": "2026-07-10T04:18:08.699387+00:00"
+    }
+  ],
+  "total_updated": 1288,
+  "total_missing": 54,
+  "completed": "2026-07-10T04:18:08.700382+00:00",
+  "overall_success": false
+}

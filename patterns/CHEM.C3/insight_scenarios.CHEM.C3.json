@@ -1,0 +1,46 @@
+{
+  "topic_key": "CHEM.C3",
+  "topic_name": "Chemical reactions, formulae and equations",
+  "module_code": "C",
+  "corpus_question_count": 19,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A metal M forms an oxide M3O4 containing both M\u00b2\u207a and M\u00b3\u207a ions. The student must determine the ratio of M\u00b2\u207a to total ions.",
+      "key_insight": "This is a system of linear equations disguised as stoichiometry. The total positive charge must balance the negative charge of oxygen (-8 total). If $x$ is the number of M\u00b2\u207a and $y$ is M\u00b3\u207a, then $2x + 3y = 8$ and $x+y=3$. It solves to $x=1, y=2$. The distractor of 2/3 relies on students seeing the '2' and '3' charges and inverting the fraction or calculating mass ratio instead of ion ratio.",
+      "discrimination_factors": [
+        "Ability to set up charge balance equations",
+        "Avoiding the visual trap of confusing stoichiometry coefficients with ion charges"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating the final volume of gases after combusting a hydrocarbon at 150\u00b0C, given initial volumes.",
+      "key_insight": "The 'Aha!' moment is realizing that Water is a GAS at 150\u00b0C. Standard GCSE practice conditions (r.t.p) often condition students to ignore water volume. Here, the total gas volume includes the water vapor produced. Furthermore, for oxygen excess questions, one must account for the leftover O2 volume.",
+      "discrimination_factors": [
+        "Phase awareness at non-standard temperatures",
+        "Conservation of volume/moles in gaseous reactions (Avogadro's Law)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Balancing a complex redox equation (e.g., P4 + HNO3) involving multiple product formation (PH4I, H3PO4) and a hexatomic molecule Q.",
+      "key_insight": "This is not simple inspection balancing. It requires strictly tracking oxidation number changes per atom (P in P4 is 0, in PH4I is -1, in H3PO4 is +5) and using those magnitudes to determine coefficients before checking H/O balance. The algebraic complexity (finding sums of coefficients) rewards those who balance 'P' and 'Redox' first before 'H' and 'O'.",
+      "discrimination_factors": [
+        "Advanced Redox algebra",
+        "Methodical priority of atom balancing (Redox atoms > Polyatomics > Simple atoms)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Analyzing a reaction where 'Equal moles of CO and CO2 are produced' from Propanol with limited Oxygen.",
+      "key_insight": "This creates an algebraic lock. Let $n(\text{CO}) = n(\text{CO}_2) = k$. Then Carbon balance gives $3k = 2 \text{ (from propanol)} \rightarrow k=1$. The H-balance fixes water (8 moles). Finally, O-balance calculates the oxygen used ($1(1) + 1(2) + 4 = 7$ O atoms). The 'Aha!' is using the carbon equality to solve for the absolute amounts of products in a 'limited' reagent scenario.",
+      "discrimination_factors": [
+        "Constructing algebraic expressions for stoichiometric constraints",
+        "Managing complex mole balancing with multiple products"
+      ],
+      "difficulty_band": "6-8"
+    }
+  ],
+  "_raw": null
+}

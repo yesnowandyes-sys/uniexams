@@ -1,0 +1,46 @@
+{
+  "topic_key": "CHEM.C16",
+  "topic_name": "Chemical tests",
+  "module_code": "C",
+  "corpus_question_count": 2,
+  "corpus_backed": false,
+  "scenarios": [
+    {
+      "scenario_description": "A student observes a white precipitate when adding Sodium Hydroxide to an unknown solution. They immediately conclude the cation is Calcium or Magnesium, ignoring that Aluminum (Al\u00b3\u207a) behaves similarly but dissolves in excess NaOH, while Ca/Mg do not.",
+      "key_insight": "Chemical tests often require a second step (excess reagent) to fully discriminate between species with primary identical behaviors.",
+      "discrimination_factors": [
+        "Memorization of Group 2 vs Group 3 hydroxide solubility",
+        "Observation of 'dissolving in excess' behavior"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Confronted with Q1, a student identifies the 'Brown precipitate' as Iron(III) Hydroxide and calculates the mass of Fe(OH)\u2083 as the answer, neglecting that the question asks for the mass of the original salt 'X'.",
+      "key_insight": "Distinguishing between the mass of the *reaction product* and the *original analyte*.",
+      "discrimination_factors": [
+        "Parsing the question's final request carefully",
+        "Understanding that the test destroys the original compound"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "In Q2, a student selects Test 2 (NaOH) because it identifies Calcium Chloride (white ppt), failing to realize that Potassium Carbonate and Sodium Sulphate would both yield no precipitate (or a ppt with carbonate if acid isn't removed), making them indistinguishable from each other.",
+      "key_insight": "A 'successful' test must distinguish *all* members of the set, not just identify the presence of one. A result of 'No reaction' must be unique to one species, or at least different from the others.",
+      "discrimination_factors": [
+        "Systematic elimination (Grid method: Chemical vs Test)",
+        "Predicting negative results as accurately as positive ones"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Identifying a sulfate using Barium Chloride: a student assumes a white precipitate confirms a sulfate, failing to recall that Carbonates also produce white precipitates with BaCl\u2082 unless acid is present to remove the CO\u2083\u00b2\u207b interference.",
+      "key_insight": "Context matters\u2014adding acid is not just a solvent step but a chemical necessity to remove false positives (carbonate/sulfite interference) in sulfate testing.",
+      "discrimination_factors": [
+        "Deep understanding of acid-carbonate reactions",
+        "Interference management in qualitative analysis"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

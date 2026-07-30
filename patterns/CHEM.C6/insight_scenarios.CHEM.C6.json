@@ -1,0 +1,40 @@
+{
+  "topic_key": "CHEM.C6",
+  "topic_name": "Chemical bonding, structure and properties",
+  "module_code": "C",
+  "corpus_question_count": 15,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is asked to explain why Silicon (a giant covalent structure) has a higher melting point than Sodium Chloride (an ionic lattice), or why Phosphorus Pentachloride has a higher boiling point than Phosphorus Trichloride.",
+      "key_insight": "Understanding that melting/boiling points in giant structures depend on breaking *intramolecular* covalent bonds (very high energy), whereas in simple molecules they depend on *intermolecular* forces (LDF/dipole). For PCl\u2083 vs PCl\u2085, the student must recognize they are both simple molecules, so the difference is molecular mass/surface area affecting LDF strength, NOT the number of bonds within the molecule.",
+      "discrimination_factors": [
+        "Distinguishing bond breaking vs force overcoming",
+        "Recognizing state of matter (giant lattice vs discrete molecule)",
+        "Avoiding the 'more bonds = higher mp' trap for simple molecules"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Determining the shape and bond angle of a complex ion (e.g., ICl\u2084\u207b or BrF\u2083) or anion formed in a solution (e.g., BF\u2084\u207b from a mass titration), where the student must deduce the charge and Lewis structure before applying VSEPR.",
+      "key_insight": "The 'Aha!' moment is realizing that the charge on the species changes the number of bonding pairs vs lone pairs (e.g., moving from AX\u2083 to AX\u2082E, or AX\u2084 to AX\u2084E\u2082). Specifically, recognizing that 'trigonal bipyramidal' electron geometries result in 'see-saw' or 'T-shape' molecular geometries, and that bond angles are not the standard 109.5\u00b0, 120\u00b0, or 90\u00b0, but often *less* (e.g., <90\u00b0 equatorial in see-saw).",
+      "discrimination_factors": [
+        "Calculating ion charge from mass data",
+        "Correctly counting lone pairs in expanded octets",
+        "Recalling non-standard bond angles for T-shape/See-saw"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Analyzing a 2D cross-section diagram of an ionic crystal lattice (like NaCl) and identifying which plane pattern could not exist in the 3D structure.",
+      "key_insight": "Visualizing the stoichiometry and coordination number in 3D. A student must realize that a valid 2D slice must maintain the 1:1 ion ratio (or alternating pattern) consistent with the 3D packing. A 'checkerboard' might look ordered, but if the stacking sequence requires a specific offset, a linear 1:1:1:1 chain might be the only valid cut.",
+      "discrimination_factors": [
+        "Spatial reasoning (2D to 3D translation)",
+        "Understanding lattice coordination numbers",
+        "Recognizing electrostatic stability in planes"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

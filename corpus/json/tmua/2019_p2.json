@@ -1,0 +1,434 @@
+{
+  "source_file": "TMUA-2019-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2019,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2019-P2-Q1",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "Find the coefficient of the $x^{4}$ term in the expansion of $x^{2} \\left(2x + \\frac{1}{x}\\right)^{6}$",
+      "has_diagram": false,
+      "options": {
+        "A": "15",
+        "B": "30",
+        "C": "60",
+        "D": "120",
+        "E": "240"
+      },
+      "correct_answer": "E",
+      "raw_text": "1   Find the coeﬃcient of the x4 term in the expansion of\n                                          \u0002       \u00036\n                                        2       1\n                                       x 2x +\n                                                x\n    A 15\n    B 30\n    C 60\n    D 120\n    E 240\n                                           3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q2",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "(2x + 1) and (x - 2) are factors of 2x^{3} + px^{2} + q. What is the value of 2p + q?",
+      "has_diagram": false,
+      "options": {
+        "A": "-10",
+        "B": "-\\frac{38}{5}",
+        "C": "-\\frac{22}{3}",
+        "D": "\\frac{22}{3}",
+        "E": "\\frac{38}{5}",
+        "F": "10"
+      },
+      "correct_answer": "C",
+      "raw_text": "2   (2x + 1) and (x − 2) are factors of 2x3 + px2 + q.\n    What is the value of 2p + q?\n    A −10\n    B − 38\n        5\n    C − 22\n        3\n        22\n    D   3\n        38\n    E   5\n    F 10\n                                            4",
+      "diagram_images": [],
+      "question_text_latex": "$(2x + 1)$ and $(x - 2)$ are factors of $2x^{3} + px^{2} + q$. What is the value of $2p + q$?"
+    },
+    {
+      "id": "TMUA-2019-P2-Q3",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "a, b and c are real numbers. Given that ab = ac, which of the following statements must be true?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "A",
+      "raw_text": "3   a, b and c are real numbers.\n    Given that ab = ac, which of the following statements must be true?\n        I    a=0\n        II   b = 0 or c = 0\n        III b = c\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                          5",
+      "diagram_images": [],
+      "question_text_latex": "$a$, $b$ and $c$ are real numbers. Given that $ab = ac$, which of the following statements must be true?"
+    },
+    {
+      "id": "TMUA-2019-P2-Q4",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "Consider the following conjecture: If \\( N \\) is a positive integer that consists of the digit 1 followed by an odd number of 0 digits and then a final digit 1, then \\( N \\) is a prime number. Here are three numbers: I \\( N = 101 \\) (which is a prime number) II \\( N = 1001 \\) (which equals \\( 7 \times 11 \times 13 \\)) III \\( N = 10001 \\) (which equals \\( 73 \times 137 \\)) Which of these provide(s) a counterexample to the conjecture?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "D",
+      "raw_text": "4   Consider the following conjecture:\n            If N is a positive integer that consists of the digit 1 followed by an odd\n            number of 0 digits and then a ﬁnal digit 1, then N is a prime number.\n    Here are three numbers:\n        I       N = 101 (which is a prime number)\n        II      N = 1001 (which equals 7 × 11 × 13)\n        III N = 10001 (which equals 73 × 137)\n    Which of these provide(s) a counterexample to the conjecture?\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                               6",
+      "diagram_images": [],
+      "question_text_latex": "Consider the following conjecture: If $N$ is a positive integer that consists of the digit 1 followed by an odd number of 0 digits and then a final digit 1, then $N$ is a prime number. Here are three numbers: I $N = 101$ (which is a prime number) II $N = 1001$ (which equals $7 \\times 11 \\times 13$) III $N = 10001$ (which equals $73 \\times 137$) Which of these provide(s) a counterexample to the conjecture?"
+    },
+    {
+      "id": "TMUA-2019-P2-Q5",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "Consider the following statement about the positive integers \\( a \\), \\( b \\) and \\( n \\): (*) \\( ab \\) is divisible by \\( n \\) The condition ‘either \\( a \\) or \\( b \\) is divisible by \\( n \\)’ is:",
+      "has_diagram": false,
+      "options": {
+        "A": "necessary but not sufficient for (*)",
+        "B": "sufficient but not necessary for (*)",
+        "C": "necessary and sufficient for (*)",
+        "D": "not necessary and not sufficient for (*)"
+      },
+      "correct_answer": "B",
+      "raw_text": "5   Consider the following statement about the positive integers a, b and n:\n         (∗): ab is divisible by n\n    The condition ‘either a or b is divisible by n’ is:\n    A necessary but not suﬃcient for (∗)\n    B suﬃcient but not necessary for (∗)\n    C necessary and suﬃcient for (∗)\n    D not necessary and not suﬃcient for (∗)\n                                               7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q6",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "A student attempts to solve the equation \\(\\cos x + \\sin x \\tan x = 2 \\sin x - 1\\) in the range \\(0 \\leq x \\leq 2\\pi\\). The student’s attempt is as follows: \\(\\cos x + \\sin x \\tan x = 2 \\sin x - 1\\) So \\(\\cos x - \\sin x + \\sin x \\tan x - \\sin x = -1\\) (I) So \\((\\sin x - \\cos x)(\\tan x - 1) = -1\\) (II) So \\(\\sin x - \\cos x = -1\\) or \\(\\tan x - 1 = -1\\) (III) So \\((\\sin x - \\cos x)^{2} = 1\\) or \\(\\tan x = 0\\) (IV) So \\(2 \\sin x \\cos x = 0\\) or \\(\\tan x = 0\\) (V) So \\(x = 0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}, 2\\pi\\) (VI) Which of the following best describes this attempt?",
+      "has_diagram": false,
+      "options": {
+        "A": "It is completely correct",
+        "B": "It is incorrect, and the first error occurs on line (I)",
+        "C": "It is incorrect, and the first error occurs on line (II)",
+        "D": "It is incorrect, and the first error occurs on line (III)",
+        "E": "It is incorrect, and the first error is that extra solutions were introduced on line (IV)",
+        "F": "It is incorrect, and the first error is that extra solutions were introduced on line (V)",
+        "G": "It is incorrect, and the first error is not eliminating the values where \\(\\tan x\\) is undefined on line (VI)"
+      },
+      "correct_answer": "D",
+      "raw_text": "6   A student attempts to solve the equation\n                                 cos x + sin x tan x = 2 sin x − 1\n    in the range 0 ≤ x ≤ 2π.\n    The student’s attempt is as follows:\n        cos x + sin x tan x = 2 sin x − 1\n        So   cos x − sin x + sin x tan x − sin x = −1                         (I)\n        So   (sin x − cos x)(tan x − 1) = −1                                  (II)\n        So   sin x − cos x = −1 or tan x − 1 = −1                             (III)\n        So   (sin x − cos x)2 = 1 or tan x = 0                                (IV)\n        So   2 sin x cos x = 0 or tan x = 0                                   (V)\n        So   x = 0, π2 , π, 3π\n                             2\n                               , 2π                                           (VI)\n    Which of the following best describes this attempt?\n    A It is completely correct\n    B It is incorrect, and the ﬁrst error occurs on line (I)\n    C It is incorrect, and the ﬁrst error occurs on line (II)\n    D It is incorrect, and the ﬁrst error occurs on line (III)\n    E It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (IV)\n    F It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (V)\n    G It is incorrect, and the ﬁrst error is not eliminating the values where tan x is\n      undeﬁned on line (VI)\n                                               8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q7",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "For which one of the following statements can the fact that 12^{2} + 16^{2} = 20^{2} be used to produce a counterexample?",
+      "has_diagram": false,
+      "options": {
+        "A": "If a, b and c are positive integers which satisfy the equation a^{2} + b^{2} = c^{2}, and the three numbers have no common divisor, then two of them are odd and the other is even.",
+        "B": "The equation a^{4} + b^{2} = c^{2} has no solutions for which a, b and c are positive integers.",
+        "C": "The equation a^{4} + b^{4} = c^{4} has no solutions for which a, b and c are positive integers.",
+        "D": "If a, b and c are positive integers which satisfy the equation a^{2} + b^{2} = c^{2}, then one is the arithmetic mean of the other two."
+      },
+      "correct_answer": "B",
+      "raw_text": "7   For which one of the following statements can the fact that 122 + 162 = 202 be used\n    to produce a counterexample?\n    A If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , and the\n      three numbers have no common divisor, then two of them are odd and the other\n      is even.\n    B The equation a4 + b2 = c2 has no solutions for which a, b and c are positive\n      integers.\n    C The equation a4 + b4 = c4 has no solutions for which a, b and c are positive\n      integers.\n    D If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , then\n      one is the arithmetic mean of the other two.\n                                             9",
+      "diagram_images": [],
+      "question_text_latex": "For which one of the following statements can the fact that $12^{2} + 16^{2} = 20^{2}$ be used to produce a counterexample?",
+      "options_latex": {
+        "A": "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^{2} + b^{2} = c^{2}$, and the three numbers have no common divisor, then two of them are odd and the other is even.",
+        "B": "The equation $a^{4} + b^{2} = c^{2}$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
+        "C": "The equation $a^{4} + b^{4} = c^{4}$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
+        "D": "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, then one is the arithmetic mean of the other two."
+      }
+    },
+    {
+      "id": "TMUA-2019-P2-Q8",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "a, b and c are real numbers with $a < b < c < 0$. Which of the following statements must be true? I $ac < ab < a^{2}$ II $b(c + a) > 0$ III $\\frac{c}{b} > \\frac{a}{b}$",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "E",
+      "raw_text": "8   a, b and c are real numbers with a < b < c < 0\n    Which of the following statements must be true?\n        I     ac < ab < a2\n        II    b(c + a) > 0\n              c   a\n        III     >\n              b   b\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                           10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q9",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "A large circular table has 40 chairs round it. What is the smallest number of people who can be sitting at the table already such that the next person to sit down must sit next to someone?",
+      "has_diagram": false,
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "13",
+        "D": "14",
+        "E": "19",
+        "F": "20"
+      },
+      "correct_answer": "D",
+      "raw_text": "9   A large circular table has 40 chairs round it.\n    What is the smallest number of people who can be sitting at the table already such\n    that the next person to sit down must sit next to someone?\n    A 9\n    B 10\n    C 13\n    D 14\n    E 19\n    F 20\n                                            11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q10",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "PQRS is a quadrilateral, labelled anticlockwise. Which one of the following is a necessary but not sufficient condition for PQRS to be a parallelogram?",
+      "has_diagram": false,
+      "options": {
+        "A": "$PQ = SR$ and $PS \\parallel QR$",
+        "B": "$PQ = SR$ and $PQ \\parallel SR$",
+        "C": "$PQ = QR = SR = PS$",
+        "D": "$PR = QS$"
+      },
+      "correct_answer": "A",
+      "raw_text": "10   P QRS is a quadrilateral, labelled anticlockwise.\n     Which one of the following is a necessary but not suﬃcient condition for P QRS\n     to be a parallelogram?\n     A P Q = SR and P S is parallel to QR\n     B P Q = SR and P Q is parallel to SR\n     C P Q = QR = SR = P S\n     D P R = QS\n                                             12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q11",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "An arithmetic series has n terms, all of which are integers. The sum of the series is 20. Which of the following statements must be true? I The first term of the series is even. II n is even. III The common difference is even.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "A",
+      "raw_text": "11   An arithmetic series has n terms, all of which are integers.\n     The sum of the series is 20.\n     Which of the following statements must be true?\n         I    The ﬁrst term of the series is even.\n         II   n is even.\n         III The common diﬀerence is even.\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                             13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q12",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "Most students in a large college study Mathematics. A teacher chooses three different students at random, one after the other. Consider these three probabilities: R = \\text{P}(\\text{At least one of the students chosen studies Mathematics}), S = \\text{P}(\\text{The second student chosen studies Mathematics}), T = \\text{P}(\\text{All three of the students chosen study Mathematics}). Which of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "R < S < T",
+        "B": "R < T < S",
+        "C": "S < R < T",
+        "D": "S < T < R",
+        "E": "T < R < S",
+        "F": "T < S < R"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   Most students in a large college study Mathematics. A teacher chooses three\n     diﬀerent students at random, one after the other.\n     Consider these three probabilities:\n               R = P(At least one of the students chosen studies Mathematics)\n               S = P(The second student chosen studies Mathematics)\n               T = P(All three of the students chosen study Mathematics)\n     Which of the following is true?\n     A R<S<T\n     B R<T <S\n     C S<R<T\n     D S<T <R\n     E T <R<S\n     F T <S<R\n                                           14\n\f                                          \u0004b",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$R < S < T$",
+        "B": "$R < T < S$",
+        "C": "$S < R < T$",
+        "D": "$S < T < R$",
+        "E": "$T < R < S$",
+        "F": "$T < S < R$"
+      }
+    },
+    {
+      "id": "TMUA-2019-P2-Q13",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "A student approximates the integral \\int_{a}^{b} \\sin^{2} x \\, dx using the trapezium rule with 4 strips. The resulting approximation is an overestimate. Which of the following is/are necessarily true? I If the student approximates \\int_{-b}^{-a} \\sin^{2} x \\, dx in the same way, the result will be an overestimate. II If the student approximates \\int_{a}^{b} \\cos^{2} x \\, dx in the same way, the result will be an underestimate.",
+      "has_diagram": false,
+      "options": {
+        "A": "neither of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "I and II"
+      },
+      "correct_answer": "D",
+      "raw_text": "13   A student approximates the integral a sin2 x dx using the trapezium rule with\n     4 strips. The resulting approximation is an overestimate.\n     Which of the following is/are necessarily true?\n                                           \u0004 −a\n         I   If the student approximates    −b\n                                                  sin2 x dx in the same way, the result\n             will be an overestimate.\n                                           \u0004b\n         II If the student approximates     a\n                                                cos2 x dx in the same way, the result\n            will be an underestimate.\n     A neither of them\n     B I only\n     C II only\n     D I and II\n                                                15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q14",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "Consider the following statements about the polynomial p(x), where a < b: I p(a) \\leq p(b) II p'(a) \\leq p'(b) III p''(a) \\leq p''(b) Which of these statements is a necessary condition for p(x) to be increasing for a \\leq x \\leq b?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "B",
+      "raw_text": "14   Consider the following statements about the polynomial p(x), where a < b:\n         I    p(a) ≤ p(b)\n         II   p\u0002 (a) ≤ p\u0002 (b)\n         III p\u0002\u0002 (a) ≤ p\u0002\u0002 (b)\n     Which of these statements is a necessary condition for p(x) to be increasing for\n     a ≤ x ≤ b?\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                            16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q15",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "The numbers $a$, $b$ and $c$ are each greater than 1. The following logarithms are all to the same base: $\\log(ab^{2}c) = 7$, $\\log(a^{2}bc^{2}) = 11$, $\\log(a^{2}b^{2}c^{3}) = 15$. What is this base?",
+      "has_diagram": false,
+      "options": {
+        "A": "$a$",
+        "B": "$b$",
+        "C": "$c$",
+        "D": "It is possible to determine the base, but the base is not $a$, $b$ or $c$.",
+        "E": "There is insufficient information given to determine the base."
+      },
+      "correct_answer": "B",
+      "raw_text": "15   The numbers a, b and c are each greater than 1.\n     The following logarithms are all to the same base:\n                                          log(ab2 c) = 7\n                                         log(a2 bc2 ) = 11\n                                        log(a2 b2 c3 ) = 15\n     What is this base?\n     A a\n     B b\n     C c\n     D It is possible to determine the base, but the base is not a, b or c.\n     E There is insuﬃcient information given to determine the base.\n                                              17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q16",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "The graph of the quadratic \\( y = px^{2} + qx + p \\) where \\( p > 0 \\), intersects the \\( x \\)-axis at two distinct points. In which one of the following graphs does the shaded region show the complete set of possible values that \\( p \\) and \\( q \\) could take?",
+      "has_diagram": false,
+      "options": {
+        "A": "Graph A",
+        "B": "Graph B",
+        "C": "Graph C",
+        "D": "Graph D",
+        "E": "Graph E",
+        "F": "Graph F",
+        "G": "Graph G",
+        "H": "Graph H"
+      },
+      "correct_answer": "F",
+      "raw_text": "16   The graph of the quadratic\n                                        y = px2 + qx + p\n     where p > 0, intersects the x-axis at two distinct points.\n     In which one of the following graphs does the shaded region show the complete set\n     of possible values that p and q could take?\n      A                         B                          C\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n      D                         E                          F\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n      G                         H\n          q                         q\n       4                         4\n       3                         3\n       2                         2\n       1                         1\n       0               p         0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6\n      −2                        −2\n      −3                        −3\n      −4                        −4\n                                             18",
+      "diagram_images": [],
+      "question_text_latex": "The graph of the quadratic $y = px^{2} + qx + p$ where $p > 0$, intersects the $x$-axis at two distinct points. In which one of the following graphs does the shaded region show the complete set of possible values that $p$ and $q$ could take?"
+    },
+    {
+      "id": "TMUA-2019-P2-Q17",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "A multiple-choice test question offered the following four options relating to a certain statement: A The statement is true if and only if x > 1 B The statement is true if x > 1 C The statement is true if and only if x > 2 D The statement is true if x > 2 Given that exactly one of these options was correct, which one was it?",
+      "has_diagram": false,
+      "options": {
+        "A": "The statement is true \\text{if and only if} x > 1",
+        "B": "The statement is true \\text{if} x > 1",
+        "C": "The statement is true \\text{if and only if} x > 2",
+        "D": "The statement is true \\text{if} x > 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "17   A multiple-choice test question oﬀered the following four options relating to a certain\n     statement:\n     A The statement is true if and only if x > 1\n     B The statement is true if x > 1\n     C The statement is true if and only if x > 2\n     D The statement is true if x > 2\n     Given that exactly one of these options was correct, which one was it?\n                                             19",
+      "diagram_images": [],
+      "question_text_latex": "A multiple-choice test question offered the following four options relating to a certain statement: A The statement is true if and only if $x > 1$ B The statement is true if $x > 1$ C The statement is true if and only if $x > 2$ D The statement is true if $x > 2$ Given that exactly one of these options was correct, which one was it?"
+    },
+    {
+      "id": "TMUA-2019-P2-Q18",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "Consider the following inequality: $(*):\\ a|x| + 1 \\leq |x - 2|$ where $a$ is a real constant. Which one of the following describes the complete set of values of $a$ such that $(*$) is true for all real $x$?",
+      "has_diagram": false,
+      "options": {
+        "A": "a \\leq \\frac{3}{2}",
+        "B": "a \\leq 1",
+        "C": "a \\leq \\frac{1}{2}",
+        "D": "a \\leq 0",
+        "E": "a \\leq -\\frac{1}{2}",
+        "F": "a \\leq -1",
+        "G": "a \\leq -\\frac{3}{2}",
+        "H": "There are no such values of a."
+      },
+      "correct_answer": "E",
+      "raw_text": "18   Consider the following inequality:\n          (∗):    a|x| + 1 ≤ |x − 2|\n     where a is a real constant.\n     Which one of the following describes the complete set of values of a such that (∗) is\n     true for all real x?\n     A a ≤ 32\n     B a≤1\n     C a ≤ 12\n     D a≤0\n     E a ≤ − 12\n     F a ≤ −1\n     G a ≤ − 32\n     H There are no such values of a.\n                                             20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q19",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "Find the value of the expression \\sqrt{8 - 4\\sqrt{2} + 1} + \\sqrt{9 - 12\\sqrt{2} + 8}",
+      "has_diagram": false,
+      "options": {
+        "A": "\\sqrt{26 - 16\\sqrt{2}}",
+        "B": "4\\sqrt{2} - 4",
+        "C": "-2",
+        "D": "4 - 4\\sqrt{2}",
+        "E": "2",
+        "F": "\\sqrt{26} - 4\\sqrt{2}",
+        "G": "1"
+      },
+      "correct_answer": "E",
+      "raw_text": "19   Find the value of the expression\n                               \u0005              \u0005\n                                      √              √\n                                 8 − 4 2 + 1 + 9 − 12 2 + 8\n       \u0006        √\n     A   26 − 16 2\n        √\n     B 4 2−4\n     C −2\n          √\n     D 4−4 2\n     E 2\n       √       √\n     F   26 − 4 2\n     G 1\n                                         21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2019-P2-Q20",
+      "year": 2019,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "When the graph of the function $y = f(x)$, defined on the real numbers, is reflected in the $y$-axis and then translated by 2 units in the negative $x$-direction, the result is the graph of the function $y = g(x)$. When the graph of the same function $y = f(x)$ is translated by 2 units in the negative $x$-direction and then reflected in the $y$-axis, the result is the graph of the function $y = h(x)$. Which one of the following conditions on $y = f(x)$ is necessary and sufficient for the functions $g(x)$ and $h(x)$ to be identical?",
+      "has_diagram": false,
+      "options": {
+        "A": "$f(x) = f(x + 2)$ for all $x$",
+        "B": "$f(x) = f(x + 4)$ for all $x$",
+        "C": "$f(x) = f(x + 8)$ for all $x$",
+        "D": "$f(x) = f(-x)$ for all $x$",
+        "E": "$f(x) = f(2 - x)$ for all $x$",
+        "F": "$f(x) = f(4 - x)$ for all $x$",
+        "G": "$f(x) = f(8 - x)$ for all $x$"
+      },
+      "correct_answer": "B",
+      "raw_text": "20   When the graph of the function y = f(x), deﬁned on the real numbers, is reﬂected in\n     the y-axis and then translated by 2 units in the negative x-direction, the result is the\n     graph of the function y = g(x).\n     When the graph of the same function y = f(x) is translated by 2 units in the\n     negative x-direction and then reﬂected in the y-axis, the result is the graph of the\n     function y = h(x).\n     Which one of the following conditions on y = f(x) is necessary and suﬃcient for\n     the functions g(x) and h(x) to be identical?\n     A f(x) = f(x + 2) for all x\n     B f(x) = f(x + 4) for all x\n     C f(x) = f(x + 8) for all x\n     D f(x) = f(−x) for all x\n     E f(x) = f(2 − x) for all x\n     F f(x) = f(4 − x) for all x\n     G f(x) = f(8 − x) for all x\n                                             22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

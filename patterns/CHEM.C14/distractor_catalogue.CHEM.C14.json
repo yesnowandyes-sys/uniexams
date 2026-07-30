@@ -1,0 +1,38 @@
+{
+  "topic_key": "CHEM.C14",
+  "topic_name": "Metals",
+  "module_code": "C",
+  "corpus_question_count": 2,
+  "corpus_backed": false,
+  "distractors": [
+    {
+      "distractor_type": "Inversion of Carbon Reduction Threshold",
+      "frequency": 2,
+      "example_question_id": "Q1",
+      "why_effective": "This exploits the confusion between the reactivity of a metal and the *difficulty* of extracting it. Students often conflate 'easily extracted' with 'highly reactive'. However, highly reactive metals (e.g., Na, Al) are *hard* to extract (electrolysis needed), while less reactive metals (e.g., Fe, Zn) are *easier* to extract (carbon reduction). The distractor presents the less reactive metals (extracted by carbon) as 'more reactive' than the electrolysis metals.",
+      "generation_strategy": "Identify the subset of metals extracted by carbon. Swap their position in the reactivity order with the metals extracted by electrolysis (or place them at the top of the 'most reactive' list)."
+    },
+    {
+      "distractor_type": "Position-Swap of Paired Neighbors",
+      "frequency": 2,
+      "example_question_id": "Q1, Q2",
+      "why_effective": "When a logical deduction leads to a sequence like R > Q > S > P, a highly effective distractor is swapping adjacent pairs, such as R > S > Q > P or Q > R > P > S. This tests if the student has derived the strict inequality from the displacement data rather than just grouping them loosely.",
+      "generation_strategy": "Generate the correct ordered sequence (e.g., A-B-C-D). Create distractors by swapping pairs: (B-A-C-D), (A-C-B-D), (A-B-D-C)."
+    },
+    {
+      "distractor_type": "Hydrogen-Reactivity Misplacement",
+      "frequency": 1,
+      "example_question_id": "Q2",
+      "why_effective": "This targets the specific reactivity benchmark of Hydrogen. Metals above H react with acids; those below do not. A common error is assuming that because T produces H2, it is the 'most' reactive overall, ignoring that M might displace Q despite not reacting with acid. The distractor places T above M (Option G: T, M, R, Q) to trap students who prioritize the visible gas reaction over the displacement series.",
+      "generation_strategy": "Isolate the metal that reacts with acid. Place it at the very top of the order, ignoring potential displacement evidence suggesting a more reactive (but acid-inert or unreactive) metal exists."
+    },
+    {
+      "distractor_type": "Displacement Direction Reversal",
+      "frequency": 1,
+      "example_question_id": "Q2",
+      "why_effective": "Students often memorize 'Active metal displaces Inactive metal' but misapply it to the specific equation `R + T-sulfate -> R-sulfate + T`. A distractor might list T > R if the student assumes the 'product' metal (T) was the victor, or if they misread the arrow as 'T pushes R out'.",
+      "generation_strategy": "Reverse the order of metals explicitly involved in a displacement reaction equation provided in the prompt."
+    }
+  ],
+  "_raw": null
+}

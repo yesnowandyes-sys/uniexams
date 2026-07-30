@@ -1,0 +1,414 @@
+{
+  "source_file": "TMUA-2020-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2020,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2020-P1-Q1",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "1 Which of the following is an expression for the ﬁrst derivative with respect to x of x3 − 5x2 √ 2x x √ x",
+      "has_diagram": false,
+      "options": {
+        "A": "− 2 √ x",
+        "B": "4 3x − 5",
+        "C": "√ 4 x √ 3 x−5",
+        "D": "√ 4 x √ 3 x − 10",
+        "E": "√ 3 x 3x2 − 10x",
+        "F": "√ 3 x 3"
+      },
+      "correct_answer": "C",
+      "raw_text": "1   Which of the following is an expression for the ﬁrst derivative with respect to x of\n                                           x3 − 5x2\n                                               √\n                                            2x x\n        √\n          x\n    A −\n         2\n        √\n          x\n    B\n         4\n          3x − 5\n    C       √\n           4 x\n           √\n          3 x−5\n    D         √\n            4 x\n           √\n          3 x − 10\n    E         √\n             3 x\n          3x2 − 10x\n    F         √\n            3 x\n                                             3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q2",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "2 (2x + 1) and (x − 2) are factors of 2x3 + px2 + q What is the value of 2p + q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "−10",
+        "B": "− 38 5",
+        "C": "− 22 3",
+        "D": "22 3",
+        "E": "38 5",
+        "F": "10 4"
+      },
+      "correct_answer": "C",
+      "raw_text": "2   (2x + 1) and (x − 2) are factors of 2x3 + px2 + q\n    What is the value of 2p + q ?\n    A −10\n    B − 38\n        5\n    C − 22\n        3\n    D     22\n          3\n    E     38\n          5\n    F    10\n                                            4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q3",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "3 Find the complete set of values of x for which (x + 4)(x + 3)(1 − x) > 0 and (x + 2)(x − 2) < 0",
+      "has_diagram": false,
+      "options": {
+        "A": "1<x<2",
+        "B": "−2 < x < 1",
+        "C": "−2 < x < 2",
+        "D": "x < −2 or x > 1",
+        "E": "x < −4 or x > 2",
+        "F": "x < −4 or − 3 < x < 1",
+        "G": "−4 < x < −2 or x > 1 5"
+      },
+      "correct_answer": "B",
+      "raw_text": "3   Find the complete set of values of x for which\n                     (x + 4)(x + 3)(1 − x) > 0 and (x + 2)(x − 2) < 0\n    A    1<x<2\n    B −2 < x < 1\n    C −2 < x < 2\n    D    x < −2 or x > 1\n    E    x < −4 or x > 2\n    F    x < −4 or − 3 < x < 1\n    G −4 < x < −2 or x > 1\n                                            5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q4",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "4 The 1st , 2nd and 3rd terms of a geometric progression are also the 1st , 4th and 6th terms, respectively, of an arithmetic progression. The sum to inﬁnity of the geometric progression is 12. Find the 1st term of the geometric progression.",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5",
+        "F": "6 6"
+      },
+      "correct_answer": "D",
+      "raw_text": "4   The 1st , 2nd and 3rd terms of a geometric progression are also the 1st , 4th and 6th\n    terms, respectively, of an arithmetic progression.\n    The sum to inﬁnity of the geometric progression is 12.\n    Find the 1st term of the geometric progression.\n    A 1\n    B 2\n    C 3\n    D 4\n    E 5\n    F 6\n                                              6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q5",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "5 The curve S has equation y = px2 + 6x − q where p and q are constants. S has a line of symmetry at x = − 14 and touches the x-axis at exactly one point. What is the value of p + 8q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "18",
+        "C": "21",
+        "D": "25",
+        "E": "38 7"
+      },
+      "correct_answer": "A",
+      "raw_text": "5   The curve S has equation\n                                      y = px2 + 6x − q\n    where p and q are constants.\n    S has a line of symmetry at x = − 14 and touches the x-axis at exactly one point.\n    What is the value of p + 8q ?\n    A 6\n    B 18\n    C 21\n    D 25\n    E 38\n                                            7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q6",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "6 Find the maximum value of the function 1 f(x) = 52x − 4(5x ) + 7",
+      "has_diagram": false,
+      "options": {
+        "A": "1 7",
+        "B": "1 4",
+        "C": "1 3",
+        "D": "3",
+        "E": "4",
+        "F": "7 8"
+      },
+      "correct_answer": "C",
+      "raw_text": "6   Find the maximum value of the function\n                                                 1\n                                 f(x) =\n                                          52x − 4(5x ) + 7\n    A   1\n        7\n    B   1\n        4\n    C   1\n        3\n    D 3\n    E 4\n    F 7\n                                           8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q7",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "7 Given that 23x = 8(y+3) and 16(y+1) 4(x+1) = 8(y+3) what is the value of x + y ?",
+      "has_diagram": false,
+      "options": {
+        "A": "−23",
+        "B": "−22",
+        "C": "−15",
+        "D": "−14",
+        "E": "−11",
+        "F": "−10 9"
+      },
+      "correct_answer": "A",
+      "raw_text": "7   Given that\n                                     23x = 8(y+3)\n    and\n                                              16(y+1)\n                                   4(x+1) =\n                                               8(y+3)\n    what is the value of x + y ?\n    A −23\n    B −22\n    C −15\n    D −14\n    E −11\n    F −10\n                                        9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q8",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "8 The function f is deﬁned for all real x as f(x) = (p − x)(x + 2) Find the complete set of values of p for which the maximum value of f(x) is less than 4. √ √",
+      "has_diagram": false,
+      "options": {
+        "A": "−2 − 4 2 < p < −2 + 4 2 √ √",
+        "B": "−2 − 2 2 < p < −2 + 2 2 √ √",
+        "C": "−2 5 < p < 2 5",
+        "D": "−6 < p < 2",
+        "E": "−4 < p < 0",
+        "F": "−2 < p < 2 10"
+      },
+      "correct_answer": "D",
+      "raw_text": "8   The function f is deﬁned for all real x as\n                                     f(x) = (p − x)(x + 2)\n    Find the complete set of values of p for which the maximum value of f(x) is\n    less than 4.\n            √              √\n    A −2 − 4 2 < p < −2 + 4 2\n            √              √\n    B −2 − 2 2 < p < −2 + 2 2\n        √         √\n    C −2 5 < p < 2 5\n    D −6 < p < 2\n    E −4 < p < 0\n    F −2 < p < 2\n                                            10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q9",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "9 The quadratic expression x2 − 14x + 9 factorises as (x − α)(x − β), where α and β are positive real numbers. √ √ Which quadratic expression can be factorised as (x − α )(x − β ) ? √",
+      "has_diagram": false,
+      "options": {
+        "A": "x2 − 10x + 3 √",
+        "B": "x2 − 14x + 3 √",
+        "C": "x2 − 20x + 3",
+        "D": "x2 − 178x + 81",
+        "E": "x2 − 176x + 81",
+        "F": "x2 + 196x + 81 11"
+      },
+      "correct_answer": "C",
+      "raw_text": "9   The quadratic expression x2 − 14x + 9 factorises as (x − α)(x − β), where α and β\n    are positive real numbers.\n                                                          √        √\n    Which quadratic expression can be factorised as (x − α )(x − β ) ?\n             √\n    A x2 −       10x + 3\n             √\n    B x2 −       14x + 3\n             √\n    C x2 −       20x + 3\n    D x2 − 178x + 81\n    E x2 − 176x + 81\n    F x2 + 196x + 81\n                                          11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q10",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "10 The following sequence of transformations is applied to the curve y = 4x2 3 1. Translation by −5 2. Reﬂection in the x-axis 3. Stretch parallel to the x-axis with scale factor 2 What is the equation of the resulting curve?",
+      "has_diagram": false,
+      "options": {
+        "A": "y = −x2 + 12x − 31",
+        "B": "y = −x2 + 12x − 41",
+        "C": "y= x2 + 12x + 31",
+        "D": "y= x2 + 12x + 41",
+        "E": "y = −16x2 + 48x − 31",
+        "F": "y = −16x2 + 48x − 41",
+        "G": "y= 16x2 − 48x + 31",
+        "H": "y= 16x2 − 48x + 41 12"
+      },
+      "correct_answer": "A",
+      "raw_text": "10   The following sequence of transformations is applied to the curve y = 4x2\n                             \u0002 \u0003\n                                3\n           1. Translation by\n                               −5\n           2. Reﬂection in the x-axis\n           3. Stretch parallel to the x-axis with scale factor 2\n     What is the equation of the resulting curve?\n     A y = −x2 + 12x − 31\n     B y = −x2 + 12x − 41\n     C y=     x2 + 12x + 31\n     D y=     x2 + 12x + 41\n     E y = −16x2 + 48x − 31\n     F y = −16x2 + 48x − 41\n     G y=     16x2 − 48x + 31\n     H y=     16x2 − 48x + 41\n                                             12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q11",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "11 The quadratic function shown passes through (2, 0) and (q, 0), where q > 2. y R x 2 q S What is the value of q such that the area of region R equals the area of region S ? √",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "3",
+        "C": "18 5",
+        "D": "4",
+        "E": "6",
+        "F": "33 5 13"
+      },
+      "correct_answer": "E",
+      "raw_text": "11   The quadratic function shown passes through (2, 0) and (q, 0), where q > 2.\n              y\n                  R\n                                                  x\n                      2                  q\n                             S\n     What is the value of q such that the area of region R equals the area of region S ?\n         √\n     A        6\n     B 3\n     C   18\n          5\n     D 4\n     E 6\n     F   33\n          5\n                                             13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q12",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "12 How many real solutions are there to the equation √ 3 cos x = x where x is in radians?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4",
+        "F": "5",
+        "G": "inﬁnitely many 14"
+      },
+      "correct_answer": "D",
+      "raw_text": "12   How many real solutions are there to the equation\n                                                    √\n                                        3 cos x =       x\n     where x is in radians?\n     A 0\n     B 1\n     C 2\n     D 3\n     E 4\n     F 5\n     G inﬁnitely many\n                                           14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q13",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "13 Find the coeﬃcient of x2 y 4 in the expansion of (1 + x + y 2 )7",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "21",
+        "D": "35",
+        "E": "105",
+        "F": "210 15"
+      },
+      "correct_answer": "F",
+      "raw_text": "13   Find the coeﬃcient of x2 y 4 in the expansion of (1 + x + y 2 )7\n     A 6\n     B 10\n     C 21\n     D 35\n     E 105\n     F 210\n                                               15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q14",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "14 The area enclosed between the line y = mx and the curve y = x3 is 6. What is the value of m ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "4 √",
+        "C": "3 √",
+        "D": "6 √",
+        "E": "2 3 √",
+        "F": "2 6 16"
+      },
+      "correct_answer": "E",
+      "raw_text": "14   The area enclosed between the line y = mx and the curve y = x3 is 6.\n     What is the value of m ?\n     A 2\n     B 4\n       √\n     C   3\n       √\n     D   6\n         √\n     E 2 3\n         √\n     F 2 6\n                                           16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q15",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "15 Find the positive diﬀerence between the two real values of x for which 2 4 1 (log2 x) + 12 log2 − 26 = 0 x",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "16",
+        "C": "15 4",
+        "D": "17 4",
+        "E": "255 16",
+        "F": "257 16 17"
+      },
+      "correct_answer": "C",
+      "raw_text": "15   Find the positive diﬀerence between the two real values of x for which\n                                          \u0002     \u0002 \u0003\u00032\n                                    4            1\n                             (log2 x) + 12 log2       − 26 = 0\n                                                 x\n     A 4\n     B 16\n     C   15\n          4\n     D   17\n          4\n     E   255\n          16\n     F   257\n          16\n                                            17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q16",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "16 The circle C1 has equation (x + 2)2 + (y − 1)2 = 3 The circle C2 has equation (x − 4)2 + (y − 1)2 = 3 The straight line l is a tangent to both C1 and C2 and has positive gradient. The acute angle between l and the x-axis is θ Find the value of tan θ",
+      "has_diagram": false,
+      "options": {
+        "A": "1 2",
+        "B": "2 √",
+        "C": "2 2 √",
+        "D": "2 √",
+        "E": "2 6 √",
+        "F": "3 6 √",
+        "G": "3 3 √",
+        "H": "3 18"
+      },
+      "correct_answer": "C",
+      "raw_text": "16   The circle C1 has equation (x + 2)2 + (y − 1)2 = 3\n     The circle C2 has equation (x − 4)2 + (y − 1)2 = 3\n     The straight line l is a tangent to both C1 and C2 and has positive gradient.\n     The acute angle between l and the x-axis is θ\n     Find the value of tan θ\n     A   1\n         2\n     B 2\n         √\n     C   2\n          2\n         √\n     D       2\n         √\n     E   2\n          6\n         √\n     F   3\n          6\n         √\n     G   3\n          3\n         √\n     H       3\n                                            18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q17",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "17 Find the complete set√of values of m in terms of c such that the graphs of y = mx + c and y = x have two points of intersection.",
+      "has_diagram": false,
+      "options": {
+        "A": "0 < m < 4c 1",
+        "B": "0 < m < 4c2",
+        "C": "m > 4c 1",
+        "D": "m < 4c 1",
+        "E": "m > 4c2",
+        "F": "m < 4c2 19"
+      },
+      "correct_answer": "A",
+      "raw_text": "17   Find the complete set√of values of m in terms of c such that the graphs of\n     y = mx + c and y = x have two points of intersection.\n     A 0 < m < 4c\n               1\n     B 0 < m < 4c2\n     C m > 4c\n           1\n     D m < 4c\n           1\n     E m > 4c2\n     F m < 4c2\n                                            19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q18",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "18 Find the number of solutions and the sum of the solutions of the equation 1 − 2 cos2 x = | cos x | where 0 ≤ x ≤ 180◦",
+      "has_diagram": false,
+      "options": {
+        "A": "Number of solutions = 2 Sum of solutions = 180◦",
+        "B": "Number of solutions = 2 Sum of solutions = 240◦",
+        "C": "Number of solutions = 3 Sum of solutions = 180◦",
+        "D": "Number of solutions = 3 Sum of solutions = 360◦",
+        "E": "Number of solutions = 4 Sum of solutions = 240◦",
+        "F": "Number of solutions = 4 Sum of solutions = 360◦ 20"
+      },
+      "correct_answer": "A",
+      "raw_text": "18   Find the number of solutions and the sum of the solutions of the equation\n                                    1 − 2 cos2 x = | cos x |\n     where 0 ≤ x ≤ 180◦\n     A Number of solutions = 2      Sum of solutions = 180◦\n     B Number of solutions = 2      Sum of solutions = 240◦\n     C Number of solutions = 3      Sum of solutions = 180◦\n     D Number of solutions = 3      Sum of solutions = 360◦\n     E Number of solutions = 4      Sum of solutions = 240◦\n     F Number of solutions = 4      Sum of solutions = 360◦\n                                            20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q19",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "19 Find the lowest positive integer for which x2 − 52x − 52 is positive.",
+      "has_diagram": false,
+      "options": {
+        "A": "26",
+        "B": "27",
+        "C": "51",
+        "D": "52",
+        "E": "53",
+        "F": "54 21"
+      },
+      "correct_answer": "E",
+      "raw_text": "19   Find the lowest positive integer for which x2 − 52x − 52 is positive.\n     A 26\n     B 27\n     C 51\n     D 52\n     E 53\n     F 54\n                                             21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P1-Q20",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "20 For how many values of a is the equation (x − a)(x2 − x + a) = 0 satisﬁed by exactly two distinct values of x ? This document was initially designed for print and as such does not reach accessibility standard WCAG 2.1 in a number of ways including missing text alternatives and missing document structure. If you need this document in a different format please email admissionstesting@cambridgeassessment.org.uk telling us your name, email address and requirements and we will respond within 15 working days.",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4",
+        "F": "more than 4 22 23 24"
+      },
+      "correct_answer": "C",
+      "raw_text": "20   For how many values of a is the equation\n                                    (x − a)(x2 − x + a) = 0\n     satisﬁed by exactly two distinct values of x ?\n     A 0\n     B 1\n     C 2\n     D 3\n     E 4\n     F more than 4\n                                             22\n\fBLANK PAGE\n    23\n\f                                           BLANK PAGE\nThis document was initially designed for print and as such does not reach accessibility standard WCAG 2.1\nin a number of ways including missing text alternatives and missing document structure.\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and requirements and\nwe will respond within 15 working days.\n                                                    24",
+      "diagram_images": []
+    }
+  ]
+}

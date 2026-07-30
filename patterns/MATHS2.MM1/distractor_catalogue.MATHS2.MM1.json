@@ -1,0 +1,72 @@
+{
+  "topic_key": "MATHS2.MM1",
+  "topic_name": "Algebra and functions",
+  "module_code": "M2",
+  "corpus_question_count": 68,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Sign Flip Inequality",
+      "frequency": "High",
+      "example_question_id": [
+        "Q2",
+        "Q15"
+      ],
+      "why_effective": "Tests the student's vigilance regarding the direction of the inequality sign when multiplying or dividing by a negative quantity during algebraic manipulation.",
+      "generation_strategy": "Create a quadratic inequality where the roots are found correctly (e.g., $x < -2, x > 2$), but swap the inequality signs in one or both regions to create options like $-2 < x < 2$."
+    },
+    {
+      "distractor_type": "Inverse Region Exclusion",
+      "frequency": "High",
+      "example_question_id": [
+        "Q1",
+        "Q14",
+        "Q15"
+      ],
+      "why_effective": "Exploits confusion between the conditions for 'distinct real roots' (discriminant > 0) and 'no real roots' (discriminant < 0), or simply inverting the derived interval.",
+      "generation_strategy": "Derive the correct range for a parameter $a$ (e.g., $a < -8, a > 4$). Provide distractors that are the inverse of this interval (e.g., $-8 < a < 4$) or single points from the boundary."
+    },
+    {
+      "distractor_type": "Partial Factorization Traps",
+      "frequency": "Medium",
+      "example_question_id": [
+        "Q9",
+        "Q35"
+      ],
+      "why_effective": "Targets students who begin the simplification process but fail to cancel common factors or misapply polynomial division rules.",
+      "generation_strategy": "For rational expressions, offer the result of the expansion of the numerator without cancellation, or the cancellation of terms rather than factors (e.g., canceling $x$ from $x^2+x$ incorrectly to leave $x+1$)."
+    },
+    {
+      "distractor_type": "Missing Domain Restrictions",
+      "frequency": "Medium",
+      "example_question_id": [
+        "Q3",
+        "Q24"
+      ],
+      "why_effective": "Tests the understanding that algebraic solutions for inequalities or roots must respect the domain (e.g., square roots, denominators).",
+      "generation_strategy": "For inequalities involving $\\sqrt{x}$ or denominators, generate the option that represents the solution to the algebraically squared equation but includes invalid regions (e.g., negative values for a square root)."
+    },
+    {
+      "distractor_type": "Distractor Expansion Coefficients",
+      "frequency": "Medium",
+      "example_question_id": [
+        "Q4",
+        "Q12",
+        "Q34"
+      ],
+      "why_effective": "In binomial expansion questions, students often calculate specific terms (e.g., $x^2$ or $x^4$) correctly but misidentify them as the requested term (e.g., $x^3$).",
+      "generation_strategy": "Calculate the coefficients for adjacent powers of $x$ (e.g., $n-1, n+1$) and list them as options alongside the correct coefficient."
+    },
+    {
+      "distractor_type": "Symmetry Miscalculation",
+      "frequency": "Low",
+      "example_question_id": [
+        "Q18",
+        "Q29"
+      ],
+      "why_effective": "Questions about graph transformations and symmetry often lead to answers that are 'one step away' from the correct symmetry condition (e.g., $f(x) = f(-x)$ vs $f(x) = f(a-x)$).",
+      "generation_strategy": "Offer the condition for symmetry about the y-axis ($x=0$) when the question asks for symmetry about $x=a$, or vice versa."
+    }
+  ],
+  "parse_repaired": true
+}

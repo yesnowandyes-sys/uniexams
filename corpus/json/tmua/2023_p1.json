@@ -1,0 +1,442 @@
+{
+  "source_file": "TMUA-2023-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2023,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2023-P1-Q1",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "Given that \\int_0^{1} (ax + b) \\, dx = 1 and \\int_0^{1} x(ax + b) \\, dx = 1, find the value of a + b.",
+      "has_diagram": false,
+      "options": {
+        "A": "-1",
+        "B": "0",
+        "C": "1",
+        "D": "2",
+        "E": "3",
+        "F": "4",
+        "G": "5"
+      },
+      "correct_answer": "F",
+      "raw_text": "1   Given that\n                                    1\n                               ∫ ( ax + b ) dx = 1\n                                 0\n    and\n                                1\n                               ∫ x ( ax + b ) dx = 1\n                                0\n    find the value of a + b.\n    A     –1\n    B      0\n    C      1\n    D      2\n    E      3\n    F      4\n    G      5\n                                        3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q2",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "The graphs of $y = x^{2} + 5x + 6$ and $y = mx - 3$, where $m$ is a constant, are plotted on the same set of axes. Given that the graphs do not meet, what is the complete range of possible values of $m$?",
+      "has_diagram": false,
+      "options": {
+        "A": "-1 < m < 11",
+        "B": "m < -1, m > 11",
+        "C": "-\\sqrt{11} < m < \\sqrt{11}",
+        "D": "m < -\\sqrt{11}, m > \\sqrt{11}",
+        "E": "-11 < m < 1",
+        "F": "m < -11, m > 1"
+      },
+      "correct_answer": "A",
+      "raw_text": "2   The graphs of y = x 2 + 5 x + 6 and y = m x – 3, where m is a constant, are plotted on the same\n    set of axes.\n    Given that the graphs do not meet, what is the complete range of possible values of m?\n    A   –1 < m < 11\n    B   m < –1, m > 11\n    C   − 11 < m < 11\n    D   m < − 11 , m > 11\n    E   –11 < m < 1\n    F   m < –11, m > 1\n                                                4",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$-1 < m < 11$",
+        "B": "$m < -1, m > 11$",
+        "E": "$-11 < m < 1$",
+        "F": "$m < -11, m > 1$"
+      }
+    },
+    {
+      "id": "TMUA-2023-P1-Q3",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "For any integer $n \\geq 0$, $\\int_{n}^{n+1} f(x) \\, dx = n + 1$. Evaluate $\\int_{0}^{3} f(x) \\, dx + \\int_{1}^{3} f(x) \\, dx + \\int_{2}^{3} f(x) \\, dx + \\int_{4}^{3} f(x) \\, dx + \\int_{5}^{3} f(x) \\, dx$",
+      "has_diagram": false,
+      "options": {
+        "A": "-2",
+        "B": "0",
+        "C": "1",
+        "D": "4",
+        "E": "18",
+        "F": "27"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   For any integer n ≥ 0 ,\n                                               n +1\n                                                ∫ f (x) dx = n + 1\n                                                n\n    Evaluate\n                          3            3              3          3             3\n                          ∫ f (x) dx + ∫ f (x) dx + ∫ f (x) dx + ∫ f (x) dx + ∫ f (x) dx\n                          0            1              2          4             5\n    A   –2\n    B    0\n    C    1\n    D    4\n    E    18\n    F    27\n                                                      5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q4",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^n}",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{\\sqrt{3}}{3}",
+        "D": "\\sqrt{3}",
+        "E": "3"
+      },
+      "correct_answer": "C",
+      "raw_text": "4   Evaluate\n                               π\n                ∞\n                    sin ⎛⎜ nπ + ⎞⎟\n                ∑\n                n=0\n                         ⎝\n                           2\n                             n\n                               3⎠\n    A   0\n        1\n    B\n        3\n          3\n    C\n         3\n    D       3\n    E   3\n                    6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q5",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "The following shape has two lines of reflectional symmetry. MNOP is a square of perimeter 40 cm. The vertices of rectangle RSTU lie on the edge of square MNOP. MR has length x cm. What is the largest possible value of x such that RSTU has area 20 cm^{2}?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\sqrt{2}",
+        "B": "\\sqrt{10}",
+        "C": "2\\sqrt{15}",
+        "D": "10\\sqrt{2}",
+        "E": "5+\\sqrt{5}",
+        "F": "5+\\sqrt{15}"
+      },
+      "correct_answer": "F",
+      "raw_text": "5   The following shape has two lines of reflectional symmetry.\n                                    N                     S       O\n                                                                  T\n                                    R\n                                    M       U                     P\n                                        [diagram not to scale]\n    MNOP is a square of perimeter 40 cm.\n    The vertices of rectangle RSTU lie on the edge of square MNOP.\n    MR has length x cm.\n    What is the largest possible value of x such that RSTU has area 20 cm2 ?\n    A     2\n    B     10\n    C   2 15\n    D   10 2\n    E   5+ 5\n    F   5 + 15\n                                                7",
+      "diagram_images": [],
+      "question_text_latex": "The following shape has two lines of reflectional symmetry. $MNOP$ is a square of perimeter $40$ cm. The vertices of rectangle $RSTU$ lie on the edge of square $MNOP$. $MR$ has length $x$ cm. What is the largest possible value of $x$ such that $RSTU$ has area $20$ cm$^{2}$?"
+    },
+    {
+      "id": "TMUA-2023-P1-Q6",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "In the simplified expansion of $(2+3x)^{12}$, how many of the terms have a coefficient that is divisible by 12?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "5",
+        "D": "10",
+        "E": "11",
+        "F": "12",
+        "G": "13"
+      },
+      "correct_answer": "E",
+      "raw_text": "6   In the simplified expansion of (2 + 3x)12, how many of the terms have a coefficient that is\n    divisible by 12?\n    A   0\n    B   2\n    C   5\n    D   10\n    E   11\n    F   12\n    G   13\n                                                 8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q7",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "P(x) and Q(x) are defined as follows: P(x) = 2^x + 4, Q(x) = 2^{(2x-2)} - 2^{(x+2)} + 16. Find the largest value of x such that P(x) and Q(x) are in the ratio 4:1, respectively.",
+      "has_diagram": false,
+      "options": {
+        "A": "5",
+        "B": "12",
+        "C": "32",
+        "D": "\\log_2 3",
+        "E": "\\log_2 5",
+        "F": "\\log_2 12",
+        "G": "\\log_2 20"
+      },
+      "correct_answer": "F",
+      "raw_text": "7   P(x) and Q(x) are defined as follows:\n                                             x\n                                    P(x) = 2 + 4\n                                                 x        x\n                                    Q(x) = 2( 2 – 2) – 2( + 2) + 16\n    Find the largest value of x such that P(x) and Q(x) are in the ratio 4 : 1, respectively.\n    A   5\n    B   12\n    C   32\n    D   log2 3\n    E   log2 5\n    F   log2 12\n    G   log2 20\n                                                      9",
+      "diagram_images": [],
+      "question_text_latex": "$P(x)$ and $Q(x)$ are defined as follows: $P(x) = 2^x + 4$, $Q(x) = 2^{2x-2} - 2^{x+2} + 16$. Find the largest value of $x$ such that $P(x)$ and $Q(x)$ are in the ratio $4:1$, respectively."
+    },
+    {
+      "id": "TMUA-2023-P1-Q8",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "A triangle XYZ is called fun if it has the following properties: \\angle YXZ = 30^\\circ, XY = \\sqrt{3} a, YZ = a where a is a constant. For a given value of a, there are two distinct fun triangles S and T, where the area of S is greater than the area of T. Find the ratio \\text{area of } S : \\text{area of } T",
+      "has_diagram": false,
+      "options": {
+        "A": "1:1",
+        "B": "2:1",
+        "C": "2:\\sqrt{3}",
+        "D": "\\sqrt{3}:1",
+        "E": "3:1"
+      },
+      "correct_answer": "B",
+      "raw_text": "8   A triangle XYZ is called fun if it has the following properties:\n                             angle YXZ = 30°\n                             XY =     3a\n                             YZ = a\n    where a is a constant.\n    For a given value of a, there are two distinct fun triangles S and T, where the area of S is\n    greater than the area of T.\n    Find the ratio\n                                            area of S : area of T\n    A    1:1\n    B    2:1\n    C    2: 3\n    D     3 :1\n    E    3:1\n                                                  10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q9",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "How many solutions are there to $(1 + 3\\cos 3\\theta)^{2} = 4$ in the interval $0^\\circ \\leq \\theta \\leq 180^\\circ$?",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5",
+        "F": "6"
+      },
+      "correct_answer": "E",
+      "raw_text": "9   How many solutions are there to\n                                      (1 + 3 cos 3 θ )2 = 4\n    in the interval 0° ≤ θ ≤ 180° ?\n    A   1\n    B   2\n    C   3\n    D   4\n    E   5\n    F   6\n                                           11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q10",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "The trapezium rule with 4 strips is used to estimate the integral: \\int_{-2}^{2} \\sqrt{4 - x^2} dx What is the positive difference between the estimate and the exact value of the integral?",
+      "has_diagram": false,
+      "options": {
+        "A": "2(\\pi - 2 - 2\\sqrt{3})",
+        "B": "2(\\pi - 1 - \\sqrt{3})",
+        "C": "2(2\\pi - 1 - \\sqrt{3})",
+        "D": "4(\\pi - 1 - \\sqrt{3})",
+        "E": "2\\pi - 3\\sqrt{3}",
+        "F": "4\\pi - 6\\sqrt{3}"
+      },
+      "correct_answer": "B",
+      "raw_text": "10   The trapezium rule with 4 strips is used to estimate the integral:\n                                                   2\n                                               ∫\n                                                            2\n                                                        4 − x dx\n                                                 −2\n     What is the positive difference between the estimate and the exact value of the integral?\n     A   2( π − 2 − 2 3 )\n     B   2 ( π − 1− 3 )\n     C   2 ( 2π − 1 − 3 )\n     D   4 ( π − 1− 3 )\n     E   2π − 3 3\n     F   4π − 6 3\n                                                       12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q11",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "It is given that f(x) = x^{2} - 6x. The curves y = f(kx) and y = f(x - c) have the same minimum point, where k > 0 and c > 0. Which of the following is a correct expression for k in terms of c?",
+      "has_diagram": false,
+      "options": {
+        "A": "k = \\frac{3 - c}{3}",
+        "B": "k = \\frac{3}{c + 3}",
+        "C": "k = \\frac{c - 6}{6}",
+        "D": "k = \\frac{6}{6 - c}",
+        "E": "k = \\frac{c + 9}{9}",
+        "F": "k = \\frac{9}{c - 9}"
+      },
+      "correct_answer": "B",
+      "raw_text": "11   It is given that f (x) = x2 – 6x\n     The curves y = f (k x) and y = f (x – c) have the same minimum point, where k > 0 and c > 0\n     Which of the following is a correct expression for k in terms of c ?\n               3−c\n     A    k=\n                3\n                3\n     B    k=\n               c+3\n               c−6\n     C    k=\n                6\n                6\n     D    k=\n               6−c\n               c+9\n     E    k=\n                9\n                 9\n     F    k=\n               c −9\n                                                  13",
+      "diagram_images": [],
+      "question_text_latex": "It is given that $f(x) = x^{2} - 6x$. The curves $y = f(kx)$ and $y = f(x - c)$ have the same minimum point, where $k > 0$ and $c > 0$. Which of the following is a correct expression for $k$ in terms of $c$?"
+    },
+    {
+      "id": "TMUA-2023-P1-Q12",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "How many solutions are there to the equation \\frac{2^{\\tan^{2} x}}{4^{\\sin^{2} x}} = 1 in the range 0 \\leq x \\leq 2\\pi?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6",
+        "F": "7",
+        "G": "8"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   How many solutions are there to the equation\n                                                     2\n                                                   tan x\n                                               2\n                                                     2\n                                                           =1\n                                                   sin x\n                                               4\n     in the range 0 ≤ x ≤ 2π ?\n     A   2\n     B   3\n     C   4\n     D   5\n     E   6\n     F   7\n     G   8\n                                               14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q13",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "Point $P$ lies on the circle with equation $(x - 2)^{2} + (y - 1)^{2} = 16$. Point $Q$ lies on the circle with equation $(x - 4)^{2} + (y + 5)^{2} = 16$. What is the maximum possible length of $PQ$?",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "14",
+        "C": "16",
+        "D": "2\\sqrt{34}",
+        "E": "10\\sqrt{2}",
+        "F": "8 + 2\\sqrt{10}",
+        "G": "16 + 2\\sqrt{6}"
+      },
+      "correct_answer": "F",
+      "raw_text": "13   Point P lies on the circle with equation (x – 2)2 + (y – 1)2 = 16\n     Point Q lies on the circle with equation (x – 4)2 + (y + 5)2 = 16\n     What is the maximum possible length of PQ ?\n     A    10\n     B    14\n     C    16\n     D    2 34\n     E   10 2\n     F    8 + 2 10\n     G    16 + 2 6\n                                                   15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q14",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "The function \\( f(x) = \\frac{2}{3}x^{3} + 2mx^{2} + n, \\ m > 0 \\) has three distinct real roots. What is the complete range of possible values of \\( n \\), in terms of \\( m \\)?",
+      "has_diagram": false,
+      "options": {
+        "A": " \\( -\\frac{8}{3}m^{3} < n < 0 \\)",
+        "B": " \\( -\\frac{4}{3}m^{3} < n < 0 \\)",
+        "C": " \\( 0 < n < \\frac{3}{2}m^{2} \\)",
+        "D": " \\( 0 < n < \\frac{40}{3}m^{3} \\)",
+        "E": " \\( n < -\\frac{8}{3}m^{3} \\)",
+        "F": " \\( n < \\frac{3}{2}m^{2} \\)",
+        "G": " \\( n > -\\frac{4}{3}m^{3} \\)",
+        "H": " \\( n > \\frac{40}{3}m^{3} \\)"
+      },
+      "correct_answer": "A",
+      "raw_text": "14   The function\n                                                2 3\n                                      f (x) =     x + 2mx2 + n, m > 0\n                                                3\n     has three distinct real roots.\n     What is the complete range of possible values of n, in terms of m?\n           8 3\n     A    − m <n<0\n           3\n           4 3\n     B    − m <n<0\n           3\n                    3 2\n     C    0<n<        m\n                    2\n                    40 3\n     D    0<n<        m\n                    3\n                8    3\n     E    n<− m\n                3\n               3 2\n     F    n<     m\n               2\n                4    3\n     G    n>− m\n                3\n               40 3\n     H    n>     m\n               3\n                                                   16\n\f                                                                                       cos x",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q15",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "The difference between the maximum and minimum values of the function f(x) = a^{\\cos x}, where a > 0 and x is real, is 3. Find the sum of the possible values of a.",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "\\frac{3}{2}",
+        "C": "\\frac{5}{2}",
+        "D": "3",
+        "E": "\\sqrt{10}",
+        "F": "\\sqrt{13}"
+      },
+      "correct_answer": "F",
+      "raw_text": "15   The difference between the maximum and minimum values of the function f (x) = a       ,\n     where a > 0 and x is real, is 3.\n     Find the sum of the possible values of a.\n     A   0\n         3\n     B\n         2\n         5\n     C\n         2\n     D   3\n     E       10\n     F       13\n                                                 17",
+      "diagram_images": [],
+      "question_text_latex": "The difference between the maximum and minimum values of the function $f(x) = a^{\\cos x}$, where $a > 0$ and $x$ is real, is $3$. Find the sum of the possible values of $a$."
+    },
+    {
+      "id": "TMUA-2023-P1-Q16",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "A right-angled triangle has vertices at (2, 3), (9, -1) and (5, k). Find the sum of all the possible values of k.",
+      "has_diagram": false,
+      "options": {
+        "A": "-8",
+        "B": "-6",
+        "C": "0.25",
+        "D": "2",
+        "E": "2.25",
+        "F": "8.25",
+        "G": "10.25"
+      },
+      "correct_answer": "E",
+      "raw_text": "16   A right-angled triangle has vertices at (2, 3), (9, –1) and (5, k ).\n     Find the sum of all the possible values of k.\n     A   –8\n     B   –6\n     C     0.25\n     D     2\n     E     2.25\n     F     8.25\n     G     10.25\n                                                     18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q17",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "A circle \\( C_n \\) is defined by \\( x^{2} + y^{2} = 2n(x + y) \\) where \\( n \\) is a positive integer. \\( C_1 \\) and \\( C_2 \\) are drawn and the area between them is shaded. Next, \\( C_3 \\) and \\( C_4 \\) are drawn and the area between them is shaded. This is shown in the diagram. [diagram not to scale] This process continues until 100 circles have been drawn. What is the total shaded area?",
+      "has_diagram": true,
+      "options": {
+        "A": "100\\pi",
+        "B": "500\\pi",
+        "C": "2500\\pi",
+        "D": "5050\\pi",
+        "E": "10100\\pi",
+        "F": "40400\\pi"
+      },
+      "correct_answer": "E",
+      "raw_text": "17   A circle Cn is defined by\n                                            x 2 + y 2 = 2 n ( x + y)\n     where n is a positive integer.\n     C1 and C2 are drawn and the area between them is shaded.\n     Next, C3 and C4 are drawn and the area between them is shaded.\n     This is shown in the diagram.\n                                      y\n                                                                       x\n                                          [diagram not to scale]\n     This process continues until 100 circles have been drawn.\n     What is the total shaded area?\n     A   100π\n     B   500π\n     C   2500π\n     D   5050π\n     E   10100π\n     F   40400π\n                                                  19",
+      "diagram_images": [
+        "TMUA-2023-P1-Q17-fig1.png"
+      ],
+      "question_text_latex": "A circle $C_n$ is defined by $x^{2} + y^{2} = 2n(x + y)$ where $n$ is a positive integer. $C_1$ and $C_2$ are drawn and the area between them is shaded. Next, $C_3$ and $C_4$ are drawn and the area between them is shaded. This is shown in the diagram. [diagram not to scale] This process continues until 100 circles have been drawn. What is the total shaded area?"
+    },
+    {
+      "id": "TMUA-2023-P1-Q18",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "You are given that\nS = 4 + \\frac{8k}{7} + \\frac{16k^2}{49} + \\frac{32k^3}{343} + \\dots + 4\\left(\\frac{2k}{7}\\right)^n + \\dots\nThe value for k is chosen as an integer in the range -5 \\leq k \\leq 5\nAll possible values for k are equally likely to be chosen.\nWhat is the probability that the value of S is a finite number greater than 3?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{11}",
+        "B": "\\frac{1}{10}",
+        "C": "\\frac{3}{11}",
+        "D": "\\frac{3}{10}",
+        "E": "\\frac{5}{11}",
+        "F": "\\frac{1}{2}",
+        "G": "\\frac{7}{11}",
+        "H": "\\frac{7}{10}"
+      },
+      "correct_answer": "E",
+      "raw_text": "18   You are given that\n                                                2         3               n\n                                  8k   16 k   32k            2k ⎞\n                             S=4+    +      +     + L + 4 ⎛⎜    ⎟ +L\n                                  7     49    343          ⎝ 7 ⎠\n     The value for k is chosen as an integer in the range – 5 ≤ k ≤ 5\n     All possible values for k are equally likely to be chosen.\n     What is the probability that the value of S is a finite number greater than 3?\n          1\n     A\n         11\n          1\n     B\n         10\n         3\n     C\n         11\n          3\n     D\n         10\n         5\n     E\n         11\n          1\n     F\n          2\n         7\n     G\n         11\n          7\n     H\n         10\n                                                    20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2023-P1-Q19",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "The solution to the differential equation \\frac{dy}{dx} = |-6x| for all x is y = f(x) + c, where c is a constant. Which one of the following is a correct expression for f(x)?",
+      "has_diagram": false,
+      "options": {
+        "A": "-\\frac{6x}{|x|}",
+        "B": "\\frac{6x}{|x|}",
+        "C": "-3x|x|",
+        "D": "3x|x|",
+        "E": "-3x^{2}",
+        "F": "3x^{2}",
+        "G": "-x^{3}",
+        "H": "x^{3}"
+      },
+      "correct_answer": "D",
+      "raw_text": "19   The solution to the differential equation\n                                                dy\n                                                   = | − 6 x | for all x\n                                                dx\n     is y = f (x) + c, where c is a constant.\n     Which one of the following is a correct expression for f (x)?\n              6x\n     A    −\n              | x|\n              6x\n     B\n              | x|\n     C    −3 x | x |\n     D     3 x| x|\n                      2\n     E    −3 x\n                      2\n     F     3x\n                  3\n     G    −x\n                  3\n     H        x\n                                                      21",
+      "diagram_images": [],
+      "options_latex": {
+        "E": "$-3x^{2}$",
+        "F": "$3x^{2}$",
+        "G": "$-x^{3}$",
+        "H": "$x^{3}$"
+      }
+    },
+    {
+      "id": "TMUA-2023-P1-Q20",
+      "year": 2023,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "The diagram shows the graph of $y = f(x)$. The function $f$ attains its maximum value of 2 at $x = 1$, and its minimum value of $-2$ at $x = -1$. Find the difference between the maximum and minimum values of $(f(x))^{2} - f(x)$",
+      "has_diagram": true,
+      "options": {
+        "A": "2",
+        "B": "\\frac{9}{4}",
+        "C": "4",
+        "D": "\\frac{17}{4}",
+        "E": "6",
+        "F": "\\frac{25}{4}",
+        "G": "8",
+        "H": "\\frac{33}{4}"
+      },
+      "correct_answer": "F",
+      "raw_text": "20   The diagram shows the graph of y = f ( x )\n     The function f attains its maximum value of 2 at x = 1, and its minimum value of – 2 at x = –1\n                                                            (1, 2)\n                                                    y\n                                                                                            x\n                                        (–1, –2)\n     Find the difference between the maximum and minimum values of ( f ( x ) )2 – f ( x )\n     A   2\n          9\n     B\n          4\n     C   4\n         17\n     D\n          4\n     E   6\n          25\n     F\n           4\n     G   8\n          33\n     H\n           4\n                                                   22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": [
+        "TMUA-2023-P1-Q20-fig1.png"
+      ]
+    }
+  ]
+}

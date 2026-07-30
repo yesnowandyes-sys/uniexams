@@ -1,0 +1,856 @@
+{
+  "source_file": "ENGAA_2022_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2022,
+  "section": "Section1",
+  "total_questions": 40,
+  "questions": [
+    {
+      "id": "ENGAA-2022-S1-Q1",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 Which one of the following is a simplification of 2  21   3x z  y 3   y    3 xz 2",
+      "has_diagram": false,
+      "options": {
+        "A": "y4 3 xz 2",
+        "B": "y5",
+        "C": "9 x 2 z2 y5 9 xz 2",
+        "D": "y4 9 xz 2",
+        "E": "y5 5",
+        "F": "9 x 2 z2 y5"
+      },
+      "correct_answer": "E",
+      "raw_text": "1   Which one of the following is a simplification of\n                                                             2\n                                                   21 \n                                                   3x z \n                                                 y 3 \n                                                   y \n                                                        \n         3 xz 2\n    A\n          y4\n         3 xz 2\n    B\n          y5\n            1\n    C    9 x 2 z2\n           y5\n         9 xz 2\n    D\n          y4\n         9 xz 2\n    E\n          y5\n            5\n    F    9 x 2 z2\n           y5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q2",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 There is a constant current in a conducting wire. A charge of 20 C passes through the wire in 1.5 minutes. An 18 cm straight section of this wire lies in a uniform magnetic field. This section of wire is perpendicular to the direction of the field. The magnetic field strength is 0.15 T. What is the magnitude of the magnetic force on this section of wire?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.0060 N",
+        "B": "0.36 N",
+        "C": "0.60 N",
+        "D": "0.81 N",
+        "E": "36 N",
+        "F": "49 N",
+        "G": "81 N",
+        "H": "4900 N 4"
+      },
+      "correct_answer": "A",
+      "raw_text": "2   There is a constant current in a conducting wire. A charge of 20 C passes through the wire in\n    1.5 minutes.\n    An 18 cm straight section of this wire lies in a uniform magnetic field. This section of wire is\n    perpendicular to the direction of the field. The magnetic field strength is 0.15 T.\n    What is the magnitude of the magnetic force on this section of wire?\n    A   0.0060 N\n    B   0.36 N\n    C   0.60 N\n    D   0.81 N\n    E   36 N\n    F   49 N\n    G   81 N\n    H   4900 N\n                                                  4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q3",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 Find the complete set of values of x that satisfy the inequality 3 1 (5 – x ) – (6 – x ) – x < 0 4 2 1",
+      "has_diagram": false,
+      "options": {
+        "A": "x< 1",
+        "B": "x>",
+        "C": "x< 5",
+        "D": "x> 5",
+        "E": "x< 4",
+        "F": "x> 4",
+        "G": "x< 2",
+        "H": "x> 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "3   Find the complete set of values of x that satisfy the inequality\n                                       3           1\n                                         (5 – x ) – (6 – x ) – x < 0\n                                       4           2\n             1\n    A   x<\n             3\n             1\n    B   x>\n             3\n             3\n    C   x<\n             5\n             3\n    D   x>\n             5\n             3\n    E   x<\n             4\n             3\n    F   x>\n             4\n             3\n    G   x<\n             2\n             3\n    H   x>\n             2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q4",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 Two identical resistors are connected in parallel to a 6.0 V battery. The two resistors dissipate a total power of 0.15 W. One of these resistors is removed from the circuit and connected to a 12 V battery. How much charge passes through this resistor in 6.0 minutes?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.025 C",
+        "B": "0.050 C",
+        "C": "0.15 C",
+        "D": "0.30 C",
+        "E": "0.75 C",
+        "F": "1.5 C",
+        "G": "9.0 C",
+        "H": "18 C 5"
+      },
+      "correct_answer": "G",
+      "raw_text": "4   Two identical resistors are connected in parallel to a 6.0 V battery. The two resistors dissipate a\n    total power of 0.15 W.\n    One of these resistors is removed from the circuit and connected to a 12 V battery.\n    How much charge passes through this resistor in 6.0 minutes?\n    A   0.025 C\n    B   0.050 C\n    C   0.15 C\n    D   0.30 C\n    E   0.75 C\n    F   1.5 C\n    G   9.0 C\n    H   18 C\n                                                  5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q5",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 Rob keeps a record of what he earns each day. On Monday, he earned 50% less than he earned on Sunday. On Tuesday, he earned 20% more than he earned on Monday. On Wednesday, he earned 30% less than he earned on Tuesday. On Wednesday, he earned £84. How much did Rob earn on Sunday?",
+      "has_diagram": false,
+      "options": {
+        "A": "£15.12",
+        "B": "£35.28",
+        "C": "£117.60",
+        "D": "£200",
+        "E": "£210",
+        "F": "£300",
+        "G": "£1200 6"
+      },
+      "correct_answer": "D",
+      "raw_text": "5   Rob keeps a record of what he earns each day.\n    On Monday, he earned 50% less than he earned on Sunday.\n    On Tuesday, he earned 20% more than he earned on Monday.\n    On Wednesday, he earned 30% less than he earned on Tuesday.\n    On Wednesday, he earned £84.\n    How much did Rob earn on Sunday?\n    A   £15.12\n    B   £35.28\n    C   £117.60\n    D   £200\n    E   £210\n    F   £300\n    G   £1200\n                                             6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q6",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 Ultrasound is used to find a crack inside a cuboid block of metal. An ultrasound probe is held in contact with the top surface of the metal block and perpendicular to the surface. A short pulse of ultrasound is sent into the metal block at time t = 0 ms and reflects from both the crack and the bottom surface of the metal block. ultrasound probe metal block crack The times between the emission of the ultrasound pulse and the return of the reflections to the probe, and the strengths of the reflected pulses, are measured. The results are shown on the graph. strength of reflected pulse 0 0 0.1 0.2 0.3 time / ms The speed of ultrasound in the metal is 5000 m s–1. What is the distance between the bottom surface of the metal block and the crack?",
+      "has_diagram": true,
+      "options": {
+        "A": "0.2 m",
+        "B": "0.3 m",
+        "C": "0.4 m",
+        "D": "0.5 m",
+        "E": "0.6 m",
+        "F": "1.0 m 7"
+      },
+      "correct_answer": "A",
+      "raw_text": "6   Ultrasound is used to find a crack inside a cuboid block of metal. An ultrasound probe is held in\n    contact with the top surface of the metal block and perpendicular to the surface. A short pulse\n    of ultrasound is sent into the metal block at time t = 0 ms and reflects from both the crack and\n    the bottom surface of the metal block.\n                                                             ultrasound probe\n                                                                  metal block\n                                                                crack\n    The times between the emission of the ultrasound pulse and the return of the reflections to the\n    probe, and the strengths of the reflected pulses, are measured. The results are shown on the\n    graph.\n                     strength of\n                     reflected pulse\n                                   0\n                                       0      0.1      0.2         0.3\n                                                             time / ms\n    The speed of ultrasound in the metal is 5000 m s–1.\n    What is the distance between the bottom surface of the metal block and the crack?\n    A   0.2 m\n    B   0.3 m\n    C   0.4 m\n    D   0.5 m\n    E   0.6 m\n    F   1.0 m\n                                                 7",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q6-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q7",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 Which one of the following is a simplification of 5 x 2 − 17x − 12 x 2 + x − 12 ÷ 25 x 2 − 9 x2 − x − 6 ( x − 4)( x + 2)",
+      "has_diagram": false,
+      "options": {
+        "A": "( x − 3)( x + 4) ( x − 3)( x + 2)",
+        "B": "(5 x − 3)( x + 3) ( x − 4)( x + 2)",
+        "C": "(5 x − 3)( x + 4) ( x − 4)( x − 3)",
+        "D": "(5 x − 3)( x − 6) ( x + 2)",
+        "E": "(5 x + 3) ( x + 4)( x − 6)",
+        "F": "(5 x + 3)( x + 2) ( x − 3)( x + 2)",
+        "G": "(5 x + 3)( x + 3)"
+      },
+      "correct_answer": "C",
+      "raw_text": "7   Which one of the following is a simplification of\n                                       5 x 2 − 17x − 12   x 2 + x − 12\n                                                        ÷\n                                           25 x 2 − 9     x2 − x − 6\n         ( x − 4)( x + 2)\n    A\n         ( x − 3)( x + 4)\n          ( x − 3)( x + 2)\n    B\n         (5 x − 3)( x + 3)\n          ( x − 4)( x + 2)\n    C\n         (5 x − 3)( x + 4)\n          ( x − 4)( x − 3)\n    D\n         (5 x − 3)( x − 6)\n          ( x + 2)\n    E\n         (5 x + 3)\n          ( x + 4)( x − 6)\n    F\n         (5 x + 3)( x + 2)\n          ( x − 3)( x + 2)\n    G\n         (5 x + 3)( x + 3)",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q8",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 Power is supplied to an electric motor at 0.800 kW. The motor has an efficiency of 60% and is switched on for half an hour. How much energy is wasted during this time?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.160 J",
+        "B": "0.240 J",
+        "C": "160 J",
+        "D": "240 J",
+        "E": "576 J",
+        "F": "864 J",
+        "G": "576 000 J",
+        "H": "864 000 J"
+      },
+      "correct_answer": "G",
+      "raw_text": "8   Power is supplied to an electric motor at 0.800 kW.\n    The motor has an efficiency of 60% and is switched on for half an hour.\n    How much energy is wasted during this time?\n    A   0.160 J\n    B   0.240 J\n    C   160 J\n    D   240 J\n    E   576 J\n    F   864 J\n    G   576 000 J\n    H   864 000 J\n                                                  8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q9",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 A rectangle PQRS has length (2 x – 1) cm and width ( x + 1) cm as shown on the diagram.",
+      "has_diagram": true,
+      "options": {
+        "A": "1:2",
+        "B": "4:7",
+        "C": "5:8",
+        "D": "7 : 11",
+        "E": "10 : 17",
+        "F": "17 : 31"
+      },
+      "correct_answer": "B",
+      "raw_text": "9   A rectangle PQRS has length (2 x – 1) cm and width ( x + 1) cm as shown on the diagram.\n    A larger rectangle is made by adding 3 cm to both the length and the width of PQRS, as shown.\n    The larger rectangle has an area of 360 cm2.\n                               3 cm\n                                        Q                        R\n                          ( x + 1) cm\n                                        P                        S\n                                               (2 x – 1) cm          3 cm\n                                            [diagram not to scale]\n    What is the ratio of PQ to PS ?\n    A   1:2\n    B   4:7\n    C   5:8\n    D   7 : 11\n    E   10 : 17\n    F   17 : 31\n                                                 9",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q9-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q10",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 The graph shows potential difference plotted against current for a filament lamp and a resistor. potential difference / V 8 6 4 2 0 0 0.1 0.2 0.3 0.4 current / A The lamp and the resistor are connected in parallel with each other to a 6.0 V power supply and the current in the lamp, I, is recorded. In a second circuit, the lamp and the resistor are now connected in series with each other to the same power supply, and the current in the resistor is 0.18 A. The potential difference across the lamp, V, is recorded. What are the values of I in the first circuit and V in the second circuit? I /A V /V",
+      "has_diagram": true,
+      "options": {
+        "A": "0.25 1.6",
+        "B": "0.25 3.0",
+        "C": "0.25 4.4",
+        "D": "0.35 1.6",
+        "E": "0.35 3.0",
+        "F": "0.35 4.4"
+      },
+      "correct_answer": "D",
+      "raw_text": "10   The graph shows potential difference plotted against current for a filament lamp and a resistor.\n         potential difference / V\n                                    10\n                                     8\n                                    6\n                                     4\n                                     2\n                                     0\n                                         0    0.1    0.2    0.3     0.4\n                                                                    current / A\n     The lamp and the resistor are connected in parallel with each other to a 6.0 V power supply and\n     the current in the lamp, I, is recorded.\n     In a second circuit, the lamp and the resistor are now connected in series with each other to the\n     same power supply, and the current in the resistor is 0.18 A. The potential difference across the\n     lamp, V, is recorded.\n     What are the values of I in the first circuit and V in the second circuit?\n                   I /A                      V /V\n     A             0.25                      1.6\n     B             0.25                      3.0\n     C             0.25                      4.4\n     D             0.35                      1.6\n     E             0.35                      3.0\n     F             0.35                      4.4\n                                                    10",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q10-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q11",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 PQRS is a trapezium as shown. Q R 40 m 30° P S [diagram not to scale] 5 tan RSQ = 8 What is the length of PS, in metres?",
+      "has_diagram": false,
+      "options": {
+        "A": "45",
+        "B": "65",
+        "C": "80",
+        "D": "120 40 3",
+        "E": "25 + 3 64 3",
+        "F": "40 + 3",
+        "G": "25 + 40 3",
+        "H": "64 + 40 3"
+      },
+      "correct_answer": "G",
+      "raw_text": "11   PQRS is a trapezium as shown.\n                                                         Q           R\n                                                                     40 m\n                                    30°\n                             P                                       S\n                                            [diagram not to scale]\n                 5\n     tan RSQ =\n                 8\n     What is the length of PS, in metres?\n     A   45\n     B   65\n     C   80\n     D   120\n                40 3\n     E   25 +\n                  3\n                64 3\n     F   40 +\n                  3\n     G   25 + 40 3\n     H   64 + 40 3\n                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q12",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 A transverse wave on a string has a speed of 500 m s–1. The horizontal distance between two points P and Q on the wave is 4.0 m, as shown in the diagram. X 6.0 mm Q P 4.0 m At time t = 0 ms, point X on the string is at its maximum displacement of 6.0 mm above equilibrium. What is the displacement of point X at time t = 7.0 ms?",
+      "has_diagram": true,
+      "options": {
+        "A": "6.0 mm above equilibrium",
+        "B": "between 0 mm and 6.0 mm above equilibrium",
+        "C": "0 mm",
+        "D": "between 0 mm and 6.0 mm below equilibrium",
+        "E": "6.0 mm below equilibrium"
+      },
+      "correct_answer": "C",
+      "raw_text": "12   A transverse wave on a string has a speed of 500 m s–1.\n     The horizontal distance between two points P and Q on the wave is 4.0 m, as shown in the\n     diagram.\n                                        X\n                          6.0 mm\n                                                                             Q\n                                    P\n                                                      4.0 m\n     At time t = 0 ms, point X on the string is at its maximum displacement of 6.0 mm above\n     equilibrium.\n     What is the displacement of point X at time t = 7.0 ms?\n     A   6.0 mm above equilibrium\n     B   between 0 mm and 6.0 mm above equilibrium\n     C   0 mm\n     D   between 0 mm and 6.0 mm below equilibrium\n     E   6.0 mm below equilibrium\n                                                12",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q12-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q13",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 A solid cylinder has radius r cm and height h cm.",
+      "has_diagram": false,
+      "options": {
+        "A": " − 2r  π   18 ",
+        "B": " − 1 r  π  27 r",
+        "C": "π  27 ",
+        "D": " − 1 r  π   27 ",
+        "E": " − 1 r  4π  108 r",
+        "F": "π  108 ",
+        "G": " − 1 r  π   108 1",
+        "H": " − r  π 2"
+      },
+      "correct_answer": "G",
+      "raw_text": "13   A solid cylinder has radius r cm and height h cm.\n     A cube has side length 3 r cm.\n     The total surface area of the cylinder is equal to four times the total surface area of the cube.\n     Which of the following is an expression for h in terms of r ?\n          18    \n     A       − 2r\n          π     \n          18    \n     B       − 1 r\n          π     \n          27 r\n     C\n           π\n          27    \n     D       − 1 r\n          π     \n          27    \n     E       − 1 r\n          4π    \n         108 r\n     F\n            π\n          108    \n     G        − 1 r\n          π      \n           108  1\n     H         − r\n           π    2\n                                                  13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q14",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 A piece of metal of mass 50 g is at thermal equilibrium in a hot liquid at temperature T. The metal is removed from the liquid and immediately placed in 100 g of water that is at 20 °C. The water is stirred and reaches a final temperature of 26 °C. material specific heat capacity / J kg–1 °C–1 hot liquid 2000 metal 350 water 4200 What is the temperature T of the hot liquid? (Assume that heat transfers to or from the surroundings are negligible.)",
+      "has_diagram": true,
+      "options": {
+        "A": "38 °C",
+        "B": "51 °C",
+        "C": "150 °C",
+        "D": "170 °C",
+        "E": "480 °C"
+      },
+      "correct_answer": "D",
+      "raw_text": "14   A piece of metal of mass 50 g is at thermal equilibrium in a hot liquid at temperature T.\n     The metal is removed from the liquid and immediately placed in 100 g of water that is at 20 °C.\n     The water is stirred and reaches a final temperature of 26 °C.\n                               material             specific heat capacity / J kg–1 °C–1\n                              hot liquid                           2000\n                                metal                              350\n                                water                              4200\n     What is the temperature T of the hot liquid?\n     (Assume that heat transfers to or from the surroundings are negligible.)\n     A   38 °C\n     B   51 °C\n     C   150 °C\n     D   170 °C\n     E   480 °C\n                                                    14",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q14-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q15",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 The variables x and y are related by the equation: 2 y3 + 1 x=5 − 1 − 2 y3 Which of the following is a rearrangement to make y the subject? x−4",
+      "has_diagram": false,
+      "options": {
+        "A": "y=3 8 x − 48 x−6",
+        "B": "y=3 8 x − 32 x−2",
+        "C": "y=3 x−6 x−3",
+        "D": "y=3 x−4 x−4",
+        "E": "y=3 2 x − 12 x−6",
+        "F": "y=3 2x − 8"
+      },
+      "correct_answer": "E",
+      "raw_text": "15   The variables x and y are related by the equation:\n                                                      2 y3 + 1\n                                             x=5 −\n                                                     1 − 2 y3\n     Which of the following is a rearrangement to make y the subject?\n                x−4\n     A   y=3\n               8 x − 48\n                x−6\n     B   y=3\n               8 x − 32\n               x−2\n     C   y=3\n               x−6\n               x−3\n     D   y=3\n               x−4\n                x−4\n     E   y=3\n               2 x − 12\n                x−6\n     F   y=3\n               2x − 8\n                                                15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q16",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 A bar magnet is placed at position X close to one end of a coil and on the axis of the coil as shown. The graph shows how the velocity of the magnet varies as it is then moved rapidly to position Y and back to position X. velocity away position X position Y from coil 0 time The magnetic field of the bar magnet still affects the coil when the magnet is at position Y. Which graph represents how the induced voltage in the coil changes as the magnet moves?",
+      "has_diagram": true,
+      "options": {
+        "A": "induced B induced voltage voltage 0 time 0 time",
+        "C": "induced D induced voltage voltage 0 0 time time",
+        "E": "induced F induced voltage voltage 0 time 0 time",
+        "B": "[diagram option]",
+        "D": "[diagram option]",
+        "F": "[diagram option]"
+      },
+      "correct_answer": "D",
+      "raw_text": "16   A bar magnet is placed at position X close to one end of a coil and on the axis of the coil as\n     shown.\n     The graph shows how the velocity of the magnet varies as it is then moved rapidly to position Y\n     and back to position X.\n                                                        velocity away\n                      position X       position Y\n                                                          from coil\n                                                                       0\n                                                                                                     time\n     The magnetic field of the bar magnet still affects the coil when the magnet is at position Y.\n     Which graph represents how the induced voltage in the coil changes as the magnet moves?\n     A   induced                                       B    induced\n          voltage                                            voltage\n                0                         time                     0                        time\n     C   induced                                       D    induced\n          voltage                                            voltage\n                0                                                  0\n                                          time                                              time\n     E   induced                                       F    induced\n          voltage                                            voltage\n                0                         time                     0                        time\n                                                  16",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q16-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q17",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 Three different numbers are chosen at random from 1, 2, 3, 4, 5. What is the probability that the three numbers form the three sides of a right-angled triangle? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "15 1",
+        "B": "10 3",
+        "C": "10 1",
+        "D": "3 2",
+        "E": "5 2",
+        "F": "3 4",
+        "G": "5"
+      },
+      "correct_answer": "E",
+      "raw_text": "17   Three different numbers are chosen at random from      1,   2,    3,   4,    5.\n     What is the probability that the three numbers form the three sides of a right-angled triangle?\n          1\n     A\n         15\n          1\n     B\n         10\n          3\n     C\n         10\n          1\n     D\n          3\n          2\n     E\n          5\n          2\n     F\n          3\n          4\n     G\n          5\n                                                 17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q18",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A small slider of mass 30 g is at rest near the bottom of a frictionless slope and in contact with a light uncompressed spring as shown. spring slider height [diagram not to scale] The spring is compressed by 5.0 cm and the slider remains in contact with it. The spring is released and causes the slider to rise up the slope to a maximum vertical height of 20 cm. The slider is replaced with one of mass 20 g. The spring is now compressed by 15 cm, and the new slider remains in contact with it. To what maximum vertical height does this new slider rise after it is released? (the spring obeys Hooke’s law; assume that air resistance is negligible)",
+      "has_diagram": true,
+      "options": {
+        "A": "40 cm",
+        "B": "60 cm",
+        "C": "90 cm",
+        "D": "120 cm",
+        "E": "180 cm",
+        "F": "270 cm"
+      },
+      "correct_answer": "F",
+      "raw_text": "18   A small slider of mass 30 g is at rest near the bottom of a frictionless slope and in contact with a\n     light uncompressed spring as shown.\n                              spring       slider\n                                                                    height\n                                           [diagram not to scale]\n     The spring is compressed by 5.0 cm and the slider remains in contact with it.\n     The spring is released and causes the slider to rise up the slope to a maximum vertical height\n     of 20 cm.\n     The slider is replaced with one of mass 20 g.\n     The spring is now compressed by 15 cm, and the new slider remains in contact with it.\n     To what maximum vertical height does this new slider rise after it is released?\n     (the spring obeys Hooke’s law; assume that air resistance is negligible)\n     A   40 cm\n     B   60 cm\n     C   90 cm\n     D   120 cm\n     E   180 cm\n     F   270 cm\n                                                    18",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q18-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q19",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 The point (– 1, 5) is translated to the point (3, 2) by two successive translations.  3p  The first translation is by the vector   −4 p  q  The second translation is by the vector    −2q  What is the value of p + q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–14",
+        "B": "–7",
+        "C": "–5",
+        "D": "–1",
+        "E": "1",
+        "F": "5",
+        "G": "7",
+        "H": "14"
+      },
+      "correct_answer": "D",
+      "raw_text": "19   The point (– 1, 5) is translated to the point (3, 2) by two successive translations.\n                                             3p \n     The first translation is by the vector     \n                                            −4 p\n                                              q \n     The second translation is by the vector      \n                                              −2q \n     What is the value of p + q ?\n     A   –14\n     B   –7\n     C   –5\n     D   –1\n     E   1\n     F   5\n     G   7\n     H   14",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q20",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 A tall, smooth cylinder contains air at atmospheric pressure of 1.00 × 105 Pa. The density of the air in the cylinder is 1.20 kg m–3. PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number.",
+      "has_diagram": false,
+      "options": {
+        "A": "0.960 kg m–3",
+        "B": "1.20 kg m–3",
+        "C": "1.25 kg m–3",
+        "D": "1.28 kg m–3",
+        "E": "1.50 kg m–3",
+        "F": "4.80 kg m–3 19 21"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   A tall, smooth cylinder contains air at atmospheric pressure of 1.00 × 105 Pa. The density of the\n     air in the cylinder is 1.20 kg m–3.\n     A heavy piston is now placed in the top of the cylinder and allowed to fall slowly downwards,\n     compressing the air until the piston rests in equilibrium.\n     The mass of the piston is 50.0 kg and its cross-sectional area is 0.0200 m2.\n     What is the density of the air in the cylinder when the piston rests in equilibrium?\n     (gravitational field strength = 10 N kg–1; assume that the air behaves as an ideal gas and that\n     the temperature remains constant)\n     A   0.960 kg m–3\n     B   1.20 kg m–3\n     C   1.25 kg m–3\n     D   1.28 kg m–3\n     E   1.50 kg m–3\n     F   4.80 kg m–3\n                                                     19\n\fBLANK PAGE\n    20\n\fPART B Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             21",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q21",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 Find the value of 4 2  x x dx 2x − 3 1 19",
+      "has_diagram": false,
+      "options": {
+        "A": "3 37",
+        "B": "3 53",
+        "C": "3 73",
+        "D": "4 81",
+        "E": "4 87",
+        "F": "4"
+      },
+      "correct_answer": "A",
+      "raw_text": "21   Find the value of\n                                               4\n                                                        2\n                                               x x dx\n                                                   2x − 3\n                                               1\n         19\n     A\n          3\n         37\n     B\n         3\n         53\n     C\n         3\n         73\n     D\n          4\n         81\n     E\n         4\n         87\n     F\n          4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q22",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 The diagram represents a stationary wave in a medium. 150 cm The transverse waves that are creating the stationary wave travel at a speed of 300 m s–1 through the medium. What is the frequency of the transverse waves?",
+      "has_diagram": true,
+      "options": {
+        "A": "75 Hz",
+        "B": "150 Hz",
+        "C": "200 Hz",
+        "D": "450 Hz",
+        "E": "600 Hz",
+        "F": "1200 Hz"
+      },
+      "correct_answer": "E",
+      "raw_text": "22   The diagram represents a stationary wave in a medium.\n                                                   150 cm\n     The transverse waves that are creating the stationary wave travel at a speed of 300 m s–1\n     through the medium.\n     What is the frequency of the transverse waves?\n     A   75 Hz\n     B   150 Hz\n     C   200 Hz\n     D   450 Hz\n     E   600 Hz\n     F   1200 Hz\n                                                   22",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q22-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q23",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 The diagram shows a semicircle of radius 5 units and a triangle. y 5 (x, y) 0 5 10 x The triangle has vertices at (0, 0), (10, 0) and ( x, y). ( x, y) is a point on the arc of the semicircle. Which of the following is an expression in terms of x for the area of this triangle? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "5 10 x − x",
+        "B": "5 x 10 − x 2",
+        "C": "5 x 10 x − x − 20",
+        "D": "15 x",
+        "E": "25 x",
+        "F": "5 x(10 – x)"
+      },
+      "correct_answer": "A",
+      "raw_text": "23   The diagram shows a semicircle of radius 5 units and a triangle.\n                        y\n                        5              (x, y)\n                        0                                    5                      10      x\n     The triangle has vertices at (0, 0), (10, 0) and ( x, y).\n     ( x, y) is a point on the arc of the semicircle.\n     Which of the following is an expression in terms of x for the area of this triangle?\n                        2\n     A    5 10 x − x\n     B    5 x 10 − x\n                            2\n     C    5 x 10 x − x − 20\n     D    15 x\n     E    25 x\n     F    5 x(10 – x)\n                                                        23",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q24",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 A stone is thrown vertically upwards from the surface of the Earth and reaches a maximum height h. The same stone is thrown vertically upwards from the surface of the Moon, with the same initial speed. What is the maximum height reached by the stone thrown on the Moon? (gravitational field strength on the Earth = 10 N kg–1; gravitational field strength on the Moon = 1.6 N kg–1; air resistance may be ignored)  10 ",
+      "has_diagram": false,
+      "options": {
+        "A": " h  1.6  2  10  h",
+        "B": "   1 .6   10 ",
+        "C": " h  3.2  2  10  h",
+        "D": "   3 .2   10 ",
+        "E": " h  8.4  2  10 ",
+        "F": "  h  8.4   20 ",
+        "G": " h  1 .6  2  20  h",
+        "H": "   1.6 "
+      },
+      "correct_answer": "A",
+      "raw_text": "24   A stone is thrown vertically upwards from the surface of the Earth and reaches a maximum\n     height h.\n     The same stone is thrown vertically upwards from the surface of the Moon, with the same initial\n     speed.\n     What is the maximum height reached by the stone thrown on the Moon?\n     (gravitational field strength on the Earth = 10 N kg–1; gravitational field strength on the\n     Moon = 1.6 N kg–1; air resistance may be ignored)\n           10 \n     A         h\n           1.6 \n                2\n           10  h\n     B          \n           1 .6 \n           10 \n     C         h\n           3.2 \n                 2\n           10  h\n     D          \n           3 .2 \n           10 \n     E         h\n           8.4 \n                 2\n           10 \n     F          h\n           8.4 \n           20 \n     G          h\n           1 .6 \n                2\n           20  h\n     H         \n           1.6 \n                                                   24",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q25",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 Four mathematically similar solids, W, X, Y and Z, have the following properties: • The ratio of the lengths of W to the lengths of X is 1 : 2 • The ratio of the surface area of X to the surface area of Y is 2 : 1 • The ratio of the volume of Y to the volume of Z is 1 : 2 What is the order of the solids when arranged in increasing volume?",
+      "has_diagram": false,
+      "options": {
+        "A": "WYXZ",
+        "B": "WYZX",
+        "C": "WZYX",
+        "D": "YWXZ",
+        "E": "YWZX",
+        "F": "YZWX"
+      },
+      "correct_answer": "B",
+      "raw_text": "25   Four mathematically similar solids, W, X, Y and Z, have the following properties:\n         •   The ratio of the lengths of W to the lengths of X is 1 : 2\n         •   The ratio of the surface area of X to the surface area of Y is 2 : 1\n         •   The ratio of the volume of Y to the volume of Z is 1 : 2\n     What is the order of the solids when arranged in increasing volume?\n     A   WYXZ\n     B   WYZX\n     C   WZYX\n     D   YWXZ\n     E   YWZX\n     F   YZWX\n                                                   25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q26",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 A ray of light is incident on a boundary between a vacuum and medium X at an angle θ as shown: incident ray reflected ray vacuum θ medium X refracted ray The incident ray is partially reflected and partially refracted. The angle between the reflected and refracted rays is 90°. What is the refractive index of medium X?",
+      "has_diagram": false,
+      "options": {
+        "A": "sin θ 1",
+        "B": "sin θ",
+        "C": "cos θ 1",
+        "D": "cos θ",
+        "E": "tan θ 1",
+        "F": "tan θ"
+      },
+      "correct_answer": "E",
+      "raw_text": "26   A ray of light is incident on a boundary between a vacuum and medium X at an angle θ as\n     shown:\n                  incident ray                                        reflected ray\n                   vacuum                     θ\n                  medium X\n                                                           refracted ray\n     The incident ray is partially reflected and partially refracted. The angle between the reflected\n     and refracted rays is 90°.\n     What is the refractive index of medium X?\n     A   sin θ\n           1\n     B\n          sin θ\n     C   cos θ\n            1\n     D\n          cos θ\n     E   tan θ\n            1\n     F\n          tan θ\n                                                  26",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q27",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 Which one of the following expressions is equal to 2 ( 2 + 20 ) 3 (1 + 5 )",
+      "has_diagram": false,
+      "options": {
+        "A": "5 –1 5 −1",
+        "B": "2 6 ( 5 5 − 1)",
+        "C": "31 3 ( 5 5 − 1)",
+        "D": "31 −22 + 10 2 + 11 5 − 4 10",
+        "E": "2 −22 + 10 2 + 11 5 − 4 10",
+        "F": "4"
+      },
+      "correct_answer": "A",
+      "raw_text": "27   Which one of the following expressions is equal to\n                                                              2\n                                               ( 2 + 20 )\n                                                          3\n                                                 (1 + 5 )\n     A     5 –1\n           5 −1\n     B\n            2\n         6 ( 5 5 − 1)\n     C\n              31\n         3 ( 5 5 − 1)\n     D\n              31\n         −22 + 10 2 + 11 5 − 4 10\n     E\n                     2\n         −22 + 10 2 + 11 5 − 4 10\n     F\n                     4\n                                                27",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q28",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 An electric train is travelling along a straight horizontal track. It passes a point Q on the track at time t = 0. The distance x that it then travels away from Q is given by the equation: x = at + bt 2 where a and b are constants. Which of the following statements is/are correct? 1 The speed of the train increases with time at a constant rate. 2 The resultant force acting on the train increases with time. 3 The rate at which energy is transferred to the train increases with time.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "F",
+      "raw_text": "28   An electric train is travelling along a straight horizontal track. It passes a point Q on the track at\n     time t = 0.\n     The distance x that it then travels away from Q is given by the equation:\n                                                  x = at + bt 2\n     where a and b are constants.\n     Which of the following statements is/are correct?\n           1   The speed of the train increases with time at a constant rate.\n           2   The resultant force acting on the train increases with time.\n           3   The rate at which energy is transferred to the train increases with time.\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                   28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q29",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 Evaluate ∞   21 + 31 + 41  r =2 r r r 21",
+      "has_diagram": false,
+      "options": {
+        "A": "40 3",
+        "B": "4 13",
+        "C": "12 157",
+        "D": "120 11",
+        "E": "6 23",
+        "F": "12"
+      },
+      "correct_answer": "B",
+      "raw_text": "29   Evaluate\n                                             ∞\n                                              21 + 31 + 41 \n                                            r =2\n                                                    r    r     r\n          21\n     A\n          40\n          3\n     B\n          4\n         13\n     C\n         12\n         157\n     D\n         120\n         11\n     E\n         6\n         23\n     F\n         12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q30",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 A length of wire has resistance R. Another length of wire is made from the same material. This wire is twice as long as the first wire and has half the diameter. Both wires have circular cross-sections. The two wires are connected in parallel. What is the total resistance of this combination? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "R 3 8",
+        "B": "R 9",
+        "C": "2R",
+        "D": "3R",
+        "E": "8R",
+        "F": "9R 29"
+      },
+      "correct_answer": "B",
+      "raw_text": "30   A length of wire has resistance R.\n     Another length of wire is made from the same material. This wire is twice as long as the first\n     wire and has half the diameter.\n     Both wires have circular cross-sections.\n     The two wires are connected in parallel.\n     What is the total resistance of this combination?\n          2\n     A      R\n          3\n          8\n     B      R\n          9\n     C   2R\n     D   3R\n     E   8R\n     F   9R\n                                                   29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q31",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 What is the complete set of real values of x for which 2 ( 2 x x + 4 < 21 )",
+      "has_diagram": false,
+      "options": {
+        "A": "– 3 <x< 3",
+        "B": "– 7 <x< 7",
+        "C": "x < – 3 or x > 3",
+        "D": "x < – 7 or x > 7",
+        "E": "– 7 < x < – 3 or 3 <x< 7",
+        "F": "x < – 7 or – 3 < x < 3 or x > 7 30"
+      },
+      "correct_answer": "A",
+      "raw_text": "31   What is the complete set of real values of x for which\n                                               2\n                                                   (   2\n                                              x x + 4 < 21 )\n     A   – 3 <x<      3\n     B   – 7 <x<      7\n     C   x < – 3 or x > 3\n     D   x < – 7 or x > 7\n     E   – 7 < x < – 3 or       3 <x<     7\n     F   x < – 7 or – 3 < x < 3 or x > 7\n                                                   30",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q32",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 An empty bucket has a mass of 1.20 kg and an internal volume of 0.0150 m3. The bucket is used to lift water from a well. The bucket is attached to a light, inextensible rope which winds onto a rotating cylinder of radius 0.200 m when a handle is turned. handle 0.600 m 0.200 m To lift a bucket completely full of water at constant speed, it is necessary to apply a force of 250 N to the handle that acts along the tangent to the circle of radius 0.600 m, in which the handle moves. The energy required to lift the bucket is wasted energy. What is the efficiency of the system in lifting water from the well? (gravitational field strength = 10 N kg–1; density of water = 1000 kg m–3)",
+      "has_diagram": true,
+      "options": {
+        "A": "2.00%",
+        "B": "2.16%",
+        "C": "20.0%",
+        "D": "21.6%",
+        "E": "60.0% 31"
+      },
+      "correct_answer": "C",
+      "raw_text": "32   An empty bucket has a mass of 1.20 kg and an internal volume of 0.0150 m3. The bucket is\n     used to lift water from a well.\n     The bucket is attached to a light, inextensible rope which winds onto a rotating cylinder of\n     radius 0.200 m when a handle is turned.\n                                                                  handle\n                                                               0.600 m\n                                                        0.200 m\n     To lift a bucket completely full of water at constant speed, it is necessary to apply a force of\n     250 N to the handle that acts along the tangent to the circle of radius 0.600 m, in which the\n     handle moves.\n     The energy required to lift the bucket is wasted energy.\n     What is the efficiency of the system in lifting water from the well?\n     (gravitational field strength = 10 N kg–1; density of water = 1000 kg m–3)\n     A   2.00%\n     B   2.16%\n     C   20.0%\n     D   21.6%\n     E   60.0%\n                                                   31",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q32-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q33",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 A sector of a circle has perimeter 24. For what value of the radius does the sector have the maximum possible area?",
+      "has_diagram": false,
+      "options": {
+        "A": "3 2",
+        "B": "2 6",
+        "C": "3 6",
+        "D": "6",
+        "E": "12",
+        "F": "18",
+        "G": "36"
+      },
+      "correct_answer": "D",
+      "raw_text": "33   A sector of a circle has perimeter 24.\n     For what value of the radius does the sector have the maximum possible area?\n     A   3 2\n     B   2 6\n     C   3 6\n     D   6\n     E   12\n     F   18\n     G   36",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q34",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 A uniform metre ruler has a mass of 100 g and is 1.00 m long.",
+      "has_diagram": false,
+      "options": {
+        "A": "15 cm",
+        "B": "20 cm",
+        "C": "25 cm",
+        "D": "35 cm",
+        "E": "65 cm",
+        "F": "75 cm",
+        "G": "80 cm",
+        "H": "85 cm 32"
+      },
+      "correct_answer": "E",
+      "raw_text": "34   A uniform metre ruler has a mass of 100 g and is 1.00 m long.\n     A small object of mass 20 g is fixed at the 0 cm mark, and another small object of mass 80 g is\n     fixed at the 100 cm mark.\n     The ruler is balanced on a pivot.\n     When the ruler is balanced, what distance is the pivot from the 0 cm mark?\n     A   15 cm\n     B   20 cm\n     C   25 cm\n     D   35 cm\n     E   65 cm\n     F   75 cm\n     G   80 cm\n     H   85 cm\n                                                 32",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q35",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 The curve y = x 2 – x – 6 intersects the x-axis at the points A and B, and has a minimum at the point C. The rectangle ABDE has two of its vertices at A and B. The point C lies on the edge DE, between D and E. What is the area of the rectangle ABDE ?",
+      "has_diagram": false,
+      "options": {
+        "A": "6",
+        "B": "6.25",
+        "C": "30",
+        "D": "31.25",
+        "E": "35",
+        "F": "36.75",
+        "G": "42",
+        "H": "43.75 33"
+      },
+      "correct_answer": "D",
+      "raw_text": "35   The curve y = x 2 – x – 6 intersects the x-axis at the points A and B, and has a minimum at the\n     point C.\n     The rectangle ABDE has two of its vertices at A and B.\n     The point C lies on the edge DE, between D and E.\n     What is the area of the rectangle ABDE ?\n     A   6\n     B   6.25\n     C   30\n     D   31.25\n     E   35\n     F   36.75\n     G   42\n     H   43.75\n                                                33",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q36",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 A circuit comprising two resistors and two batteries, with negligible internal resistance, is set up as shown in the diagram. The two junctions in the circuit are labelled X and Y. 6.0 V 1.0 Ω 3.0 V X Y 3.0 Ω What are the magnitude and direction of the current in the 3.0 V battery? magnitude of current / A direction of current",
+      "has_diagram": true,
+      "options": {
+        "A": "1.0 from X to Y",
+        "B": "2.0 from X to Y",
+        "C": "2.25 from X to Y",
+        "D": "6.0 from X to Y",
+        "E": "1.0 from Y to X",
+        "F": "2.0 from Y to X",
+        "G": "2.25 from Y to X",
+        "H": "6.0 from Y to X 34"
+      },
+      "correct_answer": "F",
+      "raw_text": "36   A circuit comprising two resistors and two batteries, with negligible internal resistance, is set up\n     as shown in the diagram. The two junctions in the circuit are labelled X and Y.\n                                                        6.0 V\n                                          1.0 Ω\n                                                                3.0 V\n                               X                                             Y\n                                          3.0 Ω\n     What are the magnitude and direction of the current in the 3.0 V battery?\n         magnitude of current / A       direction of current\n     A              1.0                     from X to Y\n     B              2.0                     from X to Y\n     C              2.25                    from X to Y\n     D              6.0                     from X to Y\n     E              1.0                     from Y to X\n     F              2.0                     from Y to X\n     G              2.25                    from Y to X\n     H              6.0                     from Y to X\n                                                  34",
+      "diagram_images": [
+        "ENGAA-2022-S1-Q36-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2022-S1-Q37",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 A straight line passes through the points (0, 2a) and (a, 0), where a is a positive constant. What is the perpendicular distance of the point P (a, 2a) from this line? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "a 5 5",
+        "B": "a 2 2 5",
+        "C": "a 5 4 5",
+        "D": "a 5 3 10",
+        "E": "a 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "37   A straight line passes through the points (0, 2a) and (a, 0), where a is a positive constant.\n     What is the perpendicular distance of the point P (a, 2a) from this line?\n            2\n     A        a\n           5\n            5\n     B        a\n           2\n          2 5\n     C        a\n           5\n          4 5\n     D        a\n           5\n          3 10\n     E         a\n            5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q38",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 Two isolated spheres have masses m and 2m. They are moving towards each other along the same straight line with speeds 4v and v respectively as shown: m 4v v 2m The spheres collide with each other and coalesce. What is the loss of kinetic energy during the collision? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "mv 2 3 2",
+        "B": "mv 2 3 25",
+        "C": "mv 2 3 26",
+        "D": "mv 2 3 2",
+        "E": "mv 2 9 79",
+        "F": "mv 2 9",
+        "G": "9 mv 2 35"
+      },
+      "correct_answer": "C",
+      "raw_text": "38   Two isolated spheres have masses m and 2m. They are moving towards each other along the\n     same straight line with speeds 4v and v respectively as shown:\n                             m               4v         v              2m\n     The spheres collide with each other and coalesce.\n     What is the loss of kinetic energy during the collision?\n          1\n     A      mv 2\n          3\n          2\n     B      mv 2\n          3\n          25\n     C       mv 2\n          3\n          26\n     D       mv 2\n          3\n          2\n     E      mv 2\n          9\n          79\n     F       mv 2\n          9\n     G   9 mv 2\n                                                  35",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q39",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 Find the sum of the real solutions to the equation x x+6 2 − ( 2) + 12 = 0",
+      "has_diagram": false,
+      "options": {
+        "A": "8",
+        "B": "16 4+ 2 2",
+        "C": "2 6+ 2 2",
+        "D": "2",
+        "E": "1 + 1 log 2 3 2",
+        "F": "4 + 2 log2 3"
+      },
+      "correct_answer": "F",
+      "raw_text": "39   Find the sum of the real solutions to the equation\n                                            x         x+6\n                                          2 − ( 2)          + 12 = 0\n     A   8\n     B   16\n             4+ 2\n               2\n     C   2\n             6+ 2\n               2\n     D   2\n     E   1 + 1 log 2 3\n               2\n     F   4 + 2 log2 3",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2022-S1-Q40",
+      "year": 2022,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 A steel cable has mass 64 kg and cross-sectional area 2.0 × 10− 4 m2. The Young modulus of steel is 2.0 × 1011 Pa. When the cable lies on horizontal ground its length is 40 m. What is its extension when it is suspended freely from one end and hangs vertically? (gravitational field strength = 10 N kg−1; assume that the cable obeys Hooke’s law)",
+      "has_diagram": false,
+      "options": {
+        "A": "0m",
+        "B": "8.0 × 10−7 m",
+        "C": "8.0 × 10− 6 m",
+        "D": "1.6 × 10−5 m",
+        "E": "3.2 × 10−5 m",
+        "F": "6.4 × 10−5 m",
+        "G": "3.2 × 10− 4 m",
+        "H": "6.4 × 10− 4 m END OF TEST 36 37 38 39"
+      },
+      "correct_answer": "G",
+      "raw_text": "40   A steel cable has mass 64 kg and cross-sectional area 2.0 × 10− 4 m2.\n     The Young modulus of steel is 2.0 × 1011 Pa.\n     When the cable lies on horizontal ground its length is 40 m.\n     What is its extension when it is suspended freely from one end and hangs vertically?\n     (gravitational field strength = 10 N kg−1; assume that the cable obeys Hooke’s law)\n     A   0m\n     B   8.0 × 10−7 m\n     C   8.0 × 10− 6 m\n     D   1.6 × 10−5 m\n     E   3.2 × 10−5 m\n     F   6.4 × 10−5 m\n     G   3.2 × 10− 4 m\n     H   6.4 × 10− 4 m\n                                           END OF TEST\n                                                 36\n\fBLANK PAGE\n    37\n\fBLANK PAGE\n    38\n\fBLANK PAGE\n    39\n\f40",
+      "diagram_images": []
+    }
+  ]
+}

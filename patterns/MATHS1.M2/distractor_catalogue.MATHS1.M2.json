@@ -1,0 +1,74 @@
+{
+  "topic_key": "MATHS1.M2",
+  "topic_name": "Number",
+  "module_code": "M1",
+  "corpus_question_count": 41,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Unit Mismatch / Conversion Inversion",
+      "frequency": "High",
+      "example_question_id": [
+        "Q4",
+        "Q10"
+      ],
+      "why_effective": "Exploits the common failure to track whether a variable represents a numerator or denominator in a rate, or failing to invert a conversion factor (e.g. Miles per km vs km per mile).",
+      "generation_strategy": "Create a word problem involving compound units (e.g. cost per distance, mass per density). Include a conversion factor (x) and offer options that place x in the numerator instead of the denominator, or vice versa."
+    },
+    {
+      "distractor_type": "Base Neglect in Percentage Arithmetic",
+      "frequency": "Medium",
+      "example_question_id": "Q1",
+      "why_effective": "Students often calculate '20% of 15000 is 3000, so 2 years is 6000'. This ignores that the base value changes after the first year (compound change).",
+      "generation_strategy": "Set up a percentage change problem over multiple time periods. Include a distractor that is the simple sum of the individual changes (Linear extrapolation of a geometric process)."
+    },
+    {
+      "distractor_type": "Algebraic Sign Error (Minus Distribution)",
+      "frequency": "High",
+      "example_question_id": [
+        "Q2",
+        "Q5",
+        "Q9"
+      ],
+      "why_effective": "In difference of squares or fraction subtraction (e.g., rationalizing denominators), students often forget that subtracting a negative term results in addition, leading to a smaller value than expected.",
+      "generation_strategy": "Use expressions of the form $\\frac{(\\sqrt{A}+\\sqrt{B})^2}{(\\sqrt{A}-\\sqrt{B})^2}$. The correct answer often simplifies to a large integer or simple term, while sign errors result in fractional or irrational values."
+    },
+    {
+      "distractor_type": "Reverse Logic (Inverse Relationships)",
+      "frequency": "Medium",
+      "example_question_id": [
+        "Q11",
+        "Q14"
+      ],
+      "why_effective": "Confusing the direction of proportionality. For example, if density increases, volume decreases for constant mass. Students often select the option where the ratio mirrors the volume ratio rather than the inverse.",
+      "generation_strategy": "Construct a problem where $y = k/x^n$. Offer options that calculate $x^n$ directly (Option F in Q11) versus the correct inverse $x^{-n}$ (Option A in Q11)."
+    },
+    {
+      "distractor_type": "Counterexample Identification (Logic/Number Theory)",
+      "frequency": "High",
+      "example_question_id": [
+        "Q25",
+        "Q26",
+        "Q31",
+        "Q33"
+      ],
+      "why_effective": "Tests the definition of divisibility and factors. Students often assume that if $a|bc$, then $a|b$ OR $a|c$ (confusing necessity with sufficiency).",
+      "generation_strategy": "Present a claim about divisibility or primes (e.g. 'If n is prime, $n^2+2$ is not prime'). Provide options that are True/False evaluations or specific integer sets. Distractors should be cases where the claim *might* hold, or where the math is correct but the logic is flawed."
+    },
+    {
+      "distractor_type": "Fractional Inversion in Word Problems",
+      "frequency": "Medium",
+      "example_question_id": "Q10",
+      "why_effective": "In 'profit' problems, students confuse 'Percentage of Cost' vs 'Percentage of Price'. In Q10, the distractor relies on mixing up the base for the 70% profit calculation.",
+      "generation_strategy": "Define a Price $P$ and a Profit % based on Cost $C$. Ask for a new profit. Include distractors where the percentage is applied to $P$ instead of $C$."
+    },
+    {
+      "distractor_type": "Mean vs Median Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q17",
+      "why_effective": "In sets with repeated elements or constraints, the median is not always the average of the middle two, or the 'middle' value shifts depending on $x$. Students often assume $Mean = Median$ for the calculation.",
+      "generation_strategy": "Define a set $S$ with variables like $x, x+1$. Add a constraint like 'Mean is 1 more than Median'. Distractors are derived from assuming $x$ is the median or using an incorrect count of terms."
+    }
+  ],
+  "_raw": null
+}

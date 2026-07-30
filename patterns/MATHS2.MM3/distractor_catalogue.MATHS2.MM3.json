@@ -1,0 +1,52 @@
+{
+  "topic_key": "MATHS2.MM3",
+  "topic_name": "Coordinate geometry in the (x, y) plane",
+  "module_code": "M2",
+  "corpus_question_count": 42,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inverse Perpendicular Gradient",
+      "frequency": "High",
+      "example_question_id": "Q2",
+      "why_effective": "Tests the specific knowledge that the gradient of the reflected line across y=x is 1/m, not -1/m or simply m. Catches students who confuse reflection with rotation or negation.",
+      "generation_strategy": "For a line with gradient m, offer options of m, -m, 1/m, -1/m. This targets the confusion between the gradient of perpendicular lines (-1/m) and the gradient of the inverse function (1/m), which corresponds to reflection in y=x."
+    },
+    {
+      "distractor_type": "Sign Flip Error (Coordinate Geometry)",
+      "frequency": "High",
+      "example_question_id": "Q7",
+      "why_effective": "Students often correctly calculate the magnitude of the circle's centre coordinates or diameter radius but select the option with the opposite sign for the linear term (e.g., (x-4) vs (x+4)) or sign of the constant.",
+      "generation_strategy": "When deriving circle equations from geometric descriptions (e.g., a square bounding a circle), generate options that swap the signs of (h, k) in $(x-h)^2 + (y-k)^2 = r^2$ or sign errors in the expanded form."
+    },
+    {
+      "distractor_type": "Variable Substitution Inversion",
+      "frequency": "Medium",
+      "example_question_id": "Q3",
+      "why_effective": "In multi-step problems involving gradients and areas, students often correctly derive the formula but miss a negative sign or a reciprocal relationship (e.g., using m instead of -1/m for the perpendicular slope), leading to a value that is numerically close but incorrect.",
+      "generation_strategy": "In problems involving perpendicular lines $m$ and $m_{\\perp}$, include distractors derived by using $m$ directly or $1/m$ (instead of $-1/m$) in the final calculation step."
+    },
+    {
+      "distractor_type": "Discriminant Misapplication",
+      "frequency": "Medium",
+      "example_question_id": "Q4",
+      "why_effective": "When finding intersections, students must equate the curves and form a quadratic. A common mistake is setting the discriminant to zero (tangency condition) when they should simply be using the relationship between roots, or calculating roots incorrectly.",
+      "generation_strategy": "For curve intersection questions, include results derived from $b^2 - 4ac = 0$ (tangency) or mis-calculating the difference of roots $(q-p)$ as $\\sqrt{b^2-4ac}$ rather than the full $\frac{\\sqrt{D}}{|a|}$."
+    },
+    {
+      "distractor_type": "Axis Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q31",
+      "why_effective": "Students mix up conditions for tangency to the x-axis versus y-axis. The condition involves the radius matching the x-coordinate of the center for the y-axis, but students often pick the formula for the x-axis ($b^2 = 4c$) or generic circle properties.",
+      "generation_strategy": "For circle tangency questions, present options that swap $a$ and $b$ in the condition $a^2 = 4c$ (or $b^2 = 4c$) or confuse them with the general radius formula $r = \\sqrt{\\dots}$."
+    },
+    {
+      "distractor_type": "Geometric Interpretation Failure",
+      "frequency": "Low",
+      "example_question_id": "Q17",
+      "why_effective": "Students fail to visualize that two points can define a square in two ways (short side vs diagonal). The distractor '0' is effective because it appeals to the intuition that a square has a fixed size, ignoring the variable diagonal length.",
+      "generation_strategy": "In geometry problems where vertices are given but order/side length is not specified, include options representing the 'obvious' single interpretation or the null case (0), alongside the correct calculated differences."
+    }
+  ],
+  "parse_repaired": true
+}

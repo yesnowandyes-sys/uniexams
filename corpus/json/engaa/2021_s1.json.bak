@@ -1,0 +1,843 @@
+{
+  "source_file": "ENGAA_2021_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2021,
+  "section": "Section1",
+  "total_questions": 40,
+  "questions": [
+    {
+      "id": "ENGAA-2021-S1-Q1",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 Simplify fully 5 x y 2 × (5 x 2 y )–3 × 5 x 2 y where x and y are positive.",
+      "has_diagram": false,
+      "options": {
+        "A": "7 2 125 x y",
+        "B": "6 2 125 x y",
+        "C": "6 25 x y",
+        "D": "4 25 x y",
+        "E": "3 5x",
+        "F": "2 5x y",
+        "G": "2 x",
+        "H": "5xy2 4"
+      },
+      "correct_answer": "E",
+      "raw_text": "1   Simplify fully\n                                  5 x y 2 × (5 x 2 y )–3 × 5 x 2 y\n    where x and y are positive.\n                   1\n    A                  7   2\n         125 x y\n                   1\n    B                  6   2\n         125 x y\n               1\n    C              6\n         25 x y\n               1\n    D              4\n         25 x y\n          1\n    E          3\n         5x\n          1\n    F          2\n         5x\n          y\n    G      2\n         x\n    H   5xy2\n                                                  4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q2",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 Air is trapped in a cylinder by a piston. The density of the air in the cylinder is ρ . trapped air The piston is moved so that the pressure of the trapped air increases by 20%. The temperature of the trapped air does not change. What is the new density of the trapped air? (Assume that air is an ideal gas.)",
+      "has_diagram": false,
+      "options": {
+        "A": "0.69 ρ",
+        "B": "0.80 ρ",
+        "C": "0.83 ρ",
+        "D": "1.00 ρ",
+        "E": "1.20 ρ",
+        "F": "1.44 ρ 5"
+      },
+      "correct_answer": "E",
+      "raw_text": "2   Air is trapped in a cylinder by a piston. The density of the air in the cylinder is ρ .\n             trapped air\n    The piston is moved so that the pressure of the trapped air increases by 20%. The temperature\n    of the trapped air does not change.\n    What is the new density of the trapped air?\n    (Assume that air is an ideal gas.)\n    A   0.69 ρ\n    B   0.80 ρ\n    C   0.83 ρ\n    D   1.00 ρ\n    E   1.20 ρ\n    F   1.44 ρ\n                                                    5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q3",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 Which of the following is a rearrangement of p 3 4 + = 2 q r so that q is the subject? 2r",
+      "has_diagram": false,
+      "options": {
+        "A": "q= 24 − 3 pr 3r",
+        "B": "q= 2r − p 6r",
+        "C": "q= 4−p 6r",
+        "D": "q= 8 − pr r −2",
+        "E": "q= 12 p 3r − 6",
+        "F": "q= 4p pr − 8",
+        "G": "q= 12 p 3 pr − 24",
+        "H": "q= 4p 6"
+      },
+      "correct_answer": "D",
+      "raw_text": "3   Which of the following is a rearrangement of\n                                              p        3       4\n                                                   +       =\n                                              2        q       r\n    so that q is the subject?\n                 2r\n    A    q=\n              24 − 3 pr\n               3r\n    B    q=\n              2r − p\n               6r\n    C    q=\n              4−p\n                6r\n    D    q=\n              8 − pr\n              r −2\n    E    q=\n              12 p\n              3r − 6\n    F    q=\n               4p\n              pr − 8\n    G    q=\n              12 p\n              3 pr − 24\n    H    q=\n                 4p\n                                                   6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q4",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 A non-ideal transformer has 100 turns on the primary coil and 25 turns on the secondary coil. It is provided with 3.0 kW of electrical power at a current of 12.5 A. The voltage output is the same as for an ideal transformer, but the current in the output coil is 40 A. What is the efficiency of the transformer?",
+      "has_diagram": false,
+      "options": {
+        "A": "20%",
+        "B": "25%",
+        "C": "31%",
+        "D": "69%",
+        "E": "75%",
+        "F": "80%",
+        "G": "91%",
+        "H": "100% 7"
+      },
+      "correct_answer": "F",
+      "raw_text": "4   A non-ideal transformer has 100 turns on the primary coil and 25 turns on the secondary coil.\n    It is provided with 3.0 kW of electrical power at a current of 12.5 A.\n    The voltage output is the same as for an ideal transformer, but the current in the output coil is\n    40 A.\n    What is the efficiency of the transformer?\n    A   20%\n    B   25%\n    C   31%\n    D   69%\n    E   75%\n    F   80%\n    G   91%\n    H   100%\n                                                   7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q5",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 Two solid cylinders, P and Q, are shown, where x > y . Q P x y x y Cylinder P has diameter x and height y . Cylinder Q has diameter y and height x . What is the positive difference between the total surface areas of P and Q?",
+      "has_diagram": true,
+      "options": {
+        "A": "0 π",
+        "B": "(x2 – y2) 4 π",
+        "C": "(x2 – y2) 2",
+        "D": "π(x2 – y2)",
+        "E": "2π(x2 – y2) π",
+        "F": "xy(x – y) 4",
+        "G": "πxy(x – y) 8"
+      },
+      "correct_answer": "C",
+      "raw_text": "5   Two solid cylinders, P and Q, are shown, where x > y .\n                                                                   Q\n                                  P\n                                                                             x\n                                               y\n                                  x                                 y\n    Cylinder P has diameter x and height y .\n    Cylinder Q has diameter y and height x .\n    What is the positive difference between the total surface areas of P and Q?\n    A   0\n        π\n    B        (x2 – y2)\n         4\n        π\n    C        (x2 – y2)\n         2\n    D   π(x2 – y2)\n    E   2π(x2 – y2)\n        π\n    F        xy(x – y)\n         4\n    G   πxy(x – y)\n                                                8",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q5-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q6",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 A light spring has an uncompressed length of 0.10 m. When an object of mass 0.5 kg rests in equilibrium on top of the spring, the length of the spring reduces to 0.08 m as shown. 0.10 m 0.08 m What is the energy stored in the spring due to the compression? (gravitational field strength = 10 N kg–1; the spring obeys Hooke’s law)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.005 J",
+        "B": "0.02 J",
+        "C": "0.05 J",
+        "D": "0.1 J",
+        "E": "0.2 J",
+        "F": "0.4 J"
+      },
+      "correct_answer": "C",
+      "raw_text": "6   A light spring has an uncompressed length of 0.10 m. When an object of mass 0.5 kg rests in\n    equilibrium on top of the spring, the length of the spring reduces to 0.08 m as shown.\n                     0.10 m                                  0.08 m\n    What is the energy stored in the spring due to the compression?\n    (gravitational field strength = 10 N kg–1; the spring obeys Hooke’s law)\n    A   0.005 J\n    B   0.02 J\n    C   0.05 J\n    D   0.1 J\n    E   0.2 J\n    F   0.4 J",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q6-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q7",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 The price of item P is reduced by 10%. The next day, the new price is increased by 10%. The price of item Q is increased by 10%. The next day, the new price is reduced by 10%. How does the final price of each item compare to the original price of that item? item P final price item Q final price",
+      "has_diagram": true,
+      "options": {
+        "A": "lower than original lower than original",
+        "B": "lower than original higher than original",
+        "C": "higher than original lower than original",
+        "D": "higher than original higher than original",
+        "E": "the same as original the same as original 9"
+      },
+      "correct_answer": "A",
+      "raw_text": "7   The price of item P is reduced by 10%. The next day, the new price is increased by 10%.\n    The price of item Q is increased by 10%. The next day, the new price is reduced by 10%.\n    How does the final price of each item compare to the original price of that item?\n                item P final price           item Q final price\n    A           lower than original          lower than original\n    B           lower than original         higher than original\n    C        higher than original           lower than original\n    D        higher than original           higher than original\n    E       the same as original            the same as original\n                                                 9",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q7-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q8",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 A set of decorative lights consists of 20 lamps connected in series to a dc supply of constant voltage. The total power transferred by all the lamps is P. The set is designed so that if one of the lamps fails, that lamp becomes short-circuited and it then has zero resistance. The remaining lamps are still lit. If this happens, with the set connected to the same supply, what is the new total power transferred by the remaining 19 lamps? (Assume that the resistance of each functioning lamp remains constant.) 2 ⎛ 19 ⎞",
+      "has_diagram": false,
+      "options": {
+        "A": "⎜ ⎟ P ⎝ 20 ⎠ ⎛ 19 ⎞",
+        "B": "⎜ ⎟P ⎝ 20 ⎠",
+        "C": "P ⎛ 20 ⎞",
+        "D": "⎜ ⎟P ⎝ 19 ⎠ 2 ⎛ 20 ⎞",
+        "E": "⎜ ⎟ P ⎝ 19 ⎠ 10"
+      },
+      "correct_answer": "D",
+      "raw_text": "8   A set of decorative lights consists of 20 lamps connected in series to a dc supply of constant\n    voltage.\n    The total power transferred by all the lamps is P.\n    The set is designed so that if one of the lamps fails, that lamp becomes short-circuited and it\n    then has zero resistance. The remaining lamps are still lit.\n    If this happens, with the set connected to the same supply, what is the new total power\n    transferred by the remaining 19 lamps?\n    (Assume that the resistance of each functioning lamp remains constant.)\n              2\n        ⎛ 19 ⎞\n    A   ⎜    ⎟ P\n        ⎝ 20 ⎠\n        ⎛ 19 ⎞\n    B   ⎜    ⎟P\n        ⎝ 20 ⎠\n    C   P\n        ⎛ 20 ⎞\n    D   ⎜    ⎟P\n        ⎝ 19 ⎠\n              2\n        ⎛ 20 ⎞\n    E   ⎜    ⎟ P\n        ⎝ 19 ⎠\n                                                10",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q9",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 S R 8 cm 8 cm P T Q 4 cm [diagram not to scale] SQT is a right-angled triangle with the right angle at Q. The point R is on SQ such that SR : RQ = 1 : 3 QRP is a right-angled triangle with the right angle at Q. PR = ST = 8 cm QT = 4 cm What is the length of PQ, in cm?",
+      "has_diagram": false,
+      "options": {
+        "A": "2 3",
+        "B": "4 3",
+        "C": "19",
+        "D": "37",
+        "E": "55",
+        "F": "61 11"
+      },
+      "correct_answer": "D",
+      "raw_text": "9                                                      S\n                                                    R\n                                                                     8 cm\n                                     8 cm\n                           P                                                T\n                                                       Q        4 cm\n                                            [diagram not to scale]\n    SQT is a right-angled triangle with the right angle at Q.\n    The point R is on SQ such that SR : RQ = 1 : 3\n    QRP is a right-angled triangle with the right angle at Q.\n    PR = ST = 8 cm\n    QT = 4 cm\n    What is the length of PQ, in cm?\n    A   2 3\n    B   4 3\n    C     19\n    D     37\n    E     55\n    F     61\n                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q10",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 A train accelerates from rest along a straight, horizontal section of track. The force exerted on the train due to its motors is constant and there is a constant friction force of 1.8 × 107 N. The graph shows how the momentum of the train changes with time. 14 momentum / 106 kg m s–1 12 8 6 4 2 0 0 1 2 3 4 time / s What is the force exerted on the train due to its motors?",
+      "has_diagram": false,
+      "options": {
+        "A": "3.0 × 106 N",
+        "B": "6.0 × 106 N",
+        "C": "1.2 × 107 N",
+        "D": "1.5 × 107 N",
+        "E": "2.1 × 107 N",
+        "F": "2.4 × 107 N",
+        "G": "3.0 × 107 N",
+        "H": "4.2 × 107 N 12"
+      },
+      "correct_answer": "E",
+      "raw_text": "10   A train accelerates from rest along a straight, horizontal section of track.\n     The force exerted on the train due to its motors is constant and there is a constant friction force\n     of 1.8 × 107 N.\n     The graph shows how the momentum of the train changes with time.\n                               14\n     momentum / 106 kg m s–1\n                               12\n                               10\n                                8\n                                6\n                                4\n                                2\n                                0\n                                    0          1            2           3               4\n                                                                             time / s\n     What is the force exerted on the train due to its motors?\n     A   3.0 × 106 N\n     B   6.0 × 106 N\n     C   1.2 × 107 N\n     D   1.5 × 107 N\n     E   2.1 × 107 N\n     F   2.4 × 107 N\n     G   3.0 × 107 N\n     H   4.2 × 107 N\n                                                   12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q11",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 The curve with equation y = x 2 – 4 x + 5 meets the straight line with equation y = 2 x + c at two points, which have x-coordinates p and q, where q > p . Given that q – p = 8, what is the value of the constant c ?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 43",
+        "B": "–12",
+        "C": "–2",
+        "D": "0",
+        "E": "2",
+        "F": "12",
+        "G": "43"
+      },
+      "correct_answer": "F",
+      "raw_text": "11   The curve with equation y = x 2 – 4 x + 5 meets the straight line with equation y = 2 x + c at two\n     points, which have x-coordinates p and q, where q > p .\n     Given that q – p = 8, what is the value of the constant c ?\n     A   – 43\n     B   –12\n     C   –2\n     D   0\n     E   2\n     F   12\n     G   43",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q12",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 A ship travels into a wave that is travelling in the opposite direction to the ship. The ship has a horizontal speed of 8.0 m s–1. The speed of the wave is 3.0 m s–1. The front of the ship rises and falls with a time period of 8.0 s. What is the wavelength of the wave? 3",
+      "has_diagram": false,
+      "options": {
+        "A": "m 8 5",
+        "B": "m 8",
+        "C": "1.0 m 11",
+        "D": "m 8",
+        "E": "24 m",
+        "F": "40 m",
+        "G": "64 m",
+        "H": "88 m 13"
+      },
+      "correct_answer": "H",
+      "raw_text": "12   A ship travels into a wave that is travelling in the opposite direction to the ship.\n     The ship has a horizontal speed of 8.0 m s–1. The speed of the wave is 3.0 m s–1.\n     The front of the ship rises and falls with a time period of 8.0 s.\n     What is the wavelength of the wave?\n          3\n     A      m\n          8\n          5\n     B      m\n          8\n     C    1.0 m\n          11\n     D       m\n          8\n     E    24 m\n     F    40 m\n     G    64 m\n     H    88 m\n                                                   13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q13",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 Given that sin 60° − 1 y= cos 60° what is the value of y 3 ? 3",
+      "has_diagram": false,
+      "options": {
+        "A": "− 9",
+        "B": "− 5 2 + 10",
+        "C": "3 3 −8",
+        "D": "6 3 − 10",
+        "E": "14 2 − 20",
+        "F": "15 3 − 26",
+        "G": "21 3 − 38 14"
+      },
+      "correct_answer": "F",
+      "raw_text": "13   Given that\n                                       sin 60° − 1\n                                  y=\n                                        cos 60°\n     what is the value of y 3 ?\n               3\n     A    −\n              9\n     B    − 5 2 + 10\n     C    3 3 −8\n     D    6 3 − 10\n     E    14 2 − 20\n     F    15 3 − 26\n     G    21 3 − 38\n                                   14",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q14",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 A 6.0 V battery is connected to an 8.0 Ω resistor and a filament lamp as shown in the circuit diagram. 6.0 V 8.0 Ω A The reading on the ammeter is 0.25 A. Which graph is a possible V–I graph for the filament lamp?",
+      "has_diagram": true,
+      "options": {
+        "A": "V /V B V /V 2.0 4.0 0 0 0 0.25 0 0.25 I /A I /A",
+        "C": "V /V D V /V 2.0 6.0 0 0 0 0.25 0 0.25 I /A I /A",
+        "E": "V /V F V /V 4.0 6.0 0 0 0 0.25 0 0.25 I /A I /A 15",
+        "B": "[diagram option]",
+        "D": "[diagram option]",
+        "F": "[diagram option]"
+      },
+      "correct_answer": "B",
+      "raw_text": "14   A 6.0 V battery is connected to an 8.0 Ω resistor and a filament lamp as shown in the circuit\n     diagram.\n                                                  6.0 V\n                                          8.0 Ω\n                                                                  A\n     The reading on the ammeter is 0.25 A.\n     Which graph is a possible V–I graph for the filament lamp?\n     A   V /V                                          B   V /V\n              2.0                                               4.0\n                0                                                 0\n                    0              0.25                               0              0.25\n                                          I /A                                              I /A\n     C   V /V                                          D   V /V\n                                                               2.0\n              6.0\n                0                                                 0\n                    0              0.25                               0              0.25\n                                          I /A                                              I /A\n     E   V /V                                          F   V /V\n             4.0                                               6.0\n                0                                                 0\n                    0              0.25                               0              0.25\n                                          I /A                                              I /A\n                                                  15",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q14-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q15",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 Charlie has a bowl containing red sweets and green sweets only. The sweets are identical in all respects except colour. There are nine sweets in total in the bowl. Charlie eats two sweets from the bowl at random. 5 The probability of Charlie not eating any green sweets is 12 What is the probability that Charlie eats two green sweets? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "27 1",
+        "B": "12 1",
+        "C": "9 4",
+        "D": "27 1",
+        "E": "6 1",
+        "F": "4 7",
+        "G": "12 16"
+      },
+      "correct_answer": "B",
+      "raw_text": "15   Charlie has a bowl containing red sweets and green sweets only. The sweets are identical in all\n     respects except colour.\n     There are nine sweets in total in the bowl.\n     Charlie eats two sweets from the bowl at random.\n                                                                  5\n     The probability of Charlie not eating any green sweets is\n                                                                 12\n     What is the probability that Charlie eats two green sweets?\n           2\n     A\n          27\n          1\n     B\n         12\n          1\n     C\n          9\n           4\n     D\n          27\n          1\n     E\n          6\n          1\n     F\n          4\n          7\n     G\n         12\n                                                   16",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q16",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 A radioactive nuclide X decays in a single stage to a stable nuclide R.",
+      "has_diagram": false,
+      "options": {
+        "A": "radioactive nuclide Y decays in a single stage to a stable nuclide S. When a rock formed it contained equal numbers of atoms of all four nuclides X, Y, R and S. The half-life of X is T years and the half-life of Y is 2T years. number of atoms of R What is the value of at a time 4T years after the rock has formed? number of atoms of S (Assume that no other processes add or remove X, Y, R or S from the rock during this time.) 1 4 17",
+        "B": "20 31",
+        "C": "28 6",
+        "D": "5 5",
+        "E": "4",
+        "F": "2 17"
+      },
+      "correct_answer": "C",
+      "raw_text": "16   A radioactive nuclide X decays in a single stage to a stable nuclide R.\n     A radioactive nuclide Y decays in a single stage to a stable nuclide S.\n     When a rock formed it contained equal numbers of atoms of all four nuclides X, Y, R and S.\n     The half-life of X is T years and the half-life of Y is 2T years.\n                            number of atoms of R\n     What is the value of                        at a time 4T years after the rock has formed?\n                            number of atoms of S\n     (Assume that no other processes add or remove X, Y, R or S from the rock during this time.)\n          1\n     A\n          4\n          17\n     B\n          20\n          31\n     C\n          28\n          6\n     D\n          5\n          5\n     E\n          4\n     F    2\n                                                    17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q17",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 The greatest diagonal distance between the two vertices of a cuboid, as shown in the diagram, is 77 cm.",
+      "has_diagram": false,
+      "options": {
+        "A": "similar cuboid has all its lengths exactly half the lengths of the original cuboid. The sides of this smaller cuboid are 2 cm, 3 cm and x cm. What is the value of x, in cm? 5 2",
+        "B": "5 5 2",
+        "C": "2",
+        "D": "5 2 102",
+        "E": "2",
+        "F": "102 18"
+      },
+      "correct_answer": "A",
+      "raw_text": "17   The greatest diagonal distance between the two vertices of a cuboid, as shown in the diagram,\n     is 77 cm.\n     A similar cuboid has all its lengths exactly half the lengths of the original cuboid.\n     The sides of this smaller cuboid are 2 cm, 3 cm and x cm.\n     What is the value of x, in cm?\n          5\n     A\n          2\n     B    5\n          5 2\n     C\n           2\n     D    5 2\n              102\n     E\n               2\n     F        102\n                                                   18",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q18",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A beaker containing 180 g of water at 25 °C has a 20 g ice cube at 0 °C added to it. No heat is transferred between the water and the surroundings (including the beaker). What is the final temperature of all the water in the beaker after all the ice has melted? (Take the specific heat capacity of water to be 4 J g–1 °C–1 and the specific latent heat of fusion of water to be 300 J g–1.)",
+      "has_diagram": false,
+      "options": {
+        "A": "2.5 °C",
+        "B": "8.3 °C",
+        "C": "10.0 °C",
+        "D": "15.0 °C",
+        "E": "16.7 °C",
+        "F": "22.5 °C 19"
+      },
+      "correct_answer": "D",
+      "raw_text": "18   A beaker containing 180 g of water at 25 °C has a 20 g ice cube at 0 °C added to it.\n     No heat is transferred between the water and the surroundings (including the beaker).\n     What is the final temperature of all the water in the beaker after all the ice has melted?\n     (Take the specific heat capacity of water to be 4 J g–1 °C–1 and the specific latent heat of fusion\n     of water to be 300 J g–1.)\n     A   2.5 °C\n     B   8.3 °C\n     C   10.0 °C\n     D   15.0 °C\n     E   16.7 °C\n     F   22.5 °C\n                                                  19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q19",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 A car journey is m miles long. One kilometre is equivalent to x miles. The car uses one litre of fuel to travel a distance of f kilometres. Fuel for the car costs p pence per litre. Which of the following expressions gives the cost of fuel for this journey, in pounds? (There are 100 pence in one pound.)",
+      "has_diagram": false,
+      "options": {
+        "A": "100 f m p x 100 fmp",
+        "B": "x 100mpx",
+        "C": "f 100mp",
+        "D": "fx fmpx",
+        "E": "100 fmp",
+        "F": "100 x mpx",
+        "G": "100 f mp",
+        "H": "100 fx 20"
+      },
+      "correct_answer": "H",
+      "raw_text": "19   A car journey is m miles long.\n     One kilometre is equivalent to x miles.\n     The car uses one litre of fuel to travel a distance of f kilometres.\n     Fuel for the car costs p pence per litre.\n     Which of the following expressions gives the cost of fuel for this journey, in pounds?\n     (There are 100 pence in one pound.)\n     A    100 f m p x\n          100 fmp\n     B\n              x\n          100mpx\n     C\n              f\n          100mp\n     D\n             fx\n          fmpx\n     E\n           100\n           fmp\n     F\n          100 x\n           mpx\n     G\n          100 f\n           mp\n     H\n          100 fx\n                                                   20",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q20",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 A pulse of ultrasound travels from one end of a solid uniform rod of length L, starting at time t = 0. The pulse is partially reflected by a crack in the rod and partially by the far end of the rod. These two reflected pulses travel back along the rod, arriving at the end from which they started at times t1 and t2, where t2 > t1. What is the distance between the crack and the far end of the rod? t1 PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number.",
+      "has_diagram": false,
+      "options": {
+        "A": "L t2 t2",
+        "B": "L t1 t1",
+        "C": "L 2t 2 t2",
+        "D": "L 2t1 ( t 2 − t1 )",
+        "E": "L t2 ( t 2 − t1 )",
+        "F": "L 2t 2 21 22 23"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   A pulse of ultrasound travels from one end of a solid uniform rod of length L, starting at time\n     t = 0.\n     The pulse is partially reflected by a crack in the rod and partially by the far end of the rod.\n     These two reflected pulses travel back along the rod, arriving at the end from which they\n     started at times t1 and t2, where t2 > t1.\n     What is the distance between the crack and the far end of the rod?\n          t1\n     A       L\n          t2\n          t2\n     B       L\n          t1\n           t1\n     C         L\n          2t 2\n          t2\n     D        L\n          2t1\n          ( t 2 − t1 )\n     E                   L\n              t2\n          ( t 2 − t1 )\n     F                 L\n               2t 2\n                                                   21\n\fBLANK PAGE\n    22\n\fPART B Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             23",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q21",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 Given that 2 y = ⎛⎜ 2 x − 1 ⎞ ⎟ ⎝ 2 x⎠ dy 1 find the value of when x = dx 2",
+      "has_diagram": false,
+      "options": {
+        "A": "–12 1",
+        "B": "− 4",
+        "C": "3 63",
+        "D": "16",
+        "E": "5"
+      },
+      "correct_answer": "C",
+      "raw_text": "21   Given that\n                                                                  2\n                                              y = ⎛⎜ 2 x −\n                                                            1 ⎞\n                                                              ⎟\n                                                   ⎝       2 x⎠\n                         dy          1\n     find the value of      when x =\n                         dx          2\n     A    –12\n              1\n     B    −\n              4\n     C    3\n          63\n     D\n          16\n     E    5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q22",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 Object P of mass 2.4 kg is on a smooth plane inclined at an angle of 60° to the horizontal. A constant force of magnitude 2F parallel to the plane is applied to P. As a result P moves directly up the plane with constant velocity. Object Q of mass 0.75 kg is on a smooth, horizontal plane. A constant force of magnitude F parallel to the plane is applied to Q. As a result Q moves along the plane with constant acceleration. What is the acceleration of Q? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "4.5 m s– 2",
+        "B": "6.0 m s– 2",
+        "C": "8.0 m s– 2",
+        "D": "16 m s– 2",
+        "E": "4.5 3 m s– 2",
+        "F": "6.0 3 m s– 2",
+        "G": "8.0 3 m s– 2",
+        "H": "16 3 m s– 2 24"
+      },
+      "correct_answer": "G",
+      "raw_text": "22   Object P of mass 2.4 kg is on a smooth plane inclined at an angle of 60° to the horizontal. A\n     constant force of magnitude 2F parallel to the plane is applied to P. As a result P moves\n     directly up the plane with constant velocity.\n     Object Q of mass 0.75 kg is on a smooth, horizontal plane. A constant force of magnitude F\n     parallel to the plane is applied to Q. As a result Q moves along the plane with constant\n     acceleration.\n     What is the acceleration of Q?\n     (gravitational field strength = 10 N kg–1)\n     A    4.5 m s– 2\n     B    6.0 m s– 2\n     C    8.0 m s– 2\n     D    16 m s– 2\n     E    4.5 3 m s– 2\n     F    6.0 3 m s– 2\n     G    8.0 3 m s– 2\n     H   16 3 m s– 2\n                                                   24",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q23",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 A particular arithmetic series has first term a and common difference d . The sum of the first k terms of this series is denoted by Sk Which of the following is a simplification of Sn+1 – Sn–1 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "d",
+        "B": "2d",
+        "C": "2a + d",
+        "D": "2a + 2d",
+        "E": "2a + nd",
+        "F": "2a + 2nd",
+        "G": "2 a + (2 n – 1) d",
+        "H": "2 a + (4 n – 2) d 25"
+      },
+      "correct_answer": "G",
+      "raw_text": "23   A particular arithmetic series has first term a and common difference d .\n     The sum of the first k terms of this series is denoted by Sk\n     Which of the following is a simplification of Sn+1 – Sn–1 ?\n     A   d\n     B   2d\n     C   2a + d\n     D   2a + 2d\n     E   2a + nd\n     F   2a + 2nd\n     G   2 a + (2 n – 1) d\n     H   2 a + (4 n – 2) d\n                                                    25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q24",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 A sound wave is travelling from left to right in air. The diagram represents the wave at a particular instant, and a distance of 33 cm is labelled. 33 cm P The speed of sound in air is 330 m s–1. What is the frequency of the sound and in which direction has the air at P been displaced from its mean position? frequency of sound / Hz displacement of air at P",
+      "has_diagram": true,
+      "options": {
+        "A": "1000 to the left",
+        "B": "2500 to the left",
+        "C": "5000 to the left",
+        "D": "1000 to the right",
+        "E": "2500 to the right",
+        "F": "5000 to the right"
+      },
+      "correct_answer": "B",
+      "raw_text": "24   A sound wave is travelling from left to right in air. The diagram represents the wave at a\n     particular instant, and a distance of 33 cm is labelled.\n                                        33 cm                                     P\n     The speed of sound in air is 330 m s–1.\n     What is the frequency of the sound and in which direction has the air at P been displaced from\n     its mean position?\n             frequency of sound / Hz        displacement of air at P\n     A                1000                            to the left\n     B                2500                            to the left\n     C                5000                            to the left\n     D                1000                           to the right\n     E                2500                           to the right\n     F                5000                           to the right",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q24-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q25",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 Find how many distinct real solutions there are to the equation ( x 2 + 4 x + 3)2 = 1",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4 26"
+      },
+      "correct_answer": "D",
+      "raw_text": "25   Find how many distinct real solutions there are to the equation\n                                               ( x 2 + 4 x + 3)2 = 1\n     A   0\n     B   1\n     C   2\n     D   3\n     E   4\n                                                    26",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q26",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 A resistor R is connected between terminals X and Y in the circuit shown. 30 V dc supply X 4.0 Ω Y 8.0 Ω The power transferred in the 4.0 Ω heater is 9.0 W. What is the resistance of R?",
+      "has_diagram": false,
+      "options": {
+        "A": "1.6 Ω",
+        "B": "2.0 Ω",
+        "C": "2.67 Ω",
+        "D": "4.0 Ω",
+        "E": "8.0 Ω 27"
+      },
+      "correct_answer": "D",
+      "raw_text": "26   A resistor R is connected between terminals X and Y in the circuit shown.\n                                                30 V dc\n                                                supply\n                                                                     X\n                                                        4.0 Ω\n                                                                     Y\n                                           8.0 Ω\n     The power transferred in the 4.0 Ω heater is 9.0 W.\n     What is the resistance of R?\n     A   1.6 Ω\n     B   2.0 Ω\n     C   2.67 Ω\n     D   4.0 Ω\n     E   8.0 Ω\n                                                   27",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q27",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 The line x = 1 divides the circle x 2 + y 2 = 4 into two segments. What is the area of the smaller segment? 2π 3",
+      "has_diagram": false,
+      "options": {
+        "A": "− 3 2 2π",
+        "B": "− 3 3 π 1",
+        "C": "− 2 2 π",
+        "D": "−1 2 1",
+        "E": "π− 2",
+        "F": "π −1 4π 3",
+        "G": "− 3 2 4π",
+        "H": "− 3 3 28"
+      },
+      "correct_answer": "H",
+      "raw_text": "27   The line x = 1 divides the circle x 2 + y 2 = 4 into two segments.\n     What is the area of the smaller segment?\n          2π    3\n     A       −\n           3   2\n          2π\n     B       − 3\n           3\n          π       1\n     C        −\n          2       2\n          π\n     D        −1\n          2\n                  1\n     E   π−\n                  2\n     F   π −1\n          4π    3\n     G       −\n          3    2\n          4π\n     H       − 3\n          3\n                                                 28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q28",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 A uniform plank of length 5.0 m rests horizontally as shown. 75 N cable 1.0 m 60° plank pivot [diagram not to scale] There is a pivot 1.0 m from one end of the plank.",
+      "has_diagram": false,
+      "options": {
+        "A": "60 N",
+        "B": "60 3 N",
+        "C": "100 N",
+        "D": "100 3 N",
+        "E": "125 N",
+        "F": "125 3 N 29"
+      },
+      "correct_answer": "D",
+      "raw_text": "28   A uniform plank of length 5.0 m rests horizontally as shown.\n                                                                                  75 N\n                                                                    cable\n                         1.0 m                                                  60°\n                                              plank\n                        pivot\n                                           [diagram not to scale]\n     There is a pivot 1.0 m from one end of the plank.\n     A cable at an angle of 60° to the horizontal supports the plank at the other end so that it is in\n     equilibrium.\n     The tension in the cable is 75 N.\n     What is the weight of the plank?\n     A   60 N\n     B   60 3 N\n     C   100 N\n     D   100 3 N\n     E   125 N\n     F   125 3 N\n                                                  29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q29",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 What is the mean of log10 27, log10 64, and log10 216 ? log10 307",
+      "has_diagram": false,
+      "options": {
+        "A": "3 log10 81",
+        "B": "3 12 log10 6",
+        "C": "3",
+        "D": "log10 64",
+        "E": "log10 72",
+        "F": "log10 108"
+      },
+      "correct_answer": "E",
+      "raw_text": "29   What is the mean of log10 27, log10 64, and log10 216 ?\n          log10 307\n     A\n              3\n          log10 81\n     B\n             3\n                    12\n          log10 6\n     C\n              3\n     D   log10 64\n     E   log10 72\n     F   log10 108",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q30",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 A lorry accelerates along a straight, horizontal road with uniform acceleration. Oil droplets from the lorry fall a small distance onto the road at a constant rate. The time interval between successive drips is t . The diagram shows four successive oil droplets on the road after the lorry has passed. x y The distance between the first two of these droplets is x and the distance between the final two is y . Which expression gives the acceleration of the lorry? y−x",
+      "has_diagram": false,
+      "options": {
+        "A": "2 3t y−x",
+        "B": "2 2t y−x",
+        "C": "t2 2( y − x )",
+        "D": "t2 y+x",
+        "E": "t2 y+x",
+        "F": "2 3t"
+      },
+      "correct_answer": "B",
+      "raw_text": "30   A lorry accelerates along a straight, horizontal road with uniform acceleration.\n     Oil droplets from the lorry fall a small distance onto the road at a constant rate. The time\n     interval between successive drips is t .\n     The diagram shows four successive oil droplets on the road after the lorry has passed.\n                         x                                                 y\n     The distance between the first two of these droplets is x and the distance between the final\n     two is y .\n     Which expression gives the acceleration of the lorry?\n          y−x\n     A       2\n          3t\n          y−x\n     B       2\n          2t\n          y−x\n     C\n           t2\n          2( y − x )\n     D\n              t2\n          y+x\n     E\n           t2\n          y+x\n     F       2\n          3t\n                                                  30",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q31",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 Which of the following is the largest in value? (All angles are in radians.)",
+      "has_diagram": true,
+      "options": {
+        "A": "cos 0.5",
+        "B": "cos 0.75",
+        "C": "cos 1",
+        "D": "sin 0.5",
+        "E": "sin 0.75",
+        "F": "sin 1"
+      },
+      "correct_answer": "A",
+      "raw_text": "31   Which of the following is the largest in value?\n     (All angles are in radians.)\n     A   cos 0.5\n     B   cos 0.75\n     C   cos 1\n     D   sin 0.5\n     E   sin 0.75\n     F   sin 1",
+      "diagram_images": [
+        "ENGAA-2021-S1-Q31-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2021-S1-Q32",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 A light, metal wire of length 2.5 m and cross-sectional area 1.8 × 10–6 m2 is suspended vertically. A mass of 7.2 kg is attached to the lower end of the wire. The wire extends by 0.50 mm. What is the Young modulus of the metal and how much energy is stored in the extended wire? (gravitational field strength = 10 N kg–1; assume that the wire obeys Hooke’s law and that changes in the cross-sectional area are negligible) Young modulus / Pa energy stored / J",
+      "has_diagram": false,
+      "options": {
+        "A": "5.0 × 10–12 0.018",
+        "B": "5.0 × 10–12 0.036",
+        "C": "2.0 × 1011 0.018",
+        "D": "2.0 × 1011 0.036",
+        "E": "2.0 × 1014 18",
+        "F": "2.0 × 1014 36 31"
+      },
+      "correct_answer": "C",
+      "raw_text": "32   A light, metal wire of length 2.5 m and cross-sectional area 1.8 × 10–6 m2 is suspended\n     vertically. A mass of 7.2 kg is attached to the lower end of the wire. The wire extends\n     by 0.50 mm.\n     What is the Young modulus of the metal and how much energy is stored in the extended wire?\n     (gravitational field strength = 10 N kg–1; assume that the wire obeys Hooke’s law and that\n     changes in the cross-sectional area are negligible)\n                 Young modulus / Pa                energy stored / J\n     A               5.0 × 10–12                        0.018\n     B               5.0 × 10–12                        0.036\n     C               2.0 × 1011                         0.018\n     D               2.0 × 1011                         0.036\n     E               2.0 × 1014                           18\n     F               2.0 × 1014                           36\n                                                  31",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q33",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 A geometric progression has first term u1 = a and common ratio r . 8 The sum to infinity of the geometric progression is 5 3 The sum to infinity of the even-numbered terms (u2 + u4 + u6 + L ) is 5 What is the value of a + r ? 3",
+      "has_diagram": false,
+      "options": {
+        "A": "5 31",
+        "B": "25 23",
+        "C": "5 28",
+        "D": "5 67",
+        "E": "8"
+      },
+      "correct_answer": "B",
+      "raw_text": "33   A geometric progression has first term u1 = a and common ratio r .\n                                                           8\n     The sum to infinity of the geometric progression is\n                                                           5\n                                                                             3\n     The sum to infinity of the even-numbered terms (u2 + u4 + u6 + L ) is\n                                                                             5\n     What is the value of a + r ?\n          3\n     A\n          5\n          31\n     B\n          25\n          23\n     C\n          5\n          28\n     D\n           5\n          67\n     E\n          8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q34",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 A child of mass 30 kg is on a sledge of mass 10 kg which is moving down a smooth slope at an instantaneous speed of 4.0 m s–1. At this instant, the child jumps backwards off the sledge and lands stationary on the slope. What is the speed of the sledge immediately after the child jumps off?",
+      "has_diagram": false,
+      "options": {
+        "A": "4.0 m s–1",
+        "B": "8.0 m s–1",
+        "C": "12 m s–1",
+        "D": "16 m s–1",
+        "E": "20 m s–1 32"
+      },
+      "correct_answer": "D",
+      "raw_text": "34   A child of mass 30 kg is on a sledge of mass 10 kg which is moving down a smooth slope at an\n     instantaneous speed of 4.0 m s–1.\n     At this instant, the child jumps backwards off the sledge and lands stationary on the slope.\n     What is the speed of the sledge immediately after the child jumps off?\n     A   4.0 m s–1\n     B   8.0 m s–1\n     C   12 m s–1\n     D   16 m s–1\n     E   20 m s–1\n                                                 32",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q35",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 At how many distinct points do the following two curves meet? y = ( x – 4)( x 2 – 2 x – 8) y = – x 2 + 8 x – 16",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4",
+        "F": "5"
+      },
+      "correct_answer": "C",
+      "raw_text": "35   At how many distinct points do the following two curves meet?\n                                          y = ( x – 4)( x 2 – 2 x – 8)\n                                             y = – x 2 + 8 x – 16\n     A   0\n     B   1\n     C   2\n     D   3\n     E   4\n     F   5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q36",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 A piece of electrically conducting putty is formed into the shape of a uniform cylinder. The resistance between the ends of the cylinder is R. The same piece of putty is now formed into a new uniform cylinder with half the diameter of the first cylinder. What is the resistance between the ends of the new cylinder?",
+      "has_diagram": false,
+      "options": {
+        "A": "2R",
+        "B": "2 2R",
+        "C": "4 2R",
+        "D": "2R",
+        "E": "4R",
+        "F": "8R",
+        "G": "16R 33"
+      },
+      "correct_answer": "G",
+      "raw_text": "36   A piece of electrically conducting putty is formed into the shape of a uniform cylinder. The\n     resistance between the ends of the cylinder is R.\n     The same piece of putty is now formed into a new uniform cylinder with half the diameter of the\n     first cylinder.\n     What is the resistance between the ends of the new cylinder?\n     A       2R\n     B   2 2R\n     C   4 2R\n     D   2R\n     E   4R\n     F   8R\n     G   16R\n                                                  33",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q37",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 Evaluate 3 3 3 3 + + + L + 27 + 21 24 + 18 21 + 15 9+ 3 3 2",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3 2 3 3",
+        "C": "2",
+        "D": "3",
+        "E": "1+ 2",
+        "F": "( 3 1+ 2 ) 3⎛ 2⎞",
+        "G": "⎜1 + ⎟ ⎜ 3 ⎝ 2 ⎟⎠ ⎛ 2⎞",
+        "H": "3 ⎜⎜ 1 + ⎟ ⎝ 2 ⎟⎠"
+      },
+      "correct_answer": "H",
+      "raw_text": "37   Evaluate\n                              3              3               3                     3\n                                   +              +               + L +\n                           27 + 21        24 + 18         21 + 15                 9+ 3\n          3 2\n     A\n           2\n     B    3 2\n          3 3\n     C\n           2\n     D     3\n     E    1+ 2\n     F     (\n          3 1+ 2   )\n            3⎛     2⎞\n     G       ⎜1 +    ⎟\n             ⎜\n           3 ⎝    2 ⎟⎠\n              ⎛      2⎞\n     H     3 ⎜⎜ 1 +    ⎟\n              ⎝     2 ⎟⎠",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q38",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 A car accelerates from rest in a straight line. During the first 10 s, its acceleration, a, in m s–2 is given by the equation a = 4.0 – 0.36t where t is the time in seconds. What is its displacement from its original position after 10 s?",
+      "has_diagram": false,
+      "options": {
+        "A": "22 m",
+        "B": "110 m",
+        "C": "136 m",
+        "D": "140 m",
+        "E": "220 m",
+        "F": "1100 m",
+        "G": "1360 m",
+        "H": "1400 m 34"
+      },
+      "correct_answer": "D",
+      "raw_text": "38   A car accelerates from rest in a straight line. During the first 10 s, its acceleration, a, in m s–2 is\n     given by the equation\n                                                 a = 4.0 – 0.36t\n     where t is the time in seconds.\n     What is its displacement from its original position after 10 s?\n     A   22 m\n     B   110 m\n     C   136 m\n     D   140 m\n     E   220 m\n     F   1100 m\n     G   1360 m\n     H   1400 m\n                                                    34",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q39",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 x = 15 y y = √x S R 0 0 P Q x PQRS is a rectangle. P and Q lie on the x-axis. Q and R lie on the line x = 15 S lies on the curve y = x What is the maximum possible area of the rectangle?",
+      "has_diagram": false,
+      "options": {
+        "A": "5 5",
+        "B": "10 5",
+        "C": "50",
+        "D": "25 5",
+        "E": "100",
+        "F": "125 35"
+      },
+      "correct_answer": "B",
+      "raw_text": "39                                                         x = 15\n                     y\n                                                                        y = √x\n                                        S                    R\n                     0\n                         0               P                   Q      x\n     PQRS is a rectangle.\n     P and Q lie on the x-axis.\n     Q and R lie on the line x = 15\n     S lies on the curve y =   x\n     What is the maximum possible area of the rectangle?\n     A   5 5\n     B   10 5\n     C   50\n     D   25 5\n     E   100\n     F   125\n                                              35",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2021-S1-Q40",
+      "year": 2021,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 Two trolleys are free to move on a smooth one-dimensional track. A light spring is compressed between the two stationary trolleys, the trolleys are released and then separate. The trolleys have masses m and 4 m and the work done by the spring as it expands is W. Assume that no work is done against frictional forces. What is the difference in kinetic energy between the two trolleys when the spring has expanded?",
+      "has_diagram": false,
+      "options": {
+        "A": "0 W",
+        "B": "5 W",
+        "C": "4 W",
+        "D": "2 3W",
+        "E": "5 3W",
+        "F": "4 4W",
+        "G": "5",
+        "H": "W END OF TEST 36 37 38 39"
+      },
+      "correct_answer": "E",
+      "raw_text": "40   Two trolleys are free to move on a smooth one-dimensional track. A light spring is compressed\n     between the two stationary trolleys, the trolleys are released and then separate.\n     The trolleys have masses m and 4 m and the work done by the spring as it expands is W.\n     Assume that no work is done against frictional forces.\n     What is the difference in kinetic energy between the two trolleys when the spring has\n     expanded?\n     A   0\n          W\n     B\n          5\n          W\n     C\n          4\n          W\n     D\n          2\n          3W\n     E\n           5\n          3W\n     F\n           4\n          4W\n     G\n           5\n     H   W\n                                          END OF TEST\n                                                36\n\fBLANK PAGE\n    37\n\fBLANK PAGE\n    38\n\fBLANK PAGE\n    39\n\f40",
+      "diagram_images": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Python deps required by scripts/dedup_corpus.py (ESA-44 Part B).
+# CPU-only is fine; all-MiniLM-L6-v2 runs in well under a minute on CPU for
+# the ~1.6k corpus rows. The model auto-downloads from HuggingFace on first run
+# and is cached under ~/.cache/huggingface.
+#
+# On this host a working env already exists at /tmp/arm64-dep-test-venv
+# (sentence-transformers 5.6.0, torch 2.13 CPU, model cached). To rebuild:
+#
+#   python3 -m venv .venv-dedup
+#   .venv-dedup/bin/pip install -r scripts/requirements-dedup.txt
+#   .venv-dedup/bin/python scripts/dedup_corpus.py
+
+sentence-transformers>=3.0
+torch>=2.2            # any CPU wheel; no CUDA needed
+numpy>=1.26

@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ESAT Gymnasium</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   FONT IMPORT
+   ═══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERACTIVE STYLES
+   ═══════════════════════════════════════════════════════════════ */
+.opt-btn {
+  transition: background 0.1s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+  position: relative;
+}
+.opt-btn:hover:not(.answered) {
+  background: #EEF4FF !important;
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 3px #EEF4FF;
+}
+
+.nav-pill {
+  transition: color 0.1s, background 0.1s;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.nav-pill:hover { background: #EFECEA; color: #18181A !important; }
+.nav-pill.active { color: #2563EB !important; background: #EEF4FF; }
+
+.topic-row { transition: background 0.1s; cursor: pointer; border-radius: 8px; }
+.topic-row:hover { background: #EFECEA; }
+.topic-row.focused { background: #EEF4FF; }
+
+.btn-primary {
+  transition: filter 0.12s, box-shadow 0.12s, transform 0.1s;
+  cursor: pointer;
+}
+.btn-primary:hover { filter: brightness(1.07); box-shadow: 0 4px 14px rgba(37,99,235,0.28); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost { transition: background 0.1s, border-color 0.1s; cursor: pointer; }
+.btn-ghost:hover { background: #EFECEA !important; border-color: #C9C6C0 !important; }
+
+.stat-card { transition: box-shadow 0.18s, transform 0.18s; }
+.stat-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.09) !important; transform: translateY(-2px); }
+
+.nav-btn { transition: background 0.1s, opacity 0.1s; }
+.nav-btn:not([disabled]):hover { background: #EFECEA !important; }
+
+.q-num-btn { transition: background 0.1s, border-color 0.1s, transform 0.1s; }
+.q-num-btn:hover { transform: scale(1.08); }
+
+.collapse-btn { transition: background 0.1s, border-color 0.12s; cursor: pointer; }
+.collapse-btn:hover { background: #EFECEA !important; }
+
+.hint-btn-open:hover { background: #FEF9C3 !important; }
+.soln-btn-open:hover { background: #DBEAFE !important; }
+
+/* Pulsing "now" dot */
+.pulse-dot { animation: pdot 2s ease-in-out infinite; }
+@keyframes pdot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.45; transform:scale(0.75); } }
+
+/* Loading spinner */
+.spinner { animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Urgent timer pulse */
+.timer-urgent { animation: turg 0.9s ease-in-out infinite; }
+@keyframes turg { 0%,100%{ opacity:1; } 50%{ opacity:0.55; } }
+
+/* Custom select arrow */
+select {
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239E9C98' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px !important;
+}
+select:focus { outline: none; border-color: #2563EB !important; box-shadow: 0 0 0 3px #EEF4FF; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var _React = React,
+  useState = _React.useState,
+  useEffect = _React.useEffect,
+  useRef = _React.useRef;
+
+/* ═══════════════════════════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════════════════════════ */
+var C = {
+  bg: "#F6F5F1",
+  surf: "#FFFFFF",
+  alt: "#EFECEA",
+  bdr: "#E3E0DA",
+  bdr2: "#C9C6C0",
+  text: "#18181A",
+  sec: "#504F4C",
+  ter: "#9E9C98",
+  blue: "#1A47B8",
+  mid: "#2563EB",
+  lite: "#EEF4FF",
+  liteb: "#DBEAFE",
+  green: "#15803D",
+  gLite: "#F0FDF4",
+  gBdr: "#86EFAC",
+  red: "#DC2626",
+  rLite: "#FEF2F2",
+  rBdr: "#FECACA",
+  amber: "#B45309",
+  aLite: "#FFFBEB",
+  aBdr: "#FDE68A",
+  purp: "#7C3AED",
+  pLite: "#F5F3FF",
+  pBdr: "#DDD6FE"
+};
+var SH = {
+  card: "0 1px 2px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.03)",
+  lifted: "0 3px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04)",
+  blue: "0 4px 14px rgba(37,99,235,0.22), 0 1px 3px rgba(37,99,235,0.12)"
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   CONSTANTS
+═══════════════════════════════════════════════════════════════════ */
+var EXAM_DATE = new Date("2026-10-09");
+var DAYS_LEFT = Math.max(0, Math.ceil((EXAM_DATE - Date.now()) / 86400000));
+var SESSION = 10;
+var TOPICS = {
+  "Mathematics 1": [{
+    name: "Algebra & Polynomials",
+    str: 72
+  }, {
+    name: "Sequences & Series",
+    str: 59
+  }, {
+    name: "Geometry & Trigonometry",
+    str: 85
+  }, {
+    name: "Statistics & Probability",
+    str: 64
+  }, {
+    name: "Calculus",
+    str: 57
+  }],
+  "Physics": [{
+    name: "Mechanics",
+    str: 78
+  }, {
+    name: "Electricity & Magnetism",
+    str: 44
+  }, {
+    name: "Waves & Optics",
+    str: 67
+  }, {
+    name: "Thermodynamics",
+    str: 51
+  }, {
+    name: "Modern Physics",
+    str: 63
+  }],
+  "Chemistry": [{
+    name: "Atomic Structure",
+    str: 86
+  }, {
+    name: "Energetics & Kinetics",
+    str: 68
+  }, {
+    name: "Organic Chemistry",
+    str: 71
+  }, {
+    name: "Equilibrium & Acids",
+    str: 59
+  }],
+  "Biology": [{
+    name: "Cell Biology",
+    str: 83
+  }, {
+    name: "Genetics & Inheritance",
+    str: 76
+  }, {
+    name: "Ecology & Populations",
+    str: 90
+  }, {
+    name: "Human Physiology",
+    str: 68
+  }],
+  "Mathematics 2": [{
+    name: "Proof & Logic",
+    str: 41
+  }, {
+    name: "Complex Numbers",
+    str: 60
+  }, {
+    name: "Differential Equations",
+    str: 53
+  }, {
+    name: "Number Theory",
+    str: 47
+  }]
+};
+var RADAR_DATA = [{
+  axis: "Maths 1",
+  v: 67
+}, {
+  axis: "Physics",
+  v: 61
+}, {
+  axis: "Chemistry",
+  v: 71
+}, {
+  axis: "Biology",
+  v: 79
+}, {
+  axis: "Maths 2",
+  v: 50
+}];
+var DIFF_META = {
+  "Easy": {
+    bg: "#F0FDF4",
+    col: "#15803D",
+    bdr: "#86EFAC"
+  },
+  "Medium": {
+    bg: "#FFFBEB",
+    col: "#B45309",
+    bdr: "#FDE68A"
+  },
+  "Hard": {
+    bg: "#FEF2F2",
+    col: "#DC2626",
+    bdr: "#FECACA"
+  },
+  "Very Hard": {
+    bg: "#F5F3FF",
+    col: "#7C3AED",
+    bdr: "#DDD6FE"
+  }
+};
+var DIFF_SEQ = ["Easy", "Medium", "Medium", "Hard", "Medium", "Hard", "Hard", "Very Hard", "Medium", "Very Hard"];
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOCK QUESTIONS — hardcoded sample data
+═══════════════════════════════════════════════════════════════════ */
+var MOCK_QUESTIONS = [{
+  q: "A polynomial f(x) = x\xB3 + ax\xB2 + bx + 6 has roots 1, 2, and 3. What is the value of a?",
+  opts: ["A) \u22126", "B) 6", "C) \u22121", "D) 11", "E) \u221211"],
+  ans: "A",
+  topic: "Algebra & Polynomials",
+  diff: "Easy",
+  hint: "Use Vieta's formulas: the sum of the roots equals \u2212a/x\xB3 coefficient.",
+  soln: "By Vieta's formulas, the sum of the roots = \u2212a/1.\n\nSum of roots = 1 + 2 + 3 = 6.\n\nSo \u2212a = 6, which gives a = \u22126.\n\nTo verify: (x\u22121)(x\u22122)(x\u22123) = x\xB3 \u2212 6x\xB2 + 11x \u2212 6.\nSo a = \u22126. Confirmed."
+}, {
+  q: "The sum of the first n terms of an arithmetic sequence is Sn = n\xB2 + 2n. What is the common difference?",
+  opts: ["A) 1", "B) 2", "C) 3", "D) 4", "E) n"],
+  ans: "B",
+  topic: "Sequences & Series",
+  diff: "Medium",
+  hint: "Find the general term an = Sn \u2212 Sn\u22121, then identify the common difference.",
+  soln: "Sn = n\xB2 + 2n\nSn\u22121 = (n\u22121)\xB2 + 2(n\u22121) = n\xB2 \u2212 2n + 1 + 2n \u2212 2 = n\xB2 \u2212 1\n\nan = Sn \u2212 Sn\u22121 = (n\xB2 + 2n) \u2212 (n\xB2 \u2212 1) = 2n + 1\n\nan = 2n + 1, so a1 = 3, a2 = 5, a3 = 7...\n\nCommon difference d = a2 \u2212 a1 = 5 \u2212 3 = 2."
+}, {
+  q: "In triangle ABC, angle A = 60\xB0, side b = 8, side c = 5. What is the length of side a?",
+  opts: ["A) 6", "B) 7", "C) \u221A39", "D) \u221A49", "E) \u221A89"],
+  ans: "B",
+  topic: "Geometry & Trigonometry",
+  diff: "Medium",
+  hint: "Apply the cosine rule: a\xB2 = b\xB2 + c\xB2 \u2212 2bc\xB7cos(A).",
+  soln: "By the cosine rule:\n\na\xB2 = b\xB2 + c\xB2 \u2212 2bc\xB7cos(A)\na\xB2 = 8\xB2 + 5\xB2 \u2212 2(8)(5)cos(60\xB0)\na\xB2 = 64 + 25 \u2212 80(0.5)\na\xB2 = 89 \u2212 40\na\xB2 = 49\na = 7"
+}, {
+  q: "A fair six-sided die is rolled twice. What is the probability that the sum of the two rolls is exactly 7?",
+  opts: ["A) 1/12", "B) 1/9", "C) 1/6", "D) 5/36", "E) 7/36"],
+  ans: "C",
+  topic: "Statistics & Probability",
+  diff: "Easy",
+  hint: "Count the number of ways to get a sum of 7 from two dice.",
+  soln: "Total outcomes: 6 \xD7 6 = 36.\n\nFavourable pairs (sum = 7):\n(1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways.\n\nP(sum = 7) = 6/36 = 1/6."
+}, {
+  q: "Evaluate: \u222B\u2080\xB9 (3x\xB2 \u2212 2x + 1) dx",
+  opts: ["A) 0", "B) 1", "C) 2", "D) 3", "E) 1.5"],
+  ans: "B",
+  topic: "Calculus",
+  diff: "Medium",
+  hint: "Integrate term by term, then evaluate at the bounds.",
+  soln: "\u222B(3x\xB2 \u2212 2x + 1) dx = x\xB3 \u2212 x\xB2 + x + C\n\nEvaluate from 0 to 1:\n= [1\xB3 \u2212 1\xB2 + 1] \u2212 [0\xB3 \u2212 0\xB2 + 0]\n= [1 \u2212 1 + 1] \u2212 0\n= 1"
+}, {
+  q: "A car accelerates uniformly from rest to 20 m/s in 5 seconds. What distance does it travel in this time?",
+  opts: ["A) 25 m", "B) 50 m", "C) 75 m", "D) 100 m", "E) 10 m"],
+  ans: "B",
+  topic: "Mechanics",
+  diff: "Easy",
+  hint: "Use s = \xBD \xD7 a \xD7 t\xB2 or s = \xBD(u + v)t.",
+  soln: "Using s = \xBD(u + v)t:\n\ns = \xBD(0 + 20)(5)\ns = \xBD(20)(5)\ns = 50 m\n\nAlternatively: a = (20\u22120)/5 = 4 m/s\xB2\ns = \xBD(4)(25) = 50 m."
+}, {
+  q: "Two resistors of 6\u03A9 and 3\u03A9 are connected in parallel. What is the equivalent resistance?",
+  opts: ["A) 9\u03A9", "B) 3\u03A9", "C) 2\u03A9", "D) 4.5\u03A9", "E) 18\u03A9"],
+  ans: "C",
+  topic: "Electricity & Magnetism",
+  diff: "Hard",
+  hint: "For parallel resistors: 1/R = 1/R\u2081 + 1/R\u2082.",
+  soln: "For parallel resistors:\n\n1/R = 1/R\u2081 + 1/R\u2082\n1/R = 1/6 + 1/3\n1/R = 1/6 + 2/6\n1/R = 3/6 = 1/2\nR = 2\u03A9"
+}, {
+  q: "A sound wave has frequency 680 Hz and speed 340 m/s. What is its wavelength?",
+  opts: ["A) 0.25 m", "B) 0.5 m", "C) 1.0 m", "D) 2.0 m", "E) 0.68 m"],
+  ans: "B",
+  topic: "Waves & Optics",
+  diff: "Hard",
+  hint: "Use the wave equation: v = f\u03BB.",
+  soln: "v = f\u03BB\n\n\u03BB = v/f\n\u03BB = 340/680\n\u03BB = 0.5 m"
+}, {
+  q: "An ideal gas at pressure P and volume V undergoes isothermal expansion to volume 2V. What is the new pressure?",
+  opts: ["A) P/2", "B) 2P", "C) P", "D) P/4", "E) 4P"],
+  ans: "A",
+  topic: "Thermodynamics",
+  diff: "Medium",
+  hint: "For isothermal processes, PV = constant (Boyle's Law).",
+  soln: "For an isothermal process, PV = constant (Boyle's Law).\n\nP\u2081V\u2081 = P\u2082V\u2082\nP \xB7 V = P\u2082 \xB7 2V\nP\u2082 = PV / 2V\nP\u2082 = P/2"
+}, {
+  q: "In a hydrogen atom, an electron transitions from n=3 to n=1. The energy of the emitted photon is approximately:",
+  opts: ["A) 1.89 eV", "B) 10.2 eV", "C) 12.09 eV", "D) 13.6 eV", "E) 3.4 eV"],
+  ans: "C",
+  topic: "Modern Physics",
+  diff: "Very Hard",
+  hint: "Use En = \u221213.6/n\xB2 eV and find \u0394E = E\u2083 \u2212 E\u2081.",
+  soln: "E_n = \u221213.6/n\xB2 eV\n\nE\u2083 = \u221213.6/9 = \u22121.51 eV\nE\u2081 = \u221213.6/1 = \u221213.6 eV\n\n\u0394E = E\u2083 \u2212 E\u2081 = \u22121.51 \u2212 (\u221213.6) = 12.09 eV\n\nThe photon carries away this energy."
+}];
+
+/* ═══════════════════════════════════════════════════════════════════
+   ICON SYSTEM
+   Heroicons-derived . 24x24 viewBox . 1.6px stroke . round caps
+═══════════════════════════════════════════════════════════════════ */
+var P = {
+  flame: ["M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z", "M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"],
+  clock: ["M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"],
+  trendUp: ["M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"],
+  checkCir: ["M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"],
+  xCir: ["m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"],
+  check: ["M4.5 12.75l6 6 9-13.5"],
+  x: ["M6 18 18 6M6 6l12 12"],
+  chevL: ["M15.75 19.5 8.25 12l7.5-7.5"],
+  chevR: ["M8.25 4.5l7.5 7.5-7.5 7.5"],
+  chevD: ["M19.5 8.25l-7.5 7.5-7.5-7.5"],
+  arrowL: ["M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"],
+  play: ["M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"],
+  bulb: ["M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"],
+  book: ["M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"],
+  warn: ["M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"],
+  squares: ["M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"],
+  activity: ["M3 13.5h3.75l3-9.75 4.5 19.5 3-9.75H21"],
+  trophy: ["M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"],
+  pencil: ["m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125"],
+  user: ["M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"],
+  sparkle: ["M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z", "M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"],
+  bolt: ["M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"]
+};
+function Svg(_ref) {
+  var icon = _ref.icon,
+    _ref$size = _ref.size,
+    size = _ref$size === void 0 ? 16 : _ref$size,
+    _ref$col = _ref.col,
+    col = _ref$col === void 0 ? "currentColor" : _ref$col,
+    _ref$sw = _ref.sw,
+    sw = _ref$sw === void 0 ? 1.6 : _ref$sw,
+    _ref$fill = _ref.fill,
+    fill = _ref$fill === void 0 ? "none" : _ref$fill,
+    _ref$style = _ref.style,
+    style = _ref$style === void 0 ? {} : _ref$style;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: size,
+    height: size,
+    viewBox: "0 0 24 24",
+    fill: fill,
+    stroke: col,
+    strokeWidth: sw,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true",
+    style: _objectSpread({
+      display: "block",
+      flexShrink: 0
+    }, style)
+  }, (P[icon] || []).map(function (d, i) {
+    return /*#__PURE__*/React.createElement("path", {
+      key: i,
+      d: d
+    });
+  }));
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ATOMS
+═══════════════════════════════════════════════════════════════════ */
+function Bar(_ref2) {
+  var pct = _ref2.pct,
+    color = _ref2.color,
+    _ref2$h = _ref2.h,
+    h = _ref2$h === void 0 ? 3 : _ref2$h;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: h,
+      borderRadius: h,
+      background: C.bdr,
+      overflow: "hidden"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: "100%",
+      width: "".concat(Math.min(100, Math.max(0, pct)), "%"),
+      background: color,
+      borderRadius: h,
+      transition: "width 0.55s cubic-bezier(0.16,1,0.3,1)"
+    }
+  }));
+}
+function Pill(_ref3) {
+  var children = _ref3.children,
+    bg = _ref3.bg,
+    col = _ref3.col,
+    bdr = _ref3.bdr;
+  return /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      height: 22,
+      padding: "0 8px",
+      borderRadius: 5,
+      fontSize: "0.6875rem",
+      fontWeight: 600,
+      letterSpacing: "0.01em",
+      background: bg,
+      color: col,
+      border: "1px solid ".concat(bdr || bg),
+      whiteSpace: "nowrap",
+      lineHeight: 1,
+      userSelect: "none"
+    }
+  }, children);
+}
+function KBD(_ref4) {
+  var children = _ref4.children;
+  return /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      minWidth: 20,
+      height: 20,
+      padding: "0 5px",
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr2),
+      borderBottom: "2px solid ".concat(C.bdr2),
+      borderRadius: 4,
+      fontFamily: '"JetBrains Mono", monospace',
+      fontSize: "0.625rem",
+      fontWeight: 600,
+      color: C.sec,
+      lineHeight: 1
+    }
+  }, children);
+}
+function Wordmark() {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10,
+      userSelect: "none"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 34,
+      height: 34,
+      borderRadius: 9,
+      background: C.blue,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0,
+      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.12), 0 1px 3px rgba(26,71,184,0.3)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"Instrument Serif", serif',
+      fontStyle: "italic",
+      fontSize: "1.45rem",
+      color: "#fff",
+      lineHeight: 1,
+      marginTop: 1,
+      display: "block"
+    }
+  }, "G")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      gap: 5,
+      lineHeight: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "Inter, sans-serif",
+      fontSize: "0.875rem",
+      fontWeight: 700,
+      color: C.text,
+      letterSpacing: "0.07em"
+    }
+  }, "ESAT"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"Instrument Serif", serif',
+      fontStyle: "italic",
+      fontSize: "1.1rem",
+      color: C.blue,
+      letterSpacing: "-0.01em"
+    }
+  }, "Gymnasium")));
+}
+function Label(_ref5) {
+  var children = _ref5.children,
+    _ref5$col = _ref5.col,
+    col = _ref5$col === void 0 ? C.ter : _ref5$col,
+    _ref5$mb = _ref5.mb,
+    mb = _ref5$mb === void 0 ? 0 : _ref5$mb;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.6875rem",
+      fontWeight: 600,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      color: col,
+      marginBottom: mb
+    }
+  }, children);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SVG RADAR CHART (no recharts dependency)
+═══════════════════════════════════════════════════════════════════ */
+function RadarChartSVG(_ref6) {
+  var data = _ref6.data;
+  var size = 260;
+  var cx = size / 2;
+  var cy = size / 2;
+  var maxR = 72;
+  var levels = [0.25, 0.5, 0.75, 1.0];
+  var angleFor = function angleFor(i) {
+    var n = data.length;
+    return Math.PI * 2 * i / n - Math.PI / 2;
+  };
+  var pointFor = function pointFor(i, val) {
+    var angle = angleFor(i);
+    var r = maxR * (val / 100);
+    return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+  };
+
+  // Grid rings
+  var rings = levels.map(function (lv, li) {
+    var pts = data.map(function (_, i) {
+      var angle = angleFor(i);
+      var r = maxR * lv;
+      return "".concat(cx + r * Math.cos(angle), ",").concat(cy + r * Math.sin(angle));
+    }).join(" ");
+    return /*#__PURE__*/React.createElement("polygon", {
+      key: li,
+      points: pts,
+      fill: "none",
+      stroke: C.bdr,
+      strokeWidth: "1",
+      strokeDasharray: "3 3"
+    });
+  });
+
+  // Axes
+  var axes = data.map(function (_, i) {
+    var angle = angleFor(i);
+    var x = cx + maxR * Math.cos(angle),
+      y = cy + maxR * Math.sin(angle);
+    return /*#__PURE__*/React.createElement("line", {
+      key: i,
+      x1: cx,
+      y1: cy,
+      x2: x,
+      y2: y,
+      stroke: C.bdr,
+      strokeWidth: "1"
+    });
+  });
+
+  // Data polygon
+  var dataPts = data.map(function (d, i) {
+    return pointFor(i, d.v);
+  }).map(function (_ref7) {
+    var _ref8 = _slicedToArray(_ref7, 2),
+      x = _ref8[0],
+      y = _ref8[1];
+    return "".concat(x, ",").concat(y);
+  }).join(" ");
+
+  // Data dots
+  var dots = data.map(function (d, i) {
+    var _pointFor = pointFor(i, d.v),
+      _pointFor2 = _slicedToArray(_pointFor, 2),
+      x = _pointFor2[0],
+      y = _pointFor2[1];
+    return /*#__PURE__*/React.createElement("circle", {
+      key: i,
+      cx: x,
+      cy: y,
+      r: "3.5",
+      fill: C.mid,
+      strokeWidth: "0"
+    });
+  });
+
+  // Labels
+  var labels = data.map(function (d, i) {
+    var angle = angleFor(i);
+    var lr = maxR + 18;
+    var x = cx + lr * Math.cos(angle);
+    var y = cy + lr * Math.sin(angle);
+    var anchor = Math.abs(Math.cos(angle)) < 0.3 ? "middle" : Math.cos(angle) > 0 ? "start" : "end";
+    return /*#__PURE__*/React.createElement("text", {
+      key: i,
+      x: x,
+      y: y,
+      fontSize: "11",
+      fill: C.sec,
+      fontFamily: "Inter,sans-serif",
+      fontWeight: "500",
+      textAnchor: anchor,
+      dominantBaseline: "middle"
+    }, d.axis);
+  });
+  return /*#__PURE__*/React.createElement("svg", {
+    width: size,
+    height: size,
+    viewBox: "0 0 ".concat(size, " ").concat(size)
+  }, rings, axes, /*#__PURE__*/React.createElement("polygon", {
+    points: dataPts,
+    fill: C.mid,
+    fillOpacity: "0.1",
+    stroke: C.mid,
+    strokeWidth: "2"
+  }), dots, labels);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DASHBOARD
+═══════════════════════════════════════════════════════════════════ */
+function Dashboard(_ref9) {
+  var onStart = _ref9.onStart;
+  var allTopics = Object.entries(TOPICS).flatMap(function (_ref0) {
+    var _ref1 = _slicedToArray(_ref0, 2),
+      s = _ref1[0],
+      ts = _ref1[1];
+    return ts.map(function (t) {
+      return _objectSpread(_objectSpread({}, t), {}, {
+        s: s
+      });
+    });
+  }).sort(function (a, b) {
+    return a.str - b.str;
+  });
+  var weak = allTopics.slice(0, 5);
+  var STATS = [{
+    icon: "flame",
+    label: "Daily Streak",
+    val: "12",
+    unit: "days",
+    col: C.amber,
+    bg: "#FFF7ED",
+    delta: "+2",
+    deltaCol: C.green
+  }, {
+    icon: "clock",
+    label: "Avg Time / Q",
+    val: "1:23",
+    unit: "min",
+    col: C.mid,
+    bg: C.lite,
+    delta: "\u22120:04",
+    deltaCol: C.green
+  }, {
+    icon: "trendUp",
+    label: "Predicted Score",
+    val: "7.2",
+    unit: "/ 9",
+    col: C.green,
+    bg: C.gLite,
+    delta: "+0.3",
+    deltaCol: C.green
+  }, {
+    icon: "sparkle",
+    label: "Questions Done",
+    val: "245",
+    unit: "total",
+    col: C.purp,
+    bg: C.pLite,
+    delta: "+45",
+    deltaCol: C.mid
+  }];
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "Inter, sans-serif",
+      background: C.bg,
+      minHeight: "100vh"
+    }
+  }, /*#__PURE__*/React.createElement("header", {
+    style: {
+      background: C.surf,
+      height: 58,
+      borderBottom: "1px solid ".concat(C.bdr),
+      display: "flex",
+      alignItems: "center",
+      padding: "0 2rem",
+      position: "sticky",
+      top: 0,
+      zIndex: 100
+    }
+  }, /*#__PURE__*/React.createElement(Wordmark, null), /*#__PURE__*/React.createElement("nav", {
+    style: {
+      display: "flex",
+      gap: 4,
+      marginLeft: "2.5rem",
+      alignItems: "center"
+    }
+  }, [{
+    label: "Dashboard",
+    icon: "squares",
+    active: true,
+    onClick: null
+  }, {
+    label: "Practice",
+    icon: "bolt",
+    active: false,
+    onClick: onStart
+  }].map(function (_ref10) {
+    var label = _ref10.label,
+      icon = _ref10.icon,
+      active = _ref10.active,
+      _onClick = _ref10.onClick;
+    return /*#__PURE__*/React.createElement("div", {
+      key: label,
+      className: "nav-pill".concat(active ? " active" : ""),
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 6,
+        fontSize: "0.8125rem",
+        fontWeight: active ? 600 : 500,
+        color: active ? C.mid : C.sec,
+        cursor: _onClick ? "pointer" : "default"
+      },
+      onClick: _onClick || undefined
+    }, /*#__PURE__*/React.createElement(Svg, {
+      icon: icon,
+      size: 14,
+      col: "currentColor"
+    }), label);
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginLeft: "auto",
+      display: "flex",
+      alignItems: "center",
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 7,
+      background: C.aLite,
+      border: "1px solid ".concat(C.aBdr),
+      borderRadius: 20,
+      padding: "4px 10px 4px 7px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 7,
+      height: 7,
+      borderRadius: "50%",
+      background: C.amber
+    },
+    className: "pulse-dot"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.75rem",
+      fontWeight: 600,
+      color: C.amber
+    }
+  }, "12-day streak")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 32,
+      height: 32,
+      borderRadius: "50%",
+      background: C.lite,
+      border: "2px solid ".concat(C.liteb),
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "user",
+    size: 14,
+    col: C.mid
+  })))), /*#__PURE__*/React.createElement("main", {
+    style: {
+      maxWidth: 1120,
+      margin: "0 auto",
+      padding: "2rem 2rem 3rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "1.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      margin: "0 0 5px",
+      fontSize: "1.625rem",
+      fontWeight: 700,
+      color: C.text,
+      letterSpacing: "-0.025em"
+    }
+  }, "Good morning, Alex."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontSize: "0.875rem",
+      color: C.sec,
+      lineHeight: 1.6
+    }
+  }, DAYS_LEFT, " days to the ESAT. Your weakest area right now is", " ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 600,
+      color: C.text
+    }
+  }, "Proof & Logic"), " \u2014 today's session targets it.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.blue,
+      borderRadius: 14,
+      padding: "1.375rem 1.875rem",
+      marginBottom: "1.25rem",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      position: "relative",
+      overflow: "hidden",
+      boxShadow: "0 4px 24px rgba(26,71,184,0.18), 0 1px 4px rgba(26,71,184,0.12)"
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    style: {
+      position: "absolute",
+      right: -60,
+      top: "50%",
+      transform: "translateY(-50%)",
+      opacity: 0.055,
+      pointerEvents: "none"
+    },
+    width: "320",
+    height: "320",
+    viewBox: "0 0 320 320",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: "160",
+    cy: "160",
+    r: "145",
+    fill: "none",
+    stroke: "white",
+    strokeWidth: "56"
+  })), /*#__PURE__*/React.createElement("svg", {
+    style: {
+      position: "absolute",
+      right: 40,
+      top: "50%",
+      transform: "translateY(-50%)",
+      opacity: 0.04,
+      pointerEvents: "none"
+    },
+    width: "160",
+    height: "160",
+    viewBox: "0 0 160 160",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: "80",
+    cy: "80",
+    r: "68",
+    fill: "none",
+    stroke: "white",
+    strokeWidth: "30"
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 5,
+      background: "rgba(255,255,255,0.12)",
+      borderRadius: 20,
+      padding: "3px 10px",
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 5,
+      height: 5,
+      borderRadius: "50%",
+      background: "rgba(255,255,255,0.6)"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      fontWeight: 600,
+      color: "rgba(255,255,255,0.7)",
+      letterSpacing: "0.07em",
+      textTransform: "uppercase"
+    }
+  }, "ESAT 2026")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "1.125rem",
+      fontWeight: 700,
+      color: "#fff",
+      letterSpacing: "-0.02em",
+      marginBottom: 5
+    }
+  }, "Thursday, 9 October"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10
+    }
+  }, ["Cambridge", "Imperial College", "UCL"].map(function (u, i) {
+    return /*#__PURE__*/React.createElement("span", {
+      key: u,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8
+      }
+    }, i > 0 && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: "rgba(255,255,255,0.25)",
+        fontSize: "0.75rem"
+      }
+    }, "\xB7"), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.8125rem",
+        color: "rgba(255,255,255,0.6)"
+      }
+    }, u));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "right",
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: '"JetBrains Mono", monospace',
+      fontSize: "3.75rem",
+      fontWeight: 700,
+      color: "#fff",
+      lineHeight: 1,
+      letterSpacing: "-0.05em"
+    }
+  }, DAYS_LEFT), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.6875rem",
+      fontWeight: 600,
+      color: "rgba(255,255,255,0.45)",
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      marginTop: 5
+    }
+  }, "days remaining"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 256px",
+      gap: "1.25rem",
+      marginBottom: "1.25rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      borderRadius: 14,
+      border: "1px solid ".concat(C.bdr),
+      padding: "1.5rem",
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      marginBottom: "1.25rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: "0 0 4px",
+      fontSize: "0.9375rem",
+      fontWeight: 600,
+      color: C.text
+    }
+  }, "Knowledge Map"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontSize: "0.8125rem",
+      color: C.ter
+    }
+  }, "Accuracy by module \xB7 last 30 days")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-end",
+      background: C.lite,
+      border: "1px solid ".concat(C.liteb),
+      borderRadius: 8,
+      padding: "5px 10px"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono", monospace',
+      fontSize: "1.125rem",
+      fontWeight: 700,
+      color: C.mid,
+      lineHeight: 1
+    }
+  }, Math.round(RADAR_DATA.reduce(function (s, d) {
+    return s + d.v;
+  }, 0) / RADAR_DATA.length), "%"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.625rem",
+      color: C.ter,
+      fontWeight: 600,
+      letterSpacing: "0.04em",
+      textTransform: "uppercase",
+      marginTop: 2
+    }
+  }, "avg")), /*#__PURE__*/React.createElement(Pill, {
+    bg: C.alt,
+    col: C.sec
+  }, "245 questions"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: "2rem",
+      alignItems: "center"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: "0 0 220px",
+      height: 210,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement(RadarChartSVG, {
+    data: RADAR_DATA
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      display: "flex",
+      flexDirection: "column",
+      gap: 12
+    }
+  }, RADAR_DATA.map(function (_ref11) {
+    var axis = _ref11.axis,
+      v = _ref11.v;
+    var col = v >= 75 ? C.green : v >= 55 ? C.amber : C.red;
+    return /*#__PURE__*/React.createElement("div", {
+      key: axis
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginBottom: 6,
+        alignItems: "center"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.8125rem",
+        fontWeight: 500,
+        color: C.text
+      }
+    }, axis), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: '"JetBrains Mono", monospace',
+        fontSize: "0.75rem",
+        fontWeight: 600,
+        color: col
+      }
+    }, v, "%")), /*#__PURE__*/React.createElement(Bar, {
+      pct: v,
+      color: col
+    }));
+  })))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 10
+    }
+  }, STATS.map(function (_ref12) {
+    var icon = _ref12.icon,
+      label = _ref12.label,
+      val = _ref12.val,
+      unit = _ref12.unit,
+      col = _ref12.col,
+      bg = _ref12.bg,
+      delta = _ref12.delta,
+      deltaCol = _ref12.deltaCol;
+    return /*#__PURE__*/React.createElement("div", {
+      key: label,
+      className: "stat-card",
+      style: {
+        flex: 1,
+        background: C.surf,
+        border: "1px solid ".concat(C.bdr),
+        borderRadius: 12,
+        padding: "14px 16px",
+        boxShadow: SH.card,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: 30,
+        height: 30,
+        borderRadius: 8,
+        background: bg,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement(Svg, {
+      icon: icon,
+      size: 15,
+      col: col,
+      sw: 1.8
+    })), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.6875rem",
+        fontWeight: 600,
+        fontFamily: '"JetBrains Mono", monospace',
+        color: deltaCol,
+        background: deltaCol === C.green ? C.gLite : C.lite,
+        padding: "2px 6px",
+        borderRadius: 4
+      }
+    }, delta)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Label, {
+      col: C.ter,
+      mb: 4
+    }, label), /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        alignItems: "baseline",
+        gap: 5
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: '"JetBrains Mono", monospace',
+        fontSize: "1.875rem",
+        fontWeight: 700,
+        color: col,
+        lineHeight: 1
+      }
+    }, val), unit && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.75rem",
+        color: C.ter,
+        fontWeight: 500
+      }
+    }, unit))));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "300px 1fr",
+      gap: "1.25rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 14,
+      padding: "1.375rem 1.5rem",
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 7,
+      marginBottom: "1.1rem"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "warn",
+    size: 15,
+    col: C.amber,
+    sw: 1.8
+  }), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: 0,
+      fontSize: "0.9375rem",
+      fontWeight: 600,
+      color: C.text
+    }
+  }, "Needs Attention")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 12
+    }
+  }, weak.map(function (_ref13) {
+    var name = _ref13.name,
+      str = _ref13.str,
+      s = _ref13.s;
+    var col = str < 50 ? C.red : C.amber;
+    return /*#__PURE__*/React.createElement("div", {
+      key: name
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        marginBottom: 5
+      }
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.8125rem",
+        fontWeight: 500,
+        color: C.text,
+        lineHeight: 1.3
+      }
+    }, name), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.6875rem",
+        color: C.ter,
+        marginTop: 2
+      }
+    }, s)), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: '"JetBrains Mono", monospace',
+        fontSize: "0.8125rem",
+        fontWeight: 700,
+        color: col,
+        flexShrink: 0,
+        marginLeft: 8
+      }
+    }, str, "%")), /*#__PURE__*/React.createElement(Bar, {
+      pct: str,
+      color: col
+    }));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 14,
+      padding: "1.625rem 1.75rem",
+      boxShadow: SH.card,
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: "0 0 8px",
+      fontSize: "1.1rem",
+      fontWeight: 700,
+      color: C.text,
+      letterSpacing: "-0.02em"
+    }
+  }, "Ready to practise?"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: "0 0 16px",
+      fontSize: "0.875rem",
+      color: C.sec,
+      lineHeight: 1.7,
+      maxWidth: 480
+    }
+  }, "Ten AI-generated questions, tuned to your weakest topics, at real ESAT difficulty and pace \u2014 with instant feedback and full worked solutions."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      flexWrap: "wrap"
+    }
+  }, [{
+    icon: "sparkle",
+    label: "AI-generated"
+  }, {
+    icon: "clock",
+    label: "~15 minutes"
+  }, {
+    icon: "book",
+    label: "Worked solutions"
+  }, {
+    icon: "bolt",
+    label: "Keyboard-first"
+  }].map(function (_ref14) {
+    var icon = _ref14.icon,
+      label = _ref14.label;
+    return /*#__PURE__*/React.createElement("span", {
+      key: label,
+      style: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 5,
+        fontSize: "0.75rem",
+        color: C.mid,
+        fontWeight: 500,
+        background: C.lite,
+        padding: "4px 10px",
+        borderRadius: 20,
+        border: "1px solid ".concat(C.liteb)
+      }
+    }, /*#__PURE__*/React.createElement(Svg, {
+      icon: icon,
+      size: 11,
+      col: C.mid,
+      sw: 2
+    }), label);
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 10,
+      marginTop: "1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onStart,
+    className: "btn-primary",
+    style: {
+      flex: 1,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 8,
+      padding: "0.75rem 1.25rem",
+      borderRadius: 10,
+      border: "none",
+      background: C.mid,
+      color: "#fff",
+      fontSize: "0.9rem",
+      fontWeight: 600,
+      fontFamily: "Inter, sans-serif",
+      letterSpacing: "-0.01em"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "play",
+    size: 14,
+    col: "#fff",
+    sw: 0,
+    fill: "#fff"
+  }), "Start Practising"), /*#__PURE__*/React.createElement("button", {
+    className: "btn-ghost",
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 7,
+      padding: "0.75rem 1.125rem",
+      borderRadius: 10,
+      border: "1px solid ".concat(C.bdr),
+      background: C.surf,
+      color: C.sec,
+      fontSize: "0.875rem",
+      fontWeight: 500,
+      fontFamily: "Inter, sans-serif"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "pencil",
+    size: 14,
+    col: C.sec,
+    sw: 1.8
+  }), "Mock Exam"))))));
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PRACTICE HUB
+═══════════════════════════════════════════════════════════════════ */
+function PracticeHub(_ref15) {
+  var _q$ans;
+  var onBack = _ref15.onBack;
+  var cacheRef = useRef({});
+  var _useState = useState({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    cache = _useState2[0],
+    setCache = _useState2[1];
+  var _useState3 = useState(0),
+    _useState4 = _slicedToArray(_useState3, 2),
+    idx = _useState4[0],
+    setIdx = _useState4[1];
+  var _useState5 = useState({}),
+    _useState6 = _slicedToArray(_useState5, 2),
+    ans = _useState6[0],
+    setAns = _useState6[1];
+  var ansRef = useRef({});
+  var _useState7 = useState(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    showSoln = _useState8[0],
+    setShowSoln = _useState8[1];
+  var _useState9 = useState(false),
+    _useState0 = _slicedToArray(_useState9, 2),
+    showHint = _useState0[0],
+    setShowHint = _useState0[1];
+  var _useState1 = useState(false),
+    _useState10 = _slicedToArray(_useState1, 2),
+    loading = _useState10[0],
+    setLoading = _useState10[1];
+  var _useState11 = useState(88),
+    _useState12 = _slicedToArray(_useState11, 2),
+    secs = _useState12[0],
+    setSecs = _useState12[1];
+  var _useState13 = useState(true),
+    _useState14 = _slicedToArray(_useState13, 2),
+    ticking = _useState14[0],
+    setTicking = _useState14[1];
+  var timerRef = useRef(null);
+  var _useState15 = useState("Mathematics 1"),
+    _useState16 = _slicedToArray(_useState15, 2),
+    subj = _useState16[0],
+    setSubj = _useState16[1];
+  var subjRef = useRef("Mathematics 1");
+  var _useState17 = useState(null),
+    _useState18 = _slicedToArray(_useState17, 2),
+    topicPin = _useState18[0],
+    setTopicPin = _useState18[1];
+  var topicPinRef = useRef(null);
+  var _useState19 = useState(null),
+    _useState20 = _slicedToArray(_useState19, 2),
+    hovOpt = _useState20[0],
+    setHovOpt = _useState20[1];
+  useEffect(function () {
+    subjRef.current = subj;
+  }, [subj]);
+  useEffect(function () {
+    topicPinRef.current = topicPin;
+  }, [topicPin]);
+  useEffect(function () {
+    ansRef.current = ans;
+  }, [ans]);
+  var getTopicFor = function getTopicFor(i) {
+    var _ts;
+    if (topicPinRef.current) return topicPinRef.current;
+    var ts = _toConsumableArray(TOPICS[subjRef.current] || []).sort(function (a, b) {
+      return a.str - b.str;
+    });
+    return ((_ts = ts[i % ts.length]) === null || _ts === void 0 ? void 0 : _ts.name) || "Algebra";
+  };
+
+  // Mock question loading (instant, from hardcoded array)
+  var loadQ = function loadQ(i) {
+    if (cacheRef.current[i]) return;
+    setLoading(true);
+    // Simulate brief async delay for realism
+    setTimeout(function () {
+      var mq = MOCK_QUESTIONS[i % MOCK_QUESTIONS.length];
+      var topic = getTopicFor(i);
+      var diff = DIFF_SEQ[i] || "Medium";
+      var q = _objectSpread(_objectSpread({}, mq), {}, {
+        topic: topic,
+        diff: diff
+      });
+      cacheRef.current[i] = q;
+      setCache(function (prev) {
+        return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, i, q));
+      });
+      setLoading(false);
+    }, 200);
+  };
+  useEffect(function () {
+    setShowSoln(false);
+    setShowHint(false);
+    setSecs(88);
+    setTicking(!ansRef.current[idx]);
+    loadQ(idx);
+    // eslint-disable-next-line
+  }, [idx]);
+  useEffect(function () {
+    clearInterval(timerRef.current);
+    if (ticking) timerRef.current = setInterval(function () {
+      return setSecs(function (s) {
+        return s > 0 ? s - 1 : 0;
+      });
+    }, 1000);
+    return function () {
+      return clearInterval(timerRef.current);
+    };
+  }, [ticking]);
+  useEffect(function () {
+    var h = function h(e) {
+      if (["SELECT", "INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
+      var k = e.key;
+      if ("12345".includes(k)) pick("ABCDE"[+k - 1]);
+      if ("abcde".includes(k.toLowerCase())) pick(k.toUpperCase());
+      if (k === "h" || k === "H") setShowHint(function (v) {
+        return !v;
+      });
+      if ((k === "s" || k === "S") && ansRef.current[idx]) setShowSoln(function (v) {
+        return !v;
+      });
+      if ((k === "ArrowRight" || k === "Enter") && idx < SESSION - 1) setIdx(function (i) {
+        return i + 1;
+      });
+      if (k === "ArrowLeft" && idx > 0) setIdx(function (i) {
+        return i - 1;
+      });
+    };
+    window.addEventListener("keydown", h);
+    return function () {
+      return window.removeEventListener("keydown", h);
+    };
+  }, [idx]);
+  var pick = function pick(letter) {
+    if (ansRef.current[idx]) return;
+    ansRef.current[idx] = letter;
+    setAns(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, idx, letter));
+    });
+    setTicking(false);
+    clearInterval(timerRef.current);
+  };
+  var q = cache[idx];
+  var chosen = ans[idx];
+  var correct = q === null || q === void 0 || (_q$ans = q.ans) === null || _q$ans === void 0 ? void 0 : _q$ans[0];
+  var isRight = !!(chosen && correct && chosen === correct);
+  var diff = (q === null || q === void 0 ? void 0 : q.diff) || DIFF_SEQ[idx] || "Medium";
+  var topic = (q === null || q === void 0 ? void 0 : q.topic) || getTopicFor(idx);
+  var dm = DIFF_META[diff] || {
+    bg: C.alt,
+    col: C.sec,
+    bdr: C.bdr
+  };
+  var doneCount = Object.keys(ans).length;
+  var rightCount = Object.entries(ans).filter(function (_ref16) {
+    var _cacheRef$current$i;
+    var _ref17 = _slicedToArray(_ref16, 2),
+      i = _ref17[0],
+      a = _ref17[1];
+    return a === ((_cacheRef$current$i = cacheRef.current[+i]) === null || _cacheRef$current$i === void 0 || (_cacheRef$current$i = _cacheRef$current$i.ans) === null || _cacheRef$current$i === void 0 ? void 0 : _cacheRef$current$i[0]);
+  }).length;
+  var urgent = secs <= 20 && ticking && !chosen;
+  var tStr = "".concat(Math.floor(secs / 60), ":").concat(String(secs % 60).padStart(2, "0"));
+  var tCol = chosen ? C.ter : secs > 55 ? C.green : secs > 22 ? C.amber : C.red;
+  var optSt = function optSt(l) {
+    if (!chosen) {
+      return {
+        bg: C.surf,
+        bdr: C.bdr,
+        labelBg: C.alt,
+        textCol: C.text,
+        iconNode: null
+      };
+    }
+    if (l === correct) return {
+      bg: C.gLite,
+      bdr: C.green,
+      labelBg: C.green,
+      textCol: C.green,
+      iconNode: /*#__PURE__*/React.createElement("div", {
+        style: {
+          width: 22,
+          height: 22,
+          borderRadius: "50%",
+          background: C.green,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+          marginLeft: 10
+        }
+      }, /*#__PURE__*/React.createElement(Svg, {
+        icon: "check",
+        size: 11,
+        col: "#fff",
+        sw: 2.5
+      }))
+    };
+    if (l === chosen) return {
+      bg: C.rLite,
+      bdr: C.red,
+      labelBg: C.red,
+      textCol: C.red,
+      iconNode: /*#__PURE__*/React.createElement("div", {
+        style: {
+          width: 22,
+          height: 22,
+          borderRadius: "50%",
+          background: C.red,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+          marginLeft: 10
+        }
+      }, /*#__PURE__*/React.createElement(Svg, {
+        icon: "x",
+        size: 11,
+        col: "#fff",
+        sw: 2.5
+      }))
+    };
+    return {
+      bg: C.surf,
+      bdr: C.bdr,
+      labelBg: "#E3E0DA",
+      textCol: C.ter,
+      iconNode: null
+    };
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "Inter, sans-serif",
+      background: C.bg,
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("header", {
+    style: {
+      background: C.surf,
+      height: 58,
+      borderBottom: "1px solid ".concat(C.bdr),
+      display: "flex",
+      alignItems: "center",
+      padding: "0 1.75rem",
+      flexShrink: 0,
+      position: "sticky",
+      top: 0,
+      zIndex: 100,
+      gap: 16,
+      overflow: "visible"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    className: "btn-ghost",
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      color: C.sec,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter, sans-serif",
+      padding: "5px 10px",
+      borderRadius: 7
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "arrowL",
+    size: 14,
+    col: C.sec,
+    sw: 1.8
+  }), "Dashboard"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 1,
+      height: 20,
+      background: C.bdr
+    }
+  }), /*#__PURE__*/React.createElement(Wordmark, null), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginLeft: "auto",
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      background: C.alt,
+      borderRadius: 8,
+      padding: "5px 10px"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "bolt",
+    size: 12,
+    col: C.ter,
+    sw: 1.8
+  }), [{
+    k: "1\u20135",
+    label: "Select"
+  }, {
+    k: "H",
+    label: "Hint"
+  }, {
+    k: "S",
+    label: "Solution"
+  }].map(function (_ref18, i) {
+    var k = _ref18.k,
+      label = _ref18.label;
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 4
+      }
+    }, i > 0 && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: C.bdr2,
+        fontSize: "0.75rem"
+      }
+    }, "\xB7"), /*#__PURE__*/React.createElement(KBD, null, k), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.6875rem",
+        color: C.ter
+      }
+    }, label));
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: C.bdr2,
+      fontSize: "0.75rem"
+    }
+  }, "\xB7"), /*#__PURE__*/React.createElement(KBD, null, "\u2190"), /*#__PURE__*/React.createElement(KBD, null, "\u2192"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      color: C.ter
+    }
+  }, "Navigate")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10,
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 3
+    }
+  }, Array.from({
+    length: SESSION
+  }, function (_, i) {
+    var _qd$ans;
+    var a = ans[i];
+    var qd = cacheRef.current[i];
+    var ok = !!(a && qd !== null && qd !== void 0 && (_qd$ans = qd.ans) !== null && _qd$ans !== void 0 && _qd$ans[0] && a === qd.ans[0]);
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        width: 6,
+        height: 6,
+        borderRadius: "50%",
+        background: !a ? i === idx ? C.mid : C.bdr : ok ? C.green : C.red,
+        transition: "background 0.25s",
+        opacity: i === idx && !a ? 1 : undefined,
+        boxShadow: i === idx && !a ? "0 0 0 2px ".concat(C.liteb) : undefined
+      }
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.8125rem",
+      color: C.sec
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono",monospace',
+      fontWeight: 700,
+      color: C.text
+    }
+  }, doneCount), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: C.ter
+    }
+  }, " / ", SESSION))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: 2,
+      background: C.bdr
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: "100%",
+      borderRadius: 1,
+      width: "".concat(doneCount / SESSION * 100, "%"),
+      background: doneCount === SESSION ? C.green : C.mid,
+      transition: "width 0.45s cubic-bezier(0.16,1,0.3,1), background 0.3s"
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      maxWidth: 1200,
+      width: "100%",
+      margin: "0 auto",
+      padding: "1.5rem 1.75rem",
+      display: "flex",
+      gap: "1.5rem",
+      boxSizing: "border-box"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: "1 1 0",
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      marginBottom: "1rem",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement(Pill, {
+    bg: C.lite,
+    col: C.mid,
+    bdr: C.liteb
+  }, subj), /*#__PURE__*/React.createElement(Pill, {
+    bg: dm.bg,
+    col: dm.col,
+    bdr: dm.bdr
+  }, diff), topic && /*#__PURE__*/React.createElement(Pill, {
+    bg: C.alt,
+    col: C.sec,
+    bdr: C.bdr
+  }, topic), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginLeft: "auto",
+      display: "flex",
+      alignItems: "center",
+      gap: 8
+    }
+  }, function () {
+    var r = 14,
+      cx = 16,
+      cy = 16,
+      stroke = 2;
+    var circ = 2 * Math.PI * r;
+    var pct = chosen ? 0 : secs / 88;
+    var col = chosen ? C.ter : secs > 55 ? C.green : secs > 22 ? C.amber : C.red;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: 32,
+      height: 32,
+      viewBox: "0 0 32 32",
+      style: {
+        flexShrink: 0,
+        transform: "rotate(-90deg)"
+      }
+    }, /*#__PURE__*/React.createElement("circle", {
+      cx: cx,
+      cy: cy,
+      r: r,
+      fill: "none",
+      stroke: C.bdr,
+      strokeWidth: stroke
+    }), /*#__PURE__*/React.createElement("circle", {
+      cx: cx,
+      cy: cy,
+      r: r,
+      fill: "none",
+      stroke: col,
+      strokeWidth: stroke,
+      strokeDasharray: circ,
+      strokeDashoffset: circ * (1 - pct),
+      strokeLinecap: "round",
+      style: {
+        transition: "stroke-dashoffset 1s linear, stroke 0.5s"
+      }
+    }));
+  }(), /*#__PURE__*/React.createElement("span", {
+    className: urgent ? "timer-urgent" : "",
+    style: {
+      fontFamily: '"JetBrains Mono", monospace',
+      fontSize: "0.9375rem",
+      fontWeight: 700,
+      color: chosen ? C.ter : tCol,
+      transition: "color 0.3s",
+      letterSpacing: "-0.03em",
+      minWidth: 36
+    }
+  }, tStr))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      marginBottom: "1.25rem",
+      flexWrap: "wrap"
+    }
+  }, Array.from({
+    length: SESSION
+  }, function (_, i) {
+    var _qd$ans2;
+    var a = ans[i];
+    var qd = cacheRef.current[i];
+    var ok = !!(a && qd !== null && qd !== void 0 && (_qd$ans2 = qd.ans) !== null && _qd$ans2 !== void 0 && _qd$ans2[0] && a === qd.ans[0]);
+    var cur = i === idx;
+    var bg = C.surf,
+      bdr = C.bdr,
+      col = C.ter;
+    if (a) {
+      bg = ok ? C.gLite : C.rLite;
+      bdr = ok ? C.green : C.red;
+      col = ok ? C.green : C.red;
+    }
+    if (cur) {
+      bdr = C.mid;
+    }
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: function onClick() {
+        return setIdx(i);
+      },
+      className: "q-num-btn",
+      style: {
+        width: 36,
+        height: 36,
+        borderRadius: 8,
+        border: "2px solid ".concat(bdr),
+        background: bg,
+        color: col,
+        fontFamily: '"JetBrains Mono", monospace',
+        fontWeight: cur ? 700 : 500,
+        fontSize: "0.75rem",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxSizing: "border-box",
+        boxShadow: cur ? "0 0 0 3px ".concat(C.lite) : "none"
+      }
+    }, a ? /*#__PURE__*/React.createElement("svg", {
+      width: "11",
+      height: "11",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: col,
+      strokeWidth: "2.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }, ok ? /*#__PURE__*/React.createElement("path", {
+      d: "M4.5 12.75l6 6 9-13.5"
+    }) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+      d: "M6 18 18 6"
+    }), /*#__PURE__*/React.createElement("path", {
+      d: "M6 6l12 12"
+    }))) : i + 1);
+  })), loading && !q && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderLeft: "5px solid ".concat(C.mid),
+      borderRadius: "0 12px 12px 0",
+      padding: "1.5rem 1.75rem",
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      marginBottom: "1rem",
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "spinner",
+    style: {
+      width: 18,
+      height: 18,
+      borderRadius: "50%",
+      border: "2.5px solid ".concat(C.lite),
+      borderTop: "2.5px solid ".concat(C.mid),
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.875rem",
+      fontWeight: 500,
+      color: C.text,
+      marginBottom: 2
+    }
+  }, "Generating question..."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.75rem",
+      color: C.ter
+    }
+  }, "AI is writing a fresh ", diff.toLowerCase(), " ", topic, " problem"))), q && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      borderTop: "1px solid ".concat(C.bdr),
+      borderRight: "1px solid ".concat(C.bdr),
+      borderBottom: "1px solid ".concat(C.bdr),
+      borderLeft: "5px solid ".concat(C.mid),
+      borderRadius: "0 12px 12px 0",
+      padding: "1.5rem 1.75rem",
+      marginBottom: "0.875rem",
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.875rem"
+    }
+  }, /*#__PURE__*/React.createElement(Label, {
+    col: C.ter
+  }, "Question ", idx + 1, " of ", SESSION), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement(Pill, {
+    bg: dm.bg,
+    col: dm.col,
+    bdr: dm.bdr
+  }, diff))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontSize: "0.9375rem",
+      lineHeight: 1.85,
+      color: C.text,
+      fontWeight: 400
+    }
+  }, q.q || q.question)), q && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 8,
+      marginBottom: "0.875rem"
+    }
+  }, (q.opts || q.options || []).map(function (opt, i) {
+    var l = "ABCDE"[i];
+    var st = optSt(l);
+    var isHov = hovOpt === l && !chosen;
+    return /*#__PURE__*/React.createElement("button", {
+      key: l,
+      onClick: function onClick() {
+        return pick(l);
+      },
+      onMouseEnter: function onMouseEnter() {
+        return !chosen && setHovOpt(l);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setHovOpt(null);
+      },
+      className: "opt-btn".concat(chosen ? " answered" : ""),
+      disabled: !!chosen,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        padding: "0.75rem 1rem",
+        border: "2px solid ".concat(isHov ? C.mid : st.bdr),
+        borderRadius: 10,
+        background: isHov ? C.lite : st.bg,
+        fontFamily: "Inter,sans-serif",
+        textAlign: "left",
+        width: "100%",
+        boxSizing: "border-box",
+        cursor: chosen ? "default" : "pointer"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 28,
+        height: 28,
+        borderRadius: 7,
+        flexShrink: 0,
+        background: chosen ? st.labelBg : isHov ? C.mid : C.alt,
+        color: chosen ? "#fff" : isHov ? "#fff" : C.sec,
+        fontFamily: '"JetBrains Mono",monospace',
+        fontWeight: 700,
+        fontSize: "0.8125rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "background 0.12s, color 0.12s",
+        marginRight: "0.875rem"
+      }
+    }, l), /*#__PURE__*/React.createElement("span", {
+      style: {
+        flex: 1,
+        color: st.textCol,
+        fontSize: "0.875rem",
+        lineHeight: 1.6,
+        fontWeight: chosen && (l === correct || l === chosen) ? 500 : 400
+      }
+    }, opt.replace(/^[A-E]\)\s*/, "")), st.iconNode);
+  })), q && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: 8
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setShowHint(function (h) {
+        return !h;
+      });
+    },
+    className: "collapse-btn".concat(showHint ? " hint-btn-open" : ""),
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      width: "100%",
+      padding: "0.625rem 1rem",
+      borderRadius: showHint ? "9px 9px 0 0" : 9,
+      border: "1px solid ".concat(showHint ? C.aBdr : C.bdr),
+      background: showHint ? C.aLite : C.surf,
+      color: showHint ? C.amber : C.sec,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter,sans-serif",
+      boxSizing: "border-box",
+      textAlign: "left"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "bulb",
+    size: 15,
+    col: showHint ? C.amber : C.ter,
+    sw: 1.8
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1
+    }
+  }, showHint ? "Hide hint" : "Reveal hint"), /*#__PURE__*/React.createElement(KBD, null, "H")), showHint && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "1rem 1.1rem",
+      background: C.aLite,
+      border: "1px solid ".concat(C.aBdr),
+      borderTop: "none",
+      borderRadius: "0 0 9px 9px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      color: C.amber,
+      fontSize: "0.875rem",
+      lineHeight: 1.75
+    }
+  }, q.hint))), chosen && q && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: 8,
+      marginTop: 2
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setShowSoln(function (s) {
+        return !s;
+      });
+    },
+    className: "collapse-btn".concat(showSoln ? " soln-btn-open" : ""),
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      width: "100%",
+      padding: "0.625rem 1rem",
+      borderRadius: showSoln ? "9px 9px 0 0" : 9,
+      border: "1px solid ".concat(showSoln ? C.liteb : C.bdr),
+      background: showSoln ? C.lite : C.surf,
+      color: showSoln ? C.mid : C.sec,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter,sans-serif",
+      boxSizing: "border-box",
+      textAlign: "left"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "book",
+    size: 15,
+    col: showSoln ? C.mid : C.ter,
+    sw: 1.8
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1
+    }
+  }, showSoln ? "Hide solution" : "Show worked solution"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      padding: "2px 8px",
+      borderRadius: 6,
+      background: isRight ? C.gLite : C.rLite,
+      color: isRight ? C.green : C.red,
+      fontSize: "0.75rem",
+      fontWeight: 700,
+      display: "flex",
+      alignItems: "center",
+      gap: 4
+    }
+  }, isRight ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Svg, {
+    icon: "check",
+    size: 10,
+    col: C.green,
+    sw: 2.5
+  }), "Correct") : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Svg, {
+    icon: "x",
+    size: 10,
+    col: C.red,
+    sw: 2.5
+  }), "Answer: ", correct)), /*#__PURE__*/React.createElement(KBD, null, "S")), showSoln && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "1.25rem 1.375rem",
+      background: C.lite,
+      border: "1px solid ".concat(C.liteb),
+      borderTop: "none",
+      borderRadius: "0 0 9px 9px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "sparkle",
+    size: 14,
+    col: C.mid,
+    sw: 1.8
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.8125rem",
+      fontWeight: 600,
+      color: C.blue
+    }
+  }, "Worked Solution")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      color: C.text,
+      fontSize: "0.875rem",
+      lineHeight: 1.9,
+      whiteSpace: "pre-wrap"
+    }
+  }, q.soln || q.solution))), doneCount === SESSION && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.gBdr),
+      borderRadius: 14,
+      padding: "1.375rem 1.5rem",
+      marginBottom: 8,
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "flex-start",
+      gap: 14,
+      marginBottom: 14
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 44,
+      height: 44,
+      borderRadius: 12,
+      background: C.gLite,
+      border: "1px solid ".concat(C.gBdr),
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "trophy",
+    size: 22,
+    col: C.green,
+    sw: 1.5
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontWeight: 700,
+      color: C.text,
+      fontSize: "1rem",
+      letterSpacing: "-0.01em",
+      marginBottom: 3
+    }
+  }, "Session complete"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.875rem",
+      color: C.sec
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono",monospace',
+      fontWeight: 700,
+      color: rightCount >= 8 ? C.green : rightCount >= 5 ? C.amber : C.red
+    }
+  }, rightCount, "/", SESSION), " ", "correct \u2014 ", rightCount >= 8 ? "excellent work." : rightCount >= 5 ? "solid session." : "keep practising.")), /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    className: "btn-primary",
+    style: {
+      padding: "8px 16px",
+      borderRadius: 8,
+      border: "none",
+      background: C.mid,
+      color: "#fff",
+      fontFamily: "Inter,sans-serif",
+      fontWeight: 600,
+      fontSize: "0.8125rem",
+      flexShrink: 0
+    }
+  }, "Dashboard")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 5
+    }
+  }, Array.from({
+    length: SESSION
+  }, function (_, i) {
+    var _qd$ans3;
+    var a = ans[i];
+    var qd = cacheRef.current[i];
+    var ok = !!(a && qd !== null && qd !== void 0 && (_qd$ans3 = qd.ans) !== null && _qd$ans3 !== void 0 && _qd$ans3[0] && a === qd.ans[0]);
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      onClick: function onClick() {
+        return setIdx(i);
+      },
+      style: {
+        flex: 1,
+        height: 28,
+        borderRadius: 6,
+        cursor: "pointer",
+        background: ok ? C.gLite : C.rLite,
+        border: "1px solid ".concat(ok ? C.gBdr : C.rBdr),
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement("svg", {
+      width: "10",
+      height: "10",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: ok ? C.green : C.red,
+      strokeWidth: "2.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }, ok ? /*#__PURE__*/React.createElement("path", {
+      d: "M4.5 12.75l6 6 9-13.5"
+    }) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+      d: "M6 18 18 6"
+    }), /*#__PURE__*/React.createElement("path", {
+      d: "M6 6l12 12"
+    }))));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      marginTop: 4
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return idx > 0 && setIdx(function (i) {
+        return i - 1;
+      });
+    },
+    className: "nav-btn",
+    disabled: idx === 0,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      padding: "7px 14px",
+      borderRadius: 8,
+      border: "1px solid ".concat(C.bdr),
+      background: C.surf,
+      color: idx === 0 ? C.ter : C.sec,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter,sans-serif",
+      opacity: idx === 0 ? 0.4 : 1,
+      cursor: idx === 0 ? "default" : "pointer"
+    }
+  }, /*#__PURE__*/React.createElement(Svg, {
+    icon: "chevL",
+    size: 13,
+    col: "currentColor",
+    sw: 2
+  }), "Previous"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return idx < SESSION - 1 && setIdx(function (i) {
+        return i + 1;
+      });
+    },
+    className: "nav-btn",
+    disabled: idx === SESSION - 1,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      padding: "7px 14px",
+      borderRadius: 8,
+      border: "1px solid ".concat(C.bdr),
+      background: C.surf,
+      color: idx === SESSION - 1 ? C.ter : C.sec,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter,sans-serif",
+      opacity: idx === SESSION - 1 ? 0.4 : 1,
+      cursor: idx === SESSION - 1 ? "default" : "pointer"
+    }
+  }, "Next", /*#__PURE__*/React.createElement(Svg, {
+    icon: "chevR",
+    size: 13,
+    col: "currentColor",
+    sw: 2
+  })))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 268,
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 12,
+      padding: "1.1rem 1.2rem",
+      marginBottom: 12,
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement(Label, {
+    col: C.ter,
+    mb: 8
+  }, "Subject"), /*#__PURE__*/React.createElement("select", {
+    value: subj,
+    onChange: function onChange(e) {
+      setSubj(e.target.value);
+      setTopicPin(null);
+    },
+    style: {
+      width: "100%",
+      padding: "8px 12px",
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 8,
+      background: C.surf,
+      color: C.text,
+      fontSize: "0.8125rem",
+      fontWeight: 500,
+      fontFamily: "Inter, sans-serif",
+      cursor: "pointer",
+      boxSizing: "border-box"
+    }
+  }, Object.keys(TOPICS).map(function (s) {
+    return /*#__PURE__*/React.createElement("option", {
+      key: s,
+      value: s
+    }, s);
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.lite,
+      border: "1px solid ".concat(C.liteb),
+      borderRadius: 12,
+      padding: "10px 14px",
+      marginBottom: 12,
+      display: "flex",
+      alignItems: "center",
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 8,
+      height: 8,
+      borderRadius: "50%",
+      background: C.mid,
+      flexShrink: 0
+    },
+    className: "pulse-dot"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.6875rem",
+      fontWeight: 600,
+      color: C.ter,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      marginBottom: 1
+    }
+  }, "Practising now"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.8125rem",
+      fontWeight: 600,
+      color: C.mid,
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis"
+    }
+  }, topic || "Loading..."))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 12,
+      padding: "1.1rem 1.2rem",
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      marginBottom: "0.875rem"
+    }
+  }, /*#__PURE__*/React.createElement(Label, {
+    col: C.ter
+  }, "Topics"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      color: C.ter,
+      fontWeight: 500
+    }
+  }, "Click to focus")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 2
+    }
+  }, (TOPICS[subj] || []).map(function (t) {
+    var col = t.str >= 75 ? C.green : t.str >= 55 ? C.amber : C.red;
+    var isPinned = topicPin === t.name;
+    return /*#__PURE__*/React.createElement("div", {
+      key: t.name,
+      className: "topic-row".concat(isPinned ? " focused" : ""),
+      onClick: function onClick() {
+        return setTopicPin(isPinned ? null : t.name);
+      },
+      style: {
+        padding: "8px 10px",
+        marginBottom: 2,
+        display: "flex",
+        flexDirection: "column",
+        gap: 5
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.8125rem",
+        fontWeight: isPinned ? 600 : 500,
+        color: isPinned ? C.mid : C.text
+      }
+    }, t.name), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: '"JetBrains Mono", monospace',
+        fontSize: "0.75rem",
+        fontWeight: 600,
+        color: col
+      }
+    }, t.str, "%")), /*#__PURE__*/React.createElement(Bar, {
+      pct: t.str,
+      color: col
+    }));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.surf,
+      border: "1px solid ".concat(C.bdr),
+      borderRadius: 12,
+      padding: "1.1rem 1.2rem",
+      marginTop: 12,
+      boxShadow: SH.card
+    }
+  }, /*#__PURE__*/React.createElement(Label, {
+    col: C.ter,
+    mb: 10
+  }, "Session Progress"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      gap: 5,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono", monospace',
+      fontSize: "1.875rem",
+      fontWeight: 700,
+      color: C.mid,
+      lineHeight: 1
+    }
+  }, doneCount), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.875rem",
+      color: C.ter
+    }
+  }, "of ", SESSION, " answered")), /*#__PURE__*/React.createElement(Bar, {
+    pct: doneCount / SESSION * 100,
+    color: doneCount === SESSION ? C.green : C.mid,
+    h: 4
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      marginTop: 10,
+      fontSize: "0.75rem",
+      color: C.ter
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Correct: ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono",monospace',
+      fontWeight: 700,
+      color: C.green
+    }
+  }, rightCount)), /*#__PURE__*/React.createElement("span", null, "Remaining: ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: '"JetBrains Mono",monospace',
+      fontWeight: 700,
+      color: C.sec
+    }
+  }, SESSION - doneCount)))))));
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   APP ROOT — page switching
+═══════════════════════════════════════════════════════════════════ */
+function App() {
+  var _useState21 = useState("dashboard"),
+    _useState22 = _slicedToArray(_useState21, 2),
+    page = _useState22[0],
+    setPage = _useState22[1];
+  return page === "dashboard" ? /*#__PURE__*/React.createElement(Dashboard, {
+    onStart: function onStart() {
+      return setPage("practice");
+    }
+  }) : /*#__PURE__*/React.createElement(PracticeHub, {
+    onBack: function onBack() {
+      return setPage("dashboard");
+    }
+  });
+}
+ReactDOM.createRoot(document.getElementById("root")).render(/*#__PURE__*/React.createElement(App, null));</script>
+
+<!-- ── Back to Dashboard floating button ── -->
+<div id="dash-back-btn" onclick="window.location.href='/'" style="
+  position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(80px);
+  z-index:9999;
+  display:flex; align-items:center; gap:8px;
+  background:#FFFFFF;
+  color:#1E293B;
+  font-family:'Inter',sans-serif;
+  font-size:12px; font-weight:500;
+  border:1px solid #E2E8F0;
+  border-radius:100px;
+  padding:10px 22px 10px 18px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.04);
+  cursor:pointer;
+  opacity:0;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.2s, box-shadow 0.2s;
+  text-decoration:none;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  white-space:nowrap;
+" onmouseenter="this.style.borderColor='#3B82F6';this.style.boxShadow='0 6px 24px rgba(59,130,246,0.14),0 2px 6px rgba(0,0,0,0.06)'"
+   onmouseleave="this.style.borderColor='#E2E8F0';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.04)'"
+>
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="flex-shrink:0">
+    <path d="M10 12.5L4.5 8L10 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  Dashboard
+</div>
+<style>
+#dash-back-btn.visible {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+</style>
+<script>
+(function(){
+  var btn = document.getElementById('dash-back-btn');
+  var hideTimer = null;
+  var visible = false;
+  var lastScrollY = window.scrollY || 0;
+  var hasScrolledDown = false;
+  function show() {
+    if (hideTimer) clearTimeout(hideTimer);
+    visible = true;
+    btn.classList.add('visible');
+    hideTimer = setTimeout(function() {
+      visible = false;
+      btn.classList.remove('visible');
+      hideTimer = null;
+    }, 1500);
+  }
+  function hide() {
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    visible = false;
+    btn.classList.remove('visible');
+  }
+  window.addEventListener('scroll', function() {
+    var sy = window.scrollY || 0;
+    var delta = sy - lastScrollY;
+    if (sy > 300) hasScrolledDown = true;
+    if (hasScrolledDown && delta < -5) {
+      show();
+    } else if (delta > 10) {
+      hide();
+    }
+    lastScrollY = sy;
+  }, {passive: true});
+  btn.addEventListener('pointerenter', function() {
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+  });
+  btn.addEventListener('pointerleave', function() {
+    if (visible) {
+      hideTimer = setTimeout(function() {
+        visible = false;
+        btn.classList.remove('visible');
+        hideTimer = null;
+      }, 1500);
+    }
+  });
+})();
+</script>
+</body>
+</html>

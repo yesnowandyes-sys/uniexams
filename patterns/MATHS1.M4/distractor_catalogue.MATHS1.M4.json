@@ -1,0 +1,52 @@
+{
+  "topic_key": "MATHS1.M4",
+  "topic_name": "Algebra",
+  "module_code": "M1",
+  "corpus_question_count": 155,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inequality Sign Reversal Failure",
+      "frequency": "high",
+      "example_question_id": "Q1",
+      "why_effective": "Targets the specific algebraic rule that multiplying or dividing both sides of an inequality by a negative number reverses the inequality sign. Students often mechanically solve for x without tracking the sign of the divisor.",
+      "generation_strategy": "Set up a linear inequality where the unknown variable has a negative coefficient (e.g., $-x/2 < k$) or where the solution requires division by a negative value. Include options that flip the sign incorrectly at the final step (e.g., $x < 4$ vs $x > 28$)."
+    },
+    {
+      "distractor_type": "Binomial Expansion Sign Leakage",
+      "frequency": "high",
+      "example_question_id": "Q2",
+      "why_effective": "Exploits the common error of failing to distribute the negative sign in the second term of a binomial square $(a-b)^2 = a^2 - 2ab + b^2$. Students often write $-2ab$ but miss that $b^2$ becomes positive, or they incorrectly calculate the cross term.",
+      "generation_strategy": "Create expressions involving squares of binomials with subtraction, e.g., $(\\sqrt{A} - \\sqrt{B})^2$. Distractors should include options with $-2\\sqrt{AB}$ (correct) but where the constant term is calculated as $A-B$ (incorrect) instead of $A+B$. Another variation is missing the 2 in the cross term."
+    },
+    {
+      "distractor_type": "Formula Rearrangement Isolation Error",
+      "frequency": "high",
+      "example_question_id": "Q4, Q11",
+      "why_effective": "Tests the ability to inverse operations in the correct order, particularly when dealing with fractions and quadratic terms. Common failures include taking the square root before isolating the quadratic term or failing to invert the denominator properly.",
+      "generation_strategy": "Start with a formula like $a = \frac{b^2+k}{mb^2 - c}$. Ask to make $b$ the subject. Generate distractors by: 1) Incorrectly inverting the LHS/RHS fraction, 2) Failing to move terms before factorizing $b^2$, 3) Sign errors when moving terms across the equals sign (e.g., $a+2$ vs $2-a$)."
+    },
+    {
+      "distractor_type": "Variable Cancellation Fallacy",
+      "frequency": "medium",
+      "example_question_id": "Q6",
+      "why_effective": "Entices students to 'cancel' algebraic terms that look similar but are not factors, or to perform invalid additive cancellations (e.g., cancelling $x^2$ in numerator and denominator of a sum).",
+      "generation_strategy": "Construct an expression like $A + \frac{B - x^2}{x(A - x)}$. The simplification requires factoring the numerator (difference of squares) to cancel with the denominator. Distractors should reflect the result of 'illegal cancellation' (e.g., treating $(4-x^2)/(x^2-2x)$ as $-2/x$ directly)."
+    },
+    {
+      "distractor_type": "Geometry-Algebra Substitution Trap",
+      "frequency": "medium",
+      "example_question_id": "Q3, Q5",
+      "why_effective": "Tests the link between algebraic formulae (like area of trapezium or cylinder) and algebraic manipulation. Students often solve the quadratic correctly but select the positive root without checking geometric validity (e.g., negative lengths), or confuse the dimension variables.",
+      "generation_strategy": "Use word problems involving area/volume leading to a quadratic equation. Ensure the quadratic has two positive real solutions, but one is geometrically impossible (e.g., violates triangle inequality or Pythagorean theorem). Include the impossible solution as a distractor."
+    },
+    {
+      "distractor_type": "Exponent Law Misapplication (Negative/Fractional)",
+      "frequency": "high",
+      "example_question_id": "Q41, Q46",
+      "why_effective": "Confusion arises when handling negative bases, fractional powers, or coefficients in\u6307\u6570 notation. Students often subtract exponents when multiplying or fail to raise the coefficient to the power.",
+      "generation_strategy": "Use terms like $(5x^2y)^{-3}$. Common errors to capture: 1) Failing to cube the coefficient 5, 2) Adding exponents instead of multiplying, 3) Handling the negative power incorrectly (flipping numerator/denominator)."
+    }
+  ],
+  "parse_repaired": true
+}

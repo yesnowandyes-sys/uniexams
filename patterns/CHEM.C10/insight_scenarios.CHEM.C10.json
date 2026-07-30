@@ -1,0 +1,46 @@
+{
+  "topic_key": "CHEM.C10",
+  "topic_name": "Rates of reaction",
+  "module_code": "C",
+  "corpus_question_count": 18,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Two experiments measure gas production. Experiment A uses $100 \text{ cm}^3$ of $1.0 \text{ mol dm}^{-3}$ acid. Experiment B uses $50 \text{ cm}^3$ of $2.0 \text{ mol dm}^{-3}$ acid. The solid is in excess. The student must identify the correct comparative graphs.",
+      "key_insight": "The total number of moles of acid (and thus the limiting reagent) is identical in both cases ($100 \times 1 = 50 \times 2$). Therefore, the final volume of gas produced (the y-axis plateau) must be the same. However, the concentration in B is higher, so the initial rate of reaction (the gradient at $t=0$) is steeper in B.",
+      "discrimination_factors": [
+        "Distinguishing between kinetic factors (Concentration) and thermodynamic factors (Total Moles/Yield).",
+        "Recognizing that 'rate' relates to gradient, not total height."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A reversible reaction $A + B \rightleftharpoons C + D$ is at equilibrium. The temperature is increased. The student is told the yield of C increases. They are asked to determine the sign of $\\Delta H$ and the effect on the rate constant $k$.",
+      "key_insight": "Increasing yield of products with heat implies the forward reaction is Endothermic ($\\Delta H > 0$). However, increasing temperature *always* increases the rate constant $k$ (for both forward and backward reactions) due to the increased proportion of particles possessing $E_a$. Students often conflate 'yield' with 'speed', thinking that if products are favored, the reaction 'automatically' happens faster, or conversely, that 'favoring products' means the reactants slow down.",
+      "discrimination_factors": [
+        "Disconnecting Equilibrium Position (Kc) from Kinetic Rate (k).",
+        "Applying Le Chatelier's principle (Yield) and Maxwell-Boltzmann distribution (Rate) simultaneously."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "The decomposition of hydrogen peroxide is catalyzed by MnO2. In Experiment 1, a 'lump' of catalyst is used. In Experiment 2, the same mass of catalyst is finely powdered. The student must explain why the initial rate is higher in Experiment 2, but the total volume of gas is the same.",
+      "key_insight": "Powdering the catalyst increases the surface area. This exposes more active sites for the reaction, increasing the frequency of successful collisions per second (Rate). However, the catalyst is not consumed (definition of a catalyst), and the amount of reactant is constant. Therefore, the total extent of reaction is unchanged.",
+      "discrimination_factors": [
+        "Understanding that 'Surface Area' affects the rate of heterogeneous catalysis.",
+        "Understanding that a catalyst does not affect the thermodynamics (total yield)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A reaction between a solid and a solution is monitored by mass loss (gas escaping). The student is given a graph of Mass vs Time that is curved. They are asked to calculate the average rate over the first 60 seconds vs the instantaneous rate at 60 seconds.",
+      "key_insight": "The average rate is the total mass lost divided by total time (Slope of chord from origin). The instantaneous rate at 60s is the gradient of the tangent at that specific point. Because the reactant is being used up, the concentration decreases, the gradient flattens, and the instantaneous rate at 60s is significantly lower than the average rate over the first 60s.",
+      "discrimination_factors": [
+        "Differentiating between Average Rate and Instantaneous Rate.",
+        "Visualizing gradients on curved graphs (tangents vs chords)."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

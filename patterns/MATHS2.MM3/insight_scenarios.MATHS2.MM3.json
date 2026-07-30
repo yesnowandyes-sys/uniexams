@@ -1,0 +1,76 @@
+{
+  "topic_key": "MATHS2.MM3",
+  "topic_name": "Coordinate geometry in the (x, y) plane",
+  "module_code": "M2",
+  "corpus_question_count": 42,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Two-Point Trap' in Quadratic Intersections",
+      "key_insight": "When a line intersects a quadratic curve at x-coordinates p and q, the difference $q-p$ is related to the discriminant $\\Delta$ by $(q-p) = \frac{\\sqrt{\\Delta}}{|a|}$. Students must equate the curves to form a quadratic, identify a, b, c, and use the given distance constraint to solve for the constant.",
+      "discrimination_factors": [
+        "Ability to equate $y$ values correctly without sign errors.",
+        "Understanding the geometric meaning of the roots of the algebraic equation.",
+        "Accurate manipulation of surds and squares."
+      ],
+      "difficulty_band": "4-6",
+      "reference_ids": [
+        "Q4",
+        "Q18"
+      ]
+    },
+    {
+      "scenario_description": "Geometric Constraint to Algebraic Form (Circle in a Square)",
+      "key_insight": "Translating a geometric description (e.g., 'a circle inside a square touching the sides') into the standard circle equation $(x-a)^2 + (y-b)^2 = r^2$. The critical step is determining the center $(a,b)$ geometrically (midpoint or relative to square vertices) and the radius (half the side length), then expanding to match the general form $x^2 + y^2 + cx + dy + e = 0$.",
+      "discrimination_factors": [
+        "Visualization of the geometry from the text.",
+        "Correct calculation of radius from side lengths.",
+        "Accurate expansion of brackets to find linear coefficients (c, d)."
+      ],
+      "difficulty_band": "4-6",
+      "reference_ids": [
+        "Q7"
+      ]
+    },
+    {
+      "scenario_description": "Reflections in y=x and Functional Inverses",
+      "key_insight": "Reflecting a line $y=mx+c$ in the line $y=x$ results in a new line whose gradient is the reciprocal $1/m$ (provided $m \neq 0$). This relies on the insight that reflection in $y=x$ is equivalent to swapping $x$ and $y$, which is the algebraic definition of an inverse function.",
+      "discrimination_factors": [
+        "Understanding that reflection in y=x swaps coordinates.",
+        "Recognizing the slope of the inverse is $1/m$, distinct from the perpendicular slope $-1/m$.",
+        "Handling the intercept transformation correctly if the full equation is required."
+      ],
+      "difficulty_band": "4-6",
+      "reference_ids": [
+        "Q2"
+      ]
+    },
+    {
+      "scenario_description": "Parametric Optimization on a Curve (Shortest Distance)",
+      "key_insight": "To find the shortest distance from a point $P$ to a curve $y=f(x)$, one minimizes the distance function $D^2 = (x-x_p)^2 + (f(x)-y_p)^2$. This requires coordinate geometry (distance formula) combined with calculus (differentiation and setting to zero).",
+      "discrimination_factors": [
+        "Setting up the distance squared function to simplify algebra.",
+        "Differentiating correctly with respect to the parameter.",
+        "Solving the resulting polynomial equation to find the coordinate."
+      ],
+      "difficulty_band": "7-9",
+      "reference_ids": [
+        "Q23"
+      ]
+    },
+    {
+      "scenario_description": "Tangency as a Discriminant Condition",
+      "key_insight": "A line is tangent to a circle if the quadratic equation resulting from their substitution has a discriminant of zero ($b^2 - 4ac = 0$). This algebraic condition is often faster than calculating the perpendicular distance from center to line, though both are valid.",
+      "discrimination_factors": [
+        "Formulating the simultaneous equations correctly.",
+        "Applying the discriminant condition $\\Delta = 0$.",
+        "Distinguishing between 'intersecting at two points' ($\\Delta > 0$) and 'tangent' ($\\Delta = 0$)."
+      ],
+      "difficulty_band": "7-9",
+      "reference_ids": [
+        "Q32"
+      ]
+    }
+  ],
+  "parse_repaired": true
+}

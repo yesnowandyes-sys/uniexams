@@ -1,0 +1,46 @@
+{
+  "topic_key": "CHEM.C2",
+  "topic_name": "The Periodic Table",
+  "module_code": "C",
+  "corpus_question_count": 6,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is presented with ionisation energy values for two adjacent elements in Period 3: 736 kJ/mol (Mg) and 1000 kJ/mol (Ar). They are asked to explain why the value for the element between them (Al) is lower than Mg (577 kJ/mol) despite the increasing nuclear charge.",
+      "key_insight": "Understanding that the electron removed from Al is in the 3p subshell, which is higher in energy and more shielded than the 3s electrons of Mg. The general trend of increasing nuclear charge is overridden by the subshell energy difference (s-block to p-block transition).",
+      "discrimination_factors": [
+        "Ability to recall electron configurations (Mg: 3s2, Al: 3p1).",
+        "Understanding that shielding by inner shells (1s, 2s, 2p) is constant, but penetration/shielding within the same shell (n=3) affects s vs p."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A question provides the relative atomic mass of an element (e.g., 85.5) and two isotopes (85, 87). The student must determine which statement is correct: 'The isotope with mass 85 is more abundant' or 'The abundance of isotope 85 is greater than 70%'.",
+      "key_insight": "The weighted average (85.5) is exactly in the middle, implying a 50/50 mix. Any statement claiming one is dominant is false; any statement claiming a specific non-50% split is false. If the average were 85.4, the lighter isotope (85) would be dominant, but the student must calculate the exact split to disprove >70%.",
+      "discrimination_factors": [
+        "Quantitative literacy: Calculating weighted averages.",
+        "Avoiding the heuristic trap of 'Average is closer to X, so X must be > 50%' (which is true, but they must check the specific threshold in the question)."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A student must identify the most reactive non-metal from a list including Fluorine, Chlorine, and Iodine, but the question is framed in the context of the displacement reaction in a halogen solution.",
+      "key_insight": "Reactivity decreases down the group (F > Cl > Br > I) due to increasing atomic radius and shielding, making it harder to attract an electron. The most reactive non-metal (F) is the strongest oxidising agent, but chemists often handle Chlorine as the 'standard' for practical questions.",
+      "discrimination_factors": [
+        "Recalling the inverse reactivity trend for non-metals compared to metals.",
+        "Linking reactivity to oxidising power."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Predicting the formula of the oxide formed by an element in Group 14, and determining if it is acidic or basic.",
+      "key_insight": "Group 14 elements (e.g., C, Si) typically form dioxides (EO2) utilizing their +4 valency. However, the acidity trend changes: CO2 is acidic (non-metal oxide), SiO2 is weakly acidic, while PbO2 or SnO2 might show amphoteric properties, though generally, metallic character increases down the group. The core insight is the valency rule (+4) vs the oxide type (acidic for non-metals).",
+      "discrimination_factors": [
+        "Applying valency rules to Group 14 (often overlooked compared to 1, 2, 17).",
+        "Understanding the Metal-Nonmetal divide in the p-block."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

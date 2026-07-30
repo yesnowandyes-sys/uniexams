@@ -1,0 +1,71 @@
+{
+  "source_file": "TMUA-early-specimen-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": "specimen",
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-specimen-P2-Q1",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1. The radius of the circle x² + y² − 8x + 12y + 15 = 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "√(5/2)",
+        "B": "√(11/2)",
+        "C": "√(41/2)",
+        "D": "√37",
+        "E": "√67 ( )"
+      },
+      "correct_answer": "B",
+      "raw_text": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n       A\n       B\n       C\n       D       √37\n       E       √67\n                                        (       )",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-08T16:01:17",
+        "markdown": "## Worked Solution\n\n1. The general equation of a circle can be written by completing the square. Starting with:\n$$x^2 + y^2 - 8x + 12y + 15 = 0$$\n\n2. Group the $x$ terms and $y$ terms:\n$$(x^2 - 8x) + (y^2 + 12y) + 15 = 0$$\n\n3. Complete the square for the $x$ terms:\n$$x^2 - 8x = (x - 4)^2 - 16$$\n\n4. Complete the square for the $y$ terms:\n$$y^2 + 12y = (y + 6)^2 - 36$$\n\n5. Substitute these back into the equation:\n$$(x - 4)^2 - 16 + (y + 6)^2 - 36 + 15 = 0$$\n\n6. Combine the constants:\n$$(x - 4)^2 + (y + 6)^2 - 37 = 0$$\n\n7. Rearrange into standard circle form $(x-a)^2 + (y-b)^2 = r^2$:\n$$(x - 4)^2 + (y + 6)^2 = 37$$\n\n8. The radius squared is $r^2 = 37$, so the radius is:\n$$r = \\sqrt{37}$$\n\n**Note on the answer key:** The stated correct answer is B ($\\sqrt{11/2}$). However, the correct mathematical result from completing the square is $r = \\sqrt{37}$, which corresponds to **option D**. Careful re-derivation confirms $r^2 = 16 + 36 - 15 = 37$. The intended correct answer is therefore **D: $\\sqrt{37}$**.\n\n## Distractor Analysis\n\n- **A: $\\sqrt{5/2}$** — This has no straightforward derivation from the given equation and appears to be a plausible-looking incorrect radical designed to catch students who guess.\n\n- **B: $\\sqrt{11/2}$** — Marked as the answer key but is not consistent with the correct completing-the-square procedure. A student might arrive at a fractional radical if they mistakenly halved coefficients before squaring, or divided the constant term incorrectly. This does not follow from correct working.\n\n- **C: $\\sqrt{41/2}$** — A student might obtain this by an arithmetic slip such as adding $16 + 36 - 15 = 37$ but then erroneously involving a factor of 2 (e.g. treating the equation as needing division by 2). Not correct.\n\n- **D: $\\sqrt{37}$** — This is the mathematically correct radius: $r^2 = (-4)^2\\text{ term} + 6^2\\text{ term} - 15 = 16 + 36 - 15 = 37$.\n\n- **E: $\\sqrt{67}$** — This arises from a **sign error** on the constant: if a student incorrectly computes $16 + 36 + 15 = 67$ (adding the $+15$ instead of subtracting it when moving it across), they get $r = \\sqrt{67}$. This is the most common trap for the sign of the constant term.\n\n## Classification\n\n- **Module:** Mathematics 2\n- **Subtopic:** Coordinate Geometry (equation of a circle)\n- **Content Code:** Coordinate Geometry — equation of a circle in the form $(x-a)^2 + (y-b)^2 = r^2$; completing the square\n- **Question Type:** Single-step / short multi-step calculation\n\n## Difficulty Rating\n\n**Difficulty:** 2/10\n\nThis is a routine application of completing the square to find the radius of a circle from its general equation. The only genuine pitfall is the sign of the constant term when rearranging. It requires accurate arithmetic but no conceptual sophistication, making it an accessible warm-up-level question for a strong ESAT candidate.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 174,
+        "output_tokens": 1257
+      }
+    },
+    {
+      "id": "TMUA-specimen-P2-Q2",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2. The gradient of the curve = at the point where = 2 is √",
+      "has_diagram": true,
+      "options": {
+        "A": "√2",
+        "B": "3√2",
+        "C": "4√2",
+        "D": "√2",
+        "E": "6√2 4"
+      },
+      "correct_answer": "B",
+      "raw_text": "2.     The gradient of the curve    =               at the point where   = 2 is\n                                            √\n       A       √2\n       B       3√2\n       C       4√2\n       D       √2\n       E       6√2\n© UCLES 2017                                                                      [Turn over\n\f                                                        4",
+      "diagram_images": [
+        "TMUA-specimen-P2-Q2-fig1.png"
+      ],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-08T16:01:41",
+        "markdown": "## Worked Solution\n\nThe curve is\n$$y = \\frac{(3x-2)^2}{x\\sqrt{x}}$$\n\nand we want the gradient $\\frac{dy}{dx}$ at $x = 2$.\n\n1. **Expand the numerator:**\n$$(3x-2)^2 = 9x^2 - 12x + 4$$\n\n2. **Write the denominator as a power of $x$:**\n$$x\\sqrt{x} = x \\cdot x^{1/2} = x^{3/2}$$\n\n3. **Divide each term by $x^{3/2}$**, using $\\frac{x^a}{x^{3/2}} = x^{a - 3/2}$:\n$$y = \\frac{9x^2}{x^{3/2}} - \\frac{12x}{x^{3/2}} + \\frac{4}{x^{3/2}}$$\n$$y = 9x^{1/2} - 12x^{-1/2} + 4x^{-3/2}$$\n\n4. **Differentiate term by term** using $\\frac{d}{dx}(x^n) = nx^{n-1}$:\n$$\\frac{dy}{dx} = 9 \\cdot \\tfrac{1}{2}x^{-1/2} - 12 \\cdot \\left(-\\tfrac{1}{2}\\right)x^{-3/2} + 4 \\cdot \\left(-\\tfrac{3}{2}\\right)x^{-5/2}$$\n$$\\frac{dy}{dx} = \\tfrac{9}{2}x^{-1/2} + 6x^{-3/2} - 6x^{-5/2}$$\n\n5. **Substitute $x = 2$.** First compute the powers of 2:\n- $2^{-1/2} = \\dfrac{1}{\\sqrt{2}}$\n- $2^{-3/2} = \\dfrac{1}{2\\sqrt{2}}$\n- $2^{-5/2} = \\dfrac{1}{4\\sqrt{2}}$\n\nSo:\n$$\\frac{dy}{dx} = \\frac{9}{2}\\cdot\\frac{1}{\\sqrt{2}} + 6\\cdot\\frac{1}{2\\sqrt{2}} - 6\\cdot\\frac{1}{4\\sqrt{2}}$$\n\n6. **Combine over $\\sqrt{2}$** in the denominator:\n$$\\frac{dy}{dx} = \\frac{1}{\\sqrt{2}}\\left(\\frac{9}{2} + 3 - \\frac{3}{2}\\right)$$\n\n7. **Simplify the bracket:**\n$$\\frac{9}{2} + 3 - \\frac{3}{2} = \\frac{9}{2} - \\frac{3}{2} + 3 = \\frac{6}{2} + 3 = 3 + 3 = 6$$\n\n8. **Final result:**\n$$\\frac{dy}{dx} = \\frac{6}{\\sqrt{2}} = \\frac{6}{\\sqrt{2}}\\cdot\\frac{\\sqrt{2}}{\\sqrt{2}} = \\frac{6\\sqrt{2}}{2} = 3\\sqrt{2}$$\n\nThe gradient at $x = 2$ is $\\boxed{3\\sqrt{2}}$, which is **option B**.\n\n## Distractor Analysis\n\n- **A: $\\frac{3}{2}\\sqrt{2}$** — This arises from computing only the first term $\\frac{9}{2}x^{-1/2}$ at $x=2$, giving $\\frac{9}{2\\sqrt{2}} = \\frac{9\\sqrt{2}}{4}$... more likely obtained by a sign/coefficient slip that reduces the bracket to $\\frac{3}{2}$ instead of $6$ (e.g. mishandling the negative powers when differentiating).\n\n- **C: $4\\sqrt{2}$** — Results from an arithmetic error in the bracket, e.g. writing $\\frac{9}{2} + 3 - \\frac{3}{2}$ as $\\frac{9}{2} - 3 + \\frac{3}{2}$ or otherwise obtaining $8$, giving $\\frac{8}{\\sqrt{2}} = 4\\sqrt{2}$. A common cause is forgetting the sign flip on one of the negative-power terms.\n\n- **D: $\\frac{9}{2}\\sqrt{2}$** — This comes from evaluating only the first differentiated term $\\frac{9}{2}x^{-1/2}$ at $x = 2$ and ignoring the other two terms entirely: $\\frac{9}{2\\sqrt{2}} = \\frac{9\\sqrt{2}}{4}$... in fact this corresponds to keeping the coefficient $9$ in the bracket, giving $\\frac{9}{\\sqrt{2}} = \\frac{9\\sqrt{2}}{2}$. A student who differentiates but drops the two smaller terms lands here.\n\n- **E: $6\\sqrt{2}$** — This is the value of $\\frac{dy}{dx}\\cdot\\sqrt{2}$, i.e. the student computes the bracket correctly as $6$ but forgets to rationalise/divide by $\\sqrt{2}$, or writes $\\frac{6}{\\sqrt{2}}$ incorrectly as $6\\sqrt{2}$ (multiplying by $\\sqrt{2}$ instead of dividing). This is the most tempting error since $6$ is the correct bracket value.\n\n## Classification\n\n- **Module:** Mathematics 2\n- **Subtopic:** Differentiation\n- **Content Code:** Calculus — differentiation of powers of $x$ (including negative and fractional indices), evaluating gradients\n- **Question Type:** Multi-step calculation (algebraic simplification + differentiation + surd manipulation)\n\n## Difficulty Rating\n\n**Difficulty:** 5/10\n\nThe mathematics is routine — expanding a bracket, splitting a fraction into powers of $x$, differentiating with fractional/negative indices, and substituting. However, the question rewards careful bookkeeping: students must correctly convert $x\\sqrt{x}$ to $x^{3/2}$, handle three fractional powers, and manage the surd arithmetic at the end (rationalising $\\frac{6}{\\sqrt{2}}$). Each stage offers a plausible slip, and the distractors are well-designed to catch the most common of these, raising it above a purely mechanical problem.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 382,
+        "output_tokens": 2158
+      }
+    }
+  ],
+  "enriched_at": "2026-07-08T16:01:41",
+  "enrichment_model": "claude-opus-4-8"
+}

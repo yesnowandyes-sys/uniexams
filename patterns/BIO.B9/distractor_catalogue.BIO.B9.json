@@ -1,0 +1,45 @@
+{
+  "topic_key": "BIO.B9",
+  "topic_name": "Animal physiology",
+  "module_code": "B",
+  "corpus_question_count": 35,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Antonym Substitution",
+      "frequency": "High",
+      "example_question_id": "Q2, Q5, Q28",
+      "why_effective": "Exploits confusion between antagonistic physiological concepts (e.g., artery vs vein, higher vs lower concentration, reabsorption vs secretion). In Q2, students must identify that the renal vein has the lowest urea concentration (cleaned blood) while the ureter has the highest (waste product). The distractor 'vena cava' for lowest concentration exploits the 'vein=low' heuristic without accounting for the kidney's filtering function.",
+      "generation_strategy": "Identify the correct physiological gradient (e.g., glucose high entering gut, low leaving; urea low entering kidney, high leaving). Create options that reverse the direction of change (increase instead of decrease) or swap the start/end points of a process."
+    },
+    {
+      "distractor_type": "Reverse Causality",
+      "frequency": "Medium",
+      "example_question_id": "Q3, Q17, Q23",
+      "why_effective": "Tests understanding of negative feedback and effector mechanisms. In Q3, Option 2 ('hairs stand up') is a heat-retention response, whereas the graph shows temperature falling (correct response is sweating). The distractor offers a mechanism that opposes the observed change or is consistent with the wrong phase of a cycle.",
+      "generation_strategy": "For a graph showing a change in variable X (e.g., falling temperature), provide a mechanism that would cause X to increase (e.g., shivering/vasoconstriction) as a distractor. For homeostasis questions, swap 'increase' and 'decrease' for hormone levels or effectors."
+    },
+    {
+      "distractor_type": "Graph Interpretation Errors",
+      "frequency": "High",
+      "example_question_id": "Q1, Q4, Q11, Q20",
+      "why_effective": "Exploits visual confusion between overlapping lines or disconnected axes. In Q4 (and identical Q11), the 'valve closing' occurs during the isovolumetric contraction phase (vertical line in volume graph), where volume is constant. Distractors link valve closure to the sloping lines (filling or emptying), testing the ability to align event timing with geometric features.",
+      "generation_strategy": "Create options where events (e.g., valve opening, heart contraction) are shifted one phase earlier or later on the graph (e.g., selecting the 'ventricular filling' slope when 'atrial systole' is the answer)."
+    },
+    {
+      "distractor_type": "Calculation Unit Traps",
+      "frequency": "Medium",
+      "example_question_id": "Q9, Q13, Q27",
+      "why_effective": "Tests attention to unit prefixes and geometric dimensions. In Q9, the question asks for a distance travelled, but the rate is given in mm\u00b3/min (volume). The student must calculate the length using the cross-sectional area ($\\pi r^2$) and divide the volume by area. Distractors often use the wrong geometric formula (e.g., $2\\pi r$ instead of $\\pi r^2$) or fail to convert units (e.g., dm\u00b3 vs cm\u00b3).",
+      "generation_strategy": "Require unit conversions (cm\u00b3 to dm\u00b3) or geometric calculations (sphere, cylinder, circle). Include options that are the result of skipping a step (e.g., calculating volume instead of length) or using the diameter instead of radius."
+    },
+    {
+      "distractor_type": "False Dichotomy (Binary vs Mixed)",
+      "frequency": "Low",
+      "example_question_id": "Q1, Q22",
+      "why_effective": "Students often view biological processes as 'on/off'. In Q1, the correct answer is 'Both anaerobic and aerobic respiration' (D). Distractors A and C offer the 'pure' states (only anaerobic/only aerobic), which are easier conceptual simplifications but incorrect for the transition phase described.",
+      "generation_strategy": "If the correct answer involves a system using multiple simultaneous mechanisms (e.g., diffusion and active transport, aerobic and anaerobic), create strong single-mechanism distractors."
+    }
+  ],
+  "parse_repaired": true
+}

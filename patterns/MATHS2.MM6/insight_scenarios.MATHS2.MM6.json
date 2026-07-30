@@ -1,0 +1,63 @@
+{
+  "topic_key": "MATHS2.MM6",
+  "topic_name": "Differentiation",
+  "module_code": "M2",
+  "corpus_question_count": 55,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Two-Step' Optimization (Max Gradient)",
+      "key_insight": "Maximizing a property of a curve (like its gradient) is a second-order optimization problem. Students must realize that finding the max gradient requires differentiating the *derivative* (finding the second derivative) and solving $f''(x) = 0$, then substituting back into $f'(x)$.",
+      "discrimination_factors": [
+        "Ability to formulate the gradient function $g(x) = f'(x)$ correctly.",
+        "Understanding that 'max value' implies finding the stationary point of the new function $g(x)$.",
+        "Avoiding the trap of finding the max value of the original function $f(x)$.",
+        "Handling fractional powers ($x^{3/2} \to x^{1/2}$) accurately."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Roots of Equations via Graphical Mapping",
+      "key_insight": "The number of real roots of $f(x) = k$ is determined by the intersection of the horizontal line $y=k$ and the graph of $f(x)$. Students must identify local maxima and minima ($f'(x)=0$) to map the 'valid' ranges of $k$ for specific root counts.",
+      "discrimination_factors": [
+        "Sketching the graph of $f(x)$ using turning points.",
+        "Understanding strict inequalities for distinct roots (e.g., $k$ must be strictly between max/min values for 3/4 roots).",
+        "Handling non-polynomial terms if present (e.g. Q12, Q19) by analyzing end behavior and continuity."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Simplify-Then-Differentiate with Fractional Powers",
+      "key_insight": "Complex looking functions involving roots or algebraic fractions are often designed to be simplified into sums of powers $Ax^n + Bx^m$. Trying to differentiate 'on the fly' or using quotient rule is inefficient and error-prone. The 'Aha!' moment is the algebraic simplification.",
+      "discrimination_factors": [
+        "Index law fluency: $x / \\sqrt{x} = x^{1/2}$, $x^3 / x^2 = x$, etc.",
+        "Negative and fractional exponents confidence.",
+        "Differentiation of $x^p$ where $p \\in \\mathbb{Q}$.",
+        "Evaluating the result at specific points (often simple integers)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Logic of Calculus (Necessary/Sufficient Conditions)",
+      "key_insight": "TMUA/ESAT often asks about the *properties* of derivatives (e.g., Rolle's theorem, Mean Value Theorem logic). Students must distinguish between a condition being 'necessary' (must be true) vs 'sufficient' (guarantees the result), often related to $f(x)$ vs $f'(x)$ vs $f''(x)$.",
+      "discrimination_factors": [
+        "Abstract reasoning about derivatives.",
+        "Understanding the link between $f''(x)$ and convexity (Jensen's).",
+        "Constructing or identifying counterexamples (e.g., Q31, Q39, Q40)."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Geometric Optimization with Constraints",
+      "key_insight": "Applied problems (Cuboids, Sectors, Triangles) require translating geometric constraints (Perimeter, Volume fixed) into a single-variable function before differentiation.",
+      "discrimination_factors": [
+        "Modeling: Deriving the objective function (Area) in terms of one variable.",
+        "Substituting the constraint correctly.",
+        "Identifying the domain of the variable (physical constraints like $x>0$).",
+        "Recognizing that the maximum area is the y-value of the vertex, not the x-value."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

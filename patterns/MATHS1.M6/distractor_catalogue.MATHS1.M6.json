@@ -1,0 +1,45 @@
+{
+  "topic_key": "MATHS1.M6",
+  "topic_name": "Statistics",
+  "module_code": "M1",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Arithmetic Inversion (Add/Subtract)",
+      "frequency": "High",
+      "example_question_id": "Q1",
+      "why_effective": "Lures students who correctly calculate the total age increase (+56) but subtract it from the original mean (28) rather than adding it, or calculate the new total mean incorrectly by applying the delta to the individuals rather than the aggregate.",
+      "generation_strategy": "Identify the required operation (e.g., $x + \\Delta$). Create distractors using $x - \\Delta$, $x$, and $x + (\text{scaled }\\Delta)$."
+    },
+    {
+      "distractor_type": "Intuitive but False Association",
+      "frequency": "Medium",
+      "example_question_id": "Q9",
+      "why_effective": "Exploits the heuristic that the mean of combined groups should be the arithmetic mean of the separate means (36 and 48 average to 42, or mid-point 40). Students select 40 without weighting for group size.",
+      "generation_strategy": "When combining groups with unequal sizes, offer the unweighted arithmetic mean of the subgroup means as a distractor."
+    },
+    {
+      "distractor_type": "Subset Misidentification",
+      "frequency": "Medium",
+      "example_question_id": "Q3",
+      "why_effective": "In two-way table problems, students often calculate the correct count for the 'wrong' cell (e.g., Men who failed, or Women who passed) or confuse the total passed with the subset passed.",
+      "generation_strategy": "Calculate all 4 marginal/conditional cells ($n_{A,B}, n_{A,\neg B}, n_{\neg A,B}, n_{\neg A,\neg B}$). Use the incorrect conditional counts as distractors."
+    },
+    {
+      "distractor_type": "Impossible Statistics",
+      "frequency": "Low",
+      "example_question_id": "Q8",
+      "why_effective": "Tests understanding of properties. Statement 1 is a 'trick' distractor\u2014students might think adding a number *changes* the median such that it's no longer a list value, but if the list contains repeats (e.g., 2, 4, 4, 6), the new median can remain 4.",
+      "generation_strategy": "Include statements that violate properties (e.g., mean decreasing when a high number is added) or statements that are mathematically possible but not *guaranteed* (e.g., range increases)."
+    },
+    {
+      "distractor_type": "Maximum vs Mean Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q1",
+      "why_effective": "In 'mean of new items' problems, calculating the *sum* of the new items (60) is a common intermediate step. The option '60' is often missing, but '50' (sum - 10) or similar errors appear. Q1 options A/B/E represent specific algebraic missteps.",
+      "generation_strategy": "Identify intermediate calculation values (e.g., Sum of new members) and distinct incorrect results (e.g., using wrong denominator) to serve as options."
+    }
+  ],
+  "parse_repaired": true
+}

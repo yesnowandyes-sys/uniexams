@@ -1,0 +1,55 @@
+{
+  "topic_key": "BIO.B4",
+  "topic_name": "Inheritance",
+  "module_code": "B",
+  "corpus_question_count": 37,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Unaffected' Carrier (Autosomal Recessive). A family tree shows two unaffected parents having an affected child. Students must determine the probability that a specific, unaffected sibling is a carrier.",
+      "key_insight": "If parents are Aa x Aa, an unaffected child has a 2/3 chance of being Aa (not 1/2 or 100%). The 'aa' outcome is already removed from the possibility space for the surviving/unaffected sibling.",
+      "discrimination_factors": [
+        "Filters out students who default to 50% probability for heterozygotes.",
+        "Tests conditional probability logic."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Lethal Dominance Ratio Distortion. Two yellow mice (heterozygous, Yy where YY is lethal) mate. What is the phenotypic ratio of the offspring?",
+      "key_insight": "Standard Mendelian 1:2:1 (YY:Yy:yy) becomes 0:2:1. The 'Dominant' phenotype is purely heterozygous. The total offspring count is 3/4 of the theoretical zygotes.",
+      "discrimination_factors": [
+        "Identifies students who memorize 3:1 ratios without understanding viability.",
+        "Tests integration of genotype-phenotype mapping with mortality data."
+      ],
+      "difficulty_band": "5-7"
+    },
+    {
+      "scenario_description": "Codon Tables and Mutation Types. A DNA sequence and a codon table are provided. A single base substitution mutation occurs. Students must determine if the protein changes.",
+      "key_insight": "Redundancy in the genetic code (degeneracy). A change in the third base often results in the same amino acid (silent mutation). Also requires reading the table accurately (start/stop/no change).",
+      "discrimination_factors": [
+        "Tests ability to extract info from a complex table.",
+        "Distinguishes between DNA mutation and functional consequence."
+      ],
+      "difficulty_band": "3-5"
+    },
+    {
+      "scenario_description": "Sex-Linked Allele Counting. A family is affected by an X-linked recessive condition. Students are asked for the total number of specific alleles present in the family (e.g., 'How many recessive alleles are present in the family?').",
+      "key_insight": "Males (XY) only have one X chromosome. If affected, they count as 1 recessive allele. Females (XX) count as 2 if affected (homozygous) or 1 if carriers. Students often count males as 0 or 2.",
+      "discrimination_factors": [
+        " penalizes applying autosomal (2n) logic to sex chromosomes.",
+        "Requires close attention to the sex of individuals in the diagram."
+      ],
+      "difficulty_band": "6-8"
+    },
+    {
+      "scenario_description": "Selection Pressure vs. Mutation Origin. A population of insects is sprayed with pesticide. Some survive. Which statements explain the survival?",
+      "key_insight": "Resistance exists *before* the spray (genetic variation). The spray *selects* for the resistance; it does not *cause* it (no Lamarckism). Surviving individuals pass on the pre-existing allele.",
+      "discrimination_factors": [
+        "Deep conceptual understanding of Natural Selection.",
+        "Rejects intuitive but incorrect 'Acquired Characteristics' logic."
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,341 @@
+{
+  "source_file": "ENGAA_2016_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2016,
+  "section": "Section1",
+  "total_questions": 54,
+  "questions": [
+    {
+      "id": "ENGAA-2016-S1-Q1",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "Find the complete set of solutions to -8 < 6 - \\frac{x}{2}",
+      "has_diagram": false,
+      "options": {
+        "A": "x < 4",
+        "B": "x > 4",
+        "C": "x < 20",
+        "D": "x > 20",
+        "E": "x < 22",
+        "F": "x > 22",
+        "G": "x < 28",
+        "H": "x > 28"
+      },
+      "correct_answer": "G",
+      "raw_text": "1\n                                                        x\n      Find the complete set of solutions to − 8 < 6 −\n                                                        2\n      A    x<4\n      B    x>4\n      C    x < 20\n      D    x > 20\n      E    x < 22\n      F    x > 22\n      G    x < 28\n      H    x > 28",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$x < 4$",
+        "B": "$x > 4$",
+        "C": "$x < 20$",
+        "D": "$x > 20$",
+        "E": "$x < 22$",
+        "F": "$x > 22$",
+        "G": "$x < 28$",
+        "H": "$x > 28$"
+      },
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:49:59",
+        "markdown": "## Worked Solution\n\nTo find the complete set of solutions to the inequality, we need to isolate $x$ step-by-step. \n\n1. Start with the original inequality:\n   $$-8 < 6 - \\frac{x}{2}$$\n\n2. Subtract 6 from both sides to begin isolating the term containing $x$. Remember that subtracting a positive number from a negative number makes it more negative.\n   $$-8 - 6 < -\\frac{x}{2}$$\n   $$-14 < -\\frac{x}{2}$$\n\n3. Multiply both sides by 2 to eliminate the fraction:\n   $$-14 \\times 2 < -x$$\n   $$-28 < -x$$\n\n4. To solve for $x$, multiply or divide both sides by $-1$. \n   **CRITICAL STEP:** When multiplying or dividing an inequality by a negative number, you **must reverse the direction of the inequality sign**. \n   $$(-28) \\times (-1) > (-x) \\times (-1)$$\n   $$28 > x$$\n\n5. Rewrite the inequality in the standard format with the variable on the left side:\n   $$x < 28$$\n\n[DIAGRAM 1]\n\n## Distractor Analysis\n\n- **Option A ($x < 4$):** The student incorrectly evaluates $-8 - 6$ as $-2$ (perhaps doing $-8 + 6$ instead). This leads to $-2 < -\\frac{x}{2}$, which eventually results in $x < 4$ if they correctly flip the sign at the end.\n- **Option B ($x > 4$):** The student makes the same initial arithmetic error as in Option A ($-8 + 6 = -2$), but fails to reverse the inequality sign when dividing by $-2$ at the end.\n- **Option C ($x < 20$):** The student correctly subtracts 6 to get $-14$. However, when clearing the fraction, they only multiply the $-14$ by 2 and fail to multiply the $6$ by 2 initially (or make a similar partial multiplication error), leading to an intermediate value of $-10$ or $-20$ that results in $x < 20$.\n- **Option D ($x > 20$):** The student makes the same partial multiplication error as in Option C, but additionally fails to reverse the inequality sign when dividing by $-1$.\n- **Option E ($x < 22$):** The student misinterprets the order of operations, reading $6 - \\frac{x}{2}$ as $\\frac{6-x}{2}$. Multiplying by 2 yields $-16 < 6 - x$. Subtracting 6 gives $-22 < -x$, and correctly flipping the sign gives $x < 22$.\n- **Option F ($x > 22$):** The student makes the same order of operations error as in Option E ($\\frac{6-x}{2}$), but fails to reverse the inequality sign when solving for $x$.\n- **Option H ($x > 28$):** The student performs all algebraic steps correctly but forgets the critical rule to reverse the inequality sign when multiplying/dividing by a negative number.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Algebra\n- **Content Code:** M1.2 / Algebra (Inequalities)\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\n**Difficulty:** 2/10\n**Justification:** This is a straightforward linear inequality that requires only basic algebraic manipulation. The only cognitive hurdle is remembering to flip the inequality sign when dividing by $-1$. The large number of distractors (8 options) tests resilience against arithmetic slips and sign errors, slightly justifying a 2 over a 1. \n\n## Diagram Descriptions\n\n### Diagram 1\n**Type:** Graph / Number Line\n**Content:** A horizontal number line with an open circle drawn at the number 28. A bold arrow extends from the open circle to the left, pointing towards the negative numbers (indicating all values less than 28). The number 28 should be clearly labelled below the tick mark.\n**Purpose:** To visually illustrate the final solution set $x < 28$, showing that 28 is not included (open circle) and that all smaller numbers satisfy the inequality.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1124,
+        "output_tokens": 6270
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q2",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "A nuclide ^{214}_{82}Pb changes by radioactive decay into the nuclide ^{210}_{82}Pb. Which combination of emissions produces this change?",
+      "has_diagram": false,
+      "options": {
+        "A": "3 alpha",
+        "B": "2 alpha and 1 beta",
+        "C": "2 alpha and 2 beta",
+        "D": "1 alpha and 2 beta",
+        "E": "3 beta"
+      },
+      "correct_answer": "D",
+      "raw_text": "2     A nuclide 214\n                 82\n                    Pb changes by radioactive decay into the nuclide 210\n                                                                      82\n                                                                         Pb.\n      Which combination of emissions produces this change?\n      A    3 alpha\n      B    2 alpha and 1 beta\n      C    2 alpha and 2 beta\n      D    1 alpha and 2 beta\n      E    3 beta\n© UCLES 2016\n\f                                                    5",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:50:38",
+        "markdown": "## Worked Solution\n\n1. **Identify the change in nuclear composition.**\n\n   We go from $^{214}_{82}\\text{Pb}$ to $^{210}_{82}\\text{Pb}$.\n\n   - Change in mass number $A$: $214 \\to 210$, a **decrease of 4**.\n   - Change in atomic number $Z$: $82 \\to 82$, **no change**.\n\n2. **Recall the effect of each type of emission.**\n\n   An **alpha particle** is $^{4}_{2}\\alpha$, so each alpha emission reduces $A$ by 4 and $Z$ by 2.\n\n   A **beta particle** is $^{0}_{-1}\\beta$, so each beta emission leaves $A$ unchanged and increases $Z$ by 1.\n\n3. **Determine the number of alpha emissions from the mass number change.**\n\n   Since the mass number decreases by exactly 4, we need exactly:\n\n   $$n_\\alpha = \\frac{4}{4} = 1 \\text{ alpha emission}$$\n\n4. **Check the atomic number after one alpha emission.**\n\n   After one alpha:\n\n   $$Z = 82 - 2 = 80$$\n\n   But the target is $Z = 82$, so we need to **increase** $Z$ by 2.\n\n5. **Determine the number of beta emissions.**\n\n   Each beta increases $Z$ by 1, so:\n\n   $$n_\\beta = \\frac{2}{1} = 2 \\text{ beta emissions}$$\n\n6. **Verify the full decay chain.**\n\n   $$^{214}_{82}\\text{Pb} \\xrightarrow{\\alpha} \\,^{210}_{80}\\text{X} \\xrightarrow{\\beta} \\,^{210}_{81}\\text{X} \\xrightarrow{\\beta} \\,^{210}_{82}\\text{Pb} \\checkmark$$\n\n   The mass number and atomic number both end at their correct target values.\n\n**Answer: D — 1 alpha and 2 beta**\n\n## Distractor Analysis\n\n- **A (3 alpha):** Mass number would decrease by $3 \\times 4 = 12$, giving $A = 202$, and $Z$ would decrease by $3 \\times 2 = 6$, giving $Z = 76$. Neither matches. The student likely only checked the mass number change superficially or guessed.\n\n- **B (2 alpha and 1 beta):** Mass number decreases by $2 \\times 4 = 8$, giving $A = 206 \\neq 210$. The student may have incorrectly assumed two alphas from a quick glance at the numbers without computing precisely.\n\n- **C (2 alpha and 2 beta):** Mass number decreases by 8 to $A = 206 \\neq 210$. A common error: the student correctly realised beta particles are needed to restore $Z$, but used two alphas instead of one.\n\n- **E (3 beta):** Mass number remains 214 (beta does not change $A$), and $Z$ increases to 85. The student may have confused the effect of beta decay or forgotten that alpha emission is needed to reduce the mass number.\n\n## Classification\n\n- **Module:** Physics\n- **Subtopic:** Nuclear Physics / Radioactivity\n- **Content Code:** P3.4b (nuclear equations; alpha, beta, and gamma emissions)\n- **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\n**Difficulty:** 3/10\n\nThis is a standard nuclear decay bookkeeping problem requiring knowledge of alpha and beta emission effects on mass number and atomic number. The arithmetic is simple, and the answer can be determined quickly by first matching the mass number decrease (which uniquely fixes the number of alphas at one), then correcting the atomic number with betas. It is straightforward for a well-prepared candidate.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1124,
+        "output_tokens": 1816
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q3",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "Which one of the following is a simplification of (\\sqrt{3} - \\sqrt{2})^{2}?",
+      "has_diagram": false,
+      "options": {
+        "A": "1 - 2\\sqrt{3}\\sqrt{2}",
+        "B": "5 - 2\\sqrt{2}\\sqrt{3}",
+        "C": "2\\sqrt{3} - 2\\sqrt{2}",
+        "D": "1",
+        "E": "5 - \\sqrt{2}\\sqrt{3}",
+        "F": "13 - 2\\sqrt{2}\\sqrt{3}",
+        "G": "5 + 2\\sqrt{2}\\sqrt{3}",
+        "H": "5"
+      },
+      "correct_answer": "B",
+      "raw_text": "3     Which one of the following is a simplification of   ( 3 − 2) ?\n                                                                 2\n      A    1− 2 3 2\n      B    5−2 2 3\n      C    2 3 −2 2\n      D    1\n      E    5− 2 3\n      F    13 − 2 2 3\n      G    5+2 2 3\n      H    5\n© UCLES 2016                                                           [Turn over\n\f                                                      6",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:51:15",
+        "markdown": "## Worked Solution\n\n1.  Identify the algebraic structure of the expression: $(\\sqrt{3} - \\sqrt{2})^{2}$ is the square of a binomial difference.\n2.  Apply the standard binomial expansion identity $(a - b)^{2} = a^{2} - 2ab + b^{2}$, where $a = \\sqrt{3}$ and $b = \\sqrt{2}$.\n3.  Calculate the square of the first term:\n    $$(\\sqrt{3})^{2} = 3$$\n4.  Calculate the cross-term (twice the product of the two terms):\n    $$-2(\\sqrt{3})(\\sqrt{2}) = -2\\sqrt{3}\\sqrt{2}$$\n5.  Calculate the square of the second term:\n    $$(\\sqrt{2})^{2} = 2$$\n6.  Combine these three parts to find the simplified expression:\n    $$(\\sqrt{3})^{2} - 2(\\sqrt{3})(\\sqrt{2}) + (\\sqrt{2})^{2} = 3 - 2\\sqrt{3}\\sqrt{2} + 2$$\n7.  Add the integer constants together:\n    $$3 + 2 = 5$$\n8.  The final simplified expression is $5 - 2\\sqrt{3}\\sqrt{2}$, which corresponds to option B. \n\n## Distractor Analysis\n\n- **A:** $1 - 2\\sqrt{3}\\sqrt{2}$ comes from incorrectly applying the binomial expansion as $a^{2} - b^{2} - 2ab$. This results in calculating $3 - 2 = 1$ for the constant terms instead of $3 + 2 = 5$.\n- **C:** $2\\sqrt{3} - 2\\sqrt{2}$ comes from incorrectly \"distributing\" the power of 2 as a coefficient to both terms, treating the expression as $2(\\sqrt{3} - \\sqrt{2})$.\n- **D:** $1$ is the result of fully misapplying the difference of squares identity $(a^2 - b^2)$ and calculating $3 - 2 = 1$, entirely missing the cross-term.\n- **E:** $5 - \\sqrt{2}\\sqrt{3}$ comes from correctly adding the constants ($3 + 2 = 5$) but forgetting the coefficient of 2 in the cross-term of the binomial expansion.\n- **F:** $13 - 2\\sqrt{2}\\sqrt{3}$ comes from squaring the numbers *inside* the square roots rather than evaluating the square roots themselves: $(\\sqrt{3})^2 \\rightarrow 3^2 = 9$ and $(\\sqrt{2})^2 \\rightarrow 2^2 = 4$. Adding them gives $9 + 4 = 13$.\n- **G:** $5 + 2\\sqrt{2}\\sqrt{3}$ comes from mistakenly using the expansion for $(a + b)^{2}$ instead of $(a - b)^{2}$, resulting in a positive cross-term.\n- **H:** $5$ is the result of omitting the algebraic cross-term entirely, simply evaluating $(\\sqrt{3})^2 + (\\sqrt{2})^2 = 3 + 2 = 5$. \n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Algebra\n- **Content Code:** M1.1\n- **Question Type:** Single-step calculation\n\n## Difficulty Rating\n\n**Difficulty:** 2/10\nThis is a straightforward application of binomial expansion rules for surds. It serves as an easy opening question, though the numerous options provide several traps for students who make careless sign errors or confuse identities. \n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1179,
+        "output_tokens": 1999
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q4",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "The graph shown of quantity y against quantity x represents the motion of a body. (The scales on both axes are in the appropriate S.I. units, and the gravitational field strength g is 10 \\text{N kg}^{-1}.) Which two of the following could the graph represent? 1 kinetic energy against velocity for an object of mass 10 \\text{kg} undergoing free-fall 2 potential energy against height for an object of mass 20 \\text{kg} being lifted by a constant external force 3 velocity against time for an object of mass 20 \\text{kg} being accelerated by a resultant force of 100 \\text{N} 4 work done by an external force of 5 \\text{N} against distance moved for an object of mass 12 \\text{kg} being moved at constant speed by (and in the direction of) the external force",
+      "has_diagram": false,
+      "options": {
+        "A": "1 and 2",
+        "B": "1 and 3",
+        "C": "1 and 4",
+        "D": "2 and 3",
+        "E": "2 and 4",
+        "F": "3 and 4"
+      },
+      "correct_answer": "F",
+      "raw_text": "4     The graph shown of quantity y against quantity x represents the motion of a body.\n                                     y\n                                     10\n                                      0\n                                       0.0                         2.0     x\n      (The scales on both axes are in the appropriate S.I. units, and the gravitational field strength g\n      is 10 N kg–1.)\n      Which two of the following could the graph represent?\n               1   kinetic energy against velocity for an object of mass 10 kg undergoing free-fall\n               2   potential energy against height for an object of mass 20 kg being lifted by a constant\n                   external force\n               3   velocity against time for an object of mass 20 kg being accelerated by a resultant\n                   force of 100 N\n               4   work done by an external force of 5 N against distance moved for an object of mass\n                   12 kg being moved at constant speed by (and in the direction of) the external force\n      A    1 and 2\n      B    1 and 3\n      C    1 and 4\n      D    2 and 3\n      E    2 and 4\n      F    3 and 4\n© UCLES 2016\n\f                                                    7",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:51:47",
+        "markdown": "## Worked Solution\n\nThe graph is a straight line through the origin, meaning $y$ is directly proportional to $x$ ($y = kx$ for some constant $k$). The gradient appears to be $5$. I need to check which scenarios produce $y \\propto x$ with the correct gradient.\n\n**Scenario 1: Kinetic energy against velocity, mass $10\\,\\text{kg}$, free-fall**\n\n$$KE = \\tfrac{1}{2}mv^2 = 5v^2$$\n\nThis is a quadratic relationship ($KE \\propto v^2$), producing a **parabola**, not a straight line. ❌\n\n**Scenario 2: Potential energy against height, mass $20\\,\\text{kg}$, lifted by constant force**\n\n$$PE = mgh = 20 \\times 10 \\times h = 200h$$\n\nThis is linear through the origin with gradient $200$. The graph shown has a gradient of approximately $5$, not $200$. ❌\n\n**Scenario 3: Velocity against time, mass $20\\,\\text{kg}$, resultant force $100\\,\\text{N}$**\n\nBy Newton's second law:\n\n$$a = \\frac{F}{m} = \\frac{100}{20} = 5\\,\\text{m s}^{-2}$$\n\nStarting from rest (implied by a graph through the origin):\n\n$$v = at = 5t$$\n\nThis is a straight line through the origin with gradient $5$. ✅\n\n**Scenario 4: Work done against distance, force $5\\,\\text{N}$, constant speed**\n\nThe work done by the external force is:\n\n$$W = Fd = 5d$$\n\nThis is a straight line through the origin with gradient $5$. ✅\n\n**Conclusion:** Scenarios 3 and 4 both produce a straight line through the origin with the same gradient ($5$) as the graph shown. The answer is **F**.\n\n## Distractor Analysis\n\n- **A (1 and 2):** Scenario 1 gives a parabola, not a straight line — confusing $KE \\propto v^2$ with a linear relationship.\n- **B (1 and 3):** Scenario 1 is quadratic, not linear — same misconception as above.\n- **C (1 and 4):** Scenario 1 is quadratic — same misconception.\n- **D (2 and 3):** Scenario 2 is linear but with gradient $200$, not matching the graph's gradient of $5$. A student might check only that the relationship is proportional, ignoring the actual numerical gradient.\n- **E (2 and 4):** Same issue with scenario 2 — gradient mismatch ($200 \\neq 5$). A student who ignores the specific gradient values would fall for this.\n- **F (3 and 4):** Correct. Both give $y = 5x$ through the origin. ✔️\n\n## Classification\n\n- **Module:** Mathematics 1 / Physics\n- **Subtopic:** Algebra (proportionality and linear relationships) / Mechanics (kinematics, energy, work)\n- **Content Code:** M1-A1, P3.3, P3.5\n- **Question Type:** Multi-step analysis requiring derivation of relationships and comparison of gradients\n\n## Difficulty Rating\n\n**Difficulty:** 6/10\n\nThe question requires checking four different physics relationships, computing gradients for each, and recognising that both the form ($y \\propto x$) and the specific gradient value must match. The main challenge is avoiding the trap of scenario 2, which is proportional but with the wrong gradient.\n\n## Diagram Descriptions\n\n### Diagram 1\n**Type:** Graph\n**Content:** A straight line passing through the origin with a positive gradient of approximately 5, plotted on axes labelled \"$y$\" (vertical) and \"$x$\" (horizontal). The line extends into the first quadrant.\n**Purpose:** Shows the target graph that students must match against all four scenarios.\n\n### Diagram 2\n**Type:** Graph (overlay)\n**Content:** Four curves on the same axes: (1) a parabola $y = 5x^2$ opening upward through the origin, (2) a steep straight line through the origin with gradient 200, (3) a straight line through the origin with gradient 5, and (4) a straight line through the origin with gradient 5 (coinciding with line 3). Each labelled with its scenario number.\n**Purpose:** Visually demonstrates that only scenarios 3 and 4 coincide with the given graph, while scenario 1 is non-linear and scenario 2 has the wrong gradient.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1281,
+        "output_tokens": 1760
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q5",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "The ratio of Q:R is 5:2 and the ratio of R:S is 3:10. Which one of the following gives the ratio Q:S in its simplest form?",
+      "has_diagram": false,
+      "options": {
+        "A": "1:2",
+        "B": "2:1",
+        "C": "3:4",
+        "D": "3:25",
+        "E": "4:3",
+        "F": "25:3"
+      },
+      "correct_answer": "C",
+      "raw_text": "5     The ratio of Q:R is 5:2 and the ratio of R:S is 3:10\n      Which one of the following gives the ratio Q:S in its simplest form?\n      A    1:2\n      B    2:1\n      C    3:4\n      D    3:25\n      E    4:3\n      F    25:3\n© UCLES 2016                                                                 [Turn over\n\f                                                            8",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:52:29",
+        "markdown": "## Worked Solution\n\nWe are given two ratios:\n- $Q : R = 5 : 2$\n- $R : S = 3 : 10$\n\nWe need to find the ratio $Q : S$ in its simplest form.\n\n### Step 1: Make $R$ the same in both ratios\n\nTo combine the two ratios, the value of $R$ must be identical in each. Currently, $R = 2$ in the first ratio and $R = 3$ in the second. The lowest common multiple of 2 and 3 is 6.\n\n### Step 2: Scale each ratio\n\nScale the first ratio by 3:\n\n$$Q : R = 5 : 2 = 15 : 6$$\n\nScale the second ratio by 2:\n\n$$R : S = 3 : 10 = 6 : 20$$\n\n### Step 3: Combine the ratios\n\nSince $R = 6$ in both, we can now chain them together:\n\n$$Q : R : S = 15 : 6 : 20$$\n\nTherefore:\n\n$$Q : S = 15 : 20$$\n\n### Step 4: Simplify\n\nDividing both sides by 5:\n\n$$Q : S = 3 : 4$$\n\n**The answer is C.**\n\n---\n\n## Distractor Analysis\n\n- **A (1:2):** No obvious direct computational path leads here. A student who is completely guessing or who grossly misreads the ratios (perhaps confusing them with differences rather than ratios) might land here.\n- **B (2:1):** This could arise from a student who inverts part of the calculation or mixes up the order of $Q$ and $S$, then fails to simplify correctly.\n- **D (3:25):** A student divides the ratios instead of multiplying: $\\frac{R/S}{Q/R} = \\frac{3/10}{5/2} = \\frac{3}{10} \\times \\frac{2}{5} = \\frac{6}{50} = \\frac{3}{25}$, giving $3 : 25$. This is a common error in combining ratios — dividing instead of multiplying.\n- **E (4:3):** This is the inverse of the correct answer $3 : 4$. A student who correctly reaches $3 : 4$ but then reads the ratio in the wrong order (writes $S : Q$ instead of $Q : S$) would choose this.\n- **F (25:3):** A student divides instead of multiplying but in the other direction: $\\frac{Q/R}{R/S} = \\frac{5/2}{3/10} = \\frac{5}{2} \\times \\frac{10}{3} = \\frac{50}{6} = \\frac{25}{3}$, giving $25 : 3$. This is another variant of the divide-instead-of-multiply error when combining ratios.\n\n---\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Ratio and Proportion\n- **Content Code:** M1.1 (Number — including ratio and proportion)\n- **Question Type:** Multi-step calculation\n\n---\n\n## Difficulty Rating\n\n**Difficulty:** 2/10\n\nThis is a straightforward ratio combination problem requiring only finding a common multiple to align the shared quantity $R$, then simplifying. The main trap is the divide-instead-of-multiply error, but the correct method is well within standard GCSE-level knowledge expected of ESAT candidates.\n\n---\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1127,
+        "output_tokens": 1962
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q6",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "A uranium-235 nucleus can undergo fission to produce two smaller nuclei. Which of the diagrams, if any, could represent this process?",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "C",
+      "raw_text": "6     A uranium-235 nucleus can undergo fission to produce two smaller nuclei.\n      Which of the diagrams, if any, could represent this process?\n                diagram 1             144\n                                                                       diagram 2        137\n                                       56 Ba                                             54 Xe\n                                 1                                                 1\n      1             235          0n                    1                           0n\n                                                                          235\n      1p                                               0n\n                                                                                         1\n                     92 U        1                                         92 U    1     0n\n                                 0n                                                0n\n                                      89                                                96\n                                      36 Kr                                             38 Sr\n                                          diagram 3              87\n                                                                 35 Br\n                                                            1\n                            1                               0n\n                                               235\n                            0n\n                                                                  1\n                                                92 U        1     0n\n                                                            0n\n                                                                 145\n                                                                  57 La\n      A    none of them\n      B    1 only\n      C    2 only\n      D    3 only\n      E    1 and 2 only\n      F    1 and 3 only\n      G    2 and 3 only\n      H    1, 2 and 3\n© UCLES 2016\n\f                                                  9",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q6-fig1.png"
+      ],
+      "enrichment": {
+        "status": "failed",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:52:30",
+        "markdown": null,
+        "error": "API error 400: Error code: 400 - {'error': {'code': '1210', 'message': \"messages.content.type is invalid, allowed values: ['text']\"}}",
+        "processor_id": "glm-5.2",
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q7",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "The mean age of the twenty members of a running club is exactly 28. The mean age increases by exactly 2 years when two new members join. What is the mean age of the two new members?",
+      "has_diagram": false,
+      "options": {
+        "A": "20 years",
+        "B": "22 years",
+        "C": "30 years",
+        "D": "40 years",
+        "E": "50 years",
+        "F": "52 years"
+      },
+      "correct_answer": "E",
+      "raw_text": "7     The mean age of the twenty members of a running club is exactly 28.\n      The mean age increases by exactly 2 years when two new members join.\n      What is the mean age of the two new members?\n      A    20 years\n      B    22 years\n      C    30 years\n      D    40 years\n      E    50 years\n      F    52 years",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:54:50",
+        "markdown": "## Worked Solution\n\n**Step 1: Find the total age of the original 20 members.**\n\nThe mean age of 20 members is 28, so:\n\n$$\\text{Total age}_{\\text{original}} = 20 \\times 28 = 560 \\text{ years}$$\n\n**Step 2: Find the total age of all 22 members after the two new members join.**\n\nThe mean age increases by exactly 2, so the new mean is $28 + 2 = 30$. There are now $20 + 2 = 22$ members:\n\n$$\\text{Total age}_{\\text{all 22}} = 22 \\times 30 = 660 \\text{ years}$$\n\n**Step 3: Find the combined age of the two new members.**\n\n$$\\text{Combined age of new members} = 660 - 560 = 100 \\text{ years}$$\n\n**Step 4: Find the mean age of the two new members.**\n\n$$\\text{Mean age of new members} = \\frac{100}{2} = 50 \\text{ years}$$\n\nThe answer is **E**.\n\n*Sanity check:* The two new members must have a mean well above the new overall mean of 30 (since they are pulling the average *up*). A mean of 50 is consistent with this — they are considerably older than the average, raising the overall mean from 28 to 30.\n\n## Distractor Analysis\n\n- **A (20 years):** This would result from an arithmetic slip, such as computing $22 \\times 30 = 600$ instead of $660$. Then $600 - 560 = 40$, and $40/2 = 20$. The student would also fail to notice that a mean of 20 would *lower* the overall average, not raise it.\n\n- **B (22 years):** This results from computing only the *excess* above the old mean without adding the base: $(30 - 28) \\times 22 / 2 = 22$. The student correctly identifies that the two new members contribute 22 extra years each above 28, but forgets to add the baseline mean of 28 to get the actual mean age: $28 + 22 = 50$.\n\n- **C (30 years):** This is simply the new overall mean of all 22 members. The student has confused \"the new mean of the entire club\" with \"the mean of the two new members.\" A quick sanity check reveals this cannot be correct: if the new members also averaged 30, the overall mean would remain 28, not increase.\n\n- **D (40 years):** This results from using the original member count (20) instead of the new count (22) when computing the new total: $20 \\times 30 = 600$, giving $600 - 560 = 40$ without dividing by 2. Alternatively, the student computes $20 \\times 2 = 40$ (total \"extra years\" the original members collectively gain) and mistakes this for the mean of the new members.\n\n- **F (52 years):** This results from a minor arithmetic error after reaching the correct total of 100 years — for example, dividing by 2 but then adding 2 (the mean increase) back in: $50 + 2 = 52$. The student double-counts the increase.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Statistics (Mean)\n- **Content Code:** M1.10\n- **Question Type:** Multi-step calculation\n\n## Difficulty Rating\n\n**Difficulty:** 3/10\n\nThis is a straightforward application of the relationship between mean and total. The key insight — that the new members must compensate for the increase across *all* 22 members (not just the original 20) — requires care but is accessible to any well-prepared candidate. The arithmetic is simple, and a sanity check (new members must average well above 30) quickly eliminates distractors A and B.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1125,
+        "output_tokens": 6140
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q8",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "A circuit consists of a 5.0\\ \\Omega resistor and a variable resistor connected in series with a 24\\ \\text{V} battery. The variable resistor has a minimum resistance of 3.0\\ \\Omega and a maximum resistance of 15\\ \\Omega. The battery and the connecting wires have negligible resistance. What is the maximum power dissipated in the 5.0\\ \\Omega resistor?",
+      "has_diagram": false,
+      "options": {
+        "A": "7.2\\ \\text{W}",
+        "B": "18\\ \\text{W}",
+        "C": "27\\ \\text{W}",
+        "D": "45\\ \\text{W}",
+        "E": "72\\ \\text{W}",
+        "F": "75\\ \\text{W}"
+      },
+      "correct_answer": "D",
+      "raw_text": "8     A circuit consists of a 5.0 Ω resistor and a variable resistor connected in series with a 24 V\n      battery. The variable resistor has a minimum resistance of 3.0 Ω and a maximum resistance of\n      15 Ω. The battery and the connecting wires have negligible resistance.\n      What is the maximum power dissipated in the 5.0 Ω resistor?\n      A    7.2 W\n      B    18 W\n      C    27 W\n      D    45 W\n      E    72 W\n      F    75 W\n© UCLES 2016                                                                            [Turn over\n\f                                                   10",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:58:13",
+        "markdown": "## Worked Solution\n\n**Step 1: Identify the circuit configuration.**\n\nThe 5.0 Ω resistor and the variable resistor are connected in series with the 24 V battery. Since the battery and wires have negligible resistance, the total resistance in the circuit is:\n\n$$R_{\\text{total}} = R_{\\text{fixed}} + R_v = 5.0 + R_v$$\n\nwhere $R_v$ is the resistance of the variable resistor.\n\n**Step 2: Express the current in the circuit.**\n\nBy Ohm's law, the current flowing through the series circuit is:\n\n$$I = \\frac{V}{R_{\\text{total}}} = \\frac{24}{5.0 + R_v}$$\n\n**Step 3: Express the power dissipated in the 5.0 Ω resistor.**\n\nThe power dissipated in a resistor carrying current $I$ is $P = I^2 R$. Therefore:\n\n$$P_{5\\Omega} = I^2 \\times 5.0 = \\left(\\frac{24}{5.0 + R_v}\\right)^2 \\times 5.0 = \\frac{2880}{(5.0 + R_v)^2}$$\n\n**Step 4: Maximise the power.**\n\nTo find the **maximum** power dissipated in the 5.0 Ω resistor, we must **minimise** the denominator $(5.0 + R_v)^2$. This is achieved by minimising $R_v$.\n\nThe minimum resistance of the variable resistor is $R_v = 3.0\\ \\Omega$.\n\n**Step 5: Substitute and calculate.**\n\nWith $R_v = 3.0\\ \\Omega$:\n\n$$R_{\\text{total}} = 5.0 + 3.0 = 8.0\\ \\Omega$$\n\n$$I = \\frac{24}{8.0} = 3.0\\ \\text{A}$$\n\n$$P_{5\\Omega} = (3.0)^2 \\times 5.0 = 9.0 \\times 5.0 = \\boxed{45\\ \\text{W}}$$\n\n**Key insight:** Maximum power in the fixed resistor occurs at maximum current, which occurs at minimum total resistance, which occurs at minimum variable resistance. This is because $P \\propto I^2$, and $I$ decreases monotonically as $R_v$ increases.\n\n## Distractor Analysis\n\n- **A: 7.2 W** — This is the **minimum** power in the 5.0 Ω resistor, obtained when $R_v = 15\\ \\Omega$ (maximum): $I = 24/20 = 1.2$ A, then $P = 1.2^2 \\times 5 = 7.2$ W. The student confused maximum with minimum, perhaps thinking \"maximum resistance gives maximum power.\"\n\n- **B: 18 W** — This results from a **mixed-configuration error**: computing total circuit power at minimum resistance ($72$ W) but multiplying by the wrong voltage-divider fraction ($5/20$ from maximum resistance): $72 \\times 5/20 = 18$ W. Alternatively, multiplying voltage across the 5 Ω at one extreme by the current at the other extreme: $15 \\times 1.2 = 18$ W. Inconsistent use of circuit states.\n\n- **C: 27 W** — This is the power dissipated in the **variable resistor** (not the 5.0 Ω resistor) at minimum resistance: $P = I^2 R_v = 3^2 \\times 3 = 27$ W. The student identified the correct configuration but applied the power formula to the wrong component.\n\n- **E: 72 W** — This is the **total power** dissipated in the entire circuit at minimum resistance: $P_{\\text{total}} = VI = 24 \\times 3 = 72$ W, or equivalently $I^2 R_{\\text{total}} = 9 \\times 8 = 72$ W. The student found the total circuit power rather than the power in the 5.0 Ω resistor specifically.\n\n- **F: 75 W** — This results from using $P = V^2/R$ with the voltage across the 5.0 Ω resistor ($V_{5\\Omega} = 15$ V) but dividing by the **wrong resistance** ($R_v = 3\\ \\Omega$ instead of $5\\ \\Omega$): $P = 15^2/3 = 75$ W. The student correctly identified the voltage but substituted the wrong resistance value into the formula.\n\n## Classification\n\n- **Module:** Physics\n- **Subtopic:** DC Circuits\n- **Content Code:** P3 (Electricity — series circuits, Ohm's law, power dissipation)\n- **Question Type:** Multi-step calculation with optimization reasoning\n\n## Difficulty Rating\n\n**Difficulty:** 4/10\n\nThis question requires understanding that power in the fixed resistor is maximised when current is maximised (at minimum total resistance), then performing a straightforward two-step calculation. The optimization step requires recognising the inverse-square relationship, which may challenge students who instinctively associate \"maximum resistance\" with \"maximum power,\" but the actual computation is simple once the correct configuration is identified. The six options are well-designed to catch common errors (wrong resistor, wrong extremum, total vs. component power).\n\n## Diagram Descriptions\n\n### Diagram 1\n**Type:** Circuit diagram\n**Content:** A simple series circuit showing a 24 V battery (with + and − terminals labelled), a 5.0 Ω resistor (labelled), and a variable resistor (shown with the standard arrow-through-resistor symbol, labelled \"3.0 Ω – 15 Ω\"), all connected in a single loop with connecting wires. An ammeter could be shown in series indicating 3.0 A.\n**Purpose:** To visualise the series circuit configuration and confirm that both resistors carry the same current, which is essential for correctly applying the power formula $P = I^2 R$.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1195,
+        "output_tokens": 10070
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q9",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "A medical scanner is bought for £15000. The value of the scanner depreciates by 20% every year. By how much has the scanner reduced in value after 2 years?",
+      "has_diagram": false,
+      "options": {
+        "A": "\text{£}600",
+        "B": "\text{£}3000",
+        "C": "\text{£}5400",
+        "D": "\text{£}6000",
+        "E": "\text{£}9000",
+        "F": "\text{£}9600",
+        "G": "\text{£}12000"
+      },
+      "correct_answer": "C",
+      "raw_text": "9     A medical scanner is bought for £15 000.\n      The value of the scanner depreciates by 20% every year.\n      By how much has the scanner reduced in value after 2 years?\n      A    £600\n      B    £3000\n      C    £5400\n      D    £6000\n      E    £9000\n      F    £9600\n      G    £12 000",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:59:08",
+        "markdown": "## Worked Solution\n\n1.  **Understand the depreciation model.** The scanner loses $20\\%$ of its current value each year, so it retains $80\\%$ of its value each year. This is compound depreciation (each year's loss is calculated on the new, reduced value).\n\n2.  **Value after Year 1.**\n\n    $$20\\% \\text{ of } £15000 = 0.20 \\times 15000 = £3000$$\n\n    $$\\text{Value after Year 1} = 15000 - 3000 = £12000$$\n\n3.  **Value after Year 2.** The Year 2 depreciation is calculated on the Year 1 value (£12000), **not** the original price.\n\n    $$20\\% \\text{ of } £12000 = 0.20 \\times 12000 = £2400$$\n\n    $$\\text{Value after Year 2} = 12000 - 2400 = £9600$$\n\n4.  **Total reduction.** The question asks for the **reduction** in value, not the remaining value.\n\n    $$\\text{Reduction} = 15000 - 9600 = £5400$$\n\n    Alternatively, sum the two yearly depreciations:\n\n    $$\\text{Reduction} = 3000 + 2400 = £5400$$\n\n5.  **Compound formula check.** Using the compound depreciation formula directly:\n\n    $$V = 15000 \\times (0.8)^2 = 15000 \\times 0.64 = £9600$$\n\n    $$\\text{Reduction} = 15000 - 9600 = £5400$$\n\n**Answer: C (£5400)**\n\n---\n\n## Distractor Analysis\n\n- **A (£600):** Calculated $0.04 \\times 15000 = 600$. This error arises from multiplying the two depreciation rates together ($0.2 \\times 0.2 = 0.04$) and applying the result to the original price, which has no valid mathematical basis.\n\n- **B (£3000):** Only the first year's depreciation ($20\\%$ of £15000). The student stopped after one year or did not read \"after 2 years.\"\n\n- **D (£6000):** Used simple (non-compound) depreciation: $2 \\times £3000 = £6000$, or equivalently added the percentages linearly ($20\\% + 20\\% = 40\\%$ of £15000). This ignores that the second year's depreciation is based on the reduced value.\n\n- **E (£9000):** Computed the remaining value under simple depreciation ($60\\%$ of £15000 = £9000) and confused remaining value with the reduction. The correct remaining value under compound depreciation is £9600, not £9000.\n\n- **F (£9600):** This is the correct **remaining value** after 2 years, but the question asks for the **reduction** in value, not the value itself.\n\n- **G (£12000):** This is the value after **one** year (£15000 − £3000). The student either misread the question as asking for 1 year, or confused remaining value with reduction and stopped at Year 1.\n\n---\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Number — Percentages\n- **Content Code:** M1.1\n- **Question Type:** Multi-step calculation (compound percentage change)\n\n---\n\n## Difficulty Rating\n\n**Difficulty: 3/10**\n\nThe core mathematics is straightforward arithmetic. The challenge lies entirely in correctly applying compound (rather than simple) depreciation and distinguishing between \"reduction in value\" and \"remaining value.\" These are common traps, but the calculation itself is simple.\n\n---\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1157,
+        "output_tokens": 2430
+      }
+    },
+    {
+      "id": "ENGAA-2016-S1-Q10",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "The total power P radiated by a star is given by: P = kR^{2} T^{4} where R is the radius of the star, T is its surface temperature and k is a constant. The power currently radiated by the Sun is 4.0 \times 10^{26} W. Towards the end of the Sun’s life its radius will increase by a factor of a hundred and its surface temperature will decrease by a factor of two. What will be the power radiated by the Sun when these changes have occurred?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.5 \times 10^{27} W",
+        "B": "1.0 \times 10^{28} W",
+        "C": "2.0 \times 10^{28} W",
+        "D": "2.5 \times 10^{29} W",
+        "E": "1.0 \times 10^{30} W",
+        "F": "2.0 \times 10^{30} W",
+        "G": "2.5 \times 10^{33} W",
+        "H": "1.0 \times 10^{34} W"
+      },
+      "correct_answer": "D",
+      "raw_text": "10    The total power P radiated by a star is given by:\n               P = kR 2T 4\n      where R is the radius of the star, T is its surface temperature and k is a constant.\n      The power currently radiated by the Sun is 4.0 × 1026 W. Towards the end of the Sun’s life its\n      radius will increase by a factor of a hundred and its surface temperature will decrease by a\n      factor of two.\n      What will be the power radiated by the Sun when these changes have occurred?\n      A    2.5 × 1027 W\n      B    1.0 × 1028 W\n      C    2.0 × 1028 W\n      D    2.5 × 1029 W\n      E    1.0 × 1030 W\n      F    2.0 × 1030 W\n      G    2.5 × 1033 W\n      H    1.0 × 1034 W\n© UCLES 2016\n\f                                                     11",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$2.5 \\times 10^{27}$ W",
+        "B": "$1.0 \\times 10^{28} \\text{ W}$",
+        "C": "$2.0 \\times 10^{28} W$",
+        "D": "$2.5 \\times 10^{29}$ W",
+        "E": "$1.0 \\times 10^{30} W$",
+        "F": "$2.0 \\times 10^{30} W$",
+        "G": "$2.5 \\times 10^{33} W$",
+        "H": "$1.0 \\times 10^{34} W$"
+      },
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-10T16:59:42",
+        "markdown": "## Worked Solution\n\nWe are given the relationship:\n\n$$P = kR^{2}T^{4}$$\n\nwhere $k$ is a constant, and the current power radiated by the Sun is:\n\n$$P_0 = 4.0 \\times 10^{26}\\,\\text{W}$$\n\n**Step 1: Write the initial and final equations.**\n\nInitially:\n\n$$P_0 = kR^{2}T^{4}$$\n\nAfter the changes, the radius increases by a factor of 100 and the temperature decreases by a factor of 2:\n\n$$R' = 100R, \\qquad T' = \\frac{T}{2}$$\n\nSo the new power is:\n\n$$P' = k(R')^{2}(T')^{4} = k(100R)^{2}\\left(\\frac{T}{2}\\right)^{4}$$\n\n**Step 2: Substitute and simplify.**\n\n$$P' = k \\times 100^{2} \\times R^{2} \\times \\frac{T^{4}}{2^{4}}$$\n\n$$P' = \\frac{100^{2}}{2^{4}} \\times kR^{2}T^{4}$$\n\n$$P' = \\frac{10000}{16} \\times P_0$$\n\n$$P' = 625 \\times P_0$$\n\n**Step 3: Calculate the numerical value.**\n\n$$P' = 625 \\times 4.0 \\times 10^{26}$$\n\n$$P' = 2500 \\times 10^{26}$$\n\n$$\\boxed{P' = 2.5 \\times 10^{29}\\,\\text{W}}$$\n\nThis corresponds to **option D**.\n\n## Distractor Analysis\n\n- **A ($2.5 \\times 10^{27}$ W):** Obtained by applying the radius factor ($100^2 = 10^4$) but not the temperature factor at all, then misplacing the power of ten: $\\frac{10^4}{4} \\times 4.0 \\times 10^{26} \\approx 10^{30}$ — this does not cleanly give A, so more likely the student applied only a factor of $100/4 = 25$ instead of $10000/16$, i.e. squaring the radius incorrectly or forgetting to square it.\n\n- **B ($1.0 \\times 10^{28}$ W):** Obtained by using $R' = 100R$ (not squared) and $T' = T/2$ (not raised to the fourth power), giving a factor of $100/2 = 50$, then $50 \\times 4.0 \\times 10^{26} = 2.0 \\times 10^{28}$ — close but not exact. Alternatively, using $100^2/2^4 = 625$ but then reading $625 \\times 4.0 \\times 10^{26}$ incorrectly as $1.0 \\times 10^{28}$.\n\n- **C ($2.0 \\times 10^{28}$ W):** Obtained by using $100^2 / 2 = 5000$ instead of $100^2 / 2^4 = 625$ (i.e., raising the temperature denominator only to the first power instead of the fourth): $5000 \\times 4.0 \\times 10^{26} = 2.0 \\times 10^{30}$. This actually gives F. To get C, a student may have applied only the temperature change ($1/16$) without squaring the radius factor, giving $10^4/16$ incorrectly computed as $50$: $50 \\times 4.0 \\times 10^{26} = 2.0 \\times 10^{28}$.\n\n- **E ($1.0 \\times 10^{30}$ W):** Obtained by squaring the radius factor correctly but only halving the temperature instead of quartering/fourth-power: effectively computing $100^2 / 2 = 5000$, then $5000 \\times 4 \\times 10^{26} / 20 \\approx 1.0 \\times 10^{30}$. This reflects forgetting to raise $T$ to the fourth power.\n\n- **F ($2.0 \\times 10^{30}$ W):** Obtained by applying the radius change as $100^2$ and temperature change as $1/2$ (not $1/2^4$): factor $= 10000/2 = 5000$, then $5000 \\times 4.0 \\times 10^{26} = 2.0 \\times 10^{30}$.\n\n- **G ($2.5 \\times 10^{33}$ W):** Obtained by multiplying all factors: $100 \\times 2 = 200$ applied to $R^2T^4$ without any division, giving $100^2 \\times 2^4 \\times 4.0 \\times 10^{26} = 6.4 \\times 10^{31}$. Not a clean match; likely a gross arithmetic error or misreading the problem entirely.\n\n- **H ($1.0 \\times 10^{34}$ W):** Obtained by treating both changes as increases (i.e., radius up by 100 and temperature up by 2 instead of down): $100^2 \\times 2^4 \\times P_0 = 10000 \\times 16 \\times 4.0 \\times 10^{26} = 6.4 \\times 10^{31}$. Doesn't give H cleanly; this is likely a compounded error.\n\n## Classification\n\n- **Module:** Mathematics 1 / Physics\n- **Subtopic:** Proportionality / Surds and indices (M1); Energy / Thermal physics (Physics)\n- **Content Code:** M1-A3 (use of surds and indices, including in physical relationships)\n- **Question Type:** Multi-step calculation involving proportionality\n\n## Difficulty Rating\n\n**Difficulty:** 3/10\n\nThis is a straightforward proportionality question. The key steps — substituting scaled variables into a power law and computing $100^2 / 2^4 = 625$ — are accessible to any well-prepared candidate. The main trap is forgetting to apply the powers ($R^2$ and $T^4$) to the scaling factors, which produces several of the distractors.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1290,
+        "output_tokens": 1560
+      }
+    }
+  ],
+  "enriched_at": "2026-07-10T16:59:42",
+  "enrichment_model": "glm-5.2"
+}

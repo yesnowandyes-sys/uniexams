@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C6",
+  "topic_name": "Chemical bonding, structure and properties",
+  "module_code": "C",
+  "corpus_question_count": 15,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Intermolecular vs. Intramolecular Conflation",
+      "frequency": 5,
+      "example_question_id": "Q4 (NSAA 2018), Q8 (NSAA 2023)",
+      "why_effective": "Students frequently intuit that higher boiling points imply 'stronger bonds' within the molecule, failing to distinguish between breaking covalent bonds (chemical change) and overcoming intermolecular forces (physical change). Distractors relying on 'breaking more covalent bonds' (e.g., Option 1 in Q4) appeal to this misconception.",
+      "generation_strategy": "For questions involving boiling/melting points or phase changes, include distractor options that cite the number or strength of covalent/intramolecular bonds as the reason for the trend, rather than intermolecular forces (LDF, dipole-dipole, H-bonds)."
+    },
+    {
+      "distractor_type": "Molecule-Lattice Hybrid State Confusion",
+      "frequency": 4,
+      "example_question_id": "Q1 (ESAT Specimen), Q7 (NSAA 2022)",
+      "why_effective": "Questions mixing physical properties (conductivity/mp) often trick students who fail to separate molecular covalent behavior (non-conductive, low mp) from aqueous ionic behavior (conductive). The HCl distractor (non-conductive liquid but conductive solution) effectively targets this.",
+      "generation_strategy": "Present a substance with 'anomalous' looking data (e.g., low mp but conducts in solution). Provide distractors that are ionic lattices (high mp) or simple covalent molecules (insoluble/non-conductive in water)."
+    },
+    {
+      "distractor_type": "Geometry Misapplication (3D to 2D projection)",
+      "frequency": 2,
+      "example_question_id": "Q11 (NSAA 2020 S2)",
+      "why_effective": "Visualizing 3D crystal lattices as stacked 2D planes is cognitively demanding. Distractors effectively use repeating patterns that look geometrically sound (checkerboard or offset rows) but are impossible in a cubic close-packed lattice due to stoichiometry or coordination geometry constraints.",
+      "generation_strategy": "For lattice questions, generate plane patterns using valid edge arrangements but incorrect connectivity (e.g., creating holes or incorrect cation-anion ratios that wouldn't stack into a cube)."
+    },
+    {
+      "distractor_type": "Counter-intuitive Trend Reversals",
+      "frequency": 3,
+      "example_question_id": "Q6 (NSAA 2021)",
+      "why_effective": "Students memorize heuristics like 'bond strength decreases down group 17' (true) but may extend it to 'reactivity decreases' (false for F2 due to bond enthalpy). Similarly, students expect giant covalent structures to have the highest melting points but may underestimate ionic oxides.",
+      "generation_strategy": "Identify periodic trends that have a 'kink' (e.g., F2 reactivity, density of ice vs water) or require distinguishing between lattice energy (ionic) and bond enthalpy (covalent). Use these as the 'correct' option and place the standard heuristic as a distractor."
+    },
+    {
+      "distractor_type": "VSEPR Calculation Traps",
+      "frequency": 2,
+      "example_question_id": "Q12 (NSAA 2020 S2)",
+      "why_effective": "In calculation-heavy geometry questions, distractors often rely on pairing the correct trigonometric function with the wrong ratio of bond lengths (e.g., using the adjacent side for sine). This catches students who can set up the math but rush the geometry.",
+      "generation_strategy": "Create math options using inverse trig functions. Provide distractors that swap numerator/denominator inputs or use the wrong bond length (bond length vs inter-atomic distance)."
+    }
+  ],
+  "_raw": null
+}

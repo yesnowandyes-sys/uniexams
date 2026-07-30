@@ -1,0 +1,60 @@
+{
+  "topic_key": "PHYS.P6",
+  "topic_name": "Waves",
+  "module_code": "P",
+  "corpus_question_count": 50,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A ship travels at $10 \text{ m s}^{-1}$ directly into oncoming waves of speed $4 \text{ m s}^{-1}$. The ship encounters a wave crest every 2.0 seconds. Determine the wavelength of the waves.",
+      "key_insight": "The frequency of oscillation is determined by the relative velocity. The effective speed of the wave crests passing the ship is $v_{wave} + v_{ship}$. Using $\\lambda = v_{effective} \times T$, $\\lambda = (10+4) \times 2 = 28 \text{ m}$. This distinguishes students who blindly use the wave speed in the medium versus the relative speed experienced by the observer.",
+      "discrimination_factors": [
+        "Ability to define the frame of reference (ship vs water)",
+        "Correct application of $\\lambda = v_{relative} \times f$",
+        "Avoiding the distractor of using $4 \text{ m s}^{-1}$"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Two speakers emit sound in phase. A microphone detects a minimum intensity at point P. The path difference is calculated as 1.2m. If the frequency is increased slightly, the intensity at P rises to a maximum. Calculate the original wavelength.",
+      "key_insight": "A minimum implies destructive interference: path difference $\\Delta x = (n + 0.5)\\lambda$. A slight increase in frequency (decrease in $\\lambda$) creating a maximum implies the path difference must have been exactly half a wavelength ($\\lambda/2$) plus integer multiples. If the intensity rises, it transitions to the next harmonic ($n\\lambda$). Students must solve $1.2 = (n+0.5)\\lambda$ and recognize that small frequency changes usually bridge the gap between adjacent maxima/minima.",
+      "discrimination_factors": [
+        "Understanding interference conditions ($n+0.5$ vs $n$)",
+        "Qualitative link between frequency change and intensity transition",
+        "Working backwards from intensity change to path difference constraints"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A transverse wave has amplitude 5cm and frequency 2Hz. What is the average speed of a single particle on the wave over 10 seconds?",
+      "key_insight": "Distance travelled is not the amplitude, nor the wave speed. It is the cumulative path length: 4 amplitudes per cycle $\times$ frequency $\times$ time. $D = 4 \times 0.05 \times 2 \times 10 = 4 \text{ m}$. This is a high-difficulty conceptual trap because the graph looks like a wave (sine curve) prompting 'wave speed' calculations, but the question asks about 'matter'.",
+      "discrimination_factors": [
+        "Strict separation of wave motion vs particle motion",
+        "Accurate arithmetic involving $4A$",
+        "Resistance to using $v=f\\lambda$"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A stationary wave is formed in a tube closed at one end. The tube length is 1.5m. What is the lowest frequency that can be formed? (Speed of sound = 300 m/s).",
+      "key_insight": "Closed pipes support odd harmonics only ($L = \\lambda/4, 3\\lambda/4...$). The fundamental frequency corresponds to $L = \\lambda/4$. Thus $\\lambda = 4L = 6.0\text{ m}$. $f = v/\\lambda = 300/6 = 50\text{ Hz}$. This tests the specific boundary conditions for standing waves compared to open-open pipes.",
+      "discrimination_factors": [
+        "Visualisation of nodes/antinodes at boundaries",
+        "Recall of $L = n\\lambda/2$ (open) vs $L = n\\lambda/4$ (closed)",
+        "Calculation of frequency from derived wavelength"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Light travels from Air into a rectangular glass block. It enters the 5.0cm wide block at 30 degrees to the normal and exits the other side. The ray is displaced parallel by 2.5cm. Calculate the refractive index of the block.",
+      "key_insight": "This scenario (similar to Q45) combines geometry with Snell's Law. The refractive index relates the angle of incidence $i$ to the angle of refraction $r$. The displacement allows calculation of $\\sin(r)$ or $\\cos(r)$ using trigonometry ($d = t \\sin(i - r)$ or similar geometry). It requires multi-step manipulation: Geometry $\to$ Angle $r$ $\to$ Snell's Law ($n = \\sin i / \\sin r$).",
+      "discrimination_factors": [
+        "Ability to construct a geometric model from the problem description",
+        "Applying Snell's Law logic to internal block geometry",
+        "Trigonometric problem solving without a calculator"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

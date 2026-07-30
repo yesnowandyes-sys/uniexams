@@ -1,0 +1,56 @@
+{
+  "topic_key": "BIO.B9",
+  "topic_name": "Animal physiology",
+  "module_code": "B",
+  "corpus_question_count": 35,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A graph shows the volume of the left ventricle and an ECG trace over two heartbeats. The student must identify the specific event occurring at a specific point (X) on the ECG trace (e.g., the T wave or flat line) relative to the volume graph (e.g., isovolumetric relaxation).",
+      "key_insight": "Understanding that the 'flat lines' in a ventricular volume graph represent isovolumetric phases (contraction or relaxation) where all valves are closed, rather than just 'rest'.",
+      "discrimination_factors": [
+        "Ability to synchronize two different graphical representations (electrical vs mechanical).",
+        "Knowledge that blood flows only when pressure gradients open valves, which corresponds to sloping lines on volume graphs."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A table displays concentrations of Glucose, Oxygen, and Urea in blood entering and leaving an unknown organ. The student must identify the organ (e.g., 'Kidney' or 'Small Intestine') based on the relative changes.",
+      "key_insight": "Synthesizing multiple metabolic processes: (1) The intestine *absorbs* glucose (up) and *uses* oxygen for digestion (down). (2) The Kidney *removes* urea (down in exiting blood) and *uses* oxygen. (3) The right heart *receives* deoxygenated blood (low oxygen) and pumps it to lungs.",
+      "discrimination_factors": [
+        "Avoiding the simple heuristic 'Arteries carry oxygenated blood' (which fails for the pulmonary artery).",
+        "Analyzing three variables simultaneously to distinguish organs (e.g., high urea removal = kidney)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A runner exercises anaerobically. The question asks to identify the period on an oxygen uptake graph that represents 'repaying the oxygen debt' and calculate the total oxygen volume consumed during this recovery phase using area under the curve.",
+      "key_insight": "Understanding that 'oxygen debt' is paid *after* exercise has stopped. The 'Aha!' moment is realizing the baseline must be extrapolated to calculate the extra volume (area above resting baseline).",
+      "discrimination_factors": [
+        "Distinguishing between oxygen needed *during* exercise vs *after* exercise.",
+        "Conceptualizing a rate (y-axis) multiplied by time (x-axis) as a volume/area."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating the flow rate of a fluid in a capillary tube or blood vessel where the cross-section is circular. Given the volume moved per minute and the diameter, find the speed (mm/min).",
+      "key_insight": "Geometric translation: Volume = Area \u00d7 Distance. The student must derive Distance = Volume / Area. The 'trap' is failing to convert diameter to radius or confusing volume with length.",
+      "discrimination_factors": [
+        "Manipulating formulae: $Q = A \times v$.",
+        "Unit management: handling mm, cm, and $\\pi$ without a calculator."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A patient has a constant total blood volume and red blood cell lifespan. Given a sample concentration of RBCs, the student must calculate the production rate of new cells per hour.",
+      "key_insight": "Steady-state equilibrium: In a healthy system, Production Rate = Destruction Rate. If the lifespan is 100 days, 1/100th of the total cells are destroyed (and thus made) every day.",
+      "discrimination_factors": [
+        "Converting between days and hours.",
+        "Handling large numbers (scientific notation) and volume units (m\u00b3 to dm\u00b3 to mm\u00b3).",
+        "Setting up the rate equation: $\text{Total Cells} / \text{Lifespan} = \text{Rate}$."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,59 @@
+{
+  "topic_key": "BIO.B8",
+  "topic_name": "Enzymes",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Active Site Misconception",
+      "frequency": 5,
+      "example_question_id": "Q13",
+      "why_effective": "Students often intuitively believe reactants are 'used up' in chemical reactions. This distractor targets the specific biological definition of a catalyst (enzyme) emerging unchanged from the reaction.",
+      "generation_strategy": "Include a statement claiming the 'enzyme is used up', 'enzyme degrades during reaction', or 'mass of enzyme decreases' in a data interpretation question about product accumulation."
+    },
+    {
+      "distractor_type": "Causal Confusion (Optimum vs. Limitation)",
+      "frequency": 8,
+      "example_question_id": "Q1, Q9",
+      "why_effective": "Students struggle to distinguish between a change in rate due to saturation (limiting factor) vs. a change in rate due to non-optimal conditions (denaturation/pH shift). A curve leveling off is often misattributed to the enzyme 'working worse' rather than the substrate running out.",
+      "generation_strategy": "Describe a graph where Product Y plateaus. Offer a distractor where Condition X has 'lower temperature' or 'worse pH' than Y, when the data actually just shows Y has more total substrate or the reaction simply finished earlier."
+    },
+    {
+      "distractor_type": "Mechanistic Anthropomorphism",
+      "frequency": 4,
+      "example_question_id": "Q2",
+      "why_effective": "Students use informal language like 'the enzyme dies' or 'the enzyme is too hot'. This is conceptually distinct from the correct 'bonds maintaining the structure break' (denaturation).",
+      "generation_strategy": "In questions regarding high temperatures or pH extremes, provide options stating 'the enzyme died', 'the enzyme was killed', or 'the enzyme stopped working because it was too hot' alongside the correct scientific terminology regarding bond breaking."
+    },
+    {
+      "distractor_type": "Concentration Fallacy (Volume vs. Concentration)",
+      "frequency": 3,
+      "example_question_id": "Q3",
+      "why_effective": "Tests understanding that rate depends on concentration (molecules per unit volume), not absolute amount. Doubling volumes of both enzyme and substrate keeps concentration constant and rate constant.",
+      "generation_strategy": "Present a scenario changing volumes (e.g., doubling both) and include a distractor stating the time taken will change (halve/double), relying on the student's failure to recognize that concentrations\u2014and thus collision rates\u2014remain unchanged."
+    },
+    {
+      "distractor_type": "Graph Axis Inversion",
+      "frequency": "rare",
+      "example_question_id": "Q20",
+      "why_effective": "Requires mental manipulation of the standard 'Rate vs Temp' curve. Students memorize the bell curve shape but fail to recognize it if the axes are swapped (e.g., Time Taken vs Temp), which produces a U-shape.",
+      "generation_strategy": "Ask students to identify axes for graphs where the y-axis is 'Time taken' (inverse of rate) rather than 'Rate'. Use the classic enzyme temperature curve data but plot inversely."
+    },
+    {
+      "distractor_type": "Specificity Misapplication",
+      "frequency": 4,
+      "example_question_id": "Q10",
+      "why_effective": "Students may know 'proteases digest proteins' but fail to apply the hierarchy correctly (e.g., Pepsin is a protein, so Trypsin *could* digest Pepsin, but not vice versa in the stomach context).",
+      "generation_strategy": "List two enzymes of the same class (e.g., Pepsin and Trypsin) and ask if they can digest each other, or if a starch-digesting enzyme can digest a protein substrate."
+    },
+    {
+      "distractor_type": "Kinetic Theory Confusion",
+      "frequency": 3,
+      "example_question_id": "Q7",
+      "why_effective": "At high temperatures (past optimum), the rate drops. Students often incorrectly state 'kinetic energy is decreasing' to explain the drop, rather than recognizing kinetic energy is still high but the structure has failed.",
+      "generation_strategy": "In questions about the descending limb of a temp/rate graph, include a distractor stating 'molecules have less kinetic energy' or 'molecules are moving slower'."
+    }
+  ],
+  "_raw": null
+}

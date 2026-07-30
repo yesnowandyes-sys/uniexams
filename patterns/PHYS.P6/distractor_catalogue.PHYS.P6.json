@@ -1,0 +1,45 @@
+{
+  "topic_key": "PHYS.P6",
+  "topic_name": "Waves",
+  "module_code": "P",
+  "corpus_question_count": 50,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Particle Motion vs Wave Motion Confusion",
+      "frequency": 12,
+      "example_question_id": "Q1, Q4, Q12, Q16, Q20, Q24, Q26, Q40",
+      "why_effective": "Tests the fundamental distinction between the energy transfer mechanism (wave speed) and the oscillatory motion of the medium (particle speed/distance). Students instinctively map 'wave speed' to 'particle distance' without accounting for the 4x amplitude path per cycle or the frequency factor.",
+      "generation_strategy": "Provide wave parameters ($f$, $\\lambda$, $A$). Ask for total distance moved by a single particle over time $t$. Correct: $4A \times f \times t$. Distractors: $v_{wave} \times t$ (treating particle like a wave front), $2A \times f \times t$ (assuming peak-to-peak motion), or $A \times f \times t$."
+    },
+    {
+      "distractor_type": "Longitudinal Displacement Direction",
+      "frequency": 6,
+      "example_question_id": "Q9, Q43, Q50",
+      "why_effective": "Leverages the difficulty of visualizing longitudinal displacement graphs. Students struggle to map 'positive displacement on graph' to 'right' or 'left' movement relative to compression/rarefaction on a diagram.",
+      "generation_strategy": "Present a longitudinal wave diagram (displacement-distance or particle positions) marked with a point. Ask for the direction of displacement. Distractor options include the direction of wave propagation, direction opposite to the actual displacement, or 'undefined' for points at equilibrium."
+    },
+    {
+      "distractor_type": "Refraction/Speed Geometry Mismatch",
+      "frequency": 4,
+      "example_question_id": "Q29, Q44, Q47",
+      "why_effective": "Students memorize 'bending towards normal = slower' but fail to apply it to complex ray diagrams involving non-90 degree boundaries or multiple media, or confuse wavefront angle with ray angle.",
+      "generation_strategy": "Show wavefronts or rays crossing a boundary at an angle. Ask to identify the faster/slower medium or the angle of incidence. Distractors consist of swapping the faster/slower labels or incorrectly identifying the incident angle as the wavefront angle rather than the ray-normal angle."
+    },
+    {
+      "distractor_type": "Doppler/Radar Trap (Relative Velocity)",
+      "frequency": 3,
+      "example_question_id": "Q7, Q31, Q33",
+      "why_effective": "Combines kinematics with wave properties. The 'Aha!' is realizing the effective speed is $v_{ship} + v_{wave}$ (or difference), which is counter-intuitive when focusing on the ship's interaction with peaks.",
+      "generation_strategy": "Scenario: Object moving towards/away from waves. Given observed period/frequency and object speed, ask for wavelength. Distractors use just $v_{wave}$ or $v_{ship}$ in the wavelength formula $\\lambda = (v_{ship} \\pm v_{wave})T$."
+    },
+    {
+      "distractor_type": "Echo/Reflection Time Logic",
+      "frequency": 5,
+      "example_question_id": "Q8, Q21, Q35, Q37",
+      "why_effective": "Students often forget the '2x' factor for round-trip travel time or get confused by the superposition of clicks and echoes (e.g., 'coinciding' implies $t_{echo} = n \times t_{click}$).",
+      "generation_strategy": "Pulse-echo scenario. Depth calculation. Correct depth: $d = v \times t / 2$. Distractors: $d = v \times t$ (forgetting return trip), or $d = v \times t / 4$. In frequency questions (Q21), distractors are integer multiples of the fundamental frequency."
+    }
+  ],
+  "parse_repaired": true
+}

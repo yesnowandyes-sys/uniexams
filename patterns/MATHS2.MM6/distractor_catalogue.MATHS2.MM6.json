@@ -1,0 +1,51 @@
+{
+  "topic_key": "MATHS2.MM6",
+  "topic_name": "Differentiation",
+  "module_code": "M2",
+  "corpus_question_count": 55,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Coefficient Sign Error",
+      "frequency": "Common",
+      "example_question_id": "Q1, Q10, Q24, Q29",
+      "why_effective": "Students often set up the condition for increasing functions correctly ($f'(x) > 0$) but make a sign error when solving the resulting quadratic inequality, often by multiplying/dividing by a negative term and forgetting to flip the inequality sign, or by incorrectly identifying the roots of the derivative $x^2 = k$ as $x = \\pm\\sqrt{k}$ but assigning the wrong signs to the solution intervals (e.g., taking 'between' roots instead of 'outside').",
+      "generation_strategy": "Create a problem where $f'(x)$ is a quadratic with a negative leading coefficient, or where solving $f'(x) > 0$ yields roots $\\pm a$ and requires intervals outside the roots. The distractor is the 'inside' interval ($-a < x < a$) or the solution to the reversed inequality."
+    },
+    {
+      "distractor_type": "Algebraic Substitution Fallacy",
+      "frequency": "Rare",
+      "example_question_id": "Q11",
+      "why_effective": "In questions asking for the nature of roots of a derivative (turning points), students often simplify the discriminant condition incorrectly. In Q11, the condition for distinct real roots is $p^2 - 2p > 0$. A common distractor ($0.2$ or $1/5$) appears if students erroneously treat the linear coefficient $3p$ as having a condition $3p > 0 \\implies p > 0$ combined with a miscalculated constant term, or mistakenly factor/solve $p(3p-6) > 0$ incorrectly as $p(3p-6) > 0 \\implies p > 2$ vs $p > 0$, but often specifically arises from misinterpreting the fraction $0.2$ which comes from $1/5$ (a miscalculation of a boundary condition)."
+    },
+    {
+      "distractor_type": "Tangency vs Intersection Confusion",
+      "frequency": "Common",
+      "example_question_id": "Q3, Q21, Q53",
+      "why_effective": "When determining the number of distinct real roots for a polynomial equation $f(x) = k$, students often confuse the condition for tangency (stationary point touching the line) with a simple intersection. If the local maximum value is $y_{max}$ and local minimum is $y_{min}$, the range for 4 distinct roots is $y_{min} < k < y_{max}$. Distractors often place $k$ equal to these extrema values (incorrectly including them) or invert the inequality.",
+      "generation_strategy": "Use a quartic or cubic with known turning points. Ask for roots of $f(x) = k$. The correct answer is a strict inequality interval. Distractors are non-strict inequalities ($ \\leq, \\geq $) or the completely wrong interval (e.g., where there are only 2 roots)."
+    },
+    {
+      "distractor_type": "Area Maximization Boundary Error",
+      "frequency": "Common",
+      "example_question_id": "Q5, Q14, Q48",
+      "why_effective": "In optimization problems involving geometry (rectangles, triangles), the area function $A(x)$ is often a quadratic concave down. The maximum is at the vertex $x = -b/(2a)$. Students frequently pick the endpoints of the valid domain (which yield zero area) or miscalculate the vertex coordinates, picking the x-coordinate instead of the y-coordinate (the max area value), or vice versa.",
+      "generation_strategy": "Construct a geometric problem where Area = $kx - cx^2$. The maximum area is at $x = k/(2c)$. Distractors include $x=k$ (endpoint), $Area=k$ (initial value), or algebraic errors like $k^2/4c$."
+    },
+    {
+      "distractor_type": "Derivative Power Rule Neglect",
+      "frequency": "Common",
+      "example_question_id": "Q30, Q43",
+      "why_effective": "When differentiating expressions with fractional powers, students often either bring down the power but subtract 1 incorrectly (e.g., differentiating $x^{-3/2}$ gives $-3/2 x^{-1/2}$ instead of $-3/2 x^{-5/2}$), or fail to simplify the algebraic fraction before differentiating, leading to a messy application of the quotient rule or product rule which results in a 'simplified' distractor that matches a common intermediate error.",
+      "generation_strategy": "Give a function $y = \frac{P(x)}{x\\sqrt{x}}$. Correct strategy is rewriting as $x^n$. Distractors are the results of incorrect differentiation of $x^n$ (specifically error in the exponent decrement) or failing to distribute the constant factor correctly."
+    },
+    {
+      "distractor_type": "Concavity vs Monotonicity",
+      "frequency": "Common",
+      "example_question_id": "Q40",
+      "why_effective": "Students confuse $f'(x)$ (slope) with $f''(x)$ (concavity). The condition for a function to be 'above its chords' (convex/concave up) depends on the second derivative being non-negative. A distractor will offer $f'(x) \\ge 0$ (monotonic increasing) or $f(x) \\ge 0$ (positive values).",
+      "generation_strategy": "Frame a question about the graph's curvature or Jensen's inequality-style midpoint property. The condition relies on $f''(x)$. Distractors rely on $f'(x)$ and $f(x)$."
+    }
+  ],
+  "parse_repaired": true
+}

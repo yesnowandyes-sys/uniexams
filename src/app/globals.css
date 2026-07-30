@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+
+/* ── Interactive transitions ── */
+.opt-btn {
+  transition: background 0.1s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+  position: relative;
+}
+.opt-btn:hover:not(.answered) {
+  background: #EEF4FF !important;
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 3px #EEF4FF;
+}
+
+.nav-pill {
+  transition: color 0.1s, background 0.1s;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.nav-pill:hover { background: #EFECEA; color: #18181A !important; }
+.nav-pill.active { color: #2563EB !important; background: #EEF4FF; }
+
+.topic-row { transition: background 0.1s; cursor: pointer; border-radius: 8px; }
+.topic-row:hover { background: #EFECEA; }
+.topic-row.focused { background: #EEF4FF; }
+
+.btn-primary {
+  transition: filter 0.12s, box-shadow 0.12s, transform 0.1s;
+  cursor: pointer;
+}
+.btn-primary:hover { filter: brightness(1.07); box-shadow: 0 4px 14px rgba(37,99,235,0.28); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost { transition: background 0.1s, border-color 0.1s; cursor: pointer; }
+.btn-ghost:hover { background: #EFECEA !important; border-color: #C9C6C0 !important; }
+
+.stat-card { transition: box-shadow 0.18s, transform 0.18s; }
+.stat-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.09) !important; transform: translateY(-2px); }
+
+.nav-btn { transition: background 0.1s, opacity 0.1s; }
+.nav-btn:not([disabled]):hover { background: #EFECEA !important; }
+
+.q-num-btn { transition: background 0.1s, border-color 0.1s, transform 0.1s; }
+.q-num-btn:hover { transform: scale(1.08); }
+
+.collapse-btn { transition: background 0.1s, border-color 0.12s; cursor: pointer; }
+.collapse-btn:hover { background: #EFECEA !important; }
+
+.hint-btn-open:hover { background: #FEF9C3 !important; }
+.soln-btn-open:hover { background: #DBEAFE !important; }
+
+/* ── Animations ── */
+.pulse-dot { animation: pdot 2s ease-in-out infinite; }
+@keyframes pdot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.45; transform:scale(0.75); } }
+
+.spinner { animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.timer-urgent { animation: turg 0.9s ease-in-out infinite; }
+@keyframes turg { 0%,100%{ opacity:1; } 50%{ opacity:0.55; } }
+
+/* ── Custom select arrow ── */
+select {
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239E9C98' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px !important;
+}
+select:focus { outline: none; border-color: #2563EB !important; box-shadow: 0 0 0 3px #EEF4FF; }
+
+/* ── Responsive layout ── */
+
+/* Hide keyboard legend and session dots on small screens */
+.kbd-legend { display: flex; }
+.mobile-only { display: none; }
+
+@media (max-width: 860px) {
+  .practice-layout { flex-direction: column !important; padding: "1rem" !important; }
+  .practice-sidebar { width: 100% !important; }
+  .kbd-legend { display: none !important; }
+  .mobile-only { display: flex !important; }
+  .header-brand { display: none !important; }
+  .header-padding { padding: 0 1rem !important; }
+  .content-padding { padding: 1rem !important; }
+}
+
+@media (max-width: 480px) {
+  .session-dots { display: none !important; }
+}

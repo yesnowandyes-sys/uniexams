@@ -1,0 +1,1156 @@
+{
+  "source_file": "ENGAA_2016_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2016,
+  "section": "Section1",
+  "total_questions": 54,
+  "questions": [
+    {
+      "id": "ENGAA-2016-S1-Q1",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "x Find the complete set of solutions to − 8 < 6 − 2",
+      "has_diagram": false,
+      "options": {
+        "A": "x<4",
+        "B": "x>4",
+        "C": "x < 20",
+        "D": "x > 20",
+        "E": "x < 22",
+        "F": "x > 22",
+        "G": "x < 28",
+        "H": "x > 28"
+      },
+      "correct_answer": "G",
+      "raw_text": "1\n                                                        x\n      Find the complete set of solutions to − 8 < 6 −\n                                                        2\n      A    x<4\n      B    x>4\n      C    x < 20\n      D    x > 20\n      E    x < 22\n      F    x > 22\n      G    x < 28\n      H    x > 28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q2",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 A nuclide 214 82 Pb changes by radioactive decay into the nuclide 210 82 Pb. Which combination of emissions produces this change?",
+      "has_diagram": false,
+      "options": {
+        "A": "3 alpha",
+        "B": "2 alpha and 1 beta",
+        "C": "2 alpha and 2 beta",
+        "D": "1 alpha and 2 beta",
+        "E": "3 beta 5"
+      },
+      "correct_answer": "D",
+      "raw_text": "2     A nuclide 214\n                 82\n                    Pb changes by radioactive decay into the nuclide 210\n                                                                      82\n                                                                         Pb.\n      Which combination of emissions produces this change?\n      A    3 alpha\n      B    2 alpha and 1 beta\n      C    2 alpha and 2 beta\n      D    1 alpha and 2 beta\n      E    3 beta\n© UCLES 2016\n\f                                                    5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q3",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 Which one of the following is a simplification of ( 3 − 2) ? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "1− 2 3 2",
+        "B": "5−2 2 3",
+        "C": "2 3 −2 2",
+        "D": "1",
+        "E": "5− 2 3",
+        "F": "13 − 2 2 3",
+        "G": "5+2 2 3",
+        "H": "5 6"
+      },
+      "correct_answer": "B",
+      "raw_text": "3     Which one of the following is a simplification of   ( 3 − 2) ?\n                                                                 2\n      A    1− 2 3 2\n      B    5−2 2 3\n      C    2 3 −2 2\n      D    1\n      E    5− 2 3\n      F    13 − 2 2 3\n      G    5+2 2 3\n      H    5\n© UCLES 2016                                                           [Turn over\n\f                                                      6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q4",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 The graph shown of quantity y against quantity x represents the motion of a body. y 10 0 0.0 2.0 x (The scales on both axes are in the appropriate S.I. units, and the gravitational field strength g is 10 N kg–1.) Which two of the following could the graph represent? 1 kinetic energy against velocity for an object of mass 10 kg undergoing free-fall 2 potential energy against height for an object of mass 20 kg being lifted by a constant external force 3 velocity against time for an object of mass 20 kg being accelerated by a resultant force of 100 N 4 work done by an external force of 5 N against distance moved for an object of mass 12 kg being moved at constant speed by (and in the direction of) the external force",
+      "has_diagram": false,
+      "options": {
+        "A": "1 and 2",
+        "B": "1 and 3",
+        "C": "1 and 4",
+        "D": "2 and 3",
+        "E": "2 and 4",
+        "F": "3 and 4 7"
+      },
+      "correct_answer": "F",
+      "raw_text": "4     The graph shown of quantity y against quantity x represents the motion of a body.\n                                     y\n                                     10\n                                      0\n                                       0.0                         2.0     x\n      (The scales on both axes are in the appropriate S.I. units, and the gravitational field strength g\n      is 10 N kg–1.)\n      Which two of the following could the graph represent?\n               1   kinetic energy against velocity for an object of mass 10 kg undergoing free-fall\n               2   potential energy against height for an object of mass 20 kg being lifted by a constant\n                   external force\n               3   velocity against time for an object of mass 20 kg being accelerated by a resultant\n                   force of 100 N\n               4   work done by an external force of 5 N against distance moved for an object of mass\n                   12 kg being moved at constant speed by (and in the direction of) the external force\n      A    1 and 2\n      B    1 and 3\n      C    1 and 4\n      D    2 and 3\n      E    2 and 4\n      F    3 and 4\n© UCLES 2016\n\f                                                    7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q5",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 The ratio of Q:R is 5:2 and the ratio of R:S is 3:10 Which one of the following gives the ratio Q:S in its simplest form?",
+      "has_diagram": false,
+      "options": {
+        "A": "1:2",
+        "B": "2:1",
+        "C": "3:4",
+        "D": "3:25",
+        "E": "4:3",
+        "F": "25:3 8"
+      },
+      "correct_answer": "C",
+      "raw_text": "5     The ratio of Q:R is 5:2 and the ratio of R:S is 3:10\n      Which one of the following gives the ratio Q:S in its simplest form?\n      A    1:2\n      B    2:1\n      C    3:4\n      D    3:25\n      E    4:3\n      F    25:3\n© UCLES 2016                                                                 [Turn over\n\f                                                            8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q6",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 A uranium-235 nucleus can undergo fission to produce two smaller nuclei. Which of the diagrams, if any, could represent this process? diagram 1 144 diagram 2 137 56 Ba 54 Xe 1 1 1 235 0n 1 0n 235 1p 0n 1 92 U 1 92 U 1 0n 0n 0n 89 96 36 Kr 38 Sr diagram 3 87 35 Br 1 1 0n 235 0n 1 92 U 1 0n 0n 145 57 La",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 9"
+      },
+      "correct_answer": "C",
+      "raw_text": "6     A uranium-235 nucleus can undergo fission to produce two smaller nuclei.\n      Which of the diagrams, if any, could represent this process?\n                diagram 1             144\n                                                                       diagram 2        137\n                                       56 Ba                                             54 Xe\n                                 1                                                 1\n      1             235          0n                    1                           0n\n                                                                          235\n      1p                                               0n\n                                                                                         1\n                     92 U        1                                         92 U    1     0n\n                                 0n                                                0n\n                                      89                                                96\n                                      36 Kr                                             38 Sr\n                                          diagram 3              87\n                                                                 35 Br\n                                                            1\n                            1                               0n\n                                               235\n                            0n\n                                                                  1\n                                                92 U        1     0n\n                                                            0n\n                                                                 145\n                                                                  57 La\n      A    none of them\n      B    1 only\n      C    2 only\n      D    3 only\n      E    1 and 2 only\n      F    1 and 3 only\n      G    2 and 3 only\n      H    1, 2 and 3\n© UCLES 2016\n\f                                                  9",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q6-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q7",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 The mean age of the twenty members of a running club is exactly 28. The mean age increases by exactly 2 years when two new members join. What is the mean age of the two new members?",
+      "has_diagram": false,
+      "options": {
+        "A": "20 years",
+        "B": "22 years",
+        "C": "30 years",
+        "D": "40 years",
+        "E": "50 years",
+        "F": "52 years"
+      },
+      "correct_answer": "E",
+      "raw_text": "7     The mean age of the twenty members of a running club is exactly 28.\n      The mean age increases by exactly 2 years when two new members join.\n      What is the mean age of the two new members?\n      A    20 years\n      B    22 years\n      C    30 years\n      D    40 years\n      E    50 years\n      F    52 years",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q8",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 A circuit consists of a 5.0 Ω resistor and a variable resistor connected in series with a 24 V battery. The variable resistor has a minimum resistance of 3.0 Ω and a maximum resistance of 15 Ω. The battery and the connecting wires have negligible resistance. What is the maximum power dissipated in the 5.0 Ω resistor?",
+      "has_diagram": false,
+      "options": {
+        "A": "7.2 W",
+        "B": "18 W",
+        "C": "27 W",
+        "D": "45 W",
+        "E": "72 W",
+        "F": "75 W 10"
+      },
+      "correct_answer": "D",
+      "raw_text": "8     A circuit consists of a 5.0 Ω resistor and a variable resistor connected in series with a 24 V\n      battery. The variable resistor has a minimum resistance of 3.0 Ω and a maximum resistance of\n      15 Ω. The battery and the connecting wires have negligible resistance.\n      What is the maximum power dissipated in the 5.0 Ω resistor?\n      A    7.2 W\n      B    18 W\n      C    27 W\n      D    45 W\n      E    72 W\n      F    75 W\n© UCLES 2016                                                                            [Turn over\n\f                                                   10",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q9",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 A medical scanner is bought for £15 000. The value of the scanner depreciates by 20% every year. By how much has the scanner reduced in value after 2 years?",
+      "has_diagram": false,
+      "options": {
+        "A": "£600",
+        "B": "£3000",
+        "C": "£5400",
+        "D": "£6000",
+        "E": "£9000",
+        "F": "£9600",
+        "G": "£12 000"
+      },
+      "correct_answer": "C",
+      "raw_text": "9     A medical scanner is bought for £15 000.\n      The value of the scanner depreciates by 20% every year.\n      By how much has the scanner reduced in value after 2 years?\n      A    £600\n      B    £3000\n      C    £5400\n      D    £6000\n      E    £9000\n      F    £9600\n      G    £12 000",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q10",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 The total power P radiated by a star is given by: P = kR 2T 4 where R is the radius of the star, T is its surface temperature and k is a constant. The power currently radiated by the Sun is 4.0 × 1026 W. Towards the end of the Sun’s life its radius will increase by a factor of a hundred and its surface temperature will decrease by a factor of two. What will be the power radiated by the Sun when these changes have occurred?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.5 × 1027 W",
+        "B": "1.0 × 1028 W",
+        "C": "2.0 × 1028 W",
+        "D": "2.5 × 1029 W",
+        "E": "1.0 × 1030 W",
+        "F": "2.0 × 1030 W",
+        "G": "2.5 × 1033 W",
+        "H": "1.0 × 1034 W 11"
+      },
+      "correct_answer": "D",
+      "raw_text": "10    The total power P radiated by a star is given by:\n               P = kR 2T 4\n      where R is the radius of the star, T is its surface temperature and k is a constant.\n      The power currently radiated by the Sun is 4.0 × 1026 W. Towards the end of the Sun’s life its\n      radius will increase by a factor of a hundred and its surface temperature will decrease by a\n      factor of two.\n      What will be the power radiated by the Sun when these changes have occurred?\n      A    2.5 × 1027 W\n      B    1.0 × 1028 W\n      C    2.0 × 1028 W\n      D    2.5 × 1029 W\n      E    1.0 × 1030 W\n      F    2.0 × 1030 W\n      G    2.5 × 1033 W\n      H    1.0 × 1034 W\n© UCLES 2016\n\f                                                     11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q11",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 The point A is 4 km due East of the point B. The bearing of the point C from A is 330° and the bearing of C from B is 060° Find the distance BC.",
+      "has_diagram": false,
+      "options": {
+        "A": "2 km",
+        "B": "2 3 km",
+        "C": "4 km",
+        "D": "2 5 km",
+        "E": "4 2 km"
+      },
+      "correct_answer": "B",
+      "raw_text": "11    The point A is 4 km due East of the point B.\n      The bearing of the point C from A is 330° and the bearing of C from B is 060°\n      Find the distance BC.\n      A    2 km\n      B    2 3 km\n      C    4 km\n      D    2 5 km\n      E    4 2 km",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q12",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 A transverse wave travelling through a medium has a frequency of 5.0 Hz, a wavelength of 4.0 cm and an amplitude of 3.0 cm. What is the total distance travelled by a particle of the medium in one minute?",
+      "has_diagram": false,
+      "options": {
+        "A": "900 cm",
+        "B": "1200 cm",
+        "C": "1800 cm",
+        "D": "2400 cm",
+        "E": "3600 cm",
+        "F": "4800 cm"
+      },
+      "correct_answer": "E",
+      "raw_text": "12    A transverse wave travelling through a medium has a frequency of 5.0 Hz, a wavelength of\n      4.0 cm and an amplitude of 3.0 cm.\n      What is the total distance travelled by a particle of the medium in one minute?\n      A    900 cm\n      B    1200 cm\n      C    1800 cm\n      D    2400 cm\n      E    3600 cm\n      F    4800 cm\n© UCLES 2016                                                                            [Turn over\n\f                                                    12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q13",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 The quantities x and y are positive. x is inversely proportional to the square root of y. When x = 8, y = 9. What is the value of y when x = 6? 3",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "2 81",
+        "C": "16 27",
+        "D": "14",
+        "E": "12",
+        "F": "16"
+      },
+      "correct_answer": "F",
+      "raw_text": "13    The quantities x and y are positive.\n      x is inversely proportional to the square root of y.\n      When x = 8, y = 9.\n      What is the value of y when x = 6?\n           3\n      A\n           2\n      B    2\n           81\n      C\n           16\n           27\n      D\n           14\n      E    12\n      F    16\n© UCLES 2016\n\f                                                   13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q14",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 A motor is used to lift a mass of 5.0 kg using a pulley system as shown in the diagram. The pulley is secured to the roof using a coupling. roof coupling pulley rope force from motor 5.0 kg The motor needs to cause the mass to accelerate upwards at 0.80 m s–2. What is the minimum tension force that the coupling must be able to withstand without breaking? (The gravitational field strength g is 10 N kg–1. The pulley system is frictionless and has negligible mass. The rope has negligible mass and is inextensible.)",
+      "has_diagram": true,
+      "options": {
+        "A": "4.0 N",
+        "B": "8.0 N",
+        "C": "46 N",
+        "D": "50 N",
+        "E": "54 N",
+        "F": "92 N",
+        "G": "104 N",
+        "H": "108 N"
+      },
+      "correct_answer": "H",
+      "raw_text": "14    A motor is used to lift a mass of 5.0 kg using a pulley system as shown in the diagram. The\n      pulley is secured to the roof using a coupling.\n                                                                              roof\n                                  coupling\n                                                                pulley\n                                                                rope\n                                      force from\n                                        motor\n                                                     5.0 kg\n      The motor needs to cause the mass to accelerate upwards at 0.80 m s–2.\n      What is the minimum tension force that the coupling must be able to withstand without\n      breaking?\n      (The gravitational field strength g is 10 N kg–1. The pulley system is frictionless and has\n      negligible mass. The rope has negligible mass and is inextensible.)\n      A    4.0 N\n      B    8.0 N\n      C    46 N\n      D    50 N\n      E    54 N\n      F    92 N\n      G    104 N\n      H    108 N\n© UCLES 2016                                                                                 [Turn over\n\f                                                  14",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q14-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q15",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 In a trapezium PQRS, the parallel sides are PQ and RS. PQ = (x − 1) cm, RS = (x + 5) cm and the vertical height QR = x cm. P x–1 Q x [diagram not to scale] S x+5 R The area of the trapezium is 120 cm2. What is the length of RS?",
+      "has_diagram": false,
+      "options": {
+        "A": "9 cm",
+        "B": "10 cm",
+        "C": "11 cm",
+        "D": "12 cm",
+        "E": "15 cm",
+        "F": "17 cm"
+      },
+      "correct_answer": "E",
+      "raw_text": "15    In a trapezium PQRS, the parallel sides are PQ and RS.\n      PQ = (x − 1) cm, RS = (x + 5) cm and the vertical height QR = x cm.\n                    P    x–1 Q\n                                  x    [diagram not to scale]\n      S            x+5         R\n      The area of the trapezium is 120 cm2.\n      What is the length of RS?\n      A    9 cm\n      B    10 cm\n      C    11 cm\n      D    12 cm\n      E    15 cm\n      F    17 cm\n© UCLES 2016\n\f                                                    15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q16",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 A heater is connected in series with a resistor and a 6.0 V battery in the circuit shown. battery resistor heater The total resistance of the circuit is 15 Ω. In 3.0 minutes, 180 J of electrical energy is transferred into other forms in the heater. How much charge flows through the heater in the 3.0 minutes and what is the voltage across the heater? charge / C voltage / V",
+      "has_diagram": true,
+      "options": {
+        "A": "1.2 150",
+        "B": "1.2 216",
+        "C": "7.5 0.041",
+        "D": "7.5 24",
+        "E": "72 0.40",
+        "F": "72 2.5",
+        "G": "450 0.40",
+        "H": "450 2.5"
+      },
+      "correct_answer": "F",
+      "raw_text": "16    A heater is connected in series with a resistor and a 6.0 V battery in the circuit shown.\n                                              battery\n                                                                       resistor\n                                               heater\n      The total resistance of the circuit is 15 Ω. In 3.0 minutes, 180 J of electrical energy is transferred\n      into other forms in the heater.\n      How much charge flows through the heater in the 3.0 minutes and what is the voltage across\n      the heater?\n                charge / C               voltage / V\n      A             1.2                     150\n      B             1.2                     216\n      C             7.5                    0.041\n      D             7.5                      24\n      E             72                      0.40\n      F             72                       2.5\n      G            450                      0.40\n      H            450                       2.5\n© UCLES 2016                                                                                  [Turn over\n\f                                           16",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q16-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q17",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 Make b the subject of the formula: b2 + 2 a= 2 3b − 1 ⎛ a+2 ⎞",
+      "has_diagram": false,
+      "options": {
+        "A": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a + 1⎠ ⎛ a+2⎞",
+        "B": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a − 1⎠ ⎛ 2−a ⎞",
+        "C": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a + 1⎠ ⎛ 2−a ⎞",
+        "D": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a − 1⎠ ⎛ 3 ⎞",
+        "E": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a + 1⎠ ⎛ 3 ⎞",
+        "F": "b = ± ⎜⎜ ⎟⎟ ⎝ 3a − 1⎠"
+      },
+      "correct_answer": "B",
+      "raw_text": "17    Make b the subject of the formula:\n                                             b2 + 2\n                                           a= 2\n                                             3b − 1\n                  ⎛ a+2 ⎞\n      A    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a + 1⎠\n                  ⎛ a+2⎞\n      B    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a − 1⎠\n                  ⎛ 2−a ⎞\n      C    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a + 1⎠\n                  ⎛ 2−a ⎞\n      D    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a − 1⎠\n                  ⎛   3   ⎞\n      E    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a + 1⎠\n                  ⎛ 3 ⎞\n      F    b = ± ⎜⎜       ⎟⎟\n                  ⎝ 3a − 1⎠\n© UCLES 2016\n\f                                                     17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q18",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A cubic block has a hole through it with a square cross-section. The dimensions are shown on the diagram. The weight of the block is 30 N. 5.0 cm 10 cm What is the density of the material from which the block is made? (The gravitational field strength g is 10 N kg–1.)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.30 g cm–3",
+        "B": "0.40 g cm–3",
+        "C": "0.60 g cm–3",
+        "D": "1.2 g cm–3",
+        "E": "3.0 g cm–3",
+        "F": "4.0 g cm–3",
+        "G": "6.0 g cm–3",
+        "H": "12 g cm–3"
+      },
+      "correct_answer": "F",
+      "raw_text": "18    A cubic block has a hole through it with a square cross-section. The dimensions are shown on\n      the diagram. The weight of the block is 30 N.\n                                                           5.0 cm\n                                                10 cm\n      What is the density of the material from which the block is made?\n      (The gravitational field strength g is 10 N kg–1.)\n      A    0.30 g cm–3\n      B    0.40 g cm–3\n      C    0.60 g cm–3\n      D    1.2 g cm–3\n      E    3.0 g cm–3\n      F    4.0 g cm–3\n      G    6.0 g cm–3\n      H    12 g cm–3\n© UCLES 2016                                                                          [Turn over\n\f                                                 18",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q18-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q19",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 A thin rectangular sheet of metal 10 m by 5 m is made into an open ended cylinder by joining the edges PS and QR. The height of the cylinder is 10 m. What is the volume, in cubic metres, enclosed by this cylinder? 5m Q r P [diagram not to scale] 10 m 10 m 10 m S 5m R 5",
+      "has_diagram": false,
+      "options": {
+        "A": "2π 25",
+        "B": "4π 125",
+        "C": "2π",
+        "D": "62.5 π 125",
+        "E": "π",
+        "F": "250 π"
+      },
+      "correct_answer": "C",
+      "raw_text": "19    A thin rectangular sheet of metal 10 m by 5 m is made into an open ended cylinder by joining\n      the edges PS and QR.\n      The height of the cylinder is 10 m.\n      What is the volume, in cubic metres, enclosed by this cylinder?\n                    5m       Q                        r\n               P\n                                                                  [diagram not to scale]\n           10 m              10 m                         10 m\n               S    5m       R\n            5\n      A\n           2π\n           25\n      B\n           4π\n           125\n      C\n            2π\n      D    62.5 π\n           125\n      E\n               π\n      F    250 π\n© UCLES 2016\n\f                                                         19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q20",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 The diagram shows four solid steel balls P, Q, R and S which are of identical size. Balls P and R have shiny surfaces. Balls Q and S have dull surfaces. Balls P and Q are in a room at 20 °C. Balls R and S are in a room at 40 °C. The temperature of each ball at a given moment in time is shown on the diagram. room roomatat20 20°C o C room roomatat40 40°C o C 30o°C 30 °C 40 °C 40 °C 30 C 30oC 40oC o 40 C P P Q Q R R SS Which two balls lose thermal energy by convection, and which ball emits thermal radiation at the greatest rate? lose thermal energy greatest rate of emission of by convection thermal radiation",
+      "has_diagram": true,
+      "options": {
+        "A": "P and Q P",
+        "B": "P and Q Q",
+        "C": "P and Q R",
+        "D": "P and Q S",
+        "E": "R and S P",
+        "F": "R and S Q",
+        "G": "R and S R",
+        "H": "R and S S 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "20    The diagram shows four solid steel balls P, Q, R and S which are of identical size.\n      Balls P and R have shiny surfaces. Balls Q and S have dull surfaces.\n      Balls P and Q are in a room at 20 °C. Balls R and S are in a room at 40 °C.\n      The temperature of each ball at a given moment in time is shown on the diagram.\n                          room\n                            roomatat20\n                                     20°C\n                                       o\n                                         C                                room\n                                                                            roomatat40\n                                                                                     40°C\n                                                                                       o\n                                                                                         C\n                     30o°C                   30 °C                   40 °C               40 °C\n                     30 C                    30oC                    40oC                   o\n                                                                                             40 C\n                      P\n                      P                       Q\n                                              Q                       R\n                                                                      R                       SS\n      Which two balls lose thermal energy by convection, and which ball emits thermal radiation at\n      the greatest rate?\n           lose thermal energy        greatest rate of emission of\n              by convection                thermal radiation\n      A         P and Q                              P\n      B         P and Q                              Q\n      C         P and Q                              R\n      D         P and Q                              S\n      E         R and S                              P\n      F         R and S                              Q\n      G         R and S                              R\n      H         R and S                              S\n© UCLES 2016                                                                                        [Turn over\n\f                                                  20\n                                                                2",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q20-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q21",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 Which one of the following is a simplification of 4 + 42 − x ? x − 2x",
+      "has_diagram": false,
+      "options": {
+        "A": "3− 2 x",
+        "B": "3+ 2 x",
+        "C": "4− 2 x",
+        "D": "4+ 2 x",
+        "E": "5− 2 x",
+        "F": "5+ 2 x"
+      },
+      "correct_answer": "A",
+      "raw_text": "21    Which one of the following is a simplification of 4 + 42 − x ?\n                                                            x − 2x\n      A    3− 2\n              x\n      B    3+ 2\n              x\n      C    4− 2\n              x\n      D    4+ 2\n              x\n      E    5− 2\n              x\n      F    5+ 2\n              x\n© UCLES 2016\n\f                                                       21",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q22",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 The diagram shows the velocity-time graph for an object travelling in a straight line over a period of 30 s. velocity / m s–1 8.0 6.0 4.0 2.0 0 0 10 20 30 time / s –2.0 What total distance did the object travel in the 30 s, how far from its starting position was it at the end of the 30 s, and what was its average speed over the 30 s? total distance distance from average speed travelled starting position / m s–1 /m /m",
+      "has_diagram": true,
+      "options": {
+        "A": "90 70 3.0",
+        "B": "90 70 5.0",
+        "C": "90 90 3.0",
+        "D": "90 90 5.0",
+        "E": "180 140 5.0",
+        "F": "180 140 6.0",
+        "G": "180 180 5.0",
+        "H": "180 180 6.0"
+      },
+      "correct_answer": "A",
+      "raw_text": "22    The diagram shows the velocity-time graph for an object travelling in a straight line over a\n      period of 30 s.\n                        velocity / m s–1\n                                     8.0\n                                       6.0\n                                       4.0\n                                       2.0\n                                         0\n                                             0         10     20        30 time / s\n                                      –2.0\n      What total distance did the object travel in the 30 s, how far from its starting position was it at\n      the end of the 30 s, and what was its average speed over the 30 s?\n               total distance          distance from\n                                                               average speed\n                  travelled           starting position\n                                                                   / m s–1\n                     /m                      /m\n      A             90                           70                   3.0\n      B             90                           70                   5.0\n      C             90                           90                   3.0\n      D             90                           90                   5.0\n      E             180                          140                  5.0\n      F             180                          140                  6.0\n      G             180                          180                  5.0\n      H             180                          180                  6.0\n© UCLES 2016                                                                                  [Turn over\n\f                                                22",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q22-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q23",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 During summer activities week 120 students each chose one activity from swimming, archery, and tennis. 46 of the students were girls. 36 of the students chose tennis, and 2 of these were boys; 25 girls chose swimming, and 27 3 students chose archery.",
+      "has_diagram": false,
+      "options": {
+        "A": "boy is picked at random. What is the probability that he chose swimming? 3 20 9",
+        "B": "37 4",
+        "C": "15 16",
+        "D": "37 32",
+        "E": "57"
+      },
+      "correct_answer": "D",
+      "raw_text": "23    During summer activities week 120 students each chose one activity from swimming, archery,\n      and tennis.\n      46 of the students were girls.\n      36 of the students chose tennis, and 2 of these were boys; 25 girls chose swimming, and 27\n                                           3\n      students chose archery.\n      A boy is picked at random. What is the probability that he chose swimming?\n            3\n      A\n           20\n            9\n      B\n           37\n            4\n      C\n           15\n           16\n      D\n           37\n           32\n      E\n           57\n© UCLES 2016\n\f                                                 23",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q24",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 Bronze is a mixture of tin and copper.",
+      "has_diagram": false,
+      "options": {
+        "A": "× 100 9X −Y X",
+        "B": "× 100 9Y − X Y",
+        "C": "× 100 9X −Y Y",
+        "D": "× 100 9Y − X X",
+        "E": "× 100 9X + Y X",
+        "F": "× 100 9Y + X Y",
+        "G": "× 100 9X + Y Y",
+        "H": "× 100 9Y + X 9 2 n+1 × 3 4−3 n"
+      },
+      "correct_answer": "G",
+      "raw_text": "24    Bronze is a mixture of tin and copper.\n      A particular sample of bronze contains 10% tin by volume. (In other words, 10% of the total\n      volume of the sample is tin and 90% of it is copper.)\n      What percentage of the mass of the sample is tin?\n      (Density of tin = Y and density of copper = X.)\n             X\n      A          × 100\n           9X −Y\n             X\n      B           × 100\n           9Y − X\n             Y\n      C          × 100\n           9X −Y\n             Y\n      D           × 100\n           9Y − X\n             X\n      E           × 100\n           9X + Y\n             X\n      F           × 100\n           9Y + X\n             Y\n      G           × 100\n           9X + Y\n             Y\n      H           × 100\n           9Y + X\n                                                                9 2 n+1 × 3 4−3 n",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q25",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 Which one of the following expressions is equivalent to ? 27 2−n",
+      "has_diagram": false,
+      "options": {
+        "A": "39",
+        "B": "3 −2 n",
+        "C": "3 2− 2 n",
+        "D": "34n",
+        "E": "3 6 n −2",
+        "F": "36 24"
+      },
+      "correct_answer": "D",
+      "raw_text": "25    Which one of the following expressions is equivalent to                     ?\n                                                                     27 2−n\n      A    39\n      B    3 −2 n\n      C    3 2− 2 n\n      D    34n\n      E    3 6 n −2\n      F    36\n© UCLES 2016                                                                            [Turn over\n\f                                                  24",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q26",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 When a stationary uranium-238 nucleus decays by alpha emission it forms a nucleus of thorium-234. The total kinetic energy produced by the decay is E. Th-234 U-238 alpha-particle before decay after decay What is the kinetic energy of the alpha particle?",
+      "has_diagram": false,
+      "options": {
+        "A": "4E 238",
+        "B": "4E 234",
+        "C": "E 2",
+        "D": "234E 238",
+        "E": "E 25"
+      },
+      "correct_answer": "D",
+      "raw_text": "26    When a stationary uranium-238 nucleus decays by alpha emission it forms a nucleus of\n      thorium-234. The total kinetic energy produced by the decay is E.\n                                                          Th-234\n                       U-238\n                                                                        alpha-particle\n                      before decay                        after decay\n      What is the kinetic energy of the alpha particle?\n      A        4E\n           238\n      B        4E\n           234\n      C    E\n           2\n      D    234E\n               238\n      E    E\n© UCLES 2016\n\f                                                     25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q27",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 In the diagram below, PQRS is part of a regular polygon. The polygon has n sides. The side PQ is extended to T such that PQT is a straight line. The length of RQ is the same as the length of RT. P [diagram not to scale] Q R x S T Find an equation for n in terms of x , where x is the size of angle ∠ QRT in degrees.",
+      "has_diagram": false,
+      "options": {
+        "A": "n = 180 x − 90",
+        "B": "n = 180 − x 720",
+        "C": "n = 360 − x 90",
+        "D": "n = 360 180 − x",
+        "E": "n = 720 180 − x",
+        "F": "n = 720 360 − x",
+        "G": "n = 360 360 − x 26"
+      },
+      "correct_answer": "E",
+      "raw_text": "27    In the diagram below, PQRS is part of a regular polygon.\n      The polygon has n sides.\n      The side PQ is extended to T such that PQT is a straight line.\n      The length of RQ is the same as the length of RT.\n                                             P\n                                                      [diagram not to scale]\n                                                 Q\n                                     R\n                                         x\n                          S\n                                             T\n      Find an equation for n in terms of x , where x is the size of angle ∠ QRT in degrees.\n      A    n = 180\n               x − 90\n      B    n = 180 − x\n                720\n      C    n = 360 − x\n                 90\n      D    n = 360\n               180 − x\n      E    n = 720\n               180 − x\n      F    n = 720\n               360 − x\n      G    n = 360\n               360 − x\n© UCLES 2016                                                                           [Turn over\n\f                                                  26",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q28",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 A student carries out an experiment to measure the speed of sound. A loudspeaker that emits sound in all directions is placed between two buildings that are 128 m apart as shown. The student and loudspeaker are 48 m from one of the buildings. 128 m building building 48 m student and loudspeaker The loudspeaker is connected to a signal generator that causes it to emit regular clicks. The student notices that each click results in two echoes, one from each building. The rate at which the clicks are produced is gradually increased from zero until each echo coincides with a new click being emitted by the loudspeaker. What is the frequency of emission of clicks when this happens? (The speed of sound in air = 320 m s–1.)",
+      "has_diagram": true,
+      "options": {
+        "A": "2.0 Hz",
+        "B": "2.5 Hz",
+        "C": "3.3 Hz",
+        "D": "4.0 Hz",
+        "E": "5.3 Hz",
+        "F": "6.7 Hz",
+        "G": "10 Hz 27 PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number."
+      },
+      "correct_answer": "G",
+      "raw_text": "28    A student carries out an experiment to measure the speed of sound. A loudspeaker that emits\n      sound in all directions is placed between two buildings that are 128 m apart as shown. The\n      student and loudspeaker are 48 m from one of the buildings.\n                                                   128 m\n                       building                                              building\n                                      48 m\n                                                  student and\n                                                  loudspeaker\n      The loudspeaker is connected to a signal generator that causes it to emit regular clicks. The\n      student notices that each click results in two echoes, one from each building. The rate at which\n      the clicks are produced is gradually increased from zero until each echo coincides with a new\n      click being emitted by the loudspeaker.\n      What is the frequency of emission of clicks when this happens?\n      (The speed of sound in air = 320 m s–1.)\n      A    2.0 Hz\n      B    2.5 Hz\n      C    3.3 Hz\n      D    4.0 Hz\n      E    5.3 Hz\n      F    6.7 Hz\n      G    10 Hz\n© UCLES 2016\n\f                                      27\n        PART B Advanced Mathematics and Advanced Physics\n         NOTE: questions in this part that are not covered by the ESAT\n         content specification are indicated by a cross through the\n         question number.\n© UCLES 2016                                                      [Turn over\n\f                                                    28",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q28-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q29",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 When x = 2 is substituted in the expression x 3 + px 2 + qx + p 2 the result is 0. When x = 1 is substituted into the same expression, the result is − 3.5 . Find all possible value(s) of p. 6",
+      "has_diagram": false,
+      "options": {
+        "A": "p = −1 ± 3",
+        "B": "p = 1 or p = − 3",
+        "C": "p = 1",
+        "D": "p = 1± 7",
+        "E": "there are no values for p"
+      },
+      "correct_answer": "C",
+      "raw_text": "29    When x = 2 is substituted in the expression x 3 + px 2 + qx + p 2 the result is 0.\n      When x = 1 is substituted into the same expression, the result is − 3.5 .\n      Find all possible value(s) of p.\n                       6\n      A    p = −1 ±\n                      3\n      B    p = 1 or p = − 3\n      C    p = 1\n      D    p = 1± 7\n      E    there are no values for p\n© UCLES 2016\n\f                                                      29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q30",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 A parachutist is falling at terminal speed with his parachute open. The diagrams show, separately, the vertical forces acting on the parachute and the vertical forces acting on the parachutist. The letters L, M, N, P, Q and R represent the magnitude of each force as indicated. air resistance on parachute (L) force from air resistance on parachute (P) parachutist (Q) weight of parachutist (R) weight of force from parachute (M) parachutist (N) Consider the following equations: Equation 1: L = M +N Equation 2: R = P +Q Equation 3: L = Q Equation 4: N= P Equation 5: M + R = L +Q Which of these equations, if any, is/are the direct result of the application of Newton’s Third Law to this situation?",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "3 only",
+        "C": "4 only",
+        "D": "5 only",
+        "E": "1 and 2 only",
+        "F": "3 and 4 only",
+        "G": "1, 2 and 5 only",
+        "H": "1, 2, 3, 4 and 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "30    A parachutist is falling at terminal speed with his parachute open. The diagrams show,\n      separately, the vertical forces acting on the parachute and the vertical forces acting on the\n      parachutist.\n      The letters L, M, N, P, Q and R represent the magnitude of each force as indicated.\n                    air resistance on parachute (L)\n                                                              force from      air resistance on\n                                                             parachute (P)     parachutist (Q)\n                                                                  weight of parachutist (R)\n                   weight of     force from\n                 parachute (M) parachutist (N)\n      Consider the following equations:\n               Equation 1:         L = M +N\n               Equation 2:         R = P +Q\n               Equation 3:         L = Q\n               Equation 4:         N= P\n               Equation 5:     M + R = L +Q\n      Which of these equations, if any, is/are the direct result of the application of Newton’s Third\n      Law to this situation?\n      A    none of them\n      B    3 only\n      C    4 only\n      D    5 only\n      E    1 and 2 only\n      F    3 and 4 only\n      G    1, 2 and 5 only\n      H    1, 2, 3, 4 and 5\n© UCLES 2016                                                                                  [Turn over\n\f                                                      30",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q30-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q31",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 A square PQRS is drawn above the x-axis with the side PQ on the x-axis. P is the point ( − 5, 0) and Q is the point (1, 0).",
+      "has_diagram": false,
+      "options": {
+        "A": "x2 + y2 − 4x + 6 y + 4 = 0",
+        "B": "x2 + y2 − 4x + 6 y + 9 = 0",
+        "C": "x2 + y2 + 4x − 6 y + 4 = 0",
+        "D": "x2 + y2 + 4x − 6 y + 9 = 0",
+        "E": "x2 + y2 − 6x − 4 y + 9 = 0",
+        "F": "x2 + y2 − 6x + 4 y + 4 = 0",
+        "G": "x2 + y2 + 6x − 4 y + 4 = 0",
+        "H": "x2 + y2 + 6x + 4 y + 9 = 0"
+      },
+      "correct_answer": "C",
+      "raw_text": "31    A square PQRS is drawn above the x-axis with the side PQ on the x-axis.\n      P is the point ( − 5, 0) and Q is the point (1, 0).\n      A circle is drawn inside the square with diameter equal in length to the side of the square.\n      Which one of the following is an equation of the circle?\n      A    x2 + y2 − 4x + 6 y + 4 = 0\n      B    x2 + y2 − 4x + 6 y + 9 = 0\n      C    x2 + y2 + 4x − 6 y + 4 = 0\n      D    x2 + y2 + 4x − 6 y + 9 = 0\n      E    x2 + y2 − 6x − 4 y + 9 = 0\n      F    x2 + y2 − 6x + 4 y + 4 = 0\n      G    x2 + y2 + 6x − 4 y + 4 = 0\n      H    x2 + y2 + 6x + 4 y + 9 = 0\n© UCLES 2016\n\f                                                    31",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q32",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 A crate has a total mass of 800 kg, including its contents. A helicopter of mass 4200 kg is carrying the crate using a light inextensible rope as shown: rope crate The helicopter and crate are accelerating upwards at 2.0 m s–2. What is the tension in the rope? (The gravitational field strength g is 10 N kg–1; air resistance can be ignored.)",
+      "has_diagram": true,
+      "options": {
+        "A": "6400 N",
+        "B": "8000 N",
+        "C": "9600 N",
+        "D": "18 000 N",
+        "E": "40 000 N",
+        "F": "42 000 N",
+        "G": "50 000 N",
+        "H": "60 000 N"
+      },
+      "correct_answer": "C",
+      "raw_text": "32    A crate has a total mass of 800 kg, including its contents. A helicopter of mass 4200 kg is\n      carrying the crate using a light inextensible rope as shown:\n                                                         rope\n                                                            crate\n      The helicopter and crate are accelerating upwards at 2.0 m s–2.\n      What is the tension in the rope?\n      (The gravitational field strength g is 10 N kg–1; air resistance can be ignored.)\n      A    6400 N\n      B    8000 N\n      C    9600 N\n      D    18 000 N\n      E    40 000 N\n      F    42 000 N\n      G    50 000 N\n      H    60 000 N\n© UCLES 2016                                                                              [Turn over\n\f                                                    32",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q32-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q33",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 The first term of a convergent geometric series is 8. The fifth term is 2. The sixth term is real and positive. What is the sum to infinity of this series? a (The sum to infinity of a convergent geometric series is given by , where a is the first term 1− r and r is the common ratio.)",
+      "has_diagram": false,
+      "options": {
+        "A": "( 8 1+ 2 )",
+        "B": "8(1 − 2 )",
+        "C": "8(2 + 2 )",
+        "D": "8(2 − 2 )",
+        "E": "16 85 4",
+        "F": "5 4 −1 85 4",
+        "G": "5 4 +1"
+      },
+      "correct_answer": "C",
+      "raw_text": "33    The first term of a convergent geometric series is 8.\n      The fifth term is 2.\n      The sixth term is real and positive.\n      What is the sum to infinity of this series?\n                                                                           a\n      (The sum to infinity of a convergent geometric series is given by          , where a is the first term\n                                                                          1− r\n      and r is the common ratio.)\n      A     (\n           8 1+ 2  )\n      B    8(1 − 2 )\n      C    8(2 + 2 )\n      D    8(2 − 2 )\n      E    16\n            85 4\n      F    5\n             4 −1\n             85 4\n      G    5\n              4 +1\n© UCLES 2016\n\f                                                          33",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q34",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 A shopper pushes a supermarket trolley a distance of 15 m in a straight line across a level, horizontal surface. The shopper applies a constant force of 50 N at an angle of 37° below the horizontal. The total weight of the trolley and its contents is 350 N. [diagram not to scale] 37o 50 N AL CERE What is the magnitude of the total vertical force that the surface exerts on the trolley and how much work is done by the pushing force? (You may use the approximations sin 37° = 0.60; cos 37° = 0.80.) vertical force / N work done / J",
+      "has_diagram": true,
+      "options": {
+        "A": "380 600",
+        "B": "380 750",
+        "C": "390 450",
+        "D": "390 750",
+        "E": "400 450",
+        "F": "400 600"
+      },
+      "correct_answer": "A",
+      "raw_text": "34    A shopper pushes a supermarket trolley a distance of 15 m in a straight line across a level,\n      horizontal surface. The shopper applies a constant force of 50 N at an angle of 37° below the\n      horizontal. The total weight of the trolley and its contents is 350 N.\n                                                               [diagram not to scale]\n                                           37o\n                                    50 N\n                                                     AL\n                                                 CERE\n      What is the magnitude of the total vertical force that the surface exerts on the trolley and how\n      much work is done by the pushing force?\n      (You may use the approximations sin 37° = 0.60; cos 37° = 0.80.)\n               vertical force / N            work done / J\n      A              380                         600\n      B              380                         750\n      C              390                         450\n      D              390                         750\n      E              400                         450\n      F              400                         600\n© UCLES 2016                                                                               [Turn over\n\f                                                  34",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q34-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q35",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 Tangents are drawn from a point P to a circle of radius 10 cm. The centre of the circle is C and the distance PC is 20 cm. [diagram not to scale] P .C Which one of the following is an expression for the shaded area in square centimetres? 100 3 3 − π ( )",
+      "has_diagram": false,
+      "options": {
+        "A": "3 100 3 5 − π ( )",
+        "B": "3 50 6 3 − π ( )",
+        "C": "3 50 6 5 − π ( )",
+        "D": "3 50 ( 3 − 2π )",
+        "E": "3 50 2 π − 3 ( )",
+        "F": "3"
+      },
+      "correct_answer": "A",
+      "raw_text": "35    Tangents are drawn from a point P to a circle of radius 10 cm.\n      The centre of the circle is C and the distance PC is 20 cm.\n                                                                         [diagram not to scale]\n               P                                       .C\n      Which one of the following is an expression for the shaded area in square centimetres?\n           100 3 3 − π\n                    (        )\n      A\n            3\n           100 3 5 − π\n                    (        )\n      B\n            3\n           50 6 3 − π\n                (        )\n      C\n            3\n           50 6 5 − π\n                (        )\n      D\n            3\n           50   ( 3 − 2π )\n      E\n            3\n           50 2 π − 3\n                (        )\n      F\n            3\n© UCLES 2016\n\f                                                        35",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q36",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 A plank of non-uniform density which has a mass of 15 kg is used to make a see-saw. A pivot is placed under the centre of the plank as shown on the diagram. 0.80 m 1.20 m [diagram not to scale] pivot",
+      "has_diagram": true,
+      "options": {
+        "A": "0.40 m on left of pivot 100",
+        "B": "0.40 m on left of pivot 1100",
+        "C": "at the pivot 100",
+        "D": "at the pivot 1100",
+        "E": "0.20 m on right of pivot 100",
+        "F": "0.20 m on right of pivot 1100",
+        "G": "0.40 m on right of pivot 100",
+        "H": "0.40 m on right of pivot 1100"
+      },
+      "correct_answer": "H",
+      "raw_text": "36    A plank of non-uniform density which has a mass of 15 kg is used to make a see-saw. A pivot is\n      placed under the centre of the plank as shown on the diagram.\n                                      0.80 m            1.20 m\n                                                                                   [diagram not to scale]\n                                                pivot\n      A boy of mass 35 kg sits at one end of the plank with his centre of gravity 1.20 m from the pivot.\n      The see-saw balances when a woman of mass 60 kg sits on the plank on the other side of the\n      pivot. Her centre of gravity is 0.80 m from the pivot.\n      Where is the centre of gravity of the plank and what is the magnitude of the force between the\n      pivot and the plank?\n      (The gravitational field strength g is 10 N kg–1.)\n                distance from pivot            force / N\n      A        0.40 m on left of pivot           100\n      B        0.40 m on left of pivot          1100\n      C             at the pivot                 100\n      D             at the pivot                1100\n      E    0.20 m on right of pivot              100\n      F    0.20 m on right of pivot             1100\n      G    0.40 m on right of pivot              100\n      H    0.40 m on right of pivot             1100",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q36-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q37",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 Given that 7cos θ − 3 tan θ sin θ = 1, which one of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "cos θ = − 3 or − 1 5 2",
+        "B": "cos θ = − 3 or 1 5 2",
+        "C": "cos θ = 3 or 1 5 2",
+        "D": "cos θ = 3 or − 1 5 2 36"
+      },
+      "correct_answer": "D",
+      "raw_text": "37    Given that 7cos θ − 3 tan θ sin θ = 1, which one of the following is true?\n      A    cos θ = − 3 or − 1\n                          5           2\n      B    cos θ = − 3 or 1\n                          5       2\n      C    cos θ = 3 or 1\n                      5       2\n      D    cos θ = 3 or − 1\n                      5           2\n© UCLES 2016                                                                                [Turn over\n\f                                                     36",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q38",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 A car of mass 200 kg on a fairground ride travels at a speed of 5.0 m s–1 at point X. The car is allowed to move down a sloping section of track without any energy input. The heights above the ground of points X and Y are shown. When the car reaches point Y its speed is 9.0 m s–1. 5.0 m s–1 car X [diagram not to scale] 8.0 m Y 2.0 m How much energy is transferred in overcoming resistive forces as the car travels from X to Y? (The gravitational field strength g is 10 N kg–1.)",
+      "has_diagram": true,
+      "options": {
+        "A": "3900 J",
+        "B": "6400 J",
+        "C": "7900 J",
+        "D": "10 400 J",
+        "E": "11 200 J"
+      },
+      "correct_answer": "B",
+      "raw_text": "38    A car of mass 200 kg on a fairground ride travels at a speed of 5.0 m s–1 at point X. The car is\n      allowed to move down a sloping section of track without any energy input. The heights above\n      the ground of points X and Y are shown. When the car reaches point Y its speed is 9.0 m s–1.\n                      5.0 m s–1\n                                        car\n                             X                                       [diagram not to scale]\n                    8.0 m\n                                                               Y\n                                                                              2.0 m\n      How much energy is transferred in overcoming resistive forces as the car travels from X to Y?\n      (The gravitational field strength g is 10 N kg–1.)\n      A    3900 J\n      B    6400 J\n      C    7900 J\n      D    10 400 J\n      E    11 200 J",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q38-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q39",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 The complete set of values of a for which the equation 3 x 2 = (a + 2 )x − 3 has two real distinct roots is",
+      "has_diagram": false,
+      "options": {
+        "A": "no values of a",
+        "B": "−4 2 < a < 4 2",
+        "C": "a < − 4 2, a > 4 2",
+        "D": "−4 < a < 8",
+        "E": "a < − 4, a > 8",
+        "F": "−8<a<4",
+        "G": "a < − 8, a > 4",
+        "H": "all values of a 37"
+      },
+      "correct_answer": "G",
+      "raw_text": "39    The complete set of values of a for which the equation 3 x 2 = (a + 2 )x − 3 has two real distinct\n      roots is\n      A    no values of a\n      B    −4 2 < a < 4 2\n      C    a < − 4 2, a > 4 2\n      D    −4 < a < 8\n      E    a < − 4, a > 8\n      F    −8<a<4\n      G    a < − 8, a > 4\n      H    all values of a\n© UCLES 2016\n\f                                                       37",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q40",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 The diagram shows a uniform, solid, heavy cube with side d. The cube rests with one of its edges in contact with a table that is perfectly level. A horizontal force P acts on another edge of the cube, and the cube is stationary. [diagram not to scale] P d 30o Below are four statements about the forces on the cube. 1 It is possible that there is no frictional force between the cube and the table. 2 There must be a frictional force acting to the left between the cube and the table. 3 There must be a frictional force acting to the right between the cube and the table. 4 Force P has a clockwise moment about the edge in contact with the table equal to P × d. Which of the statements is/are correct?",
+      "has_diagram": true,
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "1 and 4 only",
+        "E": "2 and 4 only",
+        "F": "3 and 4 only 38"
+      },
+      "correct_answer": "B",
+      "raw_text": "40    The diagram shows a uniform, solid, heavy cube with side d. The cube rests with one of its\n      edges in contact with a table that is perfectly level. A horizontal force P acts on another edge of\n      the cube, and the cube is stationary.\n                                                               [diagram not to scale]\n                                                       P\n                                             d\n                                                 30o\n      Below are four statements about the forces on the cube.\n               1   It is possible that there is no frictional force between the cube and the table.\n               2   There must be a frictional force acting to the left between the cube and the table.\n               3   There must be a frictional force acting to the right between the cube and the table.\n               4   Force P has a clockwise moment about the edge in contact with the table equal to\n                   P × d.\n      Which of the statements is/are correct?\n      A    1 only\n      B    2 only\n      C    3 only\n      D    1 and 4 only\n      E    2 and 4 only\n      F    3 and 4 only\n© UCLES 2016                                                                                   [Turn over\n\f                                                      38",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q40-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q41",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 41,
+      "question_text": "41 The straight line with equation y = mx + 3, where m > 0, m ≠ 1, is perpendicular to the line with equation y = px + 2 The lines cut the x-axis at the points L and M respectively. The length of LM is 5 units. What is the value of m + p given that m > 1 ? y [diagram not to scale] (0, 3) (0, 2) L M 5 x 8",
+      "has_diagram": true,
+      "options": {
+        "A": "− 3",
+        "B": "− 13 6",
+        "C": "−5 6 5",
+        "D": "6 13",
+        "E": "6 8",
+        "F": "3 39"
+      },
+      "correct_answer": "D",
+      "raw_text": "41    The straight line with equation y = mx + 3, where m > 0, m ≠ 1, is perpendicular to the line with\n      equation y = px + 2\n      The lines cut the x-axis at the points L and M respectively. The length of LM is 5 units.\n      What is the value of m + p given that m > 1 ?\n                                                  y\n                                                                  [diagram not to scale]\n                                                  (0, 3)\n                                                  (0, 2)\n                                  L                         M\n                                              5                                   x\n                   8\n      A    −\n                   3\n      B    − 13\n              6\n      C    −5\n            6\n           5\n      D\n           6\n           13\n      E\n               6\n               8\n      F\n               3\n© UCLES 2016\n\f                                                     39",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q41-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q42",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 42,
+      "question_text": "42 The diagram shows two identical blocks, each of mass m, in two different arrangements. [diagram not to scale] a b arrangement 1 arrangement 2 Which expression gives: gravitational potential energy gravitational potential energy − ? of arrangement 2 of arrangement 1 (g is the gravitational field strength.)",
+      "has_diagram": true,
+      "options": {
+        "A": "2mg(a − b)",
+        "B": "2mg(b − a)",
+        "C": "−mg(b + a)",
+        "D": "mg(a + b) 3",
+        "E": "mg(a − b) 2 1",
+        "F": "mg(a − b) 2 40"
+      },
+      "correct_answer": "A",
+      "raw_text": "42    The diagram shows two identical blocks, each of mass m, in two different arrangements.\n                                                                   [diagram not to scale]\n                                  a\n                                        b\n                          arrangement 1               arrangement 2\n      Which expression gives:\n                    gravitational potential energy        gravitational potential energy\n                                                      −                                     ?\n                         of arrangement 2                    of arrangement 1\n      (g is the gravitational field strength.)\n      A    2mg(a − b)\n      B    2mg(b − a)\n      C    −mg(b + a)\n      D    mg(a + b)\n           3\n      E      mg(a − b)\n           2\n           1\n      F      mg(a − b)\n           2\n© UCLES 2016                                                                                [Turn over\n\f                                                        40",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q42-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q43",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 43,
+      "question_text": "43 f (x) = x 3 − a 2 x where a is a positive constant. Find the complete set of values of x for which f (x) is an increasing function.",
+      "has_diagram": false,
+      "options": {
+        "A": "x ≤ − a, x ≥ a",
+        "B": "−a ≤ x≤ a",
+        "C": "x ≤ − a, 0 ≤ x ≤ a",
+        "D": "− a ≤ x ≤ 0, x ≥ a a a",
+        "E": "x≤− , x≥ 3 3 a a",
+        "F": "− ≤x≤ 3 3",
+        "G": "x≤− a , x≥ a 3 3",
+        "H": "− a ≤x≤ a 3 3"
+      },
+      "correct_answer": "G",
+      "raw_text": "43    f (x) = x 3 − a 2 x where a is a positive constant.\n      Find the complete set of values of x for which f (x) is an increasing function.\n      A    x ≤ − a, x ≥ a\n      B    −a ≤ x≤ a\n      C    x ≤ − a, 0 ≤ x ≤ a\n      D    − a ≤ x ≤ 0, x ≥ a\n              a     a\n      E    x≤− , x≥\n                   3             3\n               a           a\n      F    −       ≤x≤\n               3           3\n      G    x≤− a , x≥ a\n                       3             3\n      H    − a ≤x≤ a\n              3     3",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q44",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 44,
+      "question_text": "44 An object is fired vertically upwards from the ground at time t = 0 s in still air at a speed of 8.0 m s–1. On the way up, what is the height of the object above the ground when it has a speed of 2.0 m s–1, and at what time does it reach this height on the way down? (The gravitational field strength g is 10 N kg–1. Air resistance can be ignored.) height / m time / s",
+      "has_diagram": true,
+      "options": {
+        "A": "2.4 0.60",
+        "B": "2.4 0.64",
+        "C": "2.4 1.0",
+        "D": "2.4 2.0",
+        "E": "3.0 0.60",
+        "F": "3.0 0.64",
+        "G": "3.0 1.0",
+        "H": "3.0 2.0 41"
+      },
+      "correct_answer": "G",
+      "raw_text": "44    An object is fired vertically upwards from the ground at time t = 0 s in still air at a speed of\n      8.0 m s–1.\n      On the way up, what is the height of the object above the ground when it has a speed of\n      2.0 m s–1, and at what time does it reach this height on the way down?\n      (The gravitational field strength g is 10 N kg–1. Air resistance can be ignored.)\n                   height / m                time / s\n      A                    2.4                0.60\n      B                    2.4                0.64\n      C                    2.4                 1.0\n      D                    2.4                 2.0\n      E                    3.0                0.60\n      F                    3.0                0.64\n      G                    3.0                 1.0\n      H                    3.0                 2.0\n© UCLES 2016\n\f                                                         41",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q44-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q45",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 45,
+      "question_text": "45 4 ⎞ and then reflected in the line y = −1 The curve y = x 2 is translated by the vector ⎛⎜ 3 ⎟ ⎝ ⎠ Which one of the following is an equation of the resulting curve?",
+      "has_diagram": false,
+      "options": {
+        "A": "y = −3 − (x − 4 )2",
+        "B": "y = −3 + (x + 4 )2",
+        "C": "y = 3 − (x + 4 )2",
+        "D": "y = 3 + (x − 4 )2",
+        "E": "y = −5 − (x − 4 )2",
+        "F": "y = −5 + (x + 4 )2",
+        "G": "y = 5 − (x + 4 )2",
+        "H": "y = 5 + (x − 4 )2"
+      },
+      "correct_answer": "E",
+      "raw_text": "45                                                     4 ⎞ and then reflected in the line y = −1\n      The curve y = x 2 is translated by the vector ⎛⎜ 3 ⎟\n                                                     ⎝ ⎠\n      Which one of the following is an equation of the resulting curve?\n      A    y = −3 − (x − 4 )2\n      B    y = −3 + (x + 4 )2\n      C    y = 3 − (x + 4 )2\n      D    y = 3 + (x − 4 )2\n      E    y = −5 − (x − 4 )2\n      F    y = −5 + (x + 4 )2\n      G    y = 5 − (x + 4 )2\n      H    y = 5 + (x − 4 )2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q46",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 46,
+      "question_text": "46 The diagram shows a ball P, of mass 4.0 kg, moving to the right at 10 m s–1 directly towards a stationary ball Q, of mass 2.0 kg. 10 m / s stationary P Q 2.0 kg 4.0 kg The balls collide but do not join together. Immediately after the collision ball Q moves at 10 m s–1 to the right. What is the velocity of ball P immediately after the collision, and how much kinetic energy in total is lost during the collision? velocity of ball P after kinetic energy lost collision during collision / J",
+      "has_diagram": true,
+      "options": {
+        "A": "0 50",
+        "B": "0 150",
+        "C": "10 m s–1 to the left 50",
+        "D": "10 m s–1 to the left 150",
+        "E": "5.0 m s–1 to the right 50",
+        "F": "5.0 m s–1 to the right 150 42"
+      },
+      "correct_answer": "E",
+      "raw_text": "46    The diagram shows a ball P, of mass 4.0 kg, moving to the right at 10 m s–1 directly towards a\n      stationary ball Q, of mass 2.0 kg.\n                                            10 m / s\n                                                                 stationary\n                                               P                     Q\n                                                                  2.0 kg\n                                             4.0 kg\n      The balls collide but do not join together. Immediately after the collision ball Q moves at\n      10 m s–1 to the right.\n      What is the velocity of ball P immediately after the collision, and how much kinetic energy in\n      total is lost during the collision?\n               velocity of ball P after   kinetic energy lost\n                      collision           during collision / J\n      A                   0                        50\n      B                   0                        150\n      C          10 m s–1 to the left              50\n      D          10 m s–1 to the left              150\n      E         5.0 m s–1 to the right             50\n      F         5.0 m s–1 to the right             150\n© UCLES 2016                                                                                  [Turn over\n\f                                                     42",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q46-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q47",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 47,
+      "question_text": "47 The complete set of values of x for which 2 x 4 − 9 x 2 + 4 > 0 is 1",
+      "has_diagram": false,
+      "options": {
+        "A": "x< , x>4 2 1",
+        "B": "<x<4 2 1 1",
+        "C": "x < −2 , − <x< , x>2 2 2 −1 1",
+        "D": "−2< x < , <x<2 2 2",
+        "E": "−2< x < 2"
+      },
+      "correct_answer": "C",
+      "raw_text": "47    The complete set of values of x for which 2 x 4 − 9 x 2 + 4 > 0 is\n                1\n      A    x<     , x>4\n                2\n           1\n      B      <x<4\n           2\n                         1     1\n      C    x < −2 , −      <x<   , x>2\n                         2     2\n                        −1 1\n      D    −2< x <         ,   <x<2\n                         2   2\n      E    −2< x < 2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q48",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 48,
+      "question_text": "48 A point object of mass 2.0 kg is at rest on a level, horizontal surface. The coefficient of friction between the object and the surface is 0.25. Two horizontal forces at right-angles to each other, with magnitudes 9.0 N and 12.0 N, are applied simultaneously to the object. What is the magnitude of the acceleration of the object as it begins to move? (The gravitational field strength g is 10 N kg–1.)",
+      "has_diagram": false,
+      "options": {
+        "A": "5.0 m s–2",
+        "B": "7.25 m s–2",
+        "C": "7.5 m s–2",
+        "D": "8.0 m s–2",
+        "E": "10 m s–2",
+        "F": "10.5 m s–2 43"
+      },
+      "correct_answer": "A",
+      "raw_text": "48    A point object of mass 2.0 kg is at rest on a level, horizontal surface. The coefficient of friction\n      between the object and the surface is 0.25.\n      Two horizontal forces at right-angles to each other, with magnitudes 9.0 N and 12.0 N, are\n      applied simultaneously to the object.\n      What is the magnitude of the acceleration of the object as it begins to move?\n      (The gravitational field strength g is 10 N kg–1.)\n      A    5.0 m s–2\n      B    7.25 m s–2\n      C    7.5 m s–2\n      D    8.0 m s–2\n      E    10 m s–2\n      F    10.5 m s–2\n© UCLES 2016\n\f                                                   43",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q49",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 49,
+      "question_text": "49 A cursor starts at the point (0, 10) and moves parallel to the x-axis in the negative direction. What is the minimum distance parallel to the y-axis between the cursor and the graph of y = 4 x 3 − 12 x 2 − 36 x − 15 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "25",
+        "D": "69",
+        "E": "133"
+      },
+      "correct_answer": "B",
+      "raw_text": "49    A cursor starts at the point (0, 10) and moves parallel to the x-axis in the negative direction.\n      What is the minimum distance parallel to the y-axis between the cursor and the graph of\n      y = 4 x 3 − 12 x 2 − 36 x − 15 ?\n      A    0\n      B    5\n      C    25\n      D    69\n      E    133",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q50",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 50,
+      "question_text": "50 An object of mass 20 kg is pulled up a rough plane inclined at 30° to the horizontal by a light, inextensible cable attached via a frictionless pulley to a freely-falling 30 kg mass. The acceleration of the object along the plane is 2.5 m s–2. 3 cos 30° = sin 60° = 2 1 [diagram not to scale] sin 30° = cos 60° = 2 frictionless pulley 20 kg 30 kg 30o What is the frictional force between the object and the plane? (Air resistance and the mass of the pulley can be ignored. The gravitational field strength g is 10 N kg–1.)",
+      "has_diagram": true,
+      "options": {
+        "A": "25 N",
+        "B": "50 N",
+        "C": "75 N",
+        "D": "100 N",
+        "E": "150 N",
+        "F": "175 N",
+        "G": "250 N 44 2"
+      },
+      "correct_answer": "C",
+      "raw_text": "50    An object of mass 20 kg is pulled up a rough plane inclined at 30° to the horizontal by a light,\n      inextensible cable attached via a frictionless pulley to a freely-falling 30 kg mass. The\n      acceleration of the object along the plane is 2.5 m s–2.\n                           3\n      cos 30° = sin 60° =\n                          2\n                          1                                       [diagram not to scale]\n      sin 30° = cos 60° =\n                          2\n                                                                  frictionless\n                                                                     pulley\n                                     20 kg\n                                                            30 kg\n                               30o\n      What is the frictional force between the object and the plane?\n      (Air resistance and the mass of the pulley can be ignored. The gravitational field strength g is\n      10 N kg–1.)\n      A    25 N\n      B    50 N\n      C    75 N\n      D    100 N\n      E    150 N\n      F    175 N\n      G    250 N\n© UCLES 2016                                                                                 [Turn over\n\f                                                    44\n                                                                               2",
+      "diagram_images": [
+        "ENGAA-2016-S1-Q50-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2016-S1-Q51",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 51,
+      "question_text": "51 What is the area enclosed by the line x = 7 and the curve x = 3( y − 1) + 4 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "10",
+        "D": "11",
+        "E": "14",
+        "F": "20"
+      },
+      "correct_answer": "A",
+      "raw_text": "51    What is the area enclosed by the line x = 7 and the curve x = 3( y − 1) + 4 ?\n      A    4\n      B    8\n      C    10\n      D    11\n      E    14\n      F    20",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q52",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 52,
+      "question_text": "52 A spacecraft of initial total mass 4000 kg is travelling relative to the Earth at a constant speed of 7425 m s–1. It ejects some fuel backwards in a sudden burst at a speed relative to the spacecraft of 1425 m s–1. As a result of this, the speed of the spacecraft immediately after the fuel is ejected increases to 7500 m s–1. What is the mass of fuel ejected?",
+      "has_diagram": false,
+      "options": {
+        "A": "22 kg",
+        "B": "34 kg",
+        "C": "40 kg",
+        "D": "50 kg",
+        "E": "200 kg",
+        "F": "210 kg 45"
+      },
+      "correct_answer": "E",
+      "raw_text": "52    A spacecraft of initial total mass 4000 kg is travelling relative to the Earth at a constant speed of\n      7425 m s–1.\n      It ejects some fuel backwards in a sudden burst at a speed relative to the spacecraft of\n      1425 m s–1. As a result of this, the speed of the spacecraft immediately after the fuel is ejected\n      increases to 7500 m s–1.\n      What is the mass of fuel ejected?\n      A    22 kg\n      B    34 kg\n      C    40 kg\n      D    50 kg\n      E    200 kg\n      F    210 kg\n© UCLES 2016\n\f                                                        45",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q53",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 53,
+      "question_text": "53 A curve has equation y = 3 x 4 − 4 x 3 − 12 x 2 + 20 What is the complete set of values of the constant k for which the equation 3 x 4 − 4 x 3 − 12 x 2 + 20 = k has exactly four distinct real roots?",
+      "has_diagram": false,
+      "options": {
+        "A": "no values of k",
+        "B": "− 12 < k < 15",
+        "C": "15 < k < 20",
+        "D": "k > 20",
+        "E": "7 < k < 20",
+        "F": "all values of k"
+      },
+      "correct_answer": "C",
+      "raw_text": "53    A curve has equation y = 3 x 4 − 4 x 3 − 12 x 2 + 20\n      What is the complete set of values of the constant k for which the equation\n                                              3 x 4 − 4 x 3 − 12 x 2 + 20 = k\n      has exactly four distinct real roots?\n      A    no values of k\n      B    − 12 < k < 15\n      C    15 < k < 20\n      D    k > 20\n      E    7 < k < 20\n      F    all values of k",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2016-S1-Q54",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 54,
+      "question_text": "54 An object of weight 40 N hangs from the end of a light inextensible string of length 0.35 m, which is attached to the ceiling. A constant horizontal force of 30 N is applied to the object, causing it to move to a new equilibrium position with the string no longer vertical. By how much has the gravitational potential energy of the object increased as a result of its change of position?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.1 J",
+        "B": "2.8 J",
+        "C": "3.5 J",
+        "D": "4.2 J",
+        "E": "4.9 J",
+        "F": "5.6 J 46 47 48"
+      },
+      "correct_answer": "B",
+      "raw_text": "54    An object of weight 40 N hangs from the end of a light inextensible string of length 0.35 m,\n      which is attached to the ceiling. A constant horizontal force of 30 N is applied to the object,\n      causing it to move to a new equilibrium position with the string no longer vertical.\n      By how much has the gravitational potential energy of the object increased as a result of its\n      change of position?\n      A    2.1 J\n      B    2.8 J\n      C    3.5 J\n      D    4.2 J\n      E    4.9 J\n      F    5.6 J\n© UCLES 2016\n\f                   46\n               BLANK PAGE\n© UCLES 2016\n\f                   47\n               BLANK PAGE\n© UCLES 2016\n\f                   48\n               BLANK PAGE\n© UCLES 2016",
+      "diagram_images": []
+    }
+  ]
+}

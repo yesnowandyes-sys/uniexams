@@ -1,0 +1,52 @@
+{
+  "topic_key": "BIO.B10",
+  "topic_name": "Ecosystems",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Misapplied Ecological Definitions",
+      "frequency": "Common",
+      "example_question_id": "Q3, Q15",
+      "why_effective": "Students often memorize examples (e.g., 'tapeworm = parasitism') but fail to identify the specific biological criteria (intraspecific vs interspecific, mutualism vs predation). In Q15, students are distracted by the tree's death (assuming parasitism/predation) and miss the mutualism between the beetle and fungus.",
+      "generation_strategy": "Present a complex biological interaction involving three or more species. Ask the student to identify the specific relationship type between a subset of them, obscuring the relationship with a third organism that is harmed or benefits."
+    },
+    {
+      "distractor_type": "Visual Data Extraction Error",
+      "frequency": "Common",
+      "example_question_id": "Q1, Q13",
+      "why_effective": "In Q1, Statement 3 ('More wolves than moose in 1965') is a specific data point that contradicts the general trend of Moose > Wolves. Students relying on 'general memory' or glancing at the graph rather than checking specific years will select this incorrectly. In Q13, students must sum bars; distractors reflect common arithmetic errors or counting only one species.",
+      "generation_strategy": "Provide a graph with a dominant trend (e.g., Population A > Population B) but distinct 'spikes' or 'dips' that contradict the trend. Ask students to verify specific quantitative statements or derive values that require summing multiple data series."
+    },
+    {
+      "distractor_type": "Methodological Sampling Bias",
+      "frequency": "Recurring",
+      "example_question_id": "Q9, Q10",
+      "why_effective": "Students struggle to distinguish between 'calculating a value correctly' and 'estimating a population accurately'. In Q9, the student calculates the volume swept (Statement 1 correct) but Statement 3 is false because sampling *only the edge* creates a biased sample, regardless of whether the total volume is known. Distractors rely on the student assuming 'more data = accurate model'.",
+      "generation_strategy": "Describe a sampling method with a procedural flaw (e.g., only sampling at the edge of a pond, using a quadrat that is too small for a sparse population). Include a statement where the student performs the math correctly (e.g., calculating the area of the quadrat) but incorrectly claims this allows for a valid population estimate."
+    },
+    {
+      "distractor_type": "Reverse Causality in Pollution Cycles",
+      "frequency": "Common",
+      "example_question_id": "Q4, Q8",
+      "why_effective": "In Q4, Option A suggests oxygen decreases because of *anaerobic* respiration. Students miss that anaerobic respiration only kicks in *after* oxygen is depleted (a consequence, not the initial cause). Option B suggests algae *decrease* oxygen via photosynthesis (a conceptual impossibility), tricking students who associate 'algae bloom' with 'negative outcome'.",
+      "generation_strategy": "Use a 'pollution in a river' graph (BOD/ Oxygen sag curve). Create options that swap cause and effect (e.g., 'Fish die because oxygen is low' vs 'Oxygen is low because bacteria are decomposing dead fish') or attribute oxygen changes to the wrong biological process (e.g., respiration vs photosynthesis)."
+    },
+    {
+      "distractor_type": "Inefficient Energy Transfer Assumptions",
+      "frequency": "Common",
+      "example_question_id": "Q16, Q20",
+      "why_effective": "In Q16, Statement 3 ('4% of energy... used for growth') requires calculating efficiency based on *absorbed* energy (intake - faeces) rather than *consumed* energy. Distractors provide percentages based on the wrong denominator (total intake).",
+      "generation_strategy": "Provide an energy flow diagram with intake, faeces, and respiration losses. Ask for efficiency to growth. Include distractors calculated using 'Energy Consumed' instead of 'Energy Assimilated' (Consumed - Faeces)."
+    },
+    {
+      "distractor_type": "Selection Pressure Misidentification",
+      "frequency": "Rare",
+      "example_question_id": "Q11",
+      "why_effective": "Students often view biotic factors (competition/predation) as evolutionary pressures but overlook abiotic factors or non-lethal factors (e.g., disease immunity, drought) as 'selection pressures'.",
+      "generation_strategy": "List scenarios involving intraspecific competition and interspecific interactions (like disease or drought). Ask if they result in selection pressure. Distractors exclude non-competitive abiotic factors."
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,40 @@
+{
+  "topic_key": "MATHS1.M1",
+  "topic_name": "Units",
+  "module_code": "M1",
+  "corpus_question_count": 3,
+  "corpus_backed": false,
+  "scenarios": [
+    {
+      "scenario_description": "Calculating the density of a material (in $g/cm^3$) given the weight in Newtons and dimensions in cm, requiring intermediate conversion of Weight to Mass.",
+      "key_insight": "Recognizing that Density links Mass to Volume. The student must bridge the gap between Force (Weight) and Mass using $g$, AND bridge the gap between SI volume ($m^3$) and CGS density ($g/cm^3$).",
+      "discrimination_factors": [
+        "Correct use of $W = mg$ to find mass ($kg$)",
+        "Correct volume calculation from geometric diagram",
+        "Ability to convert final SI density ($4000 kg/m^3$) to CGS ($4 g/cm^3$) via $/1000$ heuristic"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Identifying which algebraic expressions yield a specific unit (kg) from a list containing Newtons ($kg m s^{-2}$), Joules ($kg m^2 s^{-2}$), and densities ($kg m^{-3}$).",
+      "key_insight": "Treating units as algebraic quantities. 'Canceling' terms ($m/m = 1$) to verify homogeneity. E.g., $(kg m s^{-2}) / (m s^{-2}) = kg$.",
+      "discrimination_factors": [
+        "Dimensional analysis fluency",
+        "Ability to invert compound units (division vs multiplication)",
+        "Resisting the urge to calculate numbers and analyzing symbols instead"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Converting the radius of a nucleus from scaled-down atomic units ($0.05$ nm divided by $50,000$) into femtometres ($10^{-15}$ m).",
+      "key_insight": "Managing two simultaneous scales: the physical ratio ($1/50,000$) and the metric prefix shift ($nm \to m \to fm$). The 'Aha!' moment is realizing $1 \\ nm = 10^6 \\ fm$, creating a shortcut for the math.",
+      "discrimination_factors": [
+        "Working with negative exponents and reciprocals",
+        "Understanding metric prefix hierarchy (nano vs femto)",
+        "Estimation skills to handle $10^{-15}$ without arithmetic overflow"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,38 @@
+{
+  "topic_key": "CHEM.C15",
+  "topic_name": "Kinetic/Particle theory",
+  "module_code": "C",
+  "corpus_question_count": 1,
+  "corpus_backed": false,
+  "scenarios": [
+    {
+      "scenario_description": "Two balloons are filled with equal amounts of gas; one with Helium, one with Argon. Both are kept in a room at constant temperature. A student argues that because the temperature is the same, the particles in both balloons must be moving at the exact same speed.",
+      "key_insight": "Temperature determines the *average Kinetic Energy*, not the speed directly. Since KE depends on mass ($1/2 mv^2$), lighter particles (Helium) must move faster than heavier particles (Argon) to maintain the same energy.",
+      "discrimination_factors": [
+        "Distinguishing between KE and velocity",
+        "Understanding the inverse relationship between mass and speed at constant energy"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A diffusion experiment is conducted with Gas X and Gas Y. Gas Y is detected 4 times faster than Gas X. Students are asked to determine the ratio of the molar masses of the gases ($M_X / M_Y$) assuming constant temperature.",
+      "key_insight": "Relates Time ($t$) to Speed ($v$) and Speed to Mass ($m$). If Gas Y is faster ($v_y = 4v_x$), then $KE_y = 16 KE_x$ (incorrect logic) OR $v^2 \\propto 1/m$. Since $v \\propto 1/\\sqrt{m}$, a speed ratio of 4 implies a mass ratio of $4^2 = 16$. Gas X is 16 times heavier than Gas Y.",
+      "discrimination_factors": [
+        "Algebraic manipulation of $v \\propto 1/\\sqrt{m}$",
+        "Inverse proportionality logic",
+        "Squaring ratios to solve for mass"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A flask of gas is heated from 300 K to 600 K. A student claims that the particles will travel exactly twice as fast at the higher temperature.",
+      "key_insight": "Kinetic energy is directly proportional to temperature ($T \\propto v^2$). Therefore, doubling the temperature (in Kelvin) doubles the KE, which means speed only increases by a factor of $\\sqrt{2}$.",
+      "discrimination_factors": [
+        "Understanding the square root relationship between T and v",
+        "Distinguishing linear vs. exponential scaling"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

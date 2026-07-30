@@ -1,0 +1,31 @@
+{
+  "topic_key": "MATHS1.M1",
+  "topic_name": "Units",
+  "module_code": "M1",
+  "corpus_question_count": 3,
+  "corpus_backed": false,
+  "distractors": [
+    {
+      "distractor_type": "Prefix Mismatch (SI vs. Derived)",
+      "frequency": "common",
+      "example_question_id": "NSAA-2016-S1-Q30",
+      "why_effective": "Exploits the gap between calculating in SI units ($kg/m^3$) and the requirement to express the answer in derived CGS units ($g/cm^3$). Students often fail to perform the final $1000x$ unit conversion, selecting the raw SI value instead.",
+      "generation_strategy": "Design questions where the intermediate calculation yields a value $V$ in SI units (e.g., $4000 \\ kg/m^3$), but the options include both $V$ and $V/1000$ (e.g., $4.0$ vs $0.4$) representing the CGS conversion error."
+    },
+    {
+      "distractor_type": "Hidden Homogeneity Trap",
+      "frequency": 1,
+      "example_question_id": "NSAA-2017-S1-Q32",
+      "why_effective": "Tests dimensional analysis under time pressure. Options pair calculations that yield the *same numerical value* but different *units* (e.g., Calculation 2 yields 40 N, not 40 kg), forcing students to distinguish between quantity types, not just arithmetic results.",
+      "generation_strategy": "Create a matching-style question where distractor options result from calculations that are numerically identical ($40$) but dimensionally incorrect ($N$ or $kg/m^2$ vs $kg$)."
+    },
+    {
+      "distractor_type": "Exponent Scaling Errors",
+      "frequency": 1,
+      "example_question_id": "NSAA-2017-S1-Q54",
+      "why_effective": "Relies on confusion between multiplicative factors ($50,000$) and exponential shifts ($10^{-3}$ vs $10^{-15}$). Students frequently conflate the two or drop a negative sign during the $10^{-15}$ normalization step.",
+      "generation_strategy": "Use small number ratios (e.g., $1/50,000$) combined with large negative exponents (e.g., $10^{-15}$). Distractors should include powers of 10 off by factors of $10^3$ or $10^6$."
+    }
+  ],
+  "parse_repaired": true
+}

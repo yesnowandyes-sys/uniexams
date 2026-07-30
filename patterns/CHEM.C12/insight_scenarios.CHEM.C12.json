@@ -1,0 +1,48 @@
+{
+  "topic_key": "CHEM.C12",
+  "topic_name": "Electrolysis",
+  "module_code": "C",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is presented with a cell containing aqueous copper(II) sulfate and inert carbon electrodes. They must predict the products. Another student uses copper electrodes instead.",
+      "key_insight": "Inert electrodes force water oxidation at the anode ($O_2$ produced), while active copper electrodes result in the anode dissolving ($Cu \rightarrow Cu^{2+} + 2e^-$) to maintain concentration.",
+      "discrimination_factors": [
+        "Distinguishing inert vs. active electrodes",
+        "Recall of anode half-equation for aqueous sulfates"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Equal masses of products are collected at the cathode in two separate beakers: one contains molten KCl, the other aqueous $CuSO_4$. The student is asked to compare the volume of gas produced at the anodes (or the charge required).",
+      "key_insight": "For Potassium (Group 1), 1 mole of electrons produces 1 mole of K (39g). For Copper (Transition metal), 2 moles of electrons produce 1 mole of Cu (63.5g). Producing equal masses requires vastly different amounts of charge and results in different gas volumes ($Cl_2$ vs $O_2$).",
+      "discrimination_factors": [
+        "Comparing valency/charge ratios",
+        "Handling multi-step stoichiometry",
+        "Identifying products in different phases"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Concentrated aqueous NaCl is electrolysed. The solution is tested with Universal Indicator or a pH probe after the reaction stops.",
+      "key_insight": "Discharging $Cl^-$ prevents $OH^-$ from being discharged at the anode, while $H^+$ is discharged at the cathode. Removal of $H^+$ leaves an excess of $OH^-$, resulting in an alkaline solution (pH > 7).",
+      "discrimination_factors": [
+        "Linking ion removal to pH",
+        "Discharge preference of halides vs hydroxide in concentrated solutions"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A student electrolyses molten $Al_2O_3$ and is given a rate of electron flow in 'moles of electrons per second'. They must calculate the mass of Aluminum produced in a specific duration (e.g., 48 seconds).",
+      "key_insight": "The calculation requires linking the rate ($mol \\cdot s^{-1}$) to total moles of electrons, then applying the mole ratio for the reduction half-equation ($Al^{3+} + 3e^- \rightarrow Al$).",
+      "discrimination_factors": [
+        "Managing non-standard units (moles/sec)",
+        "Applying 3:1 stoichiometry for Aluminum",
+        "Avoiding errors with isotope masses or unit conversions"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

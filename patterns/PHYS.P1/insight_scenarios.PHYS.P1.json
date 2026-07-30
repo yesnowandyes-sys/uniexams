@@ -1,0 +1,50 @@
+{
+  "topic_key": "PHYS.P1",
+  "topic_name": "Electricity",
+  "module_code": "P",
+  "corpus_question_count": 78,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A series circuit contains 20 identical lamps rated for total power P. One lamp fails and 'short-circuits' (becomes a wire). Determine the new total power dissipated by the remaining 19 lamps.",
+      "key_insight": "Shorting one resistor reduces total resistance ($R_{new} = 19/20 \times R_{old}$). Since $V$ is constant, $I$ increases ($I_{new} = 20/19 \times I_{old}$). Power is $P_{total} = VI$. Thus, $P_{new} = (20/19) P_{old}$. This is counter-intuitive because the total resistance dropped, yet total power dissipated in the remaining lamps increased.",
+      "discrimination_factors": [
+        "Understanding that shorting reduces resistance",
+        "Applying $P=VI$ or $P=V^2/R$ correctly to the whole circuit",
+        "Avoiding the trap that fewer components = less power"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A wire of resistance R is melted and reformed into a new wire with half the diameter (and conserved volume). Calculate the new resistance.",
+      "key_insight": "Resistance $R = \rho L / A$. Volume $V = L \times A$ is constant. If diameter $d$ is halved, Area $A$ decreases by factor 4 ($d^2$). To conserve Volume ($L_{new} A_{new} = L_{old} A_{old}$), Length $L$ must increase by factor 4. $R_{new} = \rho (4L) / (A/4) = 16 \rho L/A = 16R$. The geometric interdependence of L and A is the critical 'Aha!' moment.",
+      "discrimination_factors": [
+        "Area scaling (squared) vs Length scaling (linear)",
+        "Conservation of volume constraint",
+        "Combining multipliers ($4 \times 4$) correctly"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A circuit contains a fixed resistor in series with a variable resistor and a constant voltage battery. Determine the value of the variable resistor's resistance that maximizes the power dissipated in the *fixed* resistor.",
+      "key_insight": "Power in the fixed resistor $P_{fix} = I^2 R_{fix}$. To maximize $P_{fix}$, we must maximize $I$. Since $I = V / (R_{fix} + R_{var})$, $I$ is maximized when the denominator is smallest. Therefore, $R_{var}$ should be **zero** (minimum resistance). Note the distinction: This is *not* the Maximum Power Transfer theorem (which applies to power in the *load* or when matching source resistance), which is a common confusion point for students.",
+      "discrimination_factors": [
+        "Differentiating between maximizing current vs impedance matching",
+        "Recognizing that variable resistor is in series",
+        "Avoiding the 'matched resistance' trap"
+      ],
+      "difficulty_band": "3-4"
+    },
+    {
+      "scenario_description": "An ideal transformer steps up voltage for transmission. The secondary circuit has a high resistance (long cables). Calculate the power loss in the cables given input power and voltage/current values.",
+      "key_insight": "High-voltage transmission minimizes current ($I = P/V$). Power loss in cables is $P_{loss} = I_{cable}^2 R_{cable}$. Because $P_{loss}$ depends on the square of the current, reducing the current by a factor of 10 (by stepping up voltage 10x) reduces power loss by a factor of 100. The scenario tests the quadratic impact of current on power loss.",
+      "discrimination_factors": [
+        "Using $P=VI$ to find transmission current",
+        "Using $P_{loss} = I^2 R$",
+        "Understanding the relationship between stepping voltage up and stepping current down"
+      ],
+      "difficulty_band": "3-5"
+    }
+  ],
+  "_raw": null
+}

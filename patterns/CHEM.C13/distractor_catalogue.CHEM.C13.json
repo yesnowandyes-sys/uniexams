@@ -1,0 +1,59 @@
+{
+  "topic_key": "CHEM.C13",
+  "topic_name": "Carbon/Organic chemistry",
+  "module_code": "C",
+  "corpus_question_count": 25,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Symmetry Misidentification",
+      "frequency": 5,
+      "example_question_id": "NSAA-2021-S1-Q49, NSAA-2022-S1-Q49",
+      "why_effective": "Exploits the tendency for students to overlook substituent effects on symmetry (isomerism). For example, propanoic acid vs ethyl methanoate confusion (Q49 2021) or the methyl branch in poly(pent-2-ene) (Q46 2021).",
+      "generation_strategy": "Create target molecules with a central functional group and asymmetrical alkyl chains of equal total carbon count but different branching (e.g., C1 + C4 vs C2 + C3). Include options that swap these branches."
+    },
+    {
+      "distractor_type": "Stoichiometry Decoy (Molar Mass Errors)",
+      "frequency": 4,
+      "example_question_id": "NSAA-2022-S1-Q59, NSAA-2022-S2-Y-Q37",
+      "why_effective": "Students often lose track of units or fail to balance equations (e.g., forgetting diatomic Br\u2082 or H\u2082), leading to M\u1d63 calculations that are exactly 2x or 0.5x the correct value, or simply off by the mass of a water molecule.",
+      "generation_strategy": "Derive incorrect options by mathematically manipulating the correct Mr: Mr/2, 2*Mr, Mr +/- 1 (atomic mass unit), Mr +/- 18 (water). Also include the mass of a common isomer or reactant."
+    },
+    {
+      "distractor_type": "Partial/Premature Functional Group Conversion",
+      "frequency": 3,
+      "example_question_id": "NSAA-2021-S2-Y-Q26, NSAA-2020-S2-Y-Q27",
+      "why_effective": "Tests full reaction pathway retention. Students select the product of step *n* instead of step *n+1*, or misidentify the final oxidation state (e.g., selecting the alcohol intermediate instead of the final ketone/carboxylic acid).",
+      "generation_strategy": "For multi-step synthesis questions, include options that depict the intermediate structure after step 1 or 2 as if it were the final product."
+    },
+    {
+      "distractor_type": "Degree of Unsaturation (DoU) Neglect",
+      "frequency": 3,
+      "example_question_id": "NSAA-2021-S2-Y-Q36, NSAA-2022-S2-Y-Q25",
+      "why_effective": "Students correctly identify combustion product ratios but fail to apply the 'Degree of Unsaturation' rule (rings + pi bonds), leading them to propose saturated structures for unsaturated ratios.",
+      "generation_strategy": "Calculate products for a saturated alkane. Use this as a distractor when the question implies rings or double bonds. Alternatively, provide isomers that satisfy the formula but not the reactivity (e.g., alkane vs alkene)."
+    },
+    {
+      "distractor_type": "Spatial Isomer (E/Z) Blindness",
+      "frequency": 3,
+      "example_question_id": "NSAA-2022-S1-Q54, NSAA-2020-S2-Y-Q39",
+      "why_effective": "Standard 2D displayed structures hide 3D geometry. Students fail to distinguish between (E)- and (Z)- isomers or stereospecific addition products (anti-addition of Bromine).",
+      "generation_strategy": "For bromination questions, include the 'syn-addition' product (meso compound incorrectly drawn) or the alternative geometric isomer (e.g., (Z)-but-2-ene product from (E)-but-2-ene)."
+    },
+    {
+      "distractor_type": "Reversal of Reactivity Order",
+      "frequency": 2,
+      "example_question_id": "NSAA-2021-S2-Y-Q29, NSAA-2021-S2-Y-Q38",
+      "why_effective": "Exploits confusion over Markovnikov vs Anti-Markovnikov rules or carbocation stability. Students expect the major product to be the least substituted (anti-Markovnikov) due to misremembered rules.",
+      "generation_strategy": "Generate the Anti-Markovnikov addition product and place it alongside the correct Markovnikov product in options for reactions involving HX or H\u2082O with alkenes."
+    },
+    {
+      "distractor_type": "Isomer Count Exhaustion Failures",
+      "frequency": 2,
+      "example_question_id": "NSAA-2020-S2-Y-Q27, NSAA-2021-S2-Y-Q36",
+      "why_effective": "Combinatorial counting is prone to error (duplicates or missed isomers). Options are usually N-1 or N+1.",
+      "generation_strategy": "Create options: Total Isomers, Total Isomers - 1, Total Isomers - 2, Total Isomers - (number of stereoisomers)."
+    }
+  ],
+  "_raw": null
+}

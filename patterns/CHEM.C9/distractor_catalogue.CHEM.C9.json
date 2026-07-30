@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C9",
+  "topic_name": "Acids, bases and salts",
+  "module_code": "C",
+  "corpus_question_count": 9,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Weak/Strong Property Misattribution",
+      "frequency": 4,
+      "example_question_id": "Q3",
+      "why_effective": "Students often confuse 'concentration' (amount) with 'strength' (degree of ionization). This distractor type exploits the misconception that a weak acid does not react stoichiometrically with bases or carbonates, or that reaction rate/speed is the only defining factor of strength.",
+      "generation_strategy": "Present a scenario comparing a strong and weak acid. Include options that assert properties like 'reacts with carbonate' or 'neutralizes with NaOH' are unique to strong acids. The correct answer must rely on kinetic (rate/conductivity) differences, while the distractor relies on incorrect chemical incompatibilities."
+    },
+    {
+      "distractor_type": "Polyprotic pH Neglect",
+      "frequency": 1,
+      "example_question_id": "Q5",
+      "why_effective": "Students frequently overlook that diprotic acids like H2SO4 release double the H+ compared to monoprotic HCl, assuming pH depends only on molarity. This leads to incorrect predictions about pH relative to 1.0.",
+      "generation_strategy": "Compare 0.1 mol dm-3 solutions of HCl (monoprotic) and H2SO4 (diprotic). Include a distractor stating the pH of sulfuric acid is 'greater than 1.0' (less acidic), when it is actually lower (more acidic) due to the second proton dissociation."
+    },
+    {
+      "distractor_type": "Neutralization Target Range Confusion",
+      "frequency": 1,
+      "example_question_id": "Q9",
+      "why_effective": "In applied contexts (antacids), students often aim for pH 7 (neutral) rather than the specified 'normal range' (e.g., pH 2-3). Calculating moles for full neutralization yields a distractor value that is chemically correct for a different goal than the question asked.",
+      "generation_strategy": "Provide a titration-style problem with a target pH range that is weakly acidic, not neutral. Calculate the moles required for complete neutralization (to pH 7) and use this value as a distractor option (e.g., Option D in Q9)."
+    },
+    {
+      "distractor_type": "Invisible Reaction Assumption",
+      "frequency": 1,
+      "example_question_id": "Q7",
+      "why_effective": "Students applying acid-base logic to precipitation or redox questions often assume 'Acid + Base = Neutralization (visually boring)'. They may overlook that HCl(aq) + NaOH(aq) involves visible indicator changes or simply classify it as 'no change' in a qualitative survey compared to precipitates.",
+      "generation_strategy": "In a 'visible change' multiple-select question, include a standard strong acid/strong base neutralization pair. The distractor asserts 'no visible change' based on the absence of precipitate/gas, implicitly testing if the student considers heat/neutralization as a 'change' or strictly observing precipitation indicators."
+    },
+    {
+      "distractor_type": "Indicator Colour Mixing Linear Averaging",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "When mixing indicators, students intuitively try to 'average' the colors (e.g. Blue + Red = Purple). The actual mechanism depends on which indicators are in their 'acid' or 'base' form at the specific pH of the solution, treating pH as a threshold switch rather than a spectrum.",
+      "generation_strategy": "Mix equal volumes of 3 indicators with different transition ranges. Set the solution pH such that some indicators show their Acid color and others show their Base color. Offer a distractor that is a mix of the *transition* colors (e.g. Purple/Green) rather than the specific dominant colors active at that pH."
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,50 @@
+{
+  "topic_key": "MATHS1.M7",
+  "topic_name": "Probability",
+  "module_code": "M1",
+  "corpus_question_count": 28,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A bag contains 'Red' and 'Green' items. A player draws items one by one without replacement until a 'Red' is drawn. The prompt asks for the probability that the player draws more Greens than Reds (or specific counts of Greens) before stopping.",
+      "key_insight": "The event of 'taking more green sweets than red' is functionally equivalent to the 'bad event' of drawing only green sweets until the supply runs out (or until the last try). Students must recognize this equivalence to sum the geometric probabilities efficiently (P(G) * P(G) * ... * P(R)) rather than listing every permutation.",
+      "discrimination_factors": [
+        "Ability to model 'without replacement' iteratively",
+        "Geometric series summation (finite) with varying denominators (n/n, n-1/n-1...)",
+        "Avoidance of the 'Gambler's Fallacy' or incorrect infinite series summation"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A conditional probability scenario (e.g., Bus then Train) where the prompt gives P(Effect | Cause) and asks for P(Cause | Effect). The question involves nested probabilities (e.g., 0.6 * 0.8).",
+      "key_insight": "The core 'Aha!' moment is the inversion of the probability tree. The student must calculate the intersection (Joint Probability) and divide by the new evidence. Formally, identifying that the denominator must be the sum of all ways to arrive at the observed evidence (Total Probability).",
+      "discrimination_factors": [
+        "Parsing 'Given that' syntax correctly to identify the condition vs the target",
+        "Applying Bayes' Theorem or Tree Diagram inversion",
+        "Managing arithmetic with decimals and converting to fractions for answer matching"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A system of dependent selection (e.g., moving a counter from Bag A to Bag B, then picking from Bag B). The probability of the final outcome is given (e.g., 0.2), and the student must deduce the number of items in the bag (Variable X).",
+      "key_insight": "Students must work backwards through the probability chain. The solution involves setting up a rational equation where the variable X appears in the numerator of the first pick and the denominator of the second pick (e.g., (2/5) * (x+1)/(y+2) = 0.2). The insight is recognizing that X must be an integer, which constrains the possible fractions.",
+      "discrimination_factors": [
+        "Forming algebraic fractions from probability trees",
+        "Solving polynomial equations derived from probability constraints",
+        "Integer variable constraint checking (combinatorics logic)"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Two-way table (Activity vs Gender) with missing totals. The prompt asks for a conditional probability restricted to a sub-group (e.g., 'A boy is picked...').",
+      "key_insight": "The 'Aha!' moment is realizing the table is a system of equations. Sub-totals (e.g., Total Tennis) must equal the sum of their parts (Girls Tennis + Boys Tennis). The student must use the sub-totals to find missing cells (e.g., 36 total - 12 girls = 24 boys) before calculating the probability fraction.",
+      "discrimination_factors": [
+        "Simultaneous equation solving disguised as a table",
+        "Careful reading of the 'Condition' (P(A|B) vs P(B|A))",
+        "Distractor avoidance (using Total Students vs Total Boys)"
+      ],
+      "difficulty_band": "1-3"
+    }
+  ],
+  "_raw": null
+}

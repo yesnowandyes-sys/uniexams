@@ -1,0 +1,1125 @@
+{
+  "source_file": "ENGAA_2017_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2017,
+  "section": "Section1",
+  "total_questions": 54,
+  "questions": [
+    {
+      "id": "ENGAA-2017-S1-Q1",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 Evaluate ( 12 + 3 ) 2 ( 12 − 3 ) 2",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "3 5",
+        "C": "3 7",
+        "D": "3",
+        "E": "3 3",
+        "F": "9 5"
+      },
+      "correct_answer": "F",
+      "raw_text": "1     Evaluate\n                 ( 12 + 3 )   2\n                 ( 12 − 3 )   2\n      A    1\n      B    3\n           5\n      C\n           3\n           7\n      D\n           3\n      E    3 3\n      F    9\n© UCLES 2017\n\f                                                           5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q2",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 A car is travelling along a horizontal road in a straight line. The graph is a velocity–time graph for part of the car’s journey. 35 velocity / m s–1 30 25 20 15 10 5 0 0 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 time / s During this part of the journey, what is the total distance that the car travels while it is decelerating?",
+      "has_diagram": false,
+      "options": {
+        "A": "400 m",
+        "B": "500 m",
+        "C": "550 m",
+        "D": "600 m",
+        "E": "750 m",
+        "F": "1400 m",
+        "G": "1800 m",
+        "H": "1900 m 6"
+      },
+      "correct_answer": "B",
+      "raw_text": "2     A car is travelling along a horizontal road in a straight line.\n      The graph is a velocity–time graph for part of the car’s journey.\n                         35\n      velocity / m s–1\n                         30\n                         25\n                     20\n                     15\n                         10\n                         5\n                         0\n                              0   10   20   30   40   50       60   70   80   90 100 110 120 130 140 150\n                                                                                                 time / s\n      During this part of the journey, what is the total distance that the car travels while it is\n      decelerating?\n      A    400 m\n      B    500 m\n      C    550 m\n      D    600 m\n      E    750 m\n      F    1400 m\n      G    1800 m\n      H    1900 m\n© UCLES 2017                                                                                         [Turn over\n\f                                                    6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q3",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 Solve fully the inequality 2 2 x ≥ 15 − x",
+      "has_diagram": false,
+      "options": {
+        "A": "x ≤ −3",
+        "B": "x ≥ 2.5",
+        "C": "x ≤ −1.5 , x ≥ 5",
+        "D": "− 1 .5 ≤ x ≤ 5",
+        "E": "x ≤ − 3 , x ≥ 2.5",
+        "F": "− 3 ≤ x ≤ 2 .5"
+      },
+      "correct_answer": "E",
+      "raw_text": "3     Solve fully the inequality\n                                     2\n                                   2 x ≥ 15 − x\n      A    x ≤ −3\n      B    x ≥ 2.5\n      C    x ≤ −1.5 , x ≥ 5\n      D    − 1 .5 ≤ x ≤ 5\n      E    x ≤ − 3 , x ≥ 2.5\n      F    − 3 ≤ x ≤ 2 .5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q4",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 When a saucepan of water is heated from below, convection currents form and transfer heat through the liquid. Here are three statements about the water as it is heated: 1 The mass of a fixed volume of the water increases. 2 The density of a fixed mass of the water decreases. 3 The volume of a fixed mass of the water increases. Which of these statements help(s) to explain how convection currents are formed?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 7"
+      },
+      "correct_answer": "G",
+      "raw_text": "4     When a saucepan of water is heated from below, convection currents form and transfer heat\n      through the liquid.\n      Here are three statements about the water as it is heated:\n               1   The mass of a fixed volume of the water increases.\n               2   The density of a fixed mass of the water decreases.\n               3   The volume of a fixed mass of the water increases.\n      Which of these statements help(s) to explain how convection currents are formed?\n      A    none of them\n      B    1 only\n      C    2 only\n      D    3 only\n      E    1 and 2 only\n      F    1 and 3 only\n      G    2 and 3 only\n      H    1, 2 and 3\n© UCLES 2017\n\f                                                   7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q5",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 The equation gives y in terms of x : 2 y = 3 §¨ − 1·¸ − 5 x ©2 ¹ Which one of the following is a rearrangement for x in terms of y ? y−5",
+      "has_diagram": false,
+      "options": {
+        "A": "x =2±2 3 y+5",
+        "B": "x =2±2 3 y+5",
+        "C": "x =2±3 3 y+5",
+        "D": "x = −2 ± 2 3 y+5",
+        "E": "x = −2 ± 3 2 y + 5 ·2",
+        "F": "x = 2 + 2 §¨ ¸ © 3 ¹ 2 x = −2 + 2 §¨ y +5·",
+        "G": "¸ © 3 ¹ 8"
+      },
+      "correct_answer": "B",
+      "raw_text": "5     The equation gives y in terms of x :\n                                                            2\n                                              y = 3 §¨ − 1·¸ − 5\n                                                      x\n                                                   ©2    ¹\n      Which one of the following is a rearrangement for x in terms of y ?\n                           y−5\n      A    x =2±2\n                            3\n                           y+5\n      B    x =2±2\n                            3\n                           y+5\n      C    x =2±3\n                            3\n                            y+5\n      D    x = −2 ± 2\n                                3\n                            y+5\n      E    x = −2 ± 3\n                             2\n                          y + 5 ·2\n      F    x = 2 + 2 §¨  ¸\n                     © 3 ¹\n                                     2\n           x = −2 + 2 §¨\n                           y +5·\n      G                        ¸\n                          © 3 ¹\n© UCLES 2017                                                                [Turn over\n\f                                                     8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q6",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 An electric motor is used to pull a broken-down car slowly from the road up a ramp on to the back of a breakdown truck. The car has a mass of 1200 kg and is lifted through a vertical height of 1.0 m. The total input energy to the motor is 28 kJ and it is 75% efficient. In the process of lifting the car, energy is lost to the surroundings from the motor and from other causes. What is the total energy lost to the surroundings? motor 1.0 m (gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "7.0 kJ",
+        "B": "9.0 kJ",
+        "C": "12 kJ",
+        "D": "16 kJ",
+        "E": "21 kJ",
+        "F": "33 kJ 9"
+      },
+      "correct_answer": "D",
+      "raw_text": "6     An electric motor is used to pull a broken-down car slowly from the road up a ramp on to the\n      back of a breakdown truck.\n      The car has a mass of 1200 kg and is lifted through a vertical height of 1.0 m.\n      The total input energy to the motor is 28 kJ and it is 75% efficient.\n      In the process of lifting the car, energy is lost to the surroundings from the motor and from other\n      causes.\n      What is the total energy lost to the surroundings?\n                                                                  motor\n                                             1.0 m\n      (gravitational field strength = 10 N kg–1)\n      A    7.0 kJ\n      B    9.0 kJ\n      C    12 kJ\n      D    16 kJ\n      E    21 kJ\n      F    33 kJ\n© UCLES 2017\n\f                                                    9",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q6-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q7",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 A fruit stall sells apples costing £ x each, and pears costing £ y each. Sam bought 2 apples and 5 pears, and the total cost of these was £ P. Lesley bought 3 apples and 2 pears, and the total cost of these was £ Q. Which of the following is an expression for the cost, in pounds (£), of a pear? 2Q − 3P",
+      "has_diagram": false,
+      "options": {
+        "A": "3 2Q − 3P",
+        "B": "11 Q −P",
+        "C": "3 Q −P",
+        "D": "11 P −Q",
+        "E": "3 3P − 2Q",
+        "F": "3 3P − 2Q",
+        "G": "11"
+      },
+      "correct_answer": "G",
+      "raw_text": "7     A fruit stall sells apples costing £ x each, and pears costing £ y each.\n      Sam bought 2 apples and 5 pears, and the total cost of these was £ P.\n      Lesley bought 3 apples and 2 pears, and the total cost of these was £ Q.\n      Which of the following is an expression for the cost, in pounds (£), of a pear?\n           2Q − 3P\n      A\n              3\n           2Q − 3P\n      B\n             11\n           Q −P\n      C\n             3\n           Q −P\n      D\n            11\n           P −Q\n      E\n             3\n           3P − 2Q\n      F\n              3\n           3P − 2Q\n      G\n             11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q8",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 In one type of medical scanner a source is placed inside a patient’s body. This source causes pairs of gamma-rays to be emitted simultaneously in opposite directions. Detectors on each side of the patient are used to detect the gamma-rays. The distance between the two detectors is 3.0 m. When the source is at Q, half-way between the detectors, the two gamma-rays arrive at the same time. In a particular scan the gamma-rays arrive at the two detectors with a time difference of 4.0 × 10−10 s. Assume that, inside the patient, the gamma-rays travel at a speed of 3.0 × 108 m s–1. How far from Q, half-way between the detectors, is the gamma-ray source?",
+      "has_diagram": false,
+      "options": {
+        "A": "6.0 mm",
+        "B": "12 mm",
+        "C": "24 mm",
+        "D": "6.0 cm",
+        "E": "12 cm",
+        "F": "24 cm 10"
+      },
+      "correct_answer": "D",
+      "raw_text": "8     In one type of medical scanner a source is placed inside a patient’s body. This source causes\n      pairs of gamma-rays to be emitted simultaneously in opposite directions.\n      Detectors on each side of the patient are used to detect the gamma-rays. The distance\n      between the two detectors is 3.0 m. When the source is at Q, half-way between the detectors,\n      the two gamma-rays arrive at the same time.\n      In a particular scan the gamma-rays arrive at the two detectors with a time difference of\n      4.0 × 10−10 s.\n      Assume that, inside the patient, the gamma-rays travel at a speed of 3.0 × 108 m s–1.\n      How far from Q, half-way between the detectors, is the gamma-ray source?\n      A    6.0 mm\n      B    12 mm\n      C    24 mm\n      D    6.0 cm\n      E    12 cm\n      F    24 cm\n© UCLES 2017                                                                                  [Turn over\n\f                                                 10",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q9",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 P is directly proportional to Q squared. When P is 2, Q is 4. Q is inversely proportional to R. When Q is 2, R is 5. What is P in terms of R ? 5",
+      "has_diagram": false,
+      "options": {
+        "A": "P= R 5",
+        "B": "P= 4R 1",
+        "C": "P= 2 800R 5",
+        "D": "P= 2 4R 25",
+        "E": "P= 2 2R 800",
+        "F": "P= 2 R 2 R",
+        "G": "P= 50 2 25R",
+        "H": "P= 2 11"
+      },
+      "correct_answer": "E",
+      "raw_text": "9     P is directly proportional to Q squared.\n      When P is 2, Q is 4.\n      Q is inversely proportional to R.\n      When Q is 2, R is 5.\n      What is P in terms of R ?\n                5\n      A    P=\n                R\n                 5\n      B    P=\n                4R\n                    1\n      C    P=               2\n                800R\n                 5\n      D    P=           2\n                4R\n                25\n      E    P=           2\n                2R\n                800\n      F    P=       2\n                R\n                    2\n                R\n      G    P=\n                50\n                            2\n                25R\n      H    P=\n                 2\n© UCLES 2017\n\f                                                   11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q10",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 When a plutonium-239 nucleus absorbs a neutron it undergoes nuclear fission. One particular fission reaction results in the creation of xenon and zirconium as daughter nuclei. The nuclear equation for this reaction is shown but with some non-zero integers replaced by the letters w, x, y and z. Q 1 239 w y 1 0 + 94 Pu → 54 Xe + x Zr + z 0n Which equation is correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "w + y = 240",
+        "B": "z = 240 − (w + y)",
+        "C": "x = 40 − z",
+        "D": "94 = 54 + x + 1",
+        "E": "240 = 54 + x",
+        "F": "94 = w + y + 1"
+      },
+      "correct_answer": "B",
+      "raw_text": "10    When a plutonium-239 nucleus absorbs a neutron it undergoes nuclear fission. One particular\n      fission reaction results in the creation of xenon and zirconium as daughter nuclei. The nuclear\n      equation for this reaction is shown but with some non-zero integers replaced by the letters w, x,\n      y and z.\n                                        Q\n                                    1       239       w      y                1\n                                    0   +    94 Pu → 54 Xe + x Zr          + z 0n\n      Which equation is correct?\n      A    w + y = 240\n      B    z = 240 − (w + y)\n      C    x = 40 − z\n      D    94 = 54 + x + 1\n      E    240 = 54 + x\n      F    94 = w + y + 1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q11",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 Which one of the following is a simplification of 2− ( x2 9x2 − 4 ) x 3 (2 − 3 x ) 2",
+      "has_diagram": false,
+      "options": {
+        "A": "− 1− x 2",
+        "B": "− 1+ x 2",
+        "C": "5− x 2",
+        "D": "5+ x 3",
+        "E": "5− x 3",
+        "F": "5+ x 12"
+      },
+      "correct_answer": "D",
+      "raw_text": "11    Which one of the following is a simplification of\n                                                   2−\n                                                             (\n                                                          x2 9x2 − 4   )\n                                                          x 3 (2 − 3 x )\n                  2\n      A    − 1−\n                  x\n                    2\n      B    − 1+\n                    x\n                2\n      C    5−\n                x\n                2\n      D    5+\n                x\n                3\n      E    5−\n                x\n                3\n      F    5+\n                x\n© UCLES 2017                                                                                [Turn over\n\f                                                       12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q12",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 An electric motor is connected to a constant 12 V d.c. supply. The motor is used to lift a mass of 20 kg by means of a rope and pulley. The mass is lifted vertically through a height of 6.0 m in a time of 5.0 s. The complete lifting system (motor, rope and pulley) is 80% efficient. pulley rope 6.0 m motor mass 20 kg What is the current in the electric motor? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "1.6 A",
+        "B": "2.0 A",
+        "C": "2.5 A",
+        "D": "16 A",
+        "E": "20 A",
+        "F": "25 A"
+      },
+      "correct_answer": "F",
+      "raw_text": "12    An electric motor is connected to a constant 12 V d.c. supply. The motor is used to lift a mass\n      of 20 kg by means of a rope and pulley. The mass is lifted vertically through a height of 6.0 m in\n      a time of 5.0 s. The complete lifting system (motor, rope and pulley) is 80% efficient.\n                                               pulley\n                                               rope\n                                                                   6.0 m\n                                       motor                     mass 20 kg\n      What is the current in the electric motor?\n      (gravitational field strength = 10 N kg–1)\n      A    1.6 A\n      B    2.0 A\n      C    2.5 A\n      D    16 A\n      E    20 A\n      F    25 A",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q12-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q13",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 What is the value of x that makes the following expression correct? 3+2 x x − x 2 4 8 = 4 2",
+      "has_diagram": false,
+      "options": {
+        "A": "− 2.25",
+        "B": "− 1.75",
+        "C": "− 1 .5",
+        "D": "− 0 .5",
+        "E": "− 0.25"
+      },
+      "correct_answer": "D",
+      "raw_text": "13    What is the value of x that makes the following expression correct?\n                                                   3+2 x x − x\n                                               2        4 8      = 4 2\n      A    − 2.25\n      B    − 1.75\n      C    − 1 .5\n      D    − 0 .5\n      E    − 0.25\n© UCLES 2017\n\f                                                    13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q14",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 The nuclide QP X decays to the stable nuclide Y. During this process four particles are emitted: an α-particle and three β– particles. Which of the following is not a nuclide that could be formed at any stage during this process? nuclide atomic mass atomic number A P Q−1 B P Q+1 C P Q+2 D P Q+3 E P−4 Q−2 F P−4 Q−1 G P−4 Q H P−4 Q+1",
+      "has_diagram": false,
+      "options": {
+        "A": "atomic mass = P, atomic number = Q−1",
+        "B": "atomic mass = P, atomic number = Q+1",
+        "C": "atomic mass = P, atomic number = Q+2",
+        "D": "atomic mass = P, atomic number = Q+3",
+        "E": "atomic mass = P−4, atomic number = Q−2",
+        "F": "atomic mass = P−4, atomic number = Q−1",
+        "G": "atomic mass = P−4, atomic number = Q",
+        "H": "atomic mass = P−4, atomic number = Q+1"
+      },
+      "correct_answer": "A",
+      "raw_text": "14    The nuclide QP X decays to the stable nuclide Y. During this process four particles are emitted:\n      an α-particle and three β– particles.\n      Which of the following is not a nuclide that could be formed at any stage during this process?\n      nuclide       atomic mass       atomic number\n          A                 P                 Q−1\n          B                 P                 Q+1\n          C                 P                 Q+2\n          D                 P                 Q+3\n          E                P−4                Q−2\n          F                P−4                Q−1\n          G                P−4                Q\n          H                P−4                Q+1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q15",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 There are 100 students in Year 10. Each student studies exactly one of French, German, and Spanish. X girls study French and there are 3X girls in total. 2Y boys study German. There are 35 students studying Spanish of which Y are boys. Which of the following is an expression for the total number of students studying German?",
+      "has_diagram": false,
+      "options": {
+        "A": "X + 2Y",
+        "B": "X + Y + 35",
+        "C": "X + 3Y − 35",
+        "D": "2X + 2Y",
+        "E": "2X + Y − 35",
+        "F": "2X + 3Y − 35",
+        "G": "2X + Y + 35 14"
+      },
+      "correct_answer": "F",
+      "raw_text": "15    There are 100 students in Year 10.\n      Each student studies exactly one of French, German, and Spanish.\n      X girls study French and there are 3X girls in total.\n      2Y boys study German.\n      There are 35 students studying Spanish of which Y are boys.\n      Which of the following is an expression for the total number of students studying German?\n      A       X + 2Y\n      B       X + Y + 35\n      C       X + 3Y − 35\n      D       2X + 2Y\n      E       2X + Y − 35\n      F       2X + 3Y − 35\n      G       2X + Y + 35\n© UCLES 2017                                                                                 [Turn over\n\f                                                    14",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q16",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 The radius of an iron-56 atom is 3.0 × 104 times greater than the radius of an iron-56 nucleus. density of an iron atom What is the value of ? density of an iron nucleus",
+      "has_diagram": false,
+      "options": {
+        "A": "(3.0 × 104)–3",
+        "B": "(3.0 × 104)–2",
+        "C": "(3.0 × 104)–1",
+        "D": "(3.0 × 104)1",
+        "E": "(3.0 × 104)2",
+        "F": "(3.0 × 104)3"
+      },
+      "correct_answer": "A",
+      "raw_text": "16    The radius of an iron-56 atom is 3.0 × 104 times greater than the radius of an iron-56 nucleus.\n                              density of an iron atom\n      What is the value of                              ?\n                             density of an iron nucleus\n      A    (3.0 × 104)–3\n      B    (3.0 × 104)–2\n      C    (3.0 × 104)–1\n      D    (3.0 × 104)1\n      E    (3.0 × 104)2\n      F    (3.0 × 104)3",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q17",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 An exterior angle of a regular polygon with n sides is 4° larger than an exterior angle of a regular polygon with ( n + 3) sides. What is the value of n ?",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "18",
+        "E": "21",
+        "F": "24",
+        "G": "27 15"
+      },
+      "correct_answer": "C",
+      "raw_text": "17    An exterior angle of a regular polygon with n sides is 4° larger than an exterior angle of a\n      regular polygon with ( n + 3) sides.\n      What is the value of n ?\n      A    10\n      B    12\n      C    15\n      D    18\n      E    21\n      F    24\n      G    27\n© UCLES 2017\n\f                                                15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q18",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 Graph 1 shows how the displacement of one of the particles of a medium varies with time in seconds as a wave travels through the medium. displacement Graph 1 0 t1 t2 time Graph 2 shows how the displacement varies with distance in metres at one time for the same wave. displacement Graph 2 0 x2 x1 distance Which expression gives the speed in m s–1 of the wave?",
+      "has_diagram": true,
+      "options": {
+        "A": "4( x2 − x1) 3(t2 − t1)",
+        "B": "3( x2 − x1) 2(t2 − t1)",
+        "C": "2( x2 − x1) t2 − t1",
+        "D": "8( x2 − x1) 3(t2 − t1)",
+        "E": "3( x2 − x1) t2 − t1",
+        "F": "6( x2 − x1) t2 − t1 16"
+      },
+      "correct_answer": "E",
+      "raw_text": "18    Graph 1 shows how the displacement of one of the particles of a medium varies with time in\n      seconds as a wave travels through the medium.\n       displacement                                                                     Graph 1\n                         0   t1                                                   t2        time\n      Graph 2 shows how the displacement varies with distance in metres at one time for the same\n      wave.\n        displacement                                                                   Graph 2\n                         0                                                   x2\n                                                         x1                               distance\n      Which expression gives the speed in m s–1 of the wave?\n      A    4( x2 − x1)\n           3(t2 − t1)\n      B    3( x2 − x1)\n           2(t2 − t1)\n      C    2( x2 − x1)\n             t2 − t1\n      D    8( x2 − x1)\n           3(t2 − t1)\n      E    3( x2 − x1)\n             t2 − t1\n       F   6( x2 − x1)\n             t2 − t1\n© UCLES 2017                                                                              [Turn over\n\f                                                 16",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q18-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q19",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 The bearing of a ship R from a lighthouse L is 220°",
+      "has_diagram": false,
+      "options": {
+        "A": "070°",
+        "C": "090°",
+        "B": "080°",
+        "D": "100°",
+        "E": "140°"
+      },
+      "correct_answer": "B",
+      "raw_text": "19    The bearing of a ship R from a lighthouse L is 220°\n      A canoe C is due North of R.\n      C is the same distance from the ship and the lighthouse.\n      What is the bearing of L from C ?\n      A    070°\n      B    080°\n      C    090°\n      D    100°\n      E    140°",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q20",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 A kettle is designed to work from a car’s power socket. The kettle has a power rating of 150 W when a constant voltage of 12.0 V d.c. is applied across its element. How much charge passes through the element of this kettle when the voltage of 12.0 V is applied across it for 20 minutes?",
+      "has_diagram": false,
+      "options": {
+        "A": "96 C",
+        "B": "250 C",
+        "C": "15 000 C",
+        "D": "36 000 C",
+        "E": "900 000 C",
+        "F": "2 160 000 C"
+      },
+      "correct_answer": "C",
+      "raw_text": "20    A kettle is designed to work from a car’s power socket. The kettle has a power rating of 150 W\n      when a constant voltage of 12.0 V d.c. is applied across its element.\n      How much charge passes through the element of this kettle when the voltage of 12.0 V is\n      applied across it for 20 minutes?\n      A    96 C\n      B    250 C\n      C    15 000 C\n      D    36 000 C\n      E    900 000 C\n      F    2 160 000 C",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q21",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 The hands of a 12-hour analogue clock move continuously. When the time on the clock is 4:00, the angle between the minute hand and the hour hand is 120°. What is the angle between the two hands at 4:40 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "80°",
+        "B": "100°",
+        "C": "110°",
+        "D": "120°",
+        "E": "140° 17"
+      },
+      "correct_answer": "B",
+      "raw_text": "21    The hands of a 12-hour analogue clock move continuously. When the time on the clock is 4:00,\n      the angle between the minute hand and the hour hand is 120°.\n      What is the angle between the two hands at 4:40 ?\n      A    80°\n      B    100°\n      C    110°\n      D    120°\n      E    140°\n© UCLES 2017\n\f                                                    17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q22",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 A freight train travelling on a straight horizontal track at 2.0 m s–1 collides with a passenger train travelling at 5.0 m s–1 in the opposite direction. Both trains immediately come to a complete stop on the track. The freight train has three locomotives of 130 tonnes each and seven container wagons of 30 tonnes each. The passenger train has two locomotives of 70 tonnes each and a number of passenger carriages of 10 tonnes each. How many passenger carriages does the passenger train have?",
+      "has_diagram": false,
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "10",
+        "D": "24",
+        "E": "46"
+      },
+      "correct_answer": "C",
+      "raw_text": "22    A freight train travelling on a straight horizontal track at 2.0 m s–1 collides with a passenger train\n      travelling at 5.0 m s–1 in the opposite direction. Both trains immediately come to a complete stop\n      on the track.\n      The freight train has three locomotives of 130 tonnes each and seven container wagons of\n      30 tonnes each. The passenger train has two locomotives of 70 tonnes each and a number of\n      passenger carriages of 10 tonnes each.\n      How many passenger carriages does the passenger train have?\n      A    7\n      B    9\n      C    10\n      D    24\n      E    46",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q23",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 A pet shop has 4 female rabbits and x male rabbits for sale.",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8",
+        "E": "9",
+        "F": "11",
+        "G": "12 18"
+      },
+      "correct_answer": "C",
+      "raw_text": "23    A pet shop has 4 female rabbits and x male rabbits for sale.\n      A customer buys 2 of the rabbits, chosen at random, and each rabbit is equally likely to be\n      chosen.\n                                                                  1\n      The probability that both the chosen rabbits are male is      .\n                                                                  3\n      What is the value of x ?\n      A    2\n      B    4\n      C    6\n      D    8\n      E    9\n      F    11\n      G    12\n© UCLES 2017                                                                                     [Turn over\n\f                                                      18",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q24",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 Consider the following three statements about a parachutist of mass 72 kg falling vertically at a constant velocity of 5.0 m s–1 after the parachute has opened: 1 The parachutist has a constant kinetic energy of 1800 J. 2 The parachutist is losing gravitational potential energy at a rate of 3600 J s–1. 3 Air resistance and the force of gravity acting on the parachutist are a Newton’s third law pair of forces. Which of the statements is/are correct? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 19"
+      },
+      "correct_answer": "C",
+      "raw_text": "24    Consider the following three statements about a parachutist of mass 72 kg falling vertically at a\n      constant velocity of 5.0 m s–1 after the parachute has opened:\n               1   The parachutist has a constant kinetic energy of 1800 J.\n               2   The parachutist is losing gravitational potential energy at a rate of 3600 J s–1.\n               3   Air resistance and the force of gravity acting on the parachutist are a Newton’s third\n                   law pair of forces.\n      Which of the statements is/are correct?\n      (gravitational field strength = 10 N kg–1)\n      A    none of them\n      B    1 only\n      C    2 only\n      D    3 only\n      E    1 and 2 only\n      F    1 and 3 only\n      G    2 and 3 only\n      H    1, 2 and 3\n© UCLES 2017\n\f                                                  19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q25",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "x O The diagram shows a square with side of length x cm. A circle is drawn with centre O which lies at the mid-point of one of the sides of the square. This side forms part of a diameter of the circle. The circle passes through two corners of the square as shown. What is the area, in cm2, of the shaded part of the semi-circle?",
+      "has_diagram": false,
+      "options": {
+        "A": "(π − 1) x 2 § π−2· 2",
+        "B": "¨ ¸x © 2 ¹ § 3π − 2 · 2",
+        "C": "¨ ¸x © 2 ¹ § 3π − 4 · 2",
+        "D": "¨ ¸x © 4 ¹ § 5π − 4 · 2",
+        "E": "¨ ¸x © 4 ¹ § 5π − 8 · 2",
+        "F": "¨ ¸x © 8 ¹ 20"
+      },
+      "correct_answer": "F",
+      "raw_text": "25\n                                                            x\n                                                       O\n      The diagram shows a square with side of length x cm. A circle is drawn with centre O which lies\n      at the mid-point of one of the sides of the square. This side forms part of a diameter of the\n      circle. The circle passes through two corners of the square as shown.\n      What is the area, in cm2, of the shaded part of the semi-circle?\n      A    (π − 1) x 2\n           § π−2· 2\n      B    ¨    ¸x\n           © 2 ¹\n           § 3π − 2 · 2\n      C    ¨        ¸x\n           © 2 ¹\n           § 3π − 4 · 2\n      D    ¨        ¸x\n           © 4 ¹\n           § 5π − 4 · 2\n      E    ¨        ¸x\n           © 4 ¹\n           § 5π − 8 · 2\n      F    ¨        ¸x\n           © 8 ¹\n© UCLES 2017                                                                              [Turn over\n\f                                                 20",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q26",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 Two radioactive sources X and Y have half-lives of 3.0 hours and 2.0 hours respectively. The product of the decay of both of the sources is a stable isotope of the element Z. Six hours ago a mixture contained the same number of atoms of both X and Y, and no other atoms. What fraction of the mixture is now made up of atoms of Z? 10",
+      "has_diagram": false,
+      "options": {
+        "A": "16 11",
+        "B": "16 12",
+        "C": "16 13",
+        "D": "16 14",
+        "E": "16 15",
+        "F": "16 21"
+      },
+      "correct_answer": "D",
+      "raw_text": "26    Two radioactive sources X and Y have half-lives of 3.0 hours and 2.0 hours respectively. The\n      product of the decay of both of the sources is a stable isotope of the element Z.\n      Six hours ago a mixture contained the same number of atoms of both X and Y, and no other\n      atoms.\n      What fraction of the mixture is now made up of atoms of Z?\n           10\n      A\n           16\n           11\n      B\n           16\n           12\n      C\n           16\n           13\n      D\n           16\n           14\n      E\n           16\n           15\n      F\n           16\n© UCLES 2017\n\f                                                   21",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q27",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 A cylindrical hollow metal pipe is 16 cm long. It has an external diameter of 10 cm and an internal diameter of 8 cm. The density of the metal from which the pipe is made is 8 grams per cm3. [diagram not to scale] 8 cm 16 cm 10 cm What is the mass of the pipe in grams?",
+      "has_diagram": true,
+      "options": {
+        "A": "8π",
+        "B": "16 π",
+        "C": "18 π",
+        "D": "72 π",
+        "E": "128 π",
+        "F": "512 π",
+        "G": "1152 π",
+        "H": "4608 π 22"
+      },
+      "correct_answer": "G",
+      "raw_text": "27    A cylindrical hollow metal pipe is 16 cm long.\n      It has an external diameter of 10 cm and an internal diameter of 8 cm.\n      The density of the metal from which the pipe is made is 8 grams per cm3.\n                                                               [diagram not to scale]\n                            8 cm\n                                                16 cm\n                           10 cm\n      What is the mass of the pipe in grams?\n      A    8π\n      B    16 π\n      C    18 π\n      D    72 π\n      E    128 π\n      F    512 π\n      G    1152 π\n      H    4608 π\n© UCLES 2017                                                                            [Turn over\n\f                                                   22",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q27-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q28",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 Car X passes car Y on a motorway. Car X is travelling at 1.5 times the speed of car Y. 4 The mass of car X is of the mass of car Y. 5 How do the kinetic energies of the two cars compare?",
+      "has_diagram": false,
+      "options": {
+        "A": "kinetic energy of car X = 0.90 × kinetic energy of car Y",
+        "B": "kinetic energy of car X = 0.96 × kinetic energy of car Y",
+        "C": "kinetic energy of car X = 1.20 × kinetic energy of car Y",
+        "D": "kinetic energy of car X = 1.44 × kinetic energy of car Y",
+        "E": "kinetic energy of car X = 1.80 × kinetic energy of car Y 23 PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number. 24"
+      },
+      "correct_answer": "E",
+      "raw_text": "28    Car X passes car Y on a motorway.\n      Car X is travelling at 1.5 times the speed of car Y.\n                             4\n      The mass of car X is     of the mass of car Y.\n                             5\n      How do the kinetic energies of the two cars compare?\n      A    kinetic energy of car X = 0.90 × kinetic energy of car Y\n      B    kinetic energy of car X = 0.96 × kinetic energy of car Y\n      C    kinetic energy of car X = 1.20 × kinetic energy of car Y\n      D    kinetic energy of car X = 1.44 × kinetic energy of car Y\n      E    kinetic energy of car X = 1.80 × kinetic energy of car Y\n© UCLES 2017\n\f                                    23\n        PART B Advanced Mathematics and Advanced Physics\n        NOTE: questions in this part that are not covered by the ESAT\n        content specification are indicated by a cross through the\n        question number.\n© UCLES 2017                                                    [Turn over\n\f                                                   24",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q29",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 Which one of the following is a simplification of 2 § 3+ 3 · 1 − ¨¨ ¸ ¸ ©6−2 3 ¹ 3",
+      "has_diagram": false,
+      "options": {
+        "A": "− 4 3",
+        "B": "4 3 3",
+        "C": "− − 4 7 3 3",
+        "D": "− 4 7 3",
+        "E": "− − 3 4 3",
+        "F": "− 3 4 3",
+        "G": "− 2 3",
+        "H": "2 25"
+      },
+      "correct_answer": "E",
+      "raw_text": "29    Which one of the following is a simplification of\n                                                                2\n                                                     § 3+ 3 ·\n                                                1 − ¨¨      ¸\n                                                            ¸\n                                                     ©6−2 3 ¹\n               3\n      A    −\n               4\n           3\n      B\n           4\n               3   3\n      C    −     −\n               4 7\n           3   3\n      D      −\n           4 7\n               3\n      E    −     − 3\n               4\n           3\n      F      − 3\n           4\n                 3\n      G    −\n                2\n                3\n      H\n               2\n© UCLES 2017\n\f                                                       25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q30",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 The diagram shows a crane being used on a building site. The crane is perfectly balanced about P. [diagram not to scale] 10 m 10 m P counterweight = 2000 kg load = 400 kg weight of the horizontal section of the crane The load is now moved to the left by 5.0 m. To keep the crane perfectly balanced about P, how far does the counterweight have to move, and in which direction? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "1.0 m to the left",
+        "B": "1.0 m to the right",
+        "C": "3.0 m to the left",
+        "D": "3.0 m to the right",
+        "E": "4.0 m to the left",
+        "F": "4.0 m to the right 26"
+      },
+      "correct_answer": "B",
+      "raw_text": "30    The diagram shows a crane being used on a building site. The crane is perfectly balanced\n      about P.\n                                                                                 [diagram not to scale]\n                                                10 m        10 m\n                                                   P\n                                                            counterweight = 2000 kg\n                                      load = 400 kg\n                            weight of the\n                        horizontal section of\n                             the crane\n      The load is now moved to the left by 5.0 m.\n      To keep the crane perfectly balanced about P, how far does the counterweight have to move,\n      and in which direction?\n      (gravitational field strength = 10 N kg–1)\n      A    1.0 m to the left\n      B    1.0 m to the right\n      C    3.0 m to the left\n      D    3.0 m to the right\n      E    4.0 m to the left\n      F    4.0 m to the right\n© UCLES 2017                                                                                       [Turn over\n\f                                                   26",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q30-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q31",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 k is the smallest positive value of x which is a solution to both the equations 2 sin x + 1 = 0 and 2 cos 2 x = 1 How many values of x in the range 0 ≤ x ≤ k are solutions to at least one of these equations?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "8 27"
+      },
+      "correct_answer": "C",
+      "raw_text": "31    k is the smallest positive value of x which is a solution to both the equations 2 sin x + 1 = 0 and\n      2 cos 2 x = 1\n      How many values of x in the range 0 ≤ x ≤ k are solutions to at least one of these equations?\n      A    0\n      B    2\n      C    3\n      D    4\n      E    8\n© UCLES 2017\n\f                                                       27",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q32",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 A ball is thrown vertically upwards in still air and is then caught at the same height when it comes back down. Which velocity–time graph shows this complete motion? (Take upwards as positive, and ignore air resistance.)",
+      "has_diagram": true,
+      "options": {
+        "A": "[diagram: velocity-time graph]",
+        "D": "[diagram: velocity-time graph]",
+        "G": "[diagram: velocity-time graph]"
+      },
+      "correct_answer": "A",
+      "raw_text": "32    A ball is thrown vertically upwards in still air and is then caught at the same height when it\n      comes back down.\n      Which velocity–time graph shows this complete motion?\n      (Take upwards as positive, and ignore air resistance.)\n      A    velocity\n                                        B   velocity                      C\n                                                                              velocity\n                +                                +                                  +\n                 0                                0                                 0\n                      0          time                  0           time                  0             time\n                 –                               –                                  –\n      D                                 E   velocity                      F\n           velocity                                                           velocity\n                +                                +                                 +\n                 0                                0                                 0\n                      0          time                 0            time                  0             time\n                –                                –                                  –\n      G    velocity                     H\n                                            velocity\n                +                                +\n                 0                                0\n                      0          time                 0            time\n                –                                –\n© UCLES 2017                                                                                   [Turn over\n\f                                                     28\n                                                               ( 2 x +1)        x",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q32-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q33",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 Which of the following is a solution to the equation 3 − 6 (3 ) = 0 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "log 2 3",
+        "B": "log 3 2",
+        "C": "2",
+        "D": "log10 2 2",
+        "E": "3"
+      },
+      "correct_answer": "B",
+      "raw_text": "33    Which of the following is a solution to the equation 3               − 6 (3 ) = 0 ?\n      A    log 2 3\n      B    log 3 2\n      C    2\n      D    log10 2\n           2\n      E\n           3",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q34",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 An aircraft is climbing at constant speed in a straight line at an angle of 10° to the horizontal. Which statement about the resultant force on the aircraft is correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "It is parallel to its motion.",
+        "B": "It is perpendicular to its motion.",
+        "C": "It is zero.",
+        "D": "It is equal to its weight.",
+        "E": "It is equal to the drag acting on the aircraft. 29"
+      },
+      "correct_answer": "C",
+      "raw_text": "34    An aircraft is climbing at constant speed in a straight line at an angle of 10° to the horizontal.\n      Which statement about the resultant force on the aircraft is correct?\n      A    It is parallel to its motion.\n      B    It is perpendicular to its motion.\n      C    It is zero.\n      D    It is equal to its weight.\n      E    It is equal to the drag acting on the aircraft.\n© UCLES 2017\n\f                                                        29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q35",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 The diagram shows the outline of a keyhole consisting of three straight sides and an arc from a circle. The sides PQ and RS are both 18 mm in length and when extended meet at the centre of the π circle O forming an angle of radians. 6 The longer arc from Q to R has length 22π mm. [diagram not to scale] O Q R P S What is the area, in mm2, of the keyhole as shaded in the diagram? 841",
+      "has_diagram": true,
+      "options": {
+        "A": "121π + 4 841 3",
+        "B": "121π + 4",
+        "C": "132 π + 225",
+        "D": "132 π + 225 3",
+        "E": "144 π + 225",
+        "F": "144 π + 225 3 30"
+      },
+      "correct_answer": "C",
+      "raw_text": "35    The diagram shows the outline of a keyhole consisting of three straight sides and an arc from a\n      circle.\n      The sides PQ and RS are both 18 mm in length and when extended meet at the centre of the\n                                     π\n      circle O forming an angle of       radians.\n                                     6\n      The longer arc from Q to R has length 22π mm.\n                                                             [diagram not to scale]\n                                           O\n                                     Q              R\n                                 P                  S\n      What is the area, in mm2, of the keyhole as shaded in the diagram?\n                    841\n      A    121π +\n                     4\n                    841 3\n      B    121π +\n                      4\n      C    132 π + 225\n      D    132 π + 225 3\n      E    144 π + 225\n      F    144 π + 225 3\n© UCLES 2017                                                                               [Turn over\n\f                                                   30",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q35-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q36",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 A horizontal, uniform bar of mass 60 kg is 4.0 m long and is pivoted at one end. The bar is held in equilibrium by a force F at the other end of the bar, acting at an angle of 60° to the horizontal. [diagram not to scale] pivot F 60o Which expression gives the magnitude of F in newtons? (gravitational field strength = 10 N kg–1) 30",
+      "has_diagram": false,
+      "options": {
+        "A": "sin 60° 30",
+        "B": "cos 60° 60",
+        "C": "sin 60° 60",
+        "D": "cos 60° 300",
+        "E": "sin 60° 300",
+        "F": "cos 60° 600",
+        "G": "sin 60° 600",
+        "H": "cos 60° 31 2q It is given that y = 8 and z = §¨ ·¸ p 1"
+      },
+      "correct_answer": "E",
+      "raw_text": "36    A horizontal, uniform bar of mass 60 kg is 4.0 m long and is pivoted at one end. The bar is held\n      in equilibrium by a force F at the other end of the bar, acting at an angle of 60° to the\n      horizontal.\n                                                                  [diagram not to scale]\n                     pivot                                                 F\n                                                                               60o\n      Which expression gives the magnitude of F in newtons?\n      (gravitational field strength = 10 N kg–1)\n             30\n      A\n           sin 60°\n             30\n      B\n           cos 60°\n               60\n      C\n           sin 60°\n               60\n      D\n           cos 60°\n             300\n      E\n           sin 60°\n            300\n      F\n           cos 60°\n             600\n      G\n           sin 60°\n            600\n      H\n           cos 60°\n© UCLES 2017\n\f                                                        31\n                                             2q\n      It is given that y = 8 and z = §¨ ·¸\n                            p          1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q37",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37 where p and q are real numbers. ©2¹ § y3 · Which of the following expressions is a simplification of log 2 ¨¨ 2 ¸¸ ? ©z ¹",
+      "has_diagram": false,
+      "options": {
+        "A": "6 p − 4q",
+        "B": "6 p + 4q",
+        "C": "6 p − 8q",
+        "D": "6 p + 8q",
+        "E": "9 p − 4q",
+        "F": "9 p + 4q",
+        "G": "9 p − 8q",
+        "H": "9 p + 8q"
+      },
+      "correct_answer": "F",
+      "raw_text": "37                                                where p and q are real numbers.\n                                      ©2¹\n                                                                       § y3 ·\n      Which of the following expressions is a simplification of log 2 ¨¨ 2 ¸¸ ?\n                                                                       ©z ¹\n      A    6 p − 4q\n      B    6 p + 4q\n      C    6 p − 8q\n      D    6 p + 8q\n      E    9 p − 4q\n      F    9 p + 4q\n      G    9 p − 8q\n      H    9 p + 8q",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q38",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 A ball starts at a speed of 40.0 m s–1. The ball is subject to a constant deceleration of 14.4 m s–2 as it travels a distance of 20.0 m in a straight line. What is the final speed of the ball?",
+      "has_diagram": false,
+      "options": {
+        "A": "16.0 m s–1",
+        "B": "20.0 m s–1",
+        "C": "25.6 m s–1",
+        "D": "32.0 m s–1",
+        "E": "36.2 m s–1",
+        "F": "39.3 m s–1 32 3 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "38    A ball starts at a speed of 40.0 m s–1. The ball is subject to a constant deceleration of 14.4 m s–2\n      as it travels a distance of 20.0 m in a straight line.\n      What is the final speed of the ball?\n      A    16.0 m s–1\n      B    20.0 m s–1\n      C    25.6 m s–1\n      D    32.0 m s–1\n      E    36.2 m s–1\n      F    39.3 m s–1\n© UCLES 2017                                                                                    [Turn over\n\f                                                 32\n                                     3     2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q39",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 The graph of the function y = x + px + qx + 6 , where p and q are real constants, has a local maximum when x = 2 and a local minimum when x = 4 . What are the values of p and q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "p = − 3 and q = − 8",
+        "B": "p = − 3 and q = 8",
+        "C": "p = 3 and q = − 8",
+        "D": "p = − 9 and q = 24",
+        "E": "p = 9 and q = 24",
+        "F": "p = 9 and q = − 24 33"
+      },
+      "correct_answer": "D",
+      "raw_text": "39    The graph of the function y = x + px + qx + 6 , where p and q are real constants, has a local\n      maximum when x = 2 and a local minimum when x = 4 .\n      What are the values of p and q ?\n      A    p = − 3 and q = − 8\n      B    p = − 3 and q = 8\n      C    p = 3 and q = − 8\n      D    p = − 9 and q = 24\n      E    p = 9 and q = 24\n      F    p = 9 and q = − 24\n© UCLES 2017\n\f                                                   33",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q40",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 A block of mass 1.0 kg is at rest on a rough horizontal surface. The block is attached by a light inextensible string to a force meter. The other end of the force meter is attached by another light inextensible string via a frictionless pulley to a load of mass 1.0 kg. The block remains stationary. force meter pulley rough surface 1.0 kg string 1.0 kg What is the reading on the force meter? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.0 N",
+        "B": "0.5 N",
+        "C": "1.0 N",
+        "D": "2.0 N",
+        "E": "5.0 N",
+        "F": "10 N",
+        "G": "20 N 34"
+      },
+      "correct_answer": "F",
+      "raw_text": "40    A block of mass 1.0 kg is at rest on a rough horizontal surface. The block is attached by a light\n      inextensible string to a force meter. The other end of the force meter is attached by another\n      light inextensible string via a frictionless pulley to a load of mass 1.0 kg. The block remains\n      stationary.\n                                                     force meter\n                                                                              pulley\n                   rough surface\n                                    1.0 kg\n                                                                                   string\n                                                                          1.0 kg\n      What is the reading on the force meter?\n      (gravitational field strength = 10 N kg–1)\n      A    0.0 N\n      B    0.5 N\n      C    1.0 N\n      D    2.0 N\n      E    5.0 N\n      F    10 N\n      G    20 N\n© UCLES 2017                                                                                  [Turn over\n\f                                                    34",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q40-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q41",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 41,
+      "question_text": "41 In triangle PQR PQ = 4 x cm QR = (8 − 3 x ) cm ∠PQR = 60° What is the maximum value of the area, in cm2, of triangle PQR ? 8 3",
+      "has_diagram": false,
+      "options": {
+        "A": "3 16",
+        "B": "3 69 3",
+        "C": "16 16 3",
+        "D": "3 32",
+        "E": "3 32 3",
+        "F": "3"
+      },
+      "correct_answer": "D",
+      "raw_text": "41    In triangle PQR\n                               PQ = 4 x cm\n                               QR = (8 − 3 x ) cm\n                            ∠PQR = 60°\n      What is the maximum value of the area, in cm2, of triangle PQR ?\n           8 3\n      A\n            3\n           16\n      B\n            3\n           69 3\n      C\n            16\n           16 3\n      D\n             3\n           32\n      E\n           3\n           32 3\n      F\n             3",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q42",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 42,
+      "question_text": "42 An apple of mass 100 g, growing on a tree, falls vertically from a height of 4.0 m above the ground. It hits the ground with a speed of 8.0 m s–1. How much work does the apple do against resistive forces during its descent, before it hits the ground? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "0.80 J",
+        "B": "3.6 J",
+        "C": "4.0 J",
+        "D": "7.2 J",
+        "E": "8.0 J 35 6 3 dy"
+      },
+      "correct_answer": "A",
+      "raw_text": "42    An apple of mass 100 g, growing on a tree, falls vertically from a height of 4.0 m above the\n      ground. It hits the ground with a speed of 8.0 m s–1.\n      How much work does the apple do against resistive forces during its descent, before it hits the\n      ground?\n      (gravitational field strength = 10 N kg–1)\n      A    0.80 J\n      B    3.6 J\n      C    4.0 J\n      D    7.2 J\n      E    8.0 J\n© UCLES 2017\n\f                                                     35\n                              6                              3       dy",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q43",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 43,
+      "question_text": "43 Given that y = ( 2 + 3 x ) , what is the coefficient of x in ? dx",
+      "has_diagram": false,
+      "options": {
+        "A": "240",
+        "B": "4320",
+        "C": "4860",
+        "D": "12 960",
+        "E": "19 440"
+      },
+      "correct_answer": "E",
+      "raw_text": "43    Given that y = ( 2 + 3 x ) , what is the coefficient of x in      ?\n                                                                     dx\n      A    240\n      B    4320\n      C    4860\n      D    12 960\n      E    19 440",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q44",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 44,
+      "question_text": "44 A stone is fired vertically upwards at a speed of 13 m s–1 on a still day from the top of a 6.0 m high cliff. It then falls down and lands at the bottom of the cliff. [diagram not to scale] stone 13 m s–1 6.0 m From when the stone passes the top of the cliff on the way down, how long does it take to reach the ground at the bottom of the cliff? (air resistance can be ignored; gravitational field strength = 10 N kg–1)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.40 s 6 .0",
+        "B": "s 6 .5",
+        "C": "0.60 s",
+        "D": "1.2 s",
+        "E": "1.3 s",
+        "F": "2.0 s",
+        "G": "2.5 s",
+        "H": "3.0 s 36 1"
+      },
+      "correct_answer": "A",
+      "raw_text": "44    A stone is fired vertically upwards at a speed of 13 m s–1 on a still day from the top of a 6.0 m\n      high cliff. It then falls down and lands at the bottom of the cliff.\n                                                                 [diagram not to scale]\n                                                   stone\n                                    13 m s–1\n                                                6.0 m\n      From when the stone passes the top of the cliff on the way down, how long does it take to\n      reach the ground at the bottom of the cliff?\n      (air resistance can be ignored; gravitational field strength = 10 N kg–1)\n      A    0.40 s\n           6 .0\n      B         s\n           6 .5\n      C    0.60 s\n      D        1.2 s\n      E    1.3 s\n      F    2.0 s\n      G    2.5 s\n      H    3.0 s\n© UCLES 2017                                                                                   [Turn over\n\f                                                    36\n                                                                           1",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q44-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q45",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 45,
+      "question_text": "45 A geometric progression has first term equal to 1 and common ratio sin 2 x 2 4 The sum to infinity of the series is 3 Find the possible values of x in the range π ≤ x ≤ 2π 13 17",
+      "has_diagram": false,
+      "options": {
+        "A": "π, π 12 12 7 4",
+        "B": "π, π 6 3 7 11",
+        "C": "π, π 6 6 5 7",
+        "D": "π, π 4 4",
+        "E": "there are no values of x in this range 37"
+      },
+      "correct_answer": "A",
+      "raw_text": "45    A geometric progression has first term equal to 1 and common ratio     sin 2 x\n                                                                           2\n                                             4\n      The sum to infinity of the series is\n                                             3\n      Find the possible values of x in the range π ≤ x ≤ 2π\n           13    17\n      A       π,    π\n           12    12\n           7   4\n      B      π, π\n           6   3\n           7   11\n      C      π, π\n           6   6\n           5   7\n      D      π, π\n           4   4\n      E    there are no values of x in this range\n© UCLES 2017\n\f                                                         37",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q46",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 46,
+      "question_text": "46 An archer fires an arrow of mass 0.024 kg vertically upwards from a bow. The graph shows how the force of the bowstring on the arrow varies with distance as the arrow moves upwards. force / N 192 0 0 0.40 distance / m The work done by the force of the bowstring is given by the area under the force-distance graph. When the arrow leaves the bow, what is the kinetic energy of the arrow, and what is the maximum height that it gains from this point? (Air resistance can be ignored. The effect of gravity as the arrow is fired is negligible compared to the force of the bowstring. The gravitational field strength = 10 N kg–1.) kinetic energy / J height / m",
+      "has_diagram": true,
+      "options": {
+        "A": "38.4 16",
+        "B": "38.4 160",
+        "C": "38.4 1600",
+        "D": "38.4 16 000",
+        "E": "76.8 32",
+        "F": "76.8 320",
+        "G": "76.8 3200",
+        "H": "76.8 32 000 38"
+      },
+      "correct_answer": "B",
+      "raw_text": "46    An archer fires an arrow of mass 0.024 kg vertically upwards from a bow.\n      The graph shows how the force of the bowstring on the arrow varies with distance as the arrow\n      moves upwards.\n                        force / N\n                               192\n                                    0\n                                        0                                      0.40\n                                                                           distance / m\n      The work done by the force of the bowstring is given by the area under the force-distance\n      graph.\n      When the arrow leaves the bow, what is the kinetic energy of the arrow, and what is the\n      maximum height that it gains from this point?\n      (Air resistance can be ignored. The effect of gravity as the arrow is fired is negligible compared\n      to the force of the bowstring. The gravitational field strength = 10 N kg–1.)\n               kinetic energy / J           height / m\n      A              38.4                      16\n      B              38.4                      160\n      C              38.4                     1600\n      D              38.4                    16 000\n      E              76.8                      32\n      F              76.8                      320\n      G              76.8                     3200\n      H              76.8                    32 000\n© UCLES 2017                                                                                  [Turn over\n\f                                                        38",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q46-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2017-S1-Q47",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 47,
+      "question_text": "47 The sequence of numbers u1, u 2 , u3 , ... ,u n , ... is given by u1 = 2 u n +1 = pu n + 3 where p is an integer. The fourth term, u 4 , is equal to − 7 What is the value of u1 + u 2 + u3 + u 4 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 10",
+        "B": "–2",
+        "C": "–1",
+        "D": "8",
+        "E": "26 39"
+      },
+      "correct_answer": "C",
+      "raw_text": "47    The sequence of numbers u1, u 2 , u3 , ... ,u n , ... is given by\n                                                       u1 = 2\n                                                    u n +1 = pu n + 3\n      where p is an integer.\n      The fourth term, u 4 , is equal to − 7\n      What is the value of u1 + u 2 + u3 + u 4 ?\n      A    – 10\n      B    –2\n      C    –1\n      D    8\n      E    26\n© UCLES 2017\n\f                                                  39",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q48",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 48,
+      "question_text": "48 A book of mass m rests on a rough horizontal surface. The surface is now tilted as shown: book surface θ When the angle of tilt θ is 20°, the book slides down the slope at a constant speed. What is the acceleration of the book down the slope when the angle of tilt is 25°? (gravitational field strength = g )",
+      "has_diagram": false,
+      "options": {
+        "A": "g (cos 20° − sin 20° tan 5°)",
+        "B": "g (cos 20° − sin 20° tan 25°)",
+        "C": "g (cos 25° − sin 5° tan 20°)",
+        "D": "g (cos 25° − sin 25° tan 20°)",
+        "E": "g (sin 20° − cos 20° tan 5°)",
+        "F": "g (sin 20° − cos 20° tan 25°)",
+        "G": "g (sin 25° − cos 5° tan 20°)",
+        "H": "g (sin 25° − cos 25° tan 20°)"
+      },
+      "correct_answer": "H",
+      "raw_text": "48    A book of mass m rests on a rough horizontal surface. The surface is now tilted as shown:\n                                                      book\n                                                                           surface\n                                                  θ\n      When the angle of tilt θ is 20°, the book slides down the slope at a constant speed.\n      What is the acceleration of the book down the slope when the angle of tilt is 25°?\n      (gravitational field strength = g )\n      A    g (cos 20° − sin 20° tan 5°)\n      B    g (cos 20° − sin 20° tan 25°)\n      C    g (cos 25° − sin 5° tan 20°)\n      D    g (cos 25° − sin 25° tan 20°)\n      E    g (sin 20° − cos 20° tan 5°)\n      F    g (sin 20° − cos 20° tan 25°)\n      G    g (sin 25° − cos 5° tan 20°)\n      H    g (sin 25° − cos 25° tan 20°)",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q49",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 49,
+      "question_text": "49 Find the complete set of values of x for which 3 2 x − 6x + 9x − 4 >0 x",
+      "has_diagram": false,
+      "options": {
+        "A": "x < 0, x > 4",
+        "B": "0< x<4",
+        "C": "0 < x < 1, x > 4",
+        "D": "x < 0 , 1< x < 4",
+        "E": "x < 1, x > 4",
+        "F": "1< x < 4 40"
+      },
+      "correct_answer": "A",
+      "raw_text": "49    Find the complete set of values of x for which\n                                             3        2\n                                            x − 6x + 9x − 4\n                                                            >0\n                                                  x\n      A    x < 0, x > 4\n      B    0< x<4\n      C    0 < x < 1, x > 4\n      D    x < 0 , 1< x < 4\n      E    x < 1, x > 4\n      F    1< x < 4\n© UCLES 2017                                                                                 [Turn over\n\f                                                   40",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q50",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 50,
+      "question_text": "50 A suitcase of mass m is on a conveyor belt which moves upwards at a constant speed at an angle of θ to the horizontal. The coefficient of friction between the suitcase and the slope is µ. The suitcase does not slip, even if angle θ is made slightly larger. Which expression gives the friction force between the suitcase and the belt? (gravitational field strength = g)",
+      "has_diagram": false,
+      "options": {
+        "A": "µmg",
+        "B": "mg sin θ",
+        "C": "mg cos θ",
+        "D": "µmg sin θ",
+        "E": "µmg cos θ 1"
+      },
+      "correct_answer": "B",
+      "raw_text": "50    A suitcase of mass m is on a conveyor belt which moves upwards at a constant speed at an\n      angle of θ to the horizontal. The coefficient of friction between the suitcase and the slope is µ.\n      The suitcase does not slip, even if angle θ is made slightly larger.\n      Which expression gives the friction force between the suitcase and the belt?\n      (gravitational field strength = g)\n      A    µmg\n      B    mg sin θ\n      C    mg cos θ\n      D    µmg sin θ\n      E    µmg cos θ\n                                                              1",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q51",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 51,
+      "question_text": "51 The curve y = sin x is stretched by a scale factor of parallel to the x-axis and then translated 2 π by in the negative x-direction. 4 What is the equation of the new curve? y = sin §¨ − ·¸ x π",
+      "has_diagram": false,
+      "options": {
+        "A": "©2 4¹ y = sin §¨ + ·¸ x π",
+        "B": "©2 4¹ y = sin §¨ − ·¸ x π",
+        "C": "©2 8¹ y = sin §¨ + ·¸ x π",
+        "D": "©2 8¹ y = sin §¨ 2 x − ·¸ π",
+        "E": "© 4¹ y = sin §¨ 2 x + ·¸ π",
+        "F": "© 4¹ y = sin §¨ 2 x − ·¸ π",
+        "G": "© 2¹ y = sin §¨ 2 x + ·¸ π",
+        "H": "© 2¹ 41"
+      },
+      "correct_answer": "H",
+      "raw_text": "51    The curve y = sin x is stretched by a scale factor of     parallel to the x-axis and then translated\n                                                              2\n           π\n      by        in the negative x-direction.\n           4\n      What is the equation of the new curve?\n               y = sin §¨ − ·¸\n                         x π\n      A\n                       ©2    4¹\n               y = sin §¨ + ·¸\n                         x π\n      B\n                       ©2    4¹\n               y = sin §¨ − ·¸\n                         x π\n      C\n                       ©2    8¹\n               y = sin §¨ + ·¸\n                         x π\n      D\n                       ©2    8¹\n               y = sin §¨ 2 x − ·¸\n                               π\n      E\n                       ©      4¹\n               y = sin §¨ 2 x + ·¸\n                               π\n      F\n                       ©      4¹\n               y = sin §¨ 2 x − ·¸\n                               π\n      G\n                       ©      2¹\n               y = sin §¨ 2 x + ·¸\n                               π\n      H\n                       ©      2¹\n© UCLES 2017\n\f                                                        41",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q52",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 52,
+      "question_text": "52 The graph shows how the horizontal force on a tennis ball of mass m varies during a shot in a tennis match. The ball is initially travelling horizontally toward the racket with speed u and leaves the racket horizontally travelling in the opposite direction with speed v. force / N F 0 0 t1 t2 time / s Which expression gives the magnitude of the momentum of the ball as it leaves the racket?",
+      "has_diagram": false,
+      "options": {
+        "A": "F (t2 − t1)",
+        "B": "F (t2 − t1) − mu",
+        "C": "F (t2 − t1) + mu",
+        "D": "mv − mu",
+        "E": "F t2 − mu 2"
+      },
+      "correct_answer": "B",
+      "raw_text": "52    The graph shows how the horizontal force on a tennis ball of mass m varies during a shot in a\n      tennis match. The ball is initially travelling horizontally toward the racket with speed u and\n      leaves the racket horizontally travelling in the opposite direction with speed v.\n                               force / N\n                                       F\n                                        0\n                                            0      t1                t2    time / s\n      Which expression gives the magnitude of the momentum of the ball as it leaves the racket?\n      A    F (t2 − t1)\n      B    F (t2 − t1) − mu\n      C    F (t2 − t1) + mu\n      D    mv − mu\n      E    F t2 − mu\n                                                             2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q53",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 53,
+      "question_text": "53 The equations of two straight lines are y = 3 + ( 2 p − p ) x and y = 7 + ( p − 2) x , where p is a real constant. For certain values of p, the two lines are perpendicular. Which of the following numbers is closest to the greatest such value of p ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.00",
+        "B": "1.75",
+        "C": "1.50",
+        "D": "1.00",
+        "E": "− 0.25",
+        "F": "− 0.50 42"
+      },
+      "correct_answer": "B",
+      "raw_text": "53    The equations of two straight lines are y = 3 + ( 2 p − p ) x and y = 7 + ( p − 2) x , where p is a\n      real constant.\n      For certain values of p, the two lines are perpendicular.\n      Which of the following numbers is closest to the greatest such value of p ?\n      A    2.00\n      B    1.75\n      C    1.50\n      D    1.00\n      E    − 0.25\n      F    − 0.50\n© UCLES 2017                                                                                      [Turn over\n\f                                                                              42",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2017-S1-Q54",
+      "year": 2017,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 54,
+      "question_text": "54 The acceleration versus time graph is for a ball dropped from rest, falling vertically and bouncing on the ground. acceleration / m s–2 0 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 -10 time / s The time of contact with the ground can be ignored. What is the speed of the ball immediately after hitting the ground for the first time, and what is the maximum height reached by the ball after the first bounce? (gravitational field strength = 10 N kg–1) speed / m s–1 height / m",
+      "has_diagram": true,
+      "options": {
+        "A": "4.00 0.80",
+        "B": "4.00 1.25",
+        "C": "5.00 0.80",
+        "D": "5.00 1.25",
+        "E": "8.00 3.20 END OF TEST 43 44"
+      },
+      "correct_answer": "A",
+      "raw_text": "54    The acceleration versus time graph is for a ball dropped from rest, falling vertically and\n      bouncing on the ground.\n          acceleration / m s–2\n                0\n                                 0.0     0.1   0.2     0.3   0.4 0.5   0.6    0.7   0.8   0.9   1.0 1.1   1.2   1.3   1.4 1.5\n       -10                                                                                                             time / s\n      The time of contact with the ground can be ignored.\n      What is the speed of the ball immediately after hitting the ground for the first time, and what is\n      the maximum height reached by the ball after the first bounce?\n      (gravitational field strength = 10 N kg–1)\n                                       speed / m s–1             height / m\n      A                                    4.00                    0.80\n      B                                    4.00                    1.25\n      C                                    5.00                    0.80\n      D                                    5.00                    1.25\n      E                                    8.00                    3.20\n                                                                       END OF TEST\n© UCLES 2017\n\f                   43\n               BLANK PAGE\n© UCLES 2017\n\f               44\n© UCLES 2017",
+      "diagram_images": [
+        "ENGAA-2017-S1-Q54-fig1.png"
+      ]
+    }
+  ]
+}

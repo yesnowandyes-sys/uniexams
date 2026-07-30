@@ -1,0 +1,43 @@
+{
+  "source_file": "ENGAA_2016_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2016,
+  "section": "Section1",
+  "total_questions": 54,
+  "questions": [
+    {
+      "id": "ENGAA-2016-S1-Q1",
+      "year": 2016,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "x Find the complete set of solutions to − 8 < 6 − 2",
+      "has_diagram": false,
+      "options": {
+        "A": "x<4",
+        "B": "x>4",
+        "C": "x < 20",
+        "D": "x > 20",
+        "E": "x < 22",
+        "F": "x > 22",
+        "G": "x < 28",
+        "H": "x > 28"
+      },
+      "correct_answer": "G",
+      "raw_text": "1\n                                                        x\n      Find the complete set of solutions to − 8 < 6 −\n                                                        2\n      A    x<4\n      B    x>4\n      C    x < 20\n      D    x > 20\n      E    x < 22\n      F    x > 22\n      G    x < 28\n      H    x > 28",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-09T16:19:38",
+        "markdown": "## Worked Solution\n\nThe inequality to solve is:\n\n$$-8 < 6 - \\frac{x}{2}$$\n\n**Step 1:** Subtract 6 from both sides to isolate the term containing $x$:\n\n$$-8 - 6 < -\\frac{x}{2}$$\n$$-14 < -\\frac{x}{2}$$\n\n**Step 2:** Multiply both sides by $-1$. **This reverses the inequality sign:**\n\n$$14 > \\frac{x}{2}$$\n\n**Step 3:** Multiply both sides by 2:\n\n$$28 > x$$\n\nWhich is equivalent to:\n\n$$x < 28$$\n\n**Step 4:** Verify by substitution. If $x = 0$ (which satisfies $x < 28$):\n\n$$6 - \\frac{0}{2} = 6 > -8 \\quad \\checkmark$$\n\nIf $x = 28$ (the boundary, which should NOT satisfy the strict inequality):\n\n$$6 - \\frac{28}{2} = 6 - 14 = -8 \\quad \\text{(not strictly greater, confirming boundary is excluded)} \\quad \\checkmark$$\n\n**Answer: G**\n\n## Distractor Analysis\n\n- **A ($x < 4$):** Results from an arithmetic error when rearranging, e.g., dividing by $-2$ instead of multiplying by $2$ at some stage, giving $x < 4$ from $-8 < 6 - 2x$ (a misread of the original expression).\n- **B ($x > 4$):** Same misread of the problem as in A, but failing to flip the inequality sign when dividing by a negative number.\n- **C ($x < 20$):** Could result from incorrectly adding 6 to both sides ($-8 + 6 = -2$) then mishandling the subsequent steps.\n- **D ($x > 20$):** Same arithmetic error as C combined with forgetting to reverse the inequality.\n- **E ($x < 22$):** An intermediate arithmetic slip, such as computing $-8 - 6 = -16$ instead of $-14$, then halving incorrectly.\n- **F ($x > 22$):** Same error as E but with failure to flip the inequality sign on multiplying by $-1$.\n- **H ($x > 28$):** This is the most common error — the student solves correctly through to $28 > x$ but **forgets to reverse the inequality sign** when multiplying by $-1$, obtaining $-14 < -\\frac{x}{2} \\to -28 < x \\to x > 28$. This is the key distractor targeting the most frequent mistake with inequalities.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Subtopic:** Algebra — Inequalities\n- **Content Code:** M1.6 (Inequalities; solving linear inequalities)\n- **Question Type:** Single-step calculation (rearranging a linear inequality)\n\n## Difficulty Rating\n\n**Difficulty:** 3/10\n\nThis is a straightforward linear inequality requiring basic algebraic rearrangement. The only non-trivial element is remembering to reverse the inequality sign when multiplying by a negative number. The large number of distractors (7) tests careful arithmetic, but the core method is simple. It sits comfortably in the easier range of ESAT mathematics questions.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1121,
+        "output_tokens": 1860
+      }
+    }
+  ],
+  "enriched_at": "2026-07-09T16:19:38",
+  "enrichment_model": "glm-5.2"
+}

@@ -1,0 +1,50 @@
+{
+  "topic_key": "MATHS1.M3",
+  "topic_name": "Ratio and proportion",
+  "module_code": "M1",
+  "corpus_question_count": 49,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Similar shapes are presented where the ratio of surface areas is given, and the student is asked to find the ratio of volumes or a specific length scale factor. Conversely, given a volume scale, they must deduce a surface area change.",
+      "key_insight": "Deep understanding that for similar shapes, Area scales with $k^2$ and Volume scales with $k^3$ (where $k$ is the linear scale factor). The student must link Area and Volume via the linear factor $k = \\sqrt{Area_{ratio}}$ to find Volume, rather than assuming a direct power relationship between area and volume.",
+      "discrimination_factors": [
+        "Avoids linear assumption (Area:Volume ratio)",
+        "Correctly handles square/cube roots between dimensions",
+        "Manages algebraic manipulation of differences ($V_y = V_x + \\Delta$)"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A variable is inversely proportional to a power of another variable (e.g., $y \\propto 1/x^3$). One variable changes by a specific percentage (e.g., 'decreases by 20%' or 'becomes 300% of its original value'). The student must calculate the exact resulting change in the other variable.",
+      "key_insight": "Recognizing that 'inversely proportional' implies division and that the power applies to the entire multiplier. Calculating the multiplier (e.g., $300\\% \text{ more} = 4\times$) and applying the inverse root (e.g., for $x^3$, factor is $1/\\sqrt[3]{4}$). This distinguishes between 'reciprocal of the change' and 'reciprocal of the root of the change'.",
+      "discrimination_factors": [
+        "Translation of percentage language to multipliers",
+        "Applying roots to multipliers in inverse relationships",
+        "Distinguishing 'decrease by' vs 'decrease to'"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Three or more items have separate ratios defining their relationships (e.g., A:B, B:C, C:D). The student must find a combined ratio or a specific quantity involving all parts.",
+      "key_insight": "The ability to align the common variable (the 'link' in the chain) by multiplying ratios to create a common multiple for the linking term. Requires systematic handling of multiple fractions to find the LCM of the linking terms or a unified algebraic approach.",
+      "discrimination_factors": [
+        "Systematic LCM finding",
+        "Avoiding 'adding ratios' error",
+        "Handling chains of 3+ variables"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A multi-step algebraic manipulation problem involving a formula with 4+ variables (e.g., $M = \frac{x^2 y}{z P Q^2}$). The question specifies percentage increases/decreases for some variables and asks for the net percentage change in the subject variable.",
+      "key_insight": "Treating the formula as a product of factors. A 20% increase is multiplying by 1.2, a decrease by 20% is multiplying by 0.8. The net effect is the product of these multipliers raised to their respective powers. Distractors rely on adding percentages or misapplying the exponents during the percentage shift.",
+      "discrimination_factors": [
+        "Compound multiplier logic",
+        "Handling exponents in percentage change",
+        "Parsing complex algebraic fractions"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

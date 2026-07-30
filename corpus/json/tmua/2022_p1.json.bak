@@ -1,0 +1,421 @@
+{
+  "source_file": "TMUA-2022-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2022,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2022-P1-Q1",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "1 How many real solutions are there to the equation 2 cos4 ș – 5 cos2 ș + 3 ൌ 0 in the interval 0  ș  2ʌ ?",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5",
+        "F": "6",
+        "G": "7",
+        "H": "8 3"
+      },
+      "correct_answer": "C",
+      "raw_text": "1   How many real solutions are there to the equation\n                                       2 cos4 ș – 5 cos2 ș + 3 ൌ 0\n    in the interval 0  ș  2ʌ ?\n    A   1\n    B   2\n    C   3\n    D   4\n    E   5\n    F   6\n    G 7\n    H 8\n                                                3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q2",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "2 Find the complete set of values of p for which the equation x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0 describes a circle in the x y-plane. 9",
+      "has_diagram": false,
+      "options": {
+        "A": "p<– 4",
+        "B": "0<p<4",
+        "C": "–1 < p < 9",
+        "D": "p < 0 or p > 4",
+        "E": "p < –1 or p > 9",
+        "F": "all real values of p 4"
+      },
+      "correct_answer": "D",
+      "raw_text": "2   Find the complete set of values of p for which the equation\n                                    x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0\n    describes a circle in the x y-plane.\n               9\n    A   p<–\n               4\n    B   0<p<4\n    C   –1 < p < 9\n    D   p < 0 or p > 4\n    E   p < –1 or p > 9\n    F   all real values of p\n                                                  4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q3",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "3 Given the following statements about a function f • f Ǝ (x) ൌ a for all x • f (0) ൌ 1, f (1) ൌ 2 1 • ³ f ( x) dx ൌ 1 0 find the value of a.",
+      "has_diagram": false,
+      "options": {
+        "A": "–6",
+        "B": "–3",
+        "C": "–2",
+        "D": "2",
+        "E": "3",
+        "F": "6 5"
+      },
+      "correct_answer": "F",
+      "raw_text": "3   Given the following statements about a function f\n        •       f Ǝ (x) ൌ a for all x\n        •       f (0) ൌ 1, f (1) ൌ 2\n                  1\n        •       ³ f ( x) dx ൌ 1\n                 0\n    find the value of a.\n    A   –6\n    B   –3\n    C   –2\n    D       2\n    E       3\n    F       6\n                                                5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q4",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "6 r r+3 These sectors of circles are similar. The arc length of the smaller sector is 6. The difference between the areas of the sectors is 21. Find the positive difference between the perimeters of the sectors.",
+      "has_diagram": false,
+      "options": {
+        "A": "4.5",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10.5",
+        "F": "14",
+        "G": "15 6"
+      },
+      "correct_answer": "C",
+      "raw_text": "4\n                                             6\n                                      r                          r+3\n    These sectors of circles are similar.\n    The arc length of the smaller sector is 6.\n    The difference between the areas of the sectors is 21.\n    Find the positive difference between the perimeters of the sectors.\n    A   4.5\n    B   7\n    C   8\n    D   9\n    E   10.5\n    F   14\n    G 15\n                                                 6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q5",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "5 The terms x n of a sequence follow the rule xn + p xn +1 ൌ xn + q where p and q are real numbers. Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4",
+      "has_diagram": false,
+      "options": {
+        "A": "–5",
+        "B": "–5 51",
+        "C": "– 7 15",
+        "D": "– 2 23",
+        "E": "– 3",
+        "F": "–9",
+        "G": "– 11",
+        "H": "– 13 7"
+      },
+      "correct_answer": "H",
+      "raw_text": "5   The terms x n of a sequence follow the rule\n                                                     xn + p\n                                           xn +1 ൌ\n                                                     xn + q\n    where p and q are real numbers.\n    Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4\n    A   –5\n    B   –5\n            51\n    C   –\n            7\n            15\n    D   –\n             2\n            23\n    E   –\n            3\n    F   –9\n    G   – 11\n    H   – 13\n                                                     7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q6",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "6 Given that log 2 20 ³log 5 x dx ൌ log 2 M 2 what is the value of M ?",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "15",
+        "C": "16",
+        "D": "20",
+        "E": "25",
+        "F": "100",
+        "G": "10 000 8"
+      },
+      "correct_answer": "F",
+      "raw_text": "6   Given that\n                                log 2 20\n                               ³log 5 x dx ൌ log 2 M\n                                  2\n    what is the value of M ?\n    A   4\n    B   15\n    C   16\n    D   20\n    E   25\n    F   100\n    G 10 000\n                                             8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q7",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "7 Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12 128",
+      "has_diagram": false,
+      "options": {
+        "A": "3 176",
+        "B": "3 256",
+        "C": "3",
+        "D": "108",
+        "E": "144",
+        "F": "288 9"
+      },
+      "correct_answer": "E",
+      "raw_text": "7   Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12\n        128\n    A\n         3\n        176\n    B\n         3\n         256\n    C\n          3\n    D   108\n    E   144\n    F   288\n                                                  9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q8",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "8 A geometric sequence has first term a and common ratio r, where a and r are positive integers and r is greater than 1. The sum of the first n terms of this sequence is denoted by Sn It is given that the terms of the sequence satisfy S30 – S20 ൌ k S10 for some positive integer k. What is the smallest possible value of k ?",
+      "has_diagram": false,
+      "options": {
+        "A": "210",
+        "B": "220",
+        "C": "230 210",
+        "D": "210 – 1",
+        "E": "210 (210 – 1) 10"
+      },
+      "correct_answer": "B",
+      "raw_text": "8   A geometric sequence has first term a and common ratio r, where a and r are positive integers\n    and r is greater than 1.\n    The sum of the first n terms of this sequence is denoted by Sn\n    It is given that the terms of the sequence satisfy\n                                              S30 – S20 ൌ k S10\n    for some positive integer k.\n    What is the smallest possible value of k ?\n    A   210\n    B   220\n    C   230\n           210\n    D\n         210 – 1\n    E   210 (210 – 1)\n                                                  10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q9",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "9 This question is about pairs of functions f and g that satisfy f (x) – g (x) ൌ 2 sin x f (x) g (x) ൌ cos2 x for all real numbers x . Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–1 – 2",
+        "B": "–1 – 2",
+        "C": "–0",
+        "D": "–1",
+        "E": "–2",
+        "F": "–3",
+        "G": "–4 11"
+      },
+      "correct_answer": "E",
+      "raw_text": "9   This question is about pairs of functions f and g that satisfy\n                                            f (x) – g (x) ൌ 2 sin x\n                                               f (x) g (x) ൌ cos2 x\n    for all real numbers x .\n    Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?\n    A   –1 –    2\n    B   –1 –    2\n    C   –0\n    D   –1\n    E   –2\n    F   –3\n    G –4\n                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q10",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "10 A sequence of translations is applied to the graph of y ൌ x 3 Which of the following graphs could be the result of this sequence of translations? I y ൌ x 3 – 3 x 2 + 9 x – 27 II y ൌ x 3 – 9 x 2 + 27 x – 3 III y ൌ 27 x 3 – 9 x 2 + x – 3",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 12"
+      },
+      "correct_answer": "C",
+      "raw_text": "10   A sequence of translations is applied to the graph of y ൌ x 3\n     Which of the following graphs could be the result of this sequence of translations?\n           I      y ൌ x 3 – 3 x 2 + 9 x – 27\n           II     y ൌ x 3 – 9 x 2 + 27 x – 3\n           III    y ൌ 27 x 3 – 9 x 2 + x – 3\n     A   none of them\n     B   I only\n     C   II only\n     D   III only\n     E   I and II only\n     F   I and III only\n     G II and III only\n     H I, II and III\n                                                  12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q11",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "11 Evaluate 100 ¦ log ( 3 ) n =1 10 1– n",
+      "has_diagram": false,
+      "options": {
+        "A": "– 4950 log10 3",
+        "B": "4950 log10 3",
+        "C": "– 5050 log10 3",
+        "D": "5050 log10 3",
+        "E": "1 – 4950 log10 3",
+        "F": "1 + 4950 log10 3",
+        "G": "1 – 5050 log10 3",
+        "H": "1 + 5050 log10 3 13"
+      },
+      "correct_answer": "A",
+      "raw_text": "11   Evaluate\n                            100\n                            ¦ log ( 3 )\n                            n =1\n                                   10\n                                        1– n\n     A   – 4950 log10 3\n     B   4950 log10 3\n     C   – 5050 log10 3\n     D   5050 log10 3\n     E   1 – 4950 log10 3\n     F   1 + 4950 log10 3\n     G 1 – 5050 log10 3\n     H 1 + 5050 log10 3\n                                               13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q12",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "12 A family of quadratic curves is given by 2 k k2 yk ൌ 2 §¨ x – ·¸ + + 4k + 3 © 2¹ 2 where k is any real number and yk is a function of x. All these curves are sketched, and the point with the lowest y-coordinate among all the curves yk is (a, b). Find the value of a + b",
+      "has_diagram": false,
+      "options": {
+        "A": "–1",
+        "B": "–3",
+        "C": "–5",
+        "D": "–7",
+        "E": "–9 14"
+      },
+      "correct_answer": "D",
+      "raw_text": "12   A family of quadratic curves is given by\n                                                       2\n                                                    k     k2\n                                       yk ൌ 2 §¨ x – ·¸ +    + 4k + 3\n                                               ©    2¹    2\n     where k is any real number and yk is a function of x.\n     All these curves are sketched, and the point with the lowest y-coordinate among all the\n     curves yk is (a, b).\n     Find the value of a + b\n     A   –1\n     B   –3\n     C   –5\n     D   –7\n     E   –9\n                                                  14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q13",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "13 Given that § a 3 + 2 · § 2 – b3 · ൌ 2 ¨ ¸¨ ¸ © b3 ¹ © a 3 ¹ where a and b are real numbers, what is the least value of a b ?",
+      "has_diagram": false,
+      "options": {
+        "A": "– 2",
+        "B": "– 2",
+        "C": "–2 2",
+        "D": "–2 2 2",
+        "E": "– 2 2",
+        "F": "– 2 1",
+        "G": "–2 6 1",
+        "H": "– 26 15"
+      },
+      "correct_answer": "A",
+      "raw_text": "13   Given that\n                                    § a 3 + 2 · § 2 – b3 · ൌ   2\n                                    ¨          ¸¨        ¸\n                                    ©       b3 ¹ © a 3   ¹\n     where a and b are real numbers, what is the least value of a b ?\n     A    – 2\n     B   –     2\n     C    –2 2\n     D   –2 2\n                2\n     E    –\n               2\n                2\n     F   –\n               2\n               1\n     G    –2   6\n               1\n     H – 26\n                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q14",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "14 A circle has centre O and radius 6. ʌ P, Q and R are points on the circumference with angle POQ  2 The area of the triangle POQ is 9 3 What is the greatest possible area of triangle PRQ ?",
+      "has_diagram": false,
+      "options": {
+        "A": "18 + 9 3",
+        "B": "18 3",
+        "C": "27 + 9 3",
+        "D": "27 3",
+        "E": "36 + 9 3",
+        "F": "36 3 16"
+      },
+      "correct_answer": "D",
+      "raw_text": "14   A circle has centre O and radius 6.\n                                                                   ʌ\n     P, Q and R are points on the circumference with angle POQ \n                                                                   2\n     The area of the triangle POQ is 9 3\n     What is the greatest possible area of triangle PRQ ?\n     A   18 + 9 3\n     B   18 3\n     C   27 + 9 3\n     D   27 3\n     E   36 + 9 3\n     F   36 3\n                                                 16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q15",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "15 A rectangle is drawn in the region enclosed by the curves p and q , where p (x) ൌ 8 – 2 x 2 q (x) ൌ x 2 – 2 such that the sides of the rectangle are parallel to the x- and y-axes. What is the maximum possible area of the rectangle? 26",
+      "has_diagram": false,
+      "options": {
+        "A": "9 52",
+        "B": "9 4 6",
+        "C": "3 8 6",
+        "D": "3",
+        "E": "4 2",
+        "F": "8 2 20 10",
+        "G": "9 40 10",
+        "H": "9 17"
+      },
+      "correct_answer": "H",
+      "raw_text": "15   A rectangle is drawn in the region enclosed by the curves p and q , where\n                                                 p (x) ൌ 8 – 2 x 2\n                                                 q (x) ൌ x 2 – 2\n     such that the sides of the rectangle are parallel to the x- and y-axes.\n     What is the maximum possible area of the rectangle?\n          26\n     A\n          9\n          52\n     B\n           9\n          4 6\n     C\n           3\n          8 6\n     D\n           3\n     E    4 2\n     F   8 2\n          20 10\n     G\n            9\n          40 10\n     H\n            9\n                                                   17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q16",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "16 The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ. Which one of the following equations has solutions േ sin ș and േ sin ȕ ?",
+      "has_diagram": false,
+      "options": {
+        "A": "7x4 – 8x2 – 5 ൌ 0",
+        "B": "7x4 – 8x2 + 2 ൌ 0",
+        "C": "7x4 – 6x2 – 2 ൌ 0",
+        "D": "7x4 – 6x2 + 1 ൌ 0",
+        "E": "7x4 + 6x2 – 1 ൌ 0",
+        "F": "7x4 + 6x2 + 5 ൌ 0 18"
+      },
+      "correct_answer": "B",
+      "raw_text": "16   The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ.\n     Which one of the following equations has solutions േ sin ș and േ sin ȕ ?\n     A   7x4 – 8x2 – 5 ൌ 0\n     B   7x4 – 8x2 + 2 ൌ 0\n     C   7x4 – 6x2 – 2 ൌ 0\n     D   7x4 – 6x2 + 1 ൌ 0\n     E   7x4 + 6x2 – 1 ൌ 0\n     F   7x4 + 6x2 + 5 ൌ 0\n                                                  18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q17",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "–x2 + 6x – 5 x–1 30° Find the complete set of values of x for which there are two non-congruent triangles with the side lengths and angle as shown in the diagram.",
+      "has_diagram": false,
+      "options": {
+        "A": "1<x<3",
+        "B": "1<x<4",
+        "C": "1<x<5",
+        "D": "3<x<4",
+        "E": "3<x<5",
+        "F": "4<x<5 19"
+      },
+      "correct_answer": "D",
+      "raw_text": "17\n                                                         –x2 + 6x – 5\n                            x–1\n                                                                     30°\n     Find the complete set of values of x for which there are two non-congruent triangles with the\n     side lengths and angle as shown in the diagram.\n     A   1<x<3\n     B   1<x<4\n     C   1<x<5\n     D   3<x<4\n     E   3<x<5\n     F   4<x<5\n                                                 19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q18",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "18 It is given that f (x) ൌ x 2(x – 1)2 (x – 2) g (x) ൌ – p (x – q)2 (x – r)2 where p, q and r are positive and q < r Find the set of values of q and r that guarantees the greatest number of distinct real solutions of the equation f (x) ൌ g (x) for all p.",
+      "has_diagram": false,
+      "options": {
+        "A": "q < 1 and r < 1",
+        "B": "q < 1 and 1 < r < 2",
+        "C": "q < 1 and r > 2",
+        "D": "1 < q < 2 and 1 < r < 2",
+        "E": "1 < q < 2 and r > 2",
+        "F": "q > 2 and r > 2 20"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   It is given that\n                                           f (x) ൌ x 2(x – 1)2 (x – 2)\n                                           g (x) ൌ – p (x – q)2 (x – r)2\n     where p, q and r are positive and q < r\n     Find the set of values of q and r that guarantees the greatest number of distinct real solutions of\n     the equation f (x) ൌ g (x) for all p.\n     A   q < 1 and r < 1\n     B   q < 1 and 1 < r < 2\n     C   q < 1 and r > 2\n     D   1 < q < 2 and 1 < r < 2\n     E   1 < q < 2 and r > 2\n     F   q > 2 and r > 2\n                                                   20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q19",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "19 Circle C1 is defined as x 2 + y 2 ൌ 25",
+      "has_diagram": false,
+      "options": {
+        "A": "second circle C2 has radius 4 and centre (a, b) where – 2  a  2 and – 3  b  3 If the centre of C2 is equally likely to be located anywhere within the given range, what is the probability that C2 intersects C1 ? 1 25 9",
+        "B": "25 16",
+        "C": "25 6–ʌ",
+        "D": "6 16 – ʌ",
+        "E": "24 24 – ʌ",
+        "F": "24 21"
+      },
+      "correct_answer": "F",
+      "raw_text": "19   Circle C1 is defined as x 2 + y 2 ൌ 25\n     A second circle C2 has radius 4 and centre (a, b) where\n                                         – 2  a  2 and – 3  b  3\n     If the centre of C2 is equally likely to be located anywhere within the given range, what is the\n     probability that C2 intersects C1 ?\n          1\n     A\n          25\n          9\n     B\n          25\n          16\n     C\n          25\n          6–ʌ\n     D\n           6\n          16 – ʌ\n     E\n            24\n          24 – ʌ\n     F\n            24\n                                                  21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P1-Q20",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "20 n is the number of points of intersection of the graphs y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1| where a is a real number. What is the smallest value of n that is not possible?",
+      "has_diagram": false,
+      "options": {
+        "A": "nൌ1",
+        "B": "nൌ2",
+        "C": "nൌ3",
+        "D": "nൌ4",
+        "E": "nൌ5 22 23 24"
+      },
+      "correct_answer": "B",
+      "raw_text": "20   n is the number of points of intersection of the graphs\n                                      y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1|\n     where a is a real number.\n     What is the smallest value of n that is not possible?\n     A   nൌ1\n     B   nൌ2\n     C   nൌ3\n     D   nൌ4\n     E   nൌ5\n                                                   22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

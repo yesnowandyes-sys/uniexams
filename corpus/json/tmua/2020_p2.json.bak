@@ -1,0 +1,419 @@
+{
+  "source_file": "TMUA-2020-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2020,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2020-P2-Q1",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1 Find the complete set of values of k for which the line y = x − 2 crosses or touches the curve y = x2 + kx + 2",
+      "has_diagram": false,
+      "options": {
+        "A": "−1 ≤ k ≤ 3",
+        "B": "−3 ≤ k ≤ 5",
+        "C": "−4 ≤ k ≤ 4",
+        "D": "k ≤ −1 or k ≥ 3",
+        "E": "k ≤ −3 or k ≥ 5",
+        "F": "k ≤ −4 or k ≥ 4 3"
+      },
+      "correct_answer": "E",
+      "raw_text": "1   Find the complete set of values of k for which the line y = x − 2 crosses or touches\n    the curve y = x2 + kx + 2\n    A −1 ≤ k ≤ 3\n    B −3 ≤ k ≤ 5\n    C −4 ≤ k ≤ 4\n    D k ≤ −1 or k ≥ 3\n    E k ≤ −3 or k ≥ 5\n    F k ≤ −4 or k ≥ 4\n                                            3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q2",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2 Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ √",
+      "has_diagram": false,
+      "options": {
+        "A": "3 √",
+        "B": "− 3 √ 3",
+        "C": "√ 3",
+        "D": "− √ 5",
+        "E": "5 √ 5",
+        "F": "− 5 √ 2 5",
+        "G": "5 √ 2 5",
+        "H": "− 5 4"
+      },
+      "correct_answer": "F",
+      "raw_text": "2   Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ\n         √\n    A       3\n          √\n    B   − 3\n          √\n            3\n    C\n           2\n          √\n            3\n    D   −\n           2\n          √\n            5\n    E\n           5\n          √\n            5\n    F   −\n           5\n           √\n          2 5\n    G\n            5\n           √\n          2 5\n    H   −\n            5\n                                           4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q3",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3 A student makes the following claim: 9n + 1 3n − 1 For all integers n, the expression 4 − is divisible by 3. 2 2 Here is the student’s argument: 9n + 1 3n − 1 9n + 1 3n − 1 4 − =2 2 − (I) 2 2 2 2 = 2(9n + 1 − 3n − 1) (II) = 2(6n) (III) = 12n (IV) = 3(4n) (V) which is always a multiple of 3. (VI) 9n + 1 3n − 1 So the expression 4 − is always divisible by 3. 2 2 Which one of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "The argument is correct.",
+        "B": "The argument is incorrect, and the ﬁrst error occurs on line (I).",
+        "C": "The argument is incorrect, and the ﬁrst error occurs on line (II).",
+        "D": "The argument is incorrect, and the ﬁrst error occurs on line (III).",
+        "E": "The argument is incorrect, and the ﬁrst error occurs on line (IV).",
+        "F": "The argument is incorrect, and the ﬁrst error occurs on line (V).",
+        "G": "The argument is incorrect, and the ﬁrst error occurs on line (VI). 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   A student makes the following claim:\n                                                \u0002                   \u0003\n                                                    9n + 1 3n − 1\n         For all integers n, the expression 4             −             is divisible by 3.\n                                                      2      2\n    Here is the student’s argument:\n                   \u0002                   \u0003    \u0002 \u0002                 \u0003\u0003\n                       9n + 1 3n − 1              9n + 1 3n − 1\n               4             −           =2 2            −                       (I)\n                         2      2                    2        2\n                                         = 2(9n + 1 − 3n − 1)                    (II)\n                                         = 2(6n)                                 (III)\n                                         = 12n                                   (IV)\n                                         = 3(4n)                                 (V)\n                        which is always a multiple of 3.                         (VI)\n                                      \u0002                   \u0003\n                                          9n + 1 3n − 1\n               So the expression 4              −             is always divisible by 3.\n                                            2      2\n    Which one of the following is true?\n    A The argument is correct.\n    B The argument is incorrect, and the ﬁrst error occurs on line (I).\n    C The argument is incorrect, and the ﬁrst error occurs on line (II).\n    D The argument is incorrect, and the ﬁrst error occurs on line (III).\n    E The argument is incorrect, and the ﬁrst error occurs on line (IV).\n    F The argument is incorrect, and the ﬁrst error occurs on line (V).\n    G The argument is incorrect, and the ﬁrst error occurs on line (VI).\n                                                5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q4",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4 Consider the following statement: Every positive integer N that is greater than 6 can be written as the sum of two non-prime integers that are greater than 1. Which of the following is/are counterexample(s) to this statement? I N =5 II N =7 III N = 9",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 6"
+      },
+      "correct_answer": "G",
+      "raw_text": "4   Consider the following statement:\n            Every positive integer N that is greater than 6 can be written as the sum\n            of two non-prime integers that are greater than 1.\n    Which of the following is/are counterexample(s) to this statement?\n        I      N =5\n        II     N =7\n        III N = 9\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                              6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q5",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5 Which one of the following shows the graph of 2x y= 1 + 2x (Dotted lines indicate asymptotes.)",
+      "has_diagram": false,
+      "options": {
+        "A": "[diagram: graph of y = 2^x / (1 + 2^x)]",
+        "D": "[diagram: graph of y = 2^x / (1 + 2^x)]"
+      },
+      "correct_answer": "A",
+      "raw_text": "5   Which one of the following shows the graph of\n                                                    2x\n                                          y=\n                                                  1 + 2x\n    (Dotted lines indicate asymptotes.)\n     A                          B                              C\n              y                           y                        y\n              0             x             0                x       0   x\n     D                          E                              F\n              y                           y                        y\n              0             x             0                x       0   x\n                                              7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q6",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6 The function f(x) is deﬁned for all real values of x. Which of the following conditions on f(x) is/are necessary to ensure that 0 5 f(x) dx = f(x) dx −5 0 Condition I: f(x) = f(−x) for −5 ≤ x ≤ 5 Condition II: f(x) = c for −5 ≤ x ≤ 5, where c is a constant Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 8"
+      },
+      "correct_answer": "A",
+      "raw_text": "6   The function f(x) is deﬁned for all real values of x.\n    Which of the following conditions on f(x) is/are necessary to ensure that\n                                  \u0004 0            \u0004 5\n                                      f(x) dx =      f(x) dx\n                                     −5            0\n        Condition I:     f(x) = f(−x) for −5 ≤ x ≤ 5\n        Condition II:    f(x) = c for −5 ≤ x ≤ 5, where c is a constant\n        Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                             8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q7",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7 Consider the following conditions on a parallelogram P QRS, labelled anticlockwise: I length of P Q = length of QR II The diagonal P R intersects the diagonal QS at right angles III ∠P QR = ∠QRS Which of these conditions is/are individually suﬃcient for the parallelogram P QRS to be a square? Condition I is Condition II is Condition III is suﬃcient suﬃcient suﬃcient",
+      "has_diagram": false,
+      "options": {
+        "A": "yes yes yes",
+        "B": "yes yes no",
+        "C": "yes no yes",
+        "D": "yes no no",
+        "E": "no yes yes",
+        "F": "no yes no",
+        "G": "no no yes",
+        "H": "no no no 9"
+      },
+      "correct_answer": "H",
+      "raw_text": "7   Consider the following conditions on a parallelogram P QRS, labelled\n    anticlockwise:\n        I    length of P Q = length of QR\n        II   The diagonal P R intersects the diagonal QS at right angles\n        III ∠P QR = ∠QRS\n    Which of these conditions is/are individually suﬃcient for the parallelogram P QRS\n    to be a square?\n               Condition I is          Condition II is         Condition III is\n                 suﬃcient                suﬃcient                suﬃcient\n       A           yes                      yes                      yes\n       B           yes                      yes                      no\n       C           yes                      no                       yes\n       D           yes                      no                       no\n       E            no                      yes                      yes\n       F            no                      yes                      no\n       G            no                      no                       yes\n       H            no                      no                       no\n                                            9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q8",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8 A student is asked to prove whether the following statement (∗) is true or false: (∗) For all real numbers a and b, |a + b| < |a| + |b| The student’s proof is as follows: Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7 and |3| + |4| = 7, but 7 < 7 is false. Which of the following best describes the student’s proof?",
+      "has_diagram": false,
+      "options": {
+        "A": "The statement (∗) is true, and the student’s proof is not correct.",
+        "B": "The statement (∗) is false, but the student’s proof is not correct: the counterexample is not valid.",
+        "C": "The statement (∗) is false, but the student’s proof is not correct: the student needs to give all the values of a and b where |a + b| < |a| + |b| is false.",
+        "D": "The statement (∗) is false, but the student’s proof is not correct: the student should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|.",
+        "E": "The statement (∗) is false, and the student’s proof is fully correct. 10"
+      },
+      "correct_answer": "E",
+      "raw_text": "8   A student is asked to prove whether the following statement (∗) is true or false:\n         (∗) For all real numbers a and b, |a + b| < |a| + |b|\n    The student’s proof is as follows:\n         Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7\n         and |3| + |4| = 7, but 7 < 7 is false.\n    Which of the following best describes the student’s proof?\n    A The statement (∗) is true, and the student’s proof is not correct.\n    B The statement (∗) is false, but the student’s proof is not correct: the\n      counterexample is not valid.\n    C The statement (∗) is false, but the student’s proof is not correct: the student\n      needs to give all the values of a and b where |a + b| < |a| + |b| is false.\n    D The statement (∗) is false, but the student’s proof is not correct: the student\n      should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|.\n    E The statement (∗) is false, and the student’s proof is fully correct.\n                                            10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q9",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9 A student wishes to evaluate the function f(x) = x sin x, where x is in radians, but has a calculator that only works in degrees. What could the student type into their calculator to correctly evaluate f(4) ?",
+      "has_diagram": false,
+      "options": {
+        "A": "(π × 4 ÷ 180) × sin(4)",
+        "B": "(π × 4 ÷ 180) × sin(π × 4 ÷ 180)",
+        "C": "4 × sin(π × 4 ÷ 180)",
+        "D": "(180 × 4 ÷ π) × sin(4)",
+        "E": "(180 × 4 ÷ π) × sin(180 × 4 ÷ π)",
+        "F": "4 × sin(180 × 4 ÷ π) 11"
+      },
+      "correct_answer": "F",
+      "raw_text": "9   A student wishes to evaluate the function f(x) = x sin x, where x is in radians, but\n    has a calculator that only works in degrees.\n    What could the student type into their calculator to correctly evaluate f(4) ?\n    A (π × 4 ÷ 180) × sin(4)\n    B (π × 4 ÷ 180) × sin(π × 4 ÷ 180)\n    C 4 × sin(π × 4 ÷ 180)\n    D (180 × 4 ÷ π) × sin(4)\n    E (180 × 4 ÷ π) × sin(180 × 4 ÷ π)\n    F 4 × sin(180 × 4 ÷ π)\n                                            11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q10",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10 The real numbers a, b, c and d satisfy both 0<a+b<c+d and 0<a+c<b+d Which of the following inequalities must be true? I a<d II b<c III a + b + c + d > 0",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 12"
+      },
+      "correct_answer": "F",
+      "raw_text": "10   The real numbers a, b, c and d satisfy both\n                                      0<a+b<c+d\n     and\n                                      0<a+c<b+d\n     Which of the following inequalities must be true?\n           I    a<d\n           II   b<c\n           III a + b + c + d > 0\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                            12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q11",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11 A spiral line is drawn as shown. y 5 4 3 2 1 −5 −4 −3 −2 −1 0 1 2 3 4 5 x −1 −2 −3 −4 −5 This spiral pattern continues indeﬁnitely. Which one of the following points is not on the spiral line?",
+      "has_diagram": false,
+      "options": {
+        "A": "(99, 100)",
+        "B": "(99, −100)",
+        "C": "(−99, 100)",
+        "D": "(−99, −100)",
+        "E": "(100, 99)",
+        "F": "(100, −99)",
+        "G": "(−100, 99)",
+        "H": "(−100, −99) 13"
+      },
+      "correct_answer": "G",
+      "raw_text": "11   A spiral line is drawn as shown.\n                                              y\n                                              5\n                                              4\n                                              3\n                                              2\n                                              1\n                   −5   −4   −3   −2    −1        0   1   2    3    4   5 x\n                                             −1\n                                             −2\n                                             −3\n                                             −4\n                                             −5\n     This spiral pattern continues indeﬁnitely.\n     Which one of the following points is not on the spiral line?\n     A (99, 100)\n     B (99, −100)\n     C (−99, 100)\n     D (−99, −100)\n     E (100, 99)\n     F (100, −99)\n     G (−100, 99)\n     H (−100, −99)\n                                              13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q12",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12 Which one of A–F correctly completes the following statement? Given that a < b, and f(x) > 0 for all x with a < x < b, the trapezium rule b produces an overestimate for a f(x) dx . . .",
+      "has_diagram": false,
+      "options": {
+        "A": ". . . if f (x) > 0 and f (x) < 0 for all x with a < x < b",
+        "B": ". . . only if f (x) > 0 and f (x) < 0 for all x with a < x < b",
+        "C": ". . . if and only if f (x) > 0 and f (x) < 0 for all x with a < x < b",
+        "D": ". . . if f (x) < 0 and f (x) > 0 for all x with a < x < b",
+        "E": ". . . only if f (x) < 0 and f (x) > 0 for all x with a < x < b",
+        "F": ". . . if and only if f (x) < 0 and f (x) > 0 for all x with a < x < b 14"
+      },
+      "correct_answer": "D",
+      "raw_text": "12   Which one of A–F correctly completes the following statement?\n           Given that a < b, and f(x) > 0 for all x with a < x < b, the trapezium rule\n                                        \u0005b\n           produces an overestimate for a f(x) dx . . .\n     A . . . if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n     B . . . only if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n     C . . . if and only if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n     D . . . if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n     E . . . only if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n     F . . . if and only if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n                                                14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q13",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13 f(x) is a function for which 3 3 1 2 f(x) dx + f(x) dx = f(x) dx 0 0 0 Which of the following claims about f(x) is/are necessarily true? I f(x) ≤ 0 for some x with 1 ≤ x ≤ 3 3 1 II 0 f(x) dx ≤ 0 f(x) dx",
+      "has_diagram": false,
+      "options": {
+        "A": "neither of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "I and II 15"
+      },
+      "correct_answer": "D",
+      "raw_text": "13   f(x) is a function for which\n                            \u0004 3            \u0004 3           \u0004 1\n                                \u0006    \u00072\n                                 f(x) dx +     f(x) dx =     f(x) dx\n                              0                   0       0\n     Which of the following claims about f(x) is/are necessarily true?\n             I    f(x) ≤ 0 for some x with 1 ≤ x ≤ 3\n                  \u00053               \u00051\n             II   0\n                       f(x) dx ≤   0\n                                        f(x) dx\n     A neither of them\n     B I only\n     C II only\n     D I and II\n                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q14",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14 An arithmetic sequence T has ﬁrst term a and common diﬀerence d, where a and d are non-zero integers. Property P is: For some positive integer m, the sum of the ﬁrst m terms of the sequence is equal to the sum of the ﬁrst 2m terms of the sequence. For example, when a = 11 and d = −2, the sequence T has property P, because 11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (−1) + (−3) i.e. the sum of the ﬁrst 4 terms equals the sum of the ﬁrst 8 terms. Which of the following statements is/are true? I For T to have property P, it is suﬃcient that ad < 0. II For T to have property P, it is necessary that d is even.",
+      "has_diagram": false,
+      "options": {
+        "A": "neither of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "I and II 16"
+      },
+      "correct_answer": "A",
+      "raw_text": "14   An arithmetic sequence T has ﬁrst term a and common diﬀerence d, where a and d\n     are non-zero integers.\n     Property P is:\n             For some positive integer m, the sum of the ﬁrst m terms of the sequence\n             is equal to the sum of the ﬁrst 2m terms of the sequence.\n     For example, when a = 11 and d = −2, the sequence T has property P, because\n                      11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (−1) + (−3)\n     i.e. the sum of the ﬁrst 4 terms equals the sum of the ﬁrst 8 terms.\n     Which of the following statements is/are true?\n         I     For T to have property P, it is suﬃcient that ad < 0.\n         II For T to have property P, it is necessary that d is even.\n     A neither of them\n     B I only\n     C II only\n     D I and II\n                                             16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q15",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15 Which one of the following is a necessary and suﬃcient condition for √ n kπ 3 sin = k=1 3 2 to be true?",
+      "has_diagram": false,
+      "options": {
+        "A": "n=1",
+        "B": "n is a multiple of 3",
+        "C": "n is a multiple of 6",
+        "D": "n is 1 more than a multiple of 3",
+        "E": "n is 1 more than a multiple of 6",
+        "F": "n is 1 more than a multiple of 6 or n is 2 more than a multiple of 6 17"
+      },
+      "correct_answer": "D",
+      "raw_text": "15   Which one of the following is a necessary and suﬃcient condition for\n                                                   √\n                                      \bn\n                                              kπ     3\n                                          sin    =\n                                      k=1\n                                               3    2\n     to be true?\n     A n=1\n     B n is a multiple of 3\n     C n is a multiple of 6\n     D n is 1 more than a multiple of 3\n     E n is 1 more than a multiple of 6\n     F n is 1 more than a multiple of 6 or n is 2 more than a multiple of 6\n                                           17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q16",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16 The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f : d x dx 0 f(t) dt = f(x) d 2x 2",
+      "has_diagram": false,
+      "options": {
+        "A": "The calculation is completely correct.",
+        "B": "The calculation is incorrect, and the ﬁrst error occurs on line (I).",
+        "C": "The calculation is incorrect, and the ﬁrst error occurs on line (II).",
+        "D": "The calculation is incorrect, and the ﬁrst error occurs on line (III).",
+        "E": "The calculation is incorrect, and the ﬁrst error occurs on line (IV).",
+        "F": "The calculation is incorrect, and the ﬁrst error occurs on line (V). 18"
+      },
+      "correct_answer": "D",
+      "raw_text": "16   The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n                                         d\n                                             \u0006\u0005 x          \u0007\n                                        dx     0\n                                                    f(t) dt = f(x)\n                           d\n                               \u0006\u0005 2x 2 \u0007\n     A student calculates dx     x\n                                    t dt as follows:\n                \u0005 2x 2      \u0005 2x 2      \u0005x 2\n         (I)     x\n                    t  dt =  0\n                                t  dt −  0\n                                           t dt\n                         d\n                               \u0006\u0005 x 2 \u0007\n         (II)   By FTC, dx       0\n                                   t dt = x2\n                        d\n                               \u0006\u0005 2x 2 \u0007\n         (III) By FTC, dx        0\n                                    t dt = (2x)2 = 4x2\n                        \u0006\u0005 2x 2 \u0007\n         (IV)       d\n                So dx     x\n                             t dt = 4x2 − x2\n                        d\n                            \u0006\u0005 2x 2 \u0007\n         (V)    giving dx     x\n                                 t dt = 3x2\n     Which of the following best describes the student’s calculation?\n     A The calculation is completely correct.\n     B The calculation is incorrect, and the ﬁrst error occurs on line (I).\n     C The calculation is incorrect, and the ﬁrst error occurs on line (II).\n     D The calculation is incorrect, and the ﬁrst error occurs on line (III).\n     E The calculation is incorrect, and the ﬁrst error occurs on line (IV).\n     F The calculation is incorrect, and the ﬁrst error occurs on line (V).\n                                                    18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q17",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17 A set of six distinct integers is split into two sets of three. The ﬁrst set of three integers has a mean of 10 and a median of 8. The second set of three integers has a mean of 12 and a median of 9. What is the smallest possible range of the set of all six integers?",
+      "has_diagram": false,
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "14",
+        "F": "15 19"
+      },
+      "correct_answer": "E",
+      "raw_text": "17   A set of six distinct integers is split into two sets of three.\n     The ﬁrst set of three integers has a mean of 10 and a median of 8.\n     The second set of three integers has a mean of 12 and a median of 9.\n     What is the smallest possible range of the set of all six integers?\n     A 8\n     B 10\n     C 11\n     D 12\n     E 14\n     F 15\n                                               19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q18",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18 In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic polynomials. If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true? I a>p II if b = q then c = r III d > s",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 20"
+      },
+      "correct_answer": "G",
+      "raw_text": "18   In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic\n     polynomials.\n     If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true?\n         I    a>p\n         II   if b = q then c = r\n         III d > s\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                             20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2020-P2-Q19",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19 Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown. Two people are called neighbours if they are sitting in squares that share a side. (People in diagonally adjacent squares, which only have a point in common, are not called neighbours.) Each of the nine people in the grid is either a truth-teller who always tells the truth, or a liar who always lies. Every person in the grid says: ‘My neighbours are all liars’. Given only this information, what are the smallest number and the largest number of people who could be telling the truth? smallest largest",
+      "has_diagram": true,
+      "options": {
+        "A": "1 4",
+        "B": "2 4",
+        "C": "2 5",
+        "D": "3 4",
+        "E": "3 5",
+        "F": "4 4",
+        "G": "4 5",
+        "H": "5 5 21"
+      },
+      "correct_answer": "E",
+      "raw_text": "19   Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n     Two people are called neighbours if they are sitting in squares that share a side.\n     (People in diagonally adjacent squares, which only have a point in common, are not\n     called neighbours.)\n     Each of the nine people in the grid is either a truth-teller who always tells the truth,\n     or a liar who always lies.\n     Every person in the grid says: ‘My neighbours are all liars’.\n     Given only this information, what are the smallest number and the largest number\n     of people who could be telling the truth?\n                 smallest                   largest\n      A             1                          4\n      B             2                          4\n      C             2                          5\n      D             3                          4\n      E             3                          5\n      F             4                          4\n      G             4                          5\n      H             5                          5\n                                             21",
+      "diagram_images": [
+        "TMUA-2020-P2-Q19-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-2020-P2-Q20",
+      "year": 2020,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20 x is a real number and f is a function. Given that exactly one of the following statements is true, which one is it? This document was initially designed for print and as such does not reach accessibility standard WCAG 2.1 in a number of ways including missing text alternatives and missing document structure. If you need this document in a different format please email admissionstesting@cambridgeassessment.org.uk telling us your name, email address and requirements and we will respond within 15 working days.",
+      "has_diagram": false,
+      "options": {
+        "A": "x ≥ 0 only if f(x) < 0",
+        "B": "x < 0 if f(x) ≥ 0",
+        "C": "x ≥ 0 only if f(x) ≥ 0",
+        "D": "f(x) < 0 if x < 0",
+        "E": "f(x) ≥ 0 only if x ≥ 0",
+        "F": "f(x) ≥ 0 if and only if x < 0 22 23 24"
+      },
+      "correct_answer": "C",
+      "raw_text": "20   x is a real number and f is a function.\n     Given that exactly one of the following statements is true, which one is it?\n     A x ≥ 0 only if f(x) < 0\n     B x < 0 if f(x) ≥ 0\n     C x ≥ 0 only if f(x) ≥ 0\n     D f(x) < 0 if x < 0\n     E f(x) ≥ 0 only if x ≥ 0\n     F f(x) ≥ 0 if and only if x < 0\n                                               22\n\fBLANK PAGE\n    23\n\f                                         BLANK PAGE\nThis document was initially designed for print and as such does not reach accessibility standard WCAG\n2.1 in a number of ways including missing text alternatives and missing document structure.\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and requirements\nand we will respond within 15 working days.\n                                                  24",
+      "diagram_images": []
+    }
+  ]
+}

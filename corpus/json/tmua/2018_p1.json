@@ -1,0 +1,433 @@
+{
+  "source_file": "TMUA-2018-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2018,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2018-P1-Q1",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "\\int_{1}^{4} \\frac{3 - 2x}{x\\sqrt{x}} \\mathrm{d}x",
+      "has_diagram": false,
+      "options": {
+        "A": "-\\frac{13}{2}",
+        "B": "-\\frac{85}{16}",
+        "C": "-\\frac{13}{8}",
+        "D": "-1",
+        "E": "-\\frac{1}{4}",
+        "F": "\\frac{7}{4}",
+        "G": "7"
+      },
+      "correct_answer": "D",
+      "raw_text": "1   Find the value of\n                        \u0002 4\n                              3 − 2x\n                                √ dx\n                         1     x x\n    A     − 13\n             2\n    B     − 85\n            16\n    C     − 13\n             8\n    D     −1\n    E     − 14\n          7\n    F     4\n    G    7\n                              3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q2",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "An arithmetic progression has first term a and common difference d. The sum of the first 5 terms is equal to the sum of the first 8 terms. Which one of the following expresses the relationship between a and d?",
+      "has_diagram": false,
+      "options": {
+        "A": "a = -\\frac{38}{3}d",
+        "B": "a = -7d",
+        "C": "a = -6d",
+        "D": "a = 6d",
+        "E": "a = 7d",
+        "F": "a = \\frac{38}{3}d"
+      },
+      "correct_answer": "C",
+      "raw_text": "2   An arithmetic progression has ﬁrst term a and common diﬀerence d.\n    The sum of the ﬁrst 5 terms is equal to the sum of the ﬁrst 8 terms.\n    Which one of the following expresses the relationship between a and d ?\n    A a = − 38\n            3\n               d\n    B a = −7d\n    C a = −6d\n    D a = 6d\n    E   a = 7d\n    F   a = 38\n             3\n               d\n                                           4",
+      "diagram_images": [],
+      "options_latex": {
+        "D": "$a = 6d$",
+        "E": "$a = 7d$"
+      }
+    },
+    {
+      "id": "TMUA-2018-P1-Q3",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "Find the shortest distance between the two circles with equations: $(x + 2)^{2} + (y - 3)^{2} = 18$ $(x - 7)^{2} + (y + 6)^{2} = 2$",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "4",
+        "C": "16",
+        "D": "2\\sqrt{2}",
+        "E": "5\\sqrt{2}"
+      },
+      "correct_answer": "E",
+      "raw_text": "3   Find the shortest distance between the two circles with equations:\n                                  (x + 2)2 + (y − 3)2 = 18\n                                  (x − 7)2 + (y + 6)2 = 2\n    A 0\n    B 4\n    C 16\n       √\n    D 2 2\n       √\n    E 5 2\n                                           5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q4",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "Consider the simultaneous equations \\[3x^{2} + 2xy = 4\\] \\[x + y = a\\] where $a$ is a real constant. Find the complete set of values of $a$ for which the equations have two distinct real solutions for $x$.",
+      "has_diagram": false,
+      "options": {
+        "A": "There are no values of $a$.",
+        "B": "$-2 < a < 2$",
+        "C": "$-1 < a < 1$",
+        "D": "$a = 0$",
+        "E": "$a < -1$ or $a > 1$",
+        "F": "$a < -2$ or $a > 2$",
+        "G": "All real values of $a$"
+      },
+      "correct_answer": "G",
+      "raw_text": "4   Consider the simultaneous equations\n                                       3x2 + 2xy = 4\n                                            x+y =a\n    where a is a real constant.\n    Find the complete set of values of a for which the equations have two distinct real\n    solutions for x.\n    A There are no values of a.\n    B −2 < a < 2\n    C −1 < a < 1\n    D a=0\n    E   a < −1 or a > 1\n    F   a < −2 or a > 2\n    G All real values of a\n                                            6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q5",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "The function f is defined by f(x) = x^{3} + ax^{2} + bx + c. a, b and c take the values 1, 2 and 3 with no two of them being equal and not necessarily in this order. The remainder when f(x) is divided by (x + 2) is R. The remainder when f(x) is divided by (x + 3) is S. What is the largest possible value of R - S?",
+      "has_diagram": false,
+      "options": {
+        "A": "-26",
+        "B": "5",
+        "C": "7",
+        "D": "17",
+        "E": "29"
+      },
+      "correct_answer": "D",
+      "raw_text": "5   The function f is deﬁned by f(x) = x3 + ax2 + bx + c.\n    a, b and c take the values 1, 2 and 3 with no two of them being equal and not\n    necessarily in this order.\n    The remainder when f(x) is divided by (x + 2) is R.\n    The remainder when f(x) is divided by (x + 3) is S.\n    What is the largest possible value of R − S ?\n    A −26\n    B 5\n    C 7\n    D 17\n    E   29\n                                            7",
+      "diagram_images": [],
+      "question_text_latex": "The function $f$ is defined by $f(x) = x^{3} + ax^{2} + bx + c$. $a, b$ and $c$ take the values $1, 2$ and $3$ with no two of them being equal and not necessarily in this order. The remainder when $f(x)$ is divided by $(x + 2)$ is $R$. The remainder when $f(x)$ is divided by $(x + 3)$ is $S$. What is the largest possible value of $R - S$?"
+    },
+    {
+      "id": "TMUA-2018-P1-Q6",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "Find the number of solutions of the equation x \\sin 2x = \\cos 2x with 0 \\leq x \\leq 2\\pi.",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4"
+      },
+      "correct_answer": "E",
+      "raw_text": "6   Find the number of solutions of the equation\n                                     x sin 2x = cos 2x\n    with 0 ≤ x ≤ 2π.\n    A 0\n    B 1\n    C 2\n    D 3\n    E   4\n                                           8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q7",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "The non-zero constant k is chosen so that the coefficients of x^{6} in the expansions of (1 + kx^{2})^{7} and (k + x)^{1}0 are equal. What is the value of k?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{6}",
+        "B": "6",
+        "C": "\\frac{\\sqrt{6}}{6}",
+        "D": "\\sqrt{6}",
+        "E": "\\frac{\\sqrt{30}}{30}",
+        "F": "\\sqrt{30}"
+      },
+      "correct_answer": "A",
+      "raw_text": "7   The non-zero constant k is chosen so that the coeﬃcients of x6 in the expansions of\n    (1 + kx2 )7 and (k + x)10 are equal.\n    What is the value of k ?\n        1\n    A   6\n    B 6\n        √\n          6\n    C    6\n        √\n    D       6\n        √\n          30\n    E    30\n        √\n    F       30\n                                           9",
+      "diagram_images": [],
+      "question_text_latex": "The non-zero constant $k$ is chosen so that the coefficients of $x^{6}$ in the expansions of $(1 + kx^{2})^{7}$ and $(k + x)^{10}$ are equal. What is the value of $k$?"
+    },
+    {
+      "id": "TMUA-2018-P1-Q8",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "The sum to infinity of a geometric progression is 6. The sum to infinity of the squares of each term in the progression is 12. Find the sum to infinity of the cubes of each term in the progression.",
+      "has_diagram": false,
+      "options": {
+        "A": "8",
+        "B": "18",
+        "C": "24",
+        "D": "\\frac{216}{7}",
+        "E": "72",
+        "F": "216"
+      },
+      "correct_answer": "D",
+      "raw_text": "8   The sum to inﬁnity of a geometric progression is 6.\n    The sum to inﬁnity of the squares of each term in the progression is 12.\n    Find the sum to inﬁnity of the cubes of each term in the progression.\n    A 8\n    B 18\n    C 24\n        216\n    D    7\n    E   72\n    F   216\n                                           10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q9",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "Find the complete set of values of the constant c for which the cubic equation $2x^{3} - 3x^{2} - 12x + c = 0$ has three distinct real solutions.",
+      "has_diagram": false,
+      "options": {
+        "A": "$-20 < c < 7$",
+        "B": "$-7 < c < 20$",
+        "C": "$c > 7$",
+        "D": "$c > -7$",
+        "E": "$c < 20$",
+        "F": "$c < -20$"
+      },
+      "correct_answer": "B",
+      "raw_text": "9   Find the complete set of values of the constant c for which the cubic equation\n                                    2x3 − 3x2 − 12x + c = 0\n    has three distinct real solutions.\n    A −20 < c < 7\n    B −7 < c < 20\n    C c>7\n    D c > −7\n    E   c < 20\n    F   c < −20\n                                            11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q10",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "x and y satisfy |2 - x| \\leq  6 and |y + 2| \\leq  4. What is the greatest possible value of |xy|?",
+      "has_diagram": false,
+      "options": {
+        "A": "16",
+        "B": "24",
+        "C": "32",
+        "D": "40",
+        "E": "48",
+        "F": "There is no greatest possible value."
+      },
+      "correct_answer": "E",
+      "raw_text": "10   x and y satisfy |2 − x| ≤ 6 and |y + 2| ≤ 4.\n     What is the greatest possible value of |xy| ?\n     A 16\n     B 24\n     C 32\n     D 40\n     E   48\n     F   There is no greatest possible value.\n                                                12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q11",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "The line $y = mx + 5$, where $m > 0$, is normal to the curve $y = 10 - x^{2}$ at the point $(p, q)$. What is the value of $p$?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{\\sqrt{2}}{6}",
+        "B": "-\\frac{\\sqrt{2}}{6}",
+        "C": "\\frac{3\\sqrt{2}}{2}",
+        "D": "-\\frac{3\\sqrt{2}}{2}",
+        "E": "\\sqrt{5}",
+        "F": "-\\sqrt{5}"
+      },
+      "correct_answer": "C",
+      "raw_text": "11   The line y = mx + 5, where m > 0, is normal to the curve y = 10 − x2 at the\n     point (p, q).\n     What is the value of p ?\n         √\n           2\n     A    6\n             √\n     B − 62\n          √\n         3 2\n     C    2\n               √\n     D −322\n       √\n     E   5\n        √\n     F − 5\n                                           13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q12",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "A curve has equation y = f(x), where f(x) = x(x - p)(x - q)(r - x) with 0 < p < q < r. You are given that: \\int_0^r f(x) \\, dx = 0, \\int_0^q f(x) \\, dx = -2, \\int_p^r f(x) \\, dx = -3. What is the total area enclosed by the curve and the x-axis for 0 \\leq x \\leq r?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "4",
+        "D": "5",
+        "E": "6",
+        "F": "10"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   A curve has equation y = f(x), where\n                                f(x) = x(x − p)(x − q)(r − x)\n     with 0 < p < q < r.\n     You are given that:\n                                       \u0002 r\n                                             f(x) dx = 0\n                                        0\n                                       \u0002 q\n                                             f(x) dx = −2\n                                        0\n                                       \u0002 r\n                                             f(x) dx = −3\n                                        p\n     What is the total area enclosed by the curve and the x-axis for 0 ≤ x ≤ r ?\n     A 0\n     B 1\n     C 4\n     D 5\n     E   6\n     F   10\n                                              14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q13",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "The function f(x) has derivative f'(x). The diagram below shows the graph of y = f'(x). Which point corresponds to a local minimum of f(x)?",
+      "has_diagram": true,
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D",
+        "E": "E",
+        "F": "F"
+      },
+      "correct_answer": "C",
+      "raw_text": "13   The function f(x) has derivative f \u0003 (x).\n     The diagram below shows the graph of y = f \u0003 (x).\n     Which point corresponds to a local minimum of f(x) ?\n                                              y\n                                                           E\n                      y = f ' (x)\n                                                       D\n                     A                    C                    F   x\n                               B\n                                                  15\n[Note: Options are points A-F labeled on a graph of y=f'(x); the point corresponding to a local minimum of f(x) is where f'(x) crosses from negative to positive (answer=C).]",
+      "diagram_images": [],
+      "option_images": {
+        "A": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png",
+        "B": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png",
+        "C": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png",
+        "D": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png",
+        "E": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png",
+        "F": "corpus/images/tmua/TMUA-2018-P1-Q13-graph.png"
+      },
+      "answer": "C",
+      "question_text_latex": "The function $f(x)$ has derivative $f'(x)$. The diagram below shows the graph of $y = f'(x)$. Which point corresponds to a local minimum of $f(x)$?"
+    },
+    {
+      "id": "TMUA-2018-P1-Q14",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "The line y = mx + 4 passes through the points (3, \\log_2 p) and (\\log_2 p, 4). What are the possible values of p?",
+      "has_diagram": false,
+      "options": {
+        "A": "p = 1 and p = 4",
+        "B": "p = 1 and p = 16",
+        "C": "p = \\frac{1}{4} and p = 4",
+        "D": "p = \\frac{1}{4} and p = 64",
+        "E": "p = \\frac{1}{64} and p = 4",
+        "F": "p = \\frac{1}{64} and p = 16"
+      },
+      "correct_answer": "B",
+      "raw_text": "14   The line y = mx + 4 passes through the points (3, log2 p) and (log2 p, 4).\n     What are the possible values of p ?\n     A p = 1 and p = 4\n     B p = 1 and p = 16\n     C p = 14 and p = 4\n     D p = 14 and p = 64\n             1\n     E   p = 64 and p = 4\n             1\n     F   p = 64 and p = 16\n                                             16",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$p = 1$ and $p = 4$",
+        "B": "$p = 1$ and $p = 16$"
+      }
+    },
+    {
+      "id": "TMUA-2018-P1-Q15",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "Find the sum of the real solutions of the equation: 3^x - (\\sqrt{3})^{x+4} + 20 = 0",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "9",
+        "D": "\\log_3 20",
+        "E": "2\\log_3 20",
+        "F": "4\\log_3 20"
+      },
+      "correct_answer": "E",
+      "raw_text": "15   Find the sum of the real solutions of the equation:\n                                          √\n                                    3x − ( 3)x+4 + 20 = 0\n     A 1\n     B 4\n     C 9\n     D log3 20\n     E   2 log3 20\n     F   4 log3 20\n                                            17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q16",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "The curve C has equation y = x^{2} + bx + 2, where b \\geq  0. Find the value of b that minimises the distance between the origin and the stationary point of the curve C.",
+      "has_diagram": false,
+      "options": {
+        "A": "b = 0",
+        "B": "b = 1",
+        "C": "b = 2",
+        "D": "b = \\frac{\\sqrt{6}}{2}",
+        "E": "b = \\sqrt{2}",
+        "F": "b = \\sqrt{6}"
+      },
+      "correct_answer": "F",
+      "raw_text": "16   The curve C has equation y = x2 + bx + 2, where b ≥ 0.\n     Find the value of b that minimises the distance between the origin and the\n     stationary point of the curve C.\n     A b=0\n     B b=1\n     C b=2\n             √\n     D b = 26\n          √\n     E b= 2\n          √\n     F b= 6\n                                            18",
+      "diagram_images": [],
+      "question_text_latex": "The curve $C$ has equation $y = x^{2} + bx + 2$, where $b \\ge 0$. Find the value of $b$ that minimises the distance between the origin and the stationary point of the curve $C$.",
+      "options_latex": {
+        "A": "$b = 0$",
+        "B": "$b = 1$",
+        "C": "$b = 2$"
+      }
+    },
+    {
+      "id": "TMUA-2018-P1-Q17",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "There are two sets of data: the mean of the first set is 15, and the mean of the second set is 20. One of the pieces of data from the first set is exchanged with one of the pieces of data from the second set. As a result, the mean of the first set of data increases from 15 to 16, and the mean of the second set of data decreases from 20 to 17. What is the mean of the set made by combining all the data?",
+      "has_diagram": false,
+      "options": {
+        "A": "16\\frac{1}{4}",
+        "B": "16\\frac{1}{3}",
+        "C": "16\\frac{1}{2}",
+        "D": "16\\frac{2}{3}",
+        "E": "16\\frac{3}{4}"
+      },
+      "correct_answer": "A",
+      "raw_text": "17   There are two sets of data: the mean of the ﬁrst set is 15, and the mean of the\n     second set is 20.\n     One of the pieces of data from the ﬁrst set is exchanged with one of the pieces of\n     data from the second set.\n     As a result, the mean of the ﬁrst set of data increases from 15 to 16, and the mean of\n     the second set of data decreases from 20 to 17.\n     What is the mean of the set made by combining all the data?\n     A 16 14\n     B 16 13\n     C 16 12\n     D 16 23\n     E   16 34\n                                            19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q18",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "What is the smallest positive value of a for which the line x = a is a line of symmetry of the graph of y = \\sin(2x - \\frac{4\\pi}{3})?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{\\pi}{12}",
+        "B": "\\frac{5\\pi}{12}",
+        "C": "\\frac{7\\pi}{12}",
+        "D": "\\frac{11\\pi}{12}",
+        "E": "\\frac{19\\pi}{12}"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   What is the smallest positive value of a for which the line x = a is a line of\n     symmetry of the graph of y = sin (2x − 4π3\n                                                )?\n         π\n     A   12\n         5π\n     B   12\n         7π\n     C   12\n         11π\n     D    12\n         19π\n     E    12\n                                             20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q19",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "A triangle ABC is to be drawn with AB = 10\\text{cm}, BC = 7\\text{cm} and the angle at A equal to \\theta, where \\theta is a certain specified angle. Of the two possible triangles that could be drawn, the larger triangle has three times the area of the smaller one. What is the value of \\cos\\theta?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{5}{7}",
+        "B": "\\frac{151}{200}",
+        "C": "\\frac{2\\sqrt{2}}{5}",
+        "D": "\\frac{\\sqrt{17}}{5}",
+        "E": "\\frac{\\sqrt{51}}{8}",
+        "F": "\\frac{\\sqrt{34}}{8}"
+      },
+      "correct_answer": "D",
+      "raw_text": "19   A triangle ABC is to be drawn with AB = 10cm, BC = 7cm and the angle at A\n     equal to θ, where θ is a certain speciﬁed angle.\n     Of the two possible triangles that could be drawn, the larger triangle has three times\n     the area of the smaller one.\n     What is the value of cos θ ?\n         5\n     A   7\n         151\n     B   200\n          √\n         2 2\n     C    5\n         √\n             17\n     D       5\n         √\n             51\n     E       8\n         √\n             34\n     F       8\n                                            21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P1-Q20",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "\\sin^{2} 0^\\circ + \\sin^{2} 1^\\circ + \\sin^{2} 2^\\circ + \\sin^{2} 3^\\circ + \\dots + \\sin^{2} 87^\\circ + \\sin^{2} 88^\\circ + \\sin^{2} 89^\\circ + \\sin^{2} 90^\\circ",
+      "has_diagram": false,
+      "options": {
+        "A": "0.5",
+        "B": "1",
+        "C": "1.5",
+        "D": "45",
+        "E": "45.5",
+        "F": "46"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   Find the value of\n         sin2 0◦ + sin2 1◦ + sin2 2◦ + sin2 3◦ + · · · + sin2 87◦ + sin2 88◦ + sin2 89◦ + sin2 90◦\n     A 0.5\n     B 1\n     C 1.5\n     D 45\n     E    45.5\n     F    46\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n                                                  22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": [],
+      "question_text_latex": "$\\sin^{2} 0^\\circ + \\sin^{2} 1^\\circ + \\sin^{2} 2^\\circ + \\sin^{2} 3^\\circ + \\dots + \\sin^{2} 87^\\circ + \\sin^{2} 88^\\circ + \\sin^{2} 89^\\circ + \\sin^{2} 90^\\circ$"
+    }
+  ]
+}

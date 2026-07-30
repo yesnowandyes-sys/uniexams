@@ -1,0 +1,49 @@
+{
+  "topic_key": "CHEM.C11",
+  "topic_name": "Energetics",
+  "module_code": "C",
+  "corpus_question_count": 20,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student analyzes a graph of temperature against volume of acid added to an alkali. The temperature rises linearly, peaks, and then falls linearly. They must explain why the temperature falls after the peak.",
+      "key_insight": "The fall is not due to the reaction becoming endothermic (Option B in Q9), but because the reaction has stopped (limiting reagent exhausted), and the added cooler solution (excess acid) simply lowers the average temperature of the mixture.",
+      "discrimination_factors": [
+        "Understanding that neutralisation is exothermic",
+        "Differentiating between 'reaction reversibility/endothermicity' and 'mixing fluids of different temperatures'",
+        "Interpreting titration curves"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Given an exothermic reaction with activation energy $E_a(forward) = +150 kJ/mol$ and $\\Delta H = -100 kJ/mol$, calculate the activation energy for the reverse reaction.",
+      "key_insight": "Visualizing the energy profile. The 'drop' from products to reactants is the sum of the forward barrier and the enthalpy change. $E_a(reverse) = E_a(forward) - \\Delta H$. (Since $\\Delta H$ is negative, this becomes $150 + 250$? No, $150 - (-100)$? No, conceptually: Reactants -> Peak = 150. Peak -> Products = -250. So Products -> Peak = +250. Calculation: $150 + 100 = 250$).",
+      "discrimination_factors": [
+        "Sketching or visualizing the reaction coordinate diagram",
+        "Algebraic manipulation of signed quantities ($E_a(rev) = E_a(fwd) - \\Delta H$)"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculate the enthalpy of formation for a compound (e.g., CO) using a Hess Cycle involving enthalpies of formation and decomposition of other species, where the unknown $\\Delta H_f$ is embedded in a cycle with 3-4 other known values.",
+      "key_insight": "The ability to treat an enthalpy cycle as a closed loop where $\\Sigma \\Delta H = 0$. The student must assign directionality to the arrows correctly (formation vs decomposition) and solve for the missing variable.",
+      "discrimination_factors": [
+        "Hess's Law application",
+        "Managing multiple thermodynamic terms and signs",
+        "Algebraic substitution"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "An experiment where $Y$ moles of Oxygen are in excess, but only $Z$ moles of product form at equilibrium. Determine the heat released.",
+      "key_insight": "Heat released is proportional to the *extent of reaction* (moles reacted), not the moles available. The student must ignore the 'excess' quantity $Y$ and base the calculation on the product quantity $Z$.",
+      "discrimination_factors": [
+        "Distinguishing between 'initial moles' and 'moles reacted'",
+        "Understanding that heat is a state function dependent on actual chemical change",
+        "Resisting the urge to use the first number mentioned in the text"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

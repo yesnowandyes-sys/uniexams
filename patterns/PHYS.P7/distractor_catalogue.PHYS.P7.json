@@ -1,0 +1,52 @@
+{
+  "topic_key": "PHYS.P7",
+  "topic_name": "Radioactivity",
+  "module_code": "P",
+  "corpus_question_count": 37,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Mass-Count Confusion",
+      "frequency": "High",
+      "example_question_id": "Q10, Q31",
+      "why_effective": "Students instinctively calculate the mass number change ($238-206=32$) and divide by 4 (alpha mass) to get 8 alphas, then select 8 betas to balance the proton count logic 'evenly', or they fail to account for the 2 proton drop per alpha and miscalculate the beta requirement.",
+      "generation_strategy": "Present a decay series problem where the mass number change is a multiple of the alpha particle mass. Make the correct beta count significantly different (e.g., double) from the number of alpha particles."
+    },
+    {
+      "distractor_type": "Simultaneous-Decay Ratio Failure",
+      "frequency": "High",
+      "example_question_id": "Q11, Q12, Q33",
+      "why_effective": "Students often forget that the initial quantity of the daughter product ($R$ or $S$) was non-zero (given as 'equal numbers'). They calculate the decayed amount but forget to add the initial stable amount to the final numerator/denominator, leading to ratios like 17/20 or 6/5.",
+      "generation_strategy": "Scenario: 'Sample contains equal numbers of Parent and Daughter'. Calculate final ratio. Distractors: (A) Ratio ignoring initial Daughter, (B) Ratio with initial added to wrong parent, (C) Correct."
+    },
+    {
+      "distractor_type": "Unstated Intermediate Nuclides",
+      "frequency": "Medium",
+      "example_question_id": "Q3, Q23",
+      "why_effective": "Students look at the net change (Start to End) and identify the 'impossible' net nuclide, ignoring the possibility that intermediate steps (e.g., Beta then Alpha) produce valid nuclides not predicted by net change alone.",
+      "generation_strategy": "Net change is specific (e.g., -4 mass, -2 charge). List intermediate states. Include the 'net' state as an option, but make it impossible to reach via the specific sequence order (e.g., requires Beta before Alpha, but sequence forces Alpha first)."
+    },
+    {
+      "distractor_type": "Momentum Conservation Mass-Ratio Reversal",
+      "frequency": "Medium",
+      "example_question_id": "Q21",
+      "why_effective": "Students mix up the numerators/denominators of the momentum conservation ratios, selecting $4E/238$ (thinking 'alpha gets 4 parts out of 238') instead of $234E/238$ ('daughter gets 234 parts, alpha gets 4 parts').",
+      "generation_strategy": "Kinetic energy split between two bodies. Distractors are the reciprocal of the correct fraction and the 1/2 value."
+    },
+    {
+      "distractor_type": "Graphical Half-Life Misinterpretation",
+      "frequency": "Medium",
+      "example_question_id": "Q6, Q26",
+      "why_effective": "The graph plateaus at a background count (e.g., 20) rather than zero. Students often measure the half-life from 0 to 120 (getting 60) or from 20 to 80, rather than from the top value down to the mid-point of the decay range.",
+      "generation_strategy": "Graph with non-zero asymptote. Correct half-life is based on exponential decay component. Distractors: (A) Based on peak to asymptote time/2, (B) Based on time to reach asymptote."
+    },
+    {
+      "distractor_type": "Decay Product Identity (Fission)",
+      "frequency": "Low",
+      "example_question_id": "Q7, Q27",
+      "why_effective": "Multi-step problems (Fission -> Beta Decay) cause students to stop at the fission products and answer for the pre-decay element, or miscalculate the neutron count (balancing mass vs atomic number).",
+      "generation_strategy": "A -> B (unstable) -> C (stable). Question asks for property of C. Distractor is property of B."
+    }
+  ],
+  "_raw": null
+}

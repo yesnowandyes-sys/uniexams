@@ -1,0 +1,52 @@
+{
+  "topic_key": "MATHS2.MM5",
+  "topic_name": "Exponentials and logarithms",
+  "module_code": "M2",
+  "corpus_question_count": 41,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Law Misapplication (Addition vs Multiplication)",
+      "frequency": "high",
+      "example_question_id": "Q3, Q12, Q37",
+      "why_effective": "Exploits the confusion between logarithmic laws and algebraic properties of coefficients. Students frequently conflate the coefficient of a log term with the argument of the log function, incorrectly applying $k \\log x \rightarrow \\log(x+k)$ instead of $\\log(x^k)$. This creates attractive options that are structurally similar to the correct algebraic form.",
+      "generation_strategy": "In questions requiring the expansion of $k\\log_a x$, include an option offering $\\log_a(kx)$ or $\\log_a(x+k)$. Alternatively, when simplifying sums like $\\log x + \\log y$, offer an option of $\\log(x+y)$."
+    },
+    {
+      "distractor_type": "Base-Conversion Inversion",
+      "frequency": "high",
+      "example_question_id": "Q2, Q10, Q36",
+      "why_effective": "Targets the change of base formula $\\log_a b = \frac{1}{\\log_b a}$. Students often struggle to position the arguments correctly, leading to inverted fractions like $\frac{\\log a}{\\log 2}$ vs $\frac{\\log 2}{\\log a}$.",
+      "generation_strategy": "For solutions of the form $\frac{\\log C}{\\log A}$, provide a distractor $\frac{\\log A}{\\log C}$. In solutions involving $\frac{k}{\\log A}$, provide $\frac{\\log A}{k}$."
+    },
+    {
+      "distractor_type": "Sign Error Manipulation",
+      "frequency": "medium",
+      "example_question_id": "Q3, Q6, Q28",
+      "why_effective": "Catches students who correctly handle the power rule but fail to account for negative exponents in the base algebra (e.g., converting $z^{-2}$ to $z^2$ in the log expression). Options will often differ only by the sign of a specific term.",
+      "generation_strategy": "Construct options that apply the power law $k \\log x \rightarrow \\log(x^k)$ correctly but miss the sign of $k$ derived from the exponent (e.g., using $+4q$ instead of $-4q$)."
+    },
+    {
+      "distractor_type": "Discriminant Blindness",
+      "frequency": "medium",
+      "example_question_id": "Q6, Q9, Q25",
+      "why_effective": "In logarithmic equations that map to quadratics, students must discard negative solutions because $\\log(x)$ requires $x>0$. Distractors here are the 'negative' or 'invalid' roots of the quadratic, trapping students who solve the algebra but forget the domain.",
+      "generation_strategy": "Include the negative root of the quadratic (e.g., if roots are 3 and -4, and only 3 is valid, include -4 as an option)."
+    },
+    {
+      "distractor_type": "Variable Blind Substitution",
+      "frequency": "medium",
+      "example_question_id": "Q1, Q8, Q14",
+      "why_effective": "In complex index algebra questions, students often simplify the constants correctly but lose track of the variable terms (e.g., combining $2n$ and $-2n$ to get $0$ instead of $4n$). These distractors often look 'cleaner' than the correct answer.",
+      "generation_strategy": "Generate an option where the variable exponent is simplified to zero or a single constant, while the coefficient is calculated correctly."
+    },
+    {
+      "distractor_type": "Partial Summation",
+      "frequency": "rare",
+      "example_question_id": "Q4",
+      "why_effective": "In telescoping series, students may stop the summation one step early or miss the final term. Distractors represent the sum of $n-1$ terms or a miscalculation of the remaining log value.",
+      "generation_strategy": "If the sum is $\\log(N)$, offer $\\log(N-1)$ or the value of the last term added to the previous sum."
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,49 @@
+{
+  "topic_key": "MATHS2.MM7",
+  "topic_name": "Integration",
+  "module_code": "M2",
+  "corpus_question_count": 48,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Determining the direction of the error when using the Trapezium Rule to estimate an integral.",
+      "key_insight": "The Trapezium Rule produces an **overestimate** if the graph is **concave down** (f''(x) < 0) because the linear interpolation lies above the curve. It produces an **underestimate** if the graph is **concave up**. This relies on visualizing the chords (trapezoids) relative to the curve, not just calculating the sum.",
+      "discrimination_factors": [
+        "Ability to determine the sign of the second derivative (f''(x)) for functions like $sin^2 x$ or $1/(x^2+1)$.",
+        "Understanding that 'negative area' (below axis) combined with concavity can flip the error direction (concave down + below axis = trapezium sum is 'more negative' -> underestimate of value, overestimate of magnitude)."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Evaluating 'Areas' for functions that cross the x-axis within the integration interval.",
+      "key_insight": "A definite integral $\\int_a^b f(x) dx$ calculates the net area (positive minus negative). A question asking for 'Total Area' enclosed requires calculating $\\int_a^b |f(x)| dx$. This means identifying the roots where $f(x)=0$, splitting the integral at those roots, and integrating absolute values.",
+      "discrimination_factors": [
+        "Discipline to find roots (solving $f(x)=0$) before integrating.",
+        "Avoiding the lure of just applying the Fundamental Theorem of Calculus (FTC) blindly.",
+        "Managing signs of negative regions to produce a final positive sum."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Manipulating integrals of unknown functions using additivity and interval properties.",
+      "key_insight": "Problems often define a function $f(x)$ abstractly and provide relationships like $\\int_0^2 f(x) = A$ and $\\int_2^4 f(x) = B$. The insight is using interval additivity: $\\int_a^c f(x) = \\int_a^b f(x) + \\int_b^c f(x)$. Furthermore, for odd functions $f(-x) = -f(x)$, $\\int_{-a}^a f(x) dx = 0$.",
+      "discrimination_factors": [
+        "Algebraic manipulation of integral notation.",
+        "Recognizing symmetry properties to avoid calculation.",
+        "Handling negative limits correctly."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Relating the integral of a function $f(x)$ to the integral of its transformed versions (e.g., $f(ax+b)$, $f(|x|)$, or $g(x) = 1 - f(x)$).",
+      "key_insight": "Understanding how substitution affects the integral. For example, $\\int_{-a}^a f(|x|) dx = 2 \\int_0^a f(x) dx$ for even functions. Or, adding a constant shifts the area by a rectangle area ($Area_{new} = Area_{old} + c(b-a)$).",
+      "discrimination_factors": [
+        "Geometric interpretation of integrals as areas.",
+        "Handling the modulus function inside the integral.",
+        "Applying linear transformations to functions and their effect on the accumulated area."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

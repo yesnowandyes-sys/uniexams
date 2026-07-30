@@ -1,0 +1,80 @@
+{
+  "topic_key": "PHYS.P3",
+  "topic_name": "Mechanics",
+  "module_code": "P",
+  "corpus_question_count": 216,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Dimensional Confusion",
+      "frequency": "High",
+      "example_question_id": "Q1",
+      "why_effective": "Exploits confusion between proportionalities ($y \\propto x$, $y \\propto x^2$) which appear visually similar on linear axes. Students often memorize the shape of KE ($v^2$) and PE ($h$) graphs but fail to check the constants.",
+      "generation_strategy": "Create a graph showing a quadratic curve ($y=ax^2$). Offer options where one quantity requires a direct relationship (e.g., $F \\propto a$) and another a squared relationship (e.g., $KE \\propto v^2$) but use constants that make the values plausible."
+    },
+    {
+      "distractor_type": "Newton's Third Law Misidentification",
+      "frequency": "Medium",
+      "example_question_id": "Q23",
+      "why_effective": "Students frequently pair equal-and-opposite forces that act on the *same* body (e.g., Weight vs. Air Resistance on a parachutist) as a 3rd Law pair, ignoring the requirement that the forces must act on *different* bodies and be of the *same type*.",
+      "generation_strategy": "Describe a system in equilibrium (e.g., hovering helicopter, falling parachutist). Include a distractor option stating that the supporting force (lift/air resistance) and weight form a Newton's third law pair."
+    },
+    {
+      "distractor_type": "System vs. Component Tension",
+      "frequency": "High",
+      "example_question_id": "Q2, Q11",
+      "why_effective": "In pulley systems, students often confuse the tension required to accelerate the load with the force exerted on the *support* (ceiling/coupling), which must support the entire system's weight plus tension.",
+      "generation_strategy": "Use a hanging mass or accelerating pulley system. Ask for the tension in the *supporting cable* (often $2T$ or $T + mg$) rather than the rope tension ($T = ma + mg$). Distractors should be the rope tension and simple multiples of it."
+    },
+    {
+      "distractor_type": "Graph Conflation (Distance vs Displacement)",
+      "frequency": "High",
+      "example_question_id": "Q4",
+      "why_effective": "Velocity-time graphs can calculate both distance (area, ignoring signs) and displacement (area, keeping signs). Questions asking for 'total distance' and 'displacement' provide options where these values are swapped or summed incorrectly.",
+      "generation_strategy": "Design a $v-t$ graph with motion below the time axis (negative velocity). Calculate total area (magnitude) for distance and net area for displacement. Offer options swapping these values or using the net area for distance."
+    },
+    {
+      "distractor_type": "Momentum-Energy Distribution",
+      "frequency": "High",
+      "example_question_id": "Q5, Q13",
+      "why_effective": "Students often assume equal distribution of energy/momentum or use linear ratios ($m_1/m_2$) instead of the inverse mass ratio for kinetic energy distribution in explosions/collisions.",
+      "generation_strategy": "Create an explosion or two-momentum system where masses differ (e.g., 1:2 ratio). For energy, the lighter object gets the larger share (inverse mass ratio). Distractors should include the direct ratio (heavier gets more) and equal splits."
+    },
+    {
+      "distractor_type": "Resistance as a Percentage",
+      "frequency": "Medium",
+      "example_question_id": "Q19, Q21",
+      "why_effective": "Multi-step efficiency problems often trip students on whether to calculate the *wasted* energy or the *useful* energy, and how to relate efficiency percentage to the actual value (e.g., $75\\%$ efficient means $25\\%$ loss, or Input $\times 0.75$).",
+      "generation_strategy": "Provide efficiency $<100\\%$. Ask for energy lost or current. Distractor A: Calculate using 100% efficiency (ignoring loss). Distractor B: Use the efficiency percentage as the loss amount (e.g. assume $75\\%$ of input is lost)."
+    },
+    {
+      "distractor_type": "Kinematics Sign Convention (Up/Down)",
+      "frequency": "High",
+      "example_question_id": "Q12, Q31",
+      "why_effective": "Students often fail to respect vector direction in $v^2 = u^2 + 2as$. If an object slows down on the way up and speeds up on the way down, using the wrong sign for acceleration or velocity leads to incorrect time or height calculations.",
+      "generation_strategy": "Projectile motion problem. Ask for a quantity on the way *down* after giving initial upward parameters. Use $g$ as positive but ask for final velocity which must be negative, or vice versa. Distractors often result from taking the positive root of the velocity equation or adding time instead of subtracting."
+    },
+    {
+      "distractor_type": "Friction on Slopes (Direction)",
+      "frequency": "Medium",
+      "example_question_id": "Q29",
+      "why_effective": "Students assume $F_{friction} = \\mu R$ is the magnitude, but struggle to determine if it acts up or down the slope, or conflate it with the component of weight ($mg \\sin \theta$).",
+      "generation_strategy": "Context of constant velocity on a slope. Ask for the friction force. Distractors should be $\\mu mg$ (ignoring slope), $mg \\sin \theta$ (weight component), and $\\mu mg \\cos \theta$ (magnitude without direction)."
+    },
+    {
+      "distractor_type": "Kinetic Energy vs Momentum Ratio",
+      "frequency": "Medium",
+      "example_question_id": "Q24",
+      "why_effective": "Tests the understanding that $KE \\propto mv^2$ and $p \\propto mv$. If $v_x = 1.5v_y$ and $m_x = 0.8m_y$, the student must square the velocity factor and multiply by mass. Distractors often involve linear multiplication ($1.5 \times 0.8$) or just the velocity factor ($1.5^2$).",
+      "generation_strategy": "Compare two objects with fractional mass and velocity ratios. Ask for ratio of Kinetic Energies. Common error: calculating $1.5 \times 0.8 = 1.2$ (Distractor A). Correct: $1.5^2 \times 0.8 = 1.8$."
+    },
+    {
+      "distractor_type": "Area Misinterpretation (Work/Energy)",
+      "frequency": "Medium",
+      "example_question_id": "Q32",
+      "why_effective": "Force-distance graphs give work (Area). Students often calculate the area but fail to equate it to $\\Delta KE + \\Delta PE$ correctly, or confuse the scale (e.g., using base length instead of area, or dividing by $g$ unnecessarily).",
+      "generation_strategy": "Show a triangular Force-Distance graph (e.g., bowstring or spring). The work done is the area ($0.5 \times F \times x$). The maximum height is found by $Work = mgh$. Distractors: using triangle perimeter, or using $F=ma$ at full draw directly for energy."
+    }
+  ],
+  "parse_repaired": true
+}

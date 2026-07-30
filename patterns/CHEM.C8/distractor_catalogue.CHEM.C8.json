@@ -1,0 +1,66 @@
+{
+  "topic_key": "CHEM.C8",
+  "topic_name": "Separation techniques",
+  "module_code": "C",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Stationary/Mobile Phase Confusion",
+      "frequency": "high",
+      "example_question_id": "Q1, Q3",
+      "why_effective": "Students often struggle with the counter-intuitive definition that the 'mobile' phase is the liquid solvent (which moves) and the 'stationary' phase is the solid paper (which stays still). Distractors suggesting the filter paper is the mobile phase are very attractive to students with only surface-level understanding.",
+      "generation_strategy": "In chromatography questions, include options stating 'The mobile phase is the paper/solid material' or 'The stationary phase is the solvent/water'. Focus on swapping the definitions."
+    },
+    {
+      "distractor_type": "Assumption of Proportionality",
+      "frequency": "medium",
+      "example_question_id": "Q1, Q3",
+      "why_effective": "Visually, a larger or darker spot might imply 'more' substance, leading students to incorrectly assume a direct mathematical relationship between spot size/intensity and concentration without considering experimental factors like saturation or detection limits.",
+      "generation_strategy": "Provide chromatograms with spots of varying intensity or size. Ask students to validate quantitative statements about concentrations (e.g., 'X is twice as concentrated as Y') which cannot be deduced from the image alone."
+    },
+    {
+      "distractor_type": "Single-Component Fallacy",
+      "frequency": "medium",
+      "example_question_id": "Q2",
+      "why_effective": "Students often forget that a mixture boils over a temperature range. They look for a single boiling point and select the average or the value of the higher-boiling component, ignoring the reality that the lower-boiling component vaporizes first while the mixture remains roughly at its boiling range.",
+      "generation_strategy": "For distillation mixtures, provide options where the flask temperature is exactly the boiling point of the higher component or the average, or where the column temperature equals the flask temperature (indicating no separation)."
+    },
+    {
+      "distractor_type": "Descending Boiling Point Order",
+      "frequency": "high",
+      "example_question_id": "Q4, Q8",
+      "why_effective": "In fractional distillation of gases/liquids, students often confuse the order of collection. They frequently assume the first collected fraction has the *highest* boiling point (perhaps confusing melting/solidification or 'heaviness') or simply sort the data table incorrectly.",
+      "generation_strategy": "Provide a list of components with boiling points. Include options that list the collection order in descending BP (high to low) or random order, rather than the correct ascending BP (low to high)."
+    },
+    {
+      "distractor_type": "Rf Value Definition Inversion",
+      "frequency": "medium",
+      "example_question_id": "Q6",
+      "why_effective": "Students know Rf involves distance, but often invert the fraction (Distance moved by solvent / Distance moved by spot) because the solvent moves further, making the denominator 'feel' like the larger, total value.",
+      "generation_strategy": "When asking for Rf values or identifying spots, include calculated options based on the inverted formula (e.g., 1.25 or 1.5) or simple numerical values that result from dividing the wrong distances."
+    },
+    {
+      "distractor_type": "Rate-Travel Fallacy",
+      "frequency": "rare",
+      "example_question_id": "Q9",
+      "why_effective": "Students intuitively expect spots to move at a constant speed. When the solvent front moves further, they expect the spot to maintain the *distance* gap or slow down, rather than maintaining a constant *ratio* (Rf value).",
+      "generation_strategy": "Create questions where the solvent front moves past its initial point. Provide distractors based on adding the 'extra' solvent distance to the spot (Gap + Delta) or keeping the spot fixed at its initial height."
+    },
+    {
+      "distractor_type": "Separating Funnel Density Misalignment",
+      "frequency": "medium",
+      "example_question_id": "Q7",
+      "why_effective": "In immiscible liquid separation, students must cross-reference density data with layer position (top/bottom). Distractors trap students who sort by boiling point alone, or who assume the 'upper' layer corresponds to the higher density substance.",
+      "generation_strategy": "Combine density and boiling point data. Ask for the next step in a process. Include distractors that suggest distilling the wrong layer (e.g., distilling the aqueous layer when the organic chemical is in the other) or using the wrong temperature."
+    },
+    {
+      "distractor_type": "Chromatography Axis Confusion",
+      "frequency": "rare",
+      "example_question_id": "Q10",
+      "why_effectent": "In 2D chromatography, students struggle to track individual movement vectors. They may compare horizontal distances against vertical Rf standards or assume that traveling 'further' in the 2D plane means a higher Rf in the specific solvent being analyzed.",
+      "generation_strategy": "Use 2D chromatography diagrams. Ask which amino acid has a higher Rf in a specific solvent. Include distractors based on the total distance traveled or performance in the *other* solvent."
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,60 @@
+{
+  "topic_key": "MATHS1.M4",
+  "topic_name": "Algebra",
+  "module_code": "M1",
+  "corpus_question_count": 155,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Ghost' Factor in Rational Expressions",
+      "key_insight": "Students must recognize that a numerator or denominator that looks like a sum (e.g., $4-x^2$) is actually a product in disguise (difference of squares). The critical step is factorizing $a^2 - b^2$ to $(a-b)(a+b)$ to enable cancellation with a binomial factor in the denominator (e.g., $x-2$ cancelling $x-2$ but not $x+2$).",
+      "discrimination_factors": [
+        "Identifying Difference of Squares in rational fractions",
+        "Resisting the urge to cancel terms additively (e.g. canceling x in x+4/x)",
+        "Managing negative signs during factorization"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Substitution-Induced Quadratics",
+      "key_insight": "Many trigonometric or exponential equations are quadratic in nature. Students must identify the 'base' variable (e.g., let $u = \\sin\\theta$) to rewrite $\\sin^4\\theta$ as $u^2$. The 'Aha!' moment is realizing that $\\sin\\theta = 1$ is a solution derived from $u=1$, and checking the domain for valid $\\theta$ values, distinct from the algebraic roots of the substitution.",
+      "discrimination_factors": [
+        "Recognizing hidden quadratic forms ($a^{2x} \\to u^2$)",
+        "Solving for the substituted variable",
+        "Mapping solutions back to the original variable's domain (e.g. $-1 \\le \\sin\\theta \\le 1$)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Simultaneous Symmetry Exploitation",
+      "key_insight": "When given simultaneous equations $x+y=A$ and $xy=B$, questions often ask for expressions like $x^2+y^2$ or $1/x + 1/y$. The efficient path is to use identities $(x+y)^2 = x^2+2xy+y^2$ rather than solving for $x$ and $y$ individually (which might involve messy surds). The insight is treating the sums and products as the primary objects of manipulation.",
+      "discrimination_factors": [
+        "Recall of algebraic identities (sum of squares, difference of squares)",
+        "Substituting whole expressions ($S=x+y, P=xy$) into target formulae",
+        "Avoiding time-consuming individual solving for variables"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Bi-Conditional Geometry Constraints",
+      "key_insight": "A word problem (e.g., Trapezium area) yields a quadratic equation $ax^2+bx+c=0$ with two positive roots (e.g., $x=5$ and $x=12$). Both satisfy the algebra, but only one satisfies the geometric constraints (e.g., side lengths must form a valid triangle or trapezium, often via Pythagoras check on the height). The solution requires solving the algebra, then testing the geometry.",
+      "discrimination_factors": [
+        "Setting up the equation correctly from the word problem",
+        "Solving the quadratic accurately",
+        "Verifying solutions against geometric validity (e.g. Pythagorean triples check)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Nested Subject Rearrangement",
+      "key_insight": "Rearranging $y = p - \\frac{q-r}{s-x}$ to make $x$ the subject requires treating the complex fraction as a single unit first. The student must add/subtract terms to isolate the fraction, flip it, and *then* deal with the inner subtraction. It requires 'zooming out' to the structure of operations before diving into the algebra.",
+      "discrimination_factors": [
+        "Order of operations in reverse (undoing addition before undoing division)",
+        "Handling multiple layers of nesting (brackets within fractions)",
+        "Sign management when moving terms across the equals sign"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

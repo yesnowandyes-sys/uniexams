@@ -1,0 +1,407 @@
+{
+  "source_file": "TMUA-early-specimen-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": "specimen",
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-specimen-P1-Q1",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "1. The sum of the two values of that satisfy the simultaneous equations 3 1 0 and 3 7 5 is",
+      "has_diagram": false,
+      "options": {
+        "A": "8.5",
+        "B": "7.5",
+        "C": "1.5",
+        "D": "3.5",
+        "E": "4.5",
+        "F": "5"
+      },
+      "correct_answer": "D",
+      "raw_text": "1.     The sum of the two values of         that satisfy the simultaneous equations\n               3       1     0 and 3    7     5 is\n       A               8.5\n       B               7.5\n       C               1.5\n       D           3.5\n       E           4.5\n       F           5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q2",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "2. The number of solutions in the interval 0 4 of the equation sin 3 cos 3 is",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4",
+        "F": "5",
+        "G": "6 4"
+      },
+      "correct_answer": "D",
+      "raw_text": "2.     The number of solutions in the interval 0             4 of the equation\n        sin            3 cos     3 is\n       A           0\n       B           1\n       C           2\n       D           3\n       E           4\n       F           5\n       G           6\n© UCLES 2017                                                                          [Turn over\n\f                                                 4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q3",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "3. The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts the ‐axis at the point with ‐coordinate",
+      "has_diagram": false,
+      "options": {
+        "A": "1/20",
+        "B": "1/6",
+        "C": "1/3",
+        "D": "19/5",
+        "E": "41/6"
+      },
+      "correct_answer": "B",
+      "raw_text": "3.     The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts\n       the ‐axis at the point with ‐coordinate\n       A\n       B\n       C\n       D\n       E",
+      "diagram_images": [
+        "TMUA-specimen-P1-Q3-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P1-Q4",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "4. The complete set of values of for which 1 2 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "1, 1 2",
+        "B": "1, 2",
+        "C": "1 2",
+        "D": "1, 2",
+        "E": "1 1, 2 5"
+      },
+      "correct_answer": "E",
+      "raw_text": "4.     The complete set of values of for which       1      2    0 is\n       A            1, 1            2\n       B            1,          2\n       C       1           2\n       D           1,       2\n       E       1           1,       2\n© UCLES 2017\n\f                                                       5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q5",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "5. Given that y = −log₁₀(1 − x) for x < 1, find x in terms of y.",
+      "has_diagram": false,
+      "options": {
+        "A": "x = −1/log₁₀(1−y)",
+        "B": "1 log",
+        "C": "1 log",
+        "D": "1 10",
+        "E": "10 1",
+        "F": "10"
+      },
+      "correct_answer": "D",
+      "raw_text": "5.     Given that            log      1       for    1, find   in terms of .\n       A\n       B               1    log\n       C               1    log\n       D               1    10\n       E               10         1\n       F               10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q6",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "6. It is given that 2 is a factor of 4 1 6. The sum of the possible values of is",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "6",
+        "C": "0",
+        "D": "6",
+        "E": "10"
+      },
+      "correct_answer": "D",
+      "raw_text": "6.     It is given that           2 is a factor of    4              1     6.\n       The sum of the possible values of is\n       A           10\n       B           6\n       C       0\n       D       6\n       E       10\n© UCLES 2017                                                                    [Turn over\n\f                                                   6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q7",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "7. A bag contains n red balls, n yellow balls, and n blue balls. One ball is selected at random and not replaced. A second ball is then selected at random and not replaced. Each ball is equally likely to be chosen. The probability that the two balls are not the same colour is",
+      "has_diagram": false,
+      "options": {
+        "A": "A bag contains n red balls, n yellow balls, and n blue balls. One ball is selected at random and not replaced. A second ball is then selected at random and not replaced. Each ball is equally likely to be chosen. The probability that the two balls are not the same colour is",
+        "B": "2(n−1)/(3n−1)",
+        "C": "2n/(3n−1)",
+        "D": "(n−1)³/[27(3n−1)³]",
+        "E": "3(n−1)/(3n−1)",
+        "F": "n³/[27(3n−1)³]"
+      },
+      "correct_answer": "C",
+      "raw_text": "7.     A bag contains    red balls,   yellow balls, and   blue balls.\n       One ball is selected at random and not replaced.\n       A second ball is then selected at random and not replaced.\n       Each ball is equally likely to be chosen.\n       The probability that the two balls are not the same colour is\n       A\n       B\n       C\n       D\n       E\n       F\n© UCLES 2017\n\f                                              7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q8",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "8. Given that aˣ · b²ˣ · c³ˣ = 2, where a, b, and c are positive real numbers, then x =",
+      "has_diagram": true,
+      "options": {
+        "A": "log₁₀(2/(a+2b+3c))",
+        "B": "log₁₀(2)/log₁₀(a+2b+3c)",
+        "C": "2/log₁₀(a+2b+3c)",
+        "D": "2/(a+2b+3c)",
+        "E": "log",
+        "F": "log₁₀(2)/log₁₀(ab²c³)",
+        "G": "2/log₁₀(ab²c³)",
+        "H": "2/(ab²c³)"
+      },
+      "correct_answer": "F",
+      "raw_text": "8.     Given that             2, where , , and are positive real numbers, then\n       A       log\n       B\n       C\n       D\n       E       log\n       F\n       G\n       H",
+      "diagram_images": [
+        "TMUA-specimen-P1-Q8-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P1-Q9",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "9. The roots of the equation 2x² − 11x + c = 0 differ by 2. The value of c is",
+      "has_diagram": false,
+      "options": {
+        "A": "105/8",
+        "B": "113/8",
+        "C": "117/8",
+        "D": "8"
+      },
+      "correct_answer": "A",
+      "raw_text": "9.     The roots of the equation 2   11           0 differ by 2. The value of is\n       A\n       B\n       C\n       D\n© UCLES 2017                                                                       [Turn over\n\f                                                      8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q10",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "10. The curve cos is reflected in the line 1 and the resulting curve is then translated by units in the positive ‐direction. The equation of this new curve is .",
+      "has_diagram": false,
+      "options": {
+        "A": "2 cos",
+        "B": "2 cos",
+        "C": "2 cos",
+        "D": "2 cos"
+      },
+      "correct_answer": "D",
+      "raw_text": "10.    The curve         cos is reflected in the line         1 and the resulting curve is then\n       translated by         units in the positive ‐direction. The equation of this new curve is\n       A             2   cos\n       B             2   cos\n       C             2   cos\n       D             2   cos\n.",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q11",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "11. The sum of the roots of the equation 2 8 2 15 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "3",
+        "B": "8",
+        "C": "2 log 2",
+        "D": "log",
+        "E": "9"
+      },
+      "correct_answer": "E",
+      "raw_text": "11.    The sum of the roots of the equation 2             8   2     15   0 is\n       A       3\n       B       8\n       C       2 log     2\n       D       log\n       E\n© UCLES 2017\n\f                                                9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q12",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "12. The cross‐section of a triangular prism is an equilateral triangle with side 2x cm. The length of the prism is d cm. Let the total surface area of the prism be T cm². Given that the volume of the prism is T cm³, which one of the following is an expression for d in terms of x?",
+      "has_diagram": true,
+      "options": {
+        "A": "x/(2x−√3)",
+        "B": "√",
+        "C": "√",
+        "D": "√",
+        "E": "√"
+      },
+      "correct_answer": "D",
+      "raw_text": "12.    The cross‐section of a triangular prism is an equilateral triangle with side 2 cm.\n       The length of the prism is cm.\n       Let the total surface area of the prism be cm2. Given that the volume of the prism is\n       cm3, which one of the following is an expression for in terms of ?\n       A\n       B\n                       √\n       C\n                   √\n       D\n                   √\n       E\n                   √",
+      "diagram_images": [
+        "TMUA-specimen-P1-Q12-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-specimen-P1-Q13",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "13. How many real roots does the equation 4 4 10 0 have?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4 10"
+      },
+      "correct_answer": "C",
+      "raw_text": "13.    How many real roots does the equation          4     4      10    0 have?\n       A       0\n       B       1\n       C       2\n       D       3\n       E       4\n© UCLES 2017                                                                       [Turn over\n\f                                                10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q14",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "14. a, b, x, and y are real and positive. a and b are constants. x and y are related. A graph of log y against log x is drawn. For which one of the following relationships will this graph be a straight line?",
+      "has_diagram": false,
+      "options": {
+        "A": "yᵇ = aˣ",
+        "B": "y = aᵇˣ",
+        "C": "y² = aˣ + b",
+        "D": "y = a/xᵇ",
+        "E": "yˣ = aᵇ"
+      },
+      "correct_answer": "D",
+      "raw_text": "14.        , , , and   are real and positive.\n           and are constants.\n           and   are related.\n       A graph of log against log is drawn.\n       For which one of the following relationships will this graph be a straight line?\n       A\n       B\n       C\n       D\n       E",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q15",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "15. The smallest possible value of ∫₀¹ (x−a)² dx as a varies is",
+      "has_diagram": false,
+      "options": {
+        "A": "1/12",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "7/12",
+        "E": "2 11"
+      },
+      "correct_answer": "A",
+      "raw_text": "15.    The smallest possible value of                 as   varies is\n       A\n       B\n       C\n       D\n       E         2\n© UCLES 2017\n\f                                                11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q16",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "16. Given that and are non‐zero integers, the expression is an integer if",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "0",
+        "C": "0 and 0",
+        "D": "0 and 0",
+        "E": "0 and 0",
+        "F": "0 and 0",
+        "G": "0",
+        "H": "0"
+      },
+      "correct_answer": "E",
+      "raw_text": "16.    Given that and      are non‐zero integers, the expression               is an integer if\n       A           0\n       B           0\n       C           0 and       0\n       D           0 and       0\n       E           0 and       0\n       F           0 and       0\n       G           0\n       H           0",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q17",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "17. For what values of the non‐zero real number does the quadratic equation 2 2 have real distinct roots?",
+      "has_diagram": false,
+      "options": {
+        "A": "All values of",
+        "B": "2",
+        "C": "2",
+        "D": "2",
+        "E": "No values of 12"
+      },
+      "correct_answer": "D",
+      "raw_text": "17.    For what values of the non‐zero real number     does the quadratic equation\n                  2      2 have real distinct roots?\n       A       All values of\n       B               2\n       C               2\n       D               2\n       E       No values of\n© UCLES 2017                                                                    [Turn over\n\f                                                12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q18",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "18. The angle is measured in radians and is such that 0 . The total length of any intervals for which 1 tan 1 and sin 2 0.5 is",
+      "has_diagram": false,
+      "options": {
+        "A": "π/12",
+        "B": "π/6",
+        "C": "π/4",
+        "D": "π/3",
+        "E": "5π/12",
+        "F": "π/2",
+        "G": "5π/6"
+      },
+      "correct_answer": "B",
+      "raw_text": "18.    The angle is measured in radians and is such that 0            .\n       The total length of any intervals for which      1   tan   1 and sin 2    0.5 is\n       A\n       B\n       C\n       D\n       E\n       F\n       G",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q19",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "19. A geometric series has first term 4 and common ratio , where 0 1. The first, second, and fourth terms of this geometric series form three successive terms of an arithmetic series. The sum to infinity of the geometric series is",
+      "has_diagram": false,
+      "options": {
+        "A": "√5 1",
+        "B": "2 3 √5",
+        "C": "2 1 √5",
+        "D": "2 3 √5 13"
+      },
+      "correct_answer": "D",
+      "raw_text": "19.    A geometric series has first term 4 and common ratio , where 0           1.\n       The first, second, and fourth terms of this geometric series form three successive terms of\n       an arithmetic series.\n       The sum to infinity of the geometric series is\n       A        √5    1\n       B       2 3   √5\n       C       2 1   √5\n       D       2 3   √5\n© UCLES 2017\n\f                                             13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-specimen-P1-Q20",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "20. The coefficient of in the expansion of 4 1 2 3 1 4 is",
+      "has_diagram": false,
+      "options": {
+        "A": "28",
+        "B": "72",
+        "C": "78",
+        "D": "192",
+        "E": "240",
+        "F": "310",
+        "G": "312 END OF TEST 14 15 16"
+      },
+      "correct_answer": "G",
+      "raw_text": "20.    The coefficient of   in the expansion of 4    1   2   3   1    4      is\n       A       28\n       B       72\n       C       78\n       D       192\n       E       240\n       F       310\n       G       312\n                                       END OF TEST\n© UCLES 2017                                                         [Turn over\n\f                   14\n               BLANK PAGE\n© UCLES 2017\n\f                   15\n               BLANK PAGE\n© UCLES 2017\n\f                   16\n               BLANK PAGE\n© UCLES 2017",
+      "diagram_images": []
+    }
+  ]
+}

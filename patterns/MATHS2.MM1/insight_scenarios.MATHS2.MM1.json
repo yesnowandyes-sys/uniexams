@@ -1,0 +1,54 @@
+{
+  "topic_key": "MATHS2.MM1",
+  "topic_name": "Algebra and functions",
+  "module_code": "M2",
+  "corpus_question_count": 68,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Hidden Quadratics via Substitution in Exponential Equations",
+      "key_insight": "Recognizing that an equation in the form $a^{2x} + b \\cdot a^x + c = 0$ can be treated as a quadratic $u^2 + bu + c = 0$ where $u = a^x$.",
+      "discrimination_factors": [
+        "Student must manipulate indices to match bases (e.g., $\\sqrt{2}^{x+6} \\to 2^{(x+6)/2}$).",
+        "Student must remember that $u > 0$, rejecting negative 'solutions' for $u$.",
+        "Solving for $x$ requires applying logarithms or inverse powers correctly at the final step."
+      ],
+      "difficulty_band": "4-6",
+      "corpus_evidence": "Q7"
+    },
+    {
+      "scenario_description": "Discriminant as a Function of a Parameter",
+      "key_insight": "Understanding that 'distinct real roots' is a condition on the coefficients ($\\Delta > 0$). This transforms a quadratic equation problem into a linear or quadratic inequality problem in a new variable (the parameter).",
+      "discrimination_factors": [
+        "Correctly identifying coefficients $A(a), B(a), C(a)$ which depend on the parameter.",
+        "Simplifying the inequality $\\Delta > 0$ without arithmetic errors.",
+        "Correctly interpreting the inequality signs (open vs closed intervals) based on 'distinct' (strict inequality)."
+      ],
+      "difficulty_band": "4-6",
+      "corpus_evidence": "Q1, Q14, Q15, Q13"
+    },
+    {
+      "scenario_description": "Functional Equivalence and Symmetry Conditions",
+      "key_insight": "Moving beyond static algebra to manipulating function definitions. Recognizing that $f(a-x) = f(a+x)$ defines symmetry about $x=a$.",
+      "discrimination_factors": [
+        "Visualizing or deriving the axis of symmetry algebraically.",
+        "Distinguishing between $f(x) = f(-x)$ (y-axis symmetry) and shifted symmetry.",
+        "Applying transformations (reflection/translation) to function arguments logically rather than memorized plots."
+      ],
+      "difficulty_band": "7-9",
+      "corpus_evidence": "Q18, Q22, Q29"
+    },
+    {
+      "scenario_description": "Root-to-Coefficient Relationships (Difference of Roots)",
+      "key_insight": "Using the relationships $\\alpha + \beta = -b/a$ and $\\alpha\beta = c/a$ alongside a condition like $|\\alpha - \beta| = k$ to form an equation for the coefficients.",
+      "discrimination_factors": [
+        "Student must link $(\\alpha - \beta)^2$ to $(\\alpha+\beta)^2 - 4\\alpha\beta$.",
+        "Solving the resulting equation for the unknown coefficient.",
+        "Correctly discarding negative solutions for the coefficient if the context (e.g., 'positive constant') demands it."
+      ],
+      "difficulty_band": "4-6",
+      "corpus_evidence": "Q17"
+    }
+  ],
+  "parse_repaired": true
+}

@@ -1,0 +1,40 @@
+{
+  "topic_key": "MATHS2.MM4",
+  "topic_name": "Trigonometry",
+  "module_code": "M2",
+  "corpus_question_count": 36,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Hidden' Domain Restriction (Parameter c).",
+      "key_insight": "Understanding that for $\\cos x = c$ to have a solution, $-1 \\le c \\le 1$ is trivial. However, determining the *number* of solutions to a transformed equation like $\\cos^2(2x) = c^2$ requires analyzing the compression of the period ($T = \\pi$ instead of $2\\pi$) and the reflection symmetry.",
+      "discrimination_factors": [
+        "Ability to visualize the graph of $y=\\cos(2x)$ or $y=\\cos^2(2x)$.",
+        "Recognizing that $\\cos^2(2x) = c^2$ is effectively two equations $\\cos(2x) = c$ and $\\cos(2x) = -c$.",
+        "Careful counting of roots in extended intervals without double-counting intersections."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Algebraic-Trigonometric Hybrid Equations.",
+      "key_insight": "Students must realize that trigonometric functions act as 'variable clamps'. For example, solving $(x+1)(3-x) = 2(1-\\cos(\\pi x))$ requires identifying the range of the RHS ($0 \\le \text{RHS} \\le 4$) and intersecting it with the range of the LHS quadratic.",
+      "discrimination_factors": [
+        "Range analysis of trig functions.",
+        "Range analysis of polynomials.",
+        "Avoiding the trap of expanding $\\cos$ terms algebraically (which fails)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Manipulating Mixed Identities.",
+      "key_insight": "Equations like $7\\cos x + \tan x \\sin x = 5$ look intimidating but collapse completely via the identity $\tan x = \\sin x / \\cos x$. Substituting this converts the equation into a quadratic in $\\sin^2 x$ or $\\cos x$.",
+      "discrimination_factors": [
+        "Confidence in replacing $\tan x$ with $\\sin x / \\cos x$.",
+        "Recognizing that $\\sin x \\cdot (\\sin x / \\cos x) = \\sin^2 x / \\cos x$.",
+        "Knowing to use $\\sin^2 x = 1 - \\cos^2 x$ to form a polynomial in $\\cos x$."
+      ],
+      "difficulty_band": "5-7"
+    }
+  ],
+  "parse_repaired": true
+}

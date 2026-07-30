@@ -1,0 +1,60 @@
+{
+  "topic_key": "PHYS.P3",
+  "topic_name": "Mechanics",
+  "module_code": "P",
+  "corpus_question_count": 216,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'System Tension' Trap (P3.2/P3.3): A helicopter (mass M) lifts a crate (mass m) with acceleration a. The question asks for the tension in the *support cable* holding the helicopter, or the force on the coupling.",
+      "key_insight": "Applying Newton's Second Law to the wrong 'body'. Tension in the rope below the helicopter is $T_rope = m(g+a)$. However, the tension holding the *helicopter* up (or the force on the roof) must support the *entire* system's acceleration: $F_{ceiling} = (M+m)(g+a)$. The critical insight is defining the free-body boundary correctly.",
+      "discrimination_factors": [
+        "Identify that the 'coupling' or 'roof' supports the total weight.",
+        "Correctly sums masses $(M+m)$ before multiplying by $(g+a)$.",
+        "Avoids the distractor which is just the tension in the rope below the crate."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "The 'Graph Product' Identification (P3.1/P3.5): A graph is plotted of Quantity Y against Quantity X for a moving body (e.g., y = Kinetic Energy, x = Velocity). The graph is a parabola ($y \\propto x^2$).",
+      "key_insight": "Dimensional analysis and proportionalities. Students must recognize that if the graph is a straight line through the origin, $y \\propto x$. If it is quadratic, $y \\propto x^2$. They must then check the units/constants provided. E.g., $KE = 0.5 \\cdot m \\cdot v^2$. If the line is straight, the pair must be $v^2$ on x-axis (e.g., 'Velocity squared against Kinetic Energy' or 'Kinetic Energy against Velocity squared'). If the axes are swapped ($KE$ on y, $v$ on x), the graph must be curved.",
+      "discrimination_factors": [
+        "Identifies the power relationship (Linear vs Quadratic).",
+        "Maps the variables to axes correctly (Independent vs Dependent).",
+        "Verifies constants (e.g., mass) allow the relationship to hold as shown."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Explosions & Energy Partitioning (P3.4/P3.5): A stationary object ($M_{total}$) explodes into two parts ($m_1, m_2$) or decays (Uranium -> Thorium + Alpha). Given the total Energy released ($E$), find the Kinetic Energy of the smaller fragment.",
+      "key_insight": "Conservation of Momentum ($0 = m_1v_1 + m_2v_2$) implies $\frac{KE_1}{KE_2} = \frac{m_2}{m_1}$. The energy is distributed *inversely* to the mass. The smaller fragment gets the *larger* share of kinetic energy. The calculation is $KE_{small} = E \times \frac{M_{total}}{m_{small}}$ (Wait, check: $v_{small}/v_{large} = M_{large}/M_{small}$. Ratio of KE $\\propto mv^2$. Since $v \\propto 1/m$, $KE \\propto m(1/m^2) = 1/m$. Correct). Small mass = Large Energy.",
+      "discrimination_factors": [
+        "Realizes Momentum is zero initially and final, so $p_1 = -p_2$.",
+        "Derives the velocity ratio ($v \\propto 1/m$).",
+        "Applies the inverse mass ratio to the Energy partition (The 'Aha!' moment)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Variable Force Impulse (P3.4/P3.5): A ball is hit by a racket. The Force-Time graph is not constant (e.g., triangular or trapezoidal shape). Determine the final velocity or momentum change.",
+      "key_insight": "Impulse is the integral of Force with respect to time ($Area$ under $F-t$ graph), not just $F \times t$. Students must calculate the area of the triangle/trapezoid to get $\\Delta p$. If the ball reverses direction (e.g., hits a wall), $\\Delta p = p_{final} - p_{initial}$ involves signs (e.g., $-mv - (+mu) = -m(v+u)$).",
+      "discrimination_factors": [
+        "Calculates Area under curve (Geometry) rather than $F \times \\Delta t$.",
+        "Handles vector signs correctly if direction reverses.",
+        "Distinguishes between 'Change in Momentum' and 'Final Momentum'."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Efficiency Chains (P3.5/P3.6): A power station (Efficiency $\\eta_1$) uses falling water to generate electricity. Given the Output Power $P_{out}$ and Height $h$, find the Volume flow rate.",
+      "key_insight": "Reverse chaining through efficiency. $Input Power = P_{out} / \\eta$. This Input Power comes from Gravitational Potential Energy loss rate: $P_{in} = \frac{d(mgh)}{dt} = \frac{dm}{dt} g h$. Flow rate (Volume) is $\frac{dm}{dt} / \rho$. The student must link: $P_{out} \to P_{in} \to \text{Mass Flow} \to \text{Volume Flow}$.",
+      "discrimination_factors": [
+        "Recognizes Efficiency requires scaling UP the power (Dividing by $\\%$).",
+        "Links Power to Energy change rate ($P = \text{Work}/t$).",
+        "Connects Mass to Volume using Density ($V = m/\rho$)."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

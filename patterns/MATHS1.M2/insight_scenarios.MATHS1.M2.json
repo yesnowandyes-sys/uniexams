@@ -1,0 +1,50 @@
+{
+  "topic_key": "MATHS1.M2",
+  "topic_name": "Number",
+  "module_code": "M1",
+  "corpus_question_count": 41,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Telescoping Surds' Revelation",
+      "key_insight": "Students attempt to rationalize every term individually in a sum like $\\sum \\frac{1}{\\sqrt{n} + \\sqrt{n-1}}$. The 'Aha!' moment is recognizing that multiplying numerator and denominator by the conjugate $(\\sqrt{n} - \\sqrt{n-1})$ creates a difference of squares ($n - (n-1) = 1$), simplifying the term to $\\sqrt{n} - \\sqrt{n-1}$. This causes the entire series to collapse (telescope) to a simple two-term subtraction.",
+      "discrimination_factors": [
+        "Pattern Recognition",
+        "Algebraic Manipulation",
+        "Working Memory"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "The 'Compounding vs Linear' Trap in Percentages",
+      "key_insight": "When a value changes by $x\\%$ then $y\\%$, the change is multiplicative $(1 \\pm x)(1 \\pm y)$, not additive. Students often linearize the problem (e.g., 'up 125%, down 40%, so net up 85%'). The insight required is establishing a 'base' (e.g., 100) and tracking the step-by-step evolution of the value, or calculating the exact decimal multiplier ($2.25 \\times 0.6$).",
+      "discrimination_factors": [
+        "Quantitative Reasoning",
+        "Attention to Detail",
+        "Arithmetic Precision"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Divisibility Logic (Necessity vs Sufficiency)",
+      "key_insight": "Understanding that 'If $a$ divides $bc$, then $a$ divides $b$ or $a$ divides $c$' is **false**. The 'Aha!' moment involves finding a counterexample like $a=6, b=4, c=3$ (where $6|12$ but $6$ divides neither $4$ nor $3$). This distinguishes rote memorization of rules from deep understanding of factors (specifically that primes are required for the rule to hold).",
+      "discrimination_factors": [
+        "Logic & Proof",
+        "Number Theory",
+        "Abstract Thinking"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "The 'Unit Inversion' Shortcut",
+      "key_insight": "In complex dimensional analysis questions (e.g., converting miles/km/litres/pence to pounds), students often get lost in algebra. The insight is to treat units as numbers that cancel. For 'Cost per mile' where fuel is in Litres, efficiency in km/L, and price in pence/L: $Cost = \\frac{Price (pence/L)}{km/L}$. The 'km' and 'L' units must cancel out to leave 'pence/mile'.",
+      "discrimination_factors": [
+        "Dimensional Analysis",
+        "Abstract Reasoning",
+        "Construction of Equations"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

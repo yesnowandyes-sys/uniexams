@@ -1,0 +1,45 @@
+{
+  "topic_key": "PHYS.P5",
+  "topic_name": "Matter",
+  "module_code": "P",
+  "corpus_question_count": 14,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inverse-Volume Confusion",
+      "frequency": "common",
+      "example_question_id": "Q3 (ENGAA-2022-S1-Q20)",
+      "why_effective": "Students correctly calculate the pressure addition from the piston ($ \\Delta P = \frac{F}{A} $) and the new total pressure ($ P_{new} = P_{atm} + \\Delta P $), but then erroneously assume that density is directly proportional to pressure ($ \rho \\propto P $) instead of directly proportional to pressure and inversely proportional to volume at constant mass ($ \rho \\propto \frac{P}{V} $).",
+      "generation_strategy": "Create a gas law problem where Pressure is increased by adding a weight. Ensure Volume is not fixed. Include a distractor option where density is calculated simply as $ \rho_{final} = \rho_{initial} \times \frac{P_{new}}{P_{initial}} $."
+    },
+    {
+      "distractor_type": "Energy-Extension Unit/Calculation Error",
+      "frequency": "common",
+      "example_question_id": "Q2 (ENGAA-2021-S1-Q32)",
+      "why_effective": "Students struggle to decide between $ E = \frac{1}{2}F\\Delta L $ and $ E = \frac{1}{2}k(\\Delta L)^2 $. Common errors involve calculating Force ($mg$) and Extension ($\\Delta L$) correctly but omitting the $ \frac{1}{2} $ factor, or miscalculating the conversion of mass/extension units to Newtons/metres.",
+      "generation_strategy": "Provide a standard Hooke's Law/Young Modulus scenario. Provide the correct Young Modulus value as an option, but pair it with an energy value derived from $ F \times \\Delta L $ (omitting the 1/2) or $ \frac{1}{2} \times \frac{Force}{Length} $ (incorrect algebra)."
+    },
+    {
+      "distractor_type": "Archimedes' Volume Trap",
+      "frequency": "occasional",
+      "example_question_id": "Q4 (ESAT-SPECIMEN-PHYSICS-Q18)",
+      "why_effective": "In density problems with holes or hollow shapes, students frequently subtract the hole volume from the outer volume (correct) but then incorrectly subtract the hole's weight from the total weight, or subtract the hole volume from the mass calculation, leading to an incorrect density.",
+      "generation_strategy": "Describe a complex shape (e.g., block with hole) with a given total weight. Ask for density. Include distractors calculated by dividing the weight by the outer volume (ignoring the hole) or dividing weight by (outer volume - inner volume) but adding the 'missing mass' to the weight numerator."
+    },
+    {
+      "distractor_type": "Geometric Stress Distribution Misapplication",
+      "frequency": "occasional",
+      "example_question_id": "Q10 (NSAA-2020-S2-X-Q8)",
+      "why_effective": "Forces simple multiplication of area, base edge, and height to find mass, then divides by total area. Fails to account for the triangular cross-section's geometry where mass scales differently than the contact area implies.",
+      "generation_strategy": "Ask for minimum pressure of a prism on the ground. Use correct density and area relations for the distractor (e.g., Force/SmallestFace), but set up the Force calculation using a simplified volume formula like $ Volume = Base \times Height \times Length $ instead of the correct $ \frac{1}{2} Base \times Height \times Length $."
+    },
+    {
+      "distractor_type": "Length-Density Inverse Trap",
+      "frequency": "occasional",
+      "example_question_id": "Q12 (NSAA-2021-S2-X-Q12)",
+      "why_effective": "Students recognize that extension depends on length ($ \\Delta L \\propto L_0 $) but forget that equal mass implies cross-sectional area $ A $ must vary inversely with length ($ A \\propto \frac{1}{L_0} $) to keep volume and mass constant. They select a linear relationship instead of a quadratic one.",
+      "generation_strategy": "Use a variable where $ A $ depends on $ L $. Ask for the relationship between $ y $ and $ x $. If $ y \\propto \frac{x}{1/x} $, the relationship is $ y \\propto x^2 $. Offer linear and $ 1/x $ curves as distractors."
+    }
+  ],
+  "parse_repaired": true
+}

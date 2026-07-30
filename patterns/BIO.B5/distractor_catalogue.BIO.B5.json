@@ -1,0 +1,38 @@
+{
+  "topic_key": "BIO.B5",
+  "topic_name": "DNA",
+  "module_code": "B",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Chargaff's Rule Symmetry Violation",
+      "frequency": 3,
+      "example_question_id": "Q2",
+      "why_effective": "Exploits the common student misconception that complementary base pairing implies the base composition of a strand is equal (A=T and C=G within a single strand), rather than understanding that $A_{strand1} = T_{strand2}$ and $G_{strand1} = C_{strand2}$. In Q2, calculating Q as 28% implies C in strand 1 equals C in strand 2, ignoring cross-strand complementarity.",
+      "generation_strategy": "Provide percentages for bases on Strand 1. Ask for percentages on Strand 2. Include options where percentages are identical for the same base (e.g., A on S1 = A on S2) or inverses (e.g., A on S1 = A on S1), rather than the correct A on S2 = T on S1."
+    },
+    {
+      "distractor_type": "Triplet-to-Amino Acid Translation Mismatch",
+      "frequency": 2,
+      "example_question_id": "Q6",
+      "why_effective": "Targets the mapping between codons and amino acids. Errors include using the wrong strand (coding vs template), skipping bases, misreading the table (e.g., confusing Gly with Val), or miscounting the sequence length (resulting in N vs N-1 amino acids).",
+      "generation_strategy": "Provide a long DNA sequence (15+ bases) and a codon table. Generate options where specific amino acids are substituted with chemically similar ones (e.g. Leucine for Valine) or where the sequence is 'shifted' by one base causing a frame-shift error in the option list."
+    },
+    {
+      "distractor_type": "Cell Cycle/DNA Replication Counting Errors",
+      "frequency": 1,
+      "example_question_id": "Q5",
+      "why_effective": "Tests the understanding that gene copy number depends on the stage of the cell cycle (S phase vs G2) and ploidy. Students often forget that plasmids replicate independently or that chromosomes consist of 2 sister chromatids after replication.",
+      "generation_strategy": "Construct a scenario involving a plasmid insertion or chromosomal gene. Ask for copy numbers at specific cell cycle stages. Distractors should alternate between '1' (chromatid count) and '2' (chromatid count) or '0' (assuming degradation)."
+    },
+    {
+      "distractor_type": "Percentage-Base Confusion",
+      "frequency": 2,
+      "example_question_id": "Q1",
+      "why_effective": "Students often conflate the percentage of bases with the raw number of bases, or forget to divide by 2 to get purine/pyrimidine counts (e.g., if A is 42%, G is 8%, but the distractor offers 42% as the number of A bases or vice versa).",
+      "generation_strategy": "Give a total base pair count and a percentage for one base. Ask for the percentage of the complementary base. Include distractors that are the difference ($100-x$) or the sum, rather than the equal value ($x$)."
+    }
+  ],
+  "_raw": null
+}

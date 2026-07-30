@@ -1,0 +1,1760 @@
+{
+  "module": "biology",
+  "label": "ESAT Biology",
+  "total_questions": 27,
+  "questions": [
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q1",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 1,
+      "question_text": "Which of the following describe(s) a role of mitosis?\n\n \n\n   1.  formation of gametes\n\n \n\n   2.  growth of cells\n\n \n\n   3.  repair of cells\n\n \n\n   4.  replacement of skin cells",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q01.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "4 only",
+        "E": "1 and 2 only",
+        "F": "3 and 4 only",
+        "G": "1, 3 and 4 only",
+        "H": "1, 2, 3 and 4"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "B": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "C": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "D": {
+          "text": "4 only",
+          "math_alt": [],
+          "plain_text": "4 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "3 and 4 only",
+          "math_alt": [],
+          "plain_text": "3 and 4 only"
+        },
+        "G": {
+          "text": "1, 3 and 4 only",
+          "math_alt": [],
+          "plain_text": "1, 3 and 4 only"
+        },
+        "H": {
+          "text": "1, 2, 3 and 4",
+          "math_alt": [],
+          "plain_text": "1, 2, 3 and 4"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "4 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 4 only.\nStatement 1 is incorrect as gamete formation occurs due to meiosis. Both statement 2 and statement 3 are also incorrect. However, they are common misconceptions held by students. Growth of an organism such as a human occurs by mitosis as the number of cells increases. The size of a cell does not increase due to mitosis. Mitosis results in the production of new cells which can be used to replace damaged cells in tissues such as muscles and organs such as skin. However, mitosis cannot repair cells, so statement 3 is incorrect.\nTherefore the only correct statement is statement 4 – replacement of skin cells.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:07:47.807018"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q2",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 2,
+      "question_text": "The graph shows oxygen supply and demand in muscle cells during exercise.\n\n \n\n \n\nWhich statement correctly describes what is happening in the muscle cells between 0 and 11 minutes?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q02.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "Anaerobic respiration only is taking place.",
+        "B": "More oxygen is being supplied than is required.",
+        "C": "Aerobic respiration only is taking place.",
+        "D": "Both anaerobic and aerobic respiration are taking place."
+      },
+      "options_detailed": {
+        "A": {
+          "text": "Anaerobic respiration only is taking place.",
+          "math_alt": [],
+          "plain_text": "Anaerobic respiration only is taking place."
+        },
+        "B": {
+          "text": "More oxygen is being supplied than is required.",
+          "math_alt": [],
+          "plain_text": "More oxygen is being supplied than is required."
+        },
+        "C": {
+          "text": "Aerobic respiration only is taking place.",
+          "math_alt": [],
+          "plain_text": "Aerobic respiration only is taking place."
+        },
+        "D": {
+          "text": "Both anaerobic and aerobic respiration are taking place.",
+          "math_alt": [],
+          "plain_text": "Both anaerobic and aerobic respiration are taking place."
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "Both anaerobic and aerobic respiration are taking place",
+      "correct_answer_images": [],
+      "explanation": "The answer is: Both anaerobic and aerobic respiration are taking place.\nAs oxygen is being supplied and used, aerobic respiration is occurring in these muscle cells. However, as the oxygen demand between 0 and 11 minutes is greater than the supply, as shown by the higher position of the oxygen demand line on the graph, the muscle cells are also carrying out anaerobic respiration.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:08:00.374296"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q3",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 3,
+      "question_text": "Which of the four statements below about natural selection are correct?\n\n \n\n   1.  Competition occurs between individuals of the same species.\n\n \n\n   2.  Competition occurs between individuals of different species.\n\n \n\n   3.  Selection can lead to evolution.\n\n \n\n   4.  Selection can lead to extinction.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q03.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 and 3 only",
+        "B": "2 and 4 only",
+        "C": "1, 2 and 4 only",
+        "D": "1, 3 and 4 only",
+        "E": "2, 3 and 4 only",
+        "F": "1, 2, 3 and 4"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "B": {
+          "text": "2 and 4 only",
+          "math_alt": [],
+          "plain_text": "2 and 4 only"
+        },
+        "C": {
+          "text": "1, 2 and 4 only",
+          "math_alt": [],
+          "plain_text": "1, 2 and 4 only"
+        },
+        "D": {
+          "text": "1, 3 and 4 only",
+          "math_alt": [],
+          "plain_text": "1, 3 and 4 only"
+        },
+        "E": {
+          "text": "2, 3 and 4 only",
+          "math_alt": [],
+          "plain_text": "2, 3 and 4 only"
+        },
+        "F": {
+          "text": "1, 2, 3 and 4",
+          "math_alt": [],
+          "plain_text": "1, 2, 3 and 4"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1, 2, 3 and 4.",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1, 2, 3 and 4.\nCompetition for limiting resources can occur both within a species (intraspecific – statement 1) and between species (interspecific – statement 2). Likewise, natural selection can lead to evolution due to individuals with advantageous adaptations being more likely to survive and pass on their alleles, thus passing on the advantageous adaptations to their offspring (statement 3). For a species that competes less well, natural selection may lead to extinction (statement 4). Therefore all four statements are correct.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:08:12.878303"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q4",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 4,
+      "question_text": "In rabbits, there are two alleles concerned with dark pigment in the fur:\n\n \n\n   • the dominant allele, B, for black colour\n\n \n\n   • the recessive allele, b, for brown colour\n\n \n\nTwo male black rabbits of unknown genotype each mated with a different female brown rabbit.\n\nWhat is the expected proportion of brown offspring if both male rabbits are heterozygous, and what is the expected proportion of brown offspring if only one male rabbit is heterozygous?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q04.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 0.5",
+        "B": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 1",
+        "C": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 0.25",
+        "D": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 1",
+        "E": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.25",
+        "F": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.5"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 0.5",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 0.5"
+        },
+        "B": {
+          "text": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 1",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 0.25, if only one male rabbit heterozygous: 1"
+        },
+        "C": {
+          "text": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 0.25",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 0.25"
+        },
+        "D": {
+          "text": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 1",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 0.5, if only one male rabbit heterozygous: 1"
+        },
+        "E": {
+          "text": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.25",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.25"
+        },
+        "F": {
+          "text": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.5",
+          "math_alt": [],
+          "plain_text": "if both male rabbits heterozygous: 1, if only one male rabbit heterozygous: 0.5"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "C",
+      "correct_answer_images": [],
+      "explanation": "The answer is C.\nThe genotype of the female brown rabbits is bb.\nA homozygous black rabbit is BB. All of its offspring when crossed with a brown rabbit will be Bb and will be black.\nA heterozygous black rabbit is Bb. When crossed with a brown rabbit, the expected proportion of brown (bb) offspring is 0.5, with the other 0.5 being black (Bb).\nIf both the male rabbits are heterozygous, the expectation is that half the offspring from each mating will be brown, so the expected proportion of brown rabbits born from the two matings is 0.50.\nIf only one of the male rabbits is heterozygous, the other must be homozygous. The expected proportion of brown offspring of the heterozygous rabbit is 0.5, whilst all of the offspring of the homozygous rabbit will be black. The expected proportion of brown rabbits born from the two matings if only one of the male rabbits is heterozygous, is therefore 0.25.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:08:25.393368"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q5",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 5,
+      "question_text": "A student carried out an experiment to investigate the effect of temperature on the rate of photosynthesis. All of the other variables were kept constant.\n\nThe graph shows the results obtained.\n\n \n\n \n\nThe student considered the graph and made the following conclusions.\n\n \n\n   1. Up to 22 °C temperature is limiting the rate of photosynthesis.\n\n \n\n   2. At temperatures higher than 22 °C not all of the enzymes work so the rate of photosynthesis drops. \n\n \n\n   3. As the temperature increases across the temperature range studied, the rate of photosynthesis increases due to increased kinetic energy. \n\n \n\nWhich of the student’s conclusions is/are correct?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q05.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 2 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 2 only.\nThe main factors affecting the rate of photosynthesis are light intensity, temperature and carbon dioxide concentration. Any change in the level of a factor will affect the rate of reaction and the process will be limited by the factor which is in the shortest supply.\nIn the case of temperature, the rate of reaction will increase until the optimum temperature for the enzymes controlling the reaction is reached, as long as the other factors are present in sufficient amounts. Therefore statement 1 is correct. After this point the enzymes start to become denatured and no longer work, so statement 2 is correct. An increase in temperature produces an increase in kinetic energy and, up to a temperature of 22 °C the rate of photosynthesis also increases. However temperature does not increase the rate across the whole of the range studied as after the optimum temperature has been reached, the rate of photosynthesis decreases. Therefore statement 3 is incorrect.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:08:38.257996"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q6",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 6,
+      "question_text": "The karyogram below is a photograph of the chromosomes taken from a single human cell.\n\n \n\nUsing the karyogram, which of the following statements is/are correct?\n\n \n\n   1. The karyogram shows no visible mutations.\n\n \n\n   2. The chromosomes are from a cell taken from a male.\n\n \n\n   3. The cell used could have been a white blood cell.\n\n \n\nImage used with permission of UW Cytogenetics/Wisconsin State Laboratory of Hygiene © Board of Regents of the University of Wisconsin System",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q06.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "G",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 2 and 3 only.\nStatement 1 is incorrect as at position 21 there are three chromosomes rather than two. This is an example of a chromosome mutation and leads to Down’s syndrome.\nStatement 2 is correct as the 23rd pair of chromosomes are the sex chromosomes and as they are XY this means the cell has been donated by a male.\nWhite blood cells are diploid body cells and so they contain two copies of each autosome (and in the case of this particular cell, three copies of chromosome 21) with two sex chromosomes as shown in the karyogram, so statement 3 is also correct.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:08:50.874292"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q7",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 7,
+      "question_text": "Which of the following statements is/are correct about a stem cell extracted from the bone marrow of a healthy human donor to be given to a patient?\n\n \n\n   1.  It can undergo meiosis to form genetically identical offspring.\n\n \n\n   2.  It may contain 46 chromosomes.\n\n \n\n   3.  It could differentiate to become a white blood cell.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q07.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "G",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 2 and 3 only.\nBone marrow stem cells will divide by mitosis, rather than meiosis, to produce genetically identical offspring, so statement 1 is incorrect.\nHuman stem cells, including bone marrow stem cells, are diploid and so contain 46 chromosomes (statement 2 is correct).\nStem cells of the bone marrow are able to differentiate into white blood cells so statement 3 is also correct.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:09:03.381220"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q8",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 8,
+      "question_text": "The graph shows the mass of product produced over time for an enzyme-controlled reaction in two different conditions, X and Y. All other variables were kept constant.\n\n \n\n \n\nWhich of the following could be correct for this graph?\n\n \n\n   1. Condition X is a higher pH than condition Y.\n\n \n\n   2. Condition X has less substrate supplied than condition Y.\n\n \n\n   3. Condition X is a lower pH than condition Y.\n\n \n\n   4. Condition X has more substrate supplied than condition Y.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q08.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 and 2 only",
+        "C": "1 and 3 only",
+        "D": "1 and 4 only",
+        "E": "2 and 3 only",
+        "F": "2 and 4 only",
+        "G": "3 and 4 only",
+        "H": "1, 2, 3 and 4"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "C": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "D": {
+          "text": "1 and 4 only",
+          "math_alt": [],
+          "plain_text": "1 and 4 only"
+        },
+        "E": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "F": {
+          "text": "2 and 4 only",
+          "math_alt": [],
+          "plain_text": "2 and 4 only"
+        },
+        "G": {
+          "text": "3 and 4 only",
+          "math_alt": [],
+          "plain_text": "3 and 4 only"
+        },
+        "H": {
+          "text": "1, 2, 3 and 4",
+          "math_alt": [],
+          "plain_text": "1, 2, 3 and 4"
+        }
+      },
+      "correct_answer": "C",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 3 only.\nAn increase in pH may move the reaction closer to the optimum pH for this enzyme so the reaction would progress to completion more rapidly, so 1 is correct. Likewise, a decrease in pH may move the conditions towards the optimum, so 3 is also correct. Both 2 and 4 are incorrect. In the case of 2, a reduction in substrate will lead to less product being made, so the plot for X should plateau at a lower level than Y. As for 4, an increase in substrate would lead to more product being formed so the plateau for X should be higher than Y.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:09:16.017270"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q9",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 9,
+      "question_text": "Tomato plants were placed in sunlight in an atmosphere containing radioactively labelled carbon dioxide. After a period of time, radioactively labelled sugars were detected in the roots of the plants.\n\n \n\nWhich of the following statements is correct?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q09.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "Carbon dioxide diffused into the roots where it was converted into sugars.",
+        "B": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by translocation to the roots.",
+        "C": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by transpiration to the roots.",
+        "D": "Carbon dioxide entering the leaves was transported by translocation to the roots where it was converted into sugars.",
+        "E": "Carbon dioxide entering the leaves was transported by transpiration to the roots where it was converted into sugars."
+      },
+      "options_detailed": {
+        "A": {
+          "text": "Carbon dioxide diffused into the roots where it was converted into sugars.",
+          "math_alt": [],
+          "plain_text": "Carbon dioxide diffused into the roots where it was converted into sugars."
+        },
+        "B": {
+          "text": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by translocation to the roots.",
+          "math_alt": [],
+          "plain_text": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by translocation to the roots."
+        },
+        "C": {
+          "text": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by transpiration to the roots.",
+          "math_alt": [],
+          "plain_text": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by transpiration to the roots."
+        },
+        "D": {
+          "text": "Carbon dioxide entering the leaves was transported by translocation to the roots where it was converted into sugars.",
+          "math_alt": [],
+          "plain_text": "Carbon dioxide entering the leaves was transported by translocation to the roots where it was converted into sugars."
+        },
+        "E": {
+          "text": "Carbon dioxide entering the leaves was transported by transpiration to the roots where it was converted into sugars.",
+          "math_alt": [],
+          "plain_text": "Carbon dioxide entering the leaves was transported by transpiration to the roots where it was converted into sugars."
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "Carbon dioxide entering the leaves was used to make sugars, some of which were transported by translocation to the roots",
+      "correct_answer_images": [],
+      "explanation": "The answer is: Carbon dioxide entering the leaves was used to make sugars, some of which were transported by translocation to the roots.\nAlthough carbon dioxide is converted into sugars, this takes place in the photosynthetic parts of plants which are not normally the roots, so the first statement is incorrect. Photosynthesis takes place in leaves.\nAlthough carbon dioxide is taken up and converted into sugars in the leaves, the sugars produced are transported to the roots by translocation and not transpiration. So the third statement is incorrect.\nCarbon dioxide does enter the leaves but it is not transported to the roots to be converted into sugars, so the fourth and fifth statements are incorrect.\nDuring photosynthesis carbon dioxide is taken up and used to make sugars. These sugars can then be transported around the plant, including to the roots, by translocation. So the second statement is correct.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:09:28.667307"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q10",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 10,
+      "question_text": "A person’s ear lobes can be attached to the side of their head or unattached. The allele for attached ear lobes is recessive to the allele for unattached ear lobes.\n\nThe pedigree diagram below shows the ear lobe attachment in one family.\n\n \n\n \n\nWhat is the maximum possible number of heterozygous individuals in this pedigree diagram?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q10.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6",
+        "F": "7",
+        "G": "8",
+        "H": "9"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "2",
+          "math_alt": [],
+          "plain_text": "2"
+        },
+        "B": {
+          "text": "3",
+          "math_alt": [],
+          "plain_text": "3"
+        },
+        "C": {
+          "text": "4",
+          "math_alt": [],
+          "plain_text": "4"
+        },
+        "D": {
+          "text": "5",
+          "math_alt": [],
+          "plain_text": "5"
+        },
+        "E": {
+          "text": "6",
+          "math_alt": [],
+          "plain_text": "6"
+        },
+        "F": {
+          "text": "7",
+          "math_alt": [],
+          "plain_text": "7"
+        },
+        "G": {
+          "text": "8",
+          "math_alt": [],
+          "plain_text": "8"
+        },
+        "H": {
+          "text": "9",
+          "math_alt": [],
+          "plain_text": "9"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "7.",
+      "correct_answer_images": [],
+      "explanation": "The answer is 7.\nThe two females with attached ear lobes are homozygous recessive. The female in the first generation must be heterozygous, as she has the dominant phenotype, but must have inherited the recessive allele from her mother (who is homozygous recessive). The male in the first generation must also be heterozygous, because the female with attached earlobes in the second generation must have inherited a recessive allele from him, but he has the dominant phenotype. The male parent and the people in the second generation who have unattached ear lobes could be either heterozygous or homozygous dominant. So the maximum possible number of heterozygous individuals is 7.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:09:41.232358"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q11",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 11,
+      "question_text": "Which of the following cells do not contain mitochondria?\n\n \n\n   1. bacterial cells\n\n \n\n   2. embryonic stem cells\n\n \n\n   3. mature red blood cells\n\n \n\n   4. potato cells",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q11.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "4 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "1 and 4 only",
+        "H": "2 and 4 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "B": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "C": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "D": {
+          "text": "4 only",
+          "math_alt": [],
+          "plain_text": "4 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "1 and 4 only",
+          "math_alt": [],
+          "plain_text": "1 and 4 only"
+        },
+        "H": {
+          "text": "2 and 4 only",
+          "math_alt": [],
+          "plain_text": "2 and 4 only"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 3 only.\nMitochondria are organelles involved in aerobic respiration in eukaryotic cells. Bacteria do not contain these organelles, and neither do mature red blood cells. All stem cells and potato cells will contain mitochondria.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:09:53.707950"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q12",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 12,
+      "question_text": "The graph below shows the effect of different concentrations of sodium chloride (NaCl) solution on the percentage haemolysis of human red blood cells. Haemolysis occurs when the cells swell and then burst open.\n\n \n\nWhich letter correctly describes the effect of changing the concentration of NaCl from 0.12 mol dm–3 to 0.084 mol dm–3 on percentage haemolysis?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q12.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "effect on percentage haemolysis increases by 70% due to uptake of water",
+        "B": "effect on percentage haemolysis increases by 70% due to uptake of NaCl",
+        "C": "effect on percentage haemolysis increases by 59% due to uptake of water",
+        "D": "effect on percentage haemolysis increases by 59% due to uptake of NaCl",
+        "E": "effect on percentage haemolysis decreases by 70% due to uptake of water",
+        "F": "effect on percentage haemolysis decreases by 70% due to uptake of NaCl",
+        "G": "effect on percentage haemolysis decreases by 59% due to uptake of water",
+        "H": "effect on percentage haemolysis decreases by 59% due to uptake of NaCl"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "effect on percentage haemolysis increases by 70% due to uptake of water",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis increases by 70% due to uptake of water"
+        },
+        "B": {
+          "text": "effect on percentage haemolysis increases by 70% due to uptake of NaCl",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis increases by 70% due to uptake of NaCl"
+        },
+        "C": {
+          "text": "effect on percentage haemolysis increases by 59% due to uptake of water",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis increases by 59% due to uptake of water"
+        },
+        "D": {
+          "text": "effect on percentage haemolysis increases by 59% due to uptake of NaCl",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis increases by 59% due to uptake of NaCl"
+        },
+        "E": {
+          "text": "effect on percentage haemolysis decreases by 70% due to uptake of water",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis decreases by 70% due to uptake of water"
+        },
+        "F": {
+          "text": "effect on percentage haemolysis decreases by 70% due to uptake of NaCl",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis decreases by 70% due to uptake of NaCl"
+        },
+        "G": {
+          "text": "effect on percentage haemolysis decreases by 59% due to uptake of water",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis decreases by 59% due to uptake of water"
+        },
+        "H": {
+          "text": "effect on percentage haemolysis decreases by 59% due to uptake of NaCl",
+          "math_alt": [],
+          "plain_text": "effect on percentage haemolysis decreases by 59% due to uptake of NaCl"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "A",
+      "correct_answer_images": [],
+      "explanation": "The answer is A.\nA change from 0.12 mol dm–3 to 0.084 mol dm–3 gives an increase in percentage haemolysis (read graph from right to left) from 2% up to 72%, which is an increase of 70%. The increase is due to the uptake of water through osmosis into the cells, which occurs as a result of the reduction in the concentration of the NaCl solution.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:10:06.326590"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q13",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 13,
+      "question_text": "The table shows information about a human genetic condition called sickle cell anaemia and an infection called malaria. Both sickle cell anaemia and malaria can be fatal.\nWhich of the following statements is/are correct?\n\n \n\n   1. In areas without malaria, human populations are likely to have a low number of people with the m allele.\n\n \n\n   2. In areas with malaria, only those individuals that are heterozygous will be able to pass on their alleles to the next generation.\n\n \n\n   3. Presence of malaria has caused a mutation of the M allele to the m allele leading to an increased chance of survival in the heterozygous state.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q13.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 only.\nIn areas where there is no malaria, there is no advantage to maintaining the m allele and indeed there is a disadvantage as stated in the question (sickle cell anaemia can be fatal). Therefore, the frequency of the m allele will decrease, so statement 1 is correct.\nIn areas with malaria, it will not be only heterozygous individuals who are able to pass on their alleles. Individuals who are homozygous dominant (MM) are susceptible to malaria infection but this does not mean they will become infected, so they could still reproduce and pass on their alleles. Individuals who are mm may also be able to reproduce and pass on their alleles so statement 2 is incorrect.\nStatement 3 is also incorrect as mutations occur randomly and lead to variation. In this case, the m allele would already be present. The presence of malaria acts as the natural selection mechanism that tends to select those individuals with one m allele rather than causing the mutation to occur.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:10:18.969318"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q14",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 14,
+      "question_text": "A student investigated the endothermic reaction of photosynthesis in pondweed. The student set up the apparatus as shown in the diagram.\n\n \n\n \n\nThe experiment was left for 5 minutes and the distance moved by the gas bubble along a capillary tube of 2 mm diameter was recorded. Using these values, the rate of gas production is 2π mm3 per minute.\n\nWhich row of the table is correct?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q14.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+        "B": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+        "C": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+        "D": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+        "E": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+        "F": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+        "G": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+        "H": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right"
+        },
+        "B": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 0.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left"
+        },
+        "C": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left"
+        },
+        "D": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 2.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right"
+        },
+        "E": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left"
+        },
+        "F": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 2.5, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right"
+        },
+        "G": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction releases energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the left"
+        },
+        "H": {
+          "text": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right",
+          "math_alt": [],
+          "plain_text": "total distance moved by the gas bubble during the experiment / mm: 10.0, reason why the reaction is described as endothermic: the reaction takes in energy, observations if the light source was moved further from the pondweed: the gas bubble moves more slowly to the right"
+        }
+      },
+      "correct_answer": "H",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "row H",
+      "correct_answer_images": [],
+      "explanation": "The answer is row H.\nThe rate of gas production is given in the question as 2p mm3 per minute and the capillary diameter as 2 mm. The question also states that the experiment ran for 5 minutes so the total volume of gas collected was 5 × 2p = 10p mm3. To calculate the distance moved by the bubble of gas from this value you must use the equation pr2h, where r is the radius of the capillary tube and h is the distance moved by the gas bubble. The diameter of the capillary tube is 2 mm so the radius is 1 mm. This means that p × 12 × distance moved = 10p mm3, so the distance moved by the bubble is 10 mm.\nPhotosynthesis is an endothermic reaction so it must take in energy. In the case of energy this is in the form of light.\nIf the lamp was moved further away from the pondweed, it would decrease the light intensity shining on the plant. This would decrease the rate of photosynthesis, making the gas bubble move more slowly than the original experiment. As the gas is released from the plant it moves along the tube from left to right.\nThis makes the correct option H.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:10:31.506503"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q15",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 15,
+      "question_text": "The diagram shows a kidney and its associated vessels from a healthy individual.\n\n \n\n        [not to scale]\n\n \n\nWhich row correctly identifies the vessels along with the concentration of urea they contain?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q15.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "lowest concentration of urea: 1 is the aorta, highest concentration of urea: 2 is the vena cava",
+        "B": "lowest concentration of urea: 1 is the vena cava, highest concentration of urea: 2 is the aorta",
+        "C": "lowest concentration of urea: 3 is the renal artery, highest concentration of urea: 5 is the urethra",
+        "D": "lowest concentration of urea: 3 is the renal vein, highest concentration of urea: 5 is the ureter",
+        "E": "lowest concentration of urea: 4 is the renal vein, highest concentration of urea: 5 is the ureter",
+        "F": "lowest concentration of urea: 4 is the renal artery, highest concentration of urea: 5 is the urethra"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "lowest concentration of urea: 1 is the aorta, highest concentration of urea: 2 is the vena cava",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 1 is the aorta, highest concentration of urea: 2 is the vena cava"
+        },
+        "B": {
+          "text": "lowest concentration of urea: 1 is the vena cava, highest concentration of urea: 2 is the aorta",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 1 is the vena cava, highest concentration of urea: 2 is the aorta"
+        },
+        "C": {
+          "text": "lowest concentration of urea: 3 is the renal artery, highest concentration of urea: 5 is the urethra",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 3 is the renal artery, highest concentration of urea: 5 is the urethra"
+        },
+        "D": {
+          "text": "lowest concentration of urea: 3 is the renal vein, highest concentration of urea: 5 is the ureter",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 3 is the renal vein, highest concentration of urea: 5 is the ureter"
+        },
+        "E": {
+          "text": "lowest concentration of urea: 4 is the renal vein, highest concentration of urea: 5 is the ureter",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 4 is the renal vein, highest concentration of urea: 5 is the ureter"
+        },
+        "F": {
+          "text": "lowest concentration of urea: 4 is the renal artery, highest concentration of urea: 5 is the urethra",
+          "math_alt": [],
+          "plain_text": "lowest concentration of urea: 4 is the renal artery, highest concentration of urea: 5 is the urethra"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "D",
+      "correct_answer_images": [],
+      "explanation": "The answer is D.\nThe diagram contains clues to allow the various blood vessels to be identified. Blood vessel 1 has a narrow wall and large lumen, whilst blood vessel 2 has a wide wall and narrow lumen. Veins, such as the vena cava, have a structure as shown by blood vessel 1. Arteries, such as the aorta, have the same structure as shown by blood vessel 2. Any vessel leading directly to vessel 1 is a vein, whilst any vessel leading directly from vessel 2 is an artery.\nUrea is produced in the liver and removed by the kidney. Therefore the highest concentration of urea will be found in the tube leading away from the kidney to the bladder, which is tube 5. The name of tube 5 is the ureter, but it is often confused with the urethra which carries urine from the bladder to the outside world.\nThe blood flowing away from the kidney should have the least urea, since the kidney removes urea from the blood that enters via the renal artery. The renal vein is identified as vessel 3, since it is joined to vessel 1, the vena cava. The vena cava will contain some urea, since as blood passes around the circulatory system, only some of it will enter the kidneys through the renal artery. The rest (containing urea) will travel through other arteries and eventually end up in the vena cava.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:10:43.895745"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q16",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 16,
+      "question_text": "The graph shows how body temperature of a human varies over a period of 60 minutes.\n\n \n\n \n\nWhich of the following could have caused the temperature change between X and Y?\n\n \n\n   1. Homeostasis causing more sweat production.\n\n \n\n   2. The temperature control centre in the brain causing hairs on the skin to stand up on end.\n\n \n\n   3. The temperature control centre in the brain causing less blood to flow near the skin’s surface.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q16.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 only.\nStatement 1 is correct. Body temperature is controlled by homeostasis using negative feedback. The fall in body temperature could have been brought about by increased sweat production, leading to the cooling of the skin by increased evaporation.\nStatement 2 is incorrect. Whilst the thermoregulatory centre in the brain is responsible for regulating body temperature, a fall in body temperature as shown between X and Y on the graph will only occur if the hairs on the skin lie flat. When the body temperature is too low, the hairs on the skin are raised in order to trap an insulating layer of air, in order to reduce heat loss.\nStatement 3 is incorrect. Whilst the thermoregulatory centre in the brain is responsible for regulating body temperature, a fall in body temperature as shown between X and Y on the graph will only occur if more blood flows to the surface of the skin, so that heat from the blood can be lost to the environment.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:10:56.549642"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q17",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 17,
+      "question_text": "An isolated island in Canada has populations of moose and wolves. Moose are the main source of food for the wolves. The graph shows changes in the populations of the two species of animal from 1959 to 2008.\n\n \n\n \n\nA student listed four trends in the populations of moose and wolves from 1959 to 2008.\n\n \n\n   1. Increases in wolf population are always after increases in moose population.\n\n \n\n   2. The wolf population is always lower than the moose population.\n\n \n\n   3. There were more wolves than moose in 1965.\n\n \n\n   4. When the wolf population is low there is an increase in the moose population.\n\n \n\nWhich of the student's statements are correct?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q17.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "1 and 3 only",
+        "C": "1 and 4 only",
+        "D": "2 and 4 only",
+        "E": "3 and 4 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "B": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "C": {
+          "text": "1 and 4 only",
+          "math_alt": [],
+          "plain_text": "1 and 4 only"
+        },
+        "D": {
+          "text": "2 and 4 only",
+          "math_alt": [],
+          "plain_text": "2 and 4 only"
+        },
+        "E": {
+          "text": "3 and 4 only",
+          "math_alt": [],
+          "plain_text": "3 and 4 only"
+        }
+      },
+      "correct_answer": "D",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2 and 4 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 2 and 4 only.\nIn order to interpret this data correctly you need to ensure that you understand what is represented by the graph.\nThe x-axis shows the years studied from 1959 to 2008.\nThe left-hand vertical axis represents the number of wolves, with a range from 0 to just over 50.\nThe right-hand vertical axis represents the number of moose, with a range from 0 to just under 2500.\nTrend 1 is quickly determined to be incorrect, since from 1959 to 1965, overall both the wolf and moose populations are increasing. Additionally, with no knowledge of what has happened before 1959 it cannot be said that there has been an increase in the wolf population as there was an earlier increase in moose population.\nTrend 2 is correct. You need to remember that the two vertical scales are different. Reading from the graph, the maximum wolf population is 50, whilst the minimum moose population is about 400.\nTrend 3 is incorrect. Whilst the point plotted for wolves is higher than that for moose in 1965, you need to remember that the two vertical scales are different. There are about 30 wolves but there are about 750 moose.\nTrend 4 is correct. When wolf populations are low on the graph, such as from 1968 to 1973 and from 1982 to 1995, there is a corresponding increase in the size of the moose population.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:11:09.175592"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q18",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 18,
+      "question_text": "The sex of a species of fruit fly is determined by the number of X chromosomes relative to the number of non-sex chromosomes (A) in a cell. This is called the X : A ratio.\n\nA fruit fly will be male if X : A = 0.5 : 1, and female if X : A = 1 : 1\n\nThe Y chromosome contains genes necessary for making sperm.\n\nWhich row of the table correctly shows the sex of the five fruit flies with different numbers of these chromosomes?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q18.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "XAA: female, XYAA: female, XXAA: female, XXYAA: male, XXYYAA: male",
+        "B": "XAA: female, XYAA: female, XXAA: male, XXYAA: male, XXYYAA: male",
+        "C": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: female",
+        "D": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: male",
+        "E": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: female",
+        "F": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: male",
+        "G": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: female",
+        "H": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: male"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "XAA: female, XYAA: female, XXAA: female, XXYAA: male, XXYYAA: male",
+          "math_alt": [],
+          "plain_text": "XAA: female, XYAA: female, XXAA: female, XXYAA: male, XXYYAA: male"
+        },
+        "B": {
+          "text": "XAA: female, XYAA: female, XXAA: male, XXYAA: male, XXYYAA: male",
+          "math_alt": [],
+          "plain_text": "XAA: female, XYAA: female, XXAA: male, XXYAA: male, XXYYAA: male"
+        },
+        "C": {
+          "text": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: female",
+          "math_alt": [],
+          "plain_text": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: female"
+        },
+        "D": {
+          "text": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: male",
+          "math_alt": [],
+          "plain_text": "XAA: female, XYAA: male, XXAA: female, XXYAA: male, XXYYAA: male"
+        },
+        "E": {
+          "text": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: female",
+          "math_alt": [],
+          "plain_text": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: female"
+        },
+        "F": {
+          "text": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: male",
+          "math_alt": [],
+          "plain_text": "XAA: male, XYAA: female, XXAA: male, XXYAA: female, XXYYAA: male"
+        },
+        "G": {
+          "text": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: female",
+          "math_alt": [],
+          "plain_text": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: female"
+        },
+        "H": {
+          "text": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: male",
+          "math_alt": [],
+          "plain_text": "XAA: male, XYAA: male, XXAA: female, XXYAA: female, XXYYAA: male"
+        }
+      },
+      "correct_answer": "G",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "G",
+      "correct_answer_images": [],
+      "explanation": "The answer is G.\nThe ratio of X : A in columns 1 and 2 is 0.5 : 1 which makes the flies male, irrespective of the presence or absence of the Y chromosome. The ratio of X : A in columns 3, 4 and 5 is 1 : 1 which makes the flies female, irrespective of the presence or absence of the Y chromosome.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:11:21.703333"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q19",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 19,
+      "question_text": "The diagram shows part of the carbon cycle.\n\n \n\nWhich row shows the numbered processes that use digestive or respiratory enzymes?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q19.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "process or processes that involve digestive enzymes: 1 only, process or processes that involve respiratory enzymes: 2 and 3 only",
+        "B": "process or processes that involve digestive enzymes: 2 only, process or processes that involve respiratory enzymes: 1 and 4 only",
+        "C": "process or processes that involve digestive enzymes: 3 only, process or processes that involve respiratory enzymes: 2 and 4 only",
+        "D": "process or processes that involve digestive enzymes: 4 only, process or processes that involve respiratory enzymes: 2 and 3 only",
+        "E": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 1 only",
+        "F": "process or processes that involve digestive enzymes: 3 and 4 only, process or processes that involve respiratory enzymes: 2 only",
+        "G": "process or processes that involve digestive enzymes: 1 and 4 only, process or processes that involve respiratory enzymes: 3 only",
+        "H": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 4 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "process or processes that involve digestive enzymes: 1 only, process or processes that involve respiratory enzymes: 2 and 3 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 1 only, process or processes that involve respiratory enzymes: 2 and 3 only"
+        },
+        "B": {
+          "text": "process or processes that involve digestive enzymes: 2 only, process or processes that involve respiratory enzymes: 1 and 4 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 2 only, process or processes that involve respiratory enzymes: 1 and 4 only"
+        },
+        "C": {
+          "text": "process or processes that involve digestive enzymes: 3 only, process or processes that involve respiratory enzymes: 2 and 4 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 3 only, process or processes that involve respiratory enzymes: 2 and 4 only"
+        },
+        "D": {
+          "text": "process or processes that involve digestive enzymes: 4 only, process or processes that involve respiratory enzymes: 2 and 3 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 4 only, process or processes that involve respiratory enzymes: 2 and 3 only"
+        },
+        "E": {
+          "text": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 1 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 1 only"
+        },
+        "F": {
+          "text": "process or processes that involve digestive enzymes: 3 and 4 only, process or processes that involve respiratory enzymes: 2 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 3 and 4 only, process or processes that involve respiratory enzymes: 2 only"
+        },
+        "G": {
+          "text": "process or processes that involve digestive enzymes: 1 and 4 only, process or processes that involve respiratory enzymes: 3 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 1 and 4 only, process or processes that involve respiratory enzymes: 3 only"
+        },
+        "H": {
+          "text": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 4 only",
+          "math_alt": [],
+          "plain_text": "process or processes that involve digestive enzymes: 2 and 3 only, process or processes that involve respiratory enzymes: 4 only"
+        }
+      },
+      "correct_answer": "H",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "H",
+      "correct_answer_images": [],
+      "explanation": "The answer is H.\nProcess 1 is photosynthesis and therefore should not feature in any answers. For carbon to be incorporated into animals and decomposers, digestion of carbon-rich compounds must initially occur (processes 2 and 3). Respiration can release carbon into the air as CO2 which is illustrated by process 4.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:11:34.403264"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q20",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 20,
+      "question_text": "The table shows the concentration of potassium ions in several different locations.\nWhich of the following statements is/are correct?\n\n \n\n   1. A mammalian heart cell needs energy from respiration in order to obtain more potassium ions from blood plasma.\n\n \n\n   2. If a yeast cell is placed in sea water then it will lose potassium ions by osmosis.\n\n \n\n   3. There is no concentration gradient for potassium ions between a bacterial cell and sea water.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q20.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 3 only.\nThis question is much more straightforward if all concentrations are converted into the same units.\nlocation\nconcentration of potassium ions\nbacterial cell cytoplasm\n30 mmol dm−3\nmammalian blood plasma\n4000 µmol dm−3  =  4 mmol dm−3\nmammalian heart cell cytoplasm\n1.0 × 102 mmol dm−3  =  100 mmol dm−3\nsea water\n3.0 × 104 µmol dm−3  =  30 000 µmol dm−3  =  30 mmol dm−3\nyeast cell cytoplasm\n300 mmol dm−3\nA mammalian heart cell needs energy from respiration in order to obtain more potassium ions from blood plasma (1). The concentration of potassium ions inside a heart cell is 100 mmol dm−3 and in blood plasma is 4 mmol dm−3. In order for the heart cell to take up more potassium ions, it would need to use active transport to move the ions against the concentration gradient. This requires energy from respiration, so this statement is correct.\nIf a yeast cell is placed in sea water then it will lose potassium ions by osmosis (2). This is incorrect. The only substance that can move by osmosis is water. The potassium ions may well diffuse down a concentration gradient from the yeast cell (concentration 300 mmol dm−3) to the sea water (concentration 30 mmol dm−3) but this would be by diffusion not osmosis.\nThere is no concentration gradient for potassium ions between a bacterial cell and sea water (3). The concentration of potassium ions in both the bacterial cell and the sea water is 30 mmol dm−3 so there would be no concentration gradient between the two. This statement is correct.\nThe correct answer is: 1 and 3 only.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:11:47.256282"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q21",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 21,
+      "question_text": "A section of DNA is 420 base pairs long and contains 42% of one of the bases, adenine (A).\n\n \n\nWhich one of the following rows in the table correctly states how many amino acids can be coded for by this section of DNA and what percentage of the base guanine (G) is present in this section of DNA?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q21.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "number of amino acids: 140, percentage of guanine (G): 8",
+        "B": "number of amino acids: 140, percentage of guanine (G): 13",
+        "C": "number of amino acids: 140, percentage of guanine (G): 42",
+        "D": "number of amino acids: 260, percentage of guanine (G): 16",
+        "E": "number of amino acids: 260, percentage of guanine (G): 42",
+        "F": "number of amino acids: 420, percentage of guanine (G): 8",
+        "G": "number of amino acids: 420, percentage of guanine (G): 13",
+        "H": "number of amino acids: 420, percentage of guanine (G): 16"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "number of amino acids: 140, percentage of guanine (G): 8",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 140, percentage of guanine (G): 8"
+        },
+        "B": {
+          "text": "number of amino acids: 140, percentage of guanine (G): 13",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 140, percentage of guanine (G): 13"
+        },
+        "C": {
+          "text": "number of amino acids: 140, percentage of guanine (G): 42",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 140, percentage of guanine (G): 42"
+        },
+        "D": {
+          "text": "number of amino acids: 260, percentage of guanine (G): 16",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 260, percentage of guanine (G): 16"
+        },
+        "E": {
+          "text": "number of amino acids: 260, percentage of guanine (G): 42",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 260, percentage of guanine (G): 42"
+        },
+        "F": {
+          "text": "number of amino acids: 420, percentage of guanine (G): 8",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 420, percentage of guanine (G): 8"
+        },
+        "G": {
+          "text": "number of amino acids: 420, percentage of guanine (G): 13",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 420, percentage of guanine (G): 13"
+        },
+        "H": {
+          "text": "number of amino acids: 420, percentage of guanine (G): 16",
+          "math_alt": [],
+          "plain_text": "number of amino acids: 420, percentage of guanine (G): 16"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "A",
+      "correct_answer_images": [],
+      "explanation": "The answer is A.\nThe genetic code is a triplet code (three bases code for one amino acid). A section of DNA with 420 base pairs can code for 140 amino acids (420 divided by 3).\nThe DNA contains four bases (adenine, guanine, cytosine and thymine). Adenine binds with thymine and guanine with cytosine. If the DNA contains 42% adenine it will also contain 42% thymine. 42% × 2 is 84%.\nThis means that 16% are guanine and cytosine together. 16% divided by 2 is 8%.\nThis DNA therefore contains 42% of adenine, 42% of thymine, 8% of cytosine and 8% of guanine.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:11:59.801768"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q22",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 22,
+      "question_text": "Which of the statements about the genetic modification of a bacterium to produce human insulin are correct?\n\n \n\n   1. Human insulin DNA is cut out using an enzyme.\n\n \n\n   2. This DNA is inserted into the nucleus of a bacterium.\n\n \n\n   3. The modified bacterium is cultured.\n\n \n\n   4. The bacterial cells are injected into humans with diabetes.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q22.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "1 and 3 only",
+        "C": "2 and 4 only",
+        "D": "3 and 4 only",
+        "E": "1, 2 and 3 only",
+        "F": "1, 3 and 4 only"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "B": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "C": {
+          "text": "2 and 4 only",
+          "math_alt": [],
+          "plain_text": "2 and 4 only"
+        },
+        "D": {
+          "text": "3 and 4 only",
+          "math_alt": [],
+          "plain_text": "3 and 4 only"
+        },
+        "E": {
+          "text": "1, 2 and 3 only",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3 only"
+        },
+        "F": {
+          "text": "1, 3 and 4 only",
+          "math_alt": [],
+          "plain_text": "1, 3 and 4 only"
+        }
+      },
+      "correct_answer": "B",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 3 only.\nIn order to genetically modify bacteria to produce human insulin you need to cut out the DNA coding for human insulin from a normal, healthy human’s DNA. A special enzyme is used to cut the DNA. Therefore statement 1 is correct.\nThis DNA is then inserted into the DNA of a bacterium. However, bacteria do not have a nucleus, so statement 2 is incorrect.\nThe modified bacteria have to be cultured. This means that they are grown in a fermenter so that large numbers of bacteria are produced. Therefore statement 3 is correct.\nThe bacteria are used to produce human insulin, which is extracted from them and purified. This insulin is then used to treat diabetics. Therefore, statement 4 is incorrect, since bacteria are not injected into humans with diabetes.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:12:12.199750"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q23",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 23,
+      "question_text": "The diagram shows the changes in the volume of the ventricles, and the ECG trace that accompanies those changes, during two consecutive heart beats.\n\n \n\n   \n\n \n\nWhich row is correct about the events happening at X, Y and Z?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q23.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+        "B": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria",
+        "C": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles",
+        "D": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles",
+        "E": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles",
+        "F": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles",
+        "G": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+        "H": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria"
+        },
+        "B": {
+          "text": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria"
+        },
+        "C": {
+          "text": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles"
+        },
+        "D": {
+          "text": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: atria; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles"
+        },
+        "E": {
+          "text": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: ventricles"
+        },
+        "F": {
+          "text": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: pulmonary artery; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: ventricles"
+        },
+        "G": {
+          "text": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria"
+        },
+        "H": {
+          "text": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria",
+          "math_alt": [],
+          "plain_text": "at X blood is being pumped into: pulmonary vein; at Y valves between atria and ventricles are: closed; chambers of the heart contracting at Z: atria"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+      "correct_answer_plain": "at X blood is being pumped into: aorta; at Y valves between atria and ventricles are: open; chambers of the heart contracting at Z: atria",
+      "correct_answer_images": [],
+      "explanation": "The correct answer is row A.\nX - At X the ECG trace shows the pattern which triggers the ventricles to contract. The volume of the ventricles is starting to fall. This means blood must be leaving the ventricles and entering the arteries - the pulmonary artery from the right ventricle and the aorta from the left ventricle. This means rows A and C, E and G are correct for this column.\nY - At Y the volume of the ventricles is starting to rise. This means blood must be flowing into the ventricles from the atria. For this to happen the valves between the atria and ventricles must be open. This means rows A, D, F and G are correct for this column.\nZ - At Z the ECG trace shows the pattern which triggers the atria to contract. In addition there is a sharp increase in the volume of the ventricles as the atria are now pumping more blood in. This means rows A, C, F and H are correct for this column.\nThe only row that is correct in all three columns is row A.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:12:24.964686"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q24",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 24,
+      "question_text": "Which of the following could be produced when a mutation occurs in a cheek cell of an organism?\n\n \n\n   1. a change in the sequence of amino acids used to make a protein\n\n \n\n   2. an advantageous allele that can be passed on to the offspring of that organism\n\n \n\n   3. a change of an essential cell process that causes the death of the cell",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q24.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "F",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1 and 3 only.\nMutations are random changes in the DNA sequence of an organism. If this occurs within the sequence of a gene that codes for a protein, then it can change the bases in the triplet sequence of that gene and may alter the amino acids that they code for (statement 1). If the mutation occurs within a gene that codes for an enzyme that is part of an essential cell process, like respiration, then the cell may no longer be able to function correctly and may die (statement 3).\nSome mutations do produce positive changes in cells that could be beneficial to the organism. If they occur in a cheek cell instead of a gamete however, they will not be passed on to any offspring of the organism so statement 2 is incorrect.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:12:37.637048"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q25",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 25,
+      "question_text": "The genetic condition represented by the shading is caused by the presence of at least one allele for the condition.\n\n \n\n \n\nWhich of the following are possible reasons why U has the condition?\n\n \n\n   1. The condition is dominant.\n\n \n\n   2. The sperm from T carried the allele for the condition.\n\n \n\n   3. A mutation is present in an egg of S.",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q25.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 and 2 only",
+        "C": "1 and 3 only",
+        "D": "2 and 3 only",
+        "E": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "C": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "D": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "E": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "1, 2 and 3.",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 1, 2 and 3.\nUsing the information in the question, as the condition is caused by at least one allele it must be a dominant allele (statement 1). Therefore, although U is likely to be heterozygous for the allele, she will have the condition because the condition is dominant.\nFor U to show the condition she must have received the allele for this condition from one of her parents and this would be T as he shows the condition (statement 2). In this case U would be heterozygous.\nAlthough U’s mother does not show the condition, a mutation could occur in the egg that is fertilised by T’s sperm (statement 3). In this case U would be homozygous for the condition if she had also received the allele from T, or heterozygous if the only copy of the allele for the condition was received as a result of the mutation.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:12:50.059183"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q26",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 26,
+      "question_text": "Which of the following could be found in an adult liver cell?\n\n \n\n   1. starch\n\n \n\n   2. at least one X chromosome\n\n \n\n   3. gene for amylase",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q26.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "none of them",
+          "math_alt": [],
+          "plain_text": "none of them"
+        },
+        "B": {
+          "text": "1 only",
+          "math_alt": [],
+          "plain_text": "1 only"
+        },
+        "C": {
+          "text": "2 only",
+          "math_alt": [],
+          "plain_text": "2 only"
+        },
+        "D": {
+          "text": "3 only",
+          "math_alt": [],
+          "plain_text": "3 only"
+        },
+        "E": {
+          "text": "1 and 2 only",
+          "math_alt": [],
+          "plain_text": "1 and 2 only"
+        },
+        "F": {
+          "text": "1 and 3 only",
+          "math_alt": [],
+          "plain_text": "1 and 3 only"
+        },
+        "G": {
+          "text": "2 and 3 only",
+          "math_alt": [],
+          "plain_text": "2 and 3 only"
+        },
+        "H": {
+          "text": "1, 2 and 3",
+          "math_alt": [],
+          "plain_text": "1, 2 and 3"
+        }
+      },
+      "correct_answer": "G",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "2 and 3 only",
+      "correct_answer_images": [],
+      "explanation": "The answer is: 2 and 3 only.\nStarch is found in plant cells, not animal cells such as a liver cell, so statement 1 is incorrect.\nWithin the liver cell’s DNA there would be one pair of sex chromosomes. If the cell was from a male these would be XY and in a female these would be XX. In either case there is at least one X chromosome, so statement 2 is correct.\nAn adult liver cell is a diploid body cell so it will contain the same genes as all other diploid body cells, including the gene for amylase, so statement 3 is correct.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:13:02.541555"
+    },
+    {
+      "id": "ESAT-SPECIMEN-BIOLOGY-Q27",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "biology",
+      "question_number": 27,
+      "question_text": "An animal cell is surrounded by a very dilute glucose solution which has a lower concentration of glucose than the glucose solution in the cytoplasm of the cell. There is net movement of glucose molecules and water molecules into the cell.\n\n \n\nA second, identical cell is treated for a short time with a chemical which inhibits respiration. The cell is then surrounded by the same glucose solution.\n\n \n\nWhich row in the table shows the effect of this chemical on the movement of glucose molecules into the cell and the movement of water molecules across the cell surface membrane immediately after it is surrounded by the solution?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/biology/q27.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move into the cell",
+        "B": "net movement of glucose molecules: move into the cell, net movement of water molecules: move into the cell",
+        "C": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: no net movement into or out of the cell",
+        "D": "net movement of glucose molecules: move into the cell, net movement of water molecules: no net movement into or out of the cell",
+        "E": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move out of the cell",
+        "F": "net movement of glucose molecules: move into the cell, net movement of water molecules: move out of the cell"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move into the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move into the cell"
+        },
+        "B": {
+          "text": "net movement of glucose molecules: move into the cell, net movement of water molecules: move into the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: move into the cell, net movement of water molecules: move into the cell"
+        },
+        "C": {
+          "text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: no net movement into or out of the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: no net movement into or out of the cell"
+        },
+        "D": {
+          "text": "net movement of glucose molecules: move into the cell, net movement of water molecules: no net movement into or out of the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: move into the cell, net movement of water molecules: no net movement into or out of the cell"
+        },
+        "E": {
+          "text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move out of the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: do not move into the cell, net movement of water molecules: move out of the cell"
+        },
+        "F": {
+          "text": "net movement of glucose molecules: move into the cell, net movement of water molecules: move out of the cell",
+          "math_alt": [],
+          "plain_text": "net movement of glucose molecules: move into the cell, net movement of water molecules: move out of the cell"
+        }
+      },
+      "correct_answer": "A",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "A",
+      "correct_answer_images": [],
+      "explanation": "The answer is A.\nThe question tells us that a cell is surrounded by a dilute glucose solution which has a lower concentration of glucose than the glucose in the cytoplasm of the cell. It also tells us that both water molecules and glucose molecules enter the cell.\nThere is net movement of water molecules into a cell by osmosis. So we know that the concentration of water molecules outside the cell must be higher than the concentration of water molecules in the cell. Osmosis is a type of passive movement and so will be unaffected by the chemical which inhibits respiration as it does not require energy from the cell to take place. So water molecules will move into the cell.\nThere is net movement of glucose into the cell against a concentration gradient as the concentration of glucose molecules is lower outside the cell than inside. Glucose molecules must therefore enter by active transport.\nActive transport uses energy supplied by respiration. If respiration is inhibited, then active transport will no longer take place and glucose molecules will not be able to move into the cell.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:13:15.253606"
+    }
+  ],
+  "extracted_at": "2026-07-05T00:13:15.269742"
+}

@@ -1,0 +1,49 @@
+{
+  "topic_key": "BIO.B2",
+  "topic_name": "Movement across membranes",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "An experiment involves a U-tube with a sliding partially permeable membrane separating two glucose concentrations. The membrane is impermeable to glucose but permeable to water. Students must determine the final direction of movement and volume change relative to the initial gradient.",
+      "key_insight": "Water moves from the dilute side (High Water Potential) to the concentrated side (Low Water Potential) by osmosis. Crucially, the *side with the solute* (glucose) gains water and increases in volume, pushing the membrane. The solute itself does not move.",
+      "discrimination_factors": [
+        "Correctly identifying the driving force as water potential gradient, not solute concentration gradient directly.",
+        "Understanding that solute impermeability dictates the direction of volume change.",
+        "Ignoring the solute's movement (which is zero)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A table lists Potassium ($K^+$) ion concentrations in seawater vs. yeast cytoplasm (e.g., 30mmol dm\u207b\u00b3 inside vs much lower outside). The question asks which process allows the yeast to maintain this high internal concentration.",
+      "key_insight": "Since the ion concentration is higher inside than out, simple diffusion or facilitated diffusion cannot explain the accumulation. The gradient is 'wrong' for passive entry. This requires **Active Transport** (moving against the gradient), which implies the use of energy (ATP/Respiration).",
+      "discrimination_factors": [
+        "Recognizing that 'accumulation against a gradient' necessitates active transport.",
+        "Distinguishing between equilibrium (diffusion) and maintained disequilibrium (active transport)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A cell is treated with a chemical that inhibits respiration. The question asks about the subsequent movement of glucose into the cell from a low external concentration.",
+      "key_insight": "Inhibiting respiration cuts off the ATP supply. If the glucose movement stops (or only reaches equilibrium), it was likely active transport. If water movement continues unchanged, it confirms osmosis is a passive physical process driven by water potential, independent of cellular energy.",
+      "discrimination_factors": [
+        "Linking 'respiration' directly to 'active transport'.",
+        "Understanding that passive processes (diffusion/osmosis) are energy-independent.",
+        "Separating the movement of solute (glucose) from solvent (water) in the same scenario."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A scenario involves emphysema where small alveoli fuse into one large alveolus. Students are asked to compare the Surface Area to Volume (SA:Vol) ratio and the rate of diffusion of oxygen.",
+      "key_insight": "As a sphere grows, volume increases cubed ($r^3$) while surface area increases squared ($r^2$). A single large alveolus has a much lower SA:Vol ratio than the sum of smaller ones. Since gas exchange occurs across the surface, a lower SA:Vol ratio reduces the efficiency of diffusion relative to volume, meaning the rate of oxygen uptake per unit volume decreases.",
+      "discrimination_factors": [
+        "Quantitative reasoning with SA:Vol ratios.",
+        "Applying geometry to biological efficiency.",
+        "Understanding the relationship between surface area and diffusion rate."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

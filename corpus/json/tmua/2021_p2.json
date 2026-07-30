@@ -1,0 +1,453 @@
+{
+  "source_file": "TMUA-2021-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2021,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2021-P2-Q1",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "\\int_{1}^{4} \\left(3\\sqrt{x} + \\frac{4}{x^2}\\right) dx",
+      "has_diagram": false,
+      "options": {
+        "A": "-0.75",
+        "B": "7.125",
+        "C": "11",
+        "D": "17",
+        "E": "18",
+        "F": "21.875",
+        "G": "34.5"
+      },
+      "correct_answer": "D",
+      "raw_text": "1   Find the value of   \u0002 4\u0003\n                              √    4\u0004\n                             3 x + 2 dx\n                         1        x\n    A −0.75\n    B 7.125\n    C 11\n    D 17\n    E 18\n    F 21.875\n    G 34.5\n                               3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q2",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "A(0,2) and C(4,0) are opposite vertices of the square ABCD. What is the equation of the straight line through B and D?",
+      "has_diagram": false,
+      "options": {
+        "A": "y = -2x + 5",
+        "B": "y = -\\frac{1}{2}x - 3",
+        "C": "y = -\\frac{1}{2}x + 2",
+        "D": "y = x",
+        "E": "y = 2x - 3",
+        "F": "y = 2x + 2"
+      },
+      "correct_answer": "E",
+      "raw_text": "2   A(0, 2) and C(4, 0) are opposite vertices of the square ABCD.\n    What is the equation of the straight line through B and D ?\n    A y = −2x + 5\n    B y = − 12 x − 3\n    C y = − 12 x + 2\n    D y=x\n    E y = 2x − 3\n    F y = 2x + 2\n                                           4",
+      "diagram_images": [],
+      "options_latex": {
+        "D": "$y = x$",
+        "E": "$y = 2x - 3$",
+        "F": "$y = 2x + 2$"
+      }
+    },
+    {
+      "id": "TMUA-2021-P2-Q3",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "A student is chosen at random from a class. Each student is equally likely to be chosen. Which of the following conditions is/are necessary for the probability that the student wears glasses to equal \\frac{4}{15}?",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   A student is chosen at random from a class. Each student is equally likely to be\n    chosen.\n    Which of the following conditions is/are necessary for the probability that the\n                                   4\n    student wears glasses to equal    ?\n                                   15\n        I    Exactly 11 students in the class do not wear glasses.\n        II   The number of students in the class is divisible by 3.\n        III The class contains 30 students, and 8 of them wear glasses.\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                            5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q4",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "Consider the following claim about positive integers a, b and c: if a is a factor of bc, then a is a factor of b or a is a factor of c. Which of the following provide(s) a counterexample to this claim? I a=5, b=10, c=20 II a=8, b=4, c=4 III a=6, b=7, c=12",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "C",
+      "raw_text": "4   Consider the following claim about positive integers a, b and c :\n                if a is a factor of bc, then a is a factor of b or a is a factor of c\n    Which of the following provide(s) a counterexample to this claim?\n        I    a = 5, b = 10, c = 20\n        II   a = 8, b = 4, c = 4\n        III a = 6, b = 7, c = 12\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                               6",
+      "diagram_images": [],
+      "question_text_latex": "Consider the following claim about positive integers $a, b$ and $c$: if $a$ is a factor of $bc$, then $a$ is a factor of $b$ or $a$ is a factor of $c$. Which of the following provide(s) a counterexample to this claim? I $a=5, b=10, c=20$ II $a=8, b=4, c=4$ III $a=6, b=7, c=12$"
+    },
+    {
+      "id": "TMUA-2021-P2-Q5",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "On which line is the first error in the following argument?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\sin^{2} x + \\cos^{2} x = 1 for all values of x.",
+        "B": "Therefore \\cos x = \\sqrt{1 - \\sin^{2} x} for all values of x.",
+        "C": "Hence 1 + \\cos x = 1 + \\sqrt{1 - \\sin^{2} x} for all values of x.",
+        "D": "Thus (1 + \\cos x)^{2} = \\left(1 + \\sqrt{1 - \\sin^{2} x}\\right)^{2} for all values of x.",
+        "E": "Substituting x = \\pi gives 0 = 4."
+      },
+      "correct_answer": "B",
+      "raw_text": "5   On which line is the ﬁrst error in the following argument?\n    A sin2 x + cos2 x = 1 for all values of x.\n                         \u0005\n    B Therefore cos x = 1 − sin2 x for all values of x.\n                              \u0005\n    C Hence 1 + cos x = 1 + 1 − sin2 x for all values of x.\n                            \u0003     \u0005            \u00042\n    D Thus (1 + cos x)2 = 1 + 1 − sin2 x for all values of x.\n    E Substituting x = π gives 0 = 4.\n                                            7",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$\\sin^{2} x + \\cos^{2} x = 1$ for all values of $x$."
+      }
+    },
+    {
+      "id": "TMUA-2021-P2-Q6",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "Consider the following two statements about the polynomial f(x): P: f(x) = 0 for exactly three real values of x Q: f'(x) = 0 for exactly two real values of x Which one of the following is correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "P is necessary but not sufficient for Q.",
+        "B": "P is sufficient but not necessary for Q.",
+        "C": "P is necessary and sufficient for Q.",
+        "D": "P is not necessary and not sufficient for Q."
+      },
+      "correct_answer": "D",
+      "raw_text": "6   Consider the following two statements about the polynomial f(x):\n        P : f(x) = 0 for exactly three real values of x\n        Q: f \u0002 (x) = 0 for exactly two real values of x\n    Which one of the following is correct?\n    A P is necessary but not suﬃcient for Q.\n    B P is suﬃcient but not necessary for Q.\n    C P is necessary and suﬃcient for Q.\n    D P is not necessary and not suﬃcient for Q.\n                                             8",
+      "diagram_images": [],
+      "question_text_latex": "Consider the following two statements about the polynomial $f(x)$:\nP: $f(x) = 0$ for exactly three real values of $x$\nQ: $f'(x) = 0$ for exactly two real values of $x$\nWhich one of the following is correct?"
+    },
+    {
+      "id": "TMUA-2021-P2-Q7",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "A circle has equation $(x - 9)^{2} + (y + 2)^{2} = 4$ A square has vertices at $(1,0)$, $(1,2)$, $(-1,2)$ and $(-1,0)$. A straight line bisects both the area of the circle and the area of the square. What is the $x$-coordinate of the point where this straight line meets the $x$-axis?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "4.5",
+        "E": "5",
+        "F": "6",
+        "G": "The straight line is not uniquely determined by the information given, so there is more than one possible point of intersection.",
+        "H": "There is no straight line that bisects both the area of the circle and the area of the square."
+      },
+      "correct_answer": "B",
+      "raw_text": "7   A circle has equation (x − 9)2 + (y + 2)2 = 4\n    A square has vertices at (1, 0), (1, 2), (−1, 2) and (−1, 0).\n    A straight line bisects both the area of the circle and the area of the square.\n    What is the x-coordinate of the point where this straight line meets the x-axis?\n    A 2\n    B 3\n    C 4\n    D 4.5\n    E 5\n    F 6\n    G The straight line is not uniquely determined by the information given, so there is\n      more than one possible point of intersection.\n    H There is no straight line that bisects both the area of the circle and the area of\n      the square.\n                                              9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q8",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "Consider the following statement about the polynomial p(x), where a and b are real numbers with a < b: (*) There exists a number c with a < c < b such that p'(c) = 0. Which one of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "The condition p(a) = p(b) is necessary and sufficient for (*)",
+        "B": "The condition p(a) = p(b) is necessary but not sufficient for (*)",
+        "C": "The condition p(a) = p(b) is sufficient but not necessary for (*)",
+        "D": "The condition p(a) = p(b) is not necessary and not sufficient for (*)"
+      },
+      "correct_answer": "C",
+      "raw_text": "8   Consider the following statement about the polynomial p(x), where a and b are real\n    numbers with a < b :\n      (∗) There exists a number c with a < c < b such that p\u0002 (c) = 0.\n    Which one of the following is true?\n    A The condition p(a) = p(b) is necessary and suﬃcient for (∗)\n    B The condition p(a) = p(b) is necessary but not suﬃcient for (∗)\n    C The condition p(a) = p(b) is suﬃcient but not necessary for (∗)\n    D The condition p(a) = p(b) is not necessary and not suﬃcient for (∗)\n                                          10",
+      "diagram_images": [],
+      "question_text_latex": "Consider the following statement about the polynomial $p(x)$, where $a$ and $b$ are real numbers with $a < b$: (*) There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$. Which one of the following is true?",
+      "options_latex": {
+        "A": "The condition $p(a) = p(b)$ is necessary and sufficient for $(*)$",
+        "B": "The condition $p(a) = p(b)$ is necessary but not sufficient for $(*)$",
+        "C": "The condition $p(a) = p(b)$ is sufficient but not necessary for (*)",
+        "D": "The condition $p(a) = p(b)$ is not necessary and not sufficient for (*)"
+      }
+    },
+    {
+      "id": "TMUA-2021-P2-Q9",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "Consider the following statements about a polynomial f(x): I. f(x) = px^{3} + qx^{2} + rx + s, where p \\neq 0. II. There is a real number t for which f'(t) = 0. III. There are real numbers u and v for which f(u)f(v) < 0. Which of these statements is/are sufficient for the equation f(x) = 0 to have a real solution?",
+      "has_diagram": false,
+      "options": {
+        "A": "Yes, Yes, Yes",
+        "B": "Yes, Yes, No",
+        "C": "Yes, No, Yes",
+        "D": "Yes, No, No",
+        "E": "No, Yes, Yes",
+        "F": "No, Yes, No",
+        "G": "No, No, Yes",
+        "H": "No, No, No"
+      },
+      "correct_answer": "C",
+      "raw_text": "9   Consider the following statements about a polynomial f(x):\n         I    f(x) = px3 + qx2 + rx + s, where p \u0004= 0.\n         II   There is a real number t for which f \u0002 (t) = 0.\n         III There are real numbers u and v for which f(u) f(v) < 0.\n    Which of these statements is/are suﬃcient for the equation f(x) = 0 to have a real\n    solution?\n              Statement I is           Statement II is          Statement III is\n                suﬃcient                  suﬃcient                 suﬃcient\n     A             Yes                      Yes                       Yes\n     B             Yes                      Yes                       No\n     C             Yes                       No                       Yes\n     D             Yes                       No                       No\n     E             No                       Yes                       Yes\n     F             No                       Yes                       No\n     G             No                        No                       Yes\n     H             No                        No                       No\n                                              11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q10",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "The first seven terms of a sequence of positive integers are: u_1 = 15, u_2 = 21, u_3 = 30, u_4 = 37, u_5 = 44, u_6 = 51, u_7 = 59. Consider the following statement about this sequence: (*) If n is a prime number, then u_n is a multiple of 3 or u_n is a multiple of 5. What is the smallest value of n that provides a counterexample to (*)?",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5",
+        "F": "6",
+        "G": "7"
+      },
+      "correct_answer": "E",
+      "raw_text": "10   The ﬁrst seven terms of a sequence of positive integers are:\n                                            u1 = 15\n                                            u2 = 21\n                                            u3 = 30\n                                            u4 = 37\n                                            u5 = 44\n                                            u6 = 51\n                                            u7 = 59\n     Consider the following statement about this sequence:\n       (∗) If n is a prime number, then un is a multiple of 3 or un is a multiple\n           of 5.\n     What is the smallest value of n that provides a counterexample to (∗)?\n     A 1\n     B 2\n     C 3\n     D 4\n     E 5\n     F 6\n     G 7\n                                             12",
+      "diagram_images": [],
+      "question_text_latex": "The first seven terms of a sequence of positive integers are: $u_1 = 15$, $u_2 = 21$, $u_3 = 30$, $u_4 = 37$, $u_5 = 44$, $u_6 = 51$, $u_7 = 59$. Consider the following statement about this sequence: $(*)$ If $n$ is a prime number, then $u_n$ is a multiple of $3$ or $u_n$ is a multiple of $5$. What is the smallest value of $n$ that provides a counterexample to $(*)$?"
+    },
+    {
+      "id": "TMUA-2021-P2-Q11",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "A student attempts to solve the following problem, where \\(a\\) and \\(b\\) are non-zero real numbers: Show that if \\(a^{2} - 4b^{3} \\geq 0\\) then there exist real numbers \\(x\\) and \\(y\\) such that \\(a = xy(x + y)\\) and \\(b = xy\\). Consider the following attempt: \\((x - y)^{2} \\geq 0\\) (I) so \\(x^{2} + y^{2} - 2xy \\geq 0\\) (II) so \\((x + y)^{2} - 4xy \\geq 0\\) (III) so \\(x^{2}y^{2}(x + y)^{2} - 4x^{3}y^{3} \\geq 0\\) (IV) so \\(a^{2} - 4b^{3} \\geq 0\\) (V) Which of the following best describes this attempt?",
+      "has_diagram": false,
+      "options": {
+        "A": "It is completely correct.",
+        "B": "It is incorrect, but it would be correct if written in the reverse order.",
+        "C": "It is incorrect, but the student has correctly proved the converse.",
+        "D": "It is incorrect because there is an error in line (II).",
+        "E": "It is incorrect because there is an error in line (III).",
+        "F": "It is incorrect because there is an error in line (IV)."
+      },
+      "correct_answer": "C",
+      "raw_text": "11   A student attempts to solve the following problem, where a and b are non-zero real\n     numbers:\n       Show that if a2 − 4b3 ≥ 0 then there exist real numbers x and y such that\n       a = xy(x + y) and b = xy.\n     Consider the following attempt:\n         (x − y)2 ≥ 0                                                          (I)\n         so x2 + y 2 − 2xy ≥ 0                                                 (II)\n         so (x + y)2 − 4xy ≥ 0                                                 (III)\n         so x2 y 2 (x + y)2 − 4x3 y 3 ≥ 0                                      (IV)\n         so a2 − 4b3 ≥ 0                                                       (V)\n     Which of the following best describes this attempt?\n     A It is completely correct.\n     B It is incorrect, but it would be correct if written in the reverse order.\n     C It is incorrect, but the student has correctly proved the converse.\n     D It is incorrect because there is an error in line (II).\n     E It is incorrect because there is an error in line (III).\n     F It is incorrect because there is an error in line (IV).\n                                              13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q12",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "Which of the following statements about polynomials f and g is/are true? I If f(x) \\geq g(x) for all x \\geq 0, then \\int_0^x f(t) \\, dt \\geq \\int_0^x g(t) \\, dt for all x \\geq 0. II If f(x) \\geq g(x) for all x \\geq 0, then f'(x) \\geq g'(x) for all x \\geq 0. III If f'(x) \\geq g'(x) for all x \\geq 0, then f(x) \\geq g(x) for all x \\geq 0.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "B",
+      "raw_text": "12   Which of the following statements about polynomials f and g is/are true?\n                                                   \u0006x               \u0006x\n         I    If f(x) ≥ g(x) for all x ≥ 0, then    0\n                                                        f(t) dt ≥   0\n                                                                         g(t) dt for all x ≥ 0.\n         II   If f(x) ≥ g(x) for all x ≥ 0, then f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0.\n         III If f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0, then f(x) ≥ g(x) for all x ≥ 0.\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                              14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q13",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "A region R in the (x,y)-plane is defined by the simultaneous inequalities y - x < 3 and y - x^{2} < 1. Which of the following statements is/are true for every point in R? I \\(-1 < x < 2\\), II \\((y - x)(y - x^{2}) < 3\\), III \\(y < 5\\)",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "A",
+      "raw_text": "13   A region R in the (x, y)-plane is deﬁned by the simultaneous inequalities\n                                           y−x<3\n                                          y − x2 < 1\n     Which of the following statements is/are true for every point in R ?\n         I    −1 < x < 2\n         II   (y − x)(y − x2 ) < 3\n         III y < 5\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                            15",
+      "diagram_images": [],
+      "question_text_latex": "A region $R$ in the $(x,y)$-plane is defined by the simultaneous inequalities $y - x < 3$ and $y - x^{2} < 1$. Which of the following statements is/are true for every point in $R$? I $-1 < x < 2$, II $(y - x)(y - x^{2}) < 3$, III $y < 5$"
+    },
+    {
+      "id": "TMUA-2021-P2-Q14",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "Consider the following simultaneous equations, where p is a real number: p2^x + \\log_2 y = 2; 2^x + \\log_2 y = 1. What is the complete range of p for which these simultaneous equations have a real solution (x, y)?",
+      "has_diagram": false,
+      "options": {
+        "A": "p < 1",
+        "B": "p \\neq 1",
+        "C": "p > 1",
+        "D": "p < 1 or p > 2",
+        "E": "p \\neq 1 and p < 2",
+        "F": "p > 1 and p < 2",
+        "G": "p > 2",
+        "H": "All real values of p"
+      },
+      "correct_answer": "C",
+      "raw_text": "14   Consider the following simultaneous equations, where p is a real number:\n                                       p2x + log2 y = 2\n                                        2x + log2 y = 1\n     What is the complete range of p for which these simultaneous equations have a real\n     solution (x, y)?\n     A p<1\n     B p \u0004= 1\n     C p>1\n     D p < 1 or p > 2\n     E p \u0004= 1 and p < 2\n     F p > 1 and p < 2\n     G p>2\n     H All real values of p\n                                            16",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$p < 1$",
+        "C": "$p > 1$",
+        "D": "$p < 1$ or $p > 2$",
+        "F": "$ p > 1 $ and $ p < 2 $",
+        "G": "$p > 2$"
+      }
+    },
+    {
+      "id": "TMUA-2021-P2-Q15",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "A circle has equation $x^{2} + ax + y^{2} + by + c = 0$ where $a$, $b$ and $c$ are non-zero real constants. Which one of the following is a necessary and sufficient condition for the circle to be tangent to the $y$-axis?",
+      "has_diagram": false,
+      "options": {
+        "A": "$a^{2} = 4c$",
+        "B": "$b^{2} = 4c$",
+        "C": "$\\frac{a}{2} = \\sqrt{\\frac{a^{2} + b^2}{4} - c}$",
+        "D": "$\\frac{b}{2} = \\sqrt{\\frac{a^{2} + b^2}{4} - c}$",
+        "E": "$-\\frac{a}{2} = \\sqrt{\\frac{a^{2} + b^2}{4} - c}$",
+        "F": "$-\\frac{b}{2} = \\sqrt{\\frac{a^{2} + b^2}{4} - c}$"
+      },
+      "correct_answer": "B",
+      "raw_text": "15   A circle has equation\n                                   x2 + ax + y 2 + by + c = 0\n     where a, b and c are non-zero real constants.\n     Which one of the following is a necessary and suﬃcient condition for the circle to\n     be tangent to the y-axis?\n     A a2 = 4c\n     B b2 = 4c\n            …\n       a       a2 + b 2\n     C    =             −c\n       2          4\n            …\n       b       a2 + b 2\n     D    =             −c\n       2          4\n             …\n         a       a2 + b 2\n     E − =                −c\n         2          4\n             …\n         b       a2 + b 2\n     F − =                −c\n         2          4\n                                             17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q16",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "p and q are real numbers, and the equation $x|x| = px + q$ has exactly $k$ distinct real solutions for $x$. Which one of the following is the complete list of possible values for $k$?",
+      "has_diagram": false,
+      "options": {
+        "A": "0, 1, 2",
+        "B": "0, 1, 2, 3",
+        "C": "0, 1, 2, 3, 4",
+        "D": "0, 2, 4",
+        "E": "1, 2, 3",
+        "F": "1, 2, 3, 4"
+      },
+      "correct_answer": "E",
+      "raw_text": "16   p and q are real numbers, and the equation\n                                          x |x| = px + q\n     has exactly k distinct real solutions for x.\n     Which one of the following is the complete list of possible values for k ?\n     A 0, 1, 2\n     B 0, 1, 2, 3\n     C 0, 1, 2, 3, 4\n     D 0, 2, 4\n     E 1, 2, 3\n     F 1, 2, 3, 4\n                                              18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q17",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "Consider the following functions defined for x > 1: f(x) = \\log_2(\\log_2 \\sqrt{x}) and g(x) = \\log_2(\\sqrt{\\log_2 x}). Which one of the following is true for all values of x > 1?",
+      "has_diagram": false,
+      "options": {
+        "A": "0 \\leq f(x) \\leq g(x) \\text{ or } g(x) \\leq f(x) \\leq 0",
+        "B": "0 \\leq g(x) \\leq f(x) \\text{ or } f(x) \\leq g(x) \\leq 0",
+        "C": "\\frac{1}{2} \\leq f(x) \\leq g(x) \\text{ or } g(x) \\leq f(x) \\leq \\frac{1}{2}",
+        "D": "\\frac{1}{2} \\leq g(x) \\leq f(x) \\text{ or } f(x) \\leq g(x) \\leq \\frac{1}{2}",
+        "E": "1 \\leq f(x) \\leq g(x) \\text{ or } g(x) \\leq f(x) \\leq 1",
+        "F": "1 \\leq g(x) \\leq f(x) \\text{ or } f(x) \\leq g(x) \\leq 1"
+      },
+      "correct_answer": "F",
+      "raw_text": "17   Consider the following functions deﬁned for x > 1 :\n                                                \u0007    √ \b\n                                     f(x) = log2 log2 x\n                                                    \u0007\u0005            \b\n                                      g(x) = log2        log2 x\n     Which one of the following is true for all values of x > 1 ?\n     A 0 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 0\n     B 0 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 0\n         1\n     C   2\n           ≤ f(x) ≤ g(x)   or g(x) ≤ f(x) ≤ 12\n         1\n     D   2\n           ≤ g(x) ≤ f(x)   or f(x) ≤ g(x) ≤ 12\n     E 1 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 1\n     F 1 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 1\n                                             19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q18",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "A student chooses two distinct real numbers \\( x \\) and \\( y \\) with \\( 0 < x < y < 1 \\). The student then attempts to draw a triangle \\( ABC \\) with: \\( AB = 1 \\), \\( \\sin A = x \\), \\( \\sin B = y \\). Which of the following statements is/are correct? I For some choice of \\( x \\) and \\( y \\), there is exactly one triangle the student could draw. II For some choice of \\( x \\) and \\( y \\), there are exactly two different triangles the student could draw. III For some choice of \\( x \\) and \\( y \\), there are exactly three different triangles the student could draw. (Note that congruent triangles are considered to be the same.)",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III"
+      },
+      "correct_answer": "C",
+      "raw_text": "18   A student chooses two distinct real numbers x and y with 0 < x < y < 1.\n     The student then attempts to draw a triangle ABC with:\n                                            AB = 1\n                                          sin A = x\n                                          sin B = y\n     Which of the following statements is/are correct?\n         I    For some choice of x and y, there is exactly one triangle the student\n              could draw.\n         II   For some choice of x and y, there are exactly two diﬀerent triangles\n              the student could draw.\n         III For some choice of x and y, there are exactly three diﬀerent\n             triangles the student could draw.\n     (Note that congruent triangles are considered to be the same.)\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                            20",
+      "diagram_images": [],
+      "question_text_latex": "A student chooses two distinct real numbers $x$ and $y$ with $0 < x < y < 1$. The student then attempts to draw a triangle $ABC$ with: $AB = 1$, $\\sin A = x$, $\\sin B = y$. Which of the following statements is/are correct? I For some choice of $x$ and $y$, there is exactly one triangle the student could draw. II For some choice of $x$ and $y$, there are exactly two different triangles the student could draw. III For some choice of $x$ and $y$, there are exactly three different triangles the student could draw. (Note that congruent triangles are considered to be the same.)"
+    },
+    {
+      "id": "TMUA-2021-P2-Q19",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "The angle $\\theta$ can take any of the values $1^\\circ$, $2^\\circ$, $3^\\circ$, $\\ldots$, $359^\\circ$, $360^\\circ$. For how many of these values of $\\theta$ is it true that $\\sin \\theta \\sqrt{1 + \\sin \\theta} \\sqrt{1 - \\sin \\theta} + \\cos \\theta \\sqrt{1 + \\cos \\theta} \\sqrt{1 - \\cos \\theta} = 0$",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "4",
+        "E": "93",
+        "F": "182",
+        "G": "271",
+        "H": "360"
+      },
+      "correct_answer": "F",
+      "raw_text": "19   The angle θ can take any of the values 1◦ , 2◦ , 3◦ , . . . , 359◦ , 360◦ .\n     For how many of these values of θ is it true that\n                     √          √                   √      √\n                sin θ 1 + sin θ 1 − sin θ + cos θ 1 + cos θ 1 − cos θ = 0\n     A 0\n     B 1\n     C 2\n     D 4\n     E 93\n     F 182\n     G 271\n     H 360\n                                                  21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2021-P2-Q20",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "A sequence of functions f₁, f₂, f₃, … is defined by f₁(x) = |x|, fₙ₊₁(x) = |fₙ(x) + x| for n \\geq  1. Find the value of \\int_{-1}^{1} f_{99}(x) \\, dx",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "0.5",
+        "C": "1",
+        "D": "49.5",
+        "E": "50",
+        "F": "99",
+        "G": "99.5",
+        "H": "100"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   A sequence of functions f1 , f2 , f3 , . . . is deﬁned by\n                                      f1 (x) = |x|\n                                   fn+1 (x) = |fn (x) + x| for n ≥ 1\n     Find the value of\n                                              \u0002 1\n                                                     f99 (x) dx\n                                                −1\n     A 0\n     B 0.5\n     C 1\n     D 49.5\n     E 50\n     F 99\n     G 99.5\n     H 100\n                                                     22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

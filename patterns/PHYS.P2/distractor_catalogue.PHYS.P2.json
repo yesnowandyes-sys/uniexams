@@ -1,0 +1,45 @@
+{
+  "topic_key": "PHYS.P2",
+  "topic_name": "Magnetism",
+  "module_code": "P",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Magnitude Factor Neglect (Current Conversion)",
+      "frequency": "common",
+      "example_question_id": "Q3, Q7",
+      "why_effective": "These questions provide charge in Coulombs and time in minutes. A common student error is calculating Current I = Q/t without converting time to seconds, resulting in a current value 60 times too large. This error propagates through the force calculation F = BIL, often leading to an incorrect option that is a multiple of the correct answer (e.g., 0.36 N instead of 0.0060 N).",
+      "generation_strategy": "Provide time values in minutes or hours in the stem. Ensure options include the result of the calculation using raw time values (no unit conversion)."
+    },
+    {
+      "distractor_type": "Perpendicular Length vs. Physical Length",
+      "frequency": "common",
+      "example_question_id": "Q2",
+      "why_effective": "In Q2, the rod length (20 cm) is given, but the distance between rails (12 cm) defines the effective length perpendicular to the magnetic field. Students selecting the rod length for F = BIl will calculate a larger force, leading to a higher acceleration. The options include this higher value (3.6 / 6.0) to trap those who misidentify the effective conductor length.",
+      "generation_strategy": "Describe a setup with a rod/bridge at an angle or extending beyond parallel rails. Provide dimensions for both the object and the rail separation. Use the full object length as a distractor variable."
+    },
+    {
+      "distractor_type": "Unit Displacement (cm vs m)",
+      "frequency": "common",
+      "example_question_id": "Q1",
+      "why_effective": "The question asks for the moment in 'N cm'. However, standard SI calculation using F=BIL and Torque=Fd naturally yields N m. Students providing the answer in standard SI form (e.g., 0.045 N m) will select option C (0.045), while the correct answer requires unit scaling to 4.5 N cm (Option G).",
+      "generation_strategy": "Define inputs in SI units (meters, Tesla) but request the final answer in non-SI or derived units (cm, mm) without explicitly reminding the student to convert in the final step."
+    },
+    {
+      "distractor_type": "Polarity and Orientation Inversion",
+      "frequency": "observed",
+      "example_question_id": "Q2, Q6, Q9",
+      "why_effective": "These questions test directional rules (Fleming's Left Hand, Lenz's Law). The correct magnitude is often accompanied by a wrong direction (e.g., Q2 Option D vs H; Q6 Option G vs E). Students often correctly calculate the force magnitude but reverse the direction due to handedness errors or misidentifying field/pole directions.",
+      "generation_strategy": "For every correct magnitude/direction pair, generate an option with the correct magnitude and the opposite direction. Include options with incorrect magnitudes that match the 'intuitive' (but physically wrong) direction."
+    },
+    {
+      "distractor_type": "Variable Inversion (Transformer Efficiency)",
+      "frequency": "rare",
+      "example_question_id": "Q5",
+      "why_effective": "Students often confuse the formula for efficiency (Output/Input vs Input/Output) or mix up P_in and P_out values. Option A (20%) is the inverse of the correct efficiency (80%), trapping students who calculate Input/Output or invert the ratio.",
+      "generation_strategy": "In questions asking for a ratio or percentage (efficiency, loss), include options that are the reciprocals or complements (100-x) of the correct value."
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,50 @@
+{
+  "topic_key": "BIO.B5",
+  "topic_name": "DNA",
+  "module_code": "B",
+  "corpus_question_count": 10,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student is analyzing a DNA sample with 420 base pairs where Adenine constitutes 42% of the bases. They must calculate the number of amino acids coded for and the percentage of Guanine.",
+      "key_insight": "Requires processing two conflicting constraints: Chargaff's rule ($A=T$, so if $A=42\\%$, $G$ cannot be $42\\%$, it must be $8\\%$) AND the coding logic ($3$ bases = $1$ amino acid, so $420/3 = 140$ amino acids). The 'trap' is thinking $A=T=42\\%$ and $G=C=42\\%$ (summing to >100) or confusing raw counts with percentages.",
+      "discrimination_factors": [
+        "Ability to apply Chargaff's rules under time pressure",
+        "Avoiding the assumption that percentages must sum to 100 within purines/pyrimidines independently",
+        "Performing division (420/3) accurately while managing percentages"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "An EcoRI restriction enzyme cuts a DNA sequence, producing sticky ends with specific overhangs (e.g., AATT). The student must calculate the total number of hydrogen bonds broken during this specific cut event.",
+      "key_insight": "Understanding that 'sticky ends' implies the breaking of bonds only at the cleavage site, and specifically counting the bonds for the specific bases involved (A-T has 2, G-C has 3). The insight is realizing that the total is the sum of the bonds for the specific sequence of bases (e.g., 4 bases x 2 cuts = 8 bases involved), not the total bonds in the DNA molecule.",
+      "discrimination_factors": [
+        "Recall of specific bond numbers (2 for AT, 3 for GC)",
+        "Spatial visualization of the cleavage site",
+        "Applying arithmetic ($3 \times 4 + 2 \times 4$) to a biochemical context"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Given a single-stranded DNA sequence of 15 bases, the student must predict the base composition chart of the resulting double-stranded DNA.",
+      "key_insight": "The student must calculate the complementary strand (A->T, C->G) and then *sum* the bases of both strands to get the total population for the pie chart. The 'Aha!' moment is realizing that the final pie chart will show A and T as equal, regardless of the initial single strand's bias (e.g., if S1 is 100% A, S2 is 100% T, the final dsDNA is 50% A, 50% T).",
+      "discrimination_factors": [
+        "Synthesizing two strands into one dataset",
+        "Understanding that dsDNA equilibrium normalizes base counts (A=T)",
+        "Visual interpretation of charts"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Analyzing the carbon content of the sugar-phosphate backbone of a single-stranded DNA containing 5 triplets.",
+      "key_insight": "This tests deep structural knowledge. The student must link 'triplet' (3 bases) to '3 nucleotides' to '3 sugars' to '3 phosphates' to '$3 \times 5$ carbons'. The 'trick' is often statement 3 in Q9: 'sugar-to-phosphate bonds is equal to nucleotides'. In a backbone, $N$ nucleotides have $N$ phosphates and $N-1$ phosphodiester bonds. Recognizing the 'end-effects' (subtract 1) is the key insight.",
+      "discrimination_factors": [
+        "Molecular stoichiometry (C, H, O counting)",
+        "Polymer chemistry (degree of polymerization vs bond count)",
+        "Triplet -> Nucleotide -> Backbone translation"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

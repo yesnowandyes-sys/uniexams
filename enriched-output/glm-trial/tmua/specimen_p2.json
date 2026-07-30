@@ -1,0 +1,40 @@
+{
+  "source_file": "TMUA-early-specimen-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": "specimen",
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-specimen-P2-Q1",
+      "year": "specimen",
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1. The radius of the circle x² + y² − 8x + 12y + 15 = 0 is",
+      "has_diagram": false,
+      "options": {
+        "A": "√(5/2)",
+        "B": "√(11/2)",
+        "C": "√(41/2)",
+        "D": "√37",
+        "E": "√67 ( )"
+      },
+      "correct_answer": "B",
+      "raw_text": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n       A\n       B\n       C\n       D       √37\n       E       √67\n                                        (       )",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-08T17:04:00",
+        "markdown": "",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1097,
+        "output_tokens": 8192
+      }
+    }
+  ],
+  "enriched_at": "2026-07-08T17:04:00",
+  "enrichment_model": "glm-5.2"
+}

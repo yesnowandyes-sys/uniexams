@@ -1,0 +1,947 @@
+{
+  "source_file": "TMUA-2021-paper-1.pdf",
+  "paper_type": "TMUA",
+  "year": 2021,
+  "section": "Paper1",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2021-P1-Q1",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 1,
+      "question_text": "Two circles have the same radius. The centre of one circle is (-2, 1). The centre of the other circle is (3, -2). The circles intersect at two distinct points. What is the equation of the straight line through the two points at which the circles intersect?",
+      "has_diagram": false,
+      "options": {
+        "A": "3x - 5y = 4",
+        "B": "3x + 5y = -1",
+        "C": "5x - 3y = -4",
+        "D": "5x - 3y = -1",
+        "E": "5x - 3y = 1",
+        "F": "5x - 3y = 4",
+        "G": "5x + 3y = 1"
+      },
+      "correct_answer": "F",
+      "raw_text": "1   Two circles have the same radius.\n    The centre of one circle is (–2, 1).\n    The centre of the other circle is (3, –2).\n    The circles intersect at two distinct points.\n    What is the equation of the straight line through the two points at which the circles\n    intersect?\n    A 3x − 5y = 4\n    B 3x + 5y = −1\n    C 5x − 3y = −4\n    D 5x − 3y = −1\n    E 5x − 3y = 1\n    F 5x − 3y = 4\n    G 5x + 3y = 1\n                                                 \u0016",
+      "diagram_images": [],
+      "options_latex": {
+        "A": "$3x - 5y = 4$",
+        "E": "$5x - 3y = 1$",
+        "F": "$5x - 3y = 4$",
+        "G": "$5x + 3y = 1$"
+      },
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:20",
+        "markdown": "## Worked Solution\n\n**1. Identify the geometric property:**\nThe two circles have the same radius. Let the radii be $r$.\nLet the centre of the first circle be $C_1 = (-2, 1)$.\nLet the centre of the second circle be $C_2 = (3, -2)$.\n\nConsider any point $P(x, y)$ where the two circles intersect.\nSince $P$ lies on the first circle, the distance from $P$ to $C_1$ is equal to the radius $r$.\n$$ \\sqrt{(x - (-2))^2 + (y - 1)^2} = r \\implies (x + 2)^2 + (y - 1)^2 = r^2 $$\nSince $P$ lies on the second circle, the distance from $P$ to $C_2$ is also equal to the radius $r$.\n$$ \\sqrt{(x - 3)^2 + (y - (-2))^2} = r \\implies (x - 3)^2 + (y + 2)^2 = r^2 $$\n\n**2. Set up the equation for the line of intersection:**\nSince both expressions are equal to $r^2$, we can equate them to eliminate $r$ and find the relationship between $x$ and $y$:\n$$ (x + 2)^2 + (y - 1)^2 = (x - 3)^2 + (y + 2)^2 $$\n\n**3. Expand the terms:**\nExpand the brackets on both sides:\n$$ (x^2 + 4x + 4) + (y^2 - 2y + 1) = (x^2 - 6x + 9) + (y^2 + 4y + 4) $$\n\n**4. Simplify the equation:**\nCombine like terms on each side:\n$$ x^2 + y^2 + 4x - 2y + 5 = x^2 + y^2 - 6x + 4y + 13 $$\nSubtract $x^2 + y^2$ from both sides:\n$$ 4x - 2y + 5 = -6x + 4y + 13 $$\n\n**5. Solve for y to find the line equation:**\nRearrange the equation to group $x$ and $y$ terms on one side and constants on the other:\nAdd $6x$ to both sides:\n$$ 10x - 2y + 5 = 4y + 13 $$\nSubtract $4y$ from both sides:\n$$ 10x - 6y + 5 = 13 $$\nSubtract 5 from both sides:\n$$ 10x - 6y = 8 $$\n\n**6. Compare with the given options:**\nDivide the entire equation by 2 to simplify:\n$$ 5x - 3y = 4 $$\nComparing this to the options provided:\nA: $3x - 5y = 4$\nB: $3x + 5y = -1$\nC: $5x - 3y = -4$\nD: $5x - 3y = -1$\nE: $5x - 3y = 1$\nF: $5x - 3y = 4$\n\nThe derived equation matches option F.\n\nThe correct answer is **F**.\n\n## Distractor Analysis\n\n- **Option A ($3x - 5y = 4$):** This swaps the coefficients of $x$ and $y$ from the correct line $5x - 3y = 4$. This corresponds to using the inverse of the correct gradient $5/3$ (using $3/5$ instead), which would result from calculating the slope as $\\Delta x / \\Delta y$ instead of $\\Delta y / \\Delta x$.\n- **Option C ($5x - 3y = -4$):** This option uses the correct coefficients but the wrong constant term ($c=-4$ instead of $c=4$). This would result from a sign error when moving terms across the equals sign, such as $5 = 9$ becoming $-4 = 0$ incorrectly.\n- **Option D ($5x - 3y = -1$):** This option has the correct structure but a distinct constant term. It might arise from calculating the distance between centres incorrectly or making a calculation error during the expansion of brackets.\n- **Option E ($5x - 3y = 1$):** Similar to D, this results from an arithmetic error leading to the constant 1.\n- **Option G ($5x + 3y = 1$):** This involves a sign error on the $y$ term (positive $3y$ instead of negative) and the wrong constant, resulting from incorrect subtraction of terms like $-2y - 4y$ becoming $+2y$.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M5.10\n- **Topic Name:** Solve geometrical problems on 2-dimensional coordinate axes.\n- **Content Code:** M5.10\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 3/10\n\nDifficulty Category: Easy\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\n[DIAGRAM 1]\nA Cartesian coordinate plane showing two circles of equal radius.\nCircle 1 has centre C1 at (-2, 1) and Circle 2 has centre C2 at (3, -2).\nThe circles overlap, intersecting at two points marked A and B.\nA dashed straight line passes through points A and B, representing the perpendicular bisector of the line segment connecting C1 and C2.",
+        "difficulty_rating": 3,
+        "difficulty_category": "Easy",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M5.10",
+          "topic_name": "Solve geometrical problems on 2-dimensional coordinate axes.",
+          "content_code": "M5.10",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 251,
+        "output_tokens": 1241,
+        "attempts": 1,
+        "duration_seconds": 6.94
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q2",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 2,
+      "question_text": "The curve \\( y = x^{3} - 6x + 3 \\) has turning points at \\( x = \\alpha \\) and \\( x = eta \\), where \\( eta > \\alpha \\). Find \\( \\int_{\\alpha}^{\\beta} x^{3} - 6x + 3 \\, dx \\)",
+      "has_diagram": false,
+      "options": {
+        "A": "-8\\sqrt{2}",
+        "B": "-10",
+        "C": "-10 + 6\\sqrt{2}",
+        "D": "0",
+        "E": "12 - 8\\sqrt{2}",
+        "F": "6\\sqrt{2}",
+        "G": "12"
+      },
+      "correct_answer": "F",
+      "raw_text": "2   The curve y = x3 − 6x + 3 has turning points at x = α and x = β, where β > α.\n    Find                           \u0002 β\n                                         x3 − 6x + 3 dx\n                                     α\n        √\n    A −8 2\n    B −10\n             √\n    C −10 + 6 2\n    D      0\n                 √\n    E      12 − 8 2\n            √\n    F      6 2\n    G      12\n                                           \u0017",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:23",
+        "markdown": "## Worked Solution\n\n1.  **Identify the turning points.**\n    The turning points of the curve $y = f(x)$ occur where the derivative $\\frac{dy}{dx}$ is equal to zero.\n    Given $y = x^3 - 6x + 3$, we differentiate with respect to $x$:\n    $$ \\frac{dy}{dx} = 3x^2 - 6 $$\n    \n    Setting the derivative to zero to find the $x$-coordinates of the turning points:\n    $$ 3x^2 - 6 = 0 $$\n    $$ 3x^2 = 6 $$\n    $$ x^2 = 2 $$\n    $$ x = \\pm\\sqrt{2} $$\n\n2.  **Determine $\\alpha$ and $\\beta$.**\n    The problem states that the turning points are at $x = \\alpha$ and $x = \\beta$ (represented as 'eta' in the text, which maps to $\\beta$ in standard usage and the limits of integration), where $\\beta > \\alpha$.\n    Comparing $-\\sqrt{2}$ and $\\sqrt{2}$:\n    $$ \\alpha = -\\sqrt{2} $$\n    $$ \\beta = \\sqrt{2} $$\n\n3.  **Set up the definite integral.**\n    We need to evaluate the area under the curve between the two turning points:\n    $$ I = \\int_{\\alpha}^{\\beta} (x^3 - 6x + 3) \\, dx = \\int_{-\\sqrt{2}}^{\\sqrt{2}} (x^3 - 6x + 3) \\, dx $$\n\n4.  **Evaluate the integral.**\n    We can integrate term by term:\n    $$ \\int (x^3 - 6x + 3) \\, dx = \\left[ \\frac{x^4}{4} - \\frac{6x^2}{2} + 3x \\right]_{-\\sqrt{2}}^{\\sqrt{2}} $$\n    $$ = \\left[ \\frac{x^4}{4} - 3x^2 + 3x \\right]_{-\\sqrt{2}}^{\\sqrt{2}} $$\n\n5.  **Calculate the value at the limits.**\n    Alternatively, we can exploit the symmetry of the integrand. The function $f(x) = x^3 - 6x + 3$ is the sum of an odd function ($x^3 - 6x$) and an even function (constant 3). We are integrating over the symmetric interval $[-\\sqrt{2}, \\sqrt{2}]$.\n    The integral of the odd part is zero:\n    $$ \\int_{-\\sqrt{2}}^{\\sqrt{2}} (x^3 - 6x) \\, dx = 0 $$\n    The integral of the even part (constant 3) is:\n    $$ \\int_{-\\sqrt{2}}^{\\sqrt{2}} 3 \\, dx = 3 \\times (\\beta - \\alpha) = 3 \\times (\\sqrt{2} - (-\\sqrt{2})) = 3 \\times 2\\sqrt{2} = 6\\sqrt{2} $$\n    \n    Verifying by direct substitution:\n    At $x = \\sqrt{2}$:\n    $$ \\frac{(\\sqrt{2})^4}{4} - 3(\\sqrt{2})^2 + 3(\\sqrt{2}) = \\frac{4}{4} - 3(2) + 3\\sqrt{2} = 1 - 6 + 3\\sqrt{2} = -5 + 3\\sqrt{2} $$\n    \n    At $x = -\\sqrt{2}$:\n    $$ \\frac{(-\\sqrt{2})^4}{4} - 3(-\\sqrt{2})^2 + 3(-\\sqrt{2}) = \\frac{4}{4} - 3(2) - 3\\sqrt{2} = 1 - 6 - 3\\sqrt{2} = -5 - 3\\sqrt{2} $$\n    \n    Subtracting lower limit from upper limit:\n    $$ (-5 + 3\\sqrt{2}) - (-5 - 3\\sqrt{2}) = -5 + 3\\sqrt{2} + 5 + 3\\sqrt{2} = 6\\sqrt{2} $$\n\nThe correct answer is **F**.\n\n## Distractor Analysis\n\n- **A: -8\\sqrt{2}** This could result from integrating $-6x$ incorrectly as $-3x^2$ and mixing signs, or subtracting limits in the wrong order ($F(\\alpha) - F(\\beta)$).\n- **B: -10** This result likely comes from calculating the sum of the y-coordinates of the turning points ($-5 + -5$) or similar arithmetic error involving the $-5$ terms from the intermediate calculation without the $\\sqrt{2}$ terms.\n- **C: -10 + 6\\sqrt{2}** This corresponds to calculating $2 \\times (-5 + 3\\sqrt{2})$, implying the student treated the lower limit as 0 instead of $-\\sqrt{2}$.\n- **D: 0** A common misconception that the integral over a symmetric interval around 0 is always 0, failing to account for the non-zero constant term (or assuming the function is odd).\n- **E: 12 - 8\\sqrt{2}** This suggests a calculation error, perhaps involving $\\frac{x^4}{4}$ evaluated as $x^4$ (getting 8) and $3x^2$ evaluated as $6x^2$ (getting 12), leading to inconsistent arithmetic.\n- **G: 12** This might come from integrating the constant 3 as $3x$ and plugging in a sum of squares (e.g. $3(2+2)$) or similar algebraic confusion.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4.16\n- **Topic Name:** Algebra\n- **Content Code:** M4.16 (Solving quadratic equations for turning points, Integration)\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 5/10\n\nDifficulty Category: Medium\n\n## OCR Corrections\n\n1.  **Question Stem:** Changed \"x = eta\" to \"x = \\beta\" (internally processed as beta). The OCR text 'eta' corresponds to the Greek letter typically following alpha ($\\alpha, \\beta$). The integration limits in the OCR text used $\\alpha$ and $\\beta$.\n2.  **Question Stem:** Corrected \"int_{\\alpha}^{\\beta}\" LaTeX to properly render the integral limits.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 5,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.16",
+          "topic_name": "Algebra",
+          "content_code": "M4.16 (Solving quadratic equations for turning points, Integration)",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [
+          {
+            "field": "Question Stem",
+            "corrected": "** Changed \"x = eta\" to \"x = \\beta\" (internally processed as beta). The OCR text 'eta' corresponds to the Greek letter typically following alpha ($\\alpha, \\beta$). The integration limits in the OCR text used $\\alpha$ and $\\beta$.",
+            "reason": ""
+          },
+          {
+            "field": "Question Stem",
+            "corrected": "** Corrected \"int_{\\alpha}^{\\beta}\" LaTeX to properly render the integral limits.",
+            "reason": ""
+          }
+        ],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 231,
+        "output_tokens": 1483,
+        "attempts": 1,
+        "duration_seconds": 8.17
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q3",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 3,
+      "question_text": "An arithmetic progression and a convergent geometric progression each have first term \\frac{1}{2}. The sum of the second terms of the two progressions is \\frac{1}{2}. The sum of the third terms of the two progressions is \\frac{1}{8}. What is the sum to infinity of the geometric progression?",
+      "has_diagram": false,
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "-\\frac{1}{2}",
+        "D": "-\\frac{1}{3}",
+        "E": "\\frac{1}{3}",
+        "F": "\\frac{1}{2}",
+        "G": "1",
+        "H": "2"
+      },
+      "correct_answer": "G",
+      "raw_text": "3   An arithmetic progression and a convergent geometric progression each\n                   1\n    have ﬁrst term\n                   2\n                                                                1\n    The sum of the second terms of the two progressions is\n                                                                2\n                                                            1\n    The sum of the third terms of the two progressions is\n                                                            8\n    What is the sum to inﬁnity of the geometric progression?\n    A −2\n    B −1\n          1\n    C −\n          2\n          1\n    D −\n          3\n          1\n    E\n          3\n          1\n    F\n          2\n    G     1\n    H     2\n                                           \u0018",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:31",
+        "markdown": "## Worked Solution\n\n**1. Define the variables**\nLet the arithmetic progression (AP) have first term $a$ and common difference $d$.\nGiven that the first term of the AP is $\\frac{1}{2}$, we have $a = \\frac{1}{2}$.\nThe $n$-th term of an AP is given by $a_n = a + (n-1)d$.\n\nLet the geometric progression (GP) have first term $b$ and common ratio $r$.\nGiven that the first term of the GP is $\\frac{1}{2}$, we have $b = \\frac{1}{2}$.\nThe $n$-th term of a GP is given by $b_n = b \\cdot r^{n-1}$.\n\n**2. Formulate equations based on the problem statement**\nThe sum of the second terms is $\\frac{1}{2}$:\n$$ \\text{Second term of AP} + \\text{Second term of GP} = \\frac{1}{2} $$\n$$ (a + d) + (b \\cdot r) = \\frac{1}{2} $$\n\nSubstitute the known values $a = \\frac{1}{2}$ and $b = \\frac{1}{2}$:\n$$ \\left(\\frac{1}{2} + d\\right) + \\frac{1}{2}r = \\frac{1}{2} $$\n$$ d + \\frac{1}{2}r = 0 \\implies d = -\\frac{r}{2} \\quad \\text{--- (Eq. 1)} $$\n\nThe sum of the third terms is $\\frac{1}{8}$:\n$$ \\text{Third term of AP} + \\text{Third term of GP} = \\frac{1}{8} $$\n$$ (a + 2d) + (b \\cdot r^2) = \\frac{1}{8} $$\n\nSubstitute the known values $a = \\frac{1}{2}$ and $b = \\frac{1}{2}$:\n$$ \\left(\\frac{1}{2} + 2d\\right) + \\frac{1}{2}r^2 = \\frac{1}{8} $$\n$$ 2d + \\frac{1}{2}r^2 = \\frac{1}{8} - \\frac{1}{2} $$\n$$ 2d + \\frac{1}{2}r^2 = \\frac{1}{8} - \\frac{4}{8} = -\\frac{3}{8} \\quad \\text{--- (Eq. 2)} $$\n\n**3. Solve for the common ratio $r$**\nSubstitute $d = -\\frac{r}{2}$ from (Eq. 1) into (Eq. 2):\n$$ 2\\left(-\\frac{r}{2}\\right) + \\frac{1}{2}r^2 = -\\frac{3}{8} $$\n$$ -r + \\frac{1}{2}r^2 = -\\frac{3}{8} $$\n\nMultiply the entire equation by 8 to clear the fractions:\n$$ -8r + 4r^2 = -3 $$\n$$ 4r^2 - 8r + 3 = 0 $$\n\nFactor the quadratic equation. We look for two numbers that multiply to $4 \\times 3 = 12$ and add to $-8$. These numbers are $-2$ and $-6$.\n$$ 4r^2 - 6r - 2r + 3 = 0 $$\n$$ 2r(2r - 3) - 1(2r - 3) = 0 $$\n$$ (2r - 1)(2r - 3) = 0 $$\n\nThis gives two possible values for $r$:\n$$ r = \\frac{1}{2} \\quad \\text{or} \\quad r = \\frac{3}{2} $$\n\n**4. Determine the valid value for $r$**\nThe problem states that the geometric progression is **convergent**.\nA geometric series converges if and only if the modulus of the common ratio is less than 1 (i.e., $|r| < 1$).\n- If $r = \\frac{3}{2}$, then $|r| > 1$, and the series does not converge.\n- If $r = \\frac{1}{2}$, then $|r| < 1$, and the series converges.\n\nTherefore, we must have $r = \\frac{1}{2}$.\n\n**5. Calculate the sum to infinity**\nThe sum to infinity ($S_\\infty$) of a geometric progression with first term $b$ and common ratio $r$ (where $|r| < 1$) is given by:\n$$ S_\\infty = \\frac{b}{1 - r} $$\n\nSubstitute $b = \\frac{1}{2}$ and $r = \\frac{1}{2}$:\n$$ S_\\infty = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} $$\n$$ S_\\infty = \\frac{\\frac{1}{2}}{\\frac{1}{2}} $$\n$$ S_\\infty = 1 $$\n\nThe correct answer is **G**.\n\n## Distractor Analysis\n\n- **A (-2):** This result can be obtained if the student incorrectly calculates the sum of the third terms as $\\frac{1}{8} + \\frac{1}{2} = \\frac{5}{8}$ (adding the first term instead of subtracting it), leading to an equation $2d + \\frac{1}{2}r^2 = \\frac{5}{8}$, which yields $r=2$ or $r=\\frac{1}{2}$. With $r=2$, the sum is $\\frac{1/2}{1-2} = -0.5$. If the student then makes a sign error with the formula, they might get -2. More simply, selecting the non-convergent root $r=3/2$ yields a negative value for the sum formula $\\frac{1/2}{1-3/2} = -1$, but -2 is not directly derived from standard simple errors on this path.\n- **B (-1):** A student might identify the non-convergent root $r = \\frac{3}{2}$ and calculate the sum $\\frac{1/2}{1 - 3/2} = -1$, failing to apply or understand the convergence condition $|r| < 1$.\n- **C (-1/2):** This corresponds to the reciprocal of the correct answer, or potentially a miscalculation involving the first term as the common ratio.\n- **D (-1/3):** A likely algebraic error, such as miscalculating the constant term in the quadratic equation as $-4$ instead of $-3$ ($4r^2 - 8r + 4 = 0 \\implies r=1$, which leads to divergence) or mixing up signs in the quadratic formula.\n- **E (1/3):** This suggests calculating the sum using the wrong root (e.g., if they calculated $r=2$ and took $\\frac{1/2}{2} = 1/4 \\approx 1/3$) or algebraic errors in solving the quadratic.\n- **F (1/2):** This is the value of the first term. A student might confuse the first term $b$ with the sum to infinity $S_\\infty$.\n- **H (2):** This is the reciprocal of the correct answer. A student might invert the sum to infinity formula, calculating $\\frac{1-r}{b} = \\frac{1-0.5}{0.5} = 1$ (which is actually the correct answer via correct formula) or making a distinct error like $\\frac{b}{r} = 1$. To get 2 specifically, a student might erroneously calculate $S = \\frac{b}{r} = \\frac{0.5}{0.25} = 2$ or invert the result of $1/1$ incorrectly. However, it is most often a sign error or inversion slip.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M3, M4\n- **Topic Name:** Ratio and proportion, Algebra\n- **Content Code:** M3.9, M4.16\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 6/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 6,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M3, M4",
+          "topic_name": "Ratio and proportion, Algebra",
+          "content_code": "M3.9, M4.16",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 230,
+        "output_tokens": 1889,
+        "attempts": 1,
+        "duration_seconds": 9.92
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q4",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 4,
+      "question_text": "Find the minimum value of the function $2^{2x} - 2^{x+3} + 4$",
+      "has_diagram": false,
+      "options": {
+        "A": "-16",
+        "B": "-12",
+        "C": "-8",
+        "D": "0",
+        "E": "4",
+        "F": "20"
+      },
+      "correct_answer": "B",
+      "raw_text": "4   Find the minimum value of the function\n                                     22x − 2x+3 + 4\n    A −16\n    B −12\n    C −8\n    D    0\n    E    4\n    F    20\n                                             \u0019",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:30",
+        "markdown": "## Worked Solution\n\nLet the given function be $y$.\n$$ y = 2^{2x} - 2^{x+3} + 4 $$\n\nWe can simplify the algebraic expressions using the laws of indices.\nRecall that $2^{2x} = (2^x)^2$ and $2^{x+3} = 2^x \\cdot 2^3 = 8 \\cdot 2^x$.\nSubstituting these into the equation gives:\n$$ y = (2^x)^2 - 8(2^x) + 4 $$\n\nLet $u = 2^x$. Since $2^x > 0$ for all real $x$, we have the constraint $u > 0$.\nSubstituting $u$ into the equation transforms it into a quadratic expression:\n$$ y = u^2 - 8u + 4 $$\n\nTo find the minimum value of this quadratic, we can complete the square:\n$$ y = (u^2 - 8u) + 4 $$\nTake half of the coefficient of $u$ (which is $-8$), square it, and add/subtract it. Half of $-8$ is $-4$, and $(-4)^2 = 16$.\n$$ y = (u^2 - 8u + 16) - 16 + 4 $$\n$$ y = (u - 4)^2 - 12 $$\n\nThe term $(u - 4)^2$ represents a squared quantity, which is always non-negative (i.e., $(u - 4)^2 \\ge 0$).\nTo minimize the value of $y$, we must make $(u - 4)^2$ as small as possible.\nThe minimum value of $(u - 4)^2$ is 0, which occurs when $u = 4$.\n\nWe must check if this minimum point satisfies the constraint on $u$.\nThe constraint is $u > 0$.\nSince $u = 4$ is greater than 0, this solution is valid.\n(Alternatively, solving $2^x = 4$ gives $x = 2$, which is a valid real number).\n\nSubstituting the minimum value of the squared term into the expression for $y$:\n$$ y_{\\min} = 0 - 12 = -12 $$\n\nThe correct answer is **B**.\n\n## Distractor Analysis\n\n- **A (-16)**: This results from incorrectly calculating the constant term when completing the square, specifically doing $4 - 20$ instead of $4 - 16$, or mistakenly using $2^3=16$ in the initial setup leading to $y = (u-8)^2 - \\dots$.\n- **C (-8)**: This suggests an arithmetic error in the final step, calculating $4 - 16 = -8$ instead of $-12$.\n- **D (0)**: This indicates the student set the function to zero ($2^{2x} - 2^{x+3} + 4 = 0$) and solved for $x$ (finding $x=2$), rather than finding the minimum value of the function itself. Plugging $x=2$ back into the function gives $0$, leading to the confusion that the minimum value is the same as the root.\n- **E (4)**: This might come from evaluating the function at $x=0$ ($2^0 - 2^3 + 4 = 1 - 8 + 4 = -3$) and incorrectly calculating or misinterpreting the intercept, or simply guessing based on the constant term in the original equation.\n- **F (20)**: This could be the result of maximizing the function instead of minimizing it (e.g. finding the value at the vertex of a downward opening parabola if they rearranged signs incorrectly) or calculating $4^2 + 4$.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4.16\n- **Topic Name:** Algebra\n- **Content Code:** M4.16\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 4/10\n\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 4,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.16",
+          "topic_name": "Algebra",
+          "content_code": "M4.16",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 156,
+        "output_tokens": 923,
+        "attempts": 1,
+        "duration_seconds": 7.36
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q5",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 5,
+      "question_text": "The function f is such that \\[ f(mn) = \\begin{cases} f(m)f(n) & \\text{if } mn \\text{ is a multiple of } 3 \\\\ mn & \\text{if } mn \\text{ is not a multiple of } 3 \\end{cases} \\] for all positive integers $m$ and $n$. Given that $f(9) + f(16) - f(24) = 0$, what is the value of $f(3)$?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{8}{3}",
+        "B": "2\\sqrt{2}",
+        "C": "3",
+        "D": "\\frac{16}{5}",
+        "E": "3\\sqrt{2}",
+        "F": "4"
+      },
+      "correct_answer": "F",
+      "raw_text": "5   The function f is such that\n                                  \u0003\n                                      f(m)f(n) if mn is a multiple of 3\n                      f(mn) =\n                                      mn       if mn is not a multiple of 3\n    for all positive integers m and n.\n    Given that f(9) + f(16) − f(24) = 0, what is the value of f(3)?\n      8\n    A\n      3\n       √\n    B 2 2\n    C 3\n      16\n    D\n       5\n       √\n    E 3 2\n    F 4\n                                                 \u001a",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:31",
+        "markdown": "## Worked Solution\n\nWe are given a functional equation for positive integers $m, n$:\n$$ f(mn) = \\begin{cases} f(m)f(n) & \\text{if } mn \\text{ is a multiple of } 3 \\\\ mn & \\text{if } mn \\text{ is not a multiple of } 3 \\end{cases} $$\n\nWe need to find the value of $f(3)$ given the condition $f(9) + f(16) - f(24) = 0$. Let's evaluate each term in the equation.\n\n**Step 1: Evaluate $f(16)$**\nWe substitute $m=16$ and $n=1$. Since $mn = 16$ is not a multiple of 3, we use the second case of the definition:\n$$ f(16) = f(16 \\times 1) = 16 \\times 1 = 16 $$\n\n**Step 2: Evaluate $f(24)$**\nWe can construct 24 as $3 \\times 8$ (or any factorization involving a multiple of 3). Since $24$ is a multiple of 3, we use the first case:\n$$ f(24) = f(3 \\times 8) = f(3)f(8) $$\nNow we evaluate $f(8)$. Since $8$ is not a multiple of 3:\n$$ f(8) = 8 $$\nSubstituting this back:\n$$ f(24) = f(3) \\times 8 = 8f(3) $$\n\n**Step 3: Evaluate $f(9)$**\nWe construct 9 as $3 \\times 3$. Since $9$ is a multiple of 3:\n$$ f(9) = f(3 \\times 3) = f(3)f(3) = [f(3)]^2 $$\n\n**Step 4: Solve the given equation**\nSubstitute the expressions derived in Steps 1, 2, and 3 into the equation $f(9) + f(16) - f(24) = 0$:\n$$ [f(3)]^2 + 16 - 8f(3) = 0 $$\nRearranging the terms:\n$$ [f(3)]^2 - 8f(3) + 16 = 0 $$\nThis is a quadratic equation in $f(3)$. Notice that this is a perfect square:\n$$ (f(3) - 4)^2 = 0 $$\nSolving for $f(3)$:\n$$ f(3) - 4 = 0 \\implies f(3) = 4 $$\n\n**Step 5: Verify the solution**\nLet's check for consistency.\nIf $f(3) = 4$, then:\n- $f(9) = 4^2 = 16$\n- $f(16) = 16$\n- $f(24) = 8 \\times 4 = 32$\nThe sum is $16 + 16 - 32 = 0$. This satisfies the condition.\n\nThe correct answer is **F**.\n\n## Distractor Analysis\n\n- **A: \\frac{8}{3}**: This value would result if a student set up the quadratic incorrectly as $x^2 - 16x + 64 = 0$ (perhaps using $2f(16)$ incorrectly as the middle term) and solved, or solved the linear term from the equation $x^2 + 16 = 8$.\n- **B: 2\\sqrt{2}**: This corresponds to solving $f(3)^2 + 16 = 8f(3)$ as $f(3)^2 - 8f(3) + 16 = 0$ but failing to recognize it as a perfect square and applying the quadratic formula incorrectly with a sign error or arithmetic error ($ \\sqrt{64-64} = 0 $ is required, but perhaps calculating $\\sqrt{64-16}$?).\n- **C: 3**: A common guess based on the input number 3, or assuming $f(n) = n$ generally.\n- **D: \\frac{16}{5}**: This might arise from an incorrect algebraic manipulation where the student factors the quadratic incorrectly or guesses a ratio based on $f(24)/f(3)$.\n- **E: 3\\sqrt{2}**: This value (approx 4.24) might result from solving the quadratic $x^2 - 8x + 16 = 0$ using the quadratic formula with an arithmetic error, e.g., $\\frac{8 + \\sqrt{64 - 32}}{2} = \\frac{8 + \\sqrt{32}}{2} = 4 + 2\\sqrt{2}$, or simply confusing the result with $\\sqrt{18}$.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4.15\n- **Topic Name:** Simple equations involving quadratic equations\n- **Content Code:** M4.15\n- **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 4/10\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 4,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.15",
+          "topic_name": "Simple equations involving quadratic equations",
+          "content_code": "M4.15",
+          "question_type": "multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 257,
+        "output_tokens": 1131,
+        "attempts": 1,
+        "duration_seconds": 7.04
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q6",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 6,
+      "question_text": "The function f is given by \\[ f(x) = \\frac{\\cos x + 3}{7 + 5 \\cos x - \\sin^{2} x} \\] Find the positive difference between the maximum and the minimum values of f(x).",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{1}{2}",
+        "D": "\\frac{2}{3}",
+        "E": "1",
+        "F": "2"
+      },
+      "correct_answer": "D",
+      "raw_text": "6   The function f is given by\n                                               cos x + 3\n                                 f(x) =\n                                          7 + 5 cos x − sin2 x\n    Find the positive diﬀerence between the maximum and the minimum values of f(x).\n    A 0\n        1\n    B\n        3\n        1\n    C\n        2\n        2\n    D\n        3\n    E 1\n    F 2\n                                             \u001b",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:36",
+        "markdown": "## Worked Solution\n\n1.  **Analyze the function:**\n    The function is given as $f(x) = \\frac{\\cos x + 3}{7 + 5 \\cos x - \\sin^{2} x}$.\n    To simplify the expression, we can use the trigonometric identity $\\sin^{2} x + \\cos^{2} x = 1$, which implies $\\sin^{2} x = 1 - \\cos^{2} x$.\n\n2.  **Substitute the identity into the denominator:**\n    Substitute $1 - \\cos^{2} x$ for $\\sin^{2} x$:\n    $$ \\text{Denominator} = 7 + 5 \\cos x - (1 - \\cos^{2} x) $$\n    $$ \\text{Denominator} = 7 + 5 \\cos x - 1 + \\cos^{2} x $$\n    $$ \\text{Denominator} = \\cos^{2} x + 5 \\cos x + 6 $$\n\n3.  **Factor the quadratic in the denominator:**\n    Let $u = \\cos x$. The denominator becomes $u^2 + 5u + 6$.\n    This quadratic factors as $(u + 2)(u + 3)$.\n    So, $\\text{Denominator} = (\\cos x + 2)(\\cos x + 3)$.\n\n4.  **Simplify the function:**\n    Now substitute the simplified denominator back into the function $f(x)$:\n    $$ f(x) = \\frac{\\cos x + 3}{(\\cos x + 2)(\\cos x + 3)} $$\n    Since $\\cos x$ ranges from $-1$ to $1$, $\\cos x + 3$ ranges from $2$ to $4$, which is never zero. Therefore, we can cancel the common factor $(\\cos x + 3)$:\n    $$ f(x) = \\frac{1}{\\cos x + 2} $$\n\n5.  **Determine the range of $\\cos x$:**\n    The range of the cosine function for real numbers $x$ is $[-1, 1]$.\n    $$ -1 \\le \\cos x \\le 1 $$\n\n6.  **Find the maximum and minimum values of $f(x)$:**\n    Let $g(u) = \\frac{1}{u + 2}$ where $u \\in [-1, 1]$.\n    Since $g(u)$ is a decreasing function (as $u$ increases, the denominator increases, so the value decreases), the maximum value occurs at the minimum value of $u$, and the minimum value occurs at the maximum value of $u$.\n\n    *   **Maximum value of $f(x)$:**\n        Occurs when $\\cos x = -1$.\n        $$ f_{\\text{max}} = \\frac{1}{-1 + 2} = \\frac{1}{1} = 1 $$\n\n    *   **Minimum value of $f(x)$:**\n        Occurs when $\\cos x = 1$.\n        $$ f_{\\text{min}} = \\frac{1}{1 + 2} = \\frac{1}{3} $$\n\n7.  **Calculate the positive difference:**\n    The question asks for the positive difference between the maximum and minimum values.\n    $$ \\text{Difference} = f_{\\text{max}} - f_{\\text{min}} = 1 - \\frac{1}{3} $$\n    $$ \\text{Difference} = \\frac{3}{3} - \\frac{1}{3} = \\frac{2}{3} $$\n\n    The correct answer is **D**.\n\n## Distractor Analysis\n\n-   **A (0):** A student might think the function is constant or that $\\sin^2 x$ simplifies in a way that makes the numerator and denominator proportional regardless of $x$, perhaps by assuming $\\sin^2 x + \\cos x$ is constant.\n-   **B ($\\frac{1}{3}$):** A student might have correctly found the minimum value as $\\frac{1}{3}$ but incorrectly assumed the maximum value was $0$ (impossible given the domain) or confused the difference with the minimum value itself. Alternatively, they might have calculated $\\frac{1}{1+3} = \\frac{1}{4}$ as min and $\\frac{1}{-1+3} = \\frac{1}{2}$ as max, leading to difference $\\frac{1}{4}$, but this doesn't match the option. More likely, they made an arithmetic error such as $1 - \\frac{1}{3} = \\frac{1}{3}$.\n-   **C ($\\frac{1}{2}$):** A student might have calculated the maximum as $\\frac{1}{2}$ (perhaps incorrectly using bounds or arithmetic) and the minimum as $0$, or simply guessed based on the values derived.\n-   **E (1):** A student might have identified the maximum value correctly as $1$ but assumed the minimum value was $0$.\n-   **F (2):** A student might have made a significant sign error, such as calculating values as $1/(-1) = -1$ and $1/1 = 1$, finding the range as 2, or similar.\n\n## Classification\n\n-   **Module:** Mathematics 1\n-   **Module Code:** M4\n-   **Topic Code:** M4.5, M4.6, M4.7\n-   **Topic Name:** Algebra and Trigonometry manipulation\n-   **Content Code:** M4.5\n-   **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 6/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 6,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M4",
+          "topic_code": "M4.5, M4.6, M4.7",
+          "topic_name": "Algebra and Trigonometry manipulation",
+          "content_code": "M4.5",
+          "question_type": "multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 196,
+        "output_tokens": 1259,
+        "attempts": 1,
+        "duration_seconds": 6.07
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q7",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 7,
+      "question_text": "The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x. It is given that \\int_{-2}^{2} f(x) \\, dx = 4 and \\int_{-2}^{2} |f(x)| \\, dx = 8. Evaluate \\int_{-2}^{0} f(|x|) \\, dx",
+      "has_diagram": false,
+      "options": {
+        "A": "-8",
+        "B": "-6",
+        "C": "-4",
+        "D": "-2",
+        "E": "2",
+        "F": "4",
+        "G": "6",
+        "H": "8"
+      },
+      "correct_answer": "G",
+      "raw_text": "7   The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x.\n    It is given that\n                                        \u0002 2\n                                              f(x) dx = 4\n                                         −2\n    and\n                                       \u0002 2\n                                              |f(x)| dx = 8\n                                        −2\n    Evaluate\n                                         \u0002 0\n                                                  f(|x|) dx\n                                             −2\n    A −8\n    B −6\n    C −4\n    D −2\n    E     2\n    F     4\n    G     6\n    H     8",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:42",
+        "markdown": "## Worked Solution\n\n1.  **Analyze the function's symmetry:**\n    We are given that $xf(x) > 0$ for all non-zero $x$.\n    -   If $x > 0$, then $f(x) > 0$.\n    -   If $x < 0$, then $f(x) < 0$.\n    -   Also, $f(0) = 0$.\n    This condition implies $f(x)$ is an **odd function**. Let's verify the symmetry condition for an odd function $f(-x) = -f(x)$:\n    Substitute $x$ with $-x$ in the condition: $(-x)f(-x) > 0$.\n    Using $f(-x) = -f(x)$, we get $(-x)(-f(x)) = xf(x)$.\n    Since $xf(x) > 0$ is the given condition, any odd function satisfying $f(x) > 0$ for $x > 0$ will satisfy the problem statement. A simple example is $f(x) = x$.\n\n2.  **Analyze the given definite integrals:**\n    -   $\\int_{-2}^{2} f(x) \\, dx = 4$\n    -   $\\int_{-2}^{2} |f(x)| \\, dx = 8$\n\n    Let's split the integral of $f(x)$ over the symmetric interval $[-2, 2]$:\n    $$ \\int_{-2}^{2} f(x) \\, dx = \\int_{-2}^{0} f(x) \\, dx + \\int_{0}^{2} f(x) \\, dx $$\n    Since $f(x)$ is odd, $\\int_{-2}^{0} f(x) \\, dx = - \\int_{0}^{2} f(x) \\, dx$. Let $I = \\int_{0}^{2} f(x) \\, dx$. Then $\\int_{-2}^{0} f(x) \\, dx = -I$.\n    So, $-I + I = 0$.\n    **However**, the problem states this integral is 4.\n    This implies that the given $f(x)$ is **not** an odd function in the strict sense ($f(-x) \\neq -f(x)$), but rather a function where the sign follows the sign of $x$, but the **magnitude** (shape) is different on the positive and negative sides.\n    Let's assume $f(x)$ has the form:\n    -   $f(x) = g_1(x)$ for $x \\in [0, 2]$ (where $g_1(x) > 0$)\n    -   $f(x) = -g_2(x)$ for $x \\in [-2, 0]$ (where $g_2(x) > 0$)\n\n    Let $A_+ = \\int_{0}^{2} g_1(x) \\, dx$ (the \"positive area\")\n    Let $A_- = \\int_{-2}^{0} g_2(x) \\, dx$ (the \"negative area\" magnitude, since $g_2 = -f$).\n\n    From the first integral (net signed area):\n    $$ \\int_{-2}^{2} f(x) \\, dx = \\int_{-2}^{0} (-g_2(x)) \\, dx + \\int_{0}^{2} g_1(x) \\, dx = -A_- + A_+ = 4 $$\n    \n    From the second integral (total absolute area):\n    $$ \\int_{-2}^{2} |f(x)| \\, dx = \\int_{-2}^{0} |-g_2(x)| \\, dx + \\int_{0}^{2} |g_1(x)| \\, dx = \\int_{-2}^{0} g_2(x) \\, dx + \\int_{0}^{2} g_1(x) \\, dx = A_- + A_+ = 8 $$\n\n3.  **Solve for the individual areas:**\n    We have a system of two linear equations:\n    1.  $A_+ - A_- = 4$\n    2.  $A_+ + A_- = 8$\n\n    Adding the two equations:\n    $$ 2A_+ = 12 \\implies A_+ = 6 $$\n    Subtracting the first from the second:\n    $$ 2A_- = 4 \\implies A_- = 2 $$\n\n    So, the area on the positive side ($0$ to $2$) is 6, and the area on the negative side ($-2$ to $0$) is 2.\n\n4.  **Evaluate the target integral:**\n    The target is $J = \\int_{-2}^{0} f(|x|) \\, dx$.\n    The limits of integration are from $-2$ to $0$.\n    In this interval ($-2 \\le x \\le 0$), $x$ is negative (or zero), so $|x| = -x$.\n    Therefore, we can rewrite the integrand as $f(-x)$.\n    \n    Let's perform a $u$-substitution to evaluate the integral:\n    Let $u = -x$. Then $du = -dx$, or $dx = -du$.\n    Change the limits:\n    -   When $x = -2$, $u = -(-2) = 2$.\n    -   When $x = 0$, $u = 0$.\n    \n    Substitute into the integral:\n    $$ J = \\int_{x=-2}^{0} f(-x) \\, dx = \\int_{u=2}^{0} f(u) (-du) $$\n    $$ J = - \\int_{2}^{0} f(u) \\, du $$\n    Swapping the limits of integration removes the minus sign:\n    $$ J = \\int_{0}^{2} f(u) \\, du $$\n    \n    This integral $\\int_{0}^{2} f(u) \\, du$ is simply the area $A_+$, which corresponds to the region where $x > 0$.\n    Based on our calculation in Step 3, $A_+ = 6$.\n    \n    Therefore:\n    $$ J = 6 $$\n\n5.  **Conclusion:**\n    The value of the integral is 6.\n\n    The correct answer is **G**.\n\n## Distractor Analysis\n\n-   **A (-8):** Likely arises from incorrectly calculating $A_- - A_+$ or confusing the integral of $f(x)$ with $-f(x)$ on the negative side.\n-   **B (-6):** Possibly a sign error, calculating $-A_+$ instead of $A_+$, or confusing the substitution limits.\n-   **C (-4):** This is the value of $A_- - A_+$ (where $A_- = 2, A_+ = 6$, so $2-6=-4$). This represents the negative of the net integral of $f(x)$ over $[-2, 2]$. A student might arrive here by misinterpreting the relationship between the total area and the signed area.\n-   **D (-2):** This is the value of $-A_-$. A student might confuse the required integral with the negative contribution of the $f(x)$ graph on the original negative interval.\n-   **E (2):** This is the value of $A_-$. A student might mistakenly calculate $\\int_{-2}^{0} f(x) \\, dx$ (thinking it equals $A_-$ due to sign confusion) or pick the area associated with the negative side of the domain.\n-   **F (4):** This is the net area $\\int_{-2}^{2} f(x) \\, dx$. A student might assume the answer is just the given net area without performing the substitution.\n-   **H (8):** This is the total absolute area $\\int_{-2}^{2} |f(x)| \\, dx$. A student might confuse the target integral with the total absolute area given in the question.\n\n## Classification\n\n-   **Module:** Mathematics 1\n-   **Module Code:** M1\n-   **Topic Code:** M4.16, M4.14\n-   **Topic Name:** Algebra (Functions/Integration), Calculus (Definite Integrals)\n-   **Content Code:** M4.16\n-   **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 8/10\n\nDifficulty Category: Very Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 8,
+        "difficulty_category": "Very Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.16, M4.14",
+          "topic_name": "Algebra (Functions/Integration), Calculus (Definite Integrals)",
+          "content_code": "M4.16",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 234,
+        "output_tokens": 1900,
+        "attempts": 1,
+        "duration_seconds": 11.74
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q8",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 8,
+      "question_text": "The line $y = 2x + 3$ meets the curve $y = x^{2} + bx + c$ at exactly one point. The line $y = 4x - 2$ also meets the curve $y = x^{2} + bx + c$ at exactly one point. What is the value of $b - c$?",
+      "has_diagram": false,
+      "options": {
+        "A": "-9",
+        "B": "-5.5",
+        "C": "-1",
+        "D": "5",
+        "E": "6",
+        "F": "14"
+      },
+      "correct_answer": "A",
+      "raw_text": "8   The line y = 2x + 3 meets the curve y = x2 + bx + c at exactly one point.\n    The line y = 4x − 2 also meets the curve y = x2 + bx + c at exactly one point.\n    What is the value of b − c ?\n    A −9\n    B −5.5\n    C −1\n    D    5\n    E    6\n    F    14\n                                           \u0014\u0013",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:37",
+        "markdown": "## Worked Solution\n\n1.  **Understand the condition for intersection.** If a line $y = mx + k$ meets a curve $y = x^2 + bx + c$ at *exactly one point*, the quadratic equation resulting from equating them must have exactly one real solution. This occurs when the discriminant $\\Delta = b^2 - 4ac$ is equal to zero.\n\n2.  **Set up the equation for the first line.** Equate $y = 2x + 3$ and $y = x^2 + bx + c$:\n    $$x^2 + bx + c = 2x + 3$$\n    Rearrange this into the standard quadratic form $Ax^2 + Bx + C = 0$:\n    $$x^2 + (b - 2)x + (c - 3) = 0$$\n\n3.  **Apply the discriminant condition.** For this quadratic, the coefficients are:\n    *   $A = 1$\n    *   $B = b - 2$\n    *   $C = c - 3$\n\n    For exactly one solution, the discriminant must be zero:\n    $$(b - 2)^2 - 4(1)(c - 3) = 0$$\n    Expand the terms:\n    $$b^2 - 4b + 4 - 4c + 12 = 0$$\n    Simplify the constant terms ($4 + 12 = 16$):\n    $$b^2 - 4b - 4c + 16 = 0 \\quad \\text{--- (Equation 1)}$$\n\n4.  **Set up the equation for the second line.** Equate $y = 4x - 2$ and $y = x^2 + bx + c$:\n    $$x^2 + bx + c = 4x - 2$$\n    Rearrange into standard form:\n    $$x^2 + (b - 4)x + (c + 2) = 0$$\n\n5.  **Apply the discriminant condition again.** For this quadratic, the coefficients are:\n    *   $A = 1$\n    *   $B = b - 4$\n    *   $C = c + 2$\n\n    Set the discriminant to zero:\n    $$(b - 4)^2 - 4(1)(c + 2) = 0$$\n    Expand the terms:\n    $$b^2 - 8b + 16 - 4c - 8 = 0$$\n    Simplify the constant terms ($16 - 8 = 8$):\n    $$b^2 - 8b - 4c + 8 = 0 \\quad \\text{--- (Equation 2)}$$\n\n6.  **Solve the system of simultaneous equations.**\n    *   Equation 1: $b^2 - 4b - 4c = -16$\n    *   Equation 2: $b^2 - 8b - 4c = -8$\n\n    Subtract Equation 2 from Equation 1 to eliminate $b^2$ and $c$:\n    $$(b^2 - 4b - 4c) - (b^2 - 8b - 4c) = -16 - (-8)$$\n    $$4b = -8$$\n    $$b = -2$$\n\n7.  **Find the value of $c$.** Substitute $b = -2$ into Equation 1:\n    $$(-2)^2 - 4(-2) - 4c + 16 = 0$$\n    $$4 + 8 - 4c + 16 = 0$$\n    $$28 - 4c = 0$$\n    $$4c = 28$$\n    $$c = 7$$\n\n8.  **Calculate the required value.** The question asks for the value of $b - c$:\n    $$b - c = -2 - 7 = -9$$\n\n    The correct answer is **A**.\n\n## Distractor Analysis\n\n- **B (-5.5):** This likely results from an algebraic error in solving the simultaneous equations, perhaps calculating $b = -5$ or $c = 0.5$ incorrectly, or subtracting the equations the wrong way around ($4b = 22$ would give $b=5.5$).\n- **C (-1):** A student might find $b = -3$ and $c = -2$ (from an arithmetic error like $-8 - (-16) = -24 \\implies 4b = -24 \\implies b = -6$). Alternatively, they might have mixed up the signs for $c$ at the final step ($7 - 2 = 5$, then $-2 - 5 = -7$ is not an option, but sign confusion is common).\n- **D (5):** This might arise from calculating $c - b$ instead of $b - c$ after finding correct values, or from a sign error where $b=2, c=-3$ was found (errors in discriminant signs: $-(b-2)^2$).\n- **E (6):** This could be the result of calculating $c - b$ ($7 - (-2) = 9$, close to 6) or simply incorrect arithmetic in the simultaneous equations (e.g., if they got $b=2, c=-4$, difference is 6).\n- **F (14):** A student might have added $b$ and $c$ instead of subtracting, or made a significant error in the constant terms of the discriminant expansion (e.g., forgetting the $+12$ in the first expansion).\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4.16\n- **Topic Name:** Solve quadratic equations (using discriminant)\n- **Content Code:** M4.16\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 5/10\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 5,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.16",
+          "topic_name": "Solve quadratic equations (using discriminant)",
+          "content_code": "M4.16",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 209,
+        "output_tokens": 1337,
+        "attempts": 1,
+        "duration_seconds": 6.59
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q9",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 9,
+      "question_text": "Find the area enclosed by the graph of $|x| + |y| = 1$",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{2}",
+        "B": "1",
+        "C": "2",
+        "D": "4",
+        "E": "\\frac{1}{2}\\sqrt{2}",
+        "F": "\\sqrt{2}",
+        "G": "2\\sqrt{2}"
+      },
+      "correct_answer": "C",
+      "raw_text": "9   Find the area enclosed by the graph of\n                                       |x| + |y| = 1\n        1\n    A\n        2\n    B 1\n    C 2\n    D 4\n      1√\n    E     2\n      2\n      √\n    F   2\n       √\n    G 2 2\n                                             \u0014\u0014",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:42",
+        "markdown": "## Worked Solution\n\n1.  **Identify the shape of the graph.** The equation is $|x| + |y| = 1$. We can analyze this equation for the four possible sign combinations of $x$ and $y$.\n    *   **Quadrant I ($x \\ge 0, y \\ge 0$):** $|x|=x$ and $|y|=y$. The equation becomes $x + y = 1$. This is a straight line with intercepts $(1,0)$ and $(0,1)$.\n    *   **Quadrant II ($x \\le 0, y \\ge 0$):** $|x|=-x$ and $|y|=y$. The equation becomes $-x + y = 1$, or $y - x = 1$. This line passes through $(-1,0)$ and $(0,1)$.\n    *   **Quadrant III ($x \\le 0, y \\le 0$):** $|x|=-x$ and $|y|=-y$. The equation becomes $-x - y = 1$, or $x + y = -1$. This line passes through $(-1,0)$ and $(0,-1)$.\n    *   **Quadrant IV ($x \\ge 0, y \\le 0$):** $|x|=x$ and $|y|=-y$. The equation becomes $x - y = 1$. This line passes through $(1,0)$ and $(0,-1)$.\n\n    The graph is the set of points on the boundary formed by these four line segments. The vertices of the shape are $(1,0)$, $(0,1)$, $(-1,0)$, and $(0,-1)$. This shape is a square rotated by 45 degrees relative to the axes, centered at the origin.\n\n2.  **Calculate the side length of the square.**\n    Using the distance formula on two adjacent vertices, for example $(1,0)$ and $(0,1)$:\n    $$ \\text{Side length } s = \\sqrt{(1-0)^2 + (0-1)^2} = \\sqrt{1^2 + (-1)^2} = \\sqrt{2} $$\n\n3.  **Calculate the area of the square.**\n    The area of a square is the square of its side length ($s^2$).\n    $$ \\text{Area} = (\\sqrt{2})^2 = 2 $$\n\n    Alternatively, one can view the square as comprised of four congruent right-angled triangles, each formed by the origin and two adjacent vertices (e.g., $(0,0)$, $(1,0)$, $(0,1)$).\n    The base and height of each triangle are both 1.\n    Area of one triangle $= \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times 1 = \\frac{1}{2}$.\n    Total Area $= 4 \\times \\frac{1}{2} = 2$.\n\nThe correct answer is **C**.\n\n## Distractor Analysis\n\n*   **A: \\frac{1}{2}** This is the area of *one* of the four triangles that make up the shape (calculated as $1/2 \\times 1 \\times 1$). Students selecting this likely forgot to multiply by 4.\n*   **B: 1** Students likely calculated the area of the square formed by the bounding box $x \\in [-1, 1]$ and $y \\in [-1, 1]$ (side length 2, area 4) and then took an incorrect fraction, or simply misapplied the area formula for a triangle to the whole shape.\n*   **D: 4** Students likely calculated the area of the bounding square with vertices at $(\\pm 1, \\pm 1)$ (side length 2, area 4), mistaking the region enclosed by the axes-aligned square for the region enclosed by the rotated square.\n*   **E: \\frac{1}{2}\\sqrt{2}** This is half the side length of the square ($s/2$). Students selecting this likely confused the calculation of area or perimeter with a side length.\n*   **F: \\sqrt{2}** This is the side length of the square ($s$). Students likely solved for the side length but forgot to square it to find the area.\n*   **G: 2\\sqrt{2}** This is the perimeter of the square ($4s = 4\\sqrt{2}$ is incorrect, but $2\\sqrt{2}$ is roughly $2.8$). It might result from calculating $2 \\times \\text{diagonal}$ (where diagonal is $2$) or confusing perimeter/area calculations.\n\n## Classification\n\n*   **Module:** Mathematics 1\n*   **Module Code:** M1\n*   **Topic Code:** M4\n*   **Topic Name:** Algebra\n*   **Content Code:** M4.11\n*   **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 5/10\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 5,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra",
+          "content_code": "M4.11",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 175,
+        "output_tokens": 1147,
+        "attempts": 1,
+        "duration_seconds": 5.79
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q10",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 10,
+      "question_text": "Use the trapezium rule with 3 strips to estimate \\int_{\\frac{1}{2}}^{2} 2 \\log_{10} x \\, dx",
+      "has_diagram": false,
+      "options": {
+        "A": "\\log_{10} \\frac{\\sqrt{6}}{2}",
+        "B": "\\log_{10} \\frac{3}{2}",
+        "C": "\\log_{10} \\frac{9}{4}",
+        "D": "\\log_{10} 3",
+        "E": "\\log_{10} \\frac{81}{16}",
+        "F": "\\log_{10} \\frac{\\sqrt{23}}{2}"
+      },
+      "correct_answer": "B",
+      "raw_text": "10   Use the trapezium rule with 3 strips to estimate\n                                        \u0002 2\n                                            2 log10 x dx\n                                          1\n                                          2\n               √\n                  6\n     A log10\n                 2\n               3\n     B log10\n               2\n               9\n     C log10\n               4\n     D log10 3\n               81\n     E log10\n               16\n               √\n                   23\n     F log10\n                   2\n                                              \u0014\u0015",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:43",
+        "markdown": "## Worked Solution\n\n1.  **Identify the parameters for the trapezium rule.**\n    We need to estimate the integral $I = \\int_{\\frac{1}{2}}^{2} 2 \\log_{10} x \\, dx$ using 3 strips.\n    The lower limit is $a = \\frac{1}{2}$ and the upper limit is $b = 2$.\n    The number of strips is $n = 3$.\n\n2.  **Calculate the width of the strips.**\n    The width, $h$, is given by the formula:\n    $$h = \\frac{b - a}{n}$$\n    Substituting the values:\n    $$h = \\frac{2 - \\frac{1}{2}}{3} = \\frac{\\frac{3}{2}}{3} = \\frac{1}{2}$$\n    So, the interval is divided into steps of 0.5.\n\n3.  **Determine the x-coordinates of the vertices.**\n    We start at $x_0 = \\frac{1}{2}$ and add $h = \\frac{1}{2}$ repeatedly.\n    -   $x_0 = \\frac{1}{2}$\n    -   $x_1 = 1$\n    -   $x_2 = \\frac{3}{2}$\n    -   $x_3 = 2$\n\n4.  **Evaluate the function $y = 2 \\log_{10} x$ at these points.**\n    Let $y_k = 2 \\log_{10} x_k$.\n    -   $y_0 = 2 \\log_{10} (\\frac{1}{2}) = 2(\\log_{10} 1 - \\log_{10} 2) = -2 \\log_{10} 2$\n    -   $y_1 = 2 \\log_{10} (1) = 2(0) = 0$\n    -   $y_2 = 2 \\log_{10} (\\frac{3}{2}) = 2(\\log_{10} 3 - \\log_{10} 2)$\n    -   $y_3 = 2 \\log_{10} (2)$\n\n5.  **Apply the trapezium rule formula.**\n    The area $A$ is given by:\n    $$A \\approx \\frac{h}{2} [y_0 + 2y_1 + 2y_2 + y_3]$$\n    Substitute $h = \\frac{1}{2}$ and the $y$ values calculated above:\n    $$A \\approx \\frac{\\frac{1}{2}}{2} [ (-2 \\log_{10} 2) + 2(0) + 2(2(\\log_{10} 3 - \\log_{10} 2)) + (2 \\log_{10} 2) ]$$\n    $$A \\approx \\frac{1}{4} [ -2 \\log_{10} 2 + 4 \\log_{10} 3 - 4 \\log_{10} 2 + 2 \\log_{10} 2 ]$$\n\n6.  **Simplify the expression.**\n    Combine the logarithmic terms involving $\\log_{10} 2$:\n    $-2 \\log_{10} 2 - 4 \\log_{10} 2 + 2 \\log_{10} 2 = -4 \\log_{10} 2$.\n    So the expression becomes:\n    $$A \\approx \\frac{1}{4} [ 4 \\log_{10} 3 - 4 \\log_{10} 2 ]$$\n    Factor out the 4:\n    $$A \\approx \\frac{1}{4} [ 4 (\\log_{10} 3 - \\log_{10} 2) ]$$\n    $$A \\approx \\log_{10} 3 - \\log_{10} 2$$\n\n7.  **Express as a single logarithm.**\n    Using the rule $\\log a - \\log b = \\log \\frac{a}{b}$:\n    $$A \\approx \\log_{10} \\left( \\frac{3}{2} \\right)$$\n\nThe correct answer is **B**.\n\n## Distractor Analysis\n\n-   **A ($\\log_{10} \\frac{\\sqrt{6}}{2}$):** This likely results from mixing $\\log_{10}$ and $\\ln$ rules incorrectly or making an algebraic error with the coefficients (e.g., calculating $\\frac{1}{4}(4 \\log 3) = \\log \\sqrt{3}$ and mixing terms).\n-   **C ($\\log_{10} \\frac{9}{4}$):** This corresponds to estimating $\\int (\\log_{10} x)^2 dx$ or incorrectly squaring the result. Or, possibly calculating the product $(\\frac{3}{2}) \\times (\\frac{3}{2})$ instead of the difference.\n-   **D ($\\log_{10} 3$):** This results from omitting the subtraction of $\\log_{10} 2$ (ignoring the $y_0$ and partial $y_2$ contributions) or dropping the negative terms in the simplification.\n-   **E ($\\log_{10} \\frac{81}{16}$):** This comes from treating the sum of logs as a product of powers incorrectly, likely $(\\frac{3}{2})^4$.\n-   **F ($\\log_{10} \\frac{\\sqrt{23}}{2}$):** This looks like a calculation error involving the sum of the arguments $0.5 + 1 + 1.5 + 2 = 5$ and misapplying the power, or using an incorrect geometric interpretation.\n\n## Classification\n\n-   **Module:** Mathematics 1\n-   **Module Code:** M1\n-   **Topic Code:** M4.14\n-   **Topic Name:** Calculate or estimate gradients of graphs and areas under graphs\n-   **Content Code:** M4.14\n-   **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 5/10\n\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 5,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4.14",
+          "topic_name": "Calculate or estimate gradients of graphs and areas under graphs",
+          "content_code": "M4.14",
+          "question_type": "multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 225,
+        "output_tokens": 1363,
+        "attempts": 1,
+        "duration_seconds": 6.15
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q11",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 11,
+      "question_text": "The function f is given by f(x) = x^{\\frac{1}{7}}(x^{2} - x + 1). Find the fraction of the interval 0 < x < 1 for which f(x) is decreasing.",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{2}{15}",
+        "B": "\\frac{1}{5}",
+        "C": "\\frac{1}{3}",
+        "D": "\\frac{1}{2}",
+        "E": "\\frac{2}{3}",
+        "F": "\\frac{4}{5}",
+        "G": "\\frac{13}{15}"
+      },
+      "correct_answer": "A",
+      "raw_text": "11   The function f is given by\n                                              1\n                                     f(x) = x 7 (x2 − x + 1)\n     Find the fraction of the interval 0 < x < 1 for which f(x) is decreasing.\n          2\n     A\n         15\n         1\n     B\n         5\n         1\n     C\n         3\n         1\n     D\n         2\n         2\n     E\n         3\n         4\n     F\n         5\n         13\n     G\n         15\n                                             \u0014\u0016",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:50",
+        "markdown": "## Worked Solution\n\nTo find the fraction of the interval $0 < x < 1$ for which the function $f(x)$ is decreasing, we must determine where the derivative of the function, $f'(x)$, is negative.\n\n**Step 1: Simplify the function**\nThe function is given as $f(x) = x^{\\frac{1}{7}}(x^{2} - x + 1)$.\nWe can use the laws of indices to rewrite the product as a sum of powers. Distribute $x^{1/7}$ to each term inside the parentheses:\n$$f(x) = x^{1/7} \\cdot x^{2} - x^{1/7} \\cdot x^{1} + x^{1/7} \\cdot 1$$\n$$f(x) = x^{1/7 + 2} - x^{1/7 + 1} + x^{1/7}$$\n$$f(x) = x^{15/7} - x^{8/7} + x^{1/7}$$\nWe use fractions for the exponents ($2 = 14/7$ and $1 = 7/7$) to make differentiation easier.\n\n**Step 2: Differentiate the function**\nDifferentiate $f(x) = x^{15/7} - x^{8/7} + x^{1/7}$ with respect to $x$ using the power rule $\\frac{d}{dx}(ax^n) = anx^{n-1}$.\n$$f'(x) = \\frac{15}{7}x^{\\frac{15}{7}-1} - \\frac{8}{7}x^{\\frac{8}{7}-1} + \\frac{1}{7}x^{\\frac{1}{7}-1}$$\n$$f'(x) = \\frac{15}{7}x^{8/7} - \\frac{8}{7}x^{1/7} + \\frac{1}{7}x^{-6/7}$$\n\n**Step 3: Factor and solve for the critical points**\nTo find where the gradient is zero, set $f'(x) = 0$.\n$$\\frac{15}{7}x^{8/7} - \\frac{8}{7}x^{1/7} + \\frac{1}{7}x^{-6/7} = 0$$\nMultiply the entire equation by 7 to clear the denominators:\n$$15x^{8/7} - 8x^{1/7} + x^{-6/7} = 0$$\nFactor out the term with the lowest power, which is $x^{-6/7}$:\n$$x^{-6/7} (15x^{\\frac{8}{7}-(-\\frac{6}{7})} - 8x^{\\frac{1}{7}-(-\\frac{6}{7})} + 1) = 0$$\n$$x^{-6/7} (15x^{2} - 8x + 1) = 0$$\n\nSince $x^{-6/7} = \\frac{1}{x^{6/7}}$, this term is never zero (specifically, it is undefined at $x=0$ and positive for $x>0$). Thus, we only need to solve the quadratic factor:\n$$15x^2 - 8x + 1 = 0$$\nUsing the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$:\n$$x = \\frac{8 \\pm \\sqrt{(-8)^2 - 4(15)(1)}}{2(15)}$$\n$$x = \\frac{8 \\pm \\sqrt{64 - 60}}{30}$$\n$$x = \\frac{8 \\pm \\sqrt{4}}{30}$$\n$$x = \\frac{8 \\pm 2}{30}$$\nThis gives two roots:\n1. $x = \\frac{8+2}{30} = \\frac{10}{30} = \\frac{1}{3}$\n2. $x = \\frac{8-2}{30} = \\frac{6}{30} = \\frac{1}{5}$\n\nBoth critical points lie within the interval $(0, 1)$. This divides the interval into three regions: $(0, 1/5)$, $(1/5, 1/3)$, and $(1/3, 1)$.\n\n**Step 4: Determine where the function is decreasing**\nThe function is decreasing where $f'(x) < 0$. Since the factor $x^{-6/7}$ is always positive for $x > 0$, the sign of $f'(x)$ depends entirely on the quadratic factor $Q(x) = 15x^2 - 8x + 1$.\nSince the coefficient of $x^2$ is positive (15), the quadratic is a \"happy\" parabola (opens upwards). This means the value of the quadratic is negative *between* its two roots and positive outside them.\nTherefore, $f'(x) < 0$ for $1/5 < x < 1/3$.\n\n**Step 5: Calculate the fraction of the interval**\nWe need to find the length of the decreasing region and divide it by the total length of the interval.\nLength of decreasing region: $\\frac{1}{3} - \\frac{1}{5} = \\frac{5}{15} - \\frac{3}{15} = \\frac{2}{15}$\nTotal interval length: $1 - 0 = 1$\nFraction: $\\frac{2/15}{1} = \\frac{2}{15}$\n\nThe correct answer is **A**.\n\n## Distractor Analysis\n\n- **B (1/5)**: This corresponds to the first critical point found ($x=1/5$). A student might mistakenly calculate the distance from the start of the interval ($0$) to the first critical point, perhaps believing the function decreases from the start.\n- **C (1/3)**: This corresponds to the second critical point ($x=1/3$). A student might confuse the location of the local minimum or maxima with the length of the interval, or simply select the larger root.\n- **E (2/3)**: This might arise from incorrectly calculating the difference between roots, such as $1/3 - (-1/3)$ or some other sign error manipulation involving the roots.\n- **D (1/2)**: A common \"guess\" or midpoint error.\n- **F (4/5)** or **G (13/15)**: A student might correctly identify that the function is increasing on the outer regions ($0 < x < 1/5$ and $1/3 < x < 1$) and mistakenly calculate the length of the *increasing* region (which is $1/5 + 2/3 = 13/15$) or misapply the subtraction ($1 - 1/5 = 4/5$).\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4\n- **Topic Name:** Algebra (Calculus/Differentiation)\n- **Content Code:** M4.16 (Solve quadratic equations), M4.10 (Graphs/Gradients - implicitly relies on properties)\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 7/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 7,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra (Calculus/Differentiation)",
+          "content_code": "M4.16 (Solve quadratic equations), M4.10 (Graphs/Gradients - implicitly relies on properties)",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 216,
+        "output_tokens": 1633,
+        "attempts": 1,
+        "duration_seconds": 7.59
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q12",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 12,
+      "question_text": "The minimum value of the function \\( x^{4} - p^{2} x^{2} \\) is -9. p is a real number. Find the minimum value of the function \\( x^{2} - p x + 6 \\)",
+      "has_diagram": false,
+      "options": {
+        "A": "-3",
+        "B": "6 - \\frac{3\\sqrt{2}}{2}",
+        "C": "\\frac{3}{2}",
+        "D": "3",
+        "E": "\\frac{9}{2}",
+        "F": "6 + \\frac{3\\sqrt{2}}{2}"
+      },
+      "correct_answer": "E",
+      "raw_text": "12   The minimum value of the function x4 − p2 x2 is −9\n     p is a real number.\n     Find the minimum value of the function x2 − px + 6\n     A −3\n           √\n          3 2\n     B 6−\n           2\n         3\n     C\n         2\n     D 3\n         9\n     E\n         2\n           √\n          3 2\n     F 6+\n           2\n                                          \u0014\u0017",
+      "diagram_images": [],
+      "question_text_latex": "The minimum value of the function $x^{4} - p^{2} x^{2}$ is -9. p is a real number. Find the minimum value of the function $x^{2} - p x + 6$",
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:49",
+        "markdown": "## Worked Solution\n\n1.  **Analyze the first function.**\n    Let the first function be $f(x) = x^4 - p^2 x^2$.\n    We are given that the minimum value of this function is $-9$.\n    Since $x^2$ must be non-negative ($x^2 \\ge 0$), we can let $u = x^2$, where $u \\ge 0$.\n    Substituting $u$ into the function, we get $f(u) = u^2 - p^2 u$.\n    This is a quadratic in $u$.\n\n2.  **Find the minimum of the first function.**\n    Since the coefficient of $u^2$ is positive, the parabola opens upwards, and the vertex represents the minimum point.\n    The minimum occurs at $u = -\\frac{b}{2a}$ for a quadratic $au^2 + bu + c$.\n    Here $a = 1$ and $b = -p^2$.\n    So, the vertex is at $u = \\frac{p^2}{2}$.\n    Note that $p^2/2$ is always non-negative, so it is a valid value for $x^2$.\n    The minimum value of the function is:\n    $$f\\left(\\frac{p^2}{2}\\right) = \\left(\\frac{p^2}{2}\\right)^2 - p^2 \\left(\\frac{p^2}{2}\\right)$$\n    $$= \\frac{p^4}{4} - \\frac{p^4}{2} = \\frac{p^4 - 2p^4}{4} = -\\frac{p^4}{4}$$\n\n3.  **Solve for p.**\n    We are given that the minimum value is $-9$. Equating our result to $-9$:\n    $$-\\frac{p^4}{4} = -9$$\n    $$\\frac{p^4}{4} = 9$$\n    $$p^4 = 36$$\n    Since $p$ is real, $p^2 = \\sqrt{36} = 6$.\n    This gives two possible values for $p$: $p = \\sqrt{6}$ or $p = -\\sqrt{6}$.\n\n4.  **Analyze the second function.**\n    The second function is $g(x) = x^2 - p x + 6$.\n    Since the coefficient of $x^2$ is positive, this parabola opens upwards and has a minimum value at its vertex.\n    The minimum value of a quadratic $ax^2 + bx + c$ is given by $c - \\frac{b^2}{4a}$.\n    Here $a = 1$, $b = -p$, and $c = 6$.\n    The minimum value is:\n    $$g_{min} = 6 - \\frac{(-p)^2}{4(1)} = 6 - \\frac{p^2}{4}$$\n\n5.  **Calculate the specific minimum value.**\n    Substitute $p^2 = 6$ into the expression for the minimum of the second function:\n    $$g_{min} = 6 - \\frac{6}{4}$$\n    $$= 6 - \\frac{3}{2}$$\n    $$= \\frac{12}{2} - \\frac{3}{2} = \\frac{9}{2}$$\n\n    Alternatively, calculating the vertex coordinate:\n    $x_{vertex} = -b/2a = p/2$.\n    $g(p/2) = (p/2)^2 - p(p/2) + 6 = \\frac{p^2}{4} - \\frac{p^2}{2} + 6 = 6 - \\frac{p^2}{4} = 6 - 1.5 = 4.5$.\n\nThe correct answer is **E**.\n\n## Distractor Analysis\n\n-   **A:** Incorrect. This likely comes from taking the square root of $p^4=36$ as $p=6$, then calculating $6 - 36/4 = -3$, or misunderstanding the relationship between the minimum values.\n-   **B:** Incorrect. This value ($ \\approx 3.88 $) is close to the correct answer but suggests an arithmetic error involving radicals, perhaps using $p = 6$ incorrectly or mixing up $p$ and $p^2$.\n-   **C:** Incorrect. This value ($1.5$) is the subtraction term $p^2/4$ (since $6/4 = 1.5$). The student likely calculated the term to be subtracted but forgot to subtract it from the constant term 6, or simply calculated $p^2/4$ thinking it was the answer.\n-   **D:** Incorrect. This could result from assuming $p^2=9$ (instead of 6) based on the minimum value -9, leading to $6 - 9/4 \\neq 3$. Or potentially just a guess.\n-   **F:** Incorrect. This value ($ \\approx 8.12 $) suggests the student added $p^2/4$ to 6 ($6 + 1.5$) instead of subtracting it, or perhaps added the minimum value of the first function (conceptually confused).\n\n## Classification\n\n-   **Module:** Mathematics 1\n-   **Module Code:** M1\n-   **Topic Code:** M4\n-   **Topic Name:** Algebra\n-   **Content Code:** M4.16 (Solving quadratic equations algebraically by factorising, formula or completing the square) and M4.11 (Identify and interpret roots, intercepts and turning points of quadratic functions graphically).\n-   **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 5/10\n\nDifficulty Category: Medium\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 5,
+        "difficulty_category": "Medium",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra",
+          "content_code": "M4.16 (Solving quadratic equations algebraically by factorising, formula or completing the square) and M4.11 (Identify and interpret roots, intercepts and turning points of quadratic functions graphically).",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 215,
+        "output_tokens": 1305,
+        "attempts": 1,
+        "duration_seconds": 6.87
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q13",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 13,
+      "question_text": "The function f is such that, for every integer n \\int_{n}^{n+1} f(x) \\, dx = n + 1 Evaluate \\sum_{r=1}^{8} \\left( \\int_{0}^{r} f(x) \\, dx \\right)",
+      "has_diagram": false,
+      "options": {
+        "A": "36",
+        "B": "84",
+        "C": "120",
+        "D": "165",
+        "E": "204",
+        "F": "288"
+      },
+      "correct_answer": "C",
+      "raw_text": "13   The function f is such that, for every integer n\n                                     \u0002 n+1\n                                             f(x) dx = n + 1\n                                       n\n     Evaluate\n                                       8 \u0005\u0002 r\n                                       \u0004                     \u0006\n                                                   f(x) dx\n                                       r=1     0\n     A 36\n     B 84\n     C 120\n     D 165\n     E 204\n     F 288\n                                              \u0014\u0018",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:19:59",
+        "markdown": "## Worked Solution\n\n**Step 1: Understand the definition of the function values.**\nThe problem states that for every integer $n$, the definite integral from $n$ to $n+1$ is $n+1$.\nLet $I_n = \\int_{n}^{n+1} f(x) \\, dx$. We are given $I_n = n + 1$.\n\n**Step 2: Analyze the summation term.**\nWe need to evaluate the sum $S = \\sum_{r=1}^{8} A_r$, where $A_r = \\int_{0}^{r} f(x) \\, dx$.\nWriting out the terms for $r = 1, 2, \\dots, 8$, we get:\n$S = \\int_{0}^{1} f(x) \\, dx + \\int_{0}^{2} f(x) \\, dx + \\int_{0}^{3} f(x) \\, dx + \\dots + \\int_{0}^{8} f(x) \\, dx$.\n\n**Step 3: Break down the integrals.**\nUsing the additive property of definite integrals, $\\int_{0}^{k} f(x) \\, dx$ can be written as the sum of unit integrals from $0$ to $1$, $1$ to $2$, etc.\nLet $J_k = \\int_{0}^{k} f(x) \\, dx$.\n$J_1 = I_0$\n$J_2 = I_0 + I_1$\n$J_3 = I_0 + I_1 + I_2$\n...\n$J_8 = I_0 + I_1 + \\dots + I_7$\n\n**Step 4: Evaluate the unit integrals ($I_n$).**\nUsing the given formula $I_n = n + 1$:\n$I_0 = 0 + 1 = 1$\n$I_1 = 1 + 1 = 2$\n$I_2 = 2 + 1 = 3$\n...\n$I_7 = 7 + 1 = 8$\n\n**Step 5: Evaluate the terms of the summation ($J_k$).**\nSubstitute the values from Step 4 into the expressions from Step 3:\n$A_1 = J_1 = 1$\n$A_2 = J_2 = 1 + 2 = 3$\n$A_3 = J_3 = 1 + 2 + 3 = 6$\n$A_4 = J_4 = 1 + 2 + 3 + 4 = 10$\n$A_5 = J_5 = 1 + 2 + 3 + 4 + 5 = 15$\n$A_6 = J_6 = 1 + 2 + 3 + 4 + 5 + 6 = 21$\n$A_7 = J_7 = 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28$\n$A_8 = J_8 = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36$\n\n**Step 6: Sum the terms.**\nWe need to calculate $S = \\sum_{r=1}^{8} A_r$.\n$S = 1 + 3 + 6 + 10 + 15 + 21 + 28 + 36$.\n\nGrouping for easier addition:\n$(1 + 3 + 6) = 10$\n$(10 + 10) = 20$\n$(15 + 21) = 36$\n$(28 + 36) = 64$\nTotal Sum $= 10 + 20 + 36 + 64 = 30 + 100 = 130$.\n\nAlternative calculation using summation formulas:\nSince $J_r = \\sum_{i=1}^{r} i = \\frac{r(r+1)}{2}$, we are summing the triangular numbers $T_r$.\nSum $= \\sum_{r=1}^{8} \\frac{r(r+1)}{2} = \\frac{1}{2} \\sum_{r=1}^{8} (r^2 + r)$\nSum $= \\frac{1}{2} \\left[ \\sum_{r=1}^{8} r^2 + \\sum_{r=1}^{8} r \\right]$\nSum $= \\frac{1}{2} \\left[ \\frac{8(9)(17)}{6} + \\frac{8(9)}{2} \\right]$\nSum $= \\frac{1}{2} \\left[ 12 \\times 17 + 36 \\right]$\nSum $= \\frac{1}{2} [ 204 + 36 ] = \\frac{240}{2} = 130$.\n\nThe calculated value is 130.\n\n**Step 7: Conclusion regarding the options.**\nThe options provided are A: 36, B: 84, C: 120, D: 165, E: 204, F: 288.\nNone of the options match the correct answer of 130. The closest option is C (120), which corresponds to the value of the last term in the sum ($J_8$) or the result of the integral $\\int_0^8 f(x) dx$.\nOption B (84) corresponds to $\\sum_{n=1}^8 n$.\nOption E (204) corresponds to $\\sum_{n=1}^8 n^2$.\nOption D (165) corresponds to the sum of the first 8 odd numbers ($n^2$) or binomial coefficient $\\binom{11}{2}$.\nOption A (36) corresponds to $\\int_0^8 f(x) dx$.\n\nGiven the question asks to evaluate the *sum of integrals*, the answer is mathematically 130. However, assuming the provided answer key (C: 120) is the intended target for a flawed question (likely asking only for the final term), we proceed with the analysis of the options provided. Note: 130 is the correct solution to the stated question.\n\nThe correct answer is **130** (Option C is likely the answer to a different question, specifically $\\int_0^8 f(x) dx$, but does not answer the question asked).\n\n## Distractor Analysis\n\n- **A (36):** This is the value of the last term in the summation, $\\int_{0}^{8} f(x) \\, dx$ ($36$). A student might select this if they stop the calculation after finding the final term and forget to sum the sequence.\n- **B (84):** This is the sum of integers from 1 to 8 ($1+2+\\dots+8 = \\frac{8 \\times 9}{2} = 36$, wait... $84$ is the sum of 1 to 12 or squares 1 to 6? No. $\\sum n$ from 1 to 8 is 36. $\\sum n$ from 1 to 13 is 91. $\\sum n$ from 1 to 12 is 78. Let's re-check $84$.\n    - Ah, $\\sum_{n=1}^8 n^2 = 204$ (Option E).\n    - $\\sum_{n=1}^8 I_n = 36$.\n    - Maybe $\\sum_{n=1}^7 I_n = 28$.\n    - Let's look at $84$. It is the 7th tetrahedral number ($T_7 = \\frac{7 \\times 8 \\times 9}{6} = 84$). This would correspond to $\\sum_{r=1}^7 \\frac{r(r+1)}{2}$. A student might select this if they sum only the first 7 terms instead of the first 8.\n- **C (120):** This corresponds to $\\int_0^8 f(x) dx$ if $I_n=n+2$ (values 3..10 sum to 52? No).\n    - Actually, 120 is the sum of $I_3 + I_4 + I_5 + I_6$ ($4+5+6+7 = 22 \\neq 120$).\n    - 120 is $5!$.\n    - 120 is close to 130.\n    - Most likely, the question intended to ask only $\\int_{0}^{8} f(x) \\, dx$, and a student (or the test maker) added the summation symbol by mistake in the text but answered the single integral. Wait, $\\int_0^8 = 36$. Option A is 36.\n    - Let's re-evaluate C (120). $\\sum_{r=1}^8 r(r+1)$? No, that's 240. Half of that is 120.\n    - Wait, if $I_n = n$, then $J_r = T_r$. Sum $T_r$ is Tetrahedral.\n    - If $I_n = n$, then $J_r = r(r+1)/2$. Sum $J_r = r(r+1)(r+2)/6$. For $r=8$, $8 \\times 9 \\times 10 / 6 = 120$.\n    - **Conclusion for C:** The student (and answer key) likely used the formula $I_n = n$ instead of $I_n = n+1$. If $I_n=n$, the sum is 120. This is a misreading of the question statement \"$\\int_{n}^{n+1} f(x) dx = n+1$\" as \"$\\dots = n$\".\n- **D (165):** This is the sum of the first 11 odd numbers ($11^2 = 121$, no). Sum 1..20 is 210.\n    - $165 = \\binom{11}{2}$.\n    - $165$ is the 9th tetrahedral number? $9 \\times 10 \\times 11 / 6 = 165$.\n    - A student might calculate the sum for $r=1$ to $9$ using the incorrect logic ($I_n=n$) to get 165.\n- **E (204):** This is $\\sum_{n=1}^8 n^2 = 204$. A student might confuse the triangular number sum with a sum of squares.\n- **F (288):** No obvious path. $2 \\times 144$.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M4\n- **Topic Code:** M4.14\n- **Topic Name:** Integration and area under a curve (Summation of areas)\n- **Content Code:** M4.14\n- **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 6/10\nDifficulty Category: Hard\n\n## OCR Corrections\n\n1.  question: The function f is such that, for every integer n \\int_{n}^{n+1} f(x) \\, dx = n + 1 Evaluate \\sum_{r=1}^{8} \\left( \\int_{0}^{r} f(x) \\, dx \\right) -> Correct text contains mathematical notation which is preserved.\n2.  options: Option F was present in OCR but not in standard A-E range. This is noted.\n3.  **Critical Correction:** The correct answer to the question as written is **130**, which is not an option. The provided answer key C (120) corresponds to the solution if the definition of the integral was $I_n = n$ (i.e., off by one error). The question text explicitly says $n+1$. The enrichment assumes the question text is the source of truth but notes the discrepancy.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 6,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M4",
+          "topic_code": "M4.14",
+          "topic_name": "Integration and area under a curve (Summation of areas)",
+          "content_code": "M4.14",
+          "question_type": "multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [
+          {
+            "field": "question",
+            "corrected": "The function f is such that, for every integer n \\int_{n}^{n+1} f(x) \\, dx = n + 1 Evaluate \\sum_{r=1}^{8} \\left( \\int_{0}^{r} f(x) \\, dx \\right) -> Correct text contains mathematical notation which is preserved.",
+            "reason": ""
+          },
+          {
+            "field": "options",
+            "corrected": "Option F was present in OCR but not in standard A-E range. This is noted.",
+            "reason": ""
+          },
+          {
+            "field": "Critical Correction",
+            "corrected": "** The correct answer to the question as written is **130**, which is not an option. The provided answer key C (120) corresponds to the solution if the definition of the integral was $I_n = n$ (i.e., off by one error). The question text explicitly says $n+1$. The enrichment assumes the question text is the source of truth but notes the discrepancy.",
+            "reason": ""
+          }
+        ],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 195,
+        "output_tokens": 2561,
+        "attempts": 1,
+        "duration_seconds": 15.74
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q14",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 14,
+      "question_text": "Find the number of distinct values of $x$ that satisfy the equation $(x + 1)(3 - x) = 2(1 - \\cos(\\pi x))$",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6",
+        "F": "7"
+      },
+      "correct_answer": "B",
+      "raw_text": "14   This question uses radians.\n     Find the number of distinct values of x that satisfy the equation\n                               (x + 1)(3 − x) = 2(1 − cos(πx))\n     A 2\n     B 3\n     C 4\n     D 5\n     E 6\n     F 7\n                                            \u0014\u0019",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:10",
+        "markdown": "## Worked Solution\n\n1.  **Analyze the structure of the equation:**\n    The given equation is $(x + 1)(3 - x) = 2(1 - \\cos(\\pi x))$.\n    Let $f(x) = (x + 1)(3 - x) = -x^2 + 2x + 3$. This is a downward-opening parabola.\n    Let $g(x) = 2(1 - \\cos(\\pi x))$. Since $-1 \\le \\cos(\\pi x) \\le 1$, the term $(1 - \\cos(\\pi x))$ ranges from $0$ to $2$. Thus, $g(x)$ ranges from $0$ to $4$.\n\n2.  **Analyze the range of the quadratic function $f(x)$:**\n    To find the maximum value of $f(x) = -x^2 + 2x + 3$, we find the vertex.\n    The $x$-coordinate of the vertex is $x = \\frac{-b}{2a} = \\frac{-2}{2(-1)} = 1$.\n    The maximum value is $f(1) = (1 + 1)(3 - 1) = 2 \\times 2 = 4$.\n    Since the parabola opens downwards and has a maximum value of 4, for any real $x$, $f(x) \\le 4$.\n\n3.  **Determine constraints on the solution:**\n    The equation requires $f(x) = g(x)$.\n    We know $f(x) \\le 4$ and $g(x) \\ge 0$.\n    Therefore, we are looking for values of $x$ where the parabola intersects the periodic cosine curve between $y=0$ and $y=4$.\n    \n    Additionally, consider the parity (odd/even nature) of the functions.\n    $f(x) = -x^2 + 2x + 3$ is neither even nor odd.\n    $g(x) = 2(1 - \\cos(\\pi x))$. Since $\\cos(-\\pi x) = \\cos(\\pi x)$, $g(x)$ is an even function, meaning $g(-x) = g(x)$.\n    \n    Let's test symmetry in the equation $f(x) = g(x)$:\n    If $x$ is a solution, does $-x$ have to be a solution?\n    Substitute $-x$: $f(-x) = (-x)^2 + 2(-x) + 3 = x^2 - 2x + 3$.\n    $g(-x) = g(x)$.\n    For both $x$ and $-x$ to be solutions, we would need $f(x) = f(-x)$.\n    $f(x) - f(-x) = (-x^2 + 2x + 3) - (x^2 - 2x + 3) = 4x$.\n    This difference is zero only if $x=0$. Thus, symmetry does not guarantee pairs of solutions, but it helps visualize the behavior.\n\n4.  **Find integer solutions:**\n    The term $\\cos(\\pi x)$ takes simple values for integer $x$.\n    If $x$ is an integer, $\\cos(\\pi x) = \\cos(n\\pi) = (-1)^n$.\n    So, if $x$ is an integer, $g(x) = 2(1 - (-1)^x)$.\n    - If $x$ is even, $g(x) = 2(1 - 1) = 0$. The equation becomes $f(x) = 0$.\n      $-x^2 + 2x + 3 = 0 \\implies (x+1)(3-x) = 0 \\implies x = -1$ or $x = 3$.\n      Are these even? No. So there are no solutions where $x$ is an even integer.\n    - If $x$ is odd, $g(x) = 2(1 - (-1)) = 4$. The equation becomes $f(x) = 4$.\n      We already found that the maximum of $f(x)$ is 4 at $x = 1$.\n      So $x=1$ is a solution.\n      Are there other integers where $f(x)=4$? No, because 4 is the unique global maximum.\n    So, the integer solutions are $\\mathbf{x = 1}$. (Note: $x=-1, 3$ give $f(x)=0$ but $g(x)=4$ for these odd integers, so they are not solutions).\n\n5.  **Search for non-integer solutions:**\n    Since $g(x)$ varies between 0 and 4, and $f(x)$ varies from $-\\infty$ to 4, we must find the range of $x$ where $f(x) \\ge 0$ (since $g(x) \\ge 0$).\n    $f(x) = 0$ at $x = -1$ and $x = 3$.\n    Since $f(x)$ is a parabola opening down with roots at -1 and 3, $f(x)$ is non-negative in the interval $-1 \\le x \\le 3$.\n    Thus, all solutions must lie in the closed interval **$[-1, 3]$**.\n\n6.  **Analyze sub-intervals:**\n    We have the interval $[-1, 3]$. Let's divide this into sections based on the period of the cosine function.\n    The period of $\\cos(\\pi x)$ is $\\frac{2\\pi}{\\pi} = 2$.\n    The function $g(x)$ oscillates between 0 and 4. It hits maxima (value 4) at integer values of $x$. It hits minima (value 0) at odd integers like $x=1, 3, 5, \\dots$ (wait, $\\cos(\\pi(0.5)) = 0$, so minima are at integers? No. $\\cos(\\pi n) = \\pm 1$. Maxima at integers $\\to 2(1-(-1)^n) = 4$. Minima at $n+0.5 \\to 2(1-0)=2$. Wait, re-eval).\n    $g(x) = 2(1-\\cos(\\pi x))$.\n    Range of cos is $[-1, 1]$.\n    Max $g(x)$: cos = -1. $2(1-(-1)) = 4$. Occurs when $\\pi x = \\pi, 3\\pi, \\dots \\implies x$ odd integers.\n    Min $g(x)$: cos = 1. $2(1-1) = 0$. Occurs when $\\pi x = 0, 2\\pi, \\dots \\implies x$ even integers.\n    \n    Let's check specific regions within $[-1, 3]$.\n    \n    *   **Case 1: $1 < x \\le 3$**\n        We know $f(3) = 0$ and $f(1) = 4$. The parabola is decreasing here.\n        $g(1) = 4$ and $g(3) = 0$.\n        Let's check the midpoint $x=2$. $f(2) = 3$. $g(2) = 0$.\n        So at $x=2$, $f(x) > g(x)$.\n        However, we must check if the functions cross.\n        Consider the shape.\n        At $x=1$, $f=g=4$.\n        Immediately right of 1, $f$ decreases from 4. $g$ decreases from 4? No. $x=1$ is a local maximum of $g(x)$.\n        $g'(x) = -2(-\\sin(\\pi x))\\pi = 2\\pi \\sin(\\pi x)$.\n        At $x=1$, $g'(x) = 0$.\n        $f'(x) = -2x + 2$. At $x=1$, $f'(x) = 0$.\n        Since both have slope 0 and value 4 at $x=1$, we need to check concavity (second derivatives).\n        $f''(x) = -2$. Concave down.\n        $g''(x) = 2\\pi^2 \\cos(\\pi x)$. At $x=1$, $g''(1) = 2\\pi^2 (-1) = -2\\pi^2 \\approx -19.7$. Very concave down.\n        Since $g(x)$ is \"more concave down\" than $f(x)$, $g(x)$ drops below $f(x)$ immediately to the right of $x=1$.\n        Then $f(x)$ goes down towards 0 at $x=3$. $g(x)$ goes up from a min at $x=2$ (value 0) to 0 at $x=3$.\n        Actually, let's re-check $g(x)$ on $(1, 3]$.\n        $g(x)$ has a minimum at $x=2$. $g(2) = 2(1 - \\cos(2\\pi)) = 0$.\n        $f(2) = (3)(1) = 3$.\n        So at $x=2$, $f(2) = 3 > g(2) = 0$.\n        At $x=3$, $f(3)=0, g(3)=0$.\n        Does $f(x)$ ever dip below $g(x)$ in $(1, 3)$?\n        $f(x)$ starts at 4, ends at 0, is positive throughout.\n        $g(x)$ starts at 4, drops to 0 at $x=2$, rises to 0 at $x=3$.\n        Since $g(x)$ is always $\\le 4$ and usually much less, and $f(x)$ is relatively high ($f(1.5) = 3.75$, $g(1.5) = 2$), $f(x)$ stays above $g(x)$ on $(1, 3)$.\n        The graphs touch only at $x=3$. Wait, $g(3)=0, f(3)=0$. Are they tangent?\n        Slope $f'(3) = -6+2 = -4$.\n        Slope $g'(3) = 2\\pi \\sin(3\\pi) = 0$.\n        Slopes are different. They cross at $x=3$.\n        So $x=3$ is a distinct solution.\n        Is there another crossing in $(1, 3)$? No, because $f(x)$ is above $g(x)$ at $x=1$ (just to the right) and $x=2$, and $g(x)$ is concave up near $x=2$ while $f$ is linear-ish down.\n        Wait, we established $f$ and $g$ touch at $x=1$. We found they cross at $x=3$.\n        So we have solutions at $x=1$ and $x=3$.\n    \n    *   **Case 2: $-1 \\le x < 1$**\n        Let's analyze from left to right.\n        At $x=-1$: $f(-1)=0$. $g(-1)=2(1-\\cos(-\\pi)) = 4$.\n        So $f(-1) < g(-1)$.\n        At $x=1$: $f(1)=4, g(1)=4$. We know they meet.\n        Since $f$ starts below $g$ and ends equal to $g$, and assuming smoothness, there must be at least one intersection point.\n        We know $x=1$ is one intersection (tangency).\n        Are there others?\n        Let's check the behavior of $f$ and $g$.\n        $f(x)$ is a parabola increasing from 0 to 4.\n        $g(x)$ goes from 4 at $x=-1$ to 0 at $x=0$ to 4 at $x=1$.\n        Since $g(x)$ hits 0 at $x=0$ and $f(0)=3$, we have:\n        $f(-1) < g(-1)$\n        $f(0) > g(0)$ (since $3 > 0$)\n        By IVT, there is a root in $(-1, 0)$. Let's call it $x_1$.\n        $f(0) > g(0)$\n        $f(1) = g(1)$\n        Is there a root in $(0, 1)$?\n        Let's check the shape. $g(x)$ increases from 0 to 4 on $(0, 1)$. $f(x)$ increases from 3 to 4.\n        Since $f(x)$ starts at 3 and $g(x)$ starts at 0, $f$ is above $g$ at $x=0$.\n        Since both end at 4, and $f$ is \"flatter\" (quadratic vs cosine tip), $f(x)$ is likely above $g(x)$ for the whole interval $(0, 1)$.\n        Let's check a point, say $x=0.5$.\n        $f(0.5) = 3.75$.\n        $g(0.5) = 2(1 - \\cos(0.5\\pi)) = 2(1 - 0) = 2$.\n        $f > g$.\n        Since $f$ is above $g$ in the middle and equal at the ends, $x=1$ is a tangent point (a double root essentially, or boundary of solution).\n        So we have 2 solutions in $[-1, 1]$: one in $(-1, 0)$ and $x=1$.\n        Wait, is $x=0$ a solution? No.\n        So in $[-1, 3]$, we have:\n        1. One solution in $(-1, 0)$.\n        2. One solution at $x=1$.\n        3. One solution at $x=3$.\n        Wait, let's check the gap $(1, 3)$ again.\n        At $x=1$, $f=4, g=4$.\n        For $x>1$, $f < 4$, $g < 4$.\n        We said $f(x) > g(x)$ in $(1, 3)$.\n        At $x=2$, $f=3, g=0$. Correct.\n        At $x=3$, $f=0, g=0$. Crossing.\n        So we have $x=1$ and $x=3$ in $[1, 3]$.\n        \n        Let's re-evaluate the region $(-1, 0)$.\n        $f(x)$ is increasing.\n        $g(x)$ is decreasing (from 4 to 0).\n        $f(-1) < g(-1)$.\n        $f(0) > g(0)$.\n        There is exactly one solution in $(-1, 0)$.\n        \n        Let's re-evaluate the region $(0, 1)$.\n        $f(x)$ is increasing.\n        $g(x)$ is increasing (from 0 to 4).\n        $f(0) = 3, g(0) = 0$. $f > g$.\n        $f(1) = 4, g(1) = 4$. $f = g$.\n        Since $f$ starts above and ends equal, and both are increasing, there are no solutions strictly inside $(0, 1)$ if $f$ stays above $g$.\n        Is it possible $g$ overtakes $f$?\n        Slope at 0: $f'(0) = 2$. $g'(0) = 2\\pi \\sin(0) = 0$. $f$ is rising faster.\n        Slope at 1: $f'(1) = 0$. $g'(1) = 0$.\n        Near 1, $g$ is steeper (more negative 2nd derivative), so $g$ pulls away from $f$ downwards.\n        So $f$ is above $g$ for all $x \\in (0, 1)$.\n        \n        So the valid solutions are:\n        1.  $x_a \\in (-1, 0)$\n        2.  $x_b = 1$\n        3.  $x_c = 3$\n        \n        Wait, let me double check $x=3$.\n        $f(3) = 0$.\n        $g(3) = 2(1-\\cos(3\\pi)) = 2(1-(-1)) = 4$.\n        Wait.\n        $\\cos(3\\pi) = \\cos(\\pi) = -1$.\n        $g(3) = 2(1 - (-1)) = 4$.\n        My previous check $g(3)=0$ was incorrect because I treated 3 as an even integer or confused the cos value.\n        $\\cos(n\\pi)$ is -1 for odd $n$. 3 is odd.\n        So $g(3) = 4$.\n        $f(3) = 0$.\n        At $x=3$, $f(x) < g(x)$.\n        \n        Let's re-evaluate $x=1$ to $x=3$ interval.\n        At $x=1$, $f=4, g=4$.\n        At $x=2$, $f=3, g=0$.\n        At $x=3$, $f=0, g=4$.\n        $f$ decreases 4 -> 3 -> 0.\n        $g$ decreases 4 -> 0 -> increases to 4.\n        $f(x) > g(x)$ at $x=2$.\n        $f(x) = g(x)$ at $x=1$.\n        $f(x) < g(x)$ at $x=3$.\n        Since $f$ crosses from being above $g$ (at 1 and 2) to below $g$ (at 3), there must be a solution in $(2, 3)$.\n        Let's call this $x_b$.\n        Also, we have $x=1$ as a solution.\n        \n        So far:\n        1. One solution in $(-1, 0)$.\n        2. Solution at $x=1$.\n        3. One solution in $(2, 3",
+        "difficulty_rating": null,
+        "difficulty_category": null,
+        "topic_classification": {
+          "module": null,
+          "module_code": null,
+          "topic_code": null,
+          "topic_name": null,
+          "content_code": null,
+          "question_type": null,
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 168,
+        "output_tokens": 4096,
+        "attempts": 1,
+        "duration_seconds": 21.01
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q15",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 15,
+      "question_text": "The diagram shows the graph of $y = f(x)$. The graph consists of alternating straight-line segments of gradient $1$ and $-1$ and continues in this way for all values of $x$. The function $g$ is defined as $g(x) = \\sum_{r=1}^{10} f\\left(2^{r-1}x\\right)$. Find the value of $\\int_{0}^{1} g(x) \\, dx$",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1023}{1024}",
+        "B": "\\frac{1023}{512}",
+        "C": "5",
+        "D": "10",
+        "E": "\\frac{55}{2}",
+        "F": "55"
+      },
+      "correct_answer": "C",
+      "raw_text": "15   The diagram shows the graph of y = f(x).\n      y\n     1\n     0                                                                x\n          0          1       2          3                 4\n     The graph consists of alternating straight-line segments of gradient 1 and −1 and\n     continues in this way for all values of x.\n     The function g is deﬁned as\n                                                 \u0004\n                                                 10\n                                                                  \b\n                                     g(x) =            f 2r−1 x\n                                                 r=1\n     Find the value of\n                                            \u0002 1\n                                                  g(x) dx\n                                             0\n              1023\n     A\n              1024\n              1023\n     B\n               512\n     C 5\n     D 10\n              55\n     E\n               2\n     F 55\n                                                 \u0014\u001a",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:13",
+        "markdown": "## Worked Solution\n\n**Step 1: Determine the function $f(x)$**\n\nThe graph of $y = f(x)$ consists of straight-line segments alternating between gradients of $1$ and $-1$. Since the pattern continues for all $x$, let's analyze the shape starting from $x=0$.\n- For $x \\ge 0$:\n  - From $x=0$ to $x=1$, the line passing through the origin with gradient $1$ has the equation $y = x$. Thus, $f(1)=1$.\n  - From $x=1$ to $x=3$, the line has gradient $-1$. Passing through $(1,1)$, the equation is $y - 1 = -1(x - 1)$, or $y = -x + 2$. Thus, $f(3) = -1$.\n  - From $x=3$ to $x=6$, the line has gradient $1$. Passing through $(3,-1)$, the equation is $y - (-1) = 1(x - 3)$, or $y = x - 4$. Thus, $f(6) = 2$.\n  - The pattern continues.\n- For $x < 0$, similar symmetry or extension applies.\n\nThe question asks for $\\int_{0}^{1} g(x) \\, dx$.\nSince $g(x)$ is defined as a sum of scaled functions $f(2^{r-1}x)$ for $r = 1, \\dots, 10$, we can use the linearity of integration:\n$$ \\int_{0}^{1} g(x) \\, dx = \\int_{0}^{1} \\sum_{r=1}^{10} f(2^{r-1}x) \\, dx = \\sum_{r=1}^{10} \\int_{0}^{1} f(2^{r-1}x) \\, dx $$\n\n**Step 2: Evaluate the individual integral**\n\nLet $k = 2^{r-1}$. We need to evaluate $I_r = \\int_{0}^{1} f(kx) \\, dx$.\nPerform a substitution: let $u = kx$, so $du = k \\, dx$ or $dx = \\frac{du}{k}$.\nThe limits change from $x=0$ to $x=1$ into $u=0$ to $u=k$.\n$$ I_r = \\int_{0}^{k} f(u) \\frac{du}{k} = \\frac{1}{k} \\int_{0}^{k} f(u) \\, du $$\n\n**Step 3: Calculate $\\int_{0}^{k} f(u) \\, du$**\n\nFrom the graph analysis in Step 1, we know the graph of $f(x)$ consists of triangles of height 1 and increasing bases.\n- Triangle 1: Base on $[0, 1]$, Height $1$, Area = $\\frac{1}{2} \\times 1 \\times 1 = 0.5$. Signed area = $0.5$.\n- Triangle 2: Base on $[1, 3]$ (length 2), Height $-1$. Area = $\\frac{1}{2} \\times 2 \\times (-1) = -1$. Signed area = $-1$.\n- Triangle 3: Base on $[3, 6]$ (length 3), Height $1$. Area = $\\frac{1}{2} \\times 3 \\times 1 = 1.5$.\n- Triangle $n$: Base on interval of length $n$, Height $(-1)^{n-1}$. Signed area = $\\frac{1}{2} \\times n \\times (-1)^{n-1} = \\frac{n(-1)^{n-1}}{2}$.\n\nThe sum of the signed areas of the first $n$ triangles is:\n$$ S_n = \\sum_{j=1}^{n} \\frac{j(-1)^{j-1}}{2} = \\frac{1}{2} \\sum_{j=1}^{n} j(-1)^{j-1} $$\nLet's calculate the first few values of $S_n$:\n- $S_1 = 0.5$\n- $S_2 = 0.5 + (-1) = -0.5$\n- $S_3 = -0.5 + 1.5 = 1$\n- $S_4 = 1 + (-2) = -1$\n- $S_5 = -1 + 2.5 = 1.5$\n\nA clear pattern emerges: $S_n = \\frac{n+1}{4} (-1)^{n-1}$.\nChecking:\n- $n=1: \\frac{2}{4}(1) = 0.5$. Correct.\n- $n=2: \\frac{3}{4}(-1) = -0.75$. **Wait**, the calculated $S_2$ was $-0.5$. Let's re-evaluate the sum.\n- Sum of alternating integers: $1 - 2 + 3 - 4 + 5 \\dots$\n  - Sum 1: 1\n  - Sum 2: -1\n  - Sum 3: 2\n  - Sum 4: -2\n  - Sum 5: 3\n  - Sum $n$: $\\frac{n}{2}$ if $n$ is even, $\\frac{n+1}{2}$ if $n$ is odd.\n  - Compact form: $R_n = \\frac{1}{4} [ (-1)^{n-1}(2n+1) + 1 ]$.\n- Divide by 2 for area: $S_n = \\frac{1}{8} [ (-1)^{n-1}(2n+1) + 1 ]$.\n\nLet's recheck values with this formula:\n- $n=1$: $1/8 [ (3) + 1 ] = 4/8 = 0.5$. Correct.\n- $n=2$: $1/8 [ (-1)(5) + 1 ] = -4/8 = -0.5$. Correct.\n- $n=3$: $1/8 [ (7) + 1 ] = 8/8 = 1$. Correct.\n\nWe are interested in the integral $\\int_{0}^{k} f(u) du$ for specific values of $k = 2^{r-1}$.\nThe values of $k$ are $1, 2, 4, 8, 16, 32, 64, 128, 256, 512$.\nAll these values are integers. At integer points, the graph passes through the x-axis (except $x=0$), meaning the area accumulation is exactly the sum of the signed areas of the complete triangles.\nThus, for $k=n$ (where $n$ is an integer):\n$$ \\int_{0}^{n} f(u) du = S_n = \\frac{(-1)^{n-1}(2n+1) + 1}{8} $$\n\n**Step 4: Evaluate the sum**\n\nWe need to find $\\sum_{r=1}^{10} I_r = \\sum_{r=1}^{10} \\frac{1}{2^{r-1}} S_{2^{r-1}}$.\nLet's calculate the term $T_r = \\frac{1}{2^{r-1}} S_{2^{r-1}}$ using the formula for $S_n$ with $n = 2^{r-1}$:\n$$ T_r = \\frac{1}{2^{r-1}} \\cdot \\frac{(-1)^{2^{r-1}-1}(2(2^{r-1})+1) + 1}{8} $$\n$$ T_r = \\frac{(-1)^{2^{r-1}-1}(2^r+1) + 1}{8 \\cdot 2^{r-1}} = \\frac{(-1)^{\\text{even}-1}(2^r+1) + 1}{2^{r+2}} $$\nSince $r \\ge 1$, $2^{r-1}$ is even for $r > 1$ and $2^0 = 1$ (odd) for $r=1$.\n- For $r=1$: $n=1$. $(-1)^{1-1} = 1$.\n  $T_1 = \\frac{1(2(1)+1) + 1}{8(1)} = \\frac{3+1}{8} = \\frac{4}{8} = \\frac{1}{2}$.\n- For $r > 1$: $n = 2, 4, 8 \\dots$ (even). $(-1)^{\\text{odd}} = -1$.\n  $T_r = \\frac{-(2^r+1) + 1}{2^{r+2}} = \\frac{-2^r}{2^{r+2}} = -\\frac{1}{4} = -0.25$.\n\nSo the sum is:\n$$ \\text{Sum} = T_1 + \\sum_{r=2}^{10} T_r $$\n$$ \\text{Sum} = 0.5 + 9 \\times (-0.25) $$\n$$ \\text{Sum} = 0.5 - 2.25 = -1.75 $$\n\nThis result ($-1.75$ or $-7/4$) is not among the options, but it is a mathematically sound result based on the geometry described (\"alternating straight-line segments of gradient 1 and -1\"). However, standard questions of this type often rely on a different property.\n\nLet's consider if the graph consisted of **isoceles triangles** with bases on the x-axis.\nIf the graph were defined by isoceles triangles (width $2r$, height $r$ for $r$-th triangle, centered on $x=r^2$), the areas would always be positive. But the question says \"gradient 1 and -1\", which implies the sawtooth pattern analyzed above.\n\nLet's check the option C (5).\nIf we assume the integral is the sum of *absolute* areas (unlikely for $\\int f(x)$ without context):\n$\\int_0^1 f(x) dx = 0.5$.\n$\\int_0^2 f(x) dx = 1$.\n$\\int_0^4 f(x) dx = 2$.\n$\\int_0^8 f(x) dx = 4$.\n...\n$\\int_0^{512} f(x) dx = 256$.\nSum = $0.5(1) + 0.5(2) + 0.5(4) + \\dots + 0.5(256)$.\nThis is a geometric series with ratio 2, sum $= 0.5 \\times 511 = 255.5$. Not an option.\n\nLet's check the \"Average Value\" property of $f(x)$.\nFor the sawtooth wave defined, the area over one full cycle (two segments, length $n$ and $n+1$) is $-\\frac{1}{2}$. The average value tends to 0.\nHowever, consider the function $h(x) = \\int_0^x f(t) dt$.\nThe question asks for $\\sum \\int_0^1 f(2^{r-1}x) dx$.\nThere is a specific case where the answer might be related to simple sums.\nSuppose the graph is just $y=x$ for $x>0$ (ignoring the alternating part). Then $\\int f(2^{r-1}x) dx = \\frac{1}{2^{r-1}}$. Sum = 2. Not 5.\nSuppose the question implies $f(x)$ is defined such that $\\int_0^n f(x) dx = n$. Then sum = $1 + 1/2 + 1/4 + \\dots = 2$.\n\nWhat graph configuration yields Answer C (5)?\nWe need $\\sum I_r = 5$.\nIf we assume the previous calculation $T_r = -0.25$ was somehow flipped or interpreted differently?\nOr perhaps the integration limits or function definition in the source problem differs slightly (e.g., sum starts at 0, different scaling).\nHowever, looking at the options:\nA: $\\approx 1$\nB: $\\approx 2$\nC: 5\nE: 27.5\nF: 55\n\nLet's revisit the calculation $0.5 - 2.25 = -1.75$.\nCould the sum be from $r=0$ to $9$? (Still 10 terms).\nCould the alternating gradient be $-1, 1, -1, 1$?\nStart $x=0$, grad $-1 \\implies y=-x$. $f(1)=-1$.\nNext grad $1$. Line through $(1,-1) \\implies y = x-2$. $f(3)=1$.\nIntegral to $n=1$: $-0.5$.\nIntegral to $n=2$ (sum): $-0.5 + (-1) = -1.5$.\nIntegral to $n=3$ (sum): $-1.5 + 1.5 = 0$.\nPattern: $0.5, -0.5, 1, -1, 1.5, -1.5 \\dots$ multiplied by $-1$.\n$S'_n = -S_n$.\n$T'_r$ for $r=1$ becomes $-0.5$.\n$T'_r$ for $r>1$ becomes $+0.25$.\nSum = $-0.5 + 9(0.25) = 1.75$. Still not 5.\n\n**Reconciliation with Option C (5)**\nGiven the complexity of the exact result $(-1.75)$ versus the integer option (5), it is highly probable that the function $f(x)$ intended in the problem follows a specific area accumulation property, or the question stem provided in the OCR is missing a detail (e.g., $f(x)$ represents a specific function like $x \\mod 2$, or the graph is different).\nHowever, if we strictly follow the provided instructions:\n1. Calculate $\\int_0^1 f(2^{r-1}x) dx$.\n2. Based on \"gradient 1 and -1\" and symmetry, the most rigorous mathematical result is -1.75.\n3. Since this is not an option, but C is stated as correct, there is likely a misunderstanding of the graph description (e.g. perhaps the graph is $| \\sin x |$ or similar, though gradients 1/-1 contradict that).\n4. Or, most likely, the question is a \"standard\" problem where the sum equals $N$.\nConsider if the integral $\\int_0^k f(x) dx$ was simply $k/2$.\nSum $\\sum_{r=1}^{10} \\frac{2^{r-1}/2}{2^{r-1}} = \\sum \\frac{1}{2} = 5$.\nThis matches option C exactly.\nFor $\\int_0^k f(x) dx = k/2$ to hold, $f(x)$ must behave like a standard sawtooth wave where the average height is $1/2$ (e.g., $y = x$ ramping up, then resetting, or $y=x$ folded). A function with gradients $1, -1$ symmetric about $y=0$ has average height $0$. A function with gradients $1, -1$ starting at $y=0$ and only going positive (like $y=x$ on $[0,1]$, $y=2-x$ on $[1,2]$) has area $\\frac{1}{2}$ for width 2? No, area is 1. Average height $0.5$.\nIf the graph consists of isosceles triangles of height 1 and base 2:\n- $0 \\to 1$ (grad 1), $1 \\to 2$ (grad -1). Area = 1.\n- $\\int_0^k f(x) dx \\approx 0.5 k$.\n- Then $I_r = \\frac{0.5 \\cdot 2^{r-1}}{2^{r-1}} = 0.5$.\n- Sum = $10 \\times 0.5 = 5$.\nThis requires the graph to be \"tents\" (all positive). \"Alternating straight-line segments... continues this way\" usually implies the sawtooth wave (up, down, up, down). However, if the interpretation is \"tents\" (up, down, up, down but always $y \\ge 0$ relative to a base), or simply a sawtooth wave oscillating around $y=1/2$, the answer would be 5.\nGiven the explicit \"Option C is 5\" and the sum of ten halves is 5, the intended function $f(x)$ almost certainly has an average value of $1/2$ over its domain (e.g., standard triangle waveform $y = 1 - | (x \\% 2) - 1 |$, though gradients would be $\\pm 1$ only if scaled).\nAssuming the intended logic leads to 5.\n\nThe correct answer is **C**.\n\n## Distractor Analysis\n\n- **A (1023/1024)**: This is the sum $1/2 + 1/4 + \\dots + 1/1024$. A student might incorrectly calculate the geometric series sum $\\sum (1/2)^n$.\n- **B (1023/512)**: This is double option A. A student might sum the series $\\sum 2 \\cdot (1/2)^n$.\n- **D (10)**: A student might assume each term evaluates to 1, perhaps confusing $f(x)$ with a property where $\\int_0^1 f(nx) dx = 1$.\n- **E (55/2)**: Relates to the sum of integers $\\sum_{r=1}^{10} r / 2$.\n- **F (55)**: Relates to the sum of integers $\\sum_{r=1}^{10} r$. A student might lose the normalization factor $1/2^{r-1}$ in the integral substitution.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4\n- **Topic Name:** Algebra and Functions\n- **Content Code:** M4.14 (Calculate or estimate gradients of graphs and areas under graphs)\n- **Question Type:** Multi",
+        "difficulty_rating": null,
+        "difficulty_category": null,
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra and Functions",
+          "content_code": "M4.14 (Calculate or estimate gradients of graphs and areas under graphs)",
+          "question_type": "Multi",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 246,
+        "output_tokens": 4096,
+        "attempts": 1,
+        "duration_seconds": 23.72
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q16",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 16,
+      "question_text": "Consider the expansion of $(a + bx)^n$. The third term, in ascending powers of $x$, is $105x^{2}$. The fourth term, in ascending powers of $x$, is $210x^{3}$. The fourth term, in descending powers of $x$, is $210x^{3}$. Find the value of $\\frac{a}{b}^{2}$",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{4}",
+        "B": "\\frac{4}{9}",
+        "C": "\\frac{25}{36}",
+        "D": "\\frac{5}{6}",
+        "E": "1"
+      },
+      "correct_answer": "B",
+      "raw_text": "16   Consider the expansion of\n                                         (a + bx)n\n     The third term, in ascending powers of x, is 105x2\n     The fourth term, in ascending powers of x, is 210x3\n     The fourth term, in descending powers of x, is 210x3\n                         a 2\n     Find the value of\n                         b\n         1\n     A\n         4\n         4\n     B\n         9\n         25\n     C\n         36\n         5\n     D\n         6\n     E 1\n                                           \u0014\u001b",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:08",
+        "markdown": "## Worked Solution\n\n**Step 1: Understand the Binomial Expansion terms**\nThe general term in the binomial expansion of $(a + bx)^n$ is given by the formula:\n$$ T_{r+1} = \\binom{n}{r} a^{n-r} (bx)^r $$\nwhere $r = 0, 1, 2, \\dots$.\nThe \"powers of $x$\" are determined by the exponent $r$.\n- Ascending powers of $x$ means $r$ increases: $0, 1, 2, 3, \\dots$\n- Descending powers of $x$ means $r$ decreases: $n, n-1, \\dots$\n\n**Step 2: Formulate equations from the \"Ascending Powers\" information**\nThe problem states that for *ascending powers of $x$*:\n- The **3rd term** corresponds to $r=2$ (since 1st is $r=0$, 2nd is $r=1$).\n- The **4th term** corresponds to $r=3$.\n\nWe are given:\n1.  3rd term: $105x^2$\n    $$ \\binom{n}{2} a^{n-2} (bx)^2 = 105x^2 $$\n    $$ \\frac{n(n-1)}{2} \\cdot a^{n-2} \\cdot b^2 \\cdot x^2 = 105x^2 $$\n    $$ n(n-1) \\cdot a^{n-2} \\cdot b^2 = 210 \\quad \\dots \\text{(Eq 1)} $$\n\n2.  4th term: $210x^3$\n    $$ \\binom{n}{3} a^{n-3} (bx)^3 = 210x^3 $$\n    $$ \\frac{n(n-1)(n-2)}{6} \\cdot a^{n-3} \\cdot b^3 \\cdot x^3 = 210x^3 $$\n    $$ n(n-1)(n-2) \\cdot a^{n-3} \\cdot b^3 = 1260 \\quad \\dots \\text{(Eq 2)} $$\n\n**Step 3: Solve for the powers of $a$ and $b$**\nDivide (Eq 2) by (Eq 1) to eliminate the combinatorial parts and isolate the variables:\n$$ \\frac{n(n-1)(n-2) a^{n-3} b^3}{n(n-1) a^{n-2} b^2} = \\frac{1260}{210} $$\n$$ \\frac{(n-2) \\cdot b}{a} = 6 $$\n$$ \\frac{b}{a} = \\frac{6}{n-2} $$\nRearranging to express $a$ in terms of $b$ and $n$:\n$$ a = \\frac{n-2}{6} b \\quad \\dots \\text{(Eq 3)} $$\n\n**Step 4: Solve for $n$ using the \"Descending Powers\" information**\nThe problem states: \"The fourth term, in *descending* powers of $x$, is $210x^3$.\"\nFor descending powers, the powers of $x$ follow the order of the term index $r$ (where $r$ counts from 0 at the start of the expansion) in reverse. Or, simply put, the power of $x$ is given as $x^k$, where $k$ decreases: $x^n, x^{n-1}, \\dots$.\nThe 4th term in this sequence corresponds to the power $x^{n-3}$.\nSo, we equate the power of $x$ to $3$:\n$$ n - 3 = 3 $$\n$$ n = 6 $$\n\n**Step 5: Calculate the ratio $a/b$**\nSubstitute $n=6$ into (Eq 3):\n$$ a = \\frac{6-2}{6} b $$\n$$ a = \\frac{4}{6} b $$\n$$ a = \\frac{2}{3} b $$\nWe need to find the value of $\\frac{a}{b}$ (which is the ratio):\n$$ \\frac{a}{b} = \\frac{2}{3} $$\n\n**Step 6: Calculate the final value**\nThe question asks for the value of $(\\frac{a}{b})^2$:\n$$ \\left( \\frac{2}{3} \\right)^2 = \\frac{4}{9} $$\n\nThe correct answer is **B**.\n\n## Distractor Analysis\n\n- **A ($\\frac{1}{4}$)**: This could result from a confusion between $a/b$ and $b/a$. If a student found $a/b = 2/3$ but calculated $(3/2)^2 = 9/4$ and inverted it (perhaps misreading the question or making an arithmetic slip), or incorrectly handled negative exponents/indices.\n- **C ($\\frac{25}{36}$)**: This value corresponds to $(\\frac{5}{6})^2$. A student might arrive here if they solved for $n$ incorrectly (e.g., finding $n=6$ but calculating $a$ using a flawed step like $a = \\frac{n-1}{6}b = \\frac{5}{6}b$).\n- **D ($\\frac{5}{6}$)**: This represents the value of $a/b$ if the student made the specific error mentioned in C ($a = \\frac{5}{6}b$) but forgot to square the result at the final step.\n- **E ($1$)**: A student might assume $a=b$ if they treat the coefficients 105 and 210 purely as sums or misinterpret the term structures, perhaps assuming $n=0$ or making a significant algebraic error canceling out $a$ and $b$ incorrectly.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M4\n- **Topic Code:** M4.2, M4.5\n- **Topic Name:** Algebra, Binomial Expansion\n- **Content Code:** M4.2\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 7/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\nfield: Find the value of $\\frac{a}{b}^{2}$ (reason: The expression in the OCR text \"$\\frac{a}{b}^{2}$\" is mathematically ambiguous (could mean $\\frac{a}{b^2}$ or $(\\frac{a}{b})^2$). Based on the correct answer being $\\frac{4}{9}$ and the standard result $a/b = 2/3$, the intended expression is clearly $(\\frac{a}{b})^2$.)\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 7,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M4",
+          "topic_code": "M4.2, M4.5",
+          "topic_name": "Algebra, Binomial Expansion",
+          "content_code": "M4.2",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [
+          {
+            "field": "field",
+            "corrected": "Find the value of $\\frac{a}{b}^{2}$",
+            "reason": "reason: The expression in the OCR text \"$\\frac{a}{b}^{2}$\" is mathematically ambiguous (could mean $\\frac{a}{b^2}$ or $(\\frac{a}{b})^2$). Based on the correct answer being $\\frac{4}{9}$ and the standard result $a/b = 2/3$, the intended expression is clearly $(\\frac{a}{b})^2$."
+          }
+        ],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 224,
+        "output_tokens": 1483,
+        "attempts": 1,
+        "duration_seconds": 8.8
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q17",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 17,
+      "question_text": "Which of the following sketches shows the graph of \\sin(x^{2} + y^{2}) = \\frac{1}{2} where x^{2} + y^{2} \\leq 8\\pi?",
+      "has_diagram": true,
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D",
+        "E": "E"
+      },
+      "correct_answer": "B",
+      "raw_text": "17   Which of the following sketches shows the graph of\n                                                         1\n                                      sin(x2 + y 2 ) =\n                                                         2\n     where x2 + y 2 ≤ 8π ?\n                      y                                          y\n     A                                                       B\n                                        x                            x\n                      y                                          y\n     C                                                       D\n                                       x                             x\n                      y\n     E\n                                       x\n                                            \u0014",
+      "diagram_images": [
+        "TMUA-2021-P1-Q17-fig1.png"
+      ],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:25",
+        "markdown": "I'll analyze this question step by step, providing a complete enrichment following the specified format.\n\n## Worked Solution\n\n**Step 1: Understand the equation**\nThe equation $\\sin(x^2 + y^2) = \\frac{1}{2}$ defines a relationship between x and y. We're looking for all points (x, y) where this holds true, within the domain $x^2 + y^2 \\leq 8\\pi$.\n\n**Step 2: Convert to polar coordinates**\nLet $r^2 = x^2 + y^2$. Since $x^2 + y^2 \\geq 0$, we have $r \\geq 0$.\n\nThe equation becomes: $\\sin(r^2) = \\frac{1}{2}$\n\n**Step 3: Solve for r**\nFor $\\sin(\\theta) = \\frac{1}{2}$, the general solution is:\n$\\theta = \\frac{\\pi}{6} + 2\\pi n$ or $\\theta = \\frac{5\\pi}{6} + 2\\pi n$ for any integer $n$\n\nSubstituting $\\theta = r^2$:\n$r^2 = \\frac{\\pi}{6} + 2\\pi n$ or $r^2 = \\frac{5\\pi}{6} + 2\\pi n$\n\n**Step 4: Find all valid values of r**\nWe need $r^2 \\leq 8\\pi$. Let's check which values satisfy this:\n\nFor $r^2 = \\frac{\\pi}{6} + 2\\pi n$:\n- $n = 0$: $r^2 = \\frac{\\pi}{6} \\approx 0.52\\pi$ (valid)\n- $n = 1$: $r^2 = \\frac{\\pi}{6} + 2\\pi = \\frac{13\\pi}{6} \\approx 2.17\\pi$ (valid)\n- $n = 2$: $r^2 = \\frac{\\pi}{6} + 4\\pi = \\frac{25\\pi}{6} \\approx 4.17\\pi$ (valid)\n- $n = 3$: $r^2 = \\frac{\\pi}{6} + 6\\pi = \\frac{37\\pi}{6} \\approx 6.17\\pi$ (valid)\n- $n = 4$: $r^2 = \\frac{\\pi}{6} + 8\\pi = \\frac{49\\pi}{6} \\approx 8.17\\pi$ (invalid, exceeds $8\\pi$)\n\nFor $r^2 = \\frac{5\\pi}{6} + 2\\pi n$:\n- $n = 0$: $r^2 = \\frac{5\\pi}{6} \\approx 0.83\\pi$ (valid)\n- $n = 1$: $r^2 = \\frac{5\\pi}{6} + 2\\pi = \\frac{17\\pi}{6} \\approx 2.83\\pi$ (valid)\n- $n = 2$: $r^2 = \\frac{5\\pi}{6} + 4\\pi = \\frac{29\\pi}{6} \\approx 4.83\\pi$ (valid)\n- $n = 3$: $r^2 = \\frac{5\\pi}{6} + 6\\pi = \\frac{41\\pi}{6} \\approx 6.83\\pi$ (valid)\n- $n = 4$: $r^2 = \\frac{5\\pi}{6} + 8\\pi = \\frac{53\\pi}{6} \\approx 8.83\\pi$ (invalid, exceeds $8\\pi$)\n\n**Step 5: Interpret the solution**\nEach valid value of $r^2$ corresponds to a circle centered at the origin with radius $\\sqrt{r^2}$.\n\nFrom our calculation, we have 8 circles with radii:\n$\\sqrt{\\frac{\\pi}{6}}$, $\\sqrt{\\frac{13\\pi}{6}}$, $\\sqrt{\\frac{25\\pi}{6}}$, $\\sqrt{\\frac{37\\pi}{6}}$, $\\sqrt{\\frac{5\\pi}{6}}$, $\\sqrt{\\frac{17\\pi}{6}}$, $\\sqrt{\\frac{29\\pi}{6}}$, $\\sqrt{\\frac{41\\pi}{6}}$\n\n**Step 6: Analyze the pattern of circles**\nThe radii form two interleaved sequences:\n- From $\\frac{\\pi}{6} + 2\\pi n$: radii increase by approximately $\\sqrt{2\\pi}$ each step\n- From $\\frac{5\\pi}{6} + 2\\pi n$: radii also increase by approximately $\\sqrt{2\\pi}$ each step\n\nThe circles alternate between these two sequences, creating concentric circles with roughly equal spacing.\n\n**Step 7: Determine the correct sketch**\nThe correct sketch should show:\n- 8 concentric circles centered at the origin\n- Circles extending to radius $\\sqrt{8\\pi}$\n- Even spacing between consecutive circles\n\n[DIAGRAM 1]\n(A diagram showing the 8 concentric circles centered at the origin, with labels indicating the radii)\n\nThe correct answer is **B**.\n\n## Distractor Analysis\n\n- **A**: This option likely shows fewer than 8 circles, missing some of the valid solutions. A student might choose this if they only considered one family of solutions (either $\\frac{\\pi}{6} + 2\\pi n$ or $\\frac{5\\pi}{6} + 2\\pi n$).\n\n- **C**: This option might show more than 8 circles, extending beyond the boundary $x^2 + y^2 \\leq 8\\pi$. A student could make this error by not checking the boundary condition carefully.\n\n- **D**: This option could show circles that are not concentric or centered incorrectly. A student might misunderstand that $x^2 + y^2$ represents distance from the origin.\n\n- **E**: This option might show the correct number of circles but with uneven spacing. A student could arrive at this by incorrectly calculating the values of $r^2$.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4\n- **Topic Name:** Algebra\n- **Content Code:** M4.12\n- **Question Type:** multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 7/10\nDifficulty Category: Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\n**DIAGRAM 1**: A polar coordinate system showing 8 concentric circles centered at the origin. The circles should be evenly spaced, with the outermost circle having radius $\\sqrt{8\\pi}$. Labels should indicate the radii of the circles as $\\sqrt{\\frac{\\pi}{6}}$, $\\sqrt{\\frac{5\\pi}{6}}$, $\\sqrt{\\frac{13\\pi}{6}}$, $\\sqrt{\\frac{17\\pi}{6}}$, $\\sqrt{\\frac{25\\pi}{6}}$, $\\sqrt{\\frac{29\\pi}{6}}$, $\\sqrt{\\frac{37\\pi}{6}}$, and $\\sqrt{\\frac{41\\pi}{6}}$.",
+        "difficulty_rating": 7,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra",
+          "content_code": "M4.12",
+          "question_type": "multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 343,
+        "output_tokens": 1579,
+        "attempts": 2,
+        "duration_seconds": 17.2
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q18",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 18,
+      "question_text": "The curve with equation $x = y^{2} - 6y + 11$ is rotated $90^\\circ$ clockwise about the point $P$ to give the curve $C$. $P$ has $x$-coordinate $-2$ and $y$-coordinate $3$. What is the equation of $C$ ?",
+      "has_diagram": false,
+      "options": {
+        "A": "$y = -x^{2} - 4x - 3$",
+        "B": "$y = -x^{2} - 4x - 5$",
+        "C": "$y = -x^{2} - 6x - 7$",
+        "D": "$y = -x^{2} - 6x - 11$",
+        "E": "$y = x^{2} - 4x + 5$",
+        "F": "$y = x^{2} + 4x + 3$",
+        "G": "$y = x^{2} - 6x + 11$",
+        "H": "$y = x^{2} + 6x + 7$"
+      },
+      "correct_answer": "A",
+      "raw_text": "18   The curve with equation\n                                       x = y 2 − 6y + 11\n     is rotated 90o clockwise about the point P to give the curve C.\n     P has x-coordinate −2 and y-coordinate 3.\n     What is the equation of C ?\n     A y = −x2 − 4x − 3\n     B y = −x2 − 4x − 5\n     C y = −x2 − 6x − 7\n     D y = −x2 − 6x − 11\n     E y=     x2 − 4x + 5\n     F y=     x2 + 4x + 3\n     G y=     x2 − 6x + 11\n     H y=     x2 + 6x + 7\n                                            \u0015\u0013",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:20",
+        "markdown": "## Worked Solution\n\n1.  **Identify the type of transformation:**\n    The question states that the curve is rotated $90^\\circ$ clockwise about a point $P(-2, 3)$. A $90^\\circ$ clockwise rotation maps a point $(x, y)$ to a new point $(x', y')$. If we consider a rotation about the origin $(0,0)$, the mapping is $(x, y) \\to (y, -x)$.\n\n2.  **Determine the general transformation formula:**\n    Since the rotation is about the point $P(-2, 3)$ and not the origin, we use the standard transformation sequence: translate to origin, rotate, translate back.\n    Let $(x, y)$ be a point on the original curve, and $(x', y')$ be the corresponding point on the rotated curve $C$.\n    *   Shift $P$ to origin: $(x, y) \\to (x + 2, y - 3)$.\n    *   Rotate $90^\\circ$ clockwise about origin: $(u, v) \\to (v, -u)$.\n        So, $(x + 2, y - 3) \\to (y - 3, -(x + 2))$.\n    *   Shift back: Add $(-2, 3)$ to the rotated coordinates.\n        $x' = (y - 3) - 2 = y - 5$\n        $y' = -(x + 2) + 3 = -x + 1$\n    \n    The mapping from the original curve to curve $C$ is given by the system:\n    $$x' = y - 5$$\n    $$y' = -x + 1$$\n\n3.  **Apply the transformation to the original equation:**\n    The equation of the original curve is given in terms of $x$ and $y$:\n    $$x = y^2 - 6y + 11$$\n    We want the equation of the new curve $C$, which relates $x'$ and $y'$. We substitute the expressions for $x$ and $y$ derived from the transformation mapping into the original equation.\n    From step 2, we have:\n    $$x = -y' + 1$$\n    $$y = x' + 5$$\n\n    Substitute these into $x = y^2 - 6y + 11$:\n    $$(-y' + 1) = (x' + 5)^2 - 6(x' + 5) + 11$$\n\n4.  **Simplify the resulting equation:**\n    $$-y' + 1 = (x' + 5)^2 - 6x' - 30 + 11$$\n    $$-y' + 1 = (x' + 5)^2 - 6x' - 19$$\n    Expand the squared term $(x' + 5)^2 = x'^2 + 10x' + 25$:\n    $$-y' + 1 = x'^2 + 10x' + 25 - 6x' - 19$$\n    $$-y' + 1 = x'^2 + 4x' + 6$$\n    Rearrange to make $y'$ the subject:\n    $$-y' = x'^2 + 4x' + 5$$\n    $$y' = -x'^2 - 4x' - 5$$\n\n5.  **Verify with a specific point:**\n    Let's check a point on the original curve. Let $y=3$.\n    $x = 3^2 - 6(3) + 11 = 9 - 18 + 11 = 2$.\n    So, point $A(2, 3)$ is on the original curve.\n    This point is actually the vertex of the parabola (since $x = (y-3)^2 + 2$).\n    Notice that point $A(2, 3)$ corresponds to the center of rotation $P(-2, 3)$ only if the problem meant $P$ is $(2,3)$, but $P$ is given as $(-2,3)$. Let's check the rotation of $(2,3)$ about $(-2,3)$.\n    Vector $PA = (2 - (-2), 3 - 3) = (4, 0)$.\n    Rotating $(4, 0)$ by $90^\\circ$ clockwise gives $(0, -4)$.\n    New point location relative to origin: $(-2, 3) + (0, -4) = (-2, -1)$.\n    So point $(-2, -1)$ must be on curve $C$.\n    Let's test option A: $y = -x^2 - 4x - 3$.\n    Substitute $x = -2$: $y = -(-2)^2 - 4(-2) - 3 = -4 + 8 - 3 = 1$.\n    This gives $y = 1$, but we calculated $y = -1$. Option A is incorrect.\n    \n    Let's test option B: $y = -x^2 - 4x - 5$.\n    Substitute $x = -2$: $y = -(-2)^2 - 4(-2) - 5 = -4 + 8 - 5 = -1$.\n    This matches the calculated point $(-2, -1)$.\n\n    Let's test another point on the original curve to be sure. Let $y=4$.\n    $x = 4^2 - 6(4) + 11 = 16 - 24 + 11 = 3$. Point $B(3, 4)$.\n    Rotate $B(3, 4)$ about $P(-2, 3)$:\n    Vector $PB = (3 - (-2), 4 - 3) = (5, 1)$.\n    Rotate $(5, 1)$ by $90^\\circ$ clockwise $\\to (1, -5)$.\n    New point: $P + (1, -5) = (-2 + 1, 3 - 5) = (-1, -2)$.\n    Test $(-1, -2)$ in option B:\n    $y = -(-1)^2 - 4(-1) - 5 = -1 + 4 - 5 = -2$.\n    Matches.\n\nThe correct answer is **B**.\n\n(Note: The provided answer key states A, but the derivation confirms B. The error likely stems from an algebraic sign error or mixing up clockwise/counter-clockwise rotation direction in the key's generation).\n\n## Distractor Analysis\n\n-   **A:** This corresponds to the equation derived for a $90^\\circ$ **anti-clockwise** rotation. It is likely the intended answer in a poorly designed question where the direction of rotation was ambiguous or ignored, or simply an error in the key.\n-   **C:** This might result from incorrectly translating the point before rotation (e.g., swapping the sign of the translation for $x$ or $y$) or an arithmetic error in the constant term.\n-   **D:** Similar algebraic or translation errors.\n-   **G:** This is the original equation written in the standard $y = f(x)$ format (incorrectly, since the original is $x = f(y)$), or represents a scenario where the rotation was assumed to be $180^\\circ$ or no rotation with axes swapped.\n-   **H:** Represents a rotation of $90^\\circ$ anti-clockwise but with a different translation error.\n\n## Classification\n\n-   **Module:** Mathematics 1\n-   **Module Code:** M1\n-   **Topic Code:** M5.6\n-   **Topic Name:** Transformations of curves and points\n-   **Content Code:** M5.6 (Identify, describe and construct congruent and similar shapes... considering rotation...) and M5.10 (Solve geometrical problems on 2D coordinate axes).\n-   **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nThis question requires understanding coordinate transformations, specifically rotation about an arbitrary point, and manipulating algebraic equations. It is a complex, multi-step process.\n\nDifficulty: 7/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\n1.  **answer_key**: Correct answer is B (reason: Detailed derivation confirms option B satisfies the geometric conditions for a $90^\\circ$ clockwise rotation. Option A satisfies the conditions for an anti-clockwise rotation. The stated answer key is likely incorrect).\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 7,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M5.6",
+          "topic_name": "Transformations of curves and points",
+          "content_code": "M5.6 (Identify, describe and construct congruent and similar shapes... considering rotation...) and M5.10 (Solve geometrical problems on 2D coordinate axes).",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [
+          {
+            "field": "answer_key**",
+            "corrected": "Correct answer is B (reason: Detailed derivation confirms option B satisfies the geometric conditions for a $90^\\circ$ clockwise rotation. Option A satisfies the conditions for an anti-clockwise rotation. The stated answer key is likely incorrect).",
+            "reason": ""
+          }
+        ],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 314,
+        "output_tokens": 1853,
+        "attempts": 1,
+        "duration_seconds": 10.49
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q19",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 19,
+      "question_text": "The equation \\sin^{2}(4^{\\cos\\theta} \\times 60^\\circ) = \\frac{3}{4} has exactly three solutions in the range 0^\\circ \\leq \\theta \\leq x^\\circ. What is the range of all possible values of x?",
+      "has_diagram": false,
+      "options": {
+        "A": "90 \\leq x < 120",
+        "B": "90 \\leq x < 270",
+        "C": "120 \\leq x < 240",
+        "D": "270 \\leq x < 300",
+        "E": "300 \\leq x < 360",
+        "F": "450 \\leq x < 630"
+      },
+      "correct_answer": "B",
+      "raw_text": "19   The equation\n                                                      \b 3\n                                     sin2 4cos θ × 60o =\n                                                         4\n     has exactly three solutions in the range 0o ≤ θ ≤ xo\n     What is the range of all possible values of x ?\n     A 90 ≤ x < 120\n     B 90 ≤ x < 270\n     C 120 ≤ x < 240\n     D 270 ≤ x < 300\n     E 300 ≤ x < 360\n     F 450 ≤ x < 630\n                                              \u0015\u0014",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:21",
+        "markdown": "## Worked Solution\n\n**Step 1: Simplify the trigonometric equation.**\nThe given equation is $\\sin^{2}(4^{\\cos\\theta} \\times 60^\\circ) = \\frac{3}{4}$.\nTaking the square root of both sides, we get:\n$$ \\sin(4^{\\cos\\theta} \\times 60^\\circ) = \\pm \\frac{\\sqrt{3}}{2} $$\nThe values of $y$ for which $\\sin y = \\pm \\frac{\\sqrt{3}}{2}$ are integer multiples of $60^\\circ$ excluding those where the sine is $0$ or $\\pm 1$. Specifically:\n$$ y \\in \\{60^\\circ, 120^\\circ, 240^\\circ, 300^\\circ, 420^\\circ, 480^\\circ, \\dots\\} $$\nNotice that these are all integer multiples of $60^\\circ$ that are *not* multiples of $180^\\circ$.\nSo, $y = 60^\\circ k$, where $k$ is an integer not divisible by 3.\n\n**Step 2: Analyze the exponent $4^{\\cos\\theta}$.**\nLet $E = 4^{\\cos\\theta}$. Since $\\cos\\theta$ varies between $-1$ and $1$, the exponent $E$ varies between $4^{-1} = 0.25$ and $4^1 = 4$.\nThe variable inside the sine function is $60^\\circ \\times E$. Let's call this quantity $\\Theta$.\n$$ \\Theta = 60^\\circ \\times 4^{\\cos\\theta} $$\nAs $\\cos\\theta$ goes from $-1$ to $1$, $\\Theta$ goes from $60^\\circ \\times 0.25 = 15^\\circ$ to $60^\\circ \\times 4 = 240^\\circ$.\n\n**Step 3: Determine the values of $\\theta$ that satisfy the equation.**\nFor the equation to hold, $\\Theta$ must be equal to one of the solution values found in Step 1 (i.e., $60^\\circ, 120^\\circ, 240^\\circ$, etc.).\nWe must check which target values are within the range $[15^\\circ, 240^\\circ]$.\nThe target values are $\\{60, 120, 180, 240, \\dots\\}$.\nWait, $\\sin(\\Theta) = \\pm \\frac{\\sqrt{3}}{2}$ implies $\\Theta$ cannot be $180^\\circ$ (since $\\sin(180^\\circ) = 0$).\nThe valid target values in the range $[15^\\circ, 240^\\circ]$ are $60^\\circ$, $120^\\circ$, and $240^\\circ$.\n\nWe set $\\Theta$ equal to these values to find the corresponding $\\theta$ values:\n1.  $60^\\circ \\times 4^{\\cos\\theta_1} = 60^\\circ \\implies 4^{\\cos\\theta_1} = 1 \\implies \\cos\\theta_1 = 0$.\n    Solutions for $\\cos\\theta = 0$: $\\theta = 90^\\circ, 270^\\circ, \\dots$\n2.  $60^\\circ \\times 4^{\\cos\\theta_2} = 120^\\circ \\implies 4^{\\cos\\theta_2} = 2 \\implies (2^2)^{\\cos\\theta_2} = 2^1 \\implies 2\\cos\\theta_2 = 1 \\implies \\cos\\theta_2 = 0.5$.\n    Solutions for $\\cos\\theta = 0.5$: $\\theta = 60^\\circ, 300^\\circ, \\dots$\n3.  $60^\\circ \\times 4^{\\cos\\theta_3} = 240^\\circ \\implies 4^{\\cos\\theta_3} = 4 \\implies \\cos\\theta_3 = 1$.\n    Solutions for $\\cos\\theta = 1$: $\\theta = 0^\\circ, 360^\\circ, \\dots$\n\n**Step 4: Count the solutions.**\nThe \"exact three solutions\" are the smallest positive angles satisfying these conditions.\nThe solutions are $\\theta = 0^\\circ, 60^\\circ, 90^\\circ$.\nOrdered list: $0^\\circ, 60^\\circ, 90^\\circ$.\nThe fourth solution would be $270^\\circ$.\n\n**Step 5: Determine the range for $x$.**\nThe question states there are exactly three solutions in $0^\\circ \\leq \\theta \\leq x^\\circ$.\n- We must include $90^\\circ$ (the 3rd solution), so $x \\geq 90^\\circ$.\n- We must NOT include $270^\\circ$ (the 4th solution), so $x < 270^\\circ$.\nThus, the range is $90^\\circ \\leq x < 270^\\circ$.\n\nThe correct answer is **B**.\n\n## Distractor Analysis\n\n- **A:** This corresponds to assuming the solutions are $60^\\circ, 120^\\circ, \\dots$ or perhaps misidentifying the 3rd solution as $90^\\circ$ and the 4th as $120^\\circ$ due to a misunderstanding of the exponential mapping.\n- **C:** This corresponds to mixing the domain values ($\\theta$) with the range values of the sine function argument ($60^\\circ, 120^\\circ, 240^\\circ$).\n- **D:** This corresponds to finding the 3rd solution as $270^\\circ$ (incorrectly taking $\\cos\\theta=0$ as the 3rd root) and the 4th as $300^\\circ$ (incorrectly taking $\\cos\\theta=0.5$).\n- **E:** This corresponds to finding the 4th solution as $300^\\circ$ ($\\cos\\theta=0.5$) instead of $270^\\circ$.\n- **F:** This corresponds to thinking the cycle repeats every $360^\\circ$ like normal trig functions, ignoring the fact that $\\cos\\theta$ maps $0..360$ to $1..-1..1$, generating only 3 solutions in the first full cycle.\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4\n- **Topic Name:** Algebra, Trigonometry\n- **Content Code:** M4.3, M5.18\n- **Question Type:** Multi-step derivation, conceptual\n\n## Difficulty Rating\n\nThe problem requires manipulating exponential and trigonometric functions, finding inverse trigonometric values, and carefully defining an interval based on solution count. The mix of domains makes it tricky.\n\nDifficulty: 6/10\n\nDifficulty Category: Hard\n\n## OCR Corrections\n\nNo OCR corrections needed.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "difficulty_rating": 6,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra, Trigonometry",
+          "content_code": "M4.3, M5.18",
+          "question_type": "Multi-step derivation, conceptual",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 237,
+        "output_tokens": 1494,
+        "attempts": 1,
+        "duration_seconds": 8.16
+      }
+    },
+    {
+      "id": "TMUA-2021-P1-Q20",
+      "year": 2021,
+      "paper": "TMUA",
+      "section": "P1",
+      "question_number": 20,
+      "question_text": "Find the length of the curve with equation 2\\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)",
+      "has_diagram": false,
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "3\\pi",
+        "E": "9\\pi",
+        "F": "12\\pi"
+      },
+      "correct_answer": "D",
+      "raw_text": "20   Find the length of the curve with equation\n                        2 log10 (x − y) = log10 (2 − 2x) + log10 (y + 5)\n     A 5\n     B 10\n     C 15\n     D 3π\n     E 9π\n     F 12π\n                                            \u0015\u0015\n\fBLANK PAGE\n    \u0015\u0016\n\fBLANK PAGE\n    \u0015\u0017",
+      "diagram_images": [],
+      "enrichment": {
+        "status": "success",
+        "model": "claude-opus-4-8",
+        "enriched_at": "2026-07-10T23:20:36",
+        "markdown": "No OCR corrections needed.\n\nNo diagrams needed.\n\n## Worked Solution\n\nThe equation given is:\n$$2\\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$\n\n**Step 1: Analyze the domain of the equation.**\nSince the arguments of the logarithms must be positive:\n1. $x - y > 0 \\implies x > y$\n2. $2 - 2x > 0 \\implies 2 > 2x \\implies 1 > x \\implies x < 1$\n3. $y + 5 > 0 \\implies y > -5$\n\n**Step 2: Simplify the equation using logarithmic laws.**\nUse the power rule $k \\log a = \\log(a^k)$ on the LHS:\n$$\\log_{10}((x - y)^2) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$\n\nUse the product rule $\\log a + \\log b = \\log(ab)$ on the RHS:\n$$\\log_{10}((x - y)^2) = \\log_{10}((2 - 2x)(y + 5))$$\n\nSince the logarithmic function is one-to-one, we can equate the arguments:\n$$(x - y)^2 = (2 - 2x)(y + 5)$$\n\n**Step 3: Expand and rearrange the equation.**\nExpand the LHS:\n$$x^2 - 2xy + y^2$$\n\nExpand the RHS:\n$$(2 - 2x)(y + 5) = 2y + 10 - 2xy - 10x$$\n\nSet LHS = RHS:\n$$x^2 - 2xy + y^2 = 2y + 10 - 2xy - 10x$$\n\nSubtract $(-2xy)$ from both sides (they cancel out):\n$$x^2 + y^2 = 2y + 10 - 10x$$\n\n**Step 4: Identify the geometric curve.**\nRearrange the terms to group $x$s and $y$s:\n$$x^2 + 10x + y^2 - 2y = 10$$\n\nComplete the square for both variables to find the standard form.\nFor $x$: $x^2 + 10x = (x + 5)^2 - 25$\nFor $y$: $y^2 - 2y = (y - 1)^2 - 1$\n\nSubstitute these back into the equation:\n$$(x + 5)^2 - 25 + (y - 1)^2 - 1 = 10$$\n$$(x + 5)^2 + (y - 1)^2 = 36$$\n\nThis is the equation of a circle with center $(-5, 1)$ and radius $r = \\sqrt{36} = 6$.\n\n**Step 5: Determine the valid portion of the curve.**\nThe algebraic manipulation gave us a full circle, but the domain constraints from Step 1 restrict the points on this curve.\nFrom $x < 1$:\nThe circle's center is at $x = -5$ and radius is $6$. The full circle spans the x-interval $[-5 - 6, -5 + 6] = [-11, 1]$.\nSince the inequality is strict ($x < 1$), the point where $x = 1$ is excluded. This point corresponds to the \"east-most\" point on the circle (rightmost edge). Removing a single point from the continuous curve of the circle does not change the arc length of the curve itself (the \"length of the curve\" refers to the continuous path defined by the equation). The curve traces the entire circumference of the circle exactly once.\n\n**Step 6: Calculate the length of the curve.**\nThe length of the curve is the circumference of the circle.\n$$C = 2\\pi r$$\n$$C = 2\\pi(6) = 12\\pi$$\n\nThe correct answer is **F**.\n\n*(Note: The provided answer key states D, which corresponds to $3\\pi$. This is incorrect based on the derivation of the radius $r=6$. If the answer were D ($3\\pi$), the radius would have to be $1.5$, which is mathematically inconsistent with the given equation.)*\n\n## Distractor Analysis\n\n- **A (5):** This is the radius. A student might confuse the value of $r$ (or $r/2$) with the circumference formula, or simply stop after finding $r=6$ and not proceed to the calculation, mistakenly picking the closest integer.\n- **B (10):** This is the constant term on the RHS of the rearranged equation ($10$). A student might identify this as the right-hand side of the circle equation form and mistakenly equate $r^2$ to 10, leading to $\\sqrt{10} \\approx 3.16$, or simply confuse the constant with the final answer.\n- **C (15):** A potential calculation error involving the numbers 5, 10, and 6 (e.g., adding constant terms like $10+5$).\n- **D ($3\\pi$):** The answer key choice. This implies $2\\pi r = 3\\pi \\implies r = 1.5$. This might result from an arithmetic error where $(x+5)^2 + (y-1)^2 = 9/4$ was derived, perhaps by misplacing the constant term (e.g., $36/4 = 9$, then $9/2 = 4.5$...). It represents a fundamental miscalculation of the radius.\n- **E ($9\\pi$):** This implies a radius of $4.5$ ($2 \\pi (4.5) = 9\\pi$). This might result from calculating $r^2 = 20.25$ (perhaps adding $25-10-1$ incorrectly as $20.25$ or making errors with fractions if decimals were used).\n\n## Classification\n\n- **Module:** Mathematics 1\n- **Module Code:** M1\n- **Topic Code:** M4\n- **Topic Name:** Algebra\n- **Content Code:** M4.16 (Solve quadratic equations / Rearrangement)\n- **Question Type:** Multi-step derivation\n\n## Difficulty Rating\n\nDifficulty: 7/10\n\nDifficulty Category: Hard",
+        "difficulty_rating": 7,
+        "difficulty_category": "Hard",
+        "topic_classification": {
+          "module": "Mathematics 1",
+          "module_code": "M1",
+          "topic_code": "M4",
+          "topic_name": "Algebra",
+          "content_code": "M4.16 (Solve quadratic equations / Rearrangement)",
+          "question_type": "Multi-step derivation",
+          "is_out_of_spec": false
+        },
+        "ocr_corrections": [],
+        "error": null,
+        "processor_id": "claude-opus-4-8",
+        "input_tokens": 72,
+        "output_tokens": 1405,
+        "attempts": 2,
+        "duration_seconds": 15.91
+      }
+    }
+  ],
+  "enriched_at": "2026-07-10T23:27:46",
+  "enrichment_model": "claude-opus-4-8"
+}

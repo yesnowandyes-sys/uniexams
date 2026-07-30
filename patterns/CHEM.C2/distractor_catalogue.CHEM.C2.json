@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C2",
+  "topic_name": "The Periodic Table",
+  "module_code": "C",
+  "corpus_question_count": 6,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Misapplied Valency Prediction",
+      "frequency": 2,
+      "example_question_id": "Q3, Q5",
+      "why_effective": "Exploits the confusion between Group number and valency electrons for different block elements. Students often memorise 'Group 1 = +1 charge' and 'Group 13 = +3 charge' but fail to apply the rule that ionic charge = Group number for main groups. In Q3, students might incorrectly predict ZBr (Group 1) is +1, but then doubt if Br is -1, leading to confusion. In Q5, assuming Group 13 implies +2 charge instead of +3 leads to incorrect oxide formula XO.",
+      "generation_strategy": "Present an unfamiliar or hypothetical Group number element and ask for the formula of its oxide or halide. Include distractors that use off-by-one valency errors (e.g., Group 2 element forming XO instead of XO2, or Group 13 forming XO)."
+    },
+    {
+      "distractor_type": "Isotope Abundance Calculation Inversion",
+      "frequency": 2,
+      "example_question_id": "Q3, Q5",
+      "why_effective": "Relies on the intuitive but incorrect assumption that the relative atomic mass (Ar) is closer to the isotope with higher abundance. Students see Ar=69.7 and Isotopes 69/71 and assume >70% is 69, but actually, 69.7 is closer to 69 than 71, so the abundance of 69 must be >50%. However, the 'more than 70%' check requires calculation: (x*69 + (100-x)*71)/100 = 69.7 => x=65. Distractors include the intuitive (but wrong) high percentages.",
+      "generation_strategy": "Provide an Ar value very close to one isotope (e.g., Ar 69.7 for 69/71) where the lower mass isotope is the lighter one. Ask for a percentage threshold that is just above the actual calculated value (e.g., actual is 65%, ask if >70%)."
+    },
+    {
+      "distractor_type": "Trend Reversal Confusion",
+      "frequency": 2,
+      "example_question_id": "Q6",
+      "why_effective": "Tests specific exceptions to Period 2/3 trends (e.g., Mg vs Al, P vs S). Students memorise 'IE increases across a period' but forget the drop from Group 2 to 13 (s-p subshell shielding) and Group 15 to 16 (pairing energy). Distractors place elements in strictly increasing order (e.g., Mg < Al < S < P < F), ignoring these dips.",
+      "generation_strategy": "Use a set of 5 elements including the pairs (Mg,Al) or (P,S). Provide values showing the dips. Create distractor options that sort them strictly by atomic number or a smooth curve."
+    },
+    {
+      "distractor_type": "Vertical vs Horizontal Neighbour Confusion",
+      "frequency": 1,
+      "example_question_id": "Q4",
+      "why_effective": "Q4 describes Element Q (Period 3, Group 17) and asks about a neighbour with one fewer proton. This neighbour is S (Period 3, Group 16). A common error is confusing 'one fewer electron/proton' with moving up a Group (e.g., assuming it becomes F in Period 2) or treating it as a metal. The complex wording in options (A vs C) tests spatial reasoning.",
+      "generation_strategy": "Define an element by electron shells (e.g., 'needs 1 electron to fill 3rd shell' = Cl/Group 17). Ask for properties of the element with one fewer proton. Include distractors describing the element one period up (wrong period) or group right (alkali metal confusion)."
+    },
+    {
+      "distractor_type": "Reactivity and Physical Property Mismatch",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Q1 requires correlating chemical reactivity trends (Li < Na < K for metals, F > Cl > Br for non-metals) with physical properties (Boiling Point/Melting Point). A distractor might pair the 'least reactive' metal (Li) with 'lowest boiling point' halogen (F), but the question asks about a specific compound (LiBr) formed from specific elements.",
+      "generation_strategy": "Select a compound (e.g., NaCl). Ask to evaluate statements linking the reactivity of the constituent metal/non-metal to physical properties of the elements themselves. Include statements that are true for the elements but false for the specific compound pair."
+    }
+  ],
+  "_raw": null
+}

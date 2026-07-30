@@ -1,0 +1,37 @@
+{
+  "topic_key": "CHEM.C14",
+  "topic_name": "Metals",
+  "module_code": "C",
+  "corpus_question_count": 2,
+  "corpus_backed": false,
+  "scenarios": [
+    {
+      "scenario_description": "A metal (X) is found in nature as the free element (uncombined), while another metal (Y) is found only as a stable sulfide ore that requires roasting before reduction.",
+      "key_insight": "Native (uncombined) metals (like Gold) are at the very bottom of the reactivity series (unreactive). Metals found as compounds (sulfides/oxides) are higher up. If a metal requires roasting (conversion to oxide then reduction), it is distinctly more reactive than the native metal.",
+      "discrimination_factors": [
+        "Understanding that stability of the ore correlates inversely with metal reactivity.",
+        "Distinguishing between the state of the element (native vs ore) and the extraction process."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A metal oxide (MO) reacts with Carbon to produce Metal M and CO2, but Metal M does not react with dilute HCl. Metal T does react with dilute HCl to produce H2, but Metal T cannot displace Metal M from M-sulfate.",
+      "key_insight": "This creates a logical conflict if one assumes linear hierarchy based solely on acid reactions. The resolution requires recognizing that the 'Carbon Reduction' line and the 'Acid Reaction' line are different. M is unreactive with acid but *more* reactive than T (since T cannot displace M). T reacts with acid, placing T > H. M is reduced by carbon (M < C). This forces the order: C > M > T > H (conceptually), highlighting that 'reduced by carbon' covers a wide range including metals less reactive than Hydrogen.",
+      "discrimination_factors": [
+        "Handling conflicting indicators (Acid reaction vs Displacement).",
+        "Recognizing that displacement is the strict arbiter of order between two specific metals, overriding general rules about acids or carbon."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "You are told Metal A displaces Metal B from a compound of B, and Metal B displaces Metal C. However, Metal A does not react with Water, while Metal C reacts violently with Cold Water.",
+      "key_insight": "This tests the consistency of the reactivity series. If C reacts violently with cold water, C is very high (e.g., K, Na). If A does not react with water (but might react with steam/acid), A is lower than C. If A > B > C, and C > A, a contradiction arises. The student must identify that the initial premise (A displacing B...) or the identification of 'Water reaction' as the ultimate trump card must be reconciled. Actually, if C reacts with cold water, C is most reactive. If A displaces B and B displaces C, then A > B > C. If C is actually most reactive based on water data, the displacement claim 'B displaces C' must be impossible. The 'Aha' is identifying that the displacement statement 'B displaces C' must be false based on the physical property of C.",
+      "discrimination_factors": [
+        "Cross-referencing qualitative physical properties (water reaction) with chemical displacement series.",
+        "Detecting impossibility/illogical constraints in the question data."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,21 @@
+# Dependencies & build artifacts
+node_modules/
+.next/
+__pycache__/
+*.pyc
+
+# Databases, FAISS index, and DB backups (regenerated at runtime; large binaries)
+*.db
+*.db.bak-*
+data/faiss_index/
+
+# Logs
+logs/
+
+# Secrets — never commit API keys or credentials
+.openai-api-key
+*-api-key
+*.key
+*.pem
+.env
+.env.*

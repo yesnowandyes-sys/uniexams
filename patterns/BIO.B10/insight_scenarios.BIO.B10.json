@@ -1,0 +1,49 @@
+{
+  "topic_key": "BIO.B10",
+  "topic_name": "Ecosystems",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A student investigates a field using quadrats. They count 5 daisies in a $1\text{m}^2$ quadrat and conclude the density is $5\text{ plants/m}^2$. They then state that if they repeat this 10 times, the population size is $50$, regardless of whether the quadrats are placed randomly or along a belt transect.",
+      "key_insight": "Understanding the difference between *Density* (local count per area), *Frequency* (probability of occurrence), and *Population Size* (total estimate). Crucially, recognizing that systematic sampling (belt transect) does not yield a valid estimate for a large area unless the transect is representative of the whole habitat's heterogeneity.",
+      "discrimination_factors": [
+        "Distinguishing between sampling methods (Random vs Systematic)",
+        "Understanding statistical validity and bias",
+        "Calculation of density vs frequency"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Analyzing an energy flow diagram where a cow eats $3000\text{ kJ}$ of grass, excreting $1860\text{ kJ}$ in faeces and losing $1020\text{ kJ}$ via respiration. The student is asked to calculate the percentage of energy used for growth.",
+      "key_insight": "Recognizing that 'Net Primary Productivity' or 'Assimilation' must be calculated *before* growth efficiency can be determined. The student must subtract faecal loss ($3000 - 1860 = 1140$) to find assimilated energy, then compare growth ($120$) to this figure ($120/1140$), rather than comparing growth to total intake ($120/3000$).",
+      "discrimination_factors": [
+        "Identifying the correct denominator for efficiency calculations",
+        "Understanding ecological definitions of consumption, assimilation, and egestion"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A graph shows oxygen levels in a river plummeting to zero then slowly rising. Algae numbers are high, then crash. Bacterial numbers are low, then spike, then drop. Fish are absent.",
+      "key_insight": "The 'Oxygen Sag' dynamics. The critical insight is that oxygen depletion is primarily driven by bacterial decomposition of organic matter (not respiration of the algae or fish), and the recovery phase is limited by the re-aeration rate of the river and the reduction in bacterial food source as the organic matter is consumed.",
+      "discrimination_factors": [
+        "Causal reasoning in pollution cycles",
+        "Interspecific dependency (Bacteria population dynamics affecting Oxygen availability)",
+        "Identifying limiting factors in ecosystem recovery"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A graph shows Moose and Wolf populations over 50 years. The Moose population peaks, then the Wolf population peaks. However, in one specific year, the Wolf population exceeds the Moose population.",
+      "key_insight": "Predator-Prey cycles are Phase-Lagged, but real-world data is 'noisy'. The student must distinguish between the general trend (Wolves eat Moose $\rightarrow$ Moose drop $\rightarrow$ Wolves drop) and instantaneous data points where migration, disease, or human intervention might break the rule.",
+      "discrimination_factors": [
+        "Interpreting time-series data with phase lags",
+        "Differentiating between 'Always' trends and specific observations",
+        "Understanding carrying capacity and environmental resistance"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,38 @@
+{
+  "topic_key": "CHEM.C15",
+  "topic_name": "Kinetic/Particle theory",
+  "module_code": "C",
+  "corpus_question_count": 1,
+  "corpus_backed": false,
+  "distractors": [
+    {
+      "distractor_type": "Absolute Statement Confusion",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Exploits the nuance between *average* kinetic energy (which is constant at a fixed temperature) and the kinetic energy of *individual* particles (which varies). Students often memorize \"Temperature is proportional to KE\" without understanding the statistical distribution of molecular speeds.",
+      "generation_strategy": "Create statements that apply aggregate properties (average KE, temperature) to individual particles (e.g., 'Every particle has the same energy'). Alternatively, describe relationships as absolute rather than proportional."
+    },
+    {
+      "distractor_type": "Misapplied Proportionality",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Targets the algebraic relationship between mass and velocity when Kinetic Energy ($E_k = \frac{1}{2}mv^2$) is constant. Students may incorrectly assume linear relationships ($v \\propto m$) or inverse relationships without the square root ($v \\propto 1/m$).",
+      "generation_strategy": "Require students to compare variables in an equation with an exponent (e.g., $v^2$, $1/r^2$). Offer distractors with the incorrect exponent (e.g., linear factor instead of square root) or incorrect directionality."
+    },
+    {
+      "distractor_type": "Trend Reversal",
+      "frequency": 1,
+      "example_question_id": "Q1",
+      "why_effective": "Leverages counter-intuitive physics concepts (like increased temperature causing increased diffusion speed) or relies on weak recall of definitions. It acts as a trap for students who confuse heating with 'slowing down' (perhaps conflating with density) or who simply guess based on wording.",
+      "generation_strategy": "State a relationship that is the exact opposite of the defined physical law (e.g., Temperature increases $\to$ Energy decreases)."
+    },
+    {
+      "distractor_type": "Predictive Quantitative Error",
+      "frequency": "rare",
+      "example_question_id": "Q1",
+      "why_effective": "Tests specific calculation skills. In the example, the mass ratio of He (4) to Ne (20) is 1:5. The speed ratio is $\\sqrt{5} \\approx 2.23$. A distractor claiming the speed is '5 times' exploits the student's failure to take the square root of the mass ratio.",
+      "generation_strategy": "Calculate the correct answer using a power law (e.g., square, square root), then generate a distractor using the un-transformed base value."
+    }
+  ],
+  "parse_repaired": true
+}

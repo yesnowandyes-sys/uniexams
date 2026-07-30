@@ -1,0 +1,50 @@
+{
+  "topic_key": "CHEM.C9",
+  "topic_name": "Acids, bases and salts",
+  "module_code": "C",
+  "corpus_question_count": 9,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Comparing 1 mol dm\u207b\u00b3 Hydrochloric Acid and 1 mol dm\u207b\u00b3 Ethanoic Acid.",
+      "key_insight": "While both acids have the same concentration and pH-neutralizing capacity (stoichiometry), they differ fundamentally in *kinetics* (reaction rate via Magnesium) and *ion concentration* (conductivity). Students must realize that 'Weak' does not mean 'dilute' or 'unable to neutralize'.",
+      "discrimination_factors": [
+        "Distinguishing thermodynamics (neutralization volume) from kinetics (reaction rate)",
+        "Understanding conductivity as a proxy for ion concentration",
+        "Rejecting the misconception that weak acids cannot react fully with bases"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating antacid dosage for a specific pH range (pH 2-3) instead of full neutrality.",
+      "key_insight": "Standard titration logic teaches students to go to the equivalence point (pH 7). This scenario requires stopping the reaction 'early' (leaving excess acid) or recognizing that adding enough antacid to reach pH 7 might be harmful/unnecessary, demanding calculation of *remaining* H+ rather than *total* H+.",
+      "discrimination_factors": [
+        "Inverse application of stoichiometry (calculating moles to leave behind)",
+        "Ability to select the correct target value from a range",
+        "Resisting the automatic reflex to neutralize completely"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Determining pH of 0.1 mol dm\u207b\u00b3 Sulfuric Acid versus Hydrochloric Acid.",
+      "key_insight": "Sulfuric acid is diprotic. Assuming [H+] = [Acid] fails for the second proton. A student must recognize that 0.1M H2SO4 is effectively 'stronger' (lower pH) than 0.1M HCl, even if the first dissociation is strong and second is weak, simply because it contributes *more than one* H+.",
+      "discrimination_factors": [
+        "Recalling polyprotic nature of common mineral acids",
+        "Relating molecular formula to H+ yield",
+        "Estimating pH impact of multi-proton release"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Qualitative analysis of a gas (X) reacting with H2 to form an acid product (Y) that reacts with AgNO3.",
+      "key_insight": "This requires a synthesis of Organic/Inorganic property knowledge. The student must identify: 1. Non-metals forming acids (Halogens -> HX), 2. Solubility rules (AgCl is white, AgBr is cream), and 3. Reactivity series (Z must be a metal above H to react with acid to produce H2, or a base to neutralize).",
+      "discrimination_factors": [
+        "Recall of specific colors of Silver Halides (White vs Cream)",
+        "Identifying elements that form acidic solutions with Hydrogen",
+        "Linking X, Y, and Z through a multi-step reaction pathway"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

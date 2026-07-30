@@ -1,0 +1,55 @@
+{
+  "topic_key": "PHYS.P4",
+  "topic_name": "Thermal physics",
+  "module_code": "P",
+  "corpus_question_count": 28,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A scenario involves a black ball at 20\u00b0C and a shiny ball at 40\u00b0C in a room. Students are asked which emits thermal radiation at the greatest rate.",
+      "key_insight": "While a dull (black) surface has a higher emissivity ($\\epsilon$) than a shiny one, the rate of radiation is proportional to $T^4$. The temperature dependence dominates. $1 \times (313)^4 > 0.1 \times (293)^4$. The hotter, shiny object radiates more total power.",
+      "discrimination_factors": [
+        "Identifying the Stefan-Boltzmann law dependence on Temperature",
+        "Resisting the heuristic 'Black = Good Emitter' when surface property is secondary to temperature"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A beaker of water at 25\u00b0C has ice added to it. Students must determine the final temperature or state of the mixture.",
+      "key_insight": "The energy required to melt ice ($L_f$) is distinct from the energy required to change temperature ($mc\\Delta T$). Students must check if the energy available from the warm water is sufficient to melt all the ice before calculating a temperature rise. If the ice fully melts, the final $T$ is found by calorimetry; if not, the final $T$ is 0\u00b0C.",
+      "discrimination_factors": [
+        "Managing phase change energy bookkeeping",
+        "Setting up the inequality $m_{water}c\\Delta T > m_{ice}L_f$"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "A star expands (radius increases by 100x) and cools (surface temperature halves). Students calculate the new total power radiated.",
+      "key_insight": "This tests the manipulation of compound proportionalities in $P = k R^2 T^4$. Students must calculate the combined effect: $(100^2) \times (0.5^4) = 10000 \times 0.0625$. Many students will linearize one or both variables.",
+      "discrimination_factors": [
+        "Handling large integer powers and roots (4th powers)",
+        "Synthesizing multiple variable changes simultaneously"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A system of two copper bars in series (or a composite wall) has different temperatures at the boundaries. Students are asked to identify the correct Temperature vs. Distance graph.",
+      "key_insight": "In steady state, the rate of heat flow $dQ/dt$ is constant through the materials. For materials of equal thickness, the temperature gradient $\\Delta T / x$ depends on thermal conductivity. A steeper gradient is required for the insulator. The graph must show a 'kink' (change in slope), not a straight line.",
+      "discrimination_factors": [
+        "Visualizing thermal gradients",
+        "Understanding the relationship between conductivity and slope in thermal equilibrium graphs"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "An electrical heater warms a metal block in air. The temperature rises by a known amount in a known time. Students are asked to find the energy lost to the surroundings.",
+      "key_insight": "Energy supplied ($P \times t$) is partitioned into energy stored ($mc\\Delta T$) and energy lost. Students cannot simply use $mc\\Delta T$ or $Pt$. They must find the difference: $E_{lost} = E_{in} - E_{stored}$.",
+      "discrimination_factors": [
+        "Applying conservation of energy to open systems",
+        "Avoiding the 'obvious' answer that represents only total input energy"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

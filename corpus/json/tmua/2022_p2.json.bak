@@ -1,0 +1,418 @@
+{
+  "source_file": "TMUA-2022-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2022,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2022-P2-Q1",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1 Determine the number of stationary points on the curve with equation y ൌ 3x4 + 4x3 + 6x2 – 5",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4 3"
+      },
+      "correct_answer": "B",
+      "raw_text": "1   Determine the number of stationary points on the curve with equation\n                                       y ൌ 3x4 + 4x3 + 6x2 – 5\n    A   0\n    B   1\n    C   2\n    D   3\n    E   4\n                                               3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q2",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2 Find the coefficient of the x 5 term in the expansion of 5 5 (1+ x ) × ¦x i =0 i",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "16",
+        "D": "25",
+        "E": "32 4"
+      },
+      "correct_answer": "E",
+      "raw_text": "2   Find the coefficient of the x 5 term in the expansion of\n                                                           5\n                                                      5\n                                              (1+ x ) ×   ¦x\n                                                          i =0\n                                                                 i\n    A   1\n    B   5\n    C   16\n    D   25\n    E   32\n                                                  4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q3",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3 Consider the following statement about the positive integer n if n is prime, then n 2 + 2 is not prime Which of the following is a counterexample to this statement? I nൌ2 II nൌ3 III nൌ4",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   Consider the following statement about the positive integer n\n                                if n is prime, then n 2 + 2 is not prime\n    Which of the following is a counterexample to this statement?\n         I       nൌ2\n         II      nൌ3\n         III     nൌ4\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G II and III only\n    H I, II and III\n                                                5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q4",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4 The point P has coordinates ( p, q ), and the equation of a circle is x2 + 2fx + y2 + 2gy + h ൌ 0 where f, g, h, p and q are all real constants. Let L be the distance between the centre of the circle and the point P. Which one of the following is sufficient on its own to be able to calculate L ?",
+      "has_diagram": false,
+      "options": {
+        "A": "the values of f, g and h",
+        "B": "the values of f, g, p and q",
+        "C": "the values of f, h, p and q",
+        "D": "the values of g, h, p and q",
+        "E": "none of the options A-D is sufficient on its own 6"
+      },
+      "correct_answer": "B",
+      "raw_text": "4   The point P has coordinates ( p, q ), and the equation of a circle is\n                                        x2 + 2fx + y2 + 2gy + h ൌ 0\n    where f, g, h, p and q are all real constants.\n    Let L be the distance between the centre of the circle and the point P.\n    Which one of the following is sufficient on its own to be able to calculate L ?\n    A   the values of f, g and h\n    B   the values of f, g, p and q\n    C   the values of f, h, p and q\n    D   the values of g, h, p and q\n    E   none of the options A-D is sufficient on its own\n                                                     6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q5",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5 A straight line L passes through (1, 2). Let P be the statement if the y-intercept of L is negative, then the x-intercept of L is positive. Which of the following statements must be true? I P II the converse of P III the contrapositive of P",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 7"
+      },
+      "correct_answer": "F",
+      "raw_text": "5   A straight line L passes through (1, 2).\n    Let P be the statement\n              if the y-intercept of L is negative, then the x-intercept of L is positive.\n    Which of the following statements must be true?\n          I      P\n          II     the converse of P\n          III    the contrapositive of P\n    A   none of them\n    B   I only\n    C   II only\n    D   III only\n    E   I and II only\n    F   I and III only\n    G II and III only\n    H I, II and III\n                                                      7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q6",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6 A list consists of n integers. Consider the following statements: P: n is odd. Q: The median of the list is one of the numbers in the list. Which one of the following is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "P is necessary and sufficient for Q.",
+        "B": "P is necessary but not sufficient for Q.",
+        "C": "P is sufficient but not necessary for Q.",
+        "D": "P is not necessary and not sufficient for Q. 8"
+      },
+      "correct_answer": "C",
+      "raw_text": "6   A list consists of n integers.\n    Consider the following statements:\n           P:   n is odd.\n           Q:   The median of the list is one of the numbers in the list.\n    Which one of the following is true?\n    A   P is necessary and sufficient for Q.\n    B   P is necessary but not sufficient for Q.\n    C   P is sufficient but not necessary for Q.\n    D   P is not necessary and not sufficient for Q.\n                                                   8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q7",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7 Consider the following claim: The difference between two consecutive positive cube numbers is always prime. Here is an attempted proof of this claim: I ( x + 1)3 ൌ x 3 + 3x 2 + 3x + 1 II Taking x to be a positive integer, the difference between two consecutive cube numbers can be expressed as ( x + 1)3 – x 3 ൌ 3x 2 + 3x + 1 III It is impossible to factorise 3x 2 + 3x + 1 into two linear factors with integer coefficients because its discriminant is negative. IV Therefore for every positive integer value of x the integer 3x 2 + 3x + 1 cannot be factorised. V Hence, the difference between two consecutive cube numbers will always be prime. Which of the following best describes this proof ?",
+      "has_diagram": false,
+      "options": {
+        "A": "The proof is completely correct, and the claim is true.",
+        "B": "The proof is completely correct, but there are counterexamples to the claim.",
+        "C": "The proof is wrong, and the first error occurs on line I.",
+        "D": "The proof is wrong, and the first error occurs on line II.",
+        "E": "The proof is wrong, and the first error occurs on line III.",
+        "F": "The proof is wrong, and the first error occurs on line IV.",
+        "G": "The proof is wrong, and the first error occurs on line V. 9"
+      },
+      "correct_answer": "F",
+      "raw_text": "7   Consider the following claim:\n             The difference between two consecutive positive cube numbers is always prime.\n    Here is an attempted proof of this claim:\n         I       ( x + 1)3 ൌ x 3 + 3x 2 + 3x + 1\n         II      Taking x to be a positive integer, the difference between two consecutive cube\n                 numbers can be expressed as ( x + 1)3 – x 3 ൌ 3x 2 + 3x + 1\n         III     It is impossible to factorise 3x 2 + 3x + 1 into two linear factors with integer\n                 coefficients because its discriminant is negative.\n         IV      Therefore for every positive integer value of x the integer 3x 2 + 3x + 1 cannot be\n                 factorised.\n         V       Hence, the difference between two consecutive cube numbers will always be prime.\n    Which of the following best describes this proof ?\n    A   The proof is completely correct, and the claim is true.\n    B   The proof is completely correct, but there are counterexamples to the claim.\n    C   The proof is wrong, and the first error occurs on line I.\n    D   The proof is wrong, and the first error occurs on line II.\n    E   The proof is wrong, and the first error occurs on line III.\n    F   The proof is wrong, and the first error occurs on line IV.\n    G The proof is wrong, and the first error occurs on line V.\n                                                   9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q8",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8 A selection, S, of n terms is taken from the arithmetic sequence 1, 4, 7, 10, … , 70. Consider the following statement: ( ∗) There are two distinct terms in S whose sum is 74. What is the smallest value of n for which ( ∗) is necessarily true?",
+      "has_diagram": false,
+      "options": {
+        "A": "12",
+        "B": "13",
+        "C": "14",
+        "D": "21",
+        "E": "22",
+        "F": "23 10"
+      },
+      "correct_answer": "C",
+      "raw_text": "8   A selection, S, of n terms is taken from the arithmetic sequence 1, 4, 7, 10, … , 70.\n    Consider the following statement:\n                         ( ∗) There are two distinct terms in S whose sum is 74.\n    What is the smallest value of n for which ( ∗) is necessarily true?\n    A   12\n    B   13\n    C   14\n    D   21\n    E   22\n    F   23\n                                                 10",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q9",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9 Consider the following statement: (∗) For all real numbers x, if x < k then x 2 < k What is the complete set of values of k for which (∗) is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "no real numbers",
+        "B": "k>0",
+        "C": "k<1",
+        "D": "k1",
+        "E": "0<k<1",
+        "F": "0<k1",
+        "G": "all real numbers 11"
+      },
+      "correct_answer": "A",
+      "raw_text": "9   Consider the following statement:\n                            (∗) For all real numbers x, if x < k then x 2 < k\n    What is the complete set of values of k for which (∗) is true?\n    A   no real numbers\n    B   k>0\n    C   k<1\n    D   k1\n    E   0<k<1\n    F   0<k1\n    G all real numbers\n                                                 11",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q10",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10 Which of the following statements is/are true? I For all real numbers x and for all positive integers n, x < n II For all real numbers x, there exists a positive integer n such that x < n III There exists a real number x such that for all positive integers n, x < n",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 12"
+      },
+      "correct_answer": "G",
+      "raw_text": "10   Which of the following statements is/are true?\n          I       For all real numbers x and for all positive integers n, x < n\n          II      For all real numbers x, there exists a positive integer n such that x < n\n          III     There exists a real number x such that for all positive integers n, x < n\n     A   none of them\n     B   I only\n     C   II only\n     D   III only\n     E   I and II only\n     F   I and III only\n     G II and III only\n     H I, II and III\n                                                   12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q11",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11 S z x x P R O y Q The diagram shows a kite PQRS whose diagonals meet at O. OP ൌ x OQ ൌ y OR ൌ x OS ൌ z Which of the following is necessary and sufficient for angle SPQ to be a right angle?",
+      "has_diagram": false,
+      "options": {
+        "A": "xൌyൌz",
+        "B": "2x ൌ y + z",
+        "C": "x 2 ൌ yz",
+        "D": "yൌz",
+        "E": "y2 ൌ x2 + z2 13"
+      },
+      "correct_answer": "C",
+      "raw_text": "11                                                    S\n                                                          z\n                                             x                x\n                                  P                                  R\n                                                      O\n                                                          y\n                                                      Q\n     The diagram shows a kite PQRS whose diagonals meet at O.\n            OP ൌ x\n            OQ ൌ y\n            OR ൌ x\n            OS ൌ z\n     Which of the following is necessary and sufficient for angle SPQ to be a right angle?\n     A   xൌyൌz\n     B   2x ൌ y + z\n     C   x 2 ൌ yz\n     D   yൌz\n     E   y2 ൌ x2 + z2\n                                                 13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q12",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12 Place the following integrals in order of size, starting with the smallest. 1 ³ x Pൌ 2 dx 0 1 ³ x Q ൌ 2 dx 0 1 ³ ( 2 ) dx x Rൌ 0",
+      "has_diagram": false,
+      "options": {
+        "A": "P<Q<R",
+        "B": "P<R<Q",
+        "C": "Q<P<R",
+        "D": "Q<R<P",
+        "E": "R<P<Q",
+        "F": "R<Q<P 14"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   Place the following integrals in order of size, starting with the smallest.\n                                                 1\n                                                 ³\n                                                         x\n                                            Pൌ 2             dx\n                                                 0\n                                                 1\n                                                 ³\n                                                     x\n                                            Q ൌ 2 dx\n                                                 0\n                                                 1\n                                                 ³ ( 2 ) dx\n                                                              x\n                                            Rൌ\n                                                 0\n     A   P<Q<R\n     B   P<R<Q\n     C   Q<P<R\n     D   Q<R<P\n     E   R<P<Q\n     F   R<Q<P\n                                                     14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q13",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13 Consider the statement (∗) about a real number x: (∗) There exists a real number y such that x – x y + y is negative. For how many real values of x is (∗) true?",
+      "has_diagram": false,
+      "options": {
+        "A": "no values of x",
+        "B": "exactly one value of x",
+        "C": "exactly two values of x",
+        "D": "all except exactly two values of x",
+        "E": "all except exactly one value of x",
+        "F": "all values of x 15"
+      },
+      "correct_answer": "E",
+      "raw_text": "13   Consider the statement (∗) about a real number x:\n                    (∗) There exists a real number y such that x – x y + y is negative.\n     For how many real values of x is (∗) true?\n     A   no values of x\n     B   exactly one value of x\n     C   exactly two values of x\n     D   all except exactly two values of x\n     E   all except exactly one value of x\n     F   all values of x\n                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q14",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14 Consider the two inequalities: x + 5 < x +11 x +11 < x +1 Which one of the following is correct?",
+      "has_diagram": false,
+      "options": {
+        "A": "There is no real number for which both inequalities are true.",
+        "B": "There is exactly one real number for which both inequalities are true.",
+        "C": "The real numbers for which both inequalities are true form an interval of length 1.",
+        "D": "The real numbers for which both inequalities are true form an interval of length 2.",
+        "E": "The real numbers for which both inequalities are true form an interval of length 3.",
+        "F": "The real numbers for which both inequalities are true form an interval of length 4.",
+        "G": "The real numbers for which both inequalities are true form an interval of length 5. 16"
+      },
+      "correct_answer": "D",
+      "raw_text": "14   Consider the two inequalities:\n                                              x + 5 < x +11\n                                              x +11 < x +1\n     Which one of the following is correct?\n     A   There is no real number for which both inequalities are true.\n     B   There is exactly one real number for which both inequalities are true.\n     C   The real numbers for which both inequalities are true form an interval of length 1.\n     D   The real numbers for which both inequalities are true form an interval of length 2.\n     E   The real numbers for which both inequalities are true form an interval of length 3.\n     F   The real numbers for which both inequalities are true form an interval of length 4.\n     G The real numbers for which both inequalities are true form an interval of length 5.\n                                                  16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q15",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15 The real numbers x, y and z are all greater than 1, and satisfy the equations log x y ൌ z and log y z ൌ x Which one of the following equations for log z x must be true?",
+      "has_diagram": false,
+      "options": {
+        "A": "log z x ൌ y",
+        "B": "log z x ൌ 1 y",
+        "C": "log z x ൌ x y",
+        "D": "log z x ൌ 1 xy",
+        "E": "log z x ൌ x z",
+        "F": "log z x ൌ 1 xz",
+        "G": "log z x ൌ y z",
+        "H": "log z x ൌ 1 yz 17"
+      },
+      "correct_answer": "F",
+      "raw_text": "15   The real numbers x, y and z are all greater than 1, and satisfy the equations\n                                         log x y ൌ z and log y z ൌ x\n     Which one of the following equations for log z x must be true?\n     A   log z x ൌ y\n     B   log z x ൌ 1\n                   y\n     C   log z x ൌ x y\n     D   log z x ൌ 1\n                   xy\n     E   log z x ൌ x z\n     F   log z x ൌ 1\n                   xz\n     G log z x ൌ y z\n     H log z x ൌ 1\n                 yz\n                                                  17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q16",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16 In this question, a1, …, a 100 and b1, …, b 100 and c1, …, c 100 are three sequences of integers such that an  bn + cn for each n. Which of the following statements must be true? I (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 ) II (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 ) III (maximum of a1, …, a 100 )  (maximum of b1, …, b 100 ) + (maximum of c1, …, c 100 )",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 18"
+      },
+      "correct_answer": "D",
+      "raw_text": "16   In this question, a1, …, a 100 and b1, …, b 100 and c1, …, c 100 are three sequences of integers\n     such that\n                                   an  bn + cn\n     for each n.\n     Which of the following statements must be true?\n          I     (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n          II    (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n          III   (maximum of a1, …, a 100 )  (maximum of b1, …, b 100 ) + (maximum of c1, …, c 100 )\n     A   none of them\n     B   I only\n     C   II only\n     D   III only\n     E   I and II only\n     F   I and III only\n     G II and III only\n     H I, II and III\n                                                  18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q17",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17 A student answered the following question: a and b are non-zero real numbers. Prove that the equation x 3 + a x 2 + b ൌ 0 has three distinct real roots if § 4 a 3 · 27b ¨ b + <0 © 27 ¸¹ Here is the student’s solution: dy I We differentiate y ൌ x 3 + a x 2 + b to get 2 ൌ 3x + 2a x ൌ x (3x + 2a) dx dy § 2a 3 · Solving ൌ 0 shows that the stationary points are at (0, b) and ¨ – , b + 4a ¸ dx © 3 27 ¹ § 3 · 3 II If 27b ¨ b + 4 a ¸ < 0, then b and b + 4 a must have opposite signs, and so one of © 27 ¹ 27 the stationary points is above the x-axis and one is below. III If the cubic has three distinct real roots, then one of the stationary points is above the x-axis and one is below. § 4 a 3 · IV Hence if 27b ¨ b + < 0, then the equation has three distinct real roots. © 27 ¸¹ Which one of the following options best describes the student’s solution?",
+      "has_diagram": false,
+      "options": {
+        "A": "It is a completely correct solution.",
+        "B": "The student has instead proved the converse of the statement in the question.",
+        "C": "The solution is wrong, because the student should have stated step II after step III.",
+        "D": "The solution is wrong, because the student should have shown the converse of the result in step II.",
+        "E": "The solution is wrong, because the student should have shown the converse of the result in step III. 19"
+      },
+      "correct_answer": "E",
+      "raw_text": "17   A student answered the following question:\n                     a and b are non-zero real numbers.\n                     Prove that the equation x 3 + a x 2 + b ൌ 0 has three distinct real roots if\n                         §     4 a\n                                   3\n                                     ·\n                     27b ¨ b +         <0\n                         ©      27 ¸¹\n     Here is the student’s solution:\n                                                         dy\n           I     We differentiate y ൌ x 3 + a x 2 + b to get      2\n                                                            ൌ 3x + 2a x ൌ x (3x + 2a)\n                                                         dx\n                         dy                                                        § 2a         3\n                                                                                                  ·\n                 Solving    ൌ 0 shows that the stationary points are at (0, b) and ¨ –  , b + 4a ¸\n                         dx                                                        © 3        27 ¹\n                         §       3\n                                   ·                          3\n           II    If 27b ¨ b + 4 a ¸ < 0, then b and b + 4 a must have opposite signs, and so one of\n                         ©     27 ¹                         27\n                 the stationary points is above the x-axis and one is below.\n           III   If the cubic has three distinct real roots, then one of the stationary points is above the\n                 x-axis and one is below.\n                              §     4 a\n                                        3\n                                          ·\n           IV    Hence if 27b ¨ b +         < 0, then the equation has three distinct real roots.\n                              ©     27 ¸¹\n     Which one of the following options best describes the student’s solution?\n     A   It is a completely correct solution.\n     B   The student has instead proved the converse of the statement in the question.\n     C   The solution is wrong, because the student should have stated step II after step III.\n     D   The solution is wrong, because the student should have shown the converse of the result in\n         step II.\n     E   The solution is wrong, because the student should have shown the converse of the result in\n         step III.\n                                                    19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q18",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18 P, Q, R and S show the graphs of y ൌ (cos x) cos x, y ൌ (sin x) sin x, y ൌ (cos x) sin x and y ൌ (sin x) cos x for 0 < x < ʌ in some order. 2 P Q 1 1 0.5 0.5 0 π π π 0 π π π 6 3 2 6 3 2 R S 1 1 0.5 0.5 0 π π π 0 π π π 6 3 2 6 3 2 Which row in the following table correctly identifies the graphs? y ൌ (cos x) cos x y ൌ (sin x) sin x y ൌ (cos x) sin x y ൌ (sin x) cos x",
+      "has_diagram": true,
+      "options": {
+        "A": "P Q R S",
+        "B": "P Q S R",
+        "C": "Q P R S",
+        "D": "Q P S R",
+        "E": "R S P Q",
+        "F": "R S Q P",
+        "G": "S R P Q",
+        "H": "S R Q P 20"
+      },
+      "correct_answer": "E",
+      "raw_text": "18   P, Q, R and S show the graphs of\n                           y ൌ (cos x) cos x, y ൌ (sin x) sin x, y ൌ (cos x) sin x and y ൌ (sin x) cos x\n     for 0 < x < ʌ in some order.\n                 2\n      P                                                             Q\n           1                                                               1\n          0.5                                                           0.5\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n      R                                                             S\n           1                                                               1\n          0.5                                                           0.5\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n     Which row in the following table correctly identifies the graphs?\n                y ൌ (cos x) cos x            y ൌ (sin x) sin x            y ൌ (cos x) sin x            y ൌ (sin x) cos x\n     A                 P                            Q                            R                             S\n     B                 P                            Q                            S                             R\n     C                 Q                            P                            R                             S\n     D                 Q                            P                            S                             R\n     E                 R                            S                            P                             Q\n     F                 R                            S                            Q                             P\n     G                 S                            R                            P                             Q\n     H                 S                            R                            Q                             P\n                                                              20",
+      "diagram_images": [
+        "TMUA-2022-P2-Q18-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-2022-P2-Q19",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19 A polygon has n vertices, where n  3. It has the following properties: • Every vertex of the polygon lies on the circumference of a circle C. • The centre of the circle C is inside the polygon. • The radii from the centre of the circle C to the vertices of the polygon cut the polygon into n triangles of equal area. For which values of n are these properties sufficient to deduce that the polygon is regular?",
+      "has_diagram": false,
+      "options": {
+        "A": "no values of n",
+        "B": "n ൌ 3 only",
+        "C": "n ൌ 3 and n ൌ 4 only",
+        "D": "n ൌ 3 and n  5 only",
+        "E": "all values of n 21"
+      },
+      "correct_answer": "B",
+      "raw_text": "19   A polygon has n vertices, where n  3. It has the following properties:\n         •   Every vertex of the polygon lies on the circumference of a circle C.\n         •   The centre of the circle C is inside the polygon.\n         •   The radii from the centre of the circle C to the vertices of the polygon cut the polygon\n             into n triangles of equal area.\n     For which values of n are these properties sufficient to deduce that the polygon is regular?\n     A   no values of n\n     B   n ൌ 3 only\n     C   n ൌ 3 and n ൌ 4 only\n     D   n ൌ 3 and n  5 only\n     E   all values of n\n                                                  21",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2022-P2-Q20",
+      "year": 2022,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20 The functions f1 to f5 are defined on the real numbers by f1(x) ൌ cos x f2(x) ൌ sin (cos x) f3(x) ൌ cos (sin (cos x)) f4(x) ൌ sin (cos (sin (cos x))) f5(x) ൌ cos (sin (cos (sin (cos x)))) where all numbers are taken to be in radians. These functions have maximum values m 1, m 2, m 3, m 4 and m 5 , respectively. Which one of the following statements is true?",
+      "has_diagram": false,
+      "options": {
+        "A": "m 1, m 2, m 3, m 4 and m 5 are all equal to 1",
+        "B": "0 < m5 < m4 < m3 < m2 < m1 ൌ 1",
+        "C": "m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 2 ൌ m 4 < 1",
+        "D": "m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 4 < m 2 < 1",
+        "E": "m 1 ൌ m 3 ൌ 1 and 0 < m 2 ൌ m 4 < 1 and 0 < m 5 < 1",
+        "F": "m 1 ൌ m 3 ൌ 1 and 0 < m 4 < m 2 < 1 and 0 < m 5 < 1 22 23 24"
+      },
+      "correct_answer": "E",
+      "raw_text": "20   The functions f1 to f5 are defined on the real numbers by\n                                      f1(x) ൌ cos x\n                                      f2(x) ൌ sin (cos x)\n                                      f3(x) ൌ cos (sin (cos x))\n                                      f4(x) ൌ sin (cos (sin (cos x)))\n                                      f5(x) ൌ cos (sin (cos (sin (cos x))))\n     where all numbers are taken to be in radians.\n     These functions have maximum values m 1, m 2, m 3, m 4 and m 5 , respectively.\n     Which one of the following statements is true?\n     A   m 1, m 2, m 3, m 4 and m 5 are all equal to 1\n     B   0 < m5 < m4 < m3 < m2 < m1 ൌ 1\n     C   m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 2 ൌ m 4 < 1\n     D   m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 4 < m 2 < 1\n     E   m 1 ൌ m 3 ൌ 1 and 0 < m 2 ൌ m 4 < 1 and 0 < m 5 < 1\n     F   m 1 ൌ m 3 ൌ 1 and 0 < m 4 < m 2 < 1 and 0 < m 5 < 1\n                                                         22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

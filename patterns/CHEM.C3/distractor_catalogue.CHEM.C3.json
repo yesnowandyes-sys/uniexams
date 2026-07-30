@@ -1,0 +1,59 @@
+{
+  "topic_key": "CHEM.C3",
+  "topic_name": "Chemical reactions, formulae and equations",
+  "module_code": "C",
+  "corpus_question_count": 19,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Incorrect Stoichiometric Coefficient from Unbalanced Equation",
+      "frequency": "High",
+      "example_question_id": "Q2",
+      "why_effective": "Explotes the tendency to balance by sight rather than rigorous atom counting, or to miss the coefficient of a polyatomic ion (like nitrate) when balancing non-metals.",
+      "generation_strategy": "Present an unbalanced equation with a polyatomic ion. Offer options where the polyatomic count is balanced but the other atom (e.g., H or O) is not, or vice versa."
+    },
+    {
+      "distractor_type": "Molar Mass Confusion (Atomic vs Molecular)",
+      "frequency": "Medium",
+      "example_question_id": "Q5",
+      "why_effective": "Students often divide the given mass by the relative atomic mass (Ar) of the metal instead of the molar mass of the product gas, or mix up Ar and Mr in the ratio.",
+      "generation_strategy": "In gas volume questions, include options corresponding to $V = (m / Ar_{metal}) \times 24$ instead of the correct stoichiometric calculation involving the gas mole ratio."
+    },
+    {
+      "distractor_type": "Inverse Ionic Ratios",
+      "frequency": "High",
+      "example_question_id": "Q1",
+      "why_effective": "When calculating ion ratios (e.g., Fe2+ vs Fe3+ in Fe3O4), students often flip the fraction, calculating Fe3+/total instead of Fe2+/total.",
+      "generation_strategy": "For compounds with mixed oxidation states, provide options that are the reciprocals or complements ($1-x$) of the correct fraction."
+    },
+    {
+      "distractor_type": "Charge Imbalance in Ionic Formulae",
+      "frequency": "Medium",
+      "example_question_id": "Q6, Q11",
+      "why_effective": "Students may correctly identify the ions but apply the wrong crossover rule (e.g., reducing ratios when they shouldn't, or vice versa), resulting in formulae like Al(SO4)3 instead of Al2(SO4)3.",
+      "generation_strategy": "Include options where the charges are balanced but not reduced to the lowest integers, or reduced incorrectly violating charge neutrality."
+    },
+    {
+      "distractor_type": "Empirical Formula Determination Errors",
+      "frequency": "Medium",
+      "example_question_id": "Q3",
+      "why_effective": "Students may simplify mass ratios directly to mole ratios without dividing by atomic mass, or calculate the mole ratio but invert it (e.g., O/Ti instead of Ti/O).",
+      "generation_strategy": "Provide options derived from mass ratios (e.g., 3.6:7.2 becomes 1:2) or incorrect simplification of the correct mole ratios."
+    },
+    {
+      "distractor_type": "Missing or Incorrect Accounting for State/Phase",
+      "frequency": "Low",
+      "example_question_id": "Q13",
+      "why_effective": "In gas volume calculations, students often forget that water is gaseous at high temperatures (e.g., 150\u00b0C), subtracting its volume from the total.",
+      "generation_strategy": "Set combustion questions at non-standard temperatures and include options representing the volume calculation assuming water is liquid/volume is negligible."
+    },
+    {
+      "distractor_type": "Algebraic Sum/Coefficient Errors",
+      "frequency": "Medium",
+      "example_question_id": "Q9",
+      "why_effective": "In complex balancing (e.g., P4 + HNO3), students may solve for individual coefficients correctly but fail the final sum operation, or miss a 'hidden' coefficient (like H2O as a reactant).",
+      "generation_strategy": "Design questions requiring the sum of coefficients ($w+x+y+z$). Distractors are the sums of partially correct attempts or sums excluding the water molecule."
+    }
+  ],
+  "_raw": null
+}

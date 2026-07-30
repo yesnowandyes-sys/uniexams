@@ -1,0 +1,60 @@
+{
+  "topic_key": "MATHS1.M5",
+  "topic_name": "Geometry",
+  "module_code": "M1",
+  "corpus_question_count": 96,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "The 'Clock Hand Continuum' Trap (Q7, Q38)",
+      "key_insight": "Recognizing that an analogue clock involves two continuous angular velocities. The hour hand moves at 0.5\u00b0/min and the minute hand at 6\u00b0/min. The angle between them is the absolute difference, not a static value.",
+      "discrimination_factors": [
+        "Calculating minute hand position ($6m$).",
+        "Applying continuous drift to hour hand ($30h + 0.5m$).",
+        "Handling the reflex angle scenario (subtracting from 360)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Tangent-Radius Orthogonality (Q4, Q14, Q17, Q46)",
+      "key_insight": "The radius to a point of tangency is always perpendicular to the tangent. This creates instantaneous right-angled triangles within circles, allowing the use of Pythagoras to find lengths (e.g. tangent length $T = \\sqrt{d^2 - r^2}$) or angle chasing via cyclic quadrilaterals/alternate segment theorem.",
+      "discrimination_factors": [
+        "Identifying the 'hidden' right angle.",
+        "Using sine/cosine ratios for non-standard angles (30, 60, etc).",
+        "Calculating the area of the 'kite' formed by two tangents and two radii."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Sector-Segment Arithmetic (Q27, Q29, Q23)",
+      "key_insight": "The area of a segment is strictly the Area of Sector - Area of Triangle. This often requires using $Area = 1/2 ab \\sin C$ for the triangle part, or calculating the height via Pythagoras.",
+      "discrimination_factors": [
+        "Deriving the angle of the sector from chord length or geometry.",
+        "Calculating the triangular component area (often $1/2 r^2 \\sin \theta$).",
+        "Managing algebraic expressions involving $\\pi$ and surds without a calculator."
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Nested Similarity (Q41, Q48, Q30)",
+      "key_insight": "Identifying that a line drawn parallel to a base creates similar triangles, or that scaling affects area/volume quadratically/cubically.",
+      "discrimination_factors": [
+        "Setting up the ratio of sides correctly.",
+        "Solving quadratic equations arising from area ratios ($k^2$ relationships).",
+        "Applying integer constraints to triangle inequalities (Q48)."
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Polygon Angle Algebra (Q2, Q13)",
+      "key_insight": "Regular polygons have fixed interior angles ($180 - 360/n$). Problems often involve constructing triangles or quadrilaterals inside the polygon and expressing an unknown variable $x$ or $n$ in terms of these angles.",
+      "discrimination_factors": [
+        "Deriving Interior angle: $(n-2) \times 180 / n$.",
+        "Handling the 'exterior' vs 'interior' confusion.",
+        "Solving linear equations involving $n$ where $n$ appears in the denominator."
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

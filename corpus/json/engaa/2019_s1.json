@@ -1,0 +1,857 @@
+{
+  "source_file": "ENGAA_2019_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2019,
+  "section": "Section1",
+  "total_questions": 40,
+  "questions": [
+    {
+      "id": "ENGAA-2019-S1-Q1",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "(\\sqrt{7} + \\sqrt{3})^{2} - (\\sqrt{7} - \\sqrt{3})^{2}",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2\\sqrt{7}",
+        "C": "4\\sqrt{7}",
+        "D": "2\\sqrt{21}",
+        "E": "10",
+        "F": "4\\sqrt{21}",
+        "G": "20"
+      },
+      "correct_answer": "F",
+      "raw_text": "1   Evaluate\n               ( 7 + 3) − ( 7 − 3)\n                         2           2\n    A   0\n    B   2 7\n    C   4 7\n    D   2 21\n    E   10\n    F   4 21\n    G   20\n                     4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q2",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "The diode is connected in series with a resistor and a 6.0 V battery. The current in the circuit is 8.0 mA. What is the resistance of the resistor? (Assume that the battery has negligible resistance.)",
+      "has_diagram": true,
+      "options": {
+        "A": "0.15\\Omega",
+        "B": "0.60\\Omega",
+        "C": "0.75\\Omega",
+        "D": "4.8\\Omega",
+        "E": "150\\Omega",
+        "F": "600\\Omega",
+        "G": "750\\Omega"
+      },
+      "correct_answer": "F",
+      "raw_text": "2   The current–voltage graph for a diode is shown.\n                        current / mA\n                                       16\n                                       14\n                                       12\n                                       10\n                                       8\n                                       6\n                                       4\n                                       2\n                                       0\n                   –0.6 –0.4 –0.2           0   0.2       0.4   0.6   0.8   1.0   1.2 1.4\n                                                                                   voltage / V\n    The diode is connected in series with a resistor and a 6.0 V battery. The current in the circuit is\n    8.0 mA.\n    What is the resistance of the resistor?\n    (Assume that the battery has negligible resistance.)\n    A   0.15 Ω\n    B   0.60 Ω\n    C   0.75 Ω\n    D   4.8 Ω\n    E   150 Ω\n    F   600 Ω\n    G   750 Ω\n                                                      5",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q2-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q3",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "The equation gives y in terms of x: y = 3 - 4\\left(1 - \\frac{x}{2}\\right)^{2}. Which one of the following is a rearrangement for x in terms of y?",
+      "has_diagram": false,
+      "options": {
+        "A": "x = -2 \\pm 2\\sqrt{\\frac{3 - y}{4}}",
+        "B": "x = -2 \\pm 2\\sqrt{\\frac{4 - y}{3}}",
+        "C": "x = 1 \\pm \\sqrt{\\frac{3 - y}{4}}",
+        "D": "x = 1 \\pm 2\\sqrt{\\frac{3 - y}{4}}",
+        "E": "x = 2 \\pm 2\\sqrt{\\frac{3 - y}{4}}",
+        "F": "x = 2 \\pm 2\\sqrt{\\frac{4 - y}{3}}",
+        "G": "x = 2 \\pm 2\\sqrt{\\frac{3 + y}{4}}"
+      },
+      "correct_answer": "E",
+      "raw_text": "3   The equation gives y in terms of x :\n                                                            x 2\n                                            y = 3 − 4 ⎛⎜ 1 − ⎞⎟\n                                                     ⎝    2⎠\n    Which one of the following is a rearrangement for x in terms of y ?\n                       3− y\n    A    x = −2 ± 2\n                        4\n                       4− y\n    B    x = −2 ± 2\n                        3\n                    3− y\n    C    x =1 ±\n                     4\n                      3− y\n    D    x =1 ± 2\n                       4\n                      3− y\n    E    x=2 ± 2\n                       4\n                      4− y\n    F    x=2 ± 2\n                       3\n                      3+ y\n    G    x=2 ± 2\n                       4\n                                                 6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q4",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "Two electromagnetic waves P and Q travel in a vacuum and the ratio of their wavelengths is: \\frac{\\text{wavelength of P}}{\\text{wavelength of Q}} = 1.0 \\times 10^{8} Which row in the table shows the ratio of their speeds, the ratio of their frequencies, and identifies the possible natures of P and Q?",
+      "has_diagram": true,
+      "options": {
+        "A": "1.0, 1.0 \\times 10^{-8}, microwave, X-ray",
+        "B": "1.0, 1.0 \\times 10^{-8}, microwave, radio wave",
+        "C": "1.0, 1.0 \\times 10^{8}, infrared, ultraviolet",
+        "D": "1.0, 1.0 \\times 10^{8}, visible light, infrared",
+        "E": "1.0 \\times 10^{8}, 1.0, gamma, X-ray",
+        "F": "1.0 \\times 10^{8}, 1.0, gamma, infrared",
+        "G": "1.0 \\times 10^{8}, 1.0 \\times 10^{16}, infrared, radio wave",
+        "H": "1.0 \\times 10^{8}, 1.0 \\times 10^{16}, visible light, ultraviolet"
+      },
+      "correct_answer": "A",
+      "raw_text": "4   Two electromagnetic waves P and Q travel in a vacuum and the ratio of their wavelengths is:\n                                      wavelength of P\n                                                      = 1.0 × 108\n                                      wavelength of Q\n    Which row in the table shows the ratio of their speeds, the ratio of their frequencies, and\n    identifies the possible natures of P and Q?\n              speed of P           frequency of P\n                                                             nature of P              nature of Q\n              speed of Q           frequency of Q\n    A            1.0                  1.0 × 10– 8             microwave                  X-ray\n    B            1.0                  1.0 × 10– 8             microwave               radio wave\n    C            1.0                   1.0 × 108                infrared               ultraviolet\n    D            1.0                   1.0 × 108              visible light             infrared\n    E          1.0 × 108                  1.0                   gamma                    X-ray\n    F          1.0 × 108                  1.0                   gamma                   infrared\n    G          1.0 × 108              1.0 × 1016               infrared               radio wave\n    H          1.0 × 108              1.0 × 1016              visible light            ultraviolet",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q4-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q5",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "The resistance to the motion of a car is directly proportional to the square of the speed of the car. The car increases its speed by 20%. What is the percentage increase in the resistance to the motion of the car?",
+      "has_diagram": false,
+      "options": {
+        "A": "20%",
+        "B": "24%",
+        "C": "44%",
+        "D": "120%",
+        "E": "224%",
+        "F": "240%",
+        "G": "400%"
+      },
+      "correct_answer": "C",
+      "raw_text": "5   The resistance to the motion of a car is directly proportional to the square of the speed of the\n    car.\n    The car increases its speed by 20%.\n    What is the percentage increase in the resistance to the motion of the car?\n    A   20%\n    B   24%\n    C   44%\n    D   120%\n    E   224%\n    F   240%\n    G   400%\n                                                    7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q6",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "A water-tight cylinder with a thin, freely moving piston contains $2.0 \\times 10^{-3} \\text{m}^{3}$ of trapped air at atmospheric pressure of $1.0 \\times 10^{5} \\text{Pa}$. When the cylinder is submerged in water of constant density $1000 \\text{kg m}^{-3}$, the volume of air in the cylinder decreases to $4.0 \\times 10^{-4} \\text{m}^{3}$. The piston is at a depth $h$ below the surface of the water and the water surface is open to the atmosphere. What is the depth $h$? (gravitational field strength = $10 \\text{N kg}^{-1}$; assume that the temperature of the air remains constant and that air is an ideal gas)",
+      "has_diagram": false,
+      "options": {
+        "A": "40m",
+        "B": "50m",
+        "C": "60m",
+        "D": "400m",
+        "E": "500m",
+        "F": "600m"
+      },
+      "correct_answer": "A",
+      "raw_text": "6   A water-tight cylinder with a thin, freely moving piston contains 2.0 × 10–3 m3 of trapped air at\n    atmospheric pressure of 1.0 × 105 Pa.\n    When the cylinder is submerged in water of constant density 1000 kg m–3, the volume of air in\n    the cylinder decreases to 4.0 × 10– 4 m3.\n    The piston is at a depth h below the surface of the water and the water surface is open to the\n    atmosphere.\n    What is the depth h ?\n    (gravitational field strength = 10 N kg–1; assume that the temperature of the air remains constant\n    and that air is an ideal gas)\n    A   40 m\n    B   50 m\n    C   60 m\n    D   400 m\n    E   500 m\n    F   600 m",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q7",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "The equation of a curve is $y = px^{2} + qx$ where $p$ and $q$ are constants. The curve passes through the points $(2, 6)$ and $(4, -4)$. What is the value of $q - p$?",
+      "has_diagram": false,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "5",
+        "D": "6",
+        "E": "9",
+        "F": "16"
+      },
+      "correct_answer": "E",
+      "raw_text": "7   The equation of a curve is y = px2 + qx where p and q are constants.\n    The curve passes through the points (2, 6) and (4, – 4).\n    What is the value of q – p ?\n    A   1\n    B   2\n    C   5\n    D   6\n    E   9\n    F   16\n                                                  8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q8",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "The secondary coil of an ideal, 100% efficient transformer is connected to a resistor by cables of total resistance 1500\\Omega. The current in the primary coil is 4.0\\text{ A}. There are 240 turns in the primary coil and 4800 turns in the secondary coil. What is the power produced as heat in the cables?",
+      "has_diagram": false,
+      "options": {
+        "A": "60W",
+        "B": "300W",
+        "C": "6000W",
+        "D": "24000W",
+        "E": "120000W",
+        "F": "9600000W"
+      },
+      "correct_answer": "A",
+      "raw_text": "8   The secondary coil of an ideal, 100% efficient transformer is connected to a resistor by cables\n    of total resistance 1500 Ω. The current in the primary coil is 4.0 A. There are 240 turns in the\n    primary coil and 4800 turns in the secondary coil.\n    What is the power produced as heat in the cables?\n    A   60 W\n    B   300 W\n    C   6000 W\n    D   24 000 W\n    E   120 000 W\n    F   9 600 000 W",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q9",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "Which of the following is a simplification of 4 - \\frac{x(3x+1)}{x^{2}(3x^{2} - 2x -1)}",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{12x^{3} -8x^{2} -7x -1}{x(3x-1)(x-1)}",
+        "B": "\\frac{4x^{2} +4x -1}{x(x+1)}",
+        "C": "\\frac{4x^{2} +4x +1}{x(x+1)}",
+        "D": "\\frac{4x^{2} -4x -1}{x(x-1)}",
+        "E": "\\frac{4x^{2} -4x +1}{x(x-1)}",
+        "F": "\\frac{12x^{3} -8x^{2} -x +1}{x(3x-1)(x-1)}"
+      },
+      "correct_answer": "D",
+      "raw_text": "9   Which of the following is a simplification of\n                                                    x (3 x + 1)\n                                            4−      2  2\n                                                 x (3 x − 2 x − 1)\n                3   2\n         12 x − 8 x − 7 x − 1\n    A\n           x (3 x − 1)( x − 1)\n            2\n         4x + 4x −1\n    B\n           x ( x + 1)\n            2\n         4x + 4x +1\n    C\n           x ( x + 1)\n            2\n         4x − 4x −1\n    D\n           x ( x − 1)\n            2\n         4x − 4x +1\n    E\n           x ( x − 1)\n                3   2\n         12 x − 8 x − x + 1\n    F\n          x (3 x − 1)( x − 1)\n                                                        9",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q10",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "Two tanks of water are connected by a solid cylindrical copper bar of length \\( l \\) and diameter \\( d \\). The bar is insulated. One tank contains water at 90 °C and the other tank contains water at temperature \\( \theta \\). For which of the following conditions is thermal energy conducted along the bar at the lowest rate?",
+      "has_diagram": true,
+      "options": {
+        "A": "0.40 m, 4.0 cm, 20 °C",
+        "B": "0.40 m, 4.0 cm, 40 °C",
+        "C": "0.40 m, 8.0 cm, 20 °C",
+        "D": "0.40 m, 8.0 cm, 40 °C",
+        "E": "0.80 m, 4.0 cm, 20 °C",
+        "F": "0.80 m, 4.0 cm, 40 °C",
+        "G": "0.80 m, 8.0 cm, 20 °C",
+        "H": "0.80 m, 8.0 cm, 40 °C"
+      },
+      "correct_answer": "F",
+      "raw_text": "10   Two tanks of water are connected by a solid cylindrical copper bar of length l and diameter d.\n     The bar is insulated.\n     One tank contains water at 90 °C and the other tank contains water at temperature θ.\n                             solid cylindrical bar\n                                           insulation\n                                                d                        water at temperature θ\n                                       l\n          water at 90 °C\n     For which of the following conditions is thermal energy conducted along the bar at the\n     lowest rate?\n                  l /m                     d / cm               θ / °C\n     A            0.40                       4.0                 20\n     B            0.40                       4.0                 40\n     C            0.40                       8.0                 20\n     D            0.40                       8.0                 40\n     E            0.80                       4.0                 20\n     F            0.80                       4.0                 40\n     G            0.80                       8.0                 20\n     H            0.80                       8.0                 40\n                                                     10",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q10-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q11",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "The ball for a garden game is a solid sphere of volume 192\\text{cm}^{3}. For the children’s version of the game the ball is a solid sphere made of the same material, but the radius is reduced by 25%. What is the volume, in \\text{cm}^{3}, of the children’s ball?",
+      "has_diagram": false,
+      "options": {
+        "A": "48",
+        "B": "81",
+        "C": "96",
+        "D": "108",
+        "E": "144"
+      },
+      "correct_answer": "B",
+      "raw_text": "11   The ball for a garden game is a solid sphere of volume 192 cm3.\n     For the children’s version of the game the ball is a solid sphere made of the same material, but\n     the radius is reduced by 25%.\n     What is the volume, in cm3, of the children’s ball?\n     A   48\n     B   81\n     C   96\n     D   108\n     E   144",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q12",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "The radioactive isotope X becomes the stable isotope Y after a succession of decays involving only the emission of alpha and beta (\\beta^-) particles. During the decay of one nucleus from X to Y, a total of seven particles are emitted. It is known that more of these particles are alpha particles than beta particles. The atomic number of X is Z and the mass number of X is A. Which row in the table could give the atomic number and the mass number of Y?",
+      "has_diagram": true,
+      "options": {
+        "A": "Z-2, A-12",
+        "B": "Z-5, A-8",
+        "C": "Z-8, A-20",
+        "D": "Z-10, A-24",
+        "E": "Z-11, A-16"
+      },
+      "correct_answer": "C",
+      "raw_text": "12   The radioactive isotope X becomes the stable isotope Y after a succession of decays involving\n     only the emission of alpha and beta (β–) particles.\n     During the decay of one nucleus from X to Y, a total of seven particles are emitted. It is known\n     that more of these particles are alpha particles than beta particles.\n     The atomic number of X is Z and the mass number of X is A.\n     Which row in the table could give the atomic number and the mass number of Y?\n          atomic number of Y       mass number of Y\n     A           Z–2                     A – 12\n     B           Z–5                     A–8\n     C           Z–8                     A – 20\n     D           Z – 10                  A – 24\n     E           Z – 11                  A – 16\n                                                  11",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q12-fig1.png"
+      ],
+      "question_text_latex": "The radioactive isotope $X$ becomes the stable isotope $Y$ after a succession of decays involving only the emission of $\\alpha$ and $\\beta^-$ particles. During the decay of one nucleus from $X$ to $Y$, a total of seven particles are emitted. It is known that more of these particles are $\\alpha$ particles than $\\beta$ particles. The atomic number of $X$ is $Z$ and the mass number of $X$ is $A$. Which row in the table could give the atomic number and the mass number of $Y$?"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q13",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "The diagram shows a right-angled triangle, with sides of length x + 4, 2x + 2 and 3x, all in cm. What is the area, in \\text{cm}^{2}, of the triangle?",
+      "has_diagram": false,
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "28",
+        "D": "36",
+        "E": "40",
+        "F": "54",
+        "G": "70"
+      },
+      "correct_answer": "F",
+      "raw_text": "13   The diagram shows a right-angled triangle, with sides of length x + 4, 2x + 2 and 3x, all in cm.\n                                    x+4                     3x\n                                                       2x + 2\n                                           [diagram not to scale]\n     What is the area, in cm2, of the triangle?\n     A   10\n     B   12\n     C   28\n     D   36\n     E   40\n     F   54\n     G   70",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q14",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "The kinetic energy of an object of mass 4.0 kg, travelling in a straight line, increases from 32 \\text{J} to 200 \\text{J} in 3.0 seconds due to a constant resultant force. What is the value of this resultant force?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.0\\text{N}",
+        "B": "4.0\\text{N}",
+        "C": "8.0\\text{N}",
+        "D": "24\\text{N}",
+        "E": "28\\text{N}",
+        "F": "56\\text{N}"
+      },
+      "correct_answer": "C",
+      "raw_text": "14   The kinetic energy of an object of mass 4.0 kg, travelling in a straight line, increases from\n     32 J to 200 J in 3.0 seconds due to a constant resultant force.\n     What is the value of this resultant force?\n     A   2.0 N\n     B   4.0 N\n     C   8.0 N\n     D   24 N\n     E   28 N\n     F   56 N\n                                                  12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q15",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "PR and QS are the diagonals of a rhombus PQRS. PR = (3x + 2)\\text{ cm}, QS = (8 - 2x)\\text{ cm}. The area of PQRS is 11\\text{ cm}^{2}. What is the difference, in cm, between the two possible lengths of PR?",
+      "has_diagram": false,
+      "options": {
+        "A": "2\\frac{2}{3}",
+        "B": "4\\frac{1}{2}",
+        "C": "5\\frac{1}{3}",
+        "D": "8",
+        "E": "14"
+      },
+      "correct_answer": "D",
+      "raw_text": "15   PR and QS are the diagonals of a rhombus PQRS.\n     PR = (3x + 2) cm\n     QS = (8 – 2x) cm\n     The area of PQRS is 11 cm2.\n     What is the difference, in cm, between the two possible lengths of PR ?\n             2\n     A   2\n             3\n             1\n     B   4\n             2\n             1\n     C   5\n             3\n     D   8\n     E   14\n                                                13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q16",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "In the following circuit, all five resistors have the same resistance. The reading on the voltmeter is 1.0 V. What is the voltage across the battery?",
+      "has_diagram": true,
+      "options": {
+        "A": "4.0 V",
+        "B": "5.0 V",
+        "C": "6.0 V",
+        "D": "7.0 V",
+        "E": "8.0 V",
+        "F": "9.0 V",
+        "G": "10 V"
+      },
+      "correct_answer": "E",
+      "raw_text": "16   In the following circuit, all five resistors have the same resistance.\n                                                             V\n     The reading on the voltmeter is 1.0 V.\n     What is the voltage across the battery?\n     A   4.0 V\n     B   5.0 V\n     C   6.0 V\n     D   7.0 V\n     E   8.0 V\n     F   9.0 V\n     G   10 V\n                                                   14",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q16-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q17",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "What is the length, in cm, of QS?",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "3\\sqrt{2}",
+        "C": "5.2",
+        "D": "4\\sqrt{2}",
+        "E": "6.4",
+        "F": "8.2",
+        "G": "10"
+      },
+      "correct_answer": "E",
+      "raw_text": "17                             Q                                      S\n                 3 cm                      4 cm            4 cm                3 cm\n                 P                                     R                           T\n                                          [diagram not to scale]\n     The diagram shows two congruent right-angled triangles PQR and TSR with right angles at Q\n     and S, respectively.\n     PQ = TS = 3 cm\n     QR = SR = 4 cm\n     PRT is a straight line.\n     What is the length, in cm, of QS ?\n     A    4\n     B    3 2\n     C    5.2\n     D    4 2\n     E    6.4\n     F    8.2\n     G    10\n                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q18",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "A block is designed with a cylindrical channel to accommodate a hot-water pipe. The block is 100 cm long and it has a square cross-section of side 22.0 cm with a cylindrical hole in the middle, as shown in the diagram: [diagram not to scale] The diameter of the cylindrical hole is 14.0 cm and the density of the material from which the block is made is 0.100 g cm^{-3}. What is the mass of the block? (take \\pi to be \\frac{22}{7})",
+      "has_diagram": true,
+      "options": {
+        "A": "1.32 kg",
+        "B": "3.30 kg",
+        "C": "13.2 kg",
+        "D": "33.0 kg",
+        "E": "132 kg",
+        "F": "330 kg",
+        "G": "1320 kg",
+        "H": "3300 kg"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   A block is designed with a cylindrical channel to accommodate a hot-water pipe. The block is\n     100 cm long and it has a square cross-section of side 22.0 cm with a cylindrical hole in the\n     middle, as shown in the diagram:\n                                          [diagram not to scale]\n     The diameter of the cylindrical hole is 14.0 cm and the density of the material from which the\n     block is made is 0.100 g cm–3.\n     What is the mass of the block?\n                     22\n     (take π to be        )\n                     7\n     A   1.32 kg\n     B   3.30 kg\n     C   13.2 kg\n     D   33.0 kg\n     E   132 kg\n     F   330 kg\n     G   1320 kg\n     H   3300 kg\n                                                 16",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q18-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q19",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "A solid pyramid has a square base of side length 12 cm and a vertical height of h cm. The volume of the pyramid, in cm^{3}, is equal to the total surface area of the pyramid, in cm^{2}. What is the value of h? (volume of pyramid = \\frac{1}{3} \\times \\text{area of base} \\times \\text{vertical height})",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{72}{35}",
+        "B": "2\\sqrt{3}",
+        "C": "6",
+        "D": "\\frac{144}{23}",
+        "E": "8",
+        "F": "2\\sqrt{21}"
+      },
+      "correct_answer": "E",
+      "raw_text": "19\n                                                    h\n                                                                    12 cm\n                                           [diagram not to scale]\n     A solid pyramid has a square base of side length 12 cm and a vertical height of h cm.\n     The volume of the pyramid, in cm3, is equal to the total surface area of the pyramid, in cm2.\n     What is the value of h ?\n                            1\n     (volume of pyramid =     × area of base × vertical height)\n                            3\n          72\n     A\n          35\n     B   2 3\n     C   6\n         144\n     D\n          23\n     E   8\n     F   2 21\n                                                 17",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q20",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "A sample initially contains equal numbers of atoms of a radioactive isotope X and a stable isotope Y. Isotope X has a half-life of 3 years and decays in a single stage to the stable isotope Y. What is the ratio number of atoms of X : number of atoms of Y in the sample 6 years later?",
+      "has_diagram": false,
+      "options": {
+        "A": "The sample contains only isotope Y.",
+        "B": "1:7",
+        "C": "1:4",
+        "D": "1:3",
+        "E": "7:4"
+      },
+      "correct_answer": "B",
+      "raw_text": "20   A sample initially contains equal numbers of atoms of a radioactive isotope X and a stable\n     isotope Y.\n     Isotope X has a half-life of 3 years and decays in a single stage to the stable isotope Y.\n     What is the ratio\n                               number of atoms of X : number of atoms of Y\n     in the sample 6 years later?\n     A   The sample contains only isotope Y.\n     B   1:7\n     C   1:4\n     D   1:3\n     E   7:4\n                                                  18\n\fPART B Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q21",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "Find the area of the shape bounded by the four lines: 2y + x = 4, x = -6, x = 0, y = 0",
+      "has_diagram": false,
+      "options": {
+        "A": "4",
+        "B": "12",
+        "C": "21",
+        "D": "25",
+        "E": "27",
+        "F": "30"
+      },
+      "correct_answer": "C",
+      "raw_text": "21   Find the area of the shape bounded by the four lines:\n                            2y + x = 4\n                                 x = –6\n                                 x=0\n                                 y=0\n     A   4\n     B   12\n     C   21\n     D   25\n     E   27\n     F   30",
+      "diagram_images": [],
+      "question_text_latex": "Find the area of the shape bounded by the four lines: $2y + x = 4$, $x = -6$, $x = 0$, $y = 0$"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q22",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "A hydroelectric power station uses the water in a reservoir to power the generators. The water falls through a vertical height of 150 \\text{m} to the turbines which power the generators. The efficiency of the power station is 90\\% and the output power of the power station is 1800 \\text{MW}. The gravitational field strength is 10 \\text{N kg}^{-1} and the density of water is 1000 \\text{kg m}^{-3}. What volume of water passes through the turbines in one minute?",
+      "has_diagram": false,
+      "options": {
+        "A": "6.48 \\times 10^{4} \\text{m}^{3}",
+        "B": "7.20 \\times 10^{4} \\text{m}^{3}",
+        "C": "8.00 \\times 10^{4} \\text{m}^{3}",
+        "D": "6.48 \\times 10^{7} \\text{m}^{3}",
+        "E": "7.20 \\times 10^{7} \\text{m}^{3}",
+        "F": "8.00 \\times 10^{7} \\text{m}^{3}"
+      },
+      "correct_answer": "C",
+      "raw_text": "22   A hydroelectric power station uses the water in a reservoir to power the generators. The water\n     falls through a vertical height of 150 m to the turbines which power the generators.\n     The efficiency of the power station is 90% and the output power of the power station is\n     1800 MW.\n     The gravitational field strength is 10 N kg–1 and the density of water is 1000 kg m–3.\n     What volume of water passes through the turbines in one minute?\n     A   6.48 × 104 m3\n     B   7.20 × 104 m3\n     C   8.00 × 104 m3\n     D   6.48 × 107 m3\n     E   7.20 × 107 m3\n     F   8.00 × 107 m3\n                                                  20",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q23",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "The curve \\( y = x^{3} + px^{2} + qx + r \\) has a local maximum when \\( x = -1 \\) and a local minimum when \\( x = 3 \\). What is the value of \\( p \\)?",
+      "has_diagram": false,
+      "options": {
+        "A": "-9",
+        "B": "-3",
+        "C": "-1",
+        "D": "1",
+        "E": "3",
+        "F": "9"
+      },
+      "correct_answer": "B",
+      "raw_text": "23   The curve\n                                            y = x3 + px2 + qx + r\n     has a local maximum when x = –1 and a local minimum when x = 3\n     What is the value of p ?\n     A   –9\n     B   –3\n     C   –1\n     D   1\n     E   3\n     F   9",
+      "diagram_images": [],
+      "question_text_latex": "The curve $ y = x^{3} + px^{2} + qx + r $ has a local maximum when $ x = -1 $ and a local minimum when $ x = 3 $. What is the value of $ p $?"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q24",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "A car P of mass 1000 kg is travelling north at 30 m s^{-1} along a straight, horizontal road when it hits another car Q which is directly ahead of P and travelling in the same direction. Car Q has a mass of 500 kg and is travelling at 20 m s^{-1}. The collision lasts for 0.20 s and immediately after the collision car Q is moving north at 30 m s^{-1}. What is the speed of P immediately after the collision and what is the size of the average resultant force that acts on Q during the collision? (Assume that no external forces act on the cars during the collision.)",
+      "has_diagram": true,
+      "options": {
+        "A": "20, 25000",
+        "B": "20, 50000",
+        "C": "20, 100000",
+        "D": "20, 125000",
+        "E": "25, 25000",
+        "F": "25, 50000",
+        "G": "25, 100000",
+        "H": "25, 125000"
+      },
+      "correct_answer": "E",
+      "raw_text": "24   A car P of mass 1000 kg is travelling north at 30 m s–1 along a straight, horizontal road when it\n     hits another car Q which is directly ahead of P and travelling in the same direction. Car Q has a\n     mass of 500 kg and is travelling at 20 m s–1.\n     The collision lasts for 0.20 s and immediately after the collision car Q is moving north at\n     30 m s–1.\n     What is the speed of P immediately after the collision and what is the size of the average\n     resultant force that acts on Q during the collision?\n     (Assume that no external forces act on the cars during the collision.)\n             speed of P / m s–1   average force on Q / N\n     A              20                    25 000\n     B              20                    50 000\n     C              20                    100 000\n     D              20                    125 000\n     E              25                    25 000\n     F              25                    50 000\n     G              25                    100 000\n     H              25                    125 000\n                                                    21\n\f                            1",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q24-fig1.png"
+      ],
+      "question_text_latex": "A car $P$ of mass $1000\\,\\text{kg}$ is travelling north at $30\\,\\text{m s}^{-1}$ along a straight, horizontal road when it hits another car $Q$ which is directly ahead of $P$ and travelling in the same direction. Car $Q$ has a mass of $500\\,\\text{kg}$ and is travelling at $20\\,\\text{m s}^{-1}$. The collision lasts for $0.20\\,\\text{s}$ and immediately after the collision car $Q$ is moving north at $30\\,\\text{m s}^{-1}$. What is the speed of $P$ immediately after the collision and what is the size of the average resultant force that acts on $Q$ during the collision? (Assume that no external forces act on the cars during the collision.)"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q25",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "When simplified, \\frac{1}{(1 - \\sqrt{2})^3} is written in the form a + b\\sqrt{2} where a and b are integers. What is the value of b?",
+      "has_diagram": false,
+      "options": {
+        "A": "-7",
+        "B": "-5",
+        "C": "-1",
+        "D": "1",
+        "E": "5",
+        "F": "7"
+      },
+      "correct_answer": "B",
+      "raw_text": "25   When simplified,               is written in the form a + b 2 where a and b are integers.\n                        (1 − 2 )3\n     What is the value of b ?\n     A   –7\n     B   –5\n     C   –1\n     D   1\n     E   5\n     F   7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q26",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "A metal wire of length 0.50 m has a uniform cross-sectional area of 4.0 \\times 10^{-7} \\text{m}^{2}. There is a current of 4.0 A in the wire. What is the potential difference across the ends of the wire? (resistivity of the metal = 1.6 \\times 10^{-7} \\Omega \\text{m})",
+      "has_diagram": false,
+      "options": {
+        "A": "0.05 V",
+        "B": "0.20 V",
+        "C": "0.80 V",
+        "D": "3.2 V",
+        "E": "5.0 V",
+        "F": "20 V"
+      },
+      "correct_answer": "C",
+      "raw_text": "26   A metal wire of length 0.50 m has a uniform cross-sectional area of 4.0 × 10–7 m2.\n     There is a current of 4.0 A in the wire.\n     What is the potential difference across the ends of the wire?\n     (resistivity of the metal = 1.6 × 10–7 Ω m)\n     A   0.05 V\n     B   0.20 V\n     C   0.80 V\n     D   3.2 V\n     E   5.0 V\n     F   20 V\n                                                   22",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q27",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "It is given that 7\\cos x + \\tan x \\sin x = 5 where 0^\\circ < x < 90^\\circ What are the possible values of \\tan x?",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{2} or \\frac{1}{3}",
+        "B": "\\frac{1}{\\sqrt{3}} or \\frac{1}{2\\sqrt{2}}",
+        "C": "\\frac{\\sqrt{3}}{2} or \\frac{2\\sqrt{2}}{3}",
+        "D": "\\sqrt{3} or 2\\sqrt{2}",
+        "E": "3 or 2"
+      },
+      "correct_answer": "D",
+      "raw_text": "27   It is given that\n                                   7cos x + tan x sin x = 5\n     where 0° < x < 90°\n     What are the possible values of tan x ?\n          1    1\n     A      or\n          2    3\n           1          1\n     B          or\n            3        2 2\n            3    2 2\n     C        or\n           2      3\n     D      3 or 2 2\n     E    3 or 2\n                                                  23",
+      "diagram_images": [],
+      "question_text_latex": "It is given that $7\\cos x + \\tan x \\sin x = 5$ where $0^\\circ < x < 90^\\circ$ What are the possible values of $\\tan x$?"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q28",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "A uniform square trap door of side 0.80\\,\\text{m} and mass 14\\,\\text{kg} has a smooth hinge at one edge and is held open at an angle of 30^\\circ to the horizontal. It is supported by a single rigid rod placed so that it meets the surface of the trap door at 90^\\circ at a distance 0.10\\,\\text{m} from the top edge of the trap door, as shown. What is the normal contact force exerted on the trap door by the rod? (gravitational field strength = 10\\,\\text{N}\\,\\text{kg}^{-1})",
+      "has_diagram": true,
+      "options": {
+        "A": "40\\,\\text{N}",
+        "B": "35\\sqrt{3}\\,\\text{N}",
+        "C": "40\\sqrt{3}\\,\\text{N}",
+        "D": "80\\,\\text{N}",
+        "E": "80\\sqrt{3}\\,\\text{N}",
+        "F": "\\frac{280\\sqrt{3}}{3}\\,\\text{N}"
+      },
+      "correct_answer": "C",
+      "raw_text": "28   A uniform square trap door of side 0.80 m and mass 14 kg has a smooth hinge at one edge and\n     is held open at an angle of 30° to the horizontal. It is supported by a single rigid rod placed so\n     that it meets the surface of the trap door at 90° at a distance 0.10 m from the top edge of the\n     trap door, as shown.\n                                                         0m\n                                                   0.1\n                                            0m\n                                      0.8\n                                                                       trap door\n                                                                       supporting rod\n                                    30°\n                        hinge\n     What is the normal contact force exerted on the trap door by the rod?\n     (gravitational field strength = 10 N kg−1)\n     A    40 N\n     B    35 3 N\n     C    40 3 N\n     D    80 N\n     E    80 3 N\n                  3\n     F    280       N\n                 3\n                                                  24",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q28-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q29",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "An equilateral triangle of side 8 cm is drawn so that its vertices lie on the circumference of a circle, as shown in the diagram. What is the total of the three areas shaded in the diagram, in cm^{2}?",
+      "has_diagram": false,
+      "options": {
+        "A": "8(2\\pi - 3)",
+        "B": "24(\\pi - \\sqrt{3})",
+        "C": "48(4\\pi - \\sqrt{3})",
+        "D": "\\frac{16}{3}(4\\pi - 6 - 3\\sqrt{3})",
+        "E": "\\frac{16}{3}(4\\pi - 3\\sqrt{3})"
+      },
+      "correct_answer": "E",
+      "raw_text": "29   An equilateral triangle of side 8 cm is drawn so that its vertices lie on the circumference of a\n     circle, as shown in the diagram.\n                                                    8 cm\n     What is the total of the three areas shaded in the diagram, in cm2 ?\n     A   8 ( 2π − 3 )\n     B       (\n         24 π − 3    )\n     C    48 ( 4 π − 3 )\n         16\n     D\n          3\n             (\n            4π − 6 − 3 3       )\n         16\n     E\n          3\n             (\n            4π − 3 3       )\n                                                  25",
+      "diagram_images": [],
+      "question_text_latex": "An equilateral triangle of side $8$ cm is drawn so that its vertices lie on the circumference of a circle, as shown in the diagram. What is the total of the three areas shaded in the diagram, in $cm^{2}$?"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q30",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "A block is designed with a cylindrical channel to accommodate a hot-water pipe. The block is 100\\ \text{cm} long and it has a square cross-section of side 22.0\\ \text{cm} with a cylindrical hole in the middle, as shown in the diagram: [diagram not to scale] The diameter of the cylindrical hole is 14.0\\ \text{cm} and the density of the material from which the block is made is 0.100\\ \text{g}\\ \text{cm}^{-3}. What is the mass of the block? (take \\pi \\text{ to be } \\frac{22}{7})",
+      "has_diagram": true,
+      "options": {
+        "A": "1.32\\ \text{kg}",
+        "B": "3.30\\ \text{kg}",
+        "C": "13.2\\ \text{kg}",
+        "D": "33.0\\ \text{kg}",
+        "E": "132\\ \text{kg}",
+        "F": "330\\ \text{kg}",
+        "G": "1320\\ \text{kg}",
+        "H": "3300\\ \text{kg}"
+      },
+      "correct_answer": "C",
+      "raw_text": "30   Two small loudspeakers are placed side by side 30 cm apart.\n     They are connected to the same signal generator so that they emit sound of frequency 400 Hz\n     in phase with one another.\n     The sounds both reach a microphone placed 40 cm directly in front of one of the two\n     loudspeakers as shown.\n                 30 cm\n                                                                           microphone\n                                             40 cm\n     What is the phase difference between waves from the loudspeakers as they arrive at the\n     microphone?\n     (speed of sound = 320 m s–1)\n     A   30°\n     B   36°\n     C   45°\n     D   60°\n     E   72°\n     F   90°\n     G   120°\n                                                26",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q30-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2019-S1-Q31",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "Which one of the following is the real solution of the equation 3×5^{2x+1} - 5^x - 2 = 0",
+      "has_diagram": false,
+      "options": {
+        "A": "x = \\log_5\\left(\\frac{1}{3}\\right)",
+        "B": "x = \\log_5\\left(\\frac{2}{5}\\right)",
+        "C": "x = \\log_5\\left(\\frac{3}{5}\\right)",
+        "D": "x = \\log_5\\left(\\frac{2}{3}\\right)",
+        "E": "x = \\log_5\\left(\\frac{5}{3}\\right)",
+        "F": "x = \\log_5\\left(\\frac{5}{2}\\right)"
+      },
+      "correct_answer": "B",
+      "raw_text": "31   Which one of the following is the real solution of the equation\n                                                    2 x +1     x\n                                              3×5            − 5 − 2=0\n          x = log 5 ⎛⎜ ⎞⎟\n                      1\n     A\n                    ⎝3⎠\n          x = log 5 ⎛⎜ ⎞⎟\n                      2\n     B\n                    ⎝5⎠\n          x = log 5 ⎛⎜ ⎞⎟\n                      3\n     C\n                    ⎝5⎠\n          x = log 5 ⎛⎜ ⎞⎟\n                      2\n     D\n                    ⎝3⎠\n          x = log 5 ⎛⎜ ⎞⎟\n                      5\n     E\n                    ⎝3⎠\n          x = log 5 ⎛⎜ ⎞⎟\n                      5\n     F\n                    ⎝2⎠",
+      "diagram_images": [],
+      "question_text_latex": "Which one of the following is the real solution of the equation $3 \\times 5^{2x+1} - 5^x - 2 = 0$"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q32",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "An astronaut on the Moon throws a ball vertically upwards. The ball has a mass of 2.0g and is thrown upwards at 80 m s^{-1}. What is the maximum height gained by the ball? (gravitational field strength close to the Moon’s surface = 1.6 N kg^{-1})",
+      "has_diagram": false,
+      "options": {
+        "A": "25 m",
+        "B": "50 m",
+        "C": "320 m",
+        "D": "2000 m",
+        "E": "3200 m",
+        "F": "4000 m"
+      },
+      "correct_answer": "D",
+      "raw_text": "32   An astronaut on the Moon throws a ball vertically upwards. The ball has a mass of 2.0 g and is\n     thrown upwards at 80 m s–1.\n     What is the maximum height gained by the ball?\n     (gravitational field strength close to the Moon’s surface = 1.6 N kg–1)\n     A   25 m\n     B   50 m\n     C   320 m\n     D   2000 m\n     E   3200 m\n     F   4000 m\n                                                    27",
+      "diagram_images": [],
+      "question_text_latex": "An astronaut on the Moon throws a ball vertically upwards. The ball has a mass of $2.0\\,\\text{g}$ and is thrown upwards at $80\\,\\text{m}\\,\\text{s}^{-1}$. What is the maximum height gained by the ball? (gravitational field strength close to the Moon’s surface = $1.6\\,\\text{N}\\,\\text{kg}^{-1}$)"
+    },
+    {
+      "id": "ENGAA-2019-S1-Q33",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "For a particular function f(x), it is given that: \\int_{-2}^{2} 2f(x)\\mathrm{d}x + \\int_{2}^{4} f(x)\\mathrm{d}x = 4 and also: \\int_{-2}^{2} 5f(x)\\mathrm{d}x - \\int_{-2}^{4} f(x)\\mathrm{d}x = 7 Find the value of \\int_{2}^{4} f(x)\\mathrm{d}x",
+      "has_diagram": false,
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{11}{7}",
+        "C": "\\frac{11}{6}",
+        "D": "\\frac{13}{6}",
+        "E": "\\frac{13}{3}"
+      },
+      "correct_answer": "A",
+      "raw_text": "33   For a particular function f (x), it is given that:\n                                               2                     4\n                                            ∫ 2 f ( x ) dx + ∫ f ( x ) dx = 4\n                                               –2                    2\n     and also:\n                                               2                     4\n                                           ∫–2\n                                                   5 f ( x ) dx –   ∫ f ( x ) dx = 7\n                                                                     –2\n                          4\n     Find the value of   ∫ f ( x ) dx\n                          2\n          1\n     A\n          3\n          11\n     B\n          7\n          11\n     C\n          6\n          13\n     D\n           6\n          13\n     E\n           3\n                                                            28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q34",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "A student has one 300\\Omega resistor and another resistor of resistance R. The student plots a graph of current I against potential difference V for the 300\\Omega resistor and then for both resistors connected in parallel. What is the resistance R?",
+      "has_diagram": false,
+      "options": {
+        "A": "3.3\\Omega",
+        "B": "5.0\\Omega",
+        "C": "10\\Omega",
+        "D": "100\\Omega",
+        "E": "200\\Omega",
+        "F": "600\\Omega",
+        "G": "1000\\Omega"
+      },
+      "correct_answer": "F",
+      "raw_text": "34   A student has one 300 Ω resistor and another resistor of resistance R.\n     The student plots a graph of current I against potential difference V for the 300 Ω resistor and\n     then for both resistors connected in parallel.\n                                     30\n                            I / mA\n                                     20\n                                     10\n                                      0\n                                          0   1    2     3     4      5         6\n                                                                          V/V\n     What is the resistance R ?\n     A   3.3 Ω\n     B   5.0 Ω\n     C   10 Ω\n     D   100 Ω\n     E   200 Ω\n     F   600 Ω\n     G   1000 Ω\n                                                  29",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q35",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "Given that f(x) = \\int_0^x (3 + 2t)^{7} dt, what is the coefficient of x^{4} in the expansion of f(x) in powers of x?",
+      "has_diagram": false,
+      "options": {
+        "A": "70",
+        "B": "162",
+        "C": "\\frac{2835}{4}",
+        "D": "3024",
+        "E": "5670",
+        "F": "15120",
+        "G": "22680"
+      },
+      "correct_answer": "E",
+      "raw_text": "35   Given that\n                                              x\n                                     f (x) = ∫ (3 + 2t )7 dt\n                                             0\n     what is the coefficient of x 4 in the expansion of f (x) in powers of x ?\n     A    70\n     B    162\n          2835\n     C\n            4\n     D    3024\n     E    5670\n     F    15 120\n     G    22 680",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q36",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "A light, vertical, copper wire of length 2.4 m and uniform cross-sectional area 2.0 \\times 10^{-6} m^{2} supports a load of mass 4.0 kg. The Young modulus of copper is 1.2 \\times 10^{11} Pa. What is the strain energy in the wire? (gravitational field strength = 10 N kg^{-1}; assume that the wire obeys Hooke’s law and that the cross-sectional area remains constant)",
+      "has_diagram": false,
+      "options": {
+        "A": "8.0 \\times 10^{-5} J",
+        "B": "1.7 \\times 10^{-4} J",
+        "C": "4.0 \\times 10^{-4} J",
+        "D": "8.0 \\times 10^{-3} J",
+        "E": "4.0 \\times 10^{-2} J",
+        "F": "1.6 \\times 10^{-2} J"
+      },
+      "correct_answer": "D",
+      "raw_text": "36   A light, vertical, copper wire of length 2.4 m and uniform cross-sectional area 2.0 × 10– 6 m2\n     supports a load of mass 4.0 kg.\n     The Young modulus of copper is 1.2 × 1011 Pa.\n     What is the strain energy in the wire?\n     (gravitational field strength = 10 N kg–1; assume that the wire obeys Hooke’s law and that the\n     cross-sectional area remains constant)\n     A   8.0 × 10–5 J\n     B   1.7 × 10– 4 J\n     C   4.0 × 10– 4 J\n     D   8.0 × 10–3 J\n     E   4.0 × 10–2 J\n     F   1.6 × 10–2 J\n                                                      30",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q37",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "The three internal angles in a triangle are α, β and θ, and 3\\tan\\alpha - 2\\sin\\beta = 2 5\\tan\\alpha + 6\\sin\\beta = 8 What is the value of θ in degrees?",
+      "has_diagram": false,
+      "options": {
+        "A": "15",
+        "B": "45",
+        "C": "75",
+        "D": "105",
+        "E": "135"
+      },
+      "correct_answer": "D",
+      "raw_text": "37   The three internal angles in a triangle are α, β and θ , and\n                                             3 tan α – 2 sin β = 2\n                                            5 tan α + 6 sin β = 8\n     What is the value of θ in degrees?\n     A   15\n     B   45\n     C   75\n     D   105\n     E   135\n                                                  31",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2019-S1-Q38",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "Light travelling in a transparent liquid strikes the surface from below. The angle between the surface of the liquid and the direction of travel of the light is α. The light then travels along the surface between the liquid and the air as shown in the diagram. Now, light travelling in air strikes the surface from above so that the angle between the surface and the direction of travel of this light is also α. After the light strikes the surface from above, the angle between the surface and the direction of travel of the refracted light is β. Which expression gives β? (all angles are in degrees)",
+      "has_diagram": true,
+      "options": {
+        "A": "\\cos\\beta = \\cos^{2} \\alpha",
+        "B": "\\cos\\beta = \\cos\\alpha \\sin^{-1}\\left( \\frac{1}{\\alpha} \\right)",
+        "C": "\\sin\\beta = \\sin^{2} \\alpha",
+        "D": "\\beta = 90 - (90 - \\alpha)^{2}",
+        "E": "\\beta = 0",
+        "F": "\\beta = \\alpha"
+      },
+      "correct_answer": "A",
+      "raw_text": "38   Light travelling in a transparent liquid strikes the surface from below. The angle between the\n     surface of the liquid and the direction of travel of the light is α.\n     The light then travels along the surface between the liquid and the air as shown in the diagram.\n                                              α\n     Now, light travelling in air strikes the surface from above so that the angle between the surface\n     and the direction of travel of this light is also α.\n     After the light strikes the surface from above, the angle between the surface and the direction\n     of travel of the refracted light is β.\n     Which expression gives β ?\n     (all angles are in degrees)\n     A   cos β = cos2 α\n         cos β = cos α sin–1 ⎛⎜ ⎞⎟\n                               1\n     B\n                              ⎝α⎠\n     C   sin β = sin2 α\n     D   β = 90 – (90 – α)2\n     E   β=0\n     F   β=α",
+      "diagram_images": [
+        "ENGAA-2019-S1-Q38-fig1.png"
+      ],
+      "options_latex": {
+        "E": "$\\beta = 0$"
+      }
+    },
+    {
+      "id": "ENGAA-2019-S1-Q39",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "Find the complete set of values of x for which x^{3} - 2x^{2} -7x -4 > 0",
+      "has_diagram": false,
+      "options": {
+        "A": "x < -1",
+        "B": "x > -1",
+        "C": "-1 < x < 4",
+        "D": "x < -1 \\text{ or } x > 4",
+        "E": "x < 4",
+        "F": "x > 4"
+      },
+      "correct_answer": "F",
+      "raw_text": "39   Find the complete set of values of x for which\n                                           x3 – 2x2 – 7x – 4 > 0\n     A   x < –1\n     B   x > –1\n     C   –1 < x < 4\n     D   x < – 1 or x > 4\n     E   x<4\n     F   x>4\n                                                  32",
+      "diagram_images": [],
+      "question_text_latex": "Find the complete set of values of $x$ for which $x^{3} - 2x^{2} - 7x - 4 > 0$",
+      "options_latex": {
+        "C": "$-1 < x < 4$",
+        "E": "$x < 4$",
+        "F": "$x > 4$"
+      }
+    },
+    {
+      "id": "ENGAA-2019-S1-Q40",
+      "year": 2019,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "The kinetic energy of an object of mass 4.0 kg, travelling in a straight line, increases from 32 J to 200 J in 3.0 seconds due to a constant resultant force. What is the value of this resultant force?",
+      "has_diagram": false,
+      "options": {
+        "A": "2.0 N",
+        "B": "4.0 N",
+        "C": "8.0 N",
+        "D": "24 N",
+        "E": "28 N",
+        "F": "56 N"
+      },
+      "correct_answer": "B",
+      "raw_text": "40   The velocity–time graph is for an 80 kg person in a lift that is moving vertically upwards.\n                  velocity / m s–1\n                              2.0\n                                                                             X\n                              0.0\n                                 0.0      5.0     10.0              20.0     25.0\n                                                                                    time / s\n     What is the magnitude of the contact force between the person and the lift floor at the time\n     corresponding to X?\n     (gravitational field strength = 10 N kg–1)\n     A   640 N\n     B   768 N\n     C   800 N\n     D   832 N\n     E   960 N\n                                             END OF TEST\n                                                  33\n\fBLANK PAGE\n    34\n\fBLANK PAGE\n    35\n\f36",
+      "diagram_images": []
+    }
+  ]
+}

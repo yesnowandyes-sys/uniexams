@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C11",
+  "topic_name": "Energetics",
+  "module_code": "C",
+  "corpus_question_count": 20,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Inverted Equation Rearrangement",
+      "frequency": "High",
+      "example_question_id": "Q20 [NSAA-2022-S2-Y-Q28]",
+      "why_effective": "Students struggle with Hess Cycle logic where Lattice Enthalpy (endothermic breaking) appears on the RHS. Many instinctively sum all positive values, missing the exothermicity of electron affinities and formation. Distractors often provide the sum of atomization/ionization energies only (e.g., Options A, B, G in Q20).",
+      "generation_strategy": "Construct a Born-Haber cycle. Create a distractor that sums only the endothermic steps (Atomization + Ionization). Create another that is the correct sum with the wrong sign."
+    },
+    {
+      "distractor_type": "Stoichiometric Scaling Errors",
+      "frequency": "High",
+      "example_question_id": "Q1 [ESAT-SPECIMEN-CHEMISTRY-Q9]",
+      "why_effective": "In bond energy calculations, students often forget to multiply bond energies by the number of bonds (e.g., using N-H instead of 6N-H). In Q1, Option C (2z > x + 3y) represents a failure to multiply the product bond energy (z) by the stoichiometric coefficient of NH3 (2), or confusion with bond counts per molecule vs mole of reaction.",
+      "generation_strategy": "In Bond Energy/Calorimetry questions, include options corresponding to correct calculations for 1 mole of substance vs the balanced equation's molar ratio (e.g., for $2NH_3$, offer energy for 1 mole of $NH_3$)."
+    },
+    {
+      "distractor_type": "Reverse Enthalpy Sign",
+      "frequency": "Medium",
+      "example_question_id": "Q7 [NSAA-2019-S1-Q53]",
+      "why_effective": "Students correctly calculate the magnitude but forget the sign convention (Exothermic = Negative). Distractors mirror the correct answer with the opposite sign (e.g., Option B vs E in Q7).",
+      "generation_strategy": "Always include \\pm magnitude options in calorimetry and bond energy questions."
+    },
+    {
+      "distractor_type": "Unreacted/Equilibrium Moles Confusion",
+      "frequency": "Low",
+      "example_question_id": "Q6 [NSAA-2018-S1-Q54]",
+      "why_effective": "In equilibrium scenarios, heat released depends on the amount reacted (product formed, z), not the initial amount (y). Students often select options based on initial reagents (e.g., Option F: 116z is correct, but 116y or 232y are common traps for those ignoring 'equilibrium' or 'excess').",
+      "generation_strategy": "In questions involving reactions that don't go to completion (equilibrium or limiting reagents in excess), provide distractors calculated using the initial moles of the excess reagent."
+    },
+    {
+      "distractor_type": "Misidentifying Limiting Reagent",
+      "frequency": "Medium",
+      "example_question_id": "Q15 [NSAA-2020-S2-SPEC-Y-Q11]",
+      "why_effective": "Students calculate energy based on the wrong reactant (e.g., mass of water instead of moles of methane) or ignore efficiency factors. Distractors often represent the energy required to heat just the water or just the copper.",
+      "generation_strategy": "In multi-step calorimetry, include a distractor calculated using the mass of the solvent (water) rather than the fuel (methane), or vice versa."
+    }
+  ],
+  "parse_repaired": true
+}

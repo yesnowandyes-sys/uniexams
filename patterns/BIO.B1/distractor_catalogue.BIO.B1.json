@@ -1,0 +1,59 @@
+{
+  "topic_key": "BIO.B1",
+  "topic_name": "Cells",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Prokaryote-Eukaryote Organelle Confusion",
+      "frequency": "High",
+      "example_question_id": "Q1, Q11, Q12",
+      "why_effective": "Relies on the student remembering that bacteria (prokaryotes) lack mitochondria and nuclei, while mature red blood cells (mammalian erythrocytes) lack mitochondria despite being eukaryotic.",
+      "generation_strategy": "List cell types (bacteria, RBC, stem, plant). Ask to identify those lacking a specific organelle (nucleus, mitochondria, chloroplast). Include options that group 'bacteria' with 'plant cells' or 'stem cells' to punish generalization errors."
+    },
+    {
+      "distractor_type": "Genome vs. Transcriptome/Proteome Equivalence",
+      "frequency": "High",
+      "example_question_id": "Q2, Q14",
+      "why_effective": "Students often confuse 'containing the gene for X' with 'producing protein X'. All somatic cells contain the gene for amylase, but only salivary cells produce it. The 'Correct' option distinguishes between genetic potential and expression.",
+      "generation_strategy": "Present a specific cell type (e.g., liver cell). Ask if it contains a gene, a chromosome, or a protein specific to a *different* cell type (e.g., insulin, amylase, hemoglobin). Distractors should assert the presence of the protein or the absence of the gene."
+    },
+    {
+      "distractor_type": "Sex Chromosome Distribution",
+      "frequency": "Medium",
+      "example_question_id": "Q4",
+      "why_effective": "Targets a specific edge case in human biology: in females (XX), one X chromosome is inactivated (Barr body) in somatic cells, but 'contains' is technically true. However, the distractor often exploits the confusion that males (XY) or gametes determine the count in all cells.",
+      "generation_strategy": "Statements regarding chromosome counts (e.g., 'all cells have two X chromosomes'). Use context of 'healthy human female'. The distractor 'Stem cells will all contain two X chromosomes' is correct, but similar statements about 'alleles' or 'genes' vs 'proteins' in the same question (Q14) test different levels of biological central dogma understanding."
+    },
+    {
+      "distractor_type": "Calculation Powers of 10 Errors",
+      "frequency": "High",
+      "example_question_id": "Q16, Q18, Q20, Q21",
+      "why_effective": "In calculator-free sections, students must manage $\\mu m$, $nm$, and $mm$ conversions. Distractors often present the correct coefficient but incorrect exponent (e.g., $10^{-1}$ instead of $10^3$), or miscalculating surface area/volume ratios.",
+      "generation_strategy": "Ask for magnification, actual size, or density. Provide a drawing size or image scale. Create distractors by shifting the decimal place by $10^1$ or $10^3$ (converting $\\mu m$ to $mm$ incorrectly). In volume/SA ratio questions (Q20), offer the reciprocal of the correct ratio."
+    },
+    {
+      "distractor_type": "Mitosis vs. Meiosis in Stem Cells",
+      "frequency": "Medium",
+      "example_question_id": "Q9, Q13",
+      "why_effective": "Common misconception that 'stem cells = meiosis' because they are 'early' cells. Distractors often state embryonic stem cells divide by meiosis, which is false (mitosis).",
+      "generation_strategy": "Question regarding the division type of stem cells (Embryonic or Adult) or the outcome (identical vs specialized cells). Include 'Meiosis' as a strong distractor for questions about cell division mechanisms."
+    },
+    {
+      "distractor_type": "Binary Fission Variation Misconception",
+      "frequency": "Medium",
+      "example_question_id": "Q10",
+      "why_effective": "Students often conflate 'asexual reproduction' with 'genetic clones'. While binary fission is asexual, mutations can occur. Distractors assert strict genetic identity or deny the possibility of variation entirely.",
+      "generation_strategy": "Statements about bacterial variation. 'Correct' statement allows for mutation (Q6, Q10). Distractor: 'As it is asexual, there cannot be any variation'."
+    },
+    {
+      "distractor_type": "Resolution vs Magnification Confusion",
+      "frequency": "Low",
+      "example_question_id": "Q21",
+      "why_effective": "Students memorize 'x1500' for light microscopes but confuse resolution limits (0.2 $\\mu m$ vs 200 nm). Distractors swap nm and $\\mu m$ units.",
+      "generation_strategy": "Table completion for microscopy specs. Mix units (nm/$\\mu m$) for resolution and magnification. Distractor: '200 nm' resolution for light microscope (Correct is 200nm, but offer 0.2nm as electron microscope distractor)."
+    }
+  ],
+  "parse_repaired": true
+}

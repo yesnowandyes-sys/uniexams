@@ -1,0 +1,52 @@
+{
+  "topic_key": "MATHS2.MM4",
+  "topic_name": "Trigonometry",
+  "module_code": "M2",
+  "corpus_question_count": 36,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Asymptote/Undefined Ignoral",
+      "frequency": "High",
+      "example_question_id": "Q24, Q28",
+      "why_effective": "Students often simplify algebraic fractions or manipulate trig identities (e.g., $1+\tan^2 x = \\sec^2 x$) without checking the domain validity of the original expression (e.g., $\\cos x \neq 0$).",
+      "generation_strategy": "Create a solvable equation involving $\tan x$, $\\sec x$, or $\\cot x$ where the solution set includes values that make $\\cos x = 0$ or $\\sin x = 0$. Include options where these invalid solutions are present alongside the valid ones, or where a derivation step (like squaring or multiplying by $\\cos x$) introduces them."
+    },
+    {
+      "distractor_type": "Symmetry Miscalculation",
+      "frequency": "Medium",
+      "example_question_id": "Q2, Q16",
+      "why_effective": "Students struggle to distinguish between phase shift ($y=\\sin(x-b)$) and horizontal stretch ($y=\\sin(ax)$), often mixing up the signs or factors when finding the transformed equation or line of symmetry.",
+      "generation_strategy": "Describe a transformation (stretch by $1/a$, translate by $-b$) and ask for the new equation. Incorrect options will use $f(ax+b)$ instead of $f(a(x+b))$, or confuse the sign of the phase shift (e.g., $x - \\pi/4$ vs $x + \\pi/4$)."
+    },
+    {
+      "distractor_type": "Extraneous Root Retention",
+      "frequency": "High",
+      "example_question_id": "Q5, Q24, Q30",
+      "why_effective": "Squaring both sides to solve equations like $\\sqrt{...} = \\dots$ or transforming trig equations frequently introduces roots that don't satisfy the original equation.",
+      "generation_strategy": "Construct an equation where the standard algebraic move (e.g., converting $1-\\cos^2 x$ to $\\sin^2 x$ or squaring to remove a radical) creates a 'dead' branch. Provide answer choices that count the total roots of the polynomial algebraic form rather than the valid trig roots."
+    },
+    {
+      "distractor_type": "Missing the General Solution",
+      "frequency": "High",
+      "example_question_id": "Q11, Q32, Q33",
+      "why_effective": "Students solve for the principal value (e.g., $30^\\circ$) but fail to apply the periodicity or symmetry of the sine/cosine waves within a large range (e.g., $0$ to $4\\pi$), underestimating the solution count.",
+      "generation_strategy": "Ask for the number of solutions in a range $> 2\\pi$. Simple equations ($\\sin \theta = 0.5$) yield multiple roots. Distractors are usually small integers (e.g., 2 or 4) when the answer is higher (e.g., 5, 6, 7)."
+    },
+    {
+      "distractor_type": "Interval Boundary Exclusion",
+      "frequency": "Medium",
+      "example_question_id": "Q18, Q19",
+      "why_effectent": "Questions involving 'smallest positive' or 'distinct solutions' often hinge on whether $0$ or $\\pi$ is included based on the strictness of the inequality ($<$ vs $\\leq$).",
+      "generation_strategy": "Define a range $0 < x < 2\\pi$ vs $0 \\le x \\le 2\\pi$. If the solution involves $\\sin x = 0$, the inclusion of 0, $\\pi$, and $2\\pi$ changes the count. Distractors differ by 1 (e.g., 3 vs 4)."
+    },
+    {
+      "distractor_type": "Identity Misapplication",
+      "frequency": "Medium",
+      "example_question_id": "Q9, Q20",
+      "why_effective": "Students conflate $\\sin^2 x + \\cos^2 x = 1$ with $\\sin x + \\cos x = 1$, or ignore the sign when taking square roots ($\\sin x = \\pm \\sqrt{...}$).",
+      "generation_strategy": "Set up a proof or derivation where $\\sin x$ or $\\cos x$ is isolated. Offer a student solution that incorrectly states $\\sin x = \\sqrt{1-\\cos^2 x}$ (omitting the $\\pm$) or claims $(\\sin x + \\cos x)^2 = 1 \\implies \\sin x + \\cos x = 1$ (ignoring the negative root)."
+    }
+  ],
+  "parse_repaired": true
+}

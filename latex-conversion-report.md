@@ -1,0 +1,159 @@
+# LaTeX Conversion Report - Pass 2
+
+## Approach
+Hybrid: regex for simple patterns (single-char superscripts, simple fractions), GLM-4.5-air for complex cases.
+Used urllib instead of requests library due to connection issues.
+
+## Stats
+- Regex converted: 27
+- GLM converted: 898  
+- API calls: 994
+- Files modified: 31/31
+- Errors: 96
+- Questions still needing conversion: 24
+
+## Example conversions
+- 2016_s1.json ENGAA-2016-S1-Q1 [optA]: `x < 4` → `$x < 4$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optB]: `x > 4` → `$x > 4$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optC]: `x < 20` → `$x < 20$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optD]: `x > 20` → `$x > 20$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optE]: `x < 22` → `$x < 22$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optF]: `x > 22` → `$x > 22$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optG]: `x < 28` → `$x < 28$`
+- 2016_s1.json ENGAA-2016-S1-Q1 [optH]: `x > 28` → `$x > 28$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optA]: `2.5 	imes 10^{27} W` → `$2.5 \times 10^{27}$ W`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optB]: `1.0 	imes 10^{28} W` → `$1.0 \times 10^{28} \text{ W}$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optC]: `2.0 	imes 10^{28} W` → `$2.0 \times 10^{28} W$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optD]: `2.5 	imes 10^{29} W` → `$2.5 \times 10^{29}$ W`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optE]: `1.0 	imes 10^{30} W` → `$1.0 \times 10^{30} W$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optF]: `2.0 	imes 10^{30} W` → `$2.0 \times 10^{30} W$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optG]: `2.5 	imes 10^{33} W` → `$2.5 \times 10^{33} W$`
+- 2016_s1.json ENGAA-2016-S1-Q10 [optH]: `1.0 	imes 10^{34} W` → `$1.0 \times 10^{34} W$`
+- 2016_s1.json ENGAA-2016-S1-Q11 [qt]: `The point A is 4 km due East of the point B. The bearing of the point C from A i` → `The point A is $4$ km due East of the point B. The bearing of the point C from A`
+- 2016_s1.json ENGAA-2016-S1-Q13 [qt]: `The quantities x and y are positive. x is inversely proportional to the square r` → `The quantities $x$ and $y$ are positive. $x$ is inversely proportional to $\sqrt`
+- 2016_s1.json ENGAA-2016-S1-Q24 [qt]: `Bronze is a mixture of tin and copper. A particular sample of bronze contains 10` → `Bronze is a mixture of tin and copper. A particular sample of bronze contains $1`
+- 2016_s1.json ENGAA-2016-S1-Q25 [optB]: `3^{-2n}` → `$3^{-2n}$`
+
+## Remaining items
+- 2016_s1.json QENGAA-2016-S1-Q31: qt=A square PQRS is drawn above the x-axis with the side PQ on the x-axis. P is the opts={'A': 'x^{2} + y^{2} - 4x + 6y + 4 = 0', 'B': 'x^{2} + y^{2} - 4x + 6y + 9 = 0', 'C': 'x^{2} + y^{2} + 4x - 6y + 4 = 0', 'D': 'x^{2} + y^{2} + 4x - 6y + 9 = 0', 'E': 'x^{2} + y^{2} - 6x - 4y + 9 = 0', 'F': 'x^{2} + y^{2} - 6x + 4y + 4 = 0', 'G': 'x^{2} + y^{2} + 6x - 4y + 4 = 0', 'H': 'x^{2} + y^{2} + 6x + 4y + 9 = 0'}
+- 2016_s1.json QENGAA-2016-S1-Q44: qt=An object is fired vertically upwards from the ground at time t = 0 s in still a opts={}
+- 2016_s1.json QENGAA-2016-S1-Q49: qt=A cursor starts at the point (0, 10) and moves parallel to the x-axis in the neg opts={}
+- 2016_s1.json QENGAA-2016-S1-Q50: qt=An object of mass 20 kg is pulled up a rough plane inclined at 30^\circ to the h opts={}
+- 2017_s1.json QENGAA-2017-S1-Q53: qt=The equations of two straight lines are y = 3 + (2p^{2} - p)x and y = 7 + (p - 2 opts={}
+- 2020_s1.json QENGAA-2020-S1-Q10: qt=Two trolleys are moving towards each other along a straight horizontal track. On opts={}
+- 2021_s1.json QENGAA-2021-S1-Q38: qt=A car accelerates from rest in a straight line. During the first 10s, its accele opts={}
+- 2022_s1.json QENGAA-2022-S1-Q1: qt=Which one of the following is a simplification of \( y \left( rac{3x^{rac{1}{2}} opts={'A': 'rac{3xz^{2}}{y^{4}}', 'B': 'rac{3xz^{2}}{y^{5}}', 'C': 'rac{9x^{rac{1}{2}} z^{2}}{y^{5}}', 'D': 'rac{9xz^{2}}{y^{4}}', 'E': 'rac{9xz^{2}}{y^{5}}', 'F': 'rac{9x^{rac{5}{2}} z^{2}}{y^{5}}'}
+- 2016_s1.json QNSAA-2016-S1-Q50: qt=A 1.50 g sample of impure anhydrous sodium carbonate was added to 100 cm^{3} of  opts={}
+- 2016_s1.json QNSAA-2016-S1-Q71: qt=The graph shows the effect of increasing the substrate concentration on an enzym opts={}
+- 2016_s1.json QNSAA-2016-S1-Q90: qt=90 An object of mass 20 kg is pulled up a rough plane inclined at 30° to the hor opts={}
+- 2017_s1.json QNSAA-2017-S1-Q27: qt=The nuclide \( _Q^P X \) decays to the stable nuclide Y. During this process fou opts={}
+- 2017_s1.json QNSAA-2017-S1-Q31: qt=A freight train travelling on a straight horizontal track at 2.0 m s^{-1} collid opts={}
+- 2017_s1.json QNSAA-2017-S1-Q33: qt=Consider the following three statements about a parachutist of mass 72 kg fallin opts={}
+- 2017_s1.json QNSAA-2017-S1-Q48: qt=Magnesium reacts with sulfuric acid according to the following chemical equation opts={}
+- 2017_s1.json QNSAA-2017-S1-Q51: qt=Silver nitrate solution reacts with zinc powder in an exothermic reaction: 2AgNO opts={}
+- 2018_s1.json QNSAA-2018-S1-Q38: qt=The following exothermic reaction reaches equilibrium at room temperature. \(	ex opts={}
+- 2018_s1.json QNSAA-2018-S1-Q48: qt=Bromine is an element in Group 17 of the Periodic Table. Which of the following  opts={}
+- 2019_s1.json QNSAA-2019-S1-Q52: qt=3.4 g of an impure sample of silicon tetrachloride is reacted with water. The mi opts={}
+- 2019_s1.json QNSAA-2019-S1-Q67: qt=Which of the following statements is/are correct? 1 Na_2CO_3 solution inhibited  opts={}
+- 2019_s1.json QNSAA-2019-S1-Q71: qt=An investigation was carried out on the effect of substrate concentration on an  opts={}
+- 2020_s1.json QNSAA-2020-S1-Q38: qt=A parachutist of mass 80.0 kg drops from a plane travelling at 40.0 m s^{-1}, 20 opts={}
+- 2023_s1.json QNSAA-2023-S1-Q11: qt=An athlete’s training session consists of several complete repetitions of a thre opts={}
+- 2023_s1.json QNSAA-2023-S1-Q14: qt=x, y and z are positive variables. y is inversely proportional to the square of  opts={}
+
+## Errors
+- 2016_s1.json ENGAA-2016-S1-Q10 qt
+- 2016_s1.json ENGAA-2016-S1-Q44 qt
+- 2016_s1.json ENGAA-2016-S1-Q46 qt
+- 2016_s1.json ENGAA-2016-S1-Q46 opt F
+- 2016_s1.json ENGAA-2016-S1-Q50 qt
+- 2017_s1.json ENGAA-2017-S1-Q30 qt
+- 2017_s1.json ENGAA-2017-S1-Q46 qt
+- 2017_s1.json ENGAA-2017-S1-Q47 qt
+- 2017_s1.json ENGAA-2017-S1-Q54 opt A
+- 2017_s1.json ENGAA-2017-S1-Q54 opt C
+- 2017_s1.json ENGAA-2017-S1-Q54 opt D
+- 2018_s1.json ENGAA-2018-S1-Q20 qt
+- 2018_s1.json ENGAA-2018-S1-Q30 qt
+- 2018_s1.json ENGAA-2018-S1-Q54 qt
+- 2020_s1.json ENGAA-2020-S1-Q10 qt
+- 2020_s1.json ENGAA-2020-S1-Q16 qt
+- 2021_s1.json ENGAA-2021-S1-Q24 qt
+- 2021_s1.json ENGAA-2021-S1-Q38 qt
+- 2022_s1.json ENGAA-2022-S1-Q22 qt
+- 2016_s1.json NSAA-2016-S1-Q8 qt
+- 2016_s1.json NSAA-2016-S1-Q41 qt
+- 2016_s1.json NSAA-2016-S1-Q50 qt
+- 2016_s1.json NSAA-2016-S1-Q71 qt
+- 2016_s1.json NSAA-2016-S1-Q84 qt
+- 2016_s1.json NSAA-2016-S1-Q88 qt
+- 2016_s1.json NSAA-2016-S1-Q90 qt
+- 2017_s1.json NSAA-2017-S1-Q18 qt
+- 2017_s1.json NSAA-2017-S1-Q27 qt
+- 2017_s1.json NSAA-2017-S1-Q31 qt
+- 2017_s1.json NSAA-2017-S1-Q33 qt
+- 2017_s1.json NSAA-2017-S1-Q35 opt A
+- 2017_s1.json NSAA-2017-S1-Q35 opt B
+- 2017_s1.json NSAA-2017-S1-Q35 opt E
+- 2017_s1.json NSAA-2017-S1-Q38 qt
+- 2017_s1.json NSAA-2017-S1-Q48 qt
+- 2017_s1.json NSAA-2017-S1-Q49 qt
+- 2017_s1.json NSAA-2017-S1-Q51 qt
+- 2017_s1.json NSAA-2017-S1-Q53 opt A
+- 2017_s1.json NSAA-2017-S1-Q53 opt B
+- 2017_s1.json NSAA-2017-S1-Q53 opt C
+- 2017_s1.json NSAA-2017-S1-Q53 opt D
+- 2017_s1.json NSAA-2017-S1-Q53 opt E
+- 2018_s1.json NSAA-2018-S1-Q29 qt
+- 2018_s1.json NSAA-2018-S1-Q38 qt
+- 2018_s1.json NSAA-2018-S1-Q48 qt
+- 2018_s1.json NSAA-2018-S1-Q79 qt
+- 2019_s1.json NSAA-2019-S1-Q43 qt
+- 2019_s1.json NSAA-2019-S1-Q52 qt
+- 2019_s1.json NSAA-2019-S1-Q67 qt
+- 2019_s1.json NSAA-2019-S1-Q71 qt
+- 2020_s1.json NSAA-2020-S1-Q38 qt
+- 2021_s1.json NSAA-2021-S1-Q27 qt
+- 2022_s1.json NSAA-2022-S1-Q18 qt
+- 2022_s1.json NSAA-2022-S1-Q34 qt
+- 2022_s1.json NSAA-2022-S1-Q54 qt
+- 2023_s1.json NSAA-2023-S1-Q11 qt
+- 2023_s1.json NSAA-2023-S1-Q12 qt
+- 2023_s1.json NSAA-2023-S1-Q14 qt
+- 2023_s1.json NSAA-2023-S1-Q16 qt
+- 2023_s1.json NSAA-2023-S1-Q22 qt
+- 2023_s1.json NSAA-2023-S1-Q28 qt
+- 2023_s1.json NSAA-2023-S1-Q28 opt A
+- 2023_s1.json NSAA-2023-S1-Q28 opt B
+- 2023_s1.json NSAA-2023-S1-Q28 opt C
+- 2023_s1.json NSAA-2023-S1-Q28 opt D
+- 2023_s1.json NSAA-2023-S1-Q28 opt E
+- 2023_s1.json NSAA-2023-S1-Q28 opt F
+- 2023_s1.json NSAA-2023-S1-Q33 opt A
+- 2023_s1.json NSAA-2023-S1-Q33 opt B
+- 2023_s1.json NSAA-2023-S1-Q33 opt C
+- 2023_s1.json NSAA-2023-S1-Q33 opt D
+- 2023_s1.json NSAA-2023-S1-Q33 opt E
+- 2023_s1.json NSAA-2023-S1-Q33 opt F
+- 2023_s1.json NSAA-2023-S1-Q33 opt G
+- 2023_s1.json NSAA-2023-S1-Q39 opt A
+- 2023_s1.json NSAA-2023-S1-Q39 opt B
+- 2023_s1.json NSAA-2023-S1-Q39 opt C
+- 2023_s1.json NSAA-2023-S1-Q39 opt D
+- 2023_s1.json NSAA-2023-S1-Q39 opt E
+- 2023_s1.json NSAA-2023-S1-Q39 opt F
+- 2023_s1.json NSAA-2023-S1-Q40 opt A
+- 2023_s1.json NSAA-2023-S1-Q40 opt B
+- 2023_s1.json NSAA-2023-S1-Q40 opt C
+- 2023_s1.json NSAA-2023-S1-Q40 opt D
+- 2023_s1.json NSAA-2023-S1-Q40 opt E
+- 2023_s1.json NSAA-2023-S1-Q40 opt F
+- 2023_s1.json NSAA-2023-S1-Q40 opt G
+- 2023_s1.json NSAA-2023-S1-Q40 opt H
+- 2023_s1.json NSAA-2023-S1-Q43 qt
+- 2023_s1.json NSAA-2023-S1-Q44 qt
+- 2023_s1.json NSAA-2023-S1-Q45 qt
+- 2023_s1.json NSAA-2023-S1-Q46 opt A
+- 2023_s1.json NSAA-2023-S1-Q49 qt
+- 2023_s1.json NSAA-2023-S1-Q52 qt
+- 2020_p2.json TMUA-2020-P2-Q7 qt
+- 2023_p1.json TMUA-2023-P1-Q5 qt

@@ -1,0 +1,132 @@
+{
+  "topic_key": "MATHS2.MM5",
+  "topic_name": "Exponentials and logarithms",
+  "module_code": "M2",
+  "corpus_question_count": 41,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Evaluating limits of functions like $V(x) = 10^{x^2+6x+7}$ by analyzing the exponent as a quadratic vertex, rather than the function value directly.",
+      "key_insight": "The exponential function $10^y$ is strictly monotonic (increasing). Therefore, its minimum value corresponds directly to the minimum value of its exponent $y(x)$. Students must find the vertex of the quadratic $x^2+6x+7$ (min at $x=-3$) and evaluate $10^{-2}$.",
+      "discrimination_factors": [
+        "Identifying that optimization moves to the exponent",
+        "Calculating the vertex without calculus (completing the square)",
+        "Recognizing $10^{-2} = 0.01$"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Solving equations of the form $\\log_a(f(x)) = k + \\log_a(g(x))$ by converting the sum of logs into a log of a product.",
+      "key_insight": "Students must recognize $k$ as $\\log_a(a^k)$ to combine the Right Hand Side into a single logarithm: $\\log_a(f(x)) = \\log_a(a^k g(x))$. This allows the elimination of the log function. Solving the resulting algebraic equation (often quadratic or rational) requires checking the domain $x>0$.",
+      "discrimination_factors": [
+        "Using $k = a^{\\log k}$ identity",
+        "Handling the resulting algebraic fraction",
+        "Filtering negative solutions extraneous to the log domain"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Comparing values of related exponential functions, such as $2^{\\sqrt{x}}$, $2^x$, and $(\\sqrt{2})^x$ within an integral or inequality context without a calculator.",
+      "key_insight": "Requires a deep understanding of growth rates. For $x \\in (0,1)$, $\\sqrt{x} > x$, so $2^{\\sqrt{x}} > 2^x$. Also, $(\\sqrt{2})^x = 2^{x/2}$. Students must rank the exponents $\\sqrt{x}, x, x/2$ to rank the functions. In the specific case of Q30, this allows ordering integrals without evaluating them.",
+      "discrimination_factors": [
+        "Comparing functions in range 0<x<1",
+        "Rewriting roots as fractional exponents",
+        "Understanding monotonicity of $a^x$"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Solving exponential equations with variable exponents in both the base and the exponent, such as $x^{x^{x^a}} = k$ or similar cyclical systems (Q31, Q27).",
+      "key_insight": "These problems rely on the 'power of logs' property where $\\log_a(b^c) = c \\log_a b$. Taking logs of both sides breaks the 'tower' of exponents, converting them into products. For simultaneous equations, this often reveals a linear system in terms of $\\log(\text{variable})$.",
+      "discrimination_factors": [
+        "Applying logarithm to both sides of an equality",
+        "Converting exponent towers to products",
+        "Solving linear systems for logarithmic variables"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "distractor_type": "Law Misapplication (Addition vs Multiplication)",
+      "frequency": "high",
+      "example_question_id": "Q3, Q12, Q37",
+      "why_effective": "Exploits the confusion between logarithmic laws and algebraic properties of coefficients. Students frequently conflate the coefficient of a log term with the argument of the log function, incorrectly applying $k \\log x \\rightarrow \\log(x+k)$ instead of $\\log(x^k)$. This creates attractive options that are structurally similar to the correct algebraic form.",
+      "generation_strategy": "In questions requiring the expansion of $k\\log_a x$, include an option offering $\\log_a(kx)$ or $\\log_a(x+k)$. Alternatively, when simplifying sums like $\\log x + \\log y$, offer an option of $\\log(x+y)$."
+    },
+    {
+      "distractor_type": "Base-Conversion Inversion",
+      "frequency": "high",
+      "example_question_id": "Q2, Q10, Q36",
+      "why_effective": "Targets the change of base formula $\\log_a b = \\frac{1}{\\log_b a}$. Students often struggle to position the arguments correctly, leading to inverted fractions like $\\frac{\\log a}{\\log 2}$ vs $\\frac{\\log 2}{\\log a}$.",
+      "generation_strategy": "For solutions of the form $\\frac{\\log C}{\\log A}$, provide a distractor $\\frac{\\log A}{\\log C}$. In solutions involving $\\frac{k}{\\log A}$, provide $\\frac{\\log A}{k}$."
+    },
+    {
+      "distractor_type": "Sign Error Manipulation",
+      "frequency": "medium",
+      "example_question_id": "Q3, Q6, Q28",
+      "why_effective": "Catches students who correctly handle the power rule but fail to account for negative exponents in the base algebra (e.g., converting $z^{-2}$ to $z^2$ in the log expression). Options will often differ only by the sign of a specific term.",
+      "generation_strategy": "Construct options that apply the power law $k \\log x \\rightarrow \\log(x^k)$ correctly but miss the sign of $k$ derived from the exponent (e.g., using $+4q$ instead of $-4q$)."
+    },
+    {
+      "distractor_type": "Discriminant Blindness",
+      "frequency": "medium",
+      "example_question_id": "Q6, Q9, Q25",
+      "why_effective": "In logarithmic equations that map to quadratics, students must discard negative solutions because $\\log(x)$ requires $x>0$. Distractors here are the 'negative' or 'invalid' roots of the quadratic, trapping students who solve the algebra but forget the domain.",
+      "generation_strategy": "Include the negative root of the quadratic (e.g., if roots are 3 and -4, and only 3 is valid, include -4 as an option)."
+    },
+    {
+      "distractor_type": "Variable Blind Substitution",
+      "frequency": "medium",
+      "example_question_id": "Q1, Q8, Q14",
+      "why_effective": "In complex index algebra questions, students often simplify the constants correctly but lose track of the variable terms (e.g., combining $2n$ and $-2n$ to get $0$ instead of $4n$). These distractors often look 'cleaner' than the correct answer.",
+      "generation_strategy": "Generate an option where the variable exponent is simplified to zero or a single constant, while the coefficient is calculated correctly."
+    },
+    {
+      "distractor_type": "Partial Summation",
+      "frequency": "rare",
+      "example_question_id": "Q4",
+      "why_effective": "In telescoping series, students may stop the summation one step early or miss the final term. Distractors represent the sum of $n-1$ terms or a miscalculation of the remaining log value.",
+      "generation_strategy": "If the sum is $\\log(N)$, offer $\\log(N-1)$ or the value of the last term added to the previous sum."
+    },
+    {
+      "scenario_description": "Evaluating limits of functions like $V(x) = 10^{x^2+6x+7}$ by analyzing the exponent as a quadratic vertex, rather than the function value directly.",
+      "key_insight": "The exponential function $10^y$ is strictly monotonic (increasing). Therefore, its minimum value corresponds directly to the minimum value of its exponent $y(x)$. Students must find the vertex of the quadratic $x^2+6x+7$ (min at $x=-3$) and evaluate $10^{-2}$.",
+      "discrimination_factors": [
+        "Identifying that optimization moves to the exponent",
+        "Calculating the vertex without calculus (completing the square)",
+        "Recognizing $10^{-2} = 0.01$"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Solving equations of the form $\\log_a(f(x)) = k + \\log_a(g(x))$ by converting the sum of logs into a log of a product.",
+      "key_insight": "Students must recognize $k$ as $\\log_a(a^k)$ to combine the Right Hand Side into a single logarithm: $\\log_a(f(x)) = \\log_a(a^k g(x))$. This allows the elimination of the log function. Solving the resulting algebraic equation (often quadratic or rational) requires checking the domain $x>0$.",
+      "discrimination_factors": [
+        "Using $k = a^{\\log k}$ identity",
+        "Handling the resulting algebraic fraction",
+        "Filtering negative solutions extraneous to the log domain"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Comparing values of related exponential functions, such as $2^{\\sqrt{x}}$, $2^x$, and $(\\sqrt{2})^x$ within an integral or inequality context without a calculator.",
+      "key_insight": "Requires a deep understanding of growth rates. For $x \\in (0,1)$, $\\sqrt{x} > x$, so $2^{\\sqrt{x}} > 2^x$. Also, $(\\sqrt{2})^x = 2^{x/2}$. Students must rank the exponents $\\sqrt{x}, x, x/2$ to rank the functions. In the specific case of Q30, this allows ordering integrals without evaluating them.",
+      "discrimination_factors": [
+        "Comparing functions in range 0<x<1",
+        "Rewriting roots as fractional exponents",
+        "Understanding monotonicity of $a^x$"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Solving exponential equations with variable exponents in both the base and the exponent, such as $x^{x^{x^a}} = k$ or similar cyclical systems (Q31, Q27).",
+      "key_insight": "These problems rely on the 'power of logs' property where $\\log_a(b^c) = c \\log_a b$. Taking logs of both sides breaks the 'tower' of exponents, converting them into products. For simultaneous equations, this often reveals a linear system in terms of $\\log(\\text{variable})$.",
+      "discrimination_factors": [
+        "Applying logarithm to both sides of an equality",
+        "Converting exponent towers to products",
+        "Solving linear systems for logarithmic variables"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "parse_repaired": true
+}

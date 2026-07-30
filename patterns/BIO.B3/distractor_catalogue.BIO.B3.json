@@ -1,0 +1,52 @@
+{
+  "topic_key": "BIO.B3",
+  "topic_name": "Cell division and sex determination",
+  "module_code": "B",
+  "corpus_question_count": 30,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Mitosis-Meiosis Role Confusion",
+      "frequency": "High",
+      "example_question_id": "Q1",
+      "why_effective": "Students often confuse 'growth/repair' (Mitosis) with 'reproduction' (Meiosis). Option 1 in Q1 (formation of gametes) is the inverse of the correct function (repair/replacement). This traps students who associate 'cell division' generically with 'gametes'.",
+      "generation_strategy": "Present a list of biological outcomes (e.g., asexual reproduction, variation, repair, haploid gametes) and ask to identify those linked to mitosis. Include one meiosis-specific outcome as a 'true' option or vice versa."
+    },
+    {
+      "distractor_type": "Gamete Ploidy Miscalculation",
+      "frequency": "High",
+      "example_question_id": "Q23",
+      "why_effective": "Requires calculating the mean chromosome count for a mixed population (e.g., 3 haploid + 2 diploid cells). Distractors often represent the counts for pure populations (e.g., just 23 or just 46) or arithmetic errors (18.4 vs 32.2).",
+      "generation_strategy": "Describe a tissue sample containing a mix of cell types (e.g., testis: spermatocytes & spermatids). Ask for the mean chromosome count. Distractors should be the mode or the count of a single cell type."
+    },
+    {
+      "distractor_type": "Sex Determination Logic Reversal",
+      "frequency": "Medium",
+      "example_question_id": "Q2, Q15",
+      "why_effective": "Students mix up XY/XX with Male/Female, or confuse which parent determines sex. In Q2, the presence of Y makes it male (Correct). In Q15, the logic involves determining sex based on the gamete (Q). Distractors include 'Female' if the student ignores the Y or assumes X dominance.",
+      "generation_strategy": "Provide a karyotype or scenario involving gametes. Ask for the sex of the individual. Include distractors where the sex is opposite to the chromosome complement (e.g., XY = Female) or where the sex is deemed 'unknown' despite clear markers."
+    },
+    {
+      "distractor_type": "DNA Mass/Replication Timing Errors",
+      "frequency": "Medium",
+      "example_question_id": "Q10",
+      "why_effective": "Graphs showing DNA mass over time can be misinterpreted. Students look for 'doubling' but fail to align it with the S-phase. Distractors often describe events (like mitosis) occurring at the wrong mass level (e.g., 4x mass instead of 2x).",
+      "generation_strategy": "Use a graph of DNA mass vs Time for a dividing cell. Statements should link specific mass values (1x, 2x) to phases (Interphase, Mitosis). Distractors should claim 4x mass (pre-replication) or that replication happens during division."
+    },
+    {
+      "distractor_type": "Inheritance Scope Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q5",
+      "why_effective": "Students struggle with the distinction between somatic mutations (body cells) and germline inheritance. Option 2 in Q5 (passed to offspring) is incorrect for a cheek cell. This exploits the 'cancer vs inheritance' conceptual gap.",
+      "generation_strategy": "Describe a mutation in a somatic cell (e.g., skin, cheek). Include a distractor stating the mutation will be passed to offspring or affect the gametes directly."
+    },
+    {
+      "distractor_type": "Division Sequence Enumeration",
+      "frequency": "Low",
+      "example_question_id": "Q9",
+      "why_effective": "Calculating the final number of cells requires tracking powers of 2 (mitosis) or 4 (meiosis) over multiple rounds. Distractors are often off by a factor of 2 or represent only the first division (e.g., 4 cells instead of 64).",
+      "generation_strategy": "Ask for the number of daughter cells after $n$ rounds of meiosis (where $n$ includes meiosis I and II). Distractors should be $2^n, 3^n$, or $4(n)$."
+    }
+  ],
+  "_raw": null
+}

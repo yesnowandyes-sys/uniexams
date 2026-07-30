@@ -1,0 +1,45 @@
+{
+  "topic_key": "CHEM.C1",
+  "topic_name": "Atomic structure",
+  "module_code": "C",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Species Confusion Swap",
+      "frequency": "High",
+      "example_question_id": "Q5, Q2",
+      "why_effective": "Tests the ability to track specific particles (neutrons vs. electrons) across different charge states and atomic numbers. The student often confuses the ion with the atom or miscounts the effect of the charge on the electron count.",
+      "generation_strategy": "Create a target ion (e.g., $X^{n+}$) and calculate $N_n$ and $N_e$. Generate distractors using the corresponding atom (neutral), or an isobar with a different charge, or simply swapping the calculated neutron and electron counts in the options."
+    },
+    {
+      "distractor_type": "Algebraic Sign Flip",
+      "frequency": "Medium",
+      "example_question_id": "Q12, Q20",
+      "why_effective": "Exploits sign errors in the algebraic relationship $e = p - \text{charge}$ for cations and $e = p + |\text{charge}|$ for anions. Students often remember the magnitude change but apply the sign incorrectly.",
+      "generation_strategy": "For questions with variables like atomic number $x$, derive the correct expressions for $p, n, e$. Create distractors by flipping the signs in the expression (e.g., changing $x+2$ to $x-2$) or confusing the charge operator (plus/minus)."
+    },
+    {
+      "distractor_type": "Abundance-Weight Trap",
+      "frequency": "High",
+      "example_question_id": "Q8",
+      "why_effective": "Leverages the 'intuitive' but incorrect assumption that the isotope closest to the relative atomic mass in value must have the highest abundance. Students select the visually closest match rather than calculating.",
+      "generation_strategy": "Provide a set of abundance percentage pairs (e.g., 69/31 vs 70/30). Ensure the incorrect 'easier' pair (e.g., 70/30) yields an atomic mass mathematically closer to the target than the correct pair, or simply offer the inverse percentage of the correct answer."
+    },
+    {
+      "distractor_type": "Linear Extrapolation Error",
+      "frequency": "Medium",
+      "example_question_id": "Q15",
+      "why_effective": "Students correctly solve the first part of a multi-step algebraic sequence (finding $x$) but then fail to update the variable for the final part (plugging $x$ back into the final expression), or simply calculate $N$ for the first isotope only.",
+      "generation_strategy": "Define a sequence of nuclides. Ask for the property of the *last* one. Include a distractor that is the property of the *first* or *second* nuclide mentioned to catch those who stop thinking too early."
+    },
+    {
+      "distractor_type": "Sub-particle Count Mismatch",
+      "frequency": "High",
+      "example_question_id": "Q3, Q6",
+      "why_effective": "Confuses Atomic Number (Z) with Mass Number (A). Offers options where Z is used for the mass calculation or vice versa. Exploits the 'Atomic Number = Protons' fundamental but skips the step of subtracting Z from A to find Neutrons.",
+      "generation_strategy": "Calculate the correct $p, n, e$. Generate distractors by swapping $n$ and $p$, or setting $n=0$, or setting $e=0$ (stripped nucleus)."
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,72 @@
+{
+  "module": "chemistry",
+  "label": "ESAT Chemistry",
+  "total_questions": 27,
+  "questions": [
+    {
+      "id": "ESAT-SPECIMEN-CHEMISTRY-Q1",
+      "year": "specimen",
+      "paper": "ESAT",
+      "module": "chemistry",
+      "question_number": 1,
+      "question_text": "The colours of three indicators are shown.\nEqual volumes of these three indicators were mixed and the mixture was added to a solution of pH 5.0.\n\nWhat colour would be seen?",
+      "question_images": [],
+      "screenshot": "esat_screenshots/chemistry/q01.png",
+      "explanation_screenshot": "",
+      "options": {
+        "A": "blue",
+        "B": "green",
+        "C": "orange",
+        "D": "purple",
+        "E": "yellow"
+      },
+      "options_detailed": {
+        "A": {
+          "text": "blue",
+          "math_alt": [],
+          "plain_text": "blue"
+        },
+        "B": {
+          "text": "green",
+          "math_alt": [],
+          "plain_text": "green"
+        },
+        "C": {
+          "text": "orange",
+          "math_alt": [],
+          "plain_text": "orange"
+        },
+        "D": {
+          "text": "purple",
+          "math_alt": [],
+          "plain_text": "purple"
+        },
+        "E": {
+          "text": "yellow",
+          "math_alt": [],
+          "plain_text": "yellow"
+        }
+      },
+      "correct_answer": "E",
+      "correct_answer_raw": "",
+      "correct_answer_plain": "yellow",
+      "correct_answer_images": [],
+      "explanation": "The answer is yellow.\nThe pH scale is a measure of the acidity or alkalinity of an aqueous solution.\nAll indicators in the mixture experience a pH of 5.0.\nMethyl orange (colour changes at 4.0) will be yellow at pH 5.0.\nBromothymol blue (colour changes at 6.5) will be yellow at pH 5.0.\nPhenolphthalein (colour changes at 9.0) will be colourless at pH 5.0.\nIn order: yellow + yellow + colourless = yellow.",
+      "explanation_images": [],
+      "extracted_at": "2026-07-05T00:01:57.412553",
+      "enrichment": {
+        "status": "success",
+        "model": "glm-5.2",
+        "enriched_at": "2026-07-09T16:18:52",
+        "markdown": "## Worked Solution\n\nThe question refers to a table showing the colours of three common indicators at different pH ranges (provided in the original question paper). The three standard indicators used are:\n\n| Indicator | Acid colour | pH range | Alkaline colour |\n|---|---|---|---|\n| Methyl orange | Red | 3.1 – 4.4 | Yellow |\n| Bromothymol blue | Yellow | 6.0 – 7.6 | Blue |\n| Phenolphthalein | Colourless | 8.2 – 10.0 | Pink/Purple |\n\n**Step 1: Determine the colour of methyl orange at pH 5.0.**\n\nThe pH range for methyl orange is $3.1 - 4.4$. At pH 5.0, the pH is **above** the upper end of this range ($5.0 > 4.4$), so methyl orange is in its **alkaline (yellow)** form.\n\n**Step 2: Determine the colour of bromothymol blue at pH 5.0.**\n\nThe pH range for bromothymol blue is $6.0 - 7.6$. At pH 5.0, the pH is **below** the lower end of this range ($5.0 < 6.0$), so bromothymol blue is in its **acidic (yellow)** form.\n\n**Step 3: Determine the colour of phenolphthalein at pH 5.0.**\n\nThe pH range for phenolphthalein is $8.2 - 10.0$. At pH 5.0, the pH is **well below** the lower end of this range ($5.0 \\ll 8.2$), so phenolphthalein is in its **acidic (colourless)** form.\n\n**Step 4: Combine the colours.**\n\nEqual volumes of each indicator are mixed:\n\n$$\\text{yellow} + \\text{yellow} + \\text{colourless} = \\text{yellow}$$\n\nThe solution would appear **yellow**.\n\n## Distractor Analysis\n\n- **A (blue):** This would be the colour if the student incorrectly determined that bromothymol blue was in its alkaline form at pH 5.0, perhaps confusing the lower bound of its transition range ($6.0$) and thinking pH 5.0 was above it.\n\n- **B (green):** This is a plausible distractor. A student might reason that yellow + yellow + colourless produces a \"diluted\" or mixed green colour, or confuse the green transition colour of bromothymol blue (which occurs near pH 7) as being relevant at pH 5.0.\n\n- **C (orange):** This would arise if the student placed pH 5.0 within the transition range of methyl orange ($3.1 - 4.4$) rather than above it, concluding methyl orange is orange rather than fully yellow.\n\n- **D (purple):** This would result from incorrectly concluding that phenolphthalein is in its alkaline (pink/purple) form at pH 5.0, perhaps confusing the transition range entirely or mixing up acid and alkaline colours.\n\n- **E (yellow):** **Correct.** All coloured indicators present are yellow, and phenolphthalein is colourless, so the mixture is yellow.\n\n## Classification\n\n- **Module:** Chemistry\n- **Subtopic:** Acids, Bases, and Salts; Indicators\n- **Content Code:** C7 (Acids, bases, and salts — indicator colour changes and pH)\n- **Question Type:** Multi-step reasoning / conceptual application\n\n## Difficulty Rating\n\n**Difficulty:** 3/10\n\nThis question requires knowledge of three common indicators and their pH transition ranges, which is straightforward factual recall. The main challenge is systematically checking each indicator against the given pH and correctly combining the colours. A well-prepared candidate should answer this quickly.\n\n## Diagram Descriptions\n\nNo diagrams needed.",
+        "error": null,
+        "processor_id": "glm-5.2",
+        "input_tokens": 1100,
+        "output_tokens": 1673
+      }
+    }
+  ],
+  "extracted_at": "2026-07-05T00:07:23.328420",
+  "enriched_at": "2026-07-09T16:18:52",
+  "enrichment_model": "glm-5.2"
+}

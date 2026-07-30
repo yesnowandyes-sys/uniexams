@@ -1,0 +1,60 @@
+{
+  "topic_key": "CHEM.C4",
+  "topic_name": "Quantitative chemistry",
+  "module_code": "C",
+  "corpus_question_count": 61,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "A back-titration scenario where an impure solid reacts with an excess known volume and concentration of acid, and the remaining acid is titrated with a base (Q16).",
+      "key_insight": "Student must recognize that the moles of base used in the titration equate to the *remaining* acid moles. The 'consumed' acid moles are the difference between the initial acid moles and the titrated base moles. This consumed amount reacts with the solid.",
+      "discrimination_factors": [
+        "Ability to track 'moles in' vs 'moles out'",
+        "Stoichiometric ratio of Base:Acid (often 1:1)",
+        "Ratio of Acid:Solid (often 2:1)"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Determining the Molecular Formula of a hydrocarbon using only volume changes of gases (combustion analysis without masses) (Q7, Q30).",
+      "key_insight": "Students must use the fact that equal volumes contain equal moles of gas. The increase or decrease in volume correlates to the change in the number of gas molecules ($ \\Delta n_{gas} $) in the balanced equation. They must solve simultaneous equations for Carbon and Hydrogen atoms based on O2 consumption and CO2 production.",
+      "discrimination_factors": [
+        "Understanding Avogadro's Law (Volume $\\propto$ Moles)",
+        "Balancing combustion equations algebraically ($C_x H_y + z O_2 \to x CO_2 + y/2 H_2O$)",
+        "Inferring formula from integer coefficients"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "A reaction involving hydrated salts where a student calculates the mass for an anhydrous salt but uses the hydrated mass, or vice versa (Q15).",
+      "key_insight": "Understanding that the 'active ingredient' (anhydrous part) is what contributes to the concentration, but the 'mass weighed out' includes the water mass. The concentration is diluted by the ratio $Mr_{anhydrous} / Mr_{hydrated}$.",
+      "discrimination_factors": [
+        "Differentiating between $Mr$ of anhydrous vs hydrated compounds",
+        "Inverse proportionality: Higher mass weighed $\to$ Lower concentration",
+        "Accounting for water in stoichiometry"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Yield and Atom Economy in a two-step industrial process (e.g., Q4 Blast Furnace or Q33 Airbags).",
+      "key_insight": "In multi-step synthesis, the intermediate product (Stage 1) becomes the reactant for Stage 2. The amount of final product is limited by the *lowest* yield or the stoichiometric amount of the intermediate. Students must follow the 'moles' through the chain without resetting the 'start amount' to the initial mass.",
+      "discrimination_factors": [
+        "Conservation of mass/moles through process steps",
+        "Identifying the 'carrier' of the element (C in Q4, Na in Q33)",
+        "Converting mass of A $\to$ moles of A $\to$ moles of B $\to$ moles of C $\to$ mass of C"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating the concentration of a solution after sequential dilutions and then reacting it (Q26).",
+      "key_insight": "The concentration is reduced by the *ratio* of the volumes. If 20 $cm^3$ becomes 500 $cm^3$, the factor is $20/500 = 1/25$. The moles remain constant, but concentration changes. Errors arise from multiplying by the dilution factor instead of dividing.",
+      "discrimination_factors": [
+        "Understanding $C_1 V_1 = C_2 V_2$",
+        "Handling two-step dilutions ($X \to Y \to$ Neutralisation)",
+        "Calculating total required moles from titration data ($M \times V$)"
+      ],
+      "difficulty_band": "4-6"
+    }
+  ],
+  "parse_repaired": true
+}

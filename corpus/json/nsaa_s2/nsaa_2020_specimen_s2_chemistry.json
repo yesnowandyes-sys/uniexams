@@ -1,0 +1,232 @@
+{
+  "source_file": "NSAA_2020_Specimen_S2_QuestionPaper.pdf",
+  "paper": "NSAA",
+  "year": 2020,
+  "specimen": true,
+  "section": "S2",
+  "subject": "chemistry",
+  "total_questions": 10,
+  "has_answer_key": true,
+  "questions": [
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q11",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 11,
+      "question_text": "A methane gas burner heats objects with only 20% efficiency.\nThe gas burner is used to heat a 500 g copper pan containing 400 g of water from 20 °C to\n80 °C.\nspecific heat capacities: copper = 0.4 J g–1 °C–1; water = 4 J g–1 °C–1\nstandard enthalpy change of combustion of methane = − 900 kJ mol–1\nWhat is the minimum mass of methane gas required?\n(Mr value: methane = 16)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "1.92 g",
+        "B": "2.40 g",
+        "C": "8.53 g",
+        "D": "9.60 g",
+        "E": "11.4 g",
+        "F": "12.8 g",
+        "G": "21.12 g"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q12",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 12,
+      "question_text": "Mercury(II) fulminate, HgC2N2O2, can decompose to produce carbon monoxide and two\ndifferent elements only.\nThe enthalpy change for the decomposition of one mole of mercury(II) fulminate is – 606 kJ.\nThe enthalpy change of formation for mercury(II) fulminate is + 386 kJ mol–1.\nWhat is the enthalpy change of formation of carbon monoxide?\n(Assume that all data is given at the same temperature and pressure.)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "–110 kJ mol–1",
+        "B": "+110 kJ mol–1",
+        "C": "–166 kJ mol–1",
+        "D": "+166 kJ mol–1",
+        "E": "– 220 kJ mol–1",
+        "F": "+ 220 kJ mol–1",
+        "G": "– 496 kJ mol–1",
+        "H": "+ 496 kJ mol–1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q13",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 13,
+      "question_text": "The mass spectrum of a hydrocarbon, X, is shown.\nrelative 100\nintensity\n0 20 40 60 80 100\nmass-to-charge ratio\nX contains 14.3% by mass of hydrogen and does not decolourise aqueous bromine.\nWhich of the following could be the identity of X?\n1 hex-2-ene\n2 cyclohexane\n3 cyclobutane\n(Ar values: H = 1; C = 12)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "1 and 2 only",
+        "E": "1 and 3 only",
+        "F": "2 and 3 only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q14",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 14,
+      "question_text": "Thionyl chloride, SOCl 2, is the only product of the reaction between sulfur trioxide, chlorine and\nsulfur dichloride.\nThionyl chloride reacts with water to make hydrogen chloride and one other gaseous product,\nwhich is triatomic.\n2.0 dm3 of chlorine gas (measured at room temperature and pressure) was reacted completely\nwith sulfur trioxide and sulfur dichloride.\nThe product was isolated, dissolved in water and made up to 200 cm3.\nWhat is the maximum concentration of HCl in the resulting solution?\n(Assume that one mole of gas at room temperature and pressure occupies 24 dm3.)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "0.28 mol dm–3",
+        "B": "0.50 mol dm–3",
+        "C": "0.83 mol dm–3",
+        "D": "1.25 mol dm–3",
+        "E": "2.50 mol dm–3",
+        "F": "5.00 mol dm–3"
+      },
+      "correct_answer": "E"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q15",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 15,
+      "question_text": "Tollens’ reagent, [Ag(NH3)2]NO3(aq), can be used to coat glass surfaces with silver metal\n(Ar = 108) to make decorative objects. It is a reducing agent and reacts by oxidising aldehydes\nto carboxylic acids.\nThe half-equation for the organic oxidation can be represented as (R = alkyl group):\nRCHO + H2O → RCOOH + 2H+ + 2e–\naldehyde carboxylic\nacid\nAll of the inside surface of a beaker is to be coated in a uniform layer of silver metal of\nthickness 0.01 cm. The beaker can be modelled as a cylinder of height 10 cm and radius 5 cm.\nThe density of silver metal is 10.5 g cm–3.\nWhich of the following expressions gives the minimum number of moles of aldehyde required?\n(Assume that the yield of any reaction is 100%.)\n10.5 × 1.25 × π",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "2 × 108 10.5 × 1.25 × π",
+        "B": "2 × 10.5 × 1.25 × π",
+        "C": "108 × 10.5 × 1.25 × π",
+        "D": "10.5 × 1.5 × π",
+        "E": "2 × 108 2 × 10.5 × 1.5 × π",
+        "F": "10.5 × 1.5 × π",
+        "G": "108 × 10.5 × 1.5 × π",
+        "H": "2 × 10 × 10.5 × 1.25 × π / 108"
+      },
+      "correct_answer": "H"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q16",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 16,
+      "question_text": "Deuterium, D, is an isotope of hydrogen. It has one neutron and one proton in its nucleus ( 21H\nis an alternative representation).\nLike the more common isotope of hydrogen, 11H, deuterium reacts with oxygen to form water.\nConsider the following information about hydrogen, deuterium and water:\nbond energy boiling point\n/ kJ mol–1 / °C\nH–H 436 H2 – 252.8\nD–D 443 D2 – 249.7\nO–H 464 H2O 100.0\nO–D 471 D2O 101.4\nBoth H2O and D2O dissociate into ions, according to the following equations:\nH2O ⇌ H+ + OH– D2O ⇌ D+ + OD–\nAt a given temperature, the equilibrium constant for H2O dissociation is greater\nthan that for D2O dissociation.\nUnder the same conditions, which of the following comparisons is/are correct?\n1 The reaction of D2 with oxygen releases less energy than H2 with oxygen.\n2 H2O is more acidic than D2O when measured at the same temperature.\n3 The boiling points of D2 and D2O are higher than H2 and H2O, respectively,\nbecause the individual bond energies are higher.",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q17",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 17,
+      "question_text": "In 1836, James Marsh devised a test to allow the detection of very small traces of arsenic.\nThe first stage of the Marsh test involves the reaction of arsenic trioxide, As2O3, with zinc under\nacidic conditions. One of the products is compound X.\nThe unbalanced equation for the reaction is:\nAs2O3(s) + Zn(s) + H+(aq) → X(g) + Zn2+(aq) + H2O(l)\nIn the balanced equation, 1.0 mol of arsenic trioxide reacts with 6.0 mol of zinc, and produces\n2.0 mol of X and 6.0 mol of zinc ions. Only the zinc and the arsenic change oxidation state in\nthis reaction.\nIf 1.98 g of arsenic trioxide reacts with an excess of zinc and acid in this reaction, what is the\nmaximum mass of X that could be produced?\n(Ar values: H = 1; O = 16; Zn = 65; As = 75)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "0.39 g",
+        "B": "0.75 g",
+        "C": "0.78 g",
+        "D": "1.50 g",
+        "E": "1.56 g",
+        "F": "1.66 g"
+      },
+      "correct_answer": "E"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q18",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 18,
+      "question_text": "Compound P, with molecular formula C5H10, reacts with hydrogen bromide in an addition\nreaction to form compound Q as the only major product.\nQ undergoes a substitution reaction with aqueous sodium hydroxide to form compound R.\nAfter R is completely oxidised using acidified potassium dichromate(VI), the resulting product\ndoes not react with aqueous sodium carbonate.\nR undergoes an elimination reaction to form a mixture of products: P and S.\nS has no stereoisomers.\nWhat is compound P?",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "pent-1-ene",
+        "B": "pent-2-ene",
+        "C": "2-methylbut-1-ene",
+        "D": "2-methylbut-2-ene",
+        "E": "3-methylbut-1-ene"
+      },
+      "correct_answer": "E"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q19",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 19,
+      "question_text": "Bromine trifluoride, BrF3, is a simple molecular compound containing single bonds only.\nIt is not trigonal planar.\nTwo of the bond lengths in this molecule are 0.181 nm, and the third is 0.172 nm.\nThe through-space distances between two fluorine atoms are 0.241 nm or 0.361 nm.\nWhat is the acute bond angle in BrF3?",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "sin–1  0.1205   0.172 ",
+        "B": "cos–1  0.1205   0.172 ",
+        "C": "sin–1  0.1205   0.181 ",
+        "D": "cos–1  0.1205   0.181 ",
+        "E": "sin–1  0.172   0.1805 ",
+        "F": "cos–1  0.172   0.1805 ",
+        "G": "sin–1  0.1805   0.181 ",
+        "H": "cos–1  0.1805   0.181 "
+      },
+      "correct_answer": "G"
+    },
+    {
+      "id": "NSAA-2020-S2-SPEC-Y-Q20",
+      "year": 2020,
+      "paper": "NSAA",
+      "section": "S2",
+      "subject": "chemistry",
+      "part": "Y",
+      "question_number": 20,
+      "question_text": "Ethanoic acid, ethanol and water were added to a reaction vessel and a quantity of\nconcentrated sulfuric acid was added. The reaction mixture was then heated and an ester\n(ethyl ethanoate) and water were formed in equilibrium with the reactants.\nC2H5OH(l) + CH3COOH(l) ⇌ CH3COOC2H5(l) + H2O(l)\n120 g of ethanoic acid and 92 g of ethanol were used and the mass of water present at the start\nof the experiment was 18 g. Assume that there is no change in volume.\nAt the temperature of the reaction, the equilibrium constant Kc is 2.00.\nWhat is the mass of the ester present in the mixture at equilibrium?\n(Mr values: ethanoic acid = 60; ethanol = 46; water = 18; ethyl ethanoate = 88)",
+      "has_diagram": false,
+      "diagram_images": [],
+      "options": {
+        "A": "1.00 g",
+        "B": "53.0 g",
+        "C": "88.0 g",
+        "D": "103 g",
+        "E": "106 g",
+        "F": "176 g",
+        "G": "209 g",
+        "H": "215 g"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}

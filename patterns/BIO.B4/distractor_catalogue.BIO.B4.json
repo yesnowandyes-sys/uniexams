@@ -1,0 +1,52 @@
+{
+  "topic_key": "BIO.B4",
+  "topic_name": "Inheritance",
+  "module_code": "B",
+  "corpus_question_count": 37,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Reversed Dominance/Recessivity Logic",
+      "frequency": "High",
+      "example_question_id": "Q1, Q18, Q19",
+      "why_effective": "Students frequently mistake 'affected' parents for homozygous dominant (AA) when they could be heterozygous (Aa), or misinterpret 'unaffected' parents in recessive conditions. This leads to incorrect Punnett square setups.",
+      "generation_strategy": "Present a scenario with a dominant phenotype and ask for offspring probabilities. Include options that result from crossing AA x aa instead of the correct Aa x aa. Alternatively, offer a phenotypic ratio (e.g., 3:1) when the scenario involves a lethal allele (modifying the ratio to 2:1)."
+    },
+    {
+      "distractor_type": "Misapplied Heuristic (75% Rule)",
+      "frequency": "High",
+      "example_question_id": "Q3, Q23",
+      "why_effective": "Students rely on the standard 'Aa x Aa = 25% affected' rule without checking parental genotypes. In multi-generation problems, the 'unaffected' parent is often AA (p=0 for offspring), not Aa (p=0.25). Options exploit this by offering 1/4 (25%) or 3/4 (75%).",
+      "generation_strategy": "Construct a multi-generation pedigree where an unaffected individual has a 0% or 50% chance of being a carrier. Include distractors based on the 25% carrier assumption."
+    },
+    {
+      "distractor_type": "Carrier Counting vs. Zygosity Counting",
+      "frequency": "Medium",
+      "example_question_id": "Q2, Q15",
+      "why_effective": "Students confuse 'max possible heterozygous' with 'max possible affected'. By selecting unaffected individuals, they often miss that heterozygotes can be phenotypically normal.",
+      "generation_strategy": "Ask for the 'maximum possible number of heterozygous individuals' in a pedigree. Include a distractor equal to the total number of individuals (assuming all are heterozygous) or the number of affected individuals only."
+    },
+    {
+      "distractor_type": "Allele Counting Errors (Diploid Confusion)",
+      "frequency": "Medium",
+      "example_question_id": "Q5, Q27",
+      "why_effective": "In population questions, students often count individuals instead of alleles (forgetting the 2n multiplier) or fail to count alleles in homozygous recessive individuals twice.",
+      "generation_strategy": "Provide population stats (e.g., 29 albinos). Distractors: 29 (counting bodies), 58 (counting alleles in affected only), or sums that miss the carrier count."
+    },
+    {
+      "distractor_type": "Pleiotropy/Environment Misattribution",
+      "frequency": "Rare",
+      "example_question_id": "Q4, Q10, Q21",
+      "why_effective": "Students possess weak understanding of evolutionary mechanisms. They believe that 'need' causes mutations (Lamarckian) or that resistance is an active adaptation rather than a pre-existing selective advantage.",
+      "generation_strategy": "Include statements like 'The copper caused the mutation' or 'Fish adapted to survive'. Frame the question such that students must identify which statements are false (often the counter-intuitive ones)."
+    },
+    {
+      "distractor_type": "Lethal Allele Ratios",
+      "frequency": "Medium",
+      "example_question_id": "Q19, Q31",
+      "why_effective": "Students memorize the 3:1 phenotypic ratio for heterozygous crosses. They fail to adjust for 100% mortality in the homozygous dominant class, leading to a 2:1 ratio choice.",
+      "generation_strategy": "Scenario: Heterozygous x Heterozygous cross with dominant lethality. Correct answer is 2:1 (Affected:Unaffected) or 0% Homozygous Dominant. Distractor: 3:1 or 25% dominant."
+    }
+  ],
+  "_raw": null
+}

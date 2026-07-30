@@ -1,0 +1,422 @@
+{
+  "source_file": "TMUA-2018-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2018,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2018-P2-Q1",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1 The function f is given, for x > 0, by x3 − 4x f(x) = √ 2 x Find the value of f (4).",
+      "has_diagram": false,
+      "options": {
+        "A": "3",
+        "B": "9",
+        "C": "9.5",
+        "D": "12",
+        "E": "39.5",
+        "F": "88 3"
+      },
+      "correct_answer": "C",
+      "raw_text": "1   The function f is given, for x > 0, by\n                                                 x3 − 4x\n                                        f(x) =      √\n                                                  2 x\n    Find the value of f \u0002 (4).\n    A 3\n    B 9\n    C 9.5\n    D 12\n    E 39.5\n    F 88\n                                             3",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q2",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2 Find the value of the constant term in the expansion of 12 6 1 x − 2 x",
+      "has_diagram": false,
+      "options": {
+        "A": "−495",
+        "B": "−220",
+        "C": "−66",
+        "D": "66",
+        "E": "220",
+        "F": "495 4"
+      },
+      "correct_answer": "B",
+      "raw_text": "2   Find the value of the constant term in the expansion of\n                                       \u0002          \u000312\n                                           6    1\n                                          x − 2\n                                               x\n    A −495\n    B −220\n    C −66\n    D 66\n    E 220\n    F 495\n                                           4",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q3",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3 Consider the following statement:",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 5"
+      },
+      "correct_answer": "F",
+      "raw_text": "3   Consider the following statement:\n        A car journey consists of two parts. In the ﬁrst part, the average speed is\n        u km/h. In the second part, the average speed is v km/h. Hence the average\n        speed for the whole journey is 12 (u + v) km/h.\n    Which of the following examples of car journeys provide(s) a counterexample to\n    the statement?\n        I    In the ﬁrst part of the journey, the car travels at a constant speed of\n             50 km/h for 100 km. In the second part of the journey, the car travels\n             at a constant speed of 40 km/h for 100 km.\n        II   In the ﬁrst part of the journey, the car travels at a constant speed\n             of 50 km/h for one hour. In the second part of the journey, the car\n             travels at a constant speed of 40 km/h for one hour.\n        III In the ﬁrst part of the journey, the car travels at a constant speed of\n            50 km/h for 80 km. In the second part of the journey, the car travels\n            at a constant speed of 40 km/h for 100 km.\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                            5",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q4",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4 The non-zero real number c is such that the equation cos x = c has two solutions for 0 < x < 32 π. How many solutions of the equation cos2 2x = c2 are there in the range 0 < x < 32 π ?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "7",
+        "F": "8 6"
+      },
+      "correct_answer": "D",
+      "raw_text": "4   The non-zero real number c is such that the equation cos x = c has two solutions for\n    0 < x < 32 π.\n    How many solutions of the equation cos2 2x = c2 are there in the range 0 < x < 32 π ?\n    A 2\n    B 3\n    C 4\n    D 6\n    E 7\n    F 8\n                                            6",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q5",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5 The two diagonals of the quadrilateral Q are perpendicular. Consider the following statements: I One of the diagonals of Q is a line of symmetry of Q. II The midpoints of the sides of Q are the vertices of a square. Which of these statements is/are necessarily true for the quadrilateral Q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "neither of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "I and II 7"
+      },
+      "correct_answer": "A",
+      "raw_text": "5   The two diagonals of the quadrilateral Q are perpendicular.\n    Consider the following statements:\n        I   One of the diagonals of Q is a line of symmetry of Q.\n        II The midpoints of the sides of Q are the vertices of a square.\n    Which of these statements is/are necessarily true for the quadrilateral Q ?\n    A neither of them\n    B I only\n    C II only\n    D I and II\n                                           7",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q6",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6 Which one of the following functions provides a counterexample to the statement: if f (x) > 0 for all real x, then f(x) > 0 for all real x.",
+      "has_diagram": false,
+      "options": {
+        "A": "f(x) = x2 + 1",
+        "B": "f(x) = x2 − 1",
+        "C": "f(x) = x3 + x + 1",
+        "D": "f(x) = 1 − x",
+        "E": "f(x) = 2x 8"
+      },
+      "correct_answer": "C",
+      "raw_text": "6   Which one of the following functions provides a counterexample to the statement:\n                     if f \u0002 (x) > 0 for all real x, then f(x) > 0 for all real x.\n    A f(x) = x2 + 1\n    B f(x) = x2 − 1\n    C f(x) = x3 + x + 1\n    D f(x) = 1 − x\n    E f(x) = 2x\n                                               8",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q7",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7 Sequence 1 is an arithmetic progression with ﬁrst term 11 and common diﬀerence 3. Sequence 2 is an arithmetic progression with ﬁrst term 2 and common diﬀerence 5. Some numbers that appear in Sequence 1 also appear in Sequence 2. Let N be the 20th such number. What is the remainder when N is divided by 7 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4",
+        "F": "5",
+        "G": "6 9"
+      },
+      "correct_answer": "B",
+      "raw_text": "7   Sequence 1 is an arithmetic progression with ﬁrst term 11 and common diﬀerence 3.\n    Sequence 2 is an arithmetic progression with ﬁrst term 2 and common diﬀerence 5.\n    Some numbers that appear in Sequence 1 also appear in Sequence 2. Let N be the\n    20th such number.\n    What is the remainder when N is divided by 7 ?\n    A 0\n    B 1\n    C 2\n    D 3\n    E 4\n    F 5\n    G 6\n                                          9",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q8",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8 The diagram shows an example of a mountain proﬁle. upstroke: downstroke: This consists of upstrokes which go upwards from left to right, and downstrokes which go downwards from left to right. The example shown has six upstrokes and six downstrokes. The horizontal line at the bottom is known as sea level.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 10 √"
+      },
+      "correct_answer": "D",
+      "raw_text": "8   The diagram shows an example of a mountain proﬁle.\n                                                                        upstroke:\n                                                                     downstroke:\n    This consists of upstrokes which go upwards from left to right, and downstrokes\n    which go downwards from left to right. The example shown has six upstrokes and six\n    downstrokes. The horizontal line at the bottom is known as sea level.\n    A mountain proﬁle of order n consists of n upstrokes and n downstrokes, with the\n    condition that the proﬁle begins and ends at sea level and never goes below sea\n    level (although it might reach sea level at any point). So the example shown is a\n    mountain proﬁle of order 6.\n    Mountain proﬁles can be coded by using U to indicate an upstroke and D to indicate\n    a downstroke. The example shown has the code UDUUUDUDDUDD. A sequence of\n    U’s and D’s obtained from a mountain proﬁle in this way is known as a valid code.\n    Which of the following statements is/are true?\n        I    If a valid code is written in reverse order, the result is always a valid\n             code.\n        II   If each U in a valid code is replaced by D and each D by U, the result\n             is always a valid code.\n        III If U is added at the beginning of a valid code and D is added at the\n            end of the code, the result is always a valid code.\n    A none of them\n    B I only\n    C II only\n    D III only\n    E I and II only\n    F I and III only\n    G II and III only\n    H I, II and III\n                                            10\n\f                                                           √",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q9",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9 Consider the following attempt to solve the equation 4x 2x − 1 = 10x − 5: √ 4x 2x − 1 = 10x − 5 (I) √ 4x 2x − 1 = 5(2x − 1) (II) 16x2 (2x − 1) = 25(2x − 1)2 (III) 16x2 = 25(2x − 1) (IV) 16x2 − 50x + 25 = 0 (V) (8x − 5)(2x − 5) = 0 (VI) 5 5 The solutions of the original equation are x = and x = . 8 2 Which one of the following is true?",
+      "has_diagram": true,
+      "options": {
+        "A": "The solution is correct.",
+        "B": "Only one of x = 58 and x = 52 is correct and the error arises as a result of step (II).",
+        "C": "Only one of x = 58 and x = 52 is correct and the error arises as a result of step (III).",
+        "D": "Only one of x = 58 and x = 52 is correct and the error arises as a result of step (IV).",
+        "E": "There is another value of x that satisﬁes the original equation and the error arises as a result of step (II).",
+        "F": "There is another value of x that satisﬁes the original equation and the error arises as a result of step (III).",
+        "G": "There is another value of x that satisﬁes the original equation and the error arises as a result of step (IV). 11"
+      },
+      "correct_answer": "F",
+      "raw_text": "9   Consider the following attempt to solve the equation 4x 2x − 1 = 10x − 5:\n                              √\n                            4x 2x − 1 = 10x − 5\n                                                                            (I)\n                               √\n                            4x 2x − 1 = 5(2x − 1)\n                                                                            (II)\n                          16x2 (2x − 1) = 25(2x − 1)2\n                                                                            (III)\n                                   16x2 = 25(2x − 1)\n                                                                            (IV)\n                       16x2 − 50x + 25 = 0\n                                                                            (V)\n                       (8x − 5)(2x − 5) = 0\n                                                                            (VI)\n                                                           5        5\n          The solutions of the original equation are x =     and x = .\n                                                           8        2\n    Which one of the following is true?\n    A The solution is correct.\n    B Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (II).\n    C Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (III).\n    D Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (IV).\n    E There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (II).\n    F There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (III).\n    G There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (IV).\n                                              11",
+      "diagram_images": [
+        "TMUA-2018-P2-Q9-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-2018-P2-Q10",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10 The function f(x) is deﬁned for all real numbers. Consider the following three conditions, where a is a real constant: I f(a − x) = f(a + x) for all real x. II f(2a − x) = f(x) for all real x. III f(a − x) = f(x) for all real x. Which of these conditions is/are necessary and suﬃcient for the graph of y = f(x) to have reﬂection symmetry in the line x = a ? Condition I is Condition II is Condition III is necessary and necessary and necessary and suﬃcient suﬃcient suﬃcient",
+      "has_diagram": false,
+      "options": {
+        "A": "yes yes yes",
+        "B": "yes yes no",
+        "C": "yes no yes",
+        "D": "yes no no",
+        "E": "no yes yes",
+        "F": "no yes no",
+        "G": "no no yes",
+        "H": "no no no 12"
+      },
+      "correct_answer": "B",
+      "raw_text": "10   The function f(x) is deﬁned for all real numbers.\n     Consider the following three conditions, where a is a real constant:\n          I    f(a − x) = f(a + x) for all real x.\n          II   f(2a − x) = f(x) for all real x.\n          III f(a − x) = f(x) for all real x.\n     Which of these conditions is/are necessary and suﬃcient for the graph of y = f(x)\n     to have reﬂection symmetry in the line x = a ?\n               Condition I is            Condition II is        Condition III is\n               necessary and             necessary and           necessary and\n                 suﬃcient                  suﬃcient                suﬃcient\n      A             yes                       yes                     yes\n      B             yes                       yes                      no\n      C             yes                        no                     yes\n      D             yes                        no                      no\n      E              no                       yes                     yes\n      F              no                       yes                      no\n      G              no                        no                     yes\n      H              no                        no                      no\n                                                  12",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q11",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11 Consider the equation 2x = mx + c, where m and c are real constants. Which of the following statements is/are true? I The equation has a negative real solution only if c > 1. II The equation has two distinct real solutions if c > 1. III The equation has two distinct positive real solutions if and only if c ≤ 1.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 13"
+      },
+      "correct_answer": "A",
+      "raw_text": "11   Consider the equation 2x = mx + c, where m and c are real constants.\n     Which of the following statements is/are true?\n         I    The equation has a negative real solution only if c > 1.\n         II   The equation has two distinct real solutions if c > 1.\n         III The equation has two distinct positive real solutions if and only if c ≤ 1.\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                            13",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q12",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12 Consider the following statement: For any positive integer N there is a positive integer K such that N (Km + 1) − 1 is not prime for any positive integer m. Which one of the following is the negation of this statement?",
+      "has_diagram": false,
+      "options": {
+        "A": "For any positive integer N there is a positive integer K such that there is a positive integer m for which N (Km + 1) − 1 is prime.",
+        "B": "For any positive integer N there is a positive integer K such that there is a positive integer m for which N (Km + 1) − 1 is not prime.",
+        "C": "For any positive integer N there is a positive integer K such that for any positive integer m, N (Km + 1) − 1 is not prime.",
+        "D": "For any positive integer N , any positive integer K and any positive integer m, N (Km + 1) − 1 is not prime.",
+        "E": "There is a positive integer N such that for any positive integer K there is a positive integer m for which N (Km + 1) − 1 is not prime.",
+        "F": "There is a positive integer N such that for any positive integer K there is a positive integer m for which N (Km + 1) − 1 is prime.",
+        "G": "There is a positive integer N such that for any positive integer K and any positive integer m, N (Km + 1) − 1 is prime.",
+        "H": "There is a positive integer N and a positive integer K for which there is no positive integer m for which N (Km + 1) − 1 is prime. 14"
+      },
+      "correct_answer": "F",
+      "raw_text": "12   Consider the following statement:\n         For any positive integer N there is a positive integer K such that\n         N (Km + 1) − 1 is not prime for any positive integer m.\n     Which one of the following is the negation of this statement?\n     A For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is prime.\n     B For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is not prime.\n     C For any positive integer N there is a positive integer K such that\n       for any positive integer m, N (Km + 1) − 1 is not prime.\n     D For any positive integer N , any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is not prime.\n     E There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is not prime.\n     F There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is prime.\n     G There is a positive integer N such that for any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is prime.\n     H There is a positive integer N and a positive integer K for which\n       there is no positive integer m for which N (Km + 1) − 1 is prime.\n                                            14",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q13",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13 The following is an attempted proof of the conjecture: if tan θ > 0, then sin θ + cos θ > 1. Suppose tan θ > 0, so in particular cos θ = 0. sin θ Since tan θ = , then sin θ cos θ = tan θ cos2 θ > 0. (I) cos θ It follows that 1 + 2 sin θ cos θ > 1. (II) Therefore sin2 θ + 2 sin θ cos θ + cos2 θ > 1, (III) which factorises to give (sin θ + cos θ)2 > 1. (IV) Therefore sin θ + cos θ > 1. (V) Which one of the following is the case?",
+      "has_diagram": false,
+      "options": {
+        "A": "The proof is correct.",
+        "B": "The proof is incorrect, and the ﬁrst error occurs in line (I).",
+        "C": "The proof is incorrect, and the ﬁrst error occurs in line (II).",
+        "D": "The proof is incorrect, and the ﬁrst error occurs in line (III).",
+        "E": "The proof is incorrect, and the ﬁrst error occurs in line (IV).",
+        "F": "The proof is incorrect, and the ﬁrst error occurs in line (V). 15"
+      },
+      "correct_answer": "F",
+      "raw_text": "13   The following is an attempted proof of the conjecture:\n                               if tan θ > 0, then sin θ + cos θ > 1.\n         Suppose tan θ > 0, so in particular cos θ \u0004= 0.\n                         sin θ\n         Since tan θ =         , then sin θ cos θ = tan θ cos2 θ > 0.     (I)\n                         cos θ\n         It follows that 1 + 2 sin θ cos θ > 1.                           (II)\n         Therefore sin2 θ + 2 sin θ cos θ + cos2 θ > 1,                   (III)\n         which factorises to give (sin θ + cos θ)2 > 1.                   (IV)\n         Therefore sin θ + cos θ > 1.                                     (V)\n     Which one of the following is the case?\n     A The proof is correct.\n     B The proof is incorrect, and the ﬁrst error occurs in line (I).\n     C The proof is incorrect, and the ﬁrst error occurs in line (II).\n     D The proof is incorrect, and the ﬁrst error occurs in line (III).\n     E The proof is incorrect, and the ﬁrst error occurs in line (IV).\n     F The proof is incorrect, and the ﬁrst error occurs in line (V).\n                                                  15",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q14",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14 In the triangle P QR, P R = 2, QR = p and ∠RP Q = 30◦ . What is the set of all the values of p for which this information uniquely determines the length of P Q ?",
+      "has_diagram": false,
+      "options": {
+        "A": "p=1 √",
+        "B": "p= 3",
+        "C": "1≤p<2 √",
+        "D": "3≤p<2",
+        "E": "p = 1 or p ≥ 2 √",
+        "F": "p = 3 or p ≥ 2",
+        "G": "p<2",
+        "H": "p≥2 16"
+      },
+      "correct_answer": "E",
+      "raw_text": "14   In the triangle P QR, P R = 2, QR = p and ∠RP Q = 30◦ .\n     What is the set of all the values of p for which this information uniquely determines\n     the length of P Q ?\n     A p=1\n         √\n     B p= 3\n     C 1≤p<2\n       √\n     D   3≤p<2\n     E p = 1 or p ≥ 2\n           √\n     F p = 3 or p ≥ 2\n     G p<2\n     H p≥2\n                                            16",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q15",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15 It is given that f(x) = x3 + 3qx2 + 2, where q is a real constant. The equation f(x) = 0 has 3 distinct real roots. Which of the following statements is/are necessarily true? I The equation f(x) + 1 = 0 has 3 distinct real roots. II The equation f(x + 1) = 0 has 3 distinct real roots. III The equation f(−x) − 1 = 0 has 3 distinct real roots.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 17"
+      },
+      "correct_answer": "G",
+      "raw_text": "15   It is given that f(x) = x3 + 3qx2 + 2, where q is a real constant.\n     The equation f(x) = 0 has 3 distinct real roots.\n     Which of the following statements is/are necessarily true?\n         I    The equation f(x) + 1 = 0 has 3 distinct real roots.\n         II   The equation f(x + 1) = 0 has 3 distinct real roots.\n         III The equation f(−x) − 1 = 0 has 3 distinct real roots.\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                              17",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q16",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16 In this question, x1 , x2 , x3 , . . . is an arithmetic progression, all of whose terms are integers. Let n be a positive integer. If the median of the ﬁrst n terms of the sequence is an integer, which of the following three statements must be true? I The median of the ﬁrst n + 2 terms is an integer. II The median of the ﬁrst 2n terms is an integer. III The median of x2 , x4 , x6 , . . . , x2n is an integer.",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "I only",
+        "C": "II only",
+        "D": "III only",
+        "E": "I and II only",
+        "F": "I and III only",
+        "G": "II and III only",
+        "H": "I, II and III 18"
+      },
+      "correct_answer": "F",
+      "raw_text": "16   In this question, x1 , x2 , x3 , . . . is an arithmetic progression, all of whose terms\n     are integers.\n     Let n be a positive integer. If the median of the ﬁrst n terms of the sequence is an\n     integer, which of the following three statements must be true?\n         I    The median of the ﬁrst n + 2 terms is an integer.\n         II   The median of the ﬁrst 2n terms is an integer.\n         III The median of x2 , x4 , x6 , . . . , x2n is an integer.\n     A none of them\n     B I only\n     C II only\n     D III only\n     E I and II only\n     F I and III only\n     G II and III only\n     H I, II and III\n                                                18",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q17",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17 A positive integer is called a squaresum if and only if it can be written as the sum of the squares of two integers. For example, 61 and 9 are both squaresums since 61 = 52 + 62 and 9 = 32 + 02 .",
+      "has_diagram": false,
+      "options": {
+        "A": "Every square number is a squaresum.",
+        "B": "If N and M are squaresums, then so is N M .",
+        "C": "If N M is a squaresum, then N and M are squaresums.",
+        "D": "If N is not a squaresum, then kN is a squaresum for some number k which is a product of awkward primes. 19"
+      },
+      "correct_answer": "C",
+      "raw_text": "17   A positive integer is called a squaresum if and only if it can be written as the sum\n     of the squares of two integers. For example, 61 and 9 are both squaresums since\n     61 = 52 + 62 and 9 = 32 + 02 .\n     A prime number is called awkward if and only if it has a remainder of 3 when\n     divided by 4. For example, 23 is awkward since 23 = 5 × 4 + 3.\n     A (true) theorem due to Fermat states that:\n         A positive integer is a squaresum if and only if each of its awkward prime\n         factors occurs to an even power in its prime factorisation.\n     It follows that 5 × 232 is a squaresum, since 23 occurs to the power 2, but 5 × 233 is\n     not, since 23 occurs to the power 3.\n     Which one of the following statements is not true?\n     A Every square number is a squaresum.\n     B If N and M are squaresums, then so is N M .\n     C If N M is a squaresum, then N and M are squaresums.\n     D If N is not a squaresum, then kN is a squaresum for some number k which is a\n       product of awkward primes.\n                                             19",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q18",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18 f(x) is a polynomial function deﬁned for all real x. Which of the following is a necessary condition for the inequality f(a) + f(b) a+b ≥f 2 2 to be true for all real numbers a and b with a < b ?",
+      "has_diagram": false,
+      "options": {
+        "A": "f(x) ≥ 0 for all real x",
+        "B": "f (x) ≥ 0 for all real x",
+        "C": "f (x) ≥ 0 for all real x",
+        "D": "f(x) ≤ 0 for all real x",
+        "E": "f (x) ≤ 0 for all real x",
+        "F": "f (x) ≤ 0 for all real x 20"
+      },
+      "correct_answer": "C",
+      "raw_text": "18   f(x) is a polynomial function deﬁned for all real x.\n     Which of the following is a necessary condition for the inequality\n                                                      \u0002         \u0003\n                                     f(a) + f(b)          a+b\n                                                 ≥f\n                                          2                2\n     to be true for all real numbers a and b with a < b ?\n     A f(x) ≥ 0 for all real x\n     B f \u0002 (x) ≥ 0 for all real x\n     C f \u0002\u0002 (x) ≥ 0 for all real x\n     D f(x) ≤ 0 for all real x\n     E f \u0002 (x) ≤ 0 for all real x\n     F f \u0002\u0002 (x) ≤ 0 for all real x\n                                             20",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q19",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19 Three real numbers x, y and z satisfy x > y > z > 1. Which one of the following statements must be true? 2z+1 2x + 2 z",
+      "has_diagram": false,
+      "options": {
+        "A": "> 2x 2y 3x + 3z",
+        "B": "2> 3y 2 × 5x 5x + 5z",
+        "C": "> 5z 5y 7x + 7z",
+        "D": "2< 7y 21 √ √"
+      },
+      "correct_answer": "C",
+      "raw_text": "19   Three real numbers x, y and z satisfy x > y > z > 1.\n     Which one of the following statements must be true?\n         2z+1   2x + 2 z\n     A        >\n          2x       2y\n             3x + 3z\n     B 2>\n                3y\n         2 × 5x   5x + 5z\n     C          >\n           5z        5y\n             7x + 7z\n     D 2<\n                7y\n                                           21\n\f                                     √          √",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2018-P2-Q20",
+      "year": 2018,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20 It is given that the equation x+p+ x = p has at least one real solution for x, where p is a real constant. What is the complete set of possible values for p ?",
+      "has_diagram": false,
+      "options": {
+        "A": "p = 0 or p = 1",
+        "B": "p = 0 or p ≥ 1",
+        "C": "p ≥ −x √",
+        "D": "p≥ x",
+        "E": "p≥0",
+        "F": "p≥1 22 23 24"
+      },
+      "correct_answer": "B",
+      "raw_text": "20   It is given that the equation       x+p+       x = p has at least one real solution for x,\n     where p is a real constant.\n     What is the complete set of possible values for p ?\n     A p = 0 or p = 1\n     B p = 0 or p ≥ 1\n     C p ≥ −x\n           √\n     D p≥ x\n     E p≥0\n     F p≥1\n                                          \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n                                                22\n\fBLANK PAGE\n    23\n\fBLANK PAGE\n    24",
+      "diagram_images": []
+    }
+  ]
+}

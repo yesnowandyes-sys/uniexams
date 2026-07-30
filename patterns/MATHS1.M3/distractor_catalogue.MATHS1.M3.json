@@ -1,0 +1,52 @@
+{
+  "topic_key": "MATHS1.M3",
+  "topic_name": "Ratio and proportion",
+  "module_code": "M1",
+  "corpus_question_count": 49,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Geometric Scaling Trap (Linear vs Volume)",
+      "frequency": "High",
+      "example_question_id": "Q8, Q26",
+      "why_effective": "Exploits the intuitive but incorrect assumption that volume scales linearly with height or other 1D dimensions. Students often select the ratio (5/4) directly or apply it linearly (320 * 1.25 = 400, Option B in Q8/Q26) rather than cubing the scale factor for volume.",
+      "generation_strategy": "Provide a scale factor between two similar 3D objects. Ask for the volume of the larger one. Include a distractor calculated by $V_{new} = V_{old} \times k$ and another by $V_{new} = V_{old} \times k^2$. The correct answer requires $k^3$."
+    },
+    {
+      "distractor_type": "Inverse Proportionality Inversion",
+      "frequency": "High",
+      "example_question_id": "Q12, Q35",
+      "why_effective": "Students correctly identify the inverse relationship ($y = k/x^n$) but fail to apply the exponent $n$ correctly to the multiplier. In Q12, sales increase by 700% (total 8x), so temperature must be halved ($1/\\sqrt[3]{8}$). A common error is calculating the cube root of the percentage or simply inverting the linear ratio.",
+      "generation_strategy": "Construct a problem where variable $A$ is inversely proportional to $B^n$. Change $A$ by a factor $M$. Incorrect answers include $B_{new} = B_{old} / M$ (ignoring $n$) or $B_{new} = B_{old} / \\sqrt{M}$. Correct answer requires $1/\\sqrt[n]{M}$."
+    },
+    {
+      "distractor_type": "Compound Percentage Order Reversal",
+      "frequency": "Medium",
+      "example_question_id": "Q13",
+      "why_effective": "Students often assume that a $+10\\%$ followed by $-10\\%$ returns to the original value (Option E). This ignores the different base values for the second calculation (additive vs. multiplicative symmetry).",
+      "generation_strategy": "Describe a scenario where a value is increased by $X\\%$ then decreased by $X\\%$ (or vice versa). Include 'Original Value' as a distractor. Other distractors can represent the result of applying the percentage to the wrong base (e.g., $1.1x \times 0.9$ vs $0.9x \times 1.1$)."
+    },
+    {
+      "distractor_type": "Ratio Chain Mismatch",
+      "frequency": "Medium",
+      "example_question_id": "Q1, Q19, Q22",
+      "why_effective": "In combined ratios (Q:R is 5:2, R:S is 3:10), students struggle to harmonize the common term R. A frequent error is multiplying the 'outer' numbers ($5 \times 10 = 50$) or adding terms, leading to simple but incorrect ratios like 3:25 (Option D) or 1:2.",
+      "generation_strategy": "Give two ratios $A:B$ and $B:C$ where the value of $B$ differs. The correct solution scales the ratios to make $B$ equal. Distractors should be: 1. The product of the non-common terms (A's part $\times$ C's part), 2. The simple unadjusted ratios, 3. The reciprocal of the correct ratio."
+    },
+    {
+      "distractor_type": "Density/Mass Unit Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q3, Q24",
+      "why_effective": "Questions mixing volume percentage with density (e.g., Bronze) require switching between mass, volume, and density. Students often misplace the density variables X and Y in the fraction or forget to balance the 9:1 volume ratio, selecting options with incorrect denominators like $9Y - X$.",
+      "generation_strategy": "Use a mixture scenario with Volume % and Density variables. Ask for Mass %. Distractors should swap the density variables in the numerator and denominator (e.g., use X where Y should be) and use incorrect operators (subtraction instead of addition in the denominator)."
+    },
+    {
+      "distractor_type": "Proportionality Constant Mismatch",
+      "frequency": "Rare",
+      "example_question_id": "Q4, Q25",
+      "why_effective": "In multi-step proportionality (P depends on Q, Q depends on R), students often calculate constants of proportionality ($k$) correctly but fail to carry them through the substitution, leading to simplified forms like $P = 5/R^2$ (Option D) instead of $25/2R^2$.",
+      "generation_strategy": "Create a chain: $y \\propto x$, $x \\propto z$. Calculate constants $k_1, k_2$. Distractors should result from algebraic errors where $k_1$ or $k_2$ are dropped, or exponents are mishandled during substitution."
+    }
+  ],
+  "parse_repaired": true
+}

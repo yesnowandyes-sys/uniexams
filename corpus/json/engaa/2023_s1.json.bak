@@ -1,0 +1,841 @@
+{
+  "source_file": "ENGAA_2023_S1_QuestionPaper.pdf",
+  "paper_type": "ENGAA",
+  "year": 2023,
+  "section": "Section1",
+  "total_questions": 40,
+  "questions": [
+    {
+      "id": "ENGAA-2023-S1-Q1",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 1,
+      "question_text": "1 The surface area of a solid sphere of radius R is equal to the total surface area of 10 solid closed cylinders of radius r and height 4r. Which of the following is an expression for R in terms of r ? (The surface area of a sphere of radius R is 4πR2.)",
+      "has_diagram": false,
+      "options": {
+        "A": "R = 5r",
+        "B": "R = 12r",
+        "C": "R= 2 5r",
+        "D": "R= 10 r 2",
+        "E": "R= 10 r 3",
+        "F": "R= 10 r 2",
+        "G": "R= 15 r"
+      },
+      "correct_answer": "A",
+      "raw_text": "1   The surface area of a solid sphere of radius R is equal to the total surface area of 10 solid\n    closed cylinders of radius r and height 4r.\n    Which of the following is an expression for R in terms of r ?\n    (The surface area of a sphere of radius R is 4πR2.)\n    A   R = 5r\n    B   R = 12r\n    C   R= 2 5r\n             1\n    D   R=     10 r\n             2\n    E   R=      10 r\n             3\n    F   R=     10 r\n             2\n    G   R=      15 r",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q2",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 2,
+      "question_text": "2 A spaceship of mass 10 000 kg is moving at 2.0 m s–1 relative to a space station. The spaceship is captured by a robotic arm attached to the space station and brought to rest by a force of 1000 N. How far will the spaceship move in its initial direction relative to the space station while the force is being applied? (Assume that the acceleration of the space station is negligible.)",
+      "has_diagram": false,
+      "options": {
+        "A": "0.050 m",
+        "B": "0.10 m",
+        "C": "0.20 m",
+        "D": "5.0 m",
+        "E": "10 m",
+        "F": "20 m 4"
+      },
+      "correct_answer": "F",
+      "raw_text": "2   A spaceship of mass 10 000 kg is moving at 2.0 m s–1 relative to a space station.\n    The spaceship is captured by a robotic arm attached to the space station and brought to rest by\n    a force of 1000 N.\n    How far will the spaceship move in its initial direction relative to the space station while the\n    force is being applied?\n    (Assume that the acceleration of the space station is negligible.)\n    A   0.050 m\n    B   0.10 m\n    C   0.20 m\n    D   5.0 m\n    E   10 m\n    F   20 m\n                                                   4",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q3",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 3,
+      "question_text": "3 Which of the following is a correct rearrangement of q−r y = p– s−x to make x the subject? q−r",
+      "has_diagram": true,
+      "options": {
+        "A": "x = s– p+ y q−r",
+        "B": "x = –s p+ y q−r",
+        "C": "x = s– p− y q−r",
+        "D": "x = –s p− y q−r",
+        "E": "x = s– y− p q−r",
+        "F": "x = –s y− p 5"
+      },
+      "correct_answer": "C",
+      "raw_text": "3   Which of the following is a correct rearrangement of\n                                                      q−r\n                                             y = p–\n                                                      s−x\n    to make x the subject?\n                 q−r\n    A   x = s–\n                 p+ y\n              q−r\n    B   x =          –s\n              p+ y\n                 q−r\n    C   x = s–\n                 p− y\n              q−r\n    D   x =          –s\n              p− y\n                 q−r\n    E   x = s–\n                 y− p\n              q−r\n    F   x =          –s\n              y− p\n                                                5",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q3-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q4",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 4,
+      "question_text": "4 A circuit is set up as shown. All three resistors are identical. When the switch is open, the reading on the ammeter is 1.0 A and the power transferred from the battery is 1.0 W. A The switch is now closed. What is the new reading on the ammeter and what is the new power transferred from the battery? ammeter reading / A power transferred / W",
+      "has_diagram": true,
+      "options": {
+        "A": "0.67 0.67",
+        "B": "0.67 1.3",
+        "C": "0.67 1.5",
+        "D": "0.67 2.0",
+        "E": "1.0 1.0",
+        "F": "1.0 1.5",
+        "G": "1.0 2.0",
+        "H": "1.0 3.0 6"
+      },
+      "correct_answer": "F",
+      "raw_text": "4   A circuit is set up as shown. All three resistors are identical.\n    When the switch is open, the reading on the ammeter is 1.0 A and the power transferred from\n    the battery is 1.0 W.\n                                                         A\n    The switch is now closed.\n    What is the new reading on the ammeter and what is the new power transferred from the\n    battery?\n          ammeter reading / A        power transferred / W\n    A              0.67                       0.67\n    B              0.67                        1.3\n    C              0.67                        1.5\n    D              0.67                        2.0\n    E              1.0                         1.0\n    F              1.0                         1.5\n    G              1.0                         2.0\n    H              1.0                         3.0\n                                                     6",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q4-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q5",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 5,
+      "question_text": "5 X N Y M P W Z [diagram not to scale] WXYZ is a square of side length 1. WM : MX = 1 : 2 XN : NY = 3 : 1 YP : PZ = 4 : 1 What is the area of triangle MNP ? 1",
+      "has_diagram": false,
+      "options": {
+        "A": "3 2",
+        "B": "9",
+        "C": "20 1",
+        "D": "30 19",
+        "E": "60 23",
+        "F": "60 7"
+      },
+      "correct_answer": "F",
+      "raw_text": "5                             X                        N          Y\n                              M\n                                                                  P\n                              W                                   Z\n                                         [diagram not to scale]\n    WXYZ is a square of side length 1.\n    WM : MX = 1 : 2\n    XN : NY = 3 : 1\n    YP : PZ = 4 : 1\n    What is the area of triangle MNP ?\n         1\n    A\n         3\n         2\n    B\n         5\n         9\n    C\n         20\n          1\n    D\n         30\n         19\n    E\n         60\n         23\n    F\n         60\n                                                7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q6",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 6,
+      "question_text": "6 A spring is initially unstretched. A force F is used to stretch the spring. The extension x and the energy E stored in the stretched spring are measured for different values of F. The graph shows how the energy E, in J, varies with the extension squared, x2, in cm2. E /J 0.015 0 0 25 x 2 / cm2 What is the magnitude of F when the spring stores 0.015 J of energy?",
+      "has_diagram": false,
+      "options": {
+        "A": "0.30 N",
+        "B": "0.60 N",
+        "C": "1.2 N",
+        "D": "1.5 N",
+        "E": "2.4 N",
+        "F": "3.0 N",
+        "G": "30 N",
+        "H": "60 N 8"
+      },
+      "correct_answer": "B",
+      "raw_text": "6   A spring is initially unstretched. A force F is used to stretch the spring. The extension x and the\n    energy E stored in the stretched spring are measured for different values of F.\n    The graph shows how the energy E, in J, varies with the extension squared, x2, in cm2.\n                            E /J\n                                   0.015\n                                      0\n                                           0                  25\n                                                             x 2 / cm2\n    What is the magnitude of F when the spring stores 0.015 J of energy?\n    A   0.30 N\n    B   0.60 N\n    C   1.2 N\n    D   1.5 N\n    E   2.4 N\n    F   3.0 N\n    G   30 N\n    H   60 N\n                                                 8",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q7",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 7,
+      "question_text": "7 Given that 2(x − 2) 27 3 ( 2 x −3 ) = (81) 2 9 what is the value of x ?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2.5",
+        "C": "3",
+        "D": "6",
+        "E": "7.5",
+        "F": "9",
+        "G": "10.5",
+        "H": "12"
+      },
+      "correct_answer": "D",
+      "raw_text": "7   Given that\n                                                      2(x − 2)\n                                                 27                     3\n                                                  ( 2 x −3 )\n                                                                 = (81) 2\n                                                 9\n    what is the value of x ?\n    A   0\n    B   2.5\n    C   3\n    D   6\n    E   7.5\n    F   9\n    G   10.5\n    H   12",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q8",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 8,
+      "question_text": "8 A solid, cylindrical metal bar has a uniform cross-sectional area of 12 cm2 and a volume of 180 cm3. The bar rests on a horizontal surface on one of its circular faces. The pressure on the surface due to the bar is 0.45 N cm–2. What is the density of the metal, in g cm–3 ? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "2.5 g cm–3",
+        "B": "3.0 g cm–3",
+        "C": "3.75 g cm–3",
+        "D": "7.5 g cm–3",
+        "E": "15 g cm–3",
+        "F": "33 g cm–3 9"
+      },
+      "correct_answer": "B",
+      "raw_text": "8   A solid, cylindrical metal bar has a uniform cross-sectional area of 12 cm2 and a volume\n    of 180 cm3.\n    The bar rests on a horizontal surface on one of its circular faces.\n    The pressure on the surface due to the bar is 0.45 N cm–2.\n    What is the density of the metal, in g cm–3 ?\n    (gravitational field strength = 10 N kg–1)\n    A   2.5 g cm–3\n    B   3.0 g cm–3\n    C   3.75 g cm–3\n    D   7.5 g cm–3\n    E   15 g cm–3\n    F   33 g cm–3\n                                                         9",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q9",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 9,
+      "question_text": "9 Last year, the salary of the coach of a football club was 80% of the salary of the star player. At the start of the new year, the coach received a 15% increase in salary and the star player received a 38% increase in salary. What percentage of the star player’s new salary is the coach’s new salary?",
+      "has_diagram": false,
+      "options": {
+        "A": "46%",
+        "B": "57%",
+        "C": "61 35 %",
+        "D": "66 32 %",
+        "E": "77%",
+        "F": "83 31 %"
+      },
+      "correct_answer": "D",
+      "raw_text": "9    Last year, the salary of the coach of a football club was 80% of the salary of the star player.\n     At the start of the new year, the coach received a 15% increase in salary and the star player\n     received a 38% increase in salary.\n     What percentage of the star player’s new salary is the coach’s new salary?\n     A   46%\n     B   57%\n     C   61 35 %\n     D   66 32 %\n     E   77%\n     F   83 31 %",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q10",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 10,
+      "question_text": "10 Two samples of pure radioactive isotopes X and Y decay with half-lives of 2 days and 3 days, respectively. Both X and Y decay in a single step into different stable isotopes. Initially the number of atoms of X is twice the number of atoms of Y. After how many days are the expected numbers of atoms of X and Y equal to each other?",
+      "has_diagram": false,
+      "options": {
+        "A": "The expected numbers of atoms of X and Y are never equal.",
+        "B": "2 days",
+        "C": "3 days",
+        "D": "4 days",
+        "E": "6 days",
+        "F": "12 days"
+      },
+      "correct_answer": "E",
+      "raw_text": "10   Two samples of pure radioactive isotopes X and Y decay with half-lives of 2 days and 3 days,\n     respectively.\n     Both X and Y decay in a single step into different stable isotopes.\n     Initially the number of atoms of X is twice the number of atoms of Y.\n     After how many days are the expected numbers of atoms of X and Y equal to each other?\n     A   The expected numbers of atoms of X and Y are never equal.\n     B   2 days\n     C   3 days\n     D   4 days\n     E   6 days\n     F   12 days\n                                                  10",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q11",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 11,
+      "question_text": "11 An athlete’s training session consists of several complete repetitions of a three-part programme: 1. Walk 100 m at an average speed of 6 km h–1 2. Jog 200 m at an average speed of 10 km h–1 3. Run 100 m at an average speed of 20 km h–1 What is the athlete’s average speed for the complete training session, in km h–1?",
+      "has_diagram": false,
+      "options": {
+        "A": "7.2",
+        "B": "9.6",
+        "C": "11.5",
+        "D": "12",
+        "E": "14.4"
+      },
+      "correct_answer": "B",
+      "raw_text": "11   An athlete’s training session consists of several complete repetitions of a three-part\n     programme:\n                    1. Walk 100 m at an average speed of 6 km h–1\n                    2. Jog 200 m at an average speed of 10 km h–1\n                    3. Run 100 m at an average speed of 20 km h–1\n     What is the athlete’s average speed for the complete training session, in km h–1?\n     A   7.2\n     B   9.6\n     C   11.5\n     D   12\n     E   14.4\n                                                  11",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q12",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 12,
+      "question_text": "12 A large, flat, metal plate is coated on one side with a layer of thermally insulating material of the same thickness a as the metal plate. The uninsulated top surface of the metal plate is maintained at a constant temperature T1. The bottom surface of the insulating material is maintained at a constant, lower temperature T2. The system is in equilibrium. The diagram shows this arrangement. metal plate T1 T2 insulating material Which graph could show how the temperature varies with distance from the top surface of the metal plate to the bottom surface of the insulating material?",
+      "has_diagram": true,
+      "options": {
+        "A": "[diagram: graph/image option]",
+        "C": "[diagram: graph/image option]",
+        "E": "[diagram: graph/image option]"
+      },
+      "correct_answer": "A",
+      "raw_text": "12   A large, flat, metal plate is coated on one side with a layer of thermally insulating material of the\n     same thickness a as the metal plate.\n     The uninsulated top surface of the metal plate is maintained at a constant temperature T1.\n     The bottom surface of the insulating material is maintained at a constant, lower temperature T2.\n     The system is in equilibrium.\n     The diagram shows this arrangement.\n                                                      metal plate\n                                                    T1\n                                                    T2\n                                                  insulating material\n     Which graph could show how the temperature varies with distance from the top surface of the\n     metal plate to the bottom surface of the insulating material?\n     A   temperature                                      B    temperature\n                       T1                                                    T1\n                       T2                                                    T2\n                         0        a       2a                                  0        a       2a\n                             distance from top                                    distance from top\n                                 of metal plate                                       of metal plate\n     C   temperature                                      D    temperature\n                       T1                                                    T1\n                       T2                                                    T2\n                         0        a       2a                                  0        a       2a\n                             distance from top                                    distance from top\n                                 of metal plate                                       of metal plate\n     E   temperature\n                       T1\n                       T2\n                         0        a       2a\n                             distance from top\n                                 of metal plate\n                                                     12",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q12-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q13",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 13,
+      "question_text": "13 Two objects X and Y are similar. The surface area of object Y is double the surface area of object X. The volume of object Y is 7 2 cm3 more than the volume of object X. What is the volume of object X, in cm3?",
+      "has_diagram": false,
+      "options": {
+        "A": "14 – 7 2",
+        "B": "14 + 7 2 42 − 7 2",
+        "C": "17 42 + 7 2",
+        "D": "17 7 2",
+        "E": "3",
+        "F": "7 2",
+        "G": "4– 2",
+        "H": "4+ 2"
+      },
+      "correct_answer": "H",
+      "raw_text": "13   Two objects X and Y are similar.\n     The surface area of object Y is double the surface area of object X.\n     The volume of object Y is 7 2 cm3 more than the volume of object X.\n     What is the volume of object X, in cm3?\n     A   14 – 7 2\n     B   14 + 7 2\n          42 − 7 2\n     C\n             17\n          42 + 7 2\n     D\n             17\n         7 2\n     E\n          3\n     F   7 2\n     G   4– 2\n     H   4+    2",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q14",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 14,
+      "question_text": "14 The voltage output of a power station is stepped up using a transformer before the power is transmitted to a distant town. The primary coil of this transformer has 300 turns and the secondary coil has 1500 turns. In the town, a step-down transformer reduces the voltage supplied by the transmission cables to 33 000 V for distribution within the town. The step-down transformer supplies a current of 1500 A. The current in the transmission cables is 450 A and both transformers are ideal and 100% efficient. What is the voltage output of the power station? (Assume that the resistance of the transmission cables is negligible.)",
+      "has_diagram": false,
+      "options": {
+        "A": "1980 V",
+        "B": "6600 V",
+        "C": "22 000 V",
+        "D": "110 000 V",
+        "E": "550 000 V 13"
+      },
+      "correct_answer": "C",
+      "raw_text": "14   The voltage output of a power station is stepped up using a transformer before the power is\n     transmitted to a distant town. The primary coil of this transformer has 300 turns and the\n     secondary coil has 1500 turns.\n     In the town, a step-down transformer reduces the voltage supplied by the transmission cables\n     to 33 000 V for distribution within the town. The step-down transformer supplies a current of\n     1500 A.\n     The current in the transmission cables is 450 A and both transformers are ideal and 100%\n     efficient.\n     What is the voltage output of the power station?\n     (Assume that the resistance of the transmission cables is negligible.)\n     A   1980 V\n     B   6600 V\n     C   22 000 V\n     D   110 000 V\n     E   550 000 V\n                                                 13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q15",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 15,
+      "question_text": "15 The equation 2 ⎛ a × 104 + 2a × 103 ⎞ 9 ⎜⎜ −1 ⎟⎟ = 8 × 10 ⎝ 3 × 10 ⎠ has two solutions for a. What is the positive difference between these two solutions?",
+      "has_diagram": false,
+      "options": {
+        "A": "0",
+        "B": "2 5",
+        "C": "4 5",
+        "D": "20 5",
+        "E": "40 5",
+        "F": "200 5"
+      },
+      "correct_answer": "B",
+      "raw_text": "15   The equation\n                                                             2\n                                       ⎛ a × 104 + 2a × 103 ⎞           9\n                                       ⎜⎜             −1    ⎟⎟ = 8 × 10\n                                        ⎝      3 × 10        ⎠\n     has two solutions for a.\n     What is the positive difference between these two solutions?\n     A   0\n     B   2 5\n     C   4 5\n     D   20 5\n     E   40 5\n     F   200 5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q16",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 16,
+      "question_text": "16 A transverse wave with an amplitude of 3.0 cm travels along a stretched string. The wave has a frequency of 12 Hz and a wavelength of 0.25 m. What is the average speed of a particle in the string as the string oscillates during a time of 2.0 s?",
+      "has_diagram": false,
+      "options": {
+        "A": "36 cm s–1",
+        "B": "72 cm s–1",
+        "C": "125 cm s–1",
+        "D": "144 cm s–1",
+        "E": "300 cm s–1 14"
+      },
+      "correct_answer": "D",
+      "raw_text": "16   A transverse wave with an amplitude of 3.0 cm travels along a stretched string. The wave has a\n     frequency of 12 Hz and a wavelength of 0.25 m.\n     What is the average speed of a particle in the string as the string oscillates during a time\n     of 2.0 s?\n     A   36 cm s–1\n     B   72 cm s–1\n     C   125 cm s–1\n     D   144 cm s–1\n     E   300 cm s–1\n                                                   14",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q17",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 17,
+      "question_text": "17 X and Y are the end-points of a line segment. Point P has coordinates (– 8, 5). ⎯⎯ → ⎛ 4⎞ P lies on the line segment XY such that XP : PY is 1 : 2 and XP = ⎜ ⎟ ⎝ −3 ⎠ ⎯⎯ → ⎛7⎞",
+      "has_diagram": false,
+      "options": {
+        "A": "(7, 5)",
+        "B": "(3, 8)",
+        "C": "(1, –12)",
+        "D": "(–3, –10)",
+        "E": "(–7, –7)",
+        "F": "(–11, – 4) 15"
+      },
+      "correct_answer": "E",
+      "raw_text": "17   X and Y are the end-points of a line segment.\n     Point P has coordinates (– 8, 5).\n                                                                  ⎯⎯\n                                                                   →\n                                                                       ⎛ 4⎞\n     P lies on the line segment XY such that XP : PY is 1 : 2 and XP = ⎜ ⎟\n                                                                       ⎝ −3 ⎠\n                            ⎯⎯\n                             →\n                                 ⎛7⎞\n     A point Q is such that QY = ⎜ ⎟\n                                 ⎝6⎠\n     What are the coordinates of point Q ?\n     A   (7, 5)\n     B   (3, 8)\n     C   (1, –12)\n     D   (–3, –10)\n     E   (–7, –7)\n     F   (–11, – 4)\n                                                 15",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q18",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 18,
+      "question_text": "18 A battery and two resistors X and Y are connected in series. X Y The power transferred by the battery is 6 W. The resistance of X is 10 Ω. The voltage across Y is 4 V. What is the current in the circuit? 2",
+      "has_diagram": false,
+      "options": {
+        "A": "A 5 3",
+        "B": "A 5 3",
+        "C": "A 4",
+        "D": "1A 3",
+        "E": "A 10 3",
+        "F": "A 5 16"
+      },
+      "correct_answer": "B",
+      "raw_text": "18   A battery and two resistors X and Y are connected in series.\n                                           X                Y\n     The power transferred by the battery is 6 W.\n     The resistance of X is 10 Ω.\n     The voltage across Y is 4 V.\n     What is the current in the circuit?\n          2\n     A      A\n          5\n          3\n     B      A\n          5\n          3\n     C      A\n          4\n     D   1A\n            3\n     E        A\n           10\n            3\n     F        A\n            5\n                                                16",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q19",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 19,
+      "question_text": "19 Find the maximum value of sin x sin x 2 × 3– where 0° ≤ x ≤ 360° 2",
+      "has_diagram": false,
+      "options": {
+        "A": "3",
+        "B": "1 3",
+        "C": "2",
+        "D": "2",
+        "E": "3",
+        "F": "6"
+      },
+      "correct_answer": "C",
+      "raw_text": "19   Find the maximum value of\n                                                    sin x      sin x\n                                                2           × 3–\n     where 0° ≤ x ≤ 360°\n          2\n     A\n          3\n     B   1\n          3\n     C\n          2\n     D   2\n     E   3\n     F   6",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q20",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 20,
+      "question_text": "20 A diver at the bottom of a lake of depth d fills a syringe with an ideal gas and seals the nozzle. The piston remains free to move. The volume of the gas in the syringe at the bottom of the lake is 90 cm3. As the diver returns to the surface, the temperature of the gas does not change. At the surface of the lake the gas in the syringe is at atmospheric pressure and the volume of the gas is 720 cm3. d What is the volume of the gas in the syringe at a depth ? 2 PART B Advanced Mathematics and Advanced Physics NOTE: questions in this part that are not covered by the ESAT content specification are indicated by a cross through the question number.",
+      "has_diagram": false,
+      "options": {
+        "A": "160 cm3",
+        "B": "180 cm3",
+        "C": "206 cm3",
+        "D": "225 cm3",
+        "E": "288 cm3",
+        "F": "315 cm3",
+        "G": "360 cm3",
+        "H": "405 cm3 17 18 19"
+      },
+      "correct_answer": "A",
+      "raw_text": "20   A diver at the bottom of a lake of depth d fills a syringe with an ideal gas and seals the nozzle.\n     The piston remains free to move. The volume of the gas in the syringe at the bottom of the lake\n     is 90 cm3.\n     As the diver returns to the surface, the temperature of the gas does not change. At the surface\n     of the lake the gas in the syringe is at atmospheric pressure and the volume of the gas is\n     720 cm3.\n                                                                       d\n     What is the volume of the gas in the syringe at a depth               ?\n                                                                       2\n     A   160 cm3\n     B   180 cm3\n     C   206 cm3\n     D   225 cm3\n     E   288 cm3\n     F   315 cm3\n     G   360 cm3\n     H   405 cm3\n                                                    17\n\fBLANK PAGE\n    18\n\fPART B Advanced Mathematics and Advanced Physics\nNOTE: questions in this part that are not covered by the ESAT\ncontent specification are indicated by a cross through the\nquestion number.\n                             19",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q21",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 21,
+      "question_text": "21 x2 – x – 6 is a factor of x3 + a x2 + 2x + b, where a and b are real constants. What is the value of a + b ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–39",
+        "B": "–21",
+        "C": "–3 3",
+        "D": "− 5 3",
+        "E": "5",
+        "F": "3",
+        "G": "21",
+        "H": "39"
+      },
+      "correct_answer": "H",
+      "raw_text": "21   x2 – x – 6 is a factor of x3 + a x2 + 2x + b, where a and b are real constants.\n     What is the value of a + b ?\n     A   –39\n     B   –21\n     C   –3\n              3\n     D   −\n              5\n          3\n     E\n          5\n     F   3\n     G   21\n     H   39",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q22",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 22,
+      "question_text": "22 Two pipes contain air at the same temperature and pressure.",
+      "has_diagram": false,
+      "options": {
+        "A": "1000 Hz",
+        "B": "2000 Hz",
+        "C": "4000 Hz",
+        "D": "8000 Hz",
+        "E": "16 000 Hz 20"
+      },
+      "correct_answer": "D",
+      "raw_text": "22   Two pipes contain air at the same temperature and pressure.\n     A stationary sound wave is formed in the first pipe, which is closed at one end and open at the\n     other end. The lowest frequency of stationary sound wave that can be formed in this pipe is\n     4000 Hz.\n     The second pipe has the same length as the first pipe, but is open at both ends.\n     What is the lowest frequency of stationary sound wave that can be formed in the second pipe?\n     A   1000 Hz\n     B   2000 Hz\n     C   4000 Hz\n     D   8000 Hz\n     E   16 000 Hz\n                                                  20",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q23",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 23,
+      "question_text": "23 An arithmetic progression has first term a and common difference d. The sum of the first 9 terms plus the sum of the first 10 terms is equal to the sum of the first 11 terms. Which of the following is a correct expression for a in terms of d ? 13",
+      "has_diagram": false,
+      "options": {
+        "A": "a=− d 4 15",
+        "B": "a=− d 4 16",
+        "C": "a=− d 3 19",
+        "D": "a=− d 3",
+        "E": "a = – 7d",
+        "F": "a = – 8d"
+      },
+      "correct_answer": "A",
+      "raw_text": "23   An arithmetic progression has first term a and common difference d.\n     The sum of the first 9 terms plus the sum of the first 10 terms is equal to the sum of\n     the first 11 terms.\n     Which of the following is a correct expression for a in terms of d ?\n               13\n     A   a=−      d\n                4\n               15\n     B   a=−      d\n                4\n               16\n     C   a=−      d\n                3\n               19\n     D   a=−      d\n                3\n     E   a = – 7d\n     F   a = – 8d",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q24",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 24,
+      "question_text": "24 A cannon ball of mass 2.6 kg is fired horizontally from a cannon on the top of a cliff at a speed of 90 m s–1. The height of the cliff above the horizontal ground below is 45 m. What is the magnitude of the impulse that acts on the ball between leaving the cannon and reaching the ground? (gravitational field strength = 10 N kg–1; assume that air resistance is negligible)",
+      "has_diagram": false,
+      "options": {
+        "A": "8.7 N s",
+        "B": "13 N s",
+        "C": "52 N s",
+        "D": "78 N s",
+        "E": "117 N s",
+        "F": "234 N s",
+        "G": "900 N s 21"
+      },
+      "correct_answer": "D",
+      "raw_text": "24   A cannon ball of mass 2.6 kg is fired horizontally from a cannon on the top of a cliff at a speed\n     of 90 m s–1.\n     The height of the cliff above the horizontal ground below is 45 m.\n     What is the magnitude of the impulse that acts on the ball between leaving the cannon and\n     reaching the ground?\n     (gravitational field strength = 10 N kg–1; assume that air resistance is negligible)\n     A   8.7 N s\n     B   13 N s\n     C   52 N s\n     D   78 N s\n     E   117 N s\n     F   234 N s\n     G   900 N s\n                                                   21",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q25",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 25,
+      "question_text": "25 The first three terms of a convergent geometric progression are: 2p, p – 3, p – 7 What is the sum to infinity of this progression?",
+      "has_diagram": false,
+      "options": {
+        "A": "–54",
+        "B": "–27",
+        "C": "−13 21",
+        "D": "–2",
+        "E": "2",
+        "F": "13 21",
+        "G": "27",
+        "H": "54"
+      },
+      "correct_answer": "G",
+      "raw_text": "25   The first three terms of a convergent geometric progression are:\n                                                  2p, p – 3, p – 7\n     What is the sum to infinity of this progression?\n     A    –54\n     B    –27\n     C    −13 21\n     D   –2\n     E   2\n     F   13 21\n     G   27\n     H   54",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q26",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 26,
+      "question_text": "26 A child on a sledge is travelling straight down a snow-covered slope at a constant speed of 15 m s–1. The mass of the child and sledge together is 60 kg. The angle of the slope to the horizontal is 30°. What is the rate at which thermal energy is being produced due to friction forces? (gravitational field strength = 10 N kg–1)",
+      "has_diagram": false,
+      "options": {
+        "A": "450 W",
+        "B": "900 W",
+        "C": "4500 W",
+        "D": "4500 3 W",
+        "E": "6750 W",
+        "F": "9000 W",
+        "G": "13 500 W",
+        "H": "9000 3 W 22"
+      },
+      "correct_answer": "C",
+      "raw_text": "26   A child on a sledge is travelling straight down a snow-covered slope at a constant speed\n     of 15 m s–1.\n     The mass of the child and sledge together is 60 kg.\n     The angle of the slope to the horizontal is 30°.\n     What is the rate at which thermal energy is being produced due to friction forces?\n     (gravitational field strength = 10 N kg–1)\n     A   450 W\n     B   900 W\n     C   4500 W\n     D   4500 3 W\n     E   6750 W\n     F   9000 W\n     G   13 500 W\n     H   9000 3 W\n                                                      22",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q27",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 27,
+      "question_text": "27 The diagram shows a circle with centre O. 55° 40° O x [diagram not to scale] What is the value of x ?",
+      "has_diagram": true,
+      "options": {
+        "A": "40°",
+        "B": "50°",
+        "C": "55°",
+        "D": "70°",
+        "E": "75°",
+        "F": "80° 23"
+      },
+      "correct_answer": "E",
+      "raw_text": "27   The diagram shows a circle with centre O.\n                                            55°\n                                                          40°\n                                                      O\n                                                  x\n                                        [diagram not to scale]\n     What is the value of x ?\n     A   40°\n     B   50°\n     C   55°\n     D   70°\n     E   75°\n     F   80°\n                                                 23",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q27-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q28",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 28,
+      "question_text": "28 The diagram shows a battery with no internal resistance and four identical resistors P, Q, R and S. Resistor Q dissipates 4.0 W of power. Q P S R What is the total power supplied by the battery?",
+      "has_diagram": true,
+      "options": {
+        "A": "10 W",
+        "B": "16 W",
+        "C": "24 W",
+        "D": "32 W",
+        "E": "40 W 24"
+      },
+      "correct_answer": "E",
+      "raw_text": "28   The diagram shows a battery with no internal resistance and four identical resistors\n     P, Q, R and S.\n     Resistor Q dissipates 4.0 W of power.\n                                                      Q\n                                         P                     S\n                                                      R\n     What is the total power supplied by the battery?\n     A   10 W\n     B   16 W\n     C   24 W\n     D   32 W\n     E   40 W\n                                                 24",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q28-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q29",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 29,
+      "question_text": "29 The function f (x ) = 2 x 2 – 6 x + 4 can be written in the form f (x) = p (x + q)2 + r where p, q and r are constants. What is the value of p (r – q)?",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "7 2",
+        "C": "3– 2",
+        "D": "3 –7 2",
+        "E": "4 –3 2",
+        "F": "4 2–6",
+        "G": "4 2 – 12",
+        "H": "7 2 – 18 25"
+      },
+      "correct_answer": "F",
+      "raw_text": "29   The function\n                                       f (x ) = 2 x 2 – 6 x + 4\n     can be written in the form\n                                       f (x) = p (x + q)2 + r\n     where p, q and r are constants.\n     What is the value of p (r – q)?\n     A   2\n     B   7\n               2\n     C   3–\n              2\n     D   3 –7 2\n     E   4 –3 2\n     F   4 2–6\n     G   4 2 – 12\n     H   7 2 – 18\n                                            25",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q30",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 30,
+      "question_text": "30 Two identical, uniform, thin planks, each of mass 40 kg, are propped up against one another in equilibrium on a rough surface as shown. Each plank is at an angle of 30° to the vertical. 30° 30° P [diagram not to scale] What is the magnitude of the friction force at point P? (gravitational field strength = 10 N kg−1)",
+      "has_diagram": false,
+      "options": {
+        "A": "100 N 200",
+        "B": "N 3",
+        "C": "200 N",
+        "D": "200 3 N 400",
+        "E": "N 3",
+        "F": "400 N",
+        "G": "400 3 N 26"
+      },
+      "correct_answer": "B",
+      "raw_text": "30   Two identical, uniform, thin planks, each of mass 40 kg, are propped up against one another in\n     equilibrium on a rough surface as shown. Each plank is at an angle of 30° to the vertical.\n                                                   30° 30°\n                                     P\n                                             [diagram not to scale]\n     What is the magnitude of the friction force at point P?\n     (gravitational field strength = 10 N kg−1)\n     A   100 N\n          200\n     B        N\n            3\n     C   200 N\n     D    200 3 N\n          400\n     E        N\n            3\n     F   400 N\n     G    400 3 N\n                                                   26",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q31",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 31,
+      "question_text": "31 Which of the following is equal to 3− 5 2 x ∫ −( 3 − 5 ) 3− 5 dx",
+      "has_diagram": false,
+      "options": {
+        "A": "0 2",
+        "B": "3 8",
+        "C": "3",
+        "D": "4 28 − 12 5",
+        "E": "3",
+        "F": "28 − 12 5"
+      },
+      "correct_answer": "E",
+      "raw_text": "31   Which of the following is equal to\n                                                   3− 5        2\n                                                            x\n                                                    ∫\n                                                −( 3 − 5 )\n                                                           3− 5\n                                                                dx\n     A   0\n          2\n     B\n          3\n          8\n     C\n          3\n     D   4\n          28 − 12 5\n     E\n               3\n     F   28 − 12 5",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q32",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 32,
+      "question_text": "32 Three blocks P, Q and R are in contact on a horizontal surface as shown. 20 N P Q R 4.0 kg 2.0 kg 2.0 kg The mass of P is 4.0 kg and the masses of Q and R are each 2.0 kg.",
+      "has_diagram": false,
+      "options": {
+        "A": "2.0 N",
+        "B": "5.0 N",
+        "C": "6.0 N",
+        "D": "12 N",
+        "E": "15 N",
+        "F": "17 N",
+        "G": "19 N 27"
+      },
+      "correct_answer": "B",
+      "raw_text": "32   Three blocks P, Q and R are in contact on a horizontal surface as shown.\n                           20 N             P                  Q        R\n                                          4.0 kg             2.0 kg   2.0 kg\n     The mass of P is 4.0 kg and the masses of Q and R are each 2.0 kg.\n     A horizontal force of 20 N is applied to P so that all three blocks move together.\n     The friction force between P and the surface is 2.0 N, and the friction forces between Q and R\n     and the surface are each 1.0 N.\n     What is the magnitude of the force that R exerts on Q?\n     A   2.0 N\n     B   5.0 N\n     C   6.0 N\n     D   12 N\n     E   15 N\n     F   17 N\n     G   19 N\n                                                        27",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q33",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 33,
+      "question_text": "33 A function f is defined by a b f (x) = + 2 x x where a and b are constants. It is given that f ′(1) = 2 and f ″(–1) = –2 What is the value of a + b ?",
+      "has_diagram": false,
+      "options": {
+        "A": "–5",
+        "B": "–4 7",
+        "C": "− 5",
+        "D": "–1 9",
+        "E": "5",
+        "F": "2 14",
+        "G": "5",
+        "H": "3 28"
+      },
+      "correct_answer": "C",
+      "raw_text": "33   A function f is defined by\n                                                          a   b\n                                                f (x) =     + 2\n                                                          x x\n     where a and b are constants.\n     It is given that f ′(1) = 2 and f ″(–1) = –2\n     What is the value of a + b ?\n     A   –5\n     B   –4\n              7\n     C    −\n              5\n     D   –1\n          9\n     E\n          5\n     F    2\n          14\n     G\n           5\n     H    3\n                                                    28",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q34",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 34,
+      "question_text": "34 An object is released from rest at a height H above the ground and falls freely in a uniform gravitational field. At time t after being released, it has fallen a distance s and is at a height h above the ground, travelling at speed v. s H h The graph shows two quantities plotted. y 0 0 x Which of the rows show(s) a possible pair of quantities for the axes? (Assume that air resistance is negligible.) y-axis x-axis 1 h t 2 kinetic energy h 3 gravitational potential energy s",
+      "has_diagram": true,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3 29"
+      },
+      "correct_answer": "G",
+      "raw_text": "34   An object is released from rest at a height H above the ground and falls freely in a uniform\n     gravitational field. At time t after being released, it has fallen a distance s and is at a height h\n     above the ground, travelling at speed v.\n                                                         s\n                                      H\n                                                         h\n     The graph shows two quantities plotted.\n                                      y\n                                      0\n                                          0                               x\n     Which of the rows show(s) a possible pair of quantities for the axes?\n     (Assume that air resistance is negligible.)\n                             y-axis                              x-axis\n           1                    h                                  t\n           2             kinetic energy                            h\n           3      gravitational potential energy                   s\n     A   none of them\n     B   1 only\n     C   2 only\n     D   3 only\n     E   1 and 2 only\n     F   1 and 3 only\n     G   2 and 3 only\n     H   1, 2 and 3\n                                                    29",
+      "diagram_images": [
+        "ENGAA-2023-S1-Q34-fig1.png"
+      ]
+    },
+    {
+      "id": "ENGAA-2023-S1-Q35",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 35,
+      "question_text": "35 Find the real value of x that satisfies log3 ( x 2 + 3 x + 2) = 2 + log3 ( x 2 + 2x) 1",
+      "has_diagram": false,
+      "options": {
+        "A": "8 1",
+        "B": "7 1",
+        "C": "6 1",
+        "D": "2",
+        "E": "2",
+        "F": "7"
+      },
+      "correct_answer": "A",
+      "raw_text": "35   Find the real value of x that satisfies\n                                    log3 ( x 2 + 3 x + 2) = 2 + log3 ( x 2 + 2x)\n          1\n     A\n          8\n          1\n     B\n          7\n          1\n     C\n          6\n          1\n     D\n          2\n     E    2\n     F    7",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q36",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 36,
+      "question_text": "36 A 20 V battery of negligible internal resistance is connected in series with a 20 Ω resistor and a cylindrical conductor. The current in the circuit is 0.20 A. The cylindrical conductor is now removed, melted and re-formed into a new cylinder. After the cylinder has cooled to its original temperature, its length is 4 times greater than that of the original cylinder. What is the resistance of the new cylinder?",
+      "has_diagram": false,
+      "options": {
+        "A": "5.0 Ω",
+        "B": "20 Ω",
+        "C": "320 Ω",
+        "D": "400 Ω",
+        "E": "1280 Ω",
+        "F": "1600 Ω 30 8 What is the constant term in the simplified binomial expansion of ⎛⎜ + ⎞⎟ ? 2 x"
+      },
+      "correct_answer": "E",
+      "raw_text": "36   A 20 V battery of negligible internal resistance is connected in series with a 20 Ω resistor and a\n     cylindrical conductor. The current in the circuit is 0.20 A.\n     The cylindrical conductor is now removed, melted and re-formed into a new cylinder. After the\n     cylinder has cooled to its original temperature, its length is 4 times greater than that of the\n     original cylinder.\n     What is the resistance of the new cylinder?\n     A   5.0 Ω\n     B   20 Ω\n     C   320 Ω\n     D   400 Ω\n     E   1280 Ω\n     F   1600 Ω\n                                                    30\n\f                                                                             8\n     What is the constant term in the simplified binomial expansion of ⎛⎜ + ⎞⎟ ?\n                                                                          2 x",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q37",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 37,
+      "question_text": "37. What is the constant term in the simplified binomial expansion of (x + x^(−1/2))^8 ?",
+      "has_diagram": false,
+      "options": {
+        "A": "7/2",
+        "B": "35/8",
+        "C": "1/16",
+        "D": "7/256",
+        "E": "35/1024",
+        "F": "1/2048"
+      },
+      "correct_answer": "B",
+      "raw_text": "37\n                                                                        ⎝ x 4⎠\n         7\n     A\n         2\n         35\n     B\n         8\n          1\n     C\n         16\n          7\n     D\n         256\n          35\n     E\n         1024\n           1\n     F\n         2048\n                                               31",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q38",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 38,
+      "question_text": "38 A sound wave can travel from a source at P to a detector at R directly or by reflecting at Q. The angle between PR and PQ is 30° and the distance from P to R is d as shown. reflector Q 30° P R d There is a phase difference of π radians between the incident and reflected wave at Q. Waves that reach R via Q are in phase with waves that reach R directly from P. Which expression gives the greatest wavelength of sound waves for which this is true? ⎛ 2 ⎞",
+      "has_diagram": false,
+      "options": {
+        "A": "2d ⎜ − 1⎟ ⎝ 3 ⎠ d ⎛⎜ ⎞ 2",
+        "B": "− 1⎟ ⎝ 3 ⎠",
+        "C": "d (2 − 3 ) 4d",
+        "D": "3 2d",
+        "E": "3 32"
+      },
+      "correct_answer": "A",
+      "raw_text": "38   A sound wave can travel from a source at P to a detector at R directly or by reflecting at Q.\n     The angle between PR and PQ is 30° and the distance from P to R is d as shown.\n                                                   reflector\n                                                      Q\n                                      30°\n                                P                                        R\n                                                      d\n     There is a phase difference of π radians between the incident and reflected wave at Q.\n     Waves that reach R via Q are in phase with waves that reach R directly from P.\n     Which expression gives the greatest wavelength of sound waves for which this is true?\n            ⎛ 2    ⎞\n     A   2d ⎜   − 1⎟\n            ⎝ 3    ⎠\n         d ⎛⎜     ⎞\n             2\n     B         − 1⎟\n           ⎝ 3    ⎠\n     C   d (2 − 3 )\n          4d\n     D\n           3\n          2d\n     E\n           3\n                                                 32",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q39",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 39,
+      "question_text": "39 Given that x2 + y2 = 1 what is the greatest possible value of 2 x + 3y ? 7",
+      "has_diagram": false,
+      "options": {
+        "A": "2",
+        "B": "3 5 2",
+        "C": "2",
+        "D": "7",
+        "E": "10 13 10",
+        "F": "10",
+        "G": "13 12 13",
+        "H": "13"
+      },
+      "correct_answer": "G",
+      "raw_text": "39   Given that\n                   x2 + y2 = 1\n     what is the greatest possible value of 2 x + 3y ?\n          7\n     A\n          2\n     B   3\n          5 2\n     C\n           2\n     D        7\n     E        10\n         13 10\n     F\n           10\n     G        13\n         12 13\n     H\n           13",
+      "diagram_images": []
+    },
+    {
+      "id": "ENGAA-2023-S1-Q40",
+      "year": 2023,
+      "paper": "ENGAA",
+      "section": "S1",
+      "question_number": 40,
+      "question_text": "40 Two springs have spring constants of 200 N m–1 and 600 N m–1, respectively. The springs are joined in series, end-to-end, and stretched so that their combined extension is 0.80 m. What is the total strain energy stored in the springs?",
+      "has_diagram": false,
+      "options": {
+        "A": "48 J",
+        "B": "96 J",
+        "C": "112 J",
+        "D": "120 J",
+        "E": "240 J",
+        "F": "256 J",
+        "G": "512 J 33 34 35 36"
+      },
+      "correct_answer": "A",
+      "raw_text": "40   Two springs have spring constants of 200 N m–1 and 600 N m–1, respectively.\n     The springs are joined in series, end-to-end, and stretched so that their combined extension\n     is 0.80 m.\n     What is the total strain energy stored in the springs?\n     A   48 J\n     B   96 J\n     C   112 J\n     D   120 J\n     E   240 J\n     F   256 J\n     G   512 J\n                                                  33\n\fBLANK PAGE\n    34\n\fBLANK PAGE\n    35\n\fBLANK PAGE\n    36",
+      "diagram_images": []
+    }
+  ]
+}

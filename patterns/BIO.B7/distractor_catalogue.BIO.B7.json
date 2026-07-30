@@ -1,0 +1,45 @@
+{
+  "topic_key": "BIO.B7",
+  "topic_name": "Variation",
+  "module_code": "B",
+  "corpus_question_count": 8,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Directional Selection Confusion",
+      "frequency": 3,
+      "example_question_id": "Q7",
+      "why_effective": "Students often intuit that selection 'improves' a trait overall, rather than shifting the population mean towards one extreme or splitting it. In Q7 (Maize oil content), the high and low groups diverge. A distractor suggesting the mean stays the same (or moves) traps students who cannot distinguish between *directional* selection on a group and *disruptive* selection on the population mean.",
+      "generation_strategy": "Present a scenario of disruptive selection (selecting both extremes). Include a distractor stating the 'mean value of the trait remains unchanged' (true) and one stating 'the variation/range remains unchanged' (false). Alternatively, for directional selection, suggest the mean moves in the opposite direction of the selection pressure."
+    },
+    {
+      "distractor_type": "Lamarckian Inheritance Fallacy",
+      "frequency": 2,
+      "example_question_id": "Q2",
+      "why_effective": "Students conflate environmental pressure with the *origin* of variation. In Q2 (Sickle cell/Malaria), Statement 3 suggests malaria 'caused a mutation'. This attracts students who understand the correlation but not the mechanism of random mutation vs selection.",
+      "generation_strategy": "Phrase a distractor where 'X environmental pressure causes/leads to a specific mutation', or 'Use of a structure leads to its inheritance'. This tests the distinction between selection acting on *existing* variation vs the *arising* of variation."
+    },
+    {
+      "distractor_type": "Exclusivity of Variation Factors",
+      "frequency": 2,
+      "example_question_id": "Q5",
+      "why_effective": "Students often treat genetics and environment as mutually exclusive sources of variance rather than interactive. In Q5 (Heights), Statement 2 claims differences are 'environmental factors alone'. The correct answer (H) acknowledges genetic factors (Y chromosome), but students selecting the 'wrong' factor usually pick the distractor that over-simplifies causation.",
+      "generation_strategy": "Create a statement ascribing a complex trait (e.g., height, intelligence) to 'Genetics alone' or 'Environment alone'. The correct resolution is usually 'Both' or 'It depends', but the distractor targets the bias toward one specific factor mentioned in the stem."
+    },
+    {
+      "distractor_type": "Misinterpretation of 'Beneficial'",
+      "frequency": 2,
+      "example_question_id": "Q3",
+      "why_effective": "Students anthropomorphize evolution, assuming most mutations are 'good' or 'progress'. Q3 tests the proportion of beneficial/harmful mutations. Distractors showing 'Mostly beneficial' or '50/50' trap students who don't realize that random changes to a complex system are statistically more likely to be detrimental than neutral.",
+      "generation_strategy": "Ask for the proportion of mutation types. Offer options where 'Beneficial' is >10%. The correct reality is usually Beneficial < Neutral < Harmful."
+    },
+    {
+      "distractor_type": "Mechanism Ignoring Limiting Factors",
+      "frequency": 2,
+      "example_question_id": "Q6",
+      "why_effective": "In Q6 (Bacteria growth), students look for the 'carrying capacity' plateau. Distractor A ('directly proportional to time') ignores the biological reality of resource limits, trapping students who treat biology graphs like simple physics linear plots.",
+      "generation_strategy": "Describe a biological growth curve (logistic). Include a distractor that describes a linear mathematical model ($y=mx+c$) or an exponential model ($y=e^x$) without limits."
+    }
+  ],
+  "_raw": null
+}

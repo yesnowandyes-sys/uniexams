@@ -1,0 +1,49 @@
+{
+  "topic_key": "BIO.B3",
+  "topic_name": "Cell division and sex determination",
+  "module_code": "B",
+  "corpus_question_count": 30,
+  "corpus_backed": true,
+  "scenarios": [
+    {
+      "scenario_description": "Determining the sex of offspring in Haplodiploid organisms (e.g., Ants/Bees) or X:A ratio systems (Fruit Flies), contrasted with the XY system.",
+      "key_insight": "Sex determination is not universal. In haplodiploidy, fertilization determines sex (Female = diploid from fertilized egg), whereas in XY systems, the sperm contribution determines sex. Students must abandon the 'XY = Male' heuristic for these specific questions.",
+      "discrimination_factors": [
+        "Ability to interpret novel genetic rules",
+        "Distinguishing between fertilization events and chromosome content"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Calculating the total DNA mass or chromosome count in a mixed tissue sample (e.g., testis containing both Sertoli cells (diploid) and spermatids (haploid)).",
+      "key_insight": "Tissues are not homogeneous. The 'average' chromosome count depends on the ratio of dividing cells to somatic cells. A student assuming 'all cells in the testis have 23 chromosomes' (haploid assumption) or 'all have 46' (ignoring meiosis) will fail. The 'mean' requires calculating the weighted average based on cell counts.",
+      "discrimination_factors": [
+        "Quantitative reasoning",
+        "Understanding of tissue composition",
+        "Weighted average calculation"
+      ],
+      "difficulty_band": "7-9"
+    },
+    {
+      "scenario_description": "Analyzing the impact of a somatic mutation on the genotype/phenotype of an organism and its potential offspring.",
+      "key_insight": "Somatic mutations (e.g., in a cheek cell or stem cell) affect the *individual* but are not inherited by offspring (unless they occur in the germline). Furthermore, a mutation in a *stem cell* (like a bone marrow stem cell) can propagate to many descendant cells, making the mutation widespread in the body but still non-heritable.",
+      "discrimination_factors": [
+        "Distinction between somatic and germline lines",
+        "Understanding stem cell propagation",
+        "Inheritance rules"
+      ],
+      "difficulty_band": "4-6"
+    },
+    {
+      "scenario_description": "Predicting DNA mass graphs through S-Phase, G2, and Mitosis/Meiosis, specifically identifying the '4C' or '2C' stages.",
+      "key_insight": "DNA replication doubles mass *before* division. In Meiosis, there are two divisions but only *one* replication phase. Students often mistake the mass drop in Meiosis II. The graph must show: 1. Start (2C), 2. Replicate (4C), 3. Divide I (2C), 4. Divide II (1C). The absence of replication between Division I and II is the critical 'Aha!' moment.",
+      "discrimination_factors": [
+        "Graph interpretation",
+        "Timing of S-phase vs Cell Division",
+        "Meiosis I vs II distinction"
+      ],
+      "difficulty_band": "7-9"
+    }
+  ],
+  "_raw": null
+}

@@ -1,0 +1,45 @@
+{
+  "topic_key": "MATHS2.MM8",
+  "topic_name": "Graphs of functions",
+  "module_code": "M2",
+  "corpus_question_count": 11,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Directional Translation Confusion",
+      "frequency": 4,
+      "example_question_id": "Q2",
+      "why_effective": "Students intuitively associate adding a value with moving in the positive direction, leading them to select options representing $y=(x+a)^2$ instead of the correct $y=(x-a)^2$. This exploits the 'counter-intuitive' nature of $f(x+a)$ translating left.",
+      "generation_strategy": "For a transformation $f(x+a)$ or $f(x-a)$, include options that shift the graph in the direction of the sign (e.g., $+a$ inside shifts right). For $y=f(x)+a$, include options shifting down for $+a$."
+    },
+    {
+      "distractor_type": "Global Extremes vs Local Extremes",
+      "frequency": "rare",
+      "example_question_id": "Q1",
+      "why_effective": "The function $2^{\\sin x} \times 3^{-\\sin x}$ creates a wave form. Students might find the maximum of the underlying expression (where $\\sin x = 1$) but forget to check if the domain allows for that peak, or confuse the maximum of the function with the maximum of the exponent.",
+      "generation_strategy": "Use composite functions where the inner function has a restricted range (like $\\sin x$) or domain (like $\\sqrt{x}$). Offer options corresponding to the theoretical max of the outer function (ignoring the inner constraint) or the max of the inner function."
+    },
+    {
+      "distractor_type": "Intersection Multiplicity Errors",
+      "frequency": 3,
+      "example_question_id": "Q5",
+      "why_effective": "Counting intersections often requires distinguishing between distinct touching points and crossing points. Students often overestimate by counting tangencies as two solutions or underestimating by missing roots near asymptotes.",
+      "generation_strategy": "Create problems where a curve is tangent to an axis or another curve. Include options that are $N+1$ or $N-1$ where $N$ is the correct count, specifically capturing the 'tangency error'."
+    },
+    {
+      "distractor_type": "Asymptote Misplacement",
+      "frequency": 3,
+      "example_question_id": "Q7",
+      "why_effective": "In questions involving graphs like $y = a^x$ or $y = 1/(1+a^x)$, students often memorize the 'shape' but fail to place the horizontal asymptote correctly at $y=c$ versus $y=0$.",
+      "generation_strategy": "Use transformed exponential/logarithmic functions. Shift the asymptote away from the axis (e.g., $y = \frac{2^x}{1+2^x}$ approaches 1, not 0). Include options reflecting the 'standard' unshifted asymptote."
+    },
+    {
+      "distractor_type": "Domain/Range Logic Reversal",
+      "frequency": 2,
+      "example_question_id": "Q8",
+      "why_effective": "Logic statements involving 'if', 'only if', and inequalities often confuse students regarding which variable is the constraint. They confuse $x \\geq 0 \\implies f(x) < 0$ with its converse.",
+      "generation_strategy": "Formulate distractors by taking the correct logical implication and creating the converse, inverse, and contrapositive errors, or by swapping the domain/range conditions (e.g., assuming $f(x)$ maps to the x-axis)."
+    }
+  ],
+  "parse_repaired": true
+}

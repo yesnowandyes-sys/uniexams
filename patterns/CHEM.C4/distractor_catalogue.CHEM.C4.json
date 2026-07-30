@@ -1,0 +1,66 @@
+{
+  "topic_key": "CHEM.C4",
+  "topic_name": "Quantitative chemistry",
+  "module_code": "C",
+  "corpus_question_count": 61,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Stoichiometric Inversion",
+      "frequency": "High",
+      "example_question_id": "Q4",
+      "why_effective": "Exploits the confusion between reactant and product masses in multi-step processes. In Q4, students often calculate the mass of CO2 produced from the *moles of Carbon* (12g) directly, forgetting the 1:1 ratio in Stage 2 vs the 1:3 ratio in Stage 3, or they miscalculate the molar mass of CO2.",
+      "generation_strategy": "Create a multi-step calculation where the molar ratio of the starting substance to the final product is not 1:1, or where the intermediate substance (CO in Q4) is the limiting reagent for the second step. Offer options based on using the wrong ratio (e.g., calculating for 1 mol instead of 3 mol)."
+    },
+    {
+      "distractor_type": "Excess/Reversal Error in Titration",
+      "frequency": "High",
+      "example_question_id": "Q5",
+      "why_effective": "Tests the ability to backtrack through a reaction. Students frequently calculate the moles of acid used (0.025 mol) and equate this directly to moles of NaOH, picking the option corresponding to 1.00g, or they use the acid moles to find mass but forget the 1:1 stoichiometry, or mix up the percentage calculation (impure vs pure).",
+      "generation_strategy": "In back-titration or purity questions, include an option equal to the mass if the sample were 100% pure (1.00g in Q5) and another option corresponding to the moles of the titrant (HCl) treated as the product."
+    },
+    {
+      "distractor_type": "Volume Conversion Confusion (cm\u00b3 vs dm\u00b3)",
+      "frequency": "Very High",
+      "example_question_id": "Q1",
+      "why_effective": "Students correctly calculate the volume in dm\u00b3 (e.g., 8 dm\u00b3) but fail to convert to the requested unit (cm\u00b3) in the options, or they incorrectly handle the 'molar volume' constant (using 24 instead of 24,000 or vice versa).",
+      "generation_strategy": "Provide answers in different scales (e.g., 8, 8000, 0.008). Use constants like 24 dm\u00b3/mol or 24,000 cm\u00b3/mol to trap unit handling errors."
+    },
+    {
+      "distractor_type": "Formula Determination Ratios",
+      "frequency": "Medium",
+      "example_question_id": "Q8",
+      "why_effective": "Students often calculate the mole ratio correctly (e.g., 0.02:0.1 = 1:5) but then invert the elements in the formula (writing O5Br instead of Br5O) or simplify the fraction incorrectly.",
+      "generation_strategy": "For empirical formula questions, always include the 'inverted' formula (swap metal/non-metal or anion/cation) as a distractor. Also include the formula with the ratio reduced by a common factor (e.g., BrO instead of Br2O5)."
+    },
+    {
+      "distractor_type": "Hydration/Water of Crystallisation Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q15",
+      "why_effective": "Students confuse the molar mass of the anhydrous salt with the hydrated salt, or they calculate the concentration based on the anhydrous mass applied to the hydrated volume. They might divide by 5 or multiply by 5 erroneously.",
+      "generation_strategy": "In questions involving hydrated salts, offer options corresponding to: Anhydrous concentration, Hydrated concentration (inverse error), or Anhydrous mass mistaken for Hydrated mass."
+    },
+    {
+      "distractor_type": "Limiting Reagent Traps (Gas Volumes)",
+      "frequency": "Medium",
+      "example_question_id": "Q17",
+      "why_effective": "Students calculate product mass based on the *excess* reagent (O2) instead of the *limiting* reagent (Li), or fail to convert the given volume of gas to moles to check for the limiting reagent.",
+      "generation_strategy": "Provide masses of products calculated from both reagents individually. In Q17, calculating from O2 (0.05 mol) would give a different mass for Li2O than calculating from Li (0.4 mol)."
+    },
+    {
+      "distractor_type": "Dilution Factor Errors",
+      "frequency": "Medium",
+      "example_question_id": "Q26",
+      "why_effective": "Complex dilution (X -> Y -> Neutralisation). Students often miss one step of the dilution factor (e.g., 20 to 500 is factor of 25, then 10 to 40 is factor of 4) or miscalculate the net factor.",
+      "generation_strategy": "Include options representing single-step dilution errors (e.g., only considering 20->500, or only 10->40) and the inverse of the correct factor."
+    },
+    {
+      "distractor_type": "Empirical Formula Mole Calculation Error",
+      "frequency": "High",
+      "example_question_id": "Q2",
+      "why_effective": "Students divide mass by Ar correctly but get the decimal values wrong (e.g., 63.5/127 = 0.5), then might multiply everything by 2 to get integers but miss the simplest ratio or round incorrectly.",
+      "generation_strategy": "For masses giving simple 0.5 or 0.33 ratios, include options representing the 'non-integer' ratio (e.g., I1O2.5) or the doubled ratio without simplification (I2O5 is correct, I4O10 is a distractor)."
+    }
+  ],
+  "_raw": null
+}

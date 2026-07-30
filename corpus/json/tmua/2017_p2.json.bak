@@ -1,0 +1,431 @@
+{
+  "source_file": "TMUA-2017-paper-2.pdf",
+  "paper_type": "TMUA",
+  "year": 2017,
+  "section": "Paper2",
+  "total_questions": 20,
+  "questions": [
+    {
+      "id": "TMUA-2017-P2-Q1",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 1,
+      "question_text": "1 Given that y = 3 , which one of the following is a correct expression for ? 2x 2 dx 9 − 12 3 5 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "4 x + 32 x− 2 − 34 x− 2 9 − 12 3 5",
+        "B": "4 x − 32 x− 2 + 34 x− 2 9 − 12 3 5",
+        "C": "4 x − 32 x− 2 − 34 x− 2 1 3 5",
+        "D": "− 94 x− 2 + 32 x− 2 + 34 x− 2 1 3 5",
+        "E": "− 94 x− 2 + 32 x− 2 − 34 x− 2 1 3 5",
+        "F": "− 94 x− 2 − 32 x− 2 − 34 x− 2"
+      },
+      "correct_answer": "A",
+      "raw_text": "1      Given that y =                   3   , which one of the following is a correct expression for      ?\n                                    2x   2                                                              dx\n                 9 − 12      3         5\n        A        4\n                   x + 32 x− 2 − 34 x− 2\n                 9 − 12      3         5\n        B        4\n                   x − 32 x− 2 + 34 x− 2\n                 9 − 12      3         5\n        C        4\n                   x − 32 x− 2 − 34 x− 2\n                      1         3            5\n        D − 94 x− 2 + 32 x− 2 + 34 x− 2\n                      1         3            5\n        E      − 94 x− 2 + 32 x− 2 − 34 x− 2\n                      1         3            5\n        F      − 94 x− 2 − 32 x− 2 − 34 x− 2\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                \u0016                                      >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q2",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 2,
+      "question_text": "2 P QRS is a rectangle. The coordinates of P and Q are (0, 6) and (1, 8) respectively. The perpendicular to P Q at Q meets the x-axis at R. What is the area of P QRS? 5 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "2 √",
+        "B": "4 10",
+        "C": "20 √",
+        "D": "8 10",
+        "E": "40 √"
+      },
+      "correct_answer": "E",
+      "raw_text": "2      P QRS is a rectangle.\n        The coordinates of P and Q are (0, 6) and (1, 8) respectively.\n        The perpendicular to P Q at Q meets the x-axis at R.\n        What is the area of P QRS?\n               5\n        A      2\n           √\n        B 4 10\n        C 20\n           √\n        D 8 10\n        E      40\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0017\n\f                                                      √",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q3",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 3,
+      "question_text": "3 The first term of a geometric progression is 2 3 and the fourth term is 94 What is the sum to infinity of this geometric progression? √ 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "−2(2 − 3) √",
+        "B": "4(2 3 − 3) √ 16(8 3 + 9)",
+        "C": "37 √ 4(2 3 − 3)",
+        "D": "7 √ 4(2 3 + 3)",
+        "E": "7 √",
+        "F": "2(2 + 3) √",
+        "G": "4(2 3 + 3)"
+      },
+      "correct_answer": "G",
+      "raw_text": "3      The first term of a geometric progression is 2 3 and the fourth term is 94\n        What is the sum to infinity of this geometric progression?\n                       √\n        A −2(2 −        3)\n             √\n        B 4(2 3 − 3)\n              √\n          16(8 3 + 9)\n        C\n              37\n             √\n          4(2 3 − 3)\n        D\n              7\n             √\n          4(2 3 + 3)\n        E\n              7\n                       √\n        F      2(2 +       3)\n             √\n        G 4(2 3 + 3)\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0018                                    >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q4",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 4,
+      "question_text": "4 The following question appeared in an examination: √ Given that tan x = 3, find the possible values of sin 2x. 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "is the only possible value, and this is fully supported by the reasoning given 2 in the student’s answer. √ 3",
+        "B": "is the only possible value, but the reasoning given should consider other 2 √ possible values of x for which tan x = 3. √ 3",
+        "C": "is the only possible value, but the reasoning given should consider other 2 √ 3 possible values of x for which sin 2x = . 2 √ 3",
+        "D": "is not the only possible value because the reasoning given should have 2 √ considered other possible values of x for which tan x = 3. √ 3",
+        "E": "is not the only possible value because the reasoning given should have 2 √ 3 considered other possible values of x for which sin 2x = . 2"
+      },
+      "correct_answer": "B",
+      "raw_text": "4      The following question appeared in an examination:\n                                    √\n               Given that tan x =       3, find the possible values of sin 2x.\n        A student gave the following answer:\n                       √\n               tan x =   3 so x = 60◦ and 2x = 120◦ ,\n                                  √\n                                    3\n               therefore sin 2x =     .\n                                   2\n        Which one of the following statements is correct?\n          √\n           3\n        A    is the only possible value, and this is fully supported by the reasoning given\n          2\n               in the student’s answer.\n          √\n            3\n        B     is the only possible value, but the reasoning given should consider other\n           2\n                                                 √\n          possible values of x for which tan x = 3.\n               √\n            3\n        C     is the only possible value, but the reasoning given should consider other\n           2                                      √\n                                                    3\n          possible values of x for which sin 2x =     .\n                                                   2\n          √\n            3\n        D     is not the only possible value because the reasoning given should have\n           2\n                                                                  √\n          considered other possible values of x for which tan x = 3.\n               √\n                 3\n        E          is not the only possible value because the reasoning given should have\n                2                                                       √\n                                                                          3\n               considered other possible values of x for which sin 2x =     .\n                                                                        2\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u0019",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q5",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 5,
+      "question_text": "5 Consider the following three statements: 1 10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime. 2 Every prime greater than 5 is of the form 6n + 1 for some integer n. 3 No multiple of 7 greater than 7 is prime. The result 91 = 7 × 13 can be used to provide a counterexample to which of the above statements? 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "none of them",
+        "B": "1 only",
+        "C": "2 only",
+        "D": "3 only",
+        "E": "1 and 2 only",
+        "F": "1 and 3 only",
+        "G": "2 and 3 only",
+        "H": "1, 2 and 3"
+      },
+      "correct_answer": "B",
+      "raw_text": "5      Consider the following three statements:\n               1    10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime.\n               2    Every prime greater than 5 is of the form 6n + 1 for some integer n.\n               3    No multiple of 7 greater than 7 is prime.\n        The result 91 = 7 × 13 can be used to provide a counterexample to which of the\n        above statements?\n        A none of them\n        B 1 only\n        C 2 only\n        D 3 only\n        E      1 and 2 only\n        F      1 and 3 only\n        G 2 and 3 only\n        H 1, 2 and 3\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001a                                    >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q6",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 6,
+      "question_text": "6 A sequence u0 , u1 , u2 , . . . is defined as follows: u0 = 1 1 un = 4xun−1 dx for n ⩾ 1 0 What is the value of u1000 ? 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "21000",
+        "B": "41000 4",
+        "C": "1000! 4",
+        "D": "1001! 21000",
+        "E": "1000! 41000",
+        "F": "1000! 21000",
+        "G": "1001! 41000",
+        "H": "1001!"
+      },
+      "correct_answer": "A",
+      "raw_text": "6      A sequence u0 , u1 , u2 , . . . is defined as follows:\n                                       u0 = 1\n                                            \u0002 1\n                                       un =     4xun−1 dx for n ⩾ 1\n                                               0\n        What is the value of u1000 ?\n        A 21000\n        B 41000\n                 4\n        C\n               1000!\n                 4\n        D\n               1001!\n               21000\n        E\n               1000!\n               41000\n        F\n               1000!\n               21000\n        G\n               1001!\n               41000\n        H\n               1001!\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u001b",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q7",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 7,
+      "question_text": "7 The graphs of two functions are shown here: • y = ax is shown with a solid line, where a is a positive real number • y = f (x) is shown with a dashed line Which of the following statements (1, 2, 3, 4) could be true? 1 f (x) = bx for some b > a 2 f (x) = bx for some b < a 3 f (x) = akx for some k > 1 4 f (x) = akx for some k < 1 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "3 only",
+        "D": "4 only",
+        "E": "1 and 3 only",
+        "F": "1 and 4 only",
+        "G": "2 and 3 only",
+        "H": "2 and 4 only"
+      },
+      "correct_answer": "E",
+      "raw_text": "7      The graphs of two functions are shown here:\n               •   y = ax is shown with a solid line, where a is a positive real number\n               •   y = f (x) is shown with a dashed line\n        Which of the following statements (1, 2, 3, 4) could be true?\n               1    f (x) = bx for some b > a\n               2    f (x) = bx for some b < a\n               3    f (x) = akx for some k > 1\n               4    f (x) = akx for some k < 1\n        A 1 only\n        B 2 only\n        C 3 only\n        D 4 only\n        E      1 and 3 only\n        F      1 and 4 only\n        G 2 and 3 only\n        H 2 and 4 only\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001c                                       >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q8",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 8,
+      "question_text": "8 Which one of the following numbers is smallest in value? 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "log2 7",
+        "B": "(2−3 + 2−2 )−1",
+        "C": "2(π/3) 1",
+        "D": "√ 3 4 2−1 π",
+        "E": "4 sin2 4"
+      },
+      "correct_answer": "E",
+      "raw_text": "8      Which one of the following numbers is smallest in value?\n        A log2 7\n        B (2−3 + 2−2 )−1\n        C 2(π/3)\n                        1\n        D          \u0003√           \u00043\n               4        2−1\n                        \u0005π \u0006\n        E      4 sin2\n                            4\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                  \u0014\u0013",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q9",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 9,
+      "question_text": "9 Consider the following attempt to prove this true theorem: Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers. Attempted proof: Suppose that there are positive integers a, b and c such that a3 + b3 = c3 . I We have a3 = c3 − b3 . II Hence a3 = (c − b)(c2 + cb + b2 ). III It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and c − b ⩽ c2 + cb + b2 . IV Eliminating a, we have (c − b)2 = c2 + cb + b2 . V Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 . VI Hence 3cb = 0 so one of b and c is zero. But this is a contradiction to the original assumption that all of a, b and c are positive. It follows that the equation has no solutions. Comment on this proof by choosing one of the following options: 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "The proof is correct",
+        "B": "The proof is incorrect and the first mistake occurs on line I.",
+        "C": "The proof is incorrect and the first mistake occurs on line II.",
+        "D": "The proof is incorrect and the first mistake occurs on line III.",
+        "E": "The proof is incorrect and the first mistake occurs on line IV.",
+        "F": "The proof is incorrect and the first mistake occurs on line V.",
+        "G": "The proof is incorrect and the first mistake occurs on line VI."
+      },
+      "correct_answer": "D",
+      "raw_text": "9      Consider the following attempt to prove this true theorem:\n               Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers.\n               Attempted proof:\n               Suppose that there are positive integers a, b and c such that a3 + b3 = c3 .\n               I      We have a3 = c3 − b3 .\n               II     Hence a3 = (c − b)(c2 + cb + b2 ).\n               III    It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and\n                      c − b ⩽ c2 + cb + b2 .\n               IV     Eliminating a, we have (c − b)2 = c2 + cb + b2 .\n               V      Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 .\n               VI     Hence 3cb = 0 so one of b and c is zero.\n               But this is a contradiction to the original assumption that all of a, b and c\n               are positive. It follows that the equation has no solutions.\n        Comment on this proof by choosing one of the following options:\n        A The proof is correct\n        B The proof is incorrect and the first mistake occurs on line I.\n        C The proof is incorrect and the first mistake occurs on line II.\n        D The proof is incorrect and the first mistake occurs on line III.\n        E      The proof is incorrect and the first mistake occurs on line IV.\n        F      The proof is incorrect and the first mistake occurs on line V.\n        G The proof is incorrect and the first mistake occurs on line VI.\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                       \u0014\u0014                                      >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q10",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 10,
+      "question_text": "10 f (x) is a function defined for all real values of x. 3 Which one of the following is a sufficient condition for 1 f (x) dx = 0? 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "f (2) = 0",
+        "B": "f (1) = f (3) = 0",
+        "C": "f (−x) = −f (x) for all x",
+        "D": "f (x + 2) = −f (2 − x) for all x",
+        "E": "f (x − 2) = −f (2 − x) for all x"
+      },
+      "correct_answer": "D",
+      "raw_text": "10     f (x) is a function defined for all real values of x.\n                                                                   \u00073\n        Which one of the following is a sufficient condition for   1\n                                                                        f (x) dx = 0?\n        A f (2) = 0\n        B f (1) = f (3) = 0\n        C f (−x) = −f (x) for all x\n        D f (x + 2) = −f (2 − x) for all x\n        E      f (x − 2) = −f (2 − x) for all x\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0015",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q11",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 11,
+      "question_text": "11 The function f (x) is increasing and f (0) = 0. The positive constants a and b are such that a < b. The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a and x = b is denoted by R. The function g(x) is defined by g(x) = f (x) + 2f (b). Which of the following is an expression for the area enclosed by the curve y = g(x), the x-axis and the lines x = a and x = b? 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "R + (b − a)f (b)",
+        "B": "R + 2(b − a)f (b)",
+        "C": "R + 2f (b) − f (a)",
+        "D": "R + 2f (b)",
+        "E": "R + (f (b))2",
+        "F": "R + (f (b))2 − (f (a))2",
+        "G": "R + 2(f (b) − f (a))f (b)"
+      },
+      "correct_answer": "B",
+      "raw_text": "11     The function f (x) is increasing and f (0) = 0.\n        The positive constants a and b are such that a < b.\n        The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a\n        and x = b is denoted by R.\n        The function g(x) is defined by g(x) = f (x) + 2f (b).\n        Which of the following is an expression for the area enclosed by the curve y = g(x),\n        the x-axis and the lines x = a and x = b?\n        A R + (b − a)f (b)\n        B R + 2(b − a)f (b)\n        C R + 2f (b) − f (a)\n        D R + 2f (b)\n        E      R + (f (b))2\n        F      R + (f (b))2 − (f (a))2\n        G R + 2(f (b) − f (a))f (b)\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u0016                                    >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q12",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 12,
+      "question_text": "12 The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2 Which one of the following is not true? 8&/(6",
+      "has_diagram": true,
+      "options": {
+        "A": "cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2",
+        "B": "cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2",
+        "C": "sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2",
+        "D": "sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2",
+        "E": "tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2",
+        "F": "tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2"
+      },
+      "correct_answer": "C",
+      "raw_text": "12     The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2\n        Which one of the following is not true?\n        A cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2\n        B cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2\n        C sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2\n        D sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2\n        E      tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2\n        F      tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0017",
+      "diagram_images": [
+        "TMUA-2017-P2-Q12-fig1.png"
+      ]
+    },
+    {
+      "id": "TMUA-2017-P2-Q13",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 13,
+      "question_text": "13 The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form, and (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ). Which of the following statements (I, II, III, IV) must be true? I a>9 II b>9 III a < c IV b < c 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and II only",
+        "D": "I and III only",
+        "E": "I and IV only",
+        "F": "II and III only",
+        "G": "II and IV only",
+        "H": "I, II, III and IV"
+      },
+      "correct_answer": "B",
+      "raw_text": "13     The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form,\n        and\n                               (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ).\n        Which of the following statements (I, II, III, IV) must be true?\n               I    a>9\n               II   b>9\n               III a < c\n               IV b < c\n        A I only\n        B II only\n        C I and II only\n        D I and III only\n        E      I and IV only\n        F      II and III only\n        G II and IV only\n        H I, II, III and IV\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0014\u0018                                    >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q14",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 14,
+      "question_text": "14 The diagram below shows the graph of y = x2 − 2bx + c. The vertex of this graph is at the point P . Which one of the following could be the graph of y = x2 − 2Bx + c, where B > b? 8&/(6",
+      "has_diagram": true,
+      "options": {
+        "A": "Parabola sketch A (see image)",
+        "B": "Parabola sketch B (see image)",
+        "C": "Parabola sketch C (see image)",
+        "D": "Parabola sketch D (see image)",
+        "E": "Parabola sketch E (see image)",
+        "F": "Parabola sketch F (see image)"
+      },
+      "correct_answer": "F",
+      "raw_text": "14     The diagram below shows the graph of y = x2 − 2bx + c. The vertex of this graph is\n        at the point P .\n        Which one of the following could be the graph of y = x2 − 2Bx + c, where B > b?\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                  \u0014\u0019\n[Note: Options A-F are parabola sketches shown as images; could not extract graph shapes from PDF. Given y=x²−2Bx+c where B>b, the new parabola has a wider shape with vertex further to the right (answer=F).]",
+      "diagram_images": [
+        "TMUA-2017-P2-Q14-fig1.png"
+      ],
+      "option_images": {
+        "A": "corpus/images/tmua/TMUA-2017-P2-Q14-optA.png",
+        "B": "corpus/images/tmua/TMUA-2017-P2-Q14-optB.png",
+        "C": "corpus/images/tmua/TMUA-2017-P2-Q14-optC.png",
+        "D": "corpus/images/tmua/TMUA-2017-P2-Q14-optD.png",
+        "E": "corpus/images/tmua/TMUA-2017-P2-Q14-optE.png",
+        "F": "corpus/images/tmua/TMUA-2017-P2-Q14-optF.png"
+      },
+      "question_image": "corpus/images/tmua/TMUA-2017-P2-Q14-original-graph.png",
+      "answer": "B"
+    },
+    {
+      "id": "TMUA-2017-P2-Q15",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 15,
+      "question_text": "15 The function f is defined on the positive integers as follows: f (1) = 5, and for n ⩾ 1: f (n + 1) = 3f (n) + 1 if f (n) is odd f (n + 1) = 12 f (n) if f (n) is even The function g is defined on the positive integers as follows: g(1) = 3, and for n ⩾ 1: g(n + 1) = g(n) + 5 if g(n) is odd g(n + 1) = 12 g(n) if g(n) is even What is the value of f (1000) − g(1000)? 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "−6",
+        "B": "−5",
+        "C": "1",
+        "D": "2",
+        "E": "4",
+        "F": "8"
+      },
+      "correct_answer": "D",
+      "raw_text": "15     The function f is defined on the positive integers as follows:\n                   f (1) = 5, and for n ⩾ 1:   f (n + 1) = 3f (n) + 1 if f (n) is odd\n                                               f (n + 1) = 12 f (n)   if f (n) is even\n        The function g is defined on the positive integers as follows:\n                   g(1) = 3, and for n ⩾ 1:    g(n + 1) = g(n) + 5 if g(n) is odd\n                                               g(n + 1) = 12 g(n)  if g(n) is even\n        What is the value of f (1000) − g(1000)?\n        A −6\n        B −5\n        C 1\n        D 2\n        E      4\n        F      8\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u001a                                       >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q16",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 16,
+      "question_text": "16 Consider the following statement: (∗) If f (x) is an integer for every integer x, then f ′ (x) is an integer for every integer x. Which one of the following is a counterexample to (∗)? x3 + x + 1 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "f (x) = 4 x 4 + x2 + x",
+        "B": "f (x) = 2 x 4 + x 3 + x2 + x",
+        "C": "f (x) = 2 x4 + 2x3 + x2",
+        "D": "f (x) = 4"
+      },
+      "correct_answer": "C",
+      "raw_text": "16     Consider the following statement:\n               (∗) If f (x) is an integer for every integer x, then f ′ (x) is an integer for\n                   every integer x.\n        Which one of the following is a counterexample to (∗)?\n                  x3 + x + 1\n        A f (x) =\n                      4\n                      x 4 + x2 + x\n        B f (x) =\n                            2\n                      x 4 + x 3 + x2 + x\n        C f (x) =\n                                2\n                      x4 + 2x3 + x2\n        D f (x) =\n                            4\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                        \u0014\u001b",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q17",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 17,
+      "question_text": "17 A set S of whole numbers is called stapled if and only if for every whole number a which is in S there exists a prime factor of a which divides at least one other number in S. Let T be a set of whole numbers. Which of the following is true if and only if T is not stapled? 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "For every number a which is in T , there is no prime factor of a which divides every other number in T .",
+        "B": "For every number a which is in T , there is no prime factor of a which divides at least one other number in T .",
+        "C": "For every number a which is in T , there is a prime factor of a which does not divide any other number in T .",
+        "D": "For every number a which is in T , there is a prime factor of a which does not divide at least one other number in T .",
+        "E": "There exists a number a which is in T such that there is no prime factor of a which divides every other number in T .",
+        "F": "There exists a number a which is in T such that there is no prime factor of a which divides at least one other number in T .",
+        "G": "There exists a number a which is in T such that there is a prime factor of a which does not divide any other number in T .",
+        "H": "There exists a number a which is in T such that there is a prime factor of a which does not divide at least one other number in T ."
+      },
+      "correct_answer": "F",
+      "raw_text": "17     A set S of whole numbers is called stapled if and only if for every whole number a\n        which is in S there exists a prime factor of a which divides at least one other number\n        in S.\n        Let T be a set of whole numbers. Which of the following is true if and only if T is\n        not stapled?\n        A For every number a which is in T , there is no prime factor of a which\n          divides every other number in T .\n        B For every number a which is in T , there is no prime factor of a which\n          divides at least one other number in T .\n        C For every number a which is in T , there is a prime factor of a which\n          does not divide any other number in T .\n        D For every number a which is in T , there is a prime factor of a which\n          does not divide at least one other number in T .\n        E      There exists a number a which is in T such that there is no prime factor of a\n               which divides every other number in T .\n        F      There exists a number a which is in T such that there is no prime factor of a\n               which divides at least one other number in T .\n        G There exists a number a which is in T such that there is a prime factor of a\n          which does not divide any other number in T .\n        H There exists a number a which is in T such that there is a prime factor of a\n          which does not divide at least one other number in T .\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u001c                                    >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q18",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 18,
+      "question_text": "18 Consider the following problem: n 10 1 1 Solve the inequality < , where n is a positive integer. 4 32 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "There are no invalid steps; the argument is correct",
+        "B": "Only step (I) is invalid; the rest are correct",
+        "C": "Only step (II) is invalid; the rest are correct",
+        "D": "Only step (III) is invalid; the rest are correct",
+        "E": "Only step (IV) is invalid; the rest are correct",
+        "F": "Only step (V) is invalid; the rest are correct"
+      },
+      "correct_answer": "B",
+      "raw_text": "18     Consider the following problem:\n                                            \b         n       \b               10\n                                                1                 1\n               Solve the inequality                       <                        , where n is a positive integer.\n                                                4                 32\n        A student produces the following argument:\n                             \b n \b          10\n                               1         1\n                                    <\n                               4        32\n                                                                                                         (I)\n                                    \b           n                 \b            10\n                                        1                              1\n                            log 1                   < log 1\n                                2       4                     2       32\n                                                                                                         (II)\n                                        \b                                 \b\n                                            1                                  1\n                            n log 1                 < 10 log 1\n                                    2       4                     2           32\n                                                                                                         (III)\n                                                                  1\n                                                      10 log 1 ( 32 )\n                                                                      2\n                                                n<\n                                                          log 1 ( 14 )\n                                                                  2\n                                                                                                         (IV)\n                                                      10 × 5\n                                                n<           = 25\n                                                         2\n                                                                                                         (V)\n                                                1 ⩽ n ⩽ 24\n        Which step (if any) in the argument is invalid?\n        A There are no invalid steps; the argument is correct\n        B Only step (I) is invalid; the rest are correct\n        C Only step (II) is invalid; the rest are correct\n        D Only step (III) is invalid; the rest are correct\n        E      Only step (IV) is invalid; the rest are correct\n        F      Only step (V) is invalid; the rest are correct\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                              \u0015\u0013",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q19",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 19,
+      "question_text": "19 Which one of the following is a sufficient condition for the equation x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root? 8&/(6 >7XUQRYHU",
+      "has_diagram": false,
+      "options": {
+        "A": "a>0",
+        "B": "a⩽0",
+        "C": "a⩾4",
+        "D": "a<4",
+        "E": "|a| > 4",
+        "F": "|a| ⩽ 4",
+        "G": "a = 94",
+        "H": "|a| = 32"
+      },
+      "correct_answer": "E",
+      "raw_text": "19     Which one of the following is a sufficient condition for the equation\n        x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root?\n        A a>0\n        B a⩽0\n        C a⩾4\n        D a<4\n        E      |a| > 4\n        F      |a| ⩽ 4\n        G a = 94\n        H |a| = 32\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0015\u0014                                 >7XUQ\u0003RYHU",
+      "diagram_images": []
+    },
+    {
+      "id": "TMUA-2017-P2-Q20",
+      "year": 2017,
+      "paper": "TMUA",
+      "section": "P2",
+      "question_number": 20,
+      "question_text": "20 I have forgotten my 5-character computer password, but I know that it consists of the letters a, b, c, d, e in some order. When I enter a potential password into the computer, it tells me exactly how many of the letters are in the correct position. When I enter abcde, it tells me that none of the letters are in the correct position. The same happens when I enter cdbea and eadbc. Using the best strategy, how many further attempts must I make in order to guarantee that I can deduce the correct password? 8&/(6 8&/(6 8&/(6",
+      "has_diagram": false,
+      "options": {
+        "A": "None: I can deduce it immediately",
+        "B": "One",
+        "C": "Two",
+        "D": "Three",
+        "E": "More than three"
+      },
+      "correct_answer": "B",
+      "raw_text": "20     I have forgotten my 5-character computer password, but I know that it consists of\n        the letters a, b, c, d, e in some order. When I enter a potential password into the\n        computer, it tells me exactly how many of the letters are in the correct position.\n        When I enter abcde, it tells me that none of the letters are in the correct position.\n        The same happens when I enter cdbea and eadbc.\n        Using the best strategy, how many further attempts must I make in order to\n        guarantee that I can deduce the correct password?\n        A None: I can deduce it immediately\n        B One\n        C Two\n        D Three\n        E      More than three\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0015\u0015\n\f               BLANK PAGE\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a       \u0015\u0016\n\f               BLANK PAGE\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a       \u0015\u0017",
+      "diagram_images": []
+    }
+  ]
+}

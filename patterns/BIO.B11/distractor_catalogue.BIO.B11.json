@@ -1,0 +1,52 @@
+{
+  "topic_key": "BIO.B11",
+  "topic_name": "Plant physiology",
+  "module_code": "B",
+  "corpus_question_count": 22,
+  "corpus_backed": true,
+  "distractors": [
+    {
+      "distractor_type": "Thermodynamic Misattribution",
+      "frequency": "High",
+      "example_question_id": "Q1, Q3, Q21",
+      "why_effective": "Students confuse the energy requirements of the chemical reaction (endothermic) with the effect of kinetic energy on collision frequency. They often select 'releases energy' or predict increased rate based solely on temperature kinetics while ignoring enzyme stability limits.",
+      "generation_strategy": "In questions about photosynthesis graphs, provide an option stating 'As temperature increases, rate increases due to increased kinetic energy' for the plateau/drop phase. In experiment description questions, swap 'takes in energy' with 'releases energy'."
+    },
+    {
+      "distractor_type": "Confusion of Transport Mechanisms",
+      "frequency": "High",
+      "example_question_id": "Q2, Q15, Q20",
+      "why_effective": "Students frequently struggle to distinguish between translocation (phloem, active transport, sugars) and transpiration (xylem, passive, water). This is exploited by asking for the mechanism of sugar movement (distractor: transpiration) or water movement (distractor: translocation/osmosis).",
+      "generation_strategy": "In scenarios involving radioactive sugars reaching roots, include options where CO2 diffuses to roots or sugars move by transpiration. In water potential scenarios, offer options where phloem is the transport tissue or osmosis is the mechanism for leaving the leaf."
+    },
+    {
+      "distractor_type": "Gas Identity Confusion",
+      "frequency": "Medium",
+      "example_question_id": "Q13, Q18",
+      "why_effective": "Students memorize 'photosynthesis produces oxygen' but fail to account for the simultaneous reality of cellular respiration in plants. Options stating the bubbles are 'mostly carbon dioxide' or attributing zero net O2 release to 'no photosynthesis' trap students who ignore respiration.",
+      "generation_strategy": "In pondweed bubble counting questions, include a distractor asserting the bubbles are Carbon Dioxide. In net rate graph questions (where rate is zero), attribute the zero value to 'no photosynthesis' rather than 'photosynthesis = respiration'."
+    },
+    {
+      "distractor_type": "Directionality Reversal in Hormesis",
+      "frequency": "Medium",
+      "example_question_id": "Q5, Q6, Q8",
+      "why_effective": "Students memorize 'plants grow toward light' but fail to visualize the differential cell elongation (cells on the shaded side grow longer). This leads to selecting options where the shaded side is shorter or the direction of growth is away from the stimulus.",
+      "generation_strategy": "In phototropism/geotropism diagram questions, ask which cells are shorter/smaller. Include the option where cells on the shaded side (or bottom side in roots) are smaller/less turgid."
+    },
+    {
+      "distractor_type": "Causal Misinterpretation of Plateaus",
+      "frequency": "Medium",
+      "example_question_id": "Q4, Q11, Q18",
+      "why_effective": "When a rate graph plateaus or drops, students often default to 'enzymes denatured' or 'active sites occupied' without checking the independent variable. If the variable is light intensity or CO2, 'denatured' is a strong distractor even if the temperature is constant.",
+      "generation_strategy": "In rate-limiting factor questions involving light/distance, if the rate slows or plateaus, provide a distractor stating 'photosynthesis enzymes denatured' or 'active sites occupied' to test if students recognize the specific limiting factor."
+    },
+    {
+      "distractor_type": "Calculation Format Errors",
+      "frequency": "Low",
+      "example_question_id": "Q3, Q22",
+      "why_effective": "Students correctly calculate values (e.g., volume) but fail to manipulate the units (mm to m) or format (pi vs decimal) correctly, or they use diameter instead of radius in cylinder volume formulas.",
+      "generation_strategy": "In volume calculation questions, include options where the diameter is used instead of the radius (e.g., $2\\pi r h$ instead of $\\pi r^2 h$) or unit conversions are performed incorrectly (e.g., failing to cubed the length conversion)."
+    }
+  ],
+  "parse_repaired": true
+}
