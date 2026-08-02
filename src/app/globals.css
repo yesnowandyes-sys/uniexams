@@ -4,8 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; -webkit-font-smoothing: antialiased; }
+/* ── Design tokens as CSS custom properties ── */
+:root {
+  --c-bg: #F6F5F1;
+  --c-surf: #FFFFFF;
+  --c-alt: #EFECEA;
+  --c-bdr: #E3E0DA;
+  --c-bdr2: #C9C6C0;
+  --c-text: #18181A;
+  --c-sec: #504F4C;
+  --c-ter: #9E9C98;
+  --c-blue: #1A47B8;
+  --c-mid: #2563EB;
+  --c-lite: #EEF4FF;
+  --c-liteb: #DBEAFE;
+  --c-green: #15803D;
+  --c-gLite: #F0FDF4;
+  --c-gBdr: #86EFAC;
+  --c-red: #DC2626;
+  --c-rLite: #FEF2F2;
+  --c-rBdr: #FECACA;
+  --c-amber: #B45309;
+  --c-aLite: #FFFBEB;
+  --c-aBdr: #FDE68A;
+  --c-purp: #7C3AED;
+  --c-pLite: #F5F3FF;
+  --c-pBdr: #DDD6FE;
+  --c-aBdr: #FDE68A;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { overflow-x: hidden; }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from any overflowing children */
+  max-width: 100vw;
+}
 
 /* ── Interactive transitions ── */
 .opt-btn {
@@ -77,22 +114,34 @@ select {
 }
 select:focus { outline: none; border-color: #2563EB !important; box-shadow: 0 0 0 3px #EEF4FF; }
 
-/* ── Responsive layout ── */
-
-/* Hide keyboard legend and session dots on small screens */
+/* ── Mobile visibility toggles ── */
 .kbd-legend { display: flex; }
+.session-dots { display: flex; }
 .mobile-only { display: none; }
+.desktop-only { display: flex; }
 
+/* ── Images max-width for safety ── */
+img { max-width: 100%; height: auto; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — global utility classes used across all pages
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Tablet: ≤860px */
 @media (max-width: 860px) {
-  .practice-layout { flex-direction: column !important; padding: "1rem" !important; }
-  .practice-sidebar { width: 100% !important; }
   .kbd-legend { display: none !important; }
+  .desktop-only { display: none !important; }
   .mobile-only { display: flex !important; }
-  .header-brand { display: none !important; }
-  .header-padding { padding: 0 1rem !important; }
-  .content-padding { padding: 1rem !important; }
+  .session-dots { display: flex; }
 }
 
+/* iPhone portrait: ≤480px */
 @media (max-width: 480px) {
   .session-dots { display: none !important; }
+  .mobile-only { display: flex !important; }
+}
+
+/* Small iPhone SE: ≤375px */
+@media (max-width: 375px) {
+  /* Tighter padding handled in CSS modules */
 }

@@ -9,15 +9,14 @@ import { Bar, Pill, KBD, Wordmark, Label } from "@/components/atoms";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionCard } from "@/components/QuestionCard";
 import { MathText } from "@/components/MathText";
+import styles from "./page.module.css";
 
 /**
  * MockExam — timed, full-length practice exam (ESA-18 follow-up).
  *
  * Distinct from /practice:
  *   - 20 mixed questions, no immediate feedback
- *   - Count-up timer (no fixed time limit for now; ESAT spec is untimed per
- *     question but the exam session is 2h. We let the user self-pace and
- *     report total time taken on the results screen.)
+ *   - Count-up timer
  *   - Single "Submit Exam" action grades all answers in one batch
  *   - Results screen reveals per-question correctness, full solutions,
  *     breakdown by subject, and time-per-question estimate
@@ -113,6 +112,7 @@ export default function MockExamPage() {
   const [graded, setGraded] = useState<Record<string, GradedAnswer> | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [stats, setStats] = useState<StatsResp | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Exam timer
   const [elapsedMs, setElapsedMs] = useState(0);
@@ -200,7 +200,6 @@ export default function MockExamPage() {
       if (!list || phase !== "exam") return;
       const qid = list[idx]?.id;
       if (!qid) return;
-      // In mock exam mode, allow changing the answer until submit.
       ansRef.current[qid] = letter;
       setAns((prev) => ({ ...prev, [qid]: letter }));
     },
@@ -263,7 +262,6 @@ export default function MockExamPage() {
     await Promise.all(
       list.map(async (q) => {
         const letter = ansRef.current[q.id];
-        // Always record the attempt server-side (even if blank → incorrect).
         try {
           if (letter) {
             const r = await fetch(
@@ -281,7 +279,6 @@ export default function MockExamPage() {
             const scored: GradedAnswer = await r.json();
             out[q.id] = scored;
 
-            // Record into client-side progress log.
             recordAttempt({
               questionId: q.id,
               examType: q.exam_type,
@@ -290,7 +287,6 @@ export default function MockExamPage() {
               timeMs: finalPerQ[q.id],
             });
           } else {
-            // Unanswered — record as incorrect without a server call.
             out[q.id] = {
               correct: false,
               correct_answer: q.correct_answer,
@@ -300,7 +296,6 @@ export default function MockExamPage() {
             };
           }
         } catch {
-          // Fallback: use the local copy's correct_answer if available.
           out[q.id] = {
             correct: false,
             correct_answer: q.correct_answer ?? "",
@@ -330,142 +325,39 @@ export default function MockExamPage() {
   if (phase === "intro") {
     return (
       <Shell>
-        <div
-          style={{
-            maxWidth: 680,
-            margin: "0 auto",
-            padding: "3rem 1.5rem",
-          }}
-        >
-          <div style={{ marginBottom: "1.75rem", textAlign: "center" }}>
-            <div
-              style={{
-                width: 64,
-                height: 64,
-                borderRadius: 16,
-                background: C.blue,
-                margin: "0 auto 1.25rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: SH.blue,
-              }}
-            >
+        <div className={styles.intro}>
+          <div className={styles.introHeader}>
+            <div className={styles.introIcon} style={{ boxShadow: SH.blue }}>
               <Svg icon="pencil" size={28} col="#fff" sw={1.8} />
             </div>
-            <h1
-              style={{
-                fontSize: "2rem",
-                fontWeight: 700,
-                color: C.text,
-                letterSpacing: "-0.025em",
-                margin: "0 0 8px",
-              }}
-            >
+            <h1 className={styles.introTitle}>
               Mock Exam
             </h1>
-            <p
-              style={{
-                fontSize: "0.9375rem",
-                color: C.sec,
-                lineHeight: 1.7,
-                margin: 0,
-              }}
-            >
+            <p className={styles.introDesc}>
               {EXAM_SIZE} mixed-topic questions drawn at real ESAT difficulty.
               You won&apos;t see correctness feedback until you submit — just like
               the real exam.
             </p>
           </div>
 
-          <div
-            style={{
-              background: C.surf,
-              border: `1px solid ${C.bdr}`,
-              borderRadius: 14,
-              padding: "1.5rem 1.75rem",
-              marginBottom: "1.25rem",
-              boxShadow: SH.card,
-            }}
-          >
+          <div className={styles.introCard} style={{ boxShadow: SH.card }}>
             <Label col={C.ter} mb={14}>
               What to expect
             </Label>
-            <ul
-              style={{
-                margin: 0,
-                padding: 0,
-                listStyle: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: 12,
-              }}
-            >
+            <ul className={styles.introList}>
               {[
-                {
-                  icon: "bolt" as const,
-                  title: `${EXAM_SIZE} questions`,
-                  desc: "Random mixed subjects, weighted by what the ESAT actually covers.",
-                },
-                {
-                  icon: "clock" as const,
-                  title: "Self-paced timer",
-                  desc: "Count-up timer tracks your total time. Pause by leaving the page is not supported — submit when ready.",
-                },
-                {
-                  icon: "eye" as const,
-                  title: "No feedback mid-exam",
-                  desc: "Answers lock in your selection but won't reveal correctness. Change answers freely before submitting.",
-                },
-                {
-                  icon: "check" as const,
-                  title: "Full results review",
-                  desc: "After submit: per-question breakdown, worked solutions, time-per-question, and subject analysis.",
-                },
+                { icon: "bolt" as const, title: `${EXAM_SIZE} questions`, desc: "Random mixed subjects, weighted by what the ESAT actually covers." },
+                { icon: "clock" as const, title: "Self-paced timer", desc: "Count-up timer tracks your total time. Pause by leaving the page is not supported — submit when ready." },
+                { icon: "eye" as const, title: "No feedback mid-exam", desc: "Answers lock in your selection but won't reveal correctness. Change answers freely before submitting." },
+                { icon: "check" as const, title: "Full results review", desc: "After submit: per-question breakdown, worked solutions, time-per-question, and subject analysis." },
               ].map(({ icon, title, desc }) => (
-                <li
-                  key={title}
-                  style={{
-                    display: "flex",
-                    gap: 12,
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 30,
-                      height: 30,
-                      borderRadius: 8,
-                      background: C.lite,
-                      border: `1px solid ${C.liteb}`,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
+                <li key={title} className={styles.introListItem}>
+                  <div className={styles.introItemIcon}>
                     <Svg icon={icon} size={14} col={C.mid} sw={2} />
                   </div>
                   <div>
-                    <div
-                      style={{
-                        fontSize: "0.875rem",
-                        fontWeight: 600,
-                        color: C.text,
-                        marginBottom: 2,
-                      }}
-                    >
-                      {title}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "0.8125rem",
-                        color: C.sec,
-                        lineHeight: 1.55,
-                      }}
-                    >
-                      {desc}
-                    </div>
+                    <div className={styles.introItemTitle}>{title}</div>
+                    <div className={styles.introItemDesc}>{desc}</div>
                   </div>
                 </li>
               ))}
@@ -473,81 +365,30 @@ export default function MockExamPage() {
           </div>
 
           {loadError && (
-            <div
-              style={{
-                background: C.rLite,
-                border: `1px solid ${C.rBdr}`,
-                borderRadius: 10,
-                padding: "0.75rem 1rem",
-                marginBottom: "1rem",
-                color: C.red,
-                fontSize: "0.8125rem",
-                fontWeight: 500,
-              }}
-            >
+            <div className={styles.introError}>
               {loadError}
             </div>
           )}
 
-          <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
+          <div className={styles.introActions}>
             <button
               onClick={loadExam}
               disabled={!list && loadError !== null}
-              className="btn-primary"
-              style={{
-                padding: "12px 28px",
-                borderRadius: 10,
-                border: "none",
-                background: C.mid,
-                color: "#fff",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                cursor: "pointer",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                boxShadow: SH.blue,
-              }}
+              className={`${styles.introBeginBtn} btn-primary`}
+              style={{ boxShadow: SH.blue }}
             >
               <Svg icon="play" size={14} col="#fff" sw={2.5} />
               Begin Mock Exam
             </button>
-            <a
-              href="/practice"
-              className="btn-ghost"
-              style={{
-                padding: "12px 20px",
-                borderRadius: 10,
-                border: `1px solid ${C.bdr}`,
-                background: C.surf,
-                color: C.sec,
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "0.9375rem",
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-              }}
-            >
+            <a href="/practice" className={`${styles.introBackBtn} btn-ghost`}>
               <Svg icon="arrowL" size={13} col={C.sec} sw={2} />
               Back to Practice
             </a>
           </div>
 
           {stats && (
-            <div
-              style={{
-                marginTop: "2rem",
-                textAlign: "center",
-                fontSize: "0.75rem",
-                color: C.ter,
-                fontFamily: '"JetBrains Mono", monospace',
-              }}
-            >
-              Drawing from {stats.total_questions.toLocaleString()} questions in
-              the corpus
+            <div className={styles.introCorpusNote}>
+              Drawing from {stats.total_questions.toLocaleString()} questions in the corpus
             </div>
           )}
         </div>
@@ -573,131 +414,41 @@ export default function MockExamPage() {
   return (
     <Shell>
       {/* ── Header with timer ── */}
-      <header
-        style={{
-          background: C.surf,
-          height: 58,
-          borderBottom: `1px solid ${C.bdr}`,
-          display: "flex",
-          alignItems: "center",
-          padding: "0 1.75rem",
-          flexShrink: 0,
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-          gap: 16,
-        }}
-      >
-        <a
-          href="/"
-          className="btn-ghost"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 6,
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: C.sec,
-            fontSize: "0.8125rem",
-            fontWeight: 500,
-            fontFamily: "Inter, sans-serif",
-            padding: "5px 10px",
-            borderRadius: 7,
-            textDecoration: "none",
-          }}
-        >
+      <header className={styles.header}>
+        <a href="/" className={`${styles.backBtn} btn-ghost`}>
           <Svg icon="arrowL" size={14} col={C.sec} sw={1.8} />
-          Exit
+          <span>Exit</span>
         </a>
-        <div style={{ width: 1, height: 20, background: C.bdr }} />
+        <div className={styles.headerDivider} />
         <Wordmark />
-        <span
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            color: C.ter,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-          }}
-        >
+        <span className={styles.headerLabel}>
           Mock Exam
         </span>
 
         {/* Timer */}
-        <div
-          style={{
-            marginLeft: "auto",
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              background: C.lite,
-              border: `1px solid ${C.liteb}`,
-              borderRadius: 8,
-              padding: "5px 12px",
-            }}
-          >
+        <div className={styles.headerRight}>
+          <div className={styles.timerBox}>
             <Svg icon="clock" size={13} col={C.mid} sw={2} />
-            <span
-              style={{
-                fontFamily: '"JetBrains Mono", monospace',
-                fontWeight: 700,
-                color: C.mid,
-                fontSize: "0.875rem",
-                letterSpacing: "-0.01em",
-                minWidth: 48,
-                textAlign: "right",
-              }}
-            >
+            <span className={styles.timerValue}>
               {formatMSS(elapsedMs)}
             </span>
           </div>
 
           {/* Answered count */}
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: C.sec,
-            }}
-          >
-            <span
-              style={{
-                fontFamily: '"JetBrains Mono", monospace',
-                fontWeight: 700,
-                color: C.text,
-              }}
-            >
+          <div className={styles.answeredCount}>
+            <span className={styles.answeredCountNum}>
               {answeredCount}
             </span>
-            <span style={{ color: C.ter }}> / {total}</span>
+            <span className={styles.answeredCountTotal}>
+              {" "}/ {total}
+            </span>
           </div>
 
           <button
             onClick={submitExam}
             disabled={submitting}
-            className="btn-primary"
-            style={{
-              padding: "7px 16px",
-              borderRadius: 8,
-              border: "none",
-              background: C.green,
-              color: "#fff",
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 600,
-              fontSize: "0.8125rem",
-              cursor: submitting ? "default" : "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              opacity: submitting ? 0.7 : 1,
-            }}
+            className={`${styles.submitBtn} btn-primary`}
+            style={{ opacity: submitting ? 0.7 : 1 }}
           >
             <Svg icon="check" size={13} col="#fff" sw={2.5} />
             {submitting ? "Grading…" : "Submit Exam"}
@@ -705,57 +456,33 @@ export default function MockExamPage() {
         </div>
 
         {/* Thin progress stripe */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 2,
-            background: C.bdr,
-          }}
-        >
+        <div className={styles.headerStripe}>
           <div
+            className={styles.headerStripeFill}
             style={{
-              height: "100%",
-              borderRadius: 1,
-              width: `${
-                total ? (answeredCount / total) * 100 : 0
-              }%`,
+              width: `${total ? (answeredCount / total) * 100 : 0}%`,
               background: C.mid,
-              transition:
-                "width 0.45s cubic-bezier(0.16,1,0.3,1), background 0.3s",
             }}
           />
         </div>
       </header>
 
       {/* ── Main layout ── */}
-      <div
-        className="practice-layout"
-        style={{
-          flex: 1,
-          maxWidth: 1200,
-          width: "100%",
-          margin: "0 auto",
-          padding: "1.5rem 1.75rem",
-          display: "flex",
-          gap: "1.5rem",
-          boxSizing: "border-box",
-        }}
-      >
+      <div className={styles.examLayout}>
         {/* ══ LEFT: Question pane ══ */}
-        <div style={{ flex: "1 1 0", minWidth: 0 }}>
+        <div className={styles.questionPane}>
+          {/* Mobile sidebar toggle */}
+          <button
+            className={styles.sidebarToggle}
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+          >
+            <Svg icon="chevD" size={14} col={C.sec} sw={2} style={{ transform: sidebarOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+            {sidebarOpen ? "Hide progress" : "Show progress & jump"}
+          </button>
+
           {/* Question navigator grid */}
           {(list?.length ?? 0) > 0 && (
-            <div
-              style={{
-                display: "flex",
-                gap: 6,
-                marginBottom: "1.25rem",
-                flexWrap: "wrap",
-              }}
-            >
+            <div className={styles.questionNav}>
               {list!.map((q, i) => {
                 const a = ans[q.id];
                 const cur = i === idx;
@@ -763,22 +490,12 @@ export default function MockExamPage() {
                   <button
                     key={q.id}
                     onClick={() => setIdx(i)}
-                    className="q-num-btn"
+                    className={`q-num-btn ${styles.qNumBtn}`}
                     style={{
-                      width: 36,
-                      height: 36,
-                      borderRadius: 8,
-                      border: `2px solid ${cur ? C.mid : a ? C.liteb : C.bdr}`,
+                      borderColor: cur ? C.mid : a ? C.liteb : C.bdr,
                       background: a ? C.lite : C.surf,
                       color: a ? C.mid : cur ? C.mid : C.ter,
-                      fontFamily: '"JetBrains Mono", monospace',
                       fontWeight: cur ? 700 : 500,
-                      fontSize: "0.75rem",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      boxSizing: "border-box",
                       boxShadow: cur ? `0 0 0 3px ${C.lite}` : "none",
                     }}
                   >
@@ -789,16 +506,9 @@ export default function MockExamPage() {
             </div>
           )}
 
-          {/* Loading / error / question */}
           {!list && !loadError && <LoadingState />}
           {loadError && (
-            <ErrorState
-              msg={loadError}
-              onRetry={() => {
-                setPhase("intro");
-                setLoadError(null);
-              }}
-            />
+            <ErrorState msg={loadError} onRetry={() => { setPhase("intro"); setLoadError(null); }} />
           )}
 
           {current && (
@@ -815,83 +525,30 @@ export default function MockExamPage() {
 
           {/* Prev / Next */}
           {list && list.length > 0 && (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                marginTop: 4,
-              }}
-            >
+            <div className={styles.navButtons}>
               <button
                 onClick={() => idx > 0 && setIdx((i) => i - 1)}
-                className="nav-btn"
+                className={`nav-btn ${styles.navButton} ${idx === 0 ? styles.navButtonDisabled : ""}`}
                 disabled={idx === 0}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "7px 14px",
-                  borderRadius: 8,
-                  border: `1px solid ${C.bdr}`,
-                  background: C.surf,
-                  color: idx === 0 ? C.ter : C.sec,
-                  fontSize: "0.8125rem",
-                  fontWeight: 500,
-                  fontFamily: "Inter, sans-serif",
-                  opacity: idx === 0 ? 0.4 : 1,
-                  cursor: idx === 0 ? "default" : "pointer",
-                }}
               >
                 <Svg icon="chevL" size={13} col="currentColor" sw={2} />
                 Previous
               </button>
               <button
                 onClick={() => idx < total - 1 && setIdx((i) => i + 1)}
-                className="nav-btn"
+                className={`nav-btn ${styles.navButton} ${idx === total - 1 ? styles.navButtonDisabled : ""}`}
                 disabled={idx === total - 1}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "7px 14px",
-                  borderRadius: 8,
-                  border: `1px solid ${C.bdr}`,
-                  background: C.surf,
-                  color: idx === total - 1 ? C.ter : C.sec,
-                  fontSize: "0.8125rem",
-                  fontWeight: 500,
-                  fontFamily: "Inter, sans-serif",
-                  opacity: idx === total - 1 ? 0.4 : 1,
-                  cursor: idx === total - 1 ? "default" : "pointer",
-                }}
               >
                 Next
                 <Svg icon="chevR" size={13} col="currentColor" sw={2} />
               </button>
 
-              {/* Submit button at the end of the exam */}
               {idx === total - 1 && (
                 <button
                   onClick={submitExam}
                   disabled={submitting}
-                  className="btn-primary"
-                  style={{
-                    marginLeft: "auto",
-                    padding: "7px 18px",
-                    borderRadius: 8,
-                    border: "none",
-                    background: C.green,
-                    color: "#fff",
-                    fontFamily: "Inter, sans-serif",
-                    fontWeight: 600,
-                    fontSize: "0.8125rem",
-                    cursor: submitting ? "default" : "pointer",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                    opacity: submitting ? 0.7 : 1,
-                  }}
+                  className={`${styles.submitBtn} btn-primary`}
+                  style={{ marginLeft: "auto", opacity: submitting ? 0.7 : 1 }}
                 >
                   <Svg icon="check" size={13} col="#fff" sw={2.5} />
                   {submitting ? "Grading…" : "Submit Exam"}
@@ -902,79 +559,25 @@ export default function MockExamPage() {
         </div>
 
         {/* ══ RIGHT: Sidebar ══ */}
-        <div className="practice-sidebar" style={{ width: 268, flexShrink: 0 }}>
+        <div className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ""}`}>
           {/* Answered progress */}
-          <div
-            style={{
-              background: C.surf,
-              border: `1px solid ${C.bdr}`,
-              borderRadius: 12,
-              padding: "1.1rem 1.2rem",
-              marginBottom: 12,
-              boxShadow: SH.card,
-            }}
-          >
-            <Label col={C.ter} mb={10}>
-              Exam Progress
-            </Label>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "baseline",
-                gap: 5,
-                marginBottom: 10,
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: '"JetBrains Mono", monospace',
-                  fontSize: "1.875rem",
-                  fontWeight: 700,
-                  color: C.mid,
-                  lineHeight: 1,
-                }}
-              >
-                {answeredCount}
-              </span>
-              <span style={{ fontSize: "0.875rem", color: C.ter }}>
-                of {total} answered
-              </span>
+          <div className={styles.sidebarCard} style={{ boxShadow: SH.card }}>
+            <Label col={C.ter} mb={10}>Exam Progress</Label>
+            <div className={styles.progressSummary}>
+              <span className={styles.progressNum}>{answeredCount}</span>
+              <span className={styles.progressLabel}>of {total} answered</span>
             </div>
-            <ProgressBar
-              pct={total ? (answeredCount / total) * 100 : 0}
-              color={C.mid}
-              h={4}
-            />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: 10,
-                fontSize: "0.75rem",
-                color: C.ter,
-              }}
-            >
+            <ProgressBar pct={total ? (answeredCount / total) * 100 : 0} color={C.mid} h={4} />
+            <div className={styles.progressRow}>
               <span>
                 Remaining:{" "}
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono",monospace',
-                    fontWeight: 700,
-                    color: C.sec,
-                  }}
-                >
+                <span style={{ fontFamily: '"JetBrains Mono",monospace', fontWeight: 700, color: C.sec }}>
                   {total - answeredCount}
                 </span>
               </span>
               <span>
                 Time:{" "}
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono",monospace',
-                    fontWeight: 700,
-                    color: C.mid,
-                  }}
-                >
+                <span style={{ fontFamily: '"JetBrains Mono",monospace', fontWeight: 700, color: C.mid }}>
                   {formatMSS(elapsedMs)}
                 </span>
               </span>
@@ -982,26 +585,9 @@ export default function MockExamPage() {
           </div>
 
           {/* Unanswered list */}
-          <div
-            style={{
-              background: C.surf,
-              border: `1px solid ${C.bdr}`,
-              borderRadius: 12,
-              padding: "1.1rem 1.2rem",
-              marginBottom: 12,
-              boxShadow: SH.card,
-            }}
-          >
-            <Label col={C.ter} mb={10}>
-              Jump to question
-            </Label>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(5, 1fr)",
-                gap: 6,
-              }}
-            >
+          <div className={styles.sidebarCard} style={{ boxShadow: SH.card }}>
+            <Label col={C.ter} mb={10}>Jump to question</Label>
+            <div className={styles.jumpGrid}>
               {(list ?? []).map((q, i) => {
                 const a = ans[q.id];
                 const cur = i === idx;
@@ -1009,22 +595,12 @@ export default function MockExamPage() {
                   <button
                     key={q.id}
                     onClick={() => setIdx(i)}
+                    className={styles.jumpBtn}
                     style={{
-                      aspectRatio: "1",
-                      borderRadius: 7,
-                      border: `1.5px solid ${
-                        cur ? C.mid : a ? C.liteb : C.bdr
-                      }`,
+                      borderColor: cur ? C.mid : a ? C.liteb : C.bdr,
                       background: a ? C.lite : C.surf,
                       color: a ? C.mid : C.ter,
-                      fontFamily: '"JetBrains Mono", monospace',
                       fontWeight: a ? 700 : 500,
-                      fontSize: "0.75rem",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: 0,
                     }}
                   >
                     {i + 1}
@@ -1035,25 +611,9 @@ export default function MockExamPage() {
           </div>
 
           {/* Exam info */}
-          <div
-            style={{
-              background: C.lite,
-              border: `1px solid ${C.liteb}`,
-              borderRadius: 12,
-              padding: "10px 14px",
-              display: "flex",
-              alignItems: "flex-start",
-              gap: 8,
-            }}
-          >
+          <div className={styles.examInfo}>
             <Svg icon="info" size={14} col={C.mid} sw={2} />
-            <div
-              style={{
-                fontSize: "0.75rem",
-                color: C.sec,
-                lineHeight: 1.6,
-              }}
-            >
+            <div className={styles.examInfoText}>
               You can change answers freely until you submit. Correctness is
               hidden until the exam is graded.
             </div>
@@ -1092,111 +652,35 @@ function MockQuestionView({
   return (
     <div>
       {/* Meta row */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          marginBottom: "1rem",
-          flexWrap: "wrap",
-        }}
-      >
-        <Pill bg={C.lite} col={C.mid} bdr={C.liteb}>
-          {subject}
-        </Pill>
-        <Pill bg={dm.bg} col={dm.col} bdr={dm.bdr}>
-          {diff}
-        </Pill>
-        {topic && (
-          <Pill bg={C.alt} col={C.sec} bdr={C.bdr}>
-            {topic}
-          </Pill>
-        )}
-        {question.year && (
-          <Pill bg={C.alt} col={C.ter} bdr={C.bdr}>
-            {question.year}
-          </Pill>
-        )}
-        <div
-          style={{
-            marginLeft: "auto",
-            fontSize: "0.75rem",
-            color: C.ter,
-            fontFamily: '"JetBrains Mono", monospace',
-          }}
-        >
-          {question.id}
-        </div>
+      <div className={styles.metaRow}>
+        <Pill bg={C.lite} col={C.mid} bdr={C.liteb}>{subject}</Pill>
+        <Pill bg={dm.bg} col={dm.col} bdr={dm.bdr}>{diff}</Pill>
+        {topic && <Pill bg={C.alt} col={C.sec} bdr={C.bdr}>{topic}</Pill>}
+        {question.year && <Pill bg={C.alt} col={C.ter} bdr={C.bdr}>{question.year}</Pill>}
+        <div className={styles.questionId}>{question.id}</div>
       </div>
 
       {/* Question card */}
       <QuestionCard style={{ marginBottom: "0.875rem" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "0.875rem",
-          }}
-        >
-          <Label col={C.ter}>
-            Question {index + 1} of {total}
-          </Label>
-          <Pill bg={dm.bg} col={dm.col} bdr={dm.bdr}>
-            {diff}
-          </Pill>
+        <div className={styles.questionCardHeader}>
+          <Label col={C.ter}>Question {index + 1} of {total}</Label>
+          <Pill bg={dm.bg} col={dm.col} bdr={dm.bdr}>{diff}</Pill>
         </div>
-        <MathText
-          as="p"
-          style={{
-            margin: 0,
-            fontSize: "0.9375rem",
-            lineHeight: 1.85,
-            color: C.text,
-            fontWeight: 400,
-          }}
-        >
+        <MathText as="p" style={{ margin: 0, fontSize: "0.9375rem", lineHeight: 1.85, color: C.text, fontWeight: 400 }}>
           {question.question_text}
         </MathText>
 
         {question.question_images.length > 0 && (
-          <div
-            style={{
-              marginTop: "1rem",
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.75rem",
-              alignItems: "flex-start",
-            }}
-          >
+          <div className={styles.questionImages}>
             {question.question_images.map((img) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={img}
-                src={imageUrl(img)}
-                alt={img}
-                style={{
-                  maxWidth: "100%",
-                  borderRadius: 8,
-                  border: `1px solid ${C.bdr}`,
-                  background: C.surf,
-                }}
-                loading="lazy"
-              />
+              <img key={img} src={imageUrl(img)} alt={img} style={{ maxWidth: "100%", borderRadius: 8, border: `1px solid ${C.bdr}`, background: C.surf }} loading="lazy" />
             ))}
           </div>
         )}
       </QuestionCard>
 
       {/* Options — no feedback styling, just selection state */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 8,
-          marginBottom: "0.875rem",
-        }}
-      >
+      <div className={styles.optionsList}>
         {optionLetters.map((l, i) => {
           const selected = chosen === l;
           const isHov = hovOpt === l && chosen !== l;
@@ -1212,9 +696,7 @@ function MockQuestionView({
                 display: "flex",
                 alignItems: "center",
                 padding: "0.75rem 1rem",
-                border: `2px solid ${
-                  selected ? C.mid : isHov ? C.liteb : C.bdr
-                }`,
+                border: `2px solid ${selected ? C.mid : isHov ? C.liteb : C.bdr}`,
                 borderRadius: 10,
                 background: selected ? C.lite : isHov ? C.alt : C.surf,
                 fontFamily: "Inter,sans-serif",
@@ -1222,65 +704,27 @@ function MockQuestionView({
                 width: "100%",
                 boxSizing: "border-box",
                 cursor: "pointer",
+                minHeight: 44,
               }}
             >
-              <span
-                style={{
-                  width: 28,
-                  height: 28,
-                  borderRadius: 7,
-                  flexShrink: 0,
-                  background: selected ? C.mid : isHov ? C.mid : C.alt,
-                  color: selected || isHov ? "#fff" : C.sec,
-                  fontFamily: '"JetBrains Mono",monospace',
-                  fontWeight: 700,
-                  fontSize: "0.8125rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition: "background 0.12s, color 0.12s",
-                  marginRight: "0.875rem",
-                }}
-              >
+              <span style={{
+                width: 28, height: 28, borderRadius: 7, flexShrink: 0,
+                background: selected ? C.mid : isHov ? C.mid : C.alt,
+                color: selected || isHov ? "#fff" : C.sec,
+                fontFamily: '"JetBrains Mono",monospace', fontWeight: 700, fontSize: "0.8125rem",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "background 0.12s, color 0.12s", marginRight: "0.875rem",
+              }}>
                 {l}
               </span>
-              <span
-                style={{
-                  flex: 1,
-                  color: selected ? C.text : C.text,
-                  fontSize: "0.875rem",
-                  lineHeight: 1.6,
-                  fontWeight: selected ? 500 : 400,
-                }}
-              >
+              <span style={{ flex: 1, color: selected ? C.text : C.text, fontSize: "0.875rem", lineHeight: 1.6, fontWeight: selected ? 500 : 400 }}>
                 <MathText>{text}</MathText>
                 {i < 9 && (
-                  <span
-                    style={{
-                      marginLeft: 8,
-                      opacity: 0.45,
-                      fontSize: "0.6875rem",
-                      fontFamily: '"JetBrains Mono",monospace',
-                    }}
-                  >
-                    [{i + 1}]
-                  </span>
+                  <span style={{ marginLeft: 8, opacity: 0.45, fontSize: "0.6875rem", fontFamily: '"JetBrains Mono",monospace' }}>[{i + 1}]</span>
                 )}
               </span>
               {selected && (
-                <div
-                  style={{
-                    width: 22,
-                    height: 22,
-                    borderRadius: "50%",
-                    background: C.mid,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                    marginLeft: 10,
-                  }}
-                >
+                <div style={{ width: 22, height: 22, borderRadius: "50%", background: C.mid, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 10 }}>
                   <Svg icon="check" size={11} col="#fff" sw={2.5} />
                 </div>
               )}
@@ -1312,17 +756,12 @@ function ResultsScreen({
   const [revealedQids, setRevealedQids] = useState<Set<string>>(new Set());
 
   const total = questions.length;
-  const correctCount = questions.filter(
-    (q) => graded[q.id]?.correct
-  ).length;
+  const correctCount = questions.filter((q) => graded[q.id]?.correct).length;
   const unanswered = questions.filter((q) => !ans[q.id]).length;
   const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
   // Per-subject breakdown.
-  const bySubject = new Map<
-    string,
-    { answered: number; correct: number }
-  >();
+  const bySubject = new Map<string, { answered: number; correct: number }>();
   for (const q of questions) {
     const key = deriveSubject(q);
     const e = bySubject.get(key) ?? { answered: 0, correct: 0 };
@@ -1332,19 +771,14 @@ function ResultsScreen({
   }
   const subjectRows = Array.from(bySubject.entries())
     .map(([k, v]) => ({
-      subject: k,
-      answered: v.answered,
-      correct: v.correct,
+      subject: k, answered: v.answered, correct: v.correct,
       pct: v.answered > 0 ? Math.round((v.correct / v.answered) * 100) : 0,
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  const avgPerQ =
-    total > 0
-      ? Math.round(
-          questions.reduce((s, q) => s + (perQuestionMs[q.id] ?? 0), 0) / total
-        )
-      : 0;
+  const avgPerQ = total > 0
+    ? Math.round(questions.reduce((s, q) => s + (perQuestionMs[q.id] ?? 0), 0) / total)
+    : 0;
 
   const toggleReveal = (qid: string) => {
     setRevealedQids((prev) => {
@@ -1355,289 +789,82 @@ function ResultsScreen({
     });
   };
 
-  const headline =
-    pct >= 80 ? "Outstanding work" : pct >= 60 ? "Strong performance" : pct >= 40 ? "Keep going" : "Needs attention";
+  const headline = pct >= 80 ? "Outstanding work" : pct >= 60 ? "Strong performance" : pct >= 40 ? "Keep going" : "Needs attention";
 
   return (
     <Shell>
-      <header
-        style={{
-          background: C.surf,
-          height: 58,
-          borderBottom: `1px solid ${C.bdr}`,
-          display: "flex",
-          alignItems: "center",
-          padding: "0 1.75rem",
-          flexShrink: 0,
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-          gap: 16,
-        }}
-      >
-        <a
-          href="/"
-          className="btn-ghost"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 6,
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: C.sec,
-            fontSize: "0.8125rem",
-            fontWeight: 500,
-            fontFamily: "Inter, sans-serif",
-            padding: "5px 10px",
-            borderRadius: 7,
-            textDecoration: "none",
-          }}
-        >
+      <header className={styles.header}>
+        <a href="/" className={`${styles.backBtn} btn-ghost`}>
           <Svg icon="arrowL" size={14} col={C.sec} sw={1.8} />
-          Dashboard
+          <span>Dashboard</span>
         </a>
-        <div style={{ width: 1, height: 20, background: C.bdr }} />
+        <div className={styles.headerDivider} />
         <Wordmark />
-        <span
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            color: C.ter,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-          }}
-        >
-          Mock Exam Results
-        </span>
-        <div
-          style={{
-            marginLeft: "auto",
-            display: "flex",
-            gap: 8,
-          }}
-        >
-          <a
-            href="/practice"
-            className="btn-ghost"
-            style={{
-              padding: "6px 14px",
-              borderRadius: 8,
-              border: `1px solid ${C.bdr}`,
-              background: C.surf,
-              color: C.sec,
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: "0.8125rem",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-            }}
-          >
+        <span className={styles.headerLabel}>Mock Exam Results</span>
+        <div className={styles.headerRight}>
+          <a href="/practice" className={`${styles.backBtn} btn-ghost`}>
             <Svg icon="bolt" size={12} col={C.sec} sw={2} />
             Practice
           </a>
-          <button
-            onClick={onRestart}
-            className="btn-primary"
-            style={{
-              padding: "6px 16px",
-              borderRadius: 8,
-              border: "none",
-              background: C.mid,
-              color: "#fff",
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 600,
-              fontSize: "0.8125rem",
-              cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-            }}
-          >
+          <button onClick={onRestart} className={`${styles.submitBtn} btn-primary`} style={{ background: C.mid }}>
             <Svg icon="play" size={12} col="#fff" sw={2.5} />
             New Exam
           </button>
         </div>
       </header>
 
-      <div
-        style={{
-          maxWidth: 920,
-          margin: "0 auto",
-          padding: "1.75rem 1.75rem 3rem",
-        }}
-      >
+      <div className={styles.resultsWrapper}>
         {/* ── Headline ── */}
-        <div
-          style={{
-            background: C.surf,
-            border: `1px solid ${C.bdr}`,
-            borderRadius: 14,
-            padding: "1.75rem 2rem",
-            marginBottom: "1.25rem",
-            boxShadow: SH.card,
-            display: "flex",
-            alignItems: "center",
-            gap: 24,
-          }}
-        >
-          <div
-            style={{
-              width: 88,
-              height: 88,
-              borderRadius: "50%",
-              border: `4px solid ${
-                pct >= 70 ? C.green : pct >= 50 ? C.amber : C.red
-              }`,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <span
-              style={{
-                fontFamily: '"JetBrains Mono", monospace',
-                fontSize: "1.75rem",
-                fontWeight: 700,
-                color:
-                  pct >= 70 ? C.green : pct >= 50 ? C.amber : C.red,
-                lineHeight: 1,
-              }}
-            >
+        <div className={styles.resultsHeadline} style={{ boxShadow: SH.card }}>
+          <div className={styles.resultsCircle} style={{
+            borderColor: pct >= 70 ? C.green : pct >= 50 ? C.amber : C.red,
+          }}>
+            <span className={styles.resultsCirclePct} style={{
+              color: pct >= 70 ? C.green : pct >= 50 ? C.amber : C.red,
+            }}>
               {pct}%
             </span>
-            <span
-              style={{
-                fontSize: "0.625rem",
-                fontWeight: 600,
-                color: C.ter,
-                marginTop: 4,
-                textTransform: "uppercase",
-                letterSpacing: "0.06em",
-              }}
-            >
-              Score
-            </span>
+            <span className={styles.resultsCircleLabel}>Score</span>
           </div>
-          <div style={{ flex: 1 }}>
-            <h1
-              style={{
-                margin: "0 0 6px",
-                fontSize: "1.5rem",
-                fontWeight: 700,
-                color: C.text,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              {headline}
-            </h1>
-            <div
-              style={{
-                display: "flex",
-                gap: 20,
-                fontSize: "0.8125rem",
-                color: C.sec,
-              }}
-            >
+          <div className={styles.resultsHeadlineBody}>
+            <h1 className={styles.resultsTitle}>{headline}</h1>
+            <div className={styles.resultsStats}>
               <span>
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono", monospace',
-                    fontWeight: 700,
-                    color: C.green,
-                  }}
-                >
+                <span style={{ fontFamily: '"JetBrains Mono", monospace', fontWeight: 700, color: C.green }}>
                   {correctCount}
-                </span>{" "}
-                correct
+                </span>{" "}correct
               </span>
               <span>
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono", monospace',
-                    fontWeight: 700,
-                    color: C.red,
-                  }}
-                >
+                <span style={{ fontFamily: '"JetBrains Mono", monospace', fontWeight: 700, color: C.red }}>
                   {total - correctCount - unanswered}
-                </span>{" "}
-                incorrect
+                </span>{" "}incorrect
               </span>
               {unanswered > 0 && (
                 <span>
-                  <span
-                    style={{
-                      fontFamily: '"JetBrains Mono", monospace',
-                      fontWeight: 700,
-                      color: C.ter,
-                    }}
-                  >
+                  <span style={{ fontFamily: '"JetBrains Mono", monospace', fontWeight: 700, color: C.ter }}>
                     {unanswered}
-                  </span>{" "}
-                  blank
+                  </span>{" "}blank
                 </span>
               )}
               <span>
-                <Svg
-                  icon="clock"
-                  size={11}
-                  col={C.ter}
-                  sw={2}
-                />
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono", monospace',
-                    fontWeight: 700,
-                    color: C.mid,
-                    marginLeft: 4,
-                  }}
-                >
+                <Svg icon="clock" size={11} col={C.ter} sw={2} />
+                <span style={{ fontFamily: '"JetBrains Mono", monospace', fontWeight: 700, color: C.mid, marginLeft: 4 }}>
                   {formatMSS(elapsedMs)}
-                </span>{" "}
-                total
+                </span>{" "}total
               </span>
               <span>
-                <span
-                  style={{
-                    fontFamily: '"JetBrains Mono", monospace',
-                    fontWeight: 700,
-                    color: C.sec,
-                  }}
-                >
+                <span style={{ fontFamily: '"JetBrains Mono", monospace', fontWeight: 700, color: C.sec }}>
                   {formatMSS(avgPerQ)}
-                </span>{" "}
-                avg/Q
+                </span>{" "}avg/Q
               </span>
             </div>
           </div>
         </div>
 
         {/* ── Per-question result grid ── */}
-        <div
-          style={{
-            background: C.surf,
-            border: `1px solid ${C.bdr}`,
-            borderRadius: 14,
-            padding: "1.25rem 1.5rem",
-            marginBottom: "1.25rem",
-            boxShadow: SH.card,
-          }}
-        >
-          <Label col={C.ter} mb={12}>
-            Per-question breakdown — click to reveal solution
-          </Label>
-          <div
-            style={{
-              display: "flex",
-              gap: 5,
-              marginBottom: 14,
-              flexWrap: "wrap",
-            }}
-          >
+        <div className={styles.resultsPerQuestion} style={{ boxShadow: SH.card }}>
+          <Label col={C.ter} mb={12}>Per-question breakdown — click to reveal solution</Label>
+          <div className={styles.resultsQuestionGrid}>
             {questions.map((q, i) => {
               const g = graded[q.id];
               const ok = g?.correct;
@@ -1649,35 +876,13 @@ function ResultsScreen({
                 <div
                   key={q.id}
                   onClick={() => {
-                    document
-                      .getElementById(`q-${q.id}`)
-                      ?.scrollIntoView({ behavior: "smooth", block: "center" });
+                    document.getElementById(`q-${q.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
                     toggleReveal(q.id);
                   }}
-                  style={{
-                    width: 32,
-                    height: 32,
-                    borderRadius: 7,
-                    background: bg,
-                    border: `1.5px solid ${bdr}`,
-                    color: col,
-                    fontFamily: '"JetBrains Mono", monospace',
-                    fontWeight: 700,
-                    fontSize: "0.75rem",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    transition: "transform 0.12s",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.transform =
-                      "scale(1.08)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.transform =
-                      "scale(1)";
-                  }}
+                  className={styles.resultsQBtn}
+                  style={{ background: bg, border: `1.5px solid ${bdr}`, color: col }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.08)"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
                   title={`Q${i + 1}: ${blank ? "No answer" : ok ? "Correct" : "Incorrect"}`}
                 >
                   {i + 1}
@@ -1687,35 +892,14 @@ function ResultsScreen({
           </div>
 
           {/* Per-subject table */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-              marginTop: 4,
-            }}
-          >
+          <div className={styles.subjectTable}>
             {subjectRows.map((r) => {
-              const col =
-                r.pct >= 70 ? C.green : r.pct >= 50 ? C.amber : C.red;
+              const col = r.pct >= 70 ? C.green : r.pct >= 50 ? C.amber : C.red;
               return (
                 <div key={r.subject}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      fontSize: "0.8125rem",
-                      color: C.sec,
-                      marginBottom: 3,
-                    }}
-                  >
+                  <div className={styles.subjectTableRow}>
                     <span>{r.subject}</span>
-                    <span
-                      style={{
-                        fontFamily: '"JetBrains Mono", monospace',
-                        color: col,
-                      }}
-                    >
+                    <span style={{ fontFamily: '"JetBrains Mono", monospace', color: col }}>
                       {r.correct}/{r.answered} ({r.pct}%)
                     </span>
                   </div>
@@ -1727,13 +911,7 @@ function ResultsScreen({
         </div>
 
         {/* ── Full per-question review ── */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 12,
-          }}
-        >
+        <div className={styles.resultsReviewList}>
           {questions.map((q, i) => {
             const g = graded[q.id];
             const userAns = ans[q.id];
@@ -1745,309 +923,80 @@ function ResultsScreen({
             const bdr = blank ? C.bdr2 : ok ? C.gBdr : C.rBdr;
 
             return (
-              <div
-                key={q.id}
-                id={`q-${q.id}`}
-                style={{
-                  background: C.surf,
-                  border: `1px solid ${C.bdr}`,
-                  borderRadius: 12,
-                  boxShadow: SH.card,
-                  overflow: "hidden",
-                  scrollMarginTop: 80,
-                }}
-              >
+              <div key={q.id} id={`q-${q.id}`} className={styles.resultsReviewCard} style={{ boxShadow: SH.card }}>
                 {/* Result header */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    padding: "0.875rem 1.25rem",
-                    borderBottom: revealed ? `1px solid ${C.bdr}` : "none",
-                    background: bg,
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 28,
-                      height: 28,
-                      borderRadius: 7,
-                      background: col,
-                      color: "#fff",
-                      fontFamily: '"JetBrains Mono", monospace',
-                      fontWeight: 700,
-                      fontSize: "0.75rem",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {i + 1}
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div
-                      style={{
-                        fontSize: "0.8125rem",
-                        fontWeight: 600,
-                        color: C.text,
-                      }}
-                    >
-                      {deriveSubject(q)}
-                      {q.year ? ` · ${q.year}` : ""}
+                <div className={styles.resultsReviewHeader} style={{ background: bg, borderBottom: revealed ? `1px solid ${C.bdr}` : "none" }}>
+                  <div className={styles.resultsReviewNum} style={{ background: col }}>{i + 1}</div>
+                  <div className={styles.resultsReviewBody2}>
+                    <div className={styles.resultsReviewSubject}>
+                      {deriveSubject(q)}{q.year ? ` · ${q.year}` : ""}
                     </div>
-                    <div
-                      style={{
-                        fontSize: "0.6875rem",
-                        color: C.ter,
-                        fontFamily: '"JetBrains Mono", monospace',
-                        marginTop: 2,
-                      }}
-                    >
-                      Your answer:{" "}
-                      <span
-                        style={{
-                          color: blank ? C.ter : col,
-                          fontWeight: 700,
-                        }}
-                      >
-                        {userAns ?? "—"}
-                      </span>
-                      {"  ·  "}
-                      Correct:{" "}
-                      <span style={{ color: C.green, fontWeight: 700 }}>
-                        {g?.correct_answer ?? "?"}
-                      </span>
-                      {perQuestionMs[q.id] ? (
-                        <>
-                          {"  ·  "}
-                          {formatMSS(perQuestionMs[q.id])}
-                        </>
-                      ) : null}
+                    <div className={styles.resultsReviewMeta}>
+                      Your answer: <span style={{ color: blank ? C.ter : col, fontWeight: 700 }}>{userAns ?? "—"}</span>
+                      {"  ·  "}Correct: <span style={{ color: C.green, fontWeight: 700 }}>{g?.correct_answer ?? "?"}</span>
+                      {perQuestionMs[q.id] ? <>{"  ·  "}{formatMSS(perQuestionMs[q.id])}</> : null}
                     </div>
                   </div>
                   <button
                     onClick={() => toggleReveal(q.id)}
-                    style={{
-                      padding: "5px 12px",
-                      borderRadius: 7,
-                      border: `1px solid ${bdr}`,
-                      background: C.surf,
-                      color: col,
-                      fontSize: "0.75rem",
-                      fontWeight: 600,
-                      fontFamily: "Inter, sans-serif",
-                      cursor: "pointer",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 5,
-                    }}
+                    className={styles.resultsRevealBtn}
+                    style={{ borderColor: bdr, color: col }}
                   >
-                    <Svg
-                      icon={revealed ? "eye" : "book"}
-                      size={12}
-                      col={col}
-                      sw={2}
-                    />
+                    <Svg icon={revealed ? "eye" : "book"} size={12} col={col} sw={2} />
                     {revealed ? "Hide solution" : "Show solution"}
                   </button>
                 </div>
 
                 {/* Question body */}
-                <div
-                  style={{
-                    padding: "1.1rem 1.4rem",
-                    display: revealed ? "block" : "none",
-                  }}
-                >
-                  <MathText
-                    as="p"
-                    style={{
-                      margin: "0 0 0.875rem 0",
-                      fontSize: "0.9375rem",
-                      lineHeight: 1.85,
-                      color: C.text,
-                    }}
-                  >
+                <div className={styles.resultsReviewBody} style={{ display: revealed ? "block" : "none" }}>
+                  <MathText as="p" style={{ margin: "0 0 0.875rem 0", fontSize: "0.9375rem", lineHeight: 1.85, color: C.text }}>
                     {q.question_text}
                   </MathText>
 
                   {q.question_images.length > 0 && (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "0.5rem",
-                        marginBottom: "0.875rem",
-                      }}
-                    >
+                    <div className={styles.reviewImages}>
                       {q.question_images.map((img) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          key={img}
-                          src={imageUrl(img)}
-                          alt={img}
-                          style={{
-                            maxWidth: "100%",
-                            borderRadius: 8,
-                            border: `1px solid ${C.bdr}`,
-                          }}
-                          loading="lazy"
-                        />
+                        <img key={img} src={imageUrl(img)} alt={img} style={{ maxWidth: "100%", borderRadius: 8, border: `1px solid ${C.bdr}` }} loading="lazy" />
                       ))}
                     </div>
                   )}
 
                   {/* Options with correct/incorrect highlight */}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 6,
-                      marginBottom: "0.875rem",
-                    }}
-                  >
+                  <div className={styles.resultsOptionsList}>
                     {Object.keys(q.options).sort().map((l) => {
                       const isCorrect = l === g?.correct_answer;
                       const isUserPick = l === userAns;
-                      const showCorrect = isCorrect;
-                      const showWrong = isUserPick && !isCorrect;
-                      const bgC = showCorrect
-                        ? C.gLite
-                        : showWrong
-                        ? C.rLite
-                        : C.surf;
-                      const bdrC = showCorrect
-                        ? C.green
-                        : showWrong
-                        ? C.red
-                        : C.bdr;
-                      const lblBg = showCorrect
-                        ? C.green
-                        : showWrong
-                        ? C.red
-                        : C.alt;
-                      const lblCol =
-                        showCorrect || showWrong ? "#fff" : C.sec;
+                      const bgC = isCorrect ? C.gLite : isUserPick ? C.rLite : C.surf;
+                      const bdrC = isCorrect ? C.green : isUserPick ? C.red : C.bdr;
+                      const lblBg = isCorrect ? C.green : isUserPick ? C.red : C.alt;
+                      const lblCol = isCorrect || isUserPick ? "#fff" : C.sec;
                       return (
-                        <div
-                          key={l}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            padding: "0.6rem 0.875rem",
-                            border: `2px solid ${bdrC}`,
-                            borderRadius: 9,
-                            background: bgC,
-                          }}
-                        >
-                          <span
-                            style={{
-                              width: 26,
-                              height: 26,
-                              borderRadius: 6,
-                              flexShrink: 0,
-                              background: lblBg,
-                              color: lblCol,
-                              fontFamily:
-                                '"JetBrains Mono",monospace',
-                              fontWeight: 700,
-                              fontSize: "0.75rem",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              marginRight: "0.75rem",
-                            }}
-                          >
-                            {l}
-                          </span>
-                          <span
-                            style={{
-                              flex: 1,
-                              color: C.text,
-                              fontSize: "0.8125rem",
-                              lineHeight: 1.6,
-                            }}
-                          >
+                        <div key={l} className={styles.resultsOptionRow} style={{ background: bgC, borderColor: bdrC }}>
+                          <span className={styles.resultsOptionLetter} style={{ background: lblBg, color: lblCol }}>{l}</span>
+                          <span className={styles.resultsOptionText}>
                             <MathText>{q.options[l]}</MathText>
                           </span>
-                          {showCorrect && (
-                            <Svg
-                              icon="check"
-                              size={14}
-                              col={C.green}
-                              sw={2.5}
-                            />
-                          )}
-                          {showWrong && (
-                            <Svg
-                              icon="x"
-                              size={14}
-                              col={C.red}
-                              sw={2.5}
-                            />
-                          )}
+                          {isCorrect && <Svg icon="check" size={12} col={C.green} sw={2.5} />}
                         </div>
                       );
                     })}
                   </div>
 
-                  {/* Solution text */}
-                  {g?.enrichment?.markdown || g?.explanation ? (
-                    <div
-                      style={{
-                        background: C.lite,
-                        border: `1px solid ${C.liteb}`,
-                        borderRadius: 9,
-                        padding: "1rem 1.25rem",
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 6,
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        <Svg
-                          icon="sparkle"
-                          size={13}
-                          col={C.mid}
-                          sw={1.8}
-                        />
-                        <span
-                          style={{
-                            fontSize: "0.75rem",
-                            fontWeight: 600,
-                            color: C.blue,
-                          }}
-                        >
-                          Worked Solution
-                        </span>
-                      </div>
-                      <MathText
-                        as="p"
-                        style={{
-                          margin: 0,
-                          color: C.text,
-                          fontSize: "0.8125rem",
-                          lineHeight: 1.9,
-                          whiteSpace: "pre-wrap",
-                        }}
-                      >
-                        {g.enrichment?.markdown || g.explanation}
-                      </MathText>
+                  {/* Solution */}
+                  {g?.explanation || g?.enrichment?.markdown ? (
+                    <div>
+                      {g.enrichment?.markdown ? (
+                        <MathText as="div" style={{ color: C.text, fontSize: "0.875rem", lineHeight: 1.9, whiteSpace: "pre-wrap" }}>
+                          {g.enrichment.markdown}
+                        </MathText>
+                      ) : (
+                        <MathText as="p" style={{ margin: 0, color: C.text, fontSize: "0.875rem", lineHeight: 1.9, whiteSpace: "pre-wrap" }}>
+                          {g.explanation}
+                        </MathText>
+                      )}
                     </div>
                   ) : (
-                    <div
-                      style={{
-                        fontSize: "0.75rem",
-                        color: C.ter,
-                        fontStyle: "italic",
-                      }}
-                    >
+                    <div style={{ fontSize: "0.75rem", color: C.ter, fontStyle: "italic" }}>
                       No worked solution available for this question.
                     </div>
                   )}
@@ -2058,54 +1007,12 @@ function ResultsScreen({
         </div>
 
         {/* Bottom CTAs */}
-        <div
-          style={{
-            display: "flex",
-            gap: 10,
-            justifyContent: "center",
-            marginTop: "1.75rem",
-          }}
-        >
-          <button
-            onClick={onRestart}
-            className="btn-primary"
-            style={{
-              padding: "11px 24px",
-              borderRadius: 10,
-              border: "none",
-              background: C.mid,
-              color: "#fff",
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 600,
-              fontSize: "0.875rem",
-              cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              boxShadow: SH.blue,
-            }}
-          >
+        <div className={styles.resultsBottomActions}>
+          <button onClick={onRestart} className={`${styles.resultsBottomBtn} btn-primary`} style={{ boxShadow: SH.blue }}>
             <Svg icon="play" size={13} col="#fff" sw={2.5} />
             Take Another Exam
           </button>
-          <a
-            href="/"
-            className="btn-ghost"
-            style={{
-              padding: "11px 20px",
-              borderRadius: 10,
-              border: `1px solid ${C.bdr}`,
-              background: C.surf,
-              color: C.sec,
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-            }}
-          >
+          <a href="/" className={`${styles.resultsBottomLink} btn-ghost`}>
             Back to Dashboard
           </a>
         </div>
@@ -2118,15 +1025,7 @@ function ResultsScreen({
 
 function Shell({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        fontFamily: "Inter, sans-serif",
-        background: C.bg,
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className={styles.page}>
       {children}
     </div>
   );
@@ -2134,70 +1033,18 @@ function Shell({ children }: { children: React.ReactNode }) {
 
 function LoadingState() {
   return (
-    <div
-      style={{
-        background: C.surf,
-        border: `1px solid ${C.bdr}`,
-        borderRadius: 14,
-        padding: "3rem 2rem",
-        textAlign: "center",
-        boxShadow: SH.card,
-      }}
-    >
-      <div
-        className="pulse-dot"
-        style={{
-          width: 10,
-          height: 10,
-          borderRadius: "50%",
-          background: C.mid,
-          margin: "0 auto 1rem",
-        }}
-      />
-      <div style={{ color: C.sec, fontSize: "0.875rem" }}>
-        Loading questions…
-      </div>
+    <div className={styles.loadingState} style={{ boxShadow: SH.card }}>
+      <div className={`${styles.loadingDot} pulse-dot`} />
+      <div style={{ color: C.sec, fontSize: "0.875rem" }}>Loading questions…</div>
     </div>
   );
 }
 
 function ErrorState({ msg, onRetry }: { msg: string; onRetry: () => void }) {
   return (
-    <div
-      style={{
-        background: C.rLite,
-        border: `1px solid ${C.rBdr}`,
-        borderRadius: 14,
-        padding: "2rem",
-        textAlign: "center",
-      }}
-    >
-      <div
-        style={{
-          color: C.red,
-          fontSize: "0.9375rem",
-          fontWeight: 600,
-          marginBottom: 8,
-        }}
-      >
-        {msg}
-      </div>
-      <button
-        onClick={onRetry}
-        style={{
-          padding: "7px 16px",
-          borderRadius: 8,
-          border: `1px solid ${C.rBdr}`,
-          background: C.surf,
-          color: C.red,
-          fontSize: "0.8125rem",
-          fontWeight: 600,
-          fontFamily: "Inter, sans-serif",
-          cursor: "pointer",
-        }}
-      >
-        Back
-      </button>
+    <div className={styles.errorState}>
+      <div className={styles.errorMsg}>{msg}</div>
+      <button onClick={onRetry} className={styles.errorRetryBtn}>Back</button>
     </div>
   );
 }

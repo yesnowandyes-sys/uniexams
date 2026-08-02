@@ -21,6 +21,7 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { StatCard } from "@/components/StatCard";
 import { RadarChartSVG } from "@/components/RadarChartSVG";
+import styles from "./page.module.css";
 
 type StatCardProps = {
   icon: Parameters<typeof StatCard>[0]["icon"];
@@ -188,54 +189,18 @@ export default function Dashboard() {
   const totalDone = hasReal ? stats!.totalAnswered : 0;
 
   return (
-    <div style={{ fontFamily: "Inter, sans-serif", background: C.bg, minHeight: "100vh" }}>
+    <div className={styles.page}>
       {/* ── Navigation bar ── */}
-      <header
-        style={{
-          background: C.surf,
-          height: 58,
-          borderBottom: `1px solid ${C.bdr}`,
-          display: "flex",
-          alignItems: "center",
-          padding: "0 2rem",
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-        }}
-      >
+      <header className={styles.header}>
         <Wordmark />
-        <nav
-          style={{
-            display: "flex",
-            gap: 4,
-            marginLeft: "2.5rem",
-            alignItems: "center",
-          }}
-        >
+        <nav className={styles.nav}>
           <NavPill label="Dashboard" icon="squares" active href="/" />
           <NavPill label="Practice" icon="bolt" href="/practice" />
           <NavPill label="Mock Exam" icon="pencil" href="/mock-exam" />
           <NavPill label="Progress" icon="activity" href="/progress" />
         </nav>
-        <div
-          style={{
-            marginLeft: "auto",
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 7,
-              background: C.aLite,
-              border: `1px solid ${C.aBdr}`,
-              borderRadius: 20,
-              padding: "4px 10px 4px 7px",
-            }}
-          >
+        <div className={styles.headerRight}>
+          <div className={styles.streakPill}>
             <div
               style={{
                 width: 7,
@@ -245,43 +210,23 @@ export default function Dashboard() {
               }}
               className="pulse-dot"
             />
-            <span style={{ fontSize: "0.75rem", fontWeight: 600, color: C.amber }}>
+            <span className={styles.streakPillText}>
               {dayStreakPill}-day streak
             </span>
           </div>
-          <div
-            style={{
-              width: 32,
-              height: 32,
-              borderRadius: "50%",
-              background: C.lite,
-              border: `2px solid ${C.liteb}`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-            }}
-          >
+          <div className={styles.userAvatar}>
             <Svg icon="user" size={14} col={C.mid} />
           </div>
         </div>
       </header>
 
-      <main style={{ maxWidth: 1120, margin: "0 auto", padding: "2rem 2rem 3rem" }}>
+      <main className={styles.main}>
         {/* Greeting */}
-        <div style={{ marginBottom: "1.75rem" }}>
-          <h2
-            style={{
-              margin: "0 0 5px",
-              fontSize: "1.625rem",
-              fontWeight: 700,
-              color: C.text,
-              letterSpacing: "-0.025em",
-            }}
-          >
+        <div className={styles.greeting}>
+          <h2 className={styles.greetingTitle}>
             Good morning, Alex.
           </h2>
-          <p style={{ margin: 0, fontSize: "0.875rem", color: C.sec, lineHeight: 1.6 }}>
+          <p className={styles.greetingSub}>
             {DAYS_LEFT} days to the ESAT. Your weakest area right now is{" "}
             <span style={{ fontWeight: 600, color: C.text }}>Proof &amp; Logic</span>{" "}
             &mdash; today&apos;s session targets it.
@@ -289,31 +234,10 @@ export default function Dashboard() {
         </div>
 
         {/* ── Countdown banner ── */}
-        <div
-          style={{
-            background: C.blue,
-            borderRadius: 14,
-            padding: "1.375rem 1.875rem",
-            marginBottom: "1.25rem",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            position: "relative",
-            overflow: "hidden",
-            boxShadow:
-              "0 4px 24px rgba(26,71,184,0.18), 0 1px 4px rgba(26,71,184,0.12)",
-          }}
-        >
+        <div className={styles.countdownBanner}>
           {/* Decorative arcs */}
           <svg
-            style={{
-              position: "absolute",
-              right: -60,
-              top: "50%",
-              transform: "translateY(-50%)",
-              opacity: 0.055,
-              pointerEvents: "none",
-            }}
+            className={`${styles.countdownDecor} ${styles.countdownDecorLarge}`}
             width="320"
             height="320"
             viewBox="0 0 320 320"
@@ -322,14 +246,7 @@ export default function Dashboard() {
             <circle cx="160" cy="160" r="145" fill="none" stroke="white" strokeWidth="56" />
           </svg>
           <svg
-            style={{
-              position: "absolute",
-              right: 40,
-              top: "50%",
-              transform: "translateY(-50%)",
-              opacity: 0.04,
-              pointerEvents: "none",
-            }}
+            className={`${styles.countdownDecor} ${styles.countdownDecorSmall}`}
             width="160"
             height="160"
             viewBox="0 0 160 160"
@@ -338,162 +255,61 @@ export default function Dashboard() {
             <circle cx="80" cy="80" r="68" fill="none" stroke="white" strokeWidth="30" />
           </svg>
 
-          <div style={{ position: "relative" }}>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 5,
-                background: "rgba(255,255,255,0.12)",
-                borderRadius: 20,
-                padding: "3px 10px",
-                marginBottom: 10,
-              }}
-            >
-              <div
-                style={{
-                  width: 5,
-                  height: 5,
-                  borderRadius: "50%",
-                  background: "rgba(255,255,255,0.6)",
-                }}
-              />
-              <span
-                style={{
-                  fontSize: "0.6875rem",
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.7)",
-                  letterSpacing: "0.07em",
-                  textTransform: "uppercase",
-                }}
-              >
+          <div className={styles.countdownLeft}>
+            <div className={styles.countdownBadge}>
+              <div className={styles.countdownBadgeDot} />
+              <span className={styles.countdownBadgeText}>
                 ESAT 2026
               </span>
             </div>
-            <div
-              style={{
-                fontSize: "1.125rem",
-                fontWeight: 700,
-                color: "#fff",
-                letterSpacing: "-0.02em",
-                marginBottom: 5,
-              }}
-            >
+            <div className={styles.countdownDate}>
               Thursday, 9 October
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div className={styles.countdownUnis}>
               {["Cambridge", "Imperial College", "UCL"].map((u, i) => (
-                <span key={u} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span key={u} className={styles.countdownUni}>
                   {i > 0 && (
-                    <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.75rem" }}>
+                    <span className={styles.countdownDot}>
                       &middot;
                     </span>
                   )}
-                  <span style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.6)" }}>
-                    {u}
-                  </span>
+                  {u}
                 </span>
               ))}
             </div>
           </div>
 
-          <div style={{ textAlign: "right", position: "relative" }}>
-            <div
-              style={{
-                fontFamily: '"JetBrains Mono", monospace',
-                fontSize: "3.75rem",
-                fontWeight: 700,
-                color: "#fff",
-                lineHeight: 1,
-                letterSpacing: "-0.05em",
-              }}
-            >
+          <div className={styles.countdownRight}>
+            <div className={styles.countdownNumber}>
               {DAYS_LEFT}
             </div>
-            <div
-              style={{
-                fontSize: "0.6875rem",
-                fontWeight: 600,
-                color: "rgba(255,255,255,0.45)",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                marginTop: 5,
-              }}
-            >
+            <div className={styles.countdownLabel}>
               days remaining
             </div>
           </div>
         </div>
 
         {/* ── Main grid: Knowledge Map + Stat Cards ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 256px",
-            gap: "1.25rem",
-            marginBottom: "1.25rem",
-          }}
-        >
+        <div className={styles.mainGrid}>
           {/* Knowledge Map */}
           <Card>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                marginBottom: "1.25rem",
-              }}
-            >
+            <div className={styles.knowledgeMapHeader}>
               <div>
-                <h3
-                  style={{
-                    margin: "0 0 4px",
-                    fontSize: "0.9375rem",
-                    fontWeight: 600,
-                    color: C.text,
-                  }}
-                >
+                <h3 className={styles.sectionTitle}>
                   Knowledge Map
                 </h3>
-                <p style={{ margin: 0, fontSize: "0.8125rem", color: C.ter }}>
+                <p className={styles.sectionSub}>
                   {hasReal
                     ? "Accuracy by module \u00B7 from your practice"
                     : "Accuracy by module \u00B7 sample data"}
                 </p>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-end",
-                    background: C.lite,
-                    border: `1px solid ${C.liteb}`,
-                    borderRadius: 8,
-                    padding: "5px 10px",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: '"JetBrains Mono", monospace',
-                      fontSize: "1.125rem",
-                      fontWeight: 700,
-                      color: C.mid,
-                      lineHeight: 1,
-                    }}
-                  >
+              <div className={styles.knowledgeMapActions}>
+                <div className={styles.knowledgeMapAvg}>
+                  <span className={styles.knowledgeMapAvgNum}>
                     {radarAvg}%
                   </span>
-                  <span
-                    style={{
-                      fontSize: "0.625rem",
-                      color: C.ter,
-                      fontWeight: 600,
-                      letterSpacing: "0.04em",
-                      textTransform: "uppercase",
-                      marginTop: 2,
-                    }}
-                  >
+                  <span className={styles.knowledgeMapAvgLabel}>
                     avg
                   </span>
                 </div>
@@ -502,58 +318,21 @@ export default function Dashboard() {
                 </Pill>
               </div>
             </div>
-            <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-              <div
-                style={{
-                  flex: "0 0 220px",
-                  height: 210,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <div className={styles.knowledgeMapContent}>
+              <div className={styles.radarContainer}>
                 <RadarChartSVG data={radar} />
               </div>
-              <div
-                style={{
-                  flex: 1,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 12,
-                }}
-              >
+              <div className={styles.radarBars}>
                 {radar.map(({ axis, v, code }) => {
                   const col = v >= 75 ? C.green : v >= 55 ? C.amber : v > 0 ? C.red : C.bdr2;
-                  // When real data exists we have a module code, so wrap the
-                  // row in a link to filtered practice.
                   const href = hasReal && code ? `/practice?module=${encodeURIComponent(code)}` : null;
                   const rowInner = (
                     <>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          marginBottom: 6,
-                          alignItems: "center",
-                        }}
-                      >
-                        <span
-                          style={{
-                            fontSize: "0.8125rem",
-                            fontWeight: 500,
-                            color: C.text,
-                          }}
-                        >
+                      <div className={styles.radarRowHeader}>
+                        <span className={styles.radarRowName}>
                           {axis}
                         </span>
-                        <span
-                          style={{
-                            fontFamily: '"JetBrains Mono", monospace',
-                            fontSize: "0.75rem",
-                            fontWeight: 600,
-                            color: col,
-                          }}
-                        >
+                        <span className={styles.radarRowPct} style={{ color: col }}>
                           {v > 0 ? `${v}%` : "—"}
                         </span>
                       </div>
@@ -568,7 +347,7 @@ export default function Dashboard() {
                       key={axis}
                       href={href}
                       title={`Practise ${axis}`}
-                      style={{ display: "block", textDecoration: "none", color: "inherit" }}
+                      className={styles.radarRowLink}
                     >
                       {rowInner}
                     </a>
@@ -579,7 +358,7 @@ export default function Dashboard() {
           </Card>
 
           {/* Stat cards */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <div className={styles.statCardsCol}>
             {statsCards.map((stat) => (
               <StatCard key={stat.label} {...stat} />
             ))}
@@ -587,45 +366,18 @@ export default function Dashboard() {
         </div>
 
         {/* ── Bottom row: Needs Attention + CTA ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "300px 1fr",
-            gap: "1.25rem",
-          }}
-        >
+        <div className={styles.bottomGrid}>
           {/* Needs Attention */}
           <Card padding="1.375rem 1.5rem">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 7,
-                marginBottom: "1.1rem",
-              }}
-            >
+            <div className={styles.needsAttentionHeader}>
               <Svg icon="warn" size={15} col={C.amber} sw={1.8} />
-              <h3
-                style={{
-                  margin: 0,
-                  fontSize: "0.9375rem",
-                  fontWeight: 600,
-                  color: C.text,
-                }}
-              >
+              <h3 className={styles.sectionTitle}>
                 Needs Attention
               </h3>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div className={styles.weakList}>
               {weak.length === 0 && (
-                <div
-                  style={{
-                    fontSize: "0.8125rem",
-                    color: C.ter,
-                    lineHeight: 1.6,
-                    padding: "0.5rem 0",
-                  }}
-                >
+                <div className={styles.emptyState}>
                   Answer a few questions to see your weakest topics here.
                 </div>
               )}
@@ -634,39 +386,16 @@ export default function Dashboard() {
                 const href = code ? `/practice?module=${encodeURIComponent(code)}` : null;
                 const inner = (
                   <>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "flex-end",
-                        marginBottom: 5,
-                      }}
-                    >
+                    <div className={styles.weakRowHeader}>
                       <div>
-                        <div
-                          style={{
-                            fontSize: "0.8125rem",
-                            fontWeight: 500,
-                            color: C.text,
-                            lineHeight: 1.3,
-                          }}
-                        >
+                        <div className={styles.weakRowName}>
                           {name}
                         </div>
-                        <div style={{ fontSize: "0.6875rem", color: C.ter, marginTop: 2 }}>
+                        <div className={styles.weakRowSub}>
                           {s}
                         </div>
                       </div>
-                      <span
-                        style={{
-                          fontFamily: '"JetBrains Mono", monospace',
-                          fontSize: "0.8125rem",
-                          fontWeight: 700,
-                          color: col,
-                          flexShrink: 0,
-                          marginLeft: 8,
-                        }}
-                      >
+                      <span className={styles.weakRowPct} style={{ color: col }}>
                         {str}%
                       </span>
                     </div>
@@ -681,7 +410,7 @@ export default function Dashboard() {
                     key={name}
                     href={href}
                     title={`Practise ${name}`}
-                    style={{ display: "block", textDecoration: "none", color: "inherit" }}
+                    className={styles.weakRowLink}
                   >
                     {inner}
                   </a>
@@ -691,67 +420,36 @@ export default function Dashboard() {
           </Card>
 
           {/* CTA */}
-          <Card padding="1.625rem 1.75rem" style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ flex: 1 }}>
-              <h3
-                style={{
-                  margin: "0 0 8px",
-                  fontSize: "1.1rem",
-                  fontWeight: 700,
-                  color: C.text,
-                  letterSpacing: "-0.02em",
-                }}
-              >
+          <Card padding="1.625rem 1.75rem" className={styles.ctaCard}>
+            <div className={styles.ctaContent}>
+              <h3 className={styles.ctaTitle}>
                 Ready to practise?
               </h3>
-              <p
-                style={{
-                  margin: "0 0 16px",
-                  fontSize: "0.875rem",
-                  color: C.sec,
-                  lineHeight: 1.7,
-                  maxWidth: 480,
-                }}
-              >
+              <p className={styles.ctaDesc}>
                 Ten AI-generated questions, tuned to your weakest topics, at real ESAT
                 difficulty and pace &mdash; with instant feedback and full worked
                 solutions.
               </p>
-              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              <div className={styles.ctaBadges}>
                 {[
                   { icon: "sparkle" as const, label: "AI-generated" },
                   { icon: "clock" as const, label: "~15 minutes" },
                   { icon: "book" as const, label: "Worked solutions" },
                   { icon: "bolt" as const, label: "Keyboard-first" },
                 ].map(({ icon, label }) => (
-                  <span
-                    key={label}
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 5,
-                      fontSize: "0.75rem",
-                      color: C.mid,
-                      fontWeight: 500,
-                      background: C.lite,
-                      padding: "4px 10px",
-                      borderRadius: 20,
-                      border: `1px solid ${C.liteb}`,
-                    }}
-                  >
+                  <span key={label} className={styles.ctaBadge}>
                     <Svg icon={icon} size={11} col={C.mid} sw={2} />
                     {label}
                   </span>
                 ))}
               </div>
             </div>
-            <div style={{ display: "flex", gap: 10, marginTop: "1.5rem" }}>
+            <div className={styles.ctaButtons}>
               <Button
                 variant="primary"
                 icon="play"
                 iconFill="#fff"
                 href="/practice"
-                style={{ flex: 1 }}
               >
                 Start Practising
               </Button>

@@ -1,0 +1,98 @@
+/* atoms.module.css — styles for shared atom components */
+
+/* ── Pill badge ── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ── KBD key badge ── */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ── Wordmark ── */
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.wordmarkIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wordmarkG {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: #fff;
+  line-height: 1;
+  margin-top: 1px;
+  display: block;
+}
+
+.wordmarkText {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  line-height: 1;
+}
+
+.wordmarkEsat {
+  font-family: "Inter, sans-serif";
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.wordmarkGymnasium {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Label ── */
+.label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── NavPill ── */
+.navPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+}

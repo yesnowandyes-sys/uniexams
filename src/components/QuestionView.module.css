@@ -1,0 +1,231 @@
+/* QuestionView.module.css — layout styles for the question renderer */
+
+/* ── Meta row (subject pills + question ID) ── */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.questionId {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--c-ter);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── Question card internals ── */
+.questionCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.875rem;
+}
+
+.questionText {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: var(--c-text);
+  font-weight: 400;
+}
+
+.questionImages {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.questionImage {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--c-bdr);
+  background: var(--c-surf);
+}
+
+/* ── Answer options ── */
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0.875rem;
+}
+
+.optionBtn {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-family: "Inter, sans-serif";
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.optionBtn.answered {
+  cursor: default;
+}
+
+.letterBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s, color 0.12s;
+  margin-right: 0.875rem;
+}
+
+.optionText {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.kbdHint {
+  margin-left: 8px;
+  opacity: 0.45;
+  font-size: 0.6875rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── Check/X badge (correct/incorrect) ── */
+.stateBadge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+/* ── Solution toggle ── */
+.solutionToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 9px;
+  border: 1px solid var(--c-bdr);
+  background: var(--c-surf);
+  color: var(--c-sec);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: "Inter, sans-serif";
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.solutionToggle.open {
+  border-radius: 9px 9px 0 0;
+  border-color: var(--c-liteb);
+  background: var(--c-lite);
+  color: var(--c-mid);
+}
+
+.solutionToggleLabel {
+  flex: 1;
+}
+
+.resultPill {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Solution content ── */
+.solutionContent {
+  padding: 1.25rem 1.375rem;
+  background: var(--c-lite);
+  border: 1px solid var(--c-liteb);
+  border-top: none;
+  border-radius: 0 0 9px 9px;
+}
+
+.solutionHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.solutionLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-blue);
+}
+
+.solutionFallbackLabel {
+  font-size: 0.6875rem;
+  color: var(--c-ter);
+}
+
+.solutionText {
+  margin: 0;
+  color: var(--c-text);
+  font-size: 0.875rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+.solutionFallback {
+  margin: 0;
+  color: var(--c-ter);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.solutionBlock {
+  margin: 0.6rem 0;
+  color: var(--c-text);
+  font-size: 0.875rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+.solutionInline {
+  margin: 0 0 0.5rem 0;
+  color: var(--c-text);
+  font-size: 0.875rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet (≤860px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .metaRow {
+    gap: 6px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — iPhone portrait (≤480px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .optionBtn {
+    min-height: 44px;
+  }
+  .optionBtnTouch {
+    min-height: 44px;
+  }
+}

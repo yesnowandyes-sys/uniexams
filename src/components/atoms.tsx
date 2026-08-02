@@ -2,6 +2,7 @@
 
 import { C } from "@/lib/constants";
 import { Svg } from "./icons";
+import styles from "./atoms.module.css";
 
 /* ═══════════════════════════════════════════════════════════════════
    ATOMS
@@ -53,21 +54,11 @@ export function Pill({
 }) {
   return (
     <span
+      className={styles.pill}
       style={{
-        display: "inline-flex",
-        alignItems: "center",
-        height: 22,
-        padding: "0 8px",
-        borderRadius: 5,
-        fontSize: "0.6875rem",
-        fontWeight: 600,
-        letterSpacing: "0.01em",
         background: bg,
         color: col,
         border: `1px solid ${bdr || bg}`,
-        whiteSpace: "nowrap",
-        lineHeight: 1,
-        userSelect: "none",
       }}
     >
       {children}
@@ -79,22 +70,12 @@ export function Pill({
 export function KBD({ children }: { children: React.ReactNode }) {
   return (
     <span
+      className={styles.kbd}
       style={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        minWidth: 20,
-        height: 20,
-        padding: "0 5px",
         background: C.surf,
         border: `1px solid ${C.bdr2}`,
         borderBottom: `2px solid ${C.bdr2}`,
-        borderRadius: 4,
-        fontFamily: '"JetBrains Mono", monospace',
-        fontSize: "0.625rem",
-        fontWeight: 600,
         color: C.sec,
-        lineHeight: 1,
       }}
     >
       {children}

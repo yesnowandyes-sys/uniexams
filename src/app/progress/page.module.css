@@ -1,0 +1,451 @@
+/* Progress page.module.css — responsive styles for the progress page */
+
+.page {
+  font-family: "Inter", sans-serif;
+  background: var(--c-bg);
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--c-surf);
+  height: 58px;
+  border-bottom: 1px solid var(--c-bdr);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: 2.5rem;
+  align-items: center;
+}
+
+.headerRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.streakPill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--c-aLite);
+  border: 1px solid var(--c-aBdr);
+  border-radius: 20px;
+  padding: 4px 10px 4px 7px;
+}
+
+.streakPillText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-amber);
+}
+
+/* ── Main content ── */
+.main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topTitle {
+  margin: 0 0 5px;
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.025em;
+}
+
+.topSub {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--c-sec);
+  line-height: 1.6;
+}
+
+.topActions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Stat cards grid ── */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Two-column grid ── */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Knowledge map ── */
+.knowledgeMapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.knowledgeMapContent {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.radarContainer {
+  flex: 0 0 220px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radarBars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.radarRowHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.radarRowName {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--c-text);
+}
+
+.radarRowPct {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ── 14-day activity ── */
+.activityChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 150px;
+  padding-top: 0.5rem;
+}
+
+.activityCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.activityBar {
+  width: 100%;
+  max-width: 22px;
+  border-radius: 4;
+  opacity: 1;
+  transition: height 0.3s ease;
+}
+
+.activityLabel {
+  font-size: 0.625rem;
+  color: var(--c-ter);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+}
+
+/* ── Recent activity ── */
+.recentHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 1.1rem;
+}
+
+.sectionTitle {
+  margin: 0 0 4px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.sectionSub {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--c-ter);
+}
+
+.emptyText {
+  font-size: 0.875rem;
+  color: var(--c-ter);
+  padding: 0.5rem 0;
+}
+
+.radarRowLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recentCount {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--c-ter);
+}
+
+.recentItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recentItemBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.recentIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recentItemText {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--c-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recentItemTime {
+  font-size: 0.6875rem;
+  color: var(--c-ter);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.recentItemTimeMeta {
+  font-size: 0.6875rem;
+  color: var(--c-ter);
+  font-family: "JetBrains Mono", monospace;
+  margin-top: 2px;
+}
+
+.recentItemRelTime {
+  font-size: 0.6875rem;
+  color: var(--c-ter);
+  font-family: "JetBrains Mono", monospace;
+  flex-shrink: 0;
+}
+
+/* ── Empty state ── */
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--c-lite);
+  border: 1px solid var(--c-liteb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.emptyTitle {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+}
+
+.emptyDesc {
+  margin: 0 auto 1.5rem;
+  font-size: 0.875rem;
+  color: var(--c-sec);
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* ── Reset dialog ── */
+.dialogOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialogBox {
+  background: var(--c-surf);
+  border: 1px solid var(--c-bdr);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  max-width: 400px;
+  margin: 0 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dialogIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--c-rLite);
+  border: 1px solid var(--c-rBdr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dialogTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+}
+
+.dialogDesc {
+  margin: 0 0 1.25rem;
+  font-size: 0.875rem;
+  color: var(--c-sec);
+  line-height: 1.6;
+}
+
+.dialogActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.breakdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet (≤860px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .header {
+    padding: 0 1rem;
+  }
+  .nav {
+    margin-left: 1rem;
+  }
+  .main {
+    padding: 1.25rem 1rem 2rem;
+  }
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .twoColGrid {
+    grid-template-columns: 1fr;
+  }
+  .knowledgeMapContent {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .radarContainer {
+    flex: none;
+    height: 180px;
+  }
+  .knowledgeMapHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — iPhone portrait (≤480px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+  .main {
+    padding: 1rem 0.75rem 2rem;
+  }
+  .topTitle {
+    font-size: 1.375rem;
+  }
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .activityChart {
+    height: 120px;
+  }
+  .dialogBox {
+    margin: 0 0.75rem;
+    padding: 1.25rem;
+  }
+  .recentItem {
+    gap: 8px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Small iPhone SE (≤375px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 375px) {
+  .main {
+    padding: 0.75rem 0.625rem 1.5rem;
+  }
+  .header {
+    padding: 0 0.625rem;
+  }
+}

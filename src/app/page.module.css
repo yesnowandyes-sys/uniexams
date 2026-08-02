@@ -1,0 +1,528 @@
+/* Dashboard page.module.css — responsive styles for the main dashboard */
+
+.page {
+  font-family: "Inter, sans-serif";
+  background: var(--c-bg);
+  min-height: 100vh;
+}
+
+/* ── Navigation bar ── */
+.header {
+  background: var(--c-surf);
+  height: 58px;
+  border-bottom: 1px solid var(--c-bdr);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: 2.5rem;
+  align-items: center;
+}
+
+.headerRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.streakPill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--c-aLite);
+  border: 1px solid var(--c-aBdr);
+  border-radius: 20px;
+  padding: 4px 10px 4px 7px;
+}
+
+.streakPillText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-amber);
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--c-lite);
+  border: 2px solid var(--c-liteb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ── Main content ── */
+.main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}
+
+.greeting { margin-bottom: 1.75rem; }
+.greetingTitle {
+  margin: 0 0 5px;
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.025em;
+}
+.greetingSub {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--c-sec);
+  line-height: 1.6;
+}
+
+/* ── Countdown banner ── */
+.countdownBanner {
+  background: var(--c-blue);
+  border-radius: 14px;
+  padding: 1.375rem 1.875rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(26,71,184,0.18), 0 1px 4px rgba(26,71,184,0.12);
+}
+
+.countdownLeft { position: relative; }
+
+.countdownBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.countdownBadgeDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+}
+
+.countdownBadgeText {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.countdownDate {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 5px;
+}
+
+.countdownUnis {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.countdownUni {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.countdownDot {
+  color: rgba(255,255,255,0.25);
+  font-size: 0.75rem;
+}
+
+.countdownRight {
+  text-align: right;
+  position: relative;
+}
+
+.countdownNumber {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.countdownLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.countdownDecor {
+  position: absolute;
+  pointer-events: none;
+}
+
+.countdownDecorLarge {
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.055;
+}
+
+.countdownDecorSmall {
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.04;
+}
+
+/* ── Main grid: Knowledge Map + Stat Cards ── */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 256px;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.statCardsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Knowledge map card internals */
+.knowledgeMapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.knowledgeMapActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.knowledgeMapAvg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: var(--c-lite);
+  border: 1px solid var(--c-liteb);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.knowledgeMapAvgNum {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--c-mid);
+  line-height: 1;
+}
+
+.knowledgeMapAvgLabel {
+  font-size: 0.625rem;
+  color: var(--c-ter);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.knowledgeMapContent {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.radarContainer {
+  flex: 0 0 220px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radarBars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radarRowHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  align-items: center;
+}
+
+.radarRowName {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--c-text);
+}
+
+.radarRowPct {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.radarRowLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Bottom row: Needs Attention + CTA ── */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.25rem;
+}
+
+.needsAttentionHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 1.1rem;
+}
+
+.weakList { display: flex; flex-direction: column; gap: 12px; }
+
+.weakRowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.weakRowName {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--c-text);
+  line-height: 1.3;
+}
+
+.weakRowSub {
+  font-size: 0.6875rem;
+  color: var(--c-ter);
+  margin-top: 2px;
+}
+
+.weakRowPct {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.weakRowLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaContent { flex: 1; }
+
+.ctaTitle {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.02em;
+}
+
+.ctaDesc {
+  margin: 0 0 16px;
+  font-size: 0.875rem;
+  color: var(--c-sec);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.ctaBadges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ctaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--c-mid);
+  font-weight: 500;
+  background: var(--c-lite);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--c-liteb);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.emptyState {
+  font-size: 0.8125rem;
+  color: var(--c-ter);
+  line-height: 1.6;
+  padding: 0.5rem 0;
+}
+
+.sectionTitle {
+  margin: 0 0 4px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.sectionSub {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--c-ter);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet (≤860px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .header {
+    padding: 0 1rem;
+  }
+  .nav {
+    margin-left: 1rem;
+  }
+  .main {
+    padding: 1.25rem 1rem 2rem;
+  }
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+  .statCardsCol {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .statCardsCol > * {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 140px;
+  }
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .countdownBanner {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+  .countdownRight {
+    text-align: center;
+  }
+  .countdownDecorLarge,
+  .countdownDecorSmall {
+    display: none;
+  }
+  .knowledgeMapContent {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .radarContainer {
+    flex: none;
+    height: 180px;
+  }
+  .knowledgeMapHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .knowledgeMapAvg {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — iPhone portrait (≤480px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+  .main {
+    padding: 1rem 0.75rem 2rem;
+  }
+  .greetingTitle {
+    font-size: 1.375rem;
+  }
+  .countdownNumber {
+    font-size: 2.5rem;
+  }
+  .countdownDate {
+    font-size: 1rem;
+  }
+  .countdownUnis {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  .statCardsCol > * {
+    flex: 1 1 calc(50% - 5px);
+  }
+  .headerRight .streakPill {
+    padding: 3px 7px 3px 5px;
+  }
+  .headerRight .streakPill span {
+    font-size: 0.6875rem;
+  }
+  .ctaDesc {
+    max-width: none;
+  }
+  .ctaButtons {
+    flex-direction: column;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Small iPhone SE (≤375px)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 375px) {
+  .main {
+    padding: 0.75rem 0.625rem 1.5rem;
+  }
+  .countdownBanner {
+    padding: 1rem 0.75rem;
+  }
+  .countdownNumber {
+    font-size: 2rem;
+  }
+  .header {
+    padding: 0 0.625rem;
+  }
+}
