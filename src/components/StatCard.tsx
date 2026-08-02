@@ -3,6 +3,7 @@
 import { C } from "@/lib/constants";
 import { Svg, IconName } from "./icons";
 import { Label } from "./atoms";
+import styles from "./StatCard.module.css";
 
 interface StatCardProps {
   icon: IconName;
@@ -15,7 +16,13 @@ interface StatCardProps {
   deltaCol: string;
 }
 
-/** StatCard — displays a metric with icon, JetBrains Mono number, and delta */
+/** StatCard — displays a metric with icon, JetBrains Mono number, and delta.
+ *
+ *  All structural layout lives in StatCard.module.css (the card owns its own
+ *  internal flex column), but the card deliberately does NOT set a `flex`
+ *  size: the parent layout decides how the card is sized so responsive
+ *  breakpoints (e.g. the dashboard's `.statCardsCol > *` 2×2 wrap) can take
+ *  effect. Only the per-card accent colours stay inline — they are dynamic. */
 export function StatCard({
   icon,
   label,
@@ -27,49 +34,16 @@ export function StatCard({
   deltaCol,
 }: StatCardProps) {
   return (
-    <div
-      className="stat-card"
-      style={{
-        flex: 1,
-        background: C.surf,
-        border: `1px solid ${C.bdr}`,
-        borderRadius: 12,
-        padding: "14px 16px",
-        boxShadow: "0 1px 2px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.03)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            width: 30,
-            height: 30,
-            borderRadius: 8,
-            background: bg,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+    <div className={`stat-card ${styles.card}`}>
+      <div className={styles.topRow}>
+        <div className={styles.iconBox} style={{ background: bg }}>
           <Svg icon={icon} size={15} col={col} sw={1.8} />
         </div>
         <span
+          className={styles.delta}
           style={{
-            fontSize: "0.6875rem",
-            fontWeight: 600,
-            fontFamily: '"JetBrains Mono", monospace',
             color: deltaCol,
             background: deltaCol === C.green ? C.gLite : C.lite,
-            padding: "2px 6px",
-            borderRadius: 4,
           }}
         >
           {delta}
@@ -79,29 +53,11 @@ export function StatCard({
         <Label col={C.ter} mb={4}>
           {label}
         </Label>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
-          <span
-            style={{
-              fontFamily: '"JetBrains Mono", monospace',
-              fontSize: "1.875rem",
-              fontWeight: 700,
-              color: col,
-              lineHeight: 1,
-            }}
-          >
+        <div className={styles.valRow}>
+          <span className={styles.val} style={{ color: col }}>
             {val}
           </span>
-          {unit && (
-            <span
-              style={{
-                fontSize: "0.75rem",
-                color: C.ter,
-                fontWeight: 500,
-              }}
-            >
-              {unit}
-            </span>
-          )}
+          {unit && <span className={styles.unit}>{unit}</span>}
         </div>
       </div>
     </div>

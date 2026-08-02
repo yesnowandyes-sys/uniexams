@@ -86,57 +86,24 @@ export function KBD({ children }: { children: React.ReactNode }) {
 /** Wordmark — ESAT Gymnasium logo */
 export function Wordmark() {
   return (
-    <div
-      style={{ display: "flex", alignItems: "center", gap: 10, userSelect: "none" }}
-    >
+    <div className={styles.wordmark}>
       <div
+        className={styles.wordmarkIcon}
         style={{
-          width: 34,
-          height: 34,
-          borderRadius: 9,
           background: C.blue,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
           boxShadow:
             "inset 0 1px 0 rgba(255,255,255,0.12), 0 1px 3px rgba(26,71,184,0.3)",
         }}
       >
-        <span
-          style={{
-            fontFamily: '"Instrument Serif", serif',
-            fontStyle: "italic",
-            fontSize: "1.45rem",
-            color: "#fff",
-            lineHeight: 1,
-            marginTop: 1,
-            display: "block",
-          }}
-        >
-          G
-        </span>
+        <span className={styles.wordmarkG}>G</span>
       </div>
-      <div style={{ display: "flex", alignItems: "baseline", gap: 5, lineHeight: 1 }}>
-        <span
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontSize: "0.875rem",
-            fontWeight: 700,
-            color: C.text,
-            letterSpacing: "0.07em",
-          }}
-        >
+      <div className={styles.wordmarkText}>
+        <span className={styles.wordmarkEsat} style={{ color: C.text }}>
           ESAT
         </span>
         <span
-          style={{
-            fontFamily: '"Instrument Serif", serif',
-            fontStyle: "italic",
-            fontSize: "1.1rem",
-            color: C.blue,
-            letterSpacing: "-0.01em",
-          }}
+          className={styles.wordmarkGymnasium}
+          style={{ color: C.blue }}
         >
           Gymnasium
         </span>
@@ -159,22 +126,18 @@ export function Label({
 }) {
   return (
     <div
-      style={{
-        fontSize: "0.6875rem",
-        fontWeight: 600,
-        letterSpacing: "0.08em",
-        textTransform: "uppercase",
-        color: col,
-        marginBottom: mb,
-        marginTop: mt,
-      }}
+      className={styles.label}
+      style={{ color: col, marginBottom: mb, marginTop: mt }}
     >
       {children}
     </div>
   );
 }
 
-/** Navigation pill — used in the Dashboard header */
+/** Navigation pill — used in the Dashboard header.
+ *  Layout lives in the module (.navPill); the global `nav-pill` class still
+ *  provides hover/active background, and the dynamic active colour/weight
+ *  stay inline. */
 export function NavPill({
   label,
   icon,
@@ -193,38 +156,22 @@ export function NavPill({
     </>
   );
 
+  const className = `${styles.navPill} nav-pill${active ? " active" : ""}`;
+  const style = {
+    fontWeight: active ? 600 : 500,
+    color: active ? C.mid : C.sec,
+  } as const;
+
   if (href) {
     return (
-      <a
-        href={href}
-        className={`nav-pill${active ? " active" : ""}`}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 6,
-          fontSize: "0.8125rem",
-          fontWeight: active ? 600 : 500,
-          color: active ? C.mid : C.sec,
-          textDecoration: "none",
-        }}
-      >
+      <a href={href} className={className} style={style}>
         {content}
       </a>
     );
   }
 
   return (
-    <div
-      className={`nav-pill${active ? " active" : ""}`}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 6,
-        fontSize: "0.8125rem",
-        fontWeight: active ? 600 : 500,
-        color: active ? C.mid : C.sec,
-      }}
-    >
+    <div className={className} style={style}>
       {content}
     </div>
   );

@@ -1,0 +1,59 @@
+/* StatCard.module.css — layout for the dashboard/progress metric card.
+   NOTE: no `flex` sizing lives here. The card is a presentational surface;
+   its parent layout (a flex column on the dashboard, a CSS grid on the
+   progress page) owns flex/grid sizing so responsive breakpoints can
+   override it. If `flex` were set here it would carry equal specificity to
+   the parent's `> *` rule and the mobile 2×2 wrap would break again. */
+
+.card {
+  background: var(--c-surf);
+  border: 1px solid var(--c-bdr);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconBox {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delta {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.valRow {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.val {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.unit {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--c-ter);
+}

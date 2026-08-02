@@ -212,6 +212,15 @@
   gap: 10px;
 }
 
+/* Desktop: stretch the four cards to equal height so the column matches the
+   Knowledge Map card beside it. This flex sizing is owned HERE (not inside
+   the StatCard component) so the tablet breakpoint below can override it —
+   an inline `flex` on the card would carry infinite specificity and make the
+   2×2 wrap rule dead code. */
+.statCardsCol > * {
+  flex: 1;
+}
+
 /* Knowledge map card internals */
 .knowledgeMapHeader {
   display: flex;
