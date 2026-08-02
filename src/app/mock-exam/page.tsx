@@ -691,40 +691,32 @@ function MockQuestionView({
               onClick={() => onChoose(l)}
               onMouseEnter={() => onHoverOption(l)}
               onMouseLeave={() => onHoverOption(null)}
-              className="opt-btn"
+              className={`opt-btn ${styles.mockOption}`}
               style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "0.75rem 1rem",
-                border: `2px solid ${selected ? C.mid : isHov ? C.liteb : C.bdr}`,
-                borderRadius: 10,
+                borderColor: selected ? C.mid : isHov ? C.liteb : C.bdr,
                 background: selected ? C.lite : isHov ? C.alt : C.surf,
-                fontFamily: "Inter,sans-serif",
-                textAlign: "left",
-                width: "100%",
-                boxSizing: "border-box",
-                cursor: "pointer",
-                minHeight: 44,
               }}
             >
-              <span style={{
-                width: 28, height: 28, borderRadius: 7, flexShrink: 0,
-                background: selected ? C.mid : isHov ? C.mid : C.alt,
-                color: selected || isHov ? "#fff" : C.sec,
-                fontFamily: '"JetBrains Mono",monospace', fontWeight: 700, fontSize: "0.8125rem",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                transition: "background 0.12s, color 0.12s", marginRight: "0.875rem",
-              }}>
+              <span
+                className={styles.mockOptionLetter}
+                style={{
+                  background: selected ? C.mid : isHov ? C.mid : C.alt,
+                  color: selected || isHov ? "#fff" : C.sec,
+                }}
+              >
                 {l}
               </span>
-              <span style={{ flex: 1, color: selected ? C.text : C.text, fontSize: "0.875rem", lineHeight: 1.6, fontWeight: selected ? 500 : 400 }}>
+              <span
+                className={styles.mockOptionText}
+                style={{ color: C.text, fontWeight: selected ? 500 : 400 }}
+              >
                 <MathText>{text}</MathText>
                 {i < 9 && (
-                  <span style={{ marginLeft: 8, opacity: 0.45, fontSize: "0.6875rem", fontFamily: '"JetBrains Mono",monospace' }}>[{i + 1}]</span>
+                  <span className={styles.mockOptionHint}>[{i + 1}]</span>
                 )}
               </span>
               {selected && (
-                <div style={{ width: 22, height: 22, borderRadius: "50%", background: C.mid, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 10 }}>
+                <div className={styles.mockOptionCheck} style={{ background: C.mid }}>
                   <Svg icon="check" size={11} col="#fff" sw={2.5} />
                 </div>
               )}

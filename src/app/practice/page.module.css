@@ -83,6 +83,14 @@
   gap: 3px;
 }
 
+/* Per-question status dot (sizing owned here; colour/opacity stay inline). */
+.sessionDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: background 0.25s;
+}
+
 .sessionDotsCount {
   font-size: 0.8125rem;
   color: var(--c-sec);

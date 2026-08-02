@@ -434,7 +434,7 @@ function Header({ activeProgress, streak }: { activeProgress: boolean; streak: n
       </nav>
       <div className={styles.headerRight}>
         <div className={styles.streakPill}>
-          <div style={{ width: 7, height: 7, borderRadius: "50%", background: C.amber }} className="pulse-dot" />
+          <div className={`${styles.streakDot} pulse-dot`} />
           <span className={styles.streakPillText}>{streak}-day streak</span>
         </div>
       </div>

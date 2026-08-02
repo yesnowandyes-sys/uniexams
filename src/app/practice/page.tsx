@@ -330,14 +330,11 @@ export default function PracticeHub() {
               return (
                 <div
                   key={q.id}
+                  className={styles.sessionDot}
                   style={{
-                    width: 6,
-                    height: 6,
-                    borderRadius: "50%",
                     background: !a
                       ? i === idx ? C.mid : C.bdr
                       : ok ? C.green : C.red,
-                    transition: "background 0.25s",
                     opacity: i === idx && !a ? 1 : undefined,
                     boxShadow: i === idx && !a ? `0 0 0 2px ${C.liteb}` : undefined,
                   }}

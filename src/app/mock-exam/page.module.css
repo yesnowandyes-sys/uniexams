@@ -596,6 +596,65 @@
   margin-bottom: 0.875rem;
 }
 
+/* ── MockQuestionView option button (layout owned here, not inline) ──
+   Only state-dependent colours stay inline on the JSX; every structural
+   property lives in these classes so the responsive rules below can
+   override them without fighting inline-style specificity. */
+.mockOption {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--c-bdr);
+  font-family: "Inter, sans-serif";
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.mockOptionLetter {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s, color 0.12s;
+  margin-right: 0.875rem;
+}
+
+.mockOptionText {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  min-width: 0;
+}
+
+.mockOptionHint {
+  margin-left: 8px;
+  opacity: 0.45;
+  font-size: 0.6875rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.mockOptionCheck {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
 .resultsReviewList {
   display: flex;
   flex-direction: column;

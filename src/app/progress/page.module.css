@@ -49,6 +49,14 @@
   color: var(--c-amber);
 }
 
+/* Pulsing accent dot inside the streak pill (sizing owned here, not inline). */
+.streakDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c-amber);
+}
+
 /* ── Main content ── */
 .main {
   max-width: 1120px;
