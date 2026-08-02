@@ -91,6 +91,57 @@ select {
   padding-right: 32px !important;
 }
 select:focus { outline: none; border-color: #2563EB !important; box-shadow: 0 0 0 3px #EEF4FF; }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — mobile overrides
+   These rules override the compiled inline React styles with !important.
+   Targets use the className hooks added to key containers (esat-* / keyboard-only).
+   The React app mounts exactly one <header> / <main> at a time (App switches
+   between Dashboard and PracticeHub), so #root header / #root main are unambiguous.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Touch screens have no keyboard — hide every shortcut affordance */
+  .keyboard-only { display: none !important; }
+
+  /* Header: allow wrapping + compact padding on narrow screens */
+  #root header {
+    height: auto !important;
+    min-height: 56px;
+    flex-wrap: wrap !important;
+    padding: 0.55rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+  #root header > nav { margin-left: 0 !important; }
+
+  /* Dashboard main: compact padding */
+  #root main { padding: 1.25rem 1rem 2rem !important; }
+
+  /* Hero countdown card: compact */
+  .esat-hero { padding: 1.1rem 1.1rem !important; }
+
+  /* Knowledge-map grid (1fr 256px) -> single column */
+  .esat-grid-km { grid-template-columns: 1fr !important; }
+  /* Radar + bars row -> stack; radar full width */
+  .esat-km-inner { flex-direction: column !important; gap: 1rem !important; align-items: stretch !important; }
+  .esat-radar { flex: none !important; width: 100% !important; height: auto !important; }
+  .esat-radar svg { max-width: 100% !important; height: auto !important; display: block; margin: 0 auto; }
+
+  /* Needs-attention + Ready-to-practise grid (300px 1fr) -> single column */
+  .esat-grid-cta { grid-template-columns: 1fr !important; }
+
+  /* Practice: stack the question column above the sidebar */
+  .esat-practice-main { flex-direction: column !important; padding: 1rem !important; gap: 1rem !important; }
+  .esat-sidebar { width: 100% !important; }
+  /* Once the keyboard group is hidden, keep the progress indicator pinned right */
+  .esat-progress { margin-left: auto !important; }
+}
+
+@media (max-width: 480px) {
+  #root header { padding: 0.5rem 0.85rem !important; }
+  #root main { padding: 1rem 0.85rem 1.5rem !important; }
+  .esat-hero { padding: 1rem 0.9rem !important; }
+  .esat-practice-main { padding: 0.85rem !important; }
+}
 </style>
 </head>
 <body>
@@ -470,6 +521,7 @@ function Pill(_ref3) {
 function KBD(_ref4) {
   var children = _ref4.children;
   return /*#__PURE__*/React.createElement("span", {
+    className: "keyboard-only",
     style: {
       display: "inline-flex",
       alignItems: "center",
@@ -864,6 +916,7 @@ function Dashboard(_ref9) {
       color: C.text
     }
   }, "Proof & Logic"), " \u2014 today's session targets it.")), /*#__PURE__*/React.createElement("div", {
+    className: "esat-hero",
     style: {
       background: C.blue,
       borderRadius: 14,
@@ -1002,6 +1055,7 @@ function Dashboard(_ref9) {
       marginTop: 5
     }
   }, "days remaining"))), /*#__PURE__*/React.createElement("div", {
+    className: "esat-grid-km",
     style: {
       display: "grid",
       gridTemplateColumns: "1fr 256px",
@@ -1075,12 +1129,14 @@ function Dashboard(_ref9) {
     bg: C.alt,
     col: C.sec
   }, "245 questions"))), /*#__PURE__*/React.createElement("div", {
+    className: "esat-km-inner",
     style: {
       display: "flex",
       gap: "2rem",
       alignItems: "center"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "esat-radar",
     style: {
       flex: "0 0 220px",
       height: 210,
@@ -1212,6 +1268,7 @@ function Dashboard(_ref9) {
       }
     }, unit))));
   }))), /*#__PURE__*/React.createElement("div", {
+    className: "esat-grid-cta",
     style: {
       display: "grid",
       gridTemplateColumns: "300px 1fr",
@@ -1343,6 +1400,7 @@ function Dashboard(_ref9) {
       label = _ref14.label;
     return /*#__PURE__*/React.createElement("span", {
       key: label,
+      className: label === "Keyboard-first" ? "keyboard-only" : undefined,
       style: {
         display: "inline-flex",
         alignItems: "center",
@@ -1700,6 +1758,7 @@ function PracticeHub(_ref15) {
       background: C.bdr
     }
   }), /*#__PURE__*/React.createElement(Wordmark, null), /*#__PURE__*/React.createElement("div", {
+    className: "keyboard-only",
     style: {
       marginLeft: "auto",
       display: "flex",
@@ -1755,6 +1814,7 @@ function PracticeHub(_ref15) {
       color: C.ter
     }
   }, "Navigate")), /*#__PURE__*/React.createElement("div", {
+    className: "esat-progress",
     style: {
       display: "flex",
       alignItems: "center",
@@ -1818,6 +1878,7 @@ function PracticeHub(_ref15) {
       transition: "width 0.45s cubic-bezier(0.16,1,0.3,1), background 0.3s"
     }
   }))), /*#__PURE__*/React.createElement("div", {
+    className: "esat-practice-main",
     style: {
       flex: 1,
       maxWidth: 1200,
@@ -2432,6 +2493,7 @@ function PracticeHub(_ref15) {
     col: "currentColor",
     sw: 2
   })))), /*#__PURE__*/React.createElement("div", {
+    className: "esat-sidebar",
     style: {
       width: 268,
       flexShrink: 0
