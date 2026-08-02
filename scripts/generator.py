@@ -631,6 +631,32 @@ def validate_question(obj: dict[str, Any]) -> None:
                 f"`distractor_analysis` empty for wrong-option keys: {empty}"
             )
 
+    # ESA-43: validate the new output fields (difficulty_score, subject,
+    # has_diagram, diagram_description) so the Gemini generator rejects
+    # malformed output the same way generator_glm.py does.
+    ds = obj.get("difficulty_score")
+    if ds is not None:
+        if not isinstance(ds, int) or ds < 1 or ds > 5:
+            issues.append(f"`difficulty_score` must be an integer 1-5; got {ds!r}")
+    else:
+        issues.append("`difficulty_score` is missing (must be integer 1-5)")
+
+    subj = obj.get("subject")
+    if not isinstance(subj, str) or not subj.strip():
+        issues.append("`subject` must be a non-empty string")
+
+    hd = obj.get("has_diagram")
+    if hd is not None and not isinstance(hd, bool):
+        issues.append(f"`has_diagram` must be true/false; got {hd!r}")
+    elif hd is None:
+        issues.append("`has_diagram` is missing (must be true or false)")
+
+    dd = obj.get("diagram_description")
+    if dd is not None and not isinstance(dd, str):
+        issues.append(f"`diagram_description` must be a string; got {type(dd).__name__}")
+    elif dd is None:
+        issues.append("`diagram_description` is missing (must be a string, empty if no diagram)")
+
     if issues:
         raise ValueError("Invalid question: " + "; ".join(issues))
 
