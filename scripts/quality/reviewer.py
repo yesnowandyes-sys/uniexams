@@ -2,8 +2,10 @@
 """
 LLM Reviewer Gate (Gate 4 of the 4-gate stack).
 
-A Haiku-powered rubric judge scores each question on four 1–5 dimensions:
-clarity, syllabus match, distractor plausibility, and uniqueness.
+A Haiku-powered rubric judge scores four blocking 1-5 dimensions and one
+advisory dimension: clarity, syllabus match, distractor plausibility, and
+uniqueness (blocking/advisory as noted below), plus an advisory difficulty
+assessment.
 
 `clarity`, `syllabus`, and `distractors` are **blocking** (default ≥ 4 to
 pass). `uniqueness` is **advisory only** — it is recorded in `scores` and
@@ -28,8 +30,10 @@ Standard verdict dict:
         "issues": list[str],     # blocking dimensions scoring < threshold
         "advisory": list[str],   # non-blocking observations (e.g. low uniqueness)
         "cost_usd": float,
-        "scores": {"clarity": int, "syllabus": int,
-                   "distractors": int, "uniqueness": int},
+        "scores": {"clarity": int, "syllabus": int, "distractors": int,
+                   "uniqueness": int, "difficulty": int},
+        "difficulty_score_llm": int,    # advisory 1-5, mirrors scores["difficulty"]
+        "difficulty_band_llm": str,     # easy|medium|hard|very_hard
     }
 """
 
@@ -95,14 +99,27 @@ UNIQUENESS (advisory signal only — does NOT gate the question):
   Note: an embedding/shingle dedup pass against the existing corpus runs
   separately (scripts/dedup.py) and is the authoritative duplicate guard.
 
-Output your review as FOUR lines in EXACTLY this format, in this order:
+DIFFICULTY (advisory only — does NOT gate the question):
+  5 — Very Hard: requires multi-step reasoning, concept synthesis, or
+      non-obvious insight. Top ~10% of ESAT questions.
+  4 — Hard: multiple concepts, non-trivial arithmetic, requires careful work.
+      Typical hard ESAT questions.
+  3 — Medium: straightforward application of one concept with moderate
+      calculation. Standard ESAT difficulty.
+  2 — Easy: simple single-step recall or basic arithmetic. Accessible to
+      most candidates.
+  1 — Trivial: basic recall with minimal calculation. Below typical ESAT
+      level.
+
+Output your review as FIVE lines in EXACTLY this format, in this order:
 
 CLARITY: <int 1-5>
 SYLLABUS: <int 1-5>
 DISTRACTORS: <int 1-5>
 UNIQUENESS: <int 1-5>
+DIFFICULTY: <int 1-5>
 
-Do not output anything else. No prose. No commentary. Just the four lines.
+Do not output anything else. No prose. No commentary. Just the five lines.
 """
 
 
@@ -129,14 +146,19 @@ def _build_user_prompt(question: dict[str, Any]) -> str:
     )
 
 
-DIMENSION_KEYS = ("clarity", "syllabus", "distractors", "uniqueness")
+DIMENSION_KEYS = ("clarity", "syllabus", "distractors", "uniqueness", "difficulty")
 BLOCKING_DIMS = ("clarity", "syllabus", "distractors")
-ADVISORY_DIMS = ("uniqueness",)
+# `difficulty` is recorded in `scores` and surfaced via `difficulty_score_llm`
+# / `difficulty_band_llm` on the verdict. It never gates since it's absent
+# from BLOCKING_DIMS. The uniqueness-floor warning below is uniqueness-
+# specific (its message references dedup.py) and does not apply to it.
+ADVISORY_DIMS = ("uniqueness", "difficulty")
 DIMENSION_PATTERNS = {
     "clarity": re.compile(r"CLARITY:\s*(\d+)", re.IGNORECASE),
     "syllabus": re.compile(r"SYLLABUS:\s*(\d+)", re.IGNORECASE),
     "distractors": re.compile(r"DISTRACTORS:\s*(\d+)", re.IGNORECASE),
     "uniqueness": re.compile(r"UNIQUENESS:\s*(\d+)", re.IGNORECASE),
+    "difficulty": re.compile(r"DIFFICULTY:\s*(\d+)", re.IGNORECASE),
 }
 
 
@@ -163,6 +185,16 @@ ACCEPT_THRESHOLD = 4  # ESA-22 acceptance: each blocking dim ≥ 4
 # the dedup pipeline handles actual corpus duplicates.
 UNIQUENESS_ADVISORY_FLOOR = 2
 
+# Maps the advisory LLM difficulty score to the same band labels used by
+# scripts/quality/structural_difficulty.py.
+DIFFICULTY_BAND_MAP = {
+    1: "easy",
+    2: "easy",
+    3: "medium",
+    4: "hard",
+    5: "very_hard",
+}
+
 
 def check(
     question: dict[str, Any],
@@ -175,8 +207,10 @@ def check(
     """Run the Haiku rubric over the question.
 
     Pass iff every dim in `blocking_dims` scores ≥ `threshold`. Dimensions
-    in `ADVISORY_DIMS` (default: `uniqueness`) are recorded but never gate
-    the verdict — they appear in `advisory` when below `uniqueness_floor`.
+    in `ADVISORY_DIMS` (`uniqueness`, `difficulty`) are recorded but never
+    gate the verdict. `uniqueness` appears in `advisory` when below
+    `uniqueness_floor`; `difficulty` is surfaced via `difficulty_score_llm`
+    / `difficulty_band_llm`.
     """
     try:
         result = call_haiku(
@@ -219,11 +253,14 @@ def check(
     passed = not failed_dims
 
     advisory: list[str] = []
-    for k in ADVISORY_DIMS:
-        if k not in blocking_dims and scores.get(k, 5) < uniqueness_floor:
-            advisory.append(
-                f"{k}={scores[k]} (<{uniqueness_floor} floor; rely on dedup.py)"
-            )
+    if "uniqueness" not in blocking_dims and scores.get("uniqueness", 5) < uniqueness_floor:
+        advisory.append(
+            f"uniqueness={scores['uniqueness']} "
+            f"(<{uniqueness_floor} floor; rely on dedup.py)"
+        )
+
+    difficulty_score_llm = scores.get("difficulty")
+    difficulty_band_llm = DIFFICULTY_BAND_MAP.get(difficulty_score_llm)
 
     reason = (
         f"all blocking dims ≥ {threshold}"
@@ -245,6 +282,8 @@ def check(
         gate="reviewer",
         scores=scores,
         model=result.model,
+        difficulty_score_llm=difficulty_score_llm,
+        difficulty_band_llm=difficulty_band_llm,
     )
 
 
