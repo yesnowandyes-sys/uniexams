@@ -390,6 +390,31 @@ const EFFECTIVE_MODULE_SQL = `(
   END
 )`;
 
+/**
+ * SQL CASE expression that derives the effective difficulty label for a
+ * question, mirroring EFFECTIVE_MODULE_SQL. Corpus questions carry their
+ * label in enrichment.difficulty_category; generated questions carry no
+ * enrichment but do have a numeric 1-5 difficulty_score (the generator's
+ * self-assessment), bucketed here with the same bands reviewer.py's
+ * DIFFICULTY_BAND_MAP uses (1-2 easy, 3 medium, 4 hard, 5 very hard) so
+ * generated questions are filterable/countable by difficulty too.
+ */
+const EFFECTIVE_DIFFICULTY_SQL = `(
+  CASE
+    WHEN enrichment IS NOT NULL AND json_extract(enrichment, '$.status') = 'success'
+         AND json_extract(enrichment, '$.difficulty_category') IS NOT NULL
+      THEN json_extract(enrichment, '$.difficulty_category')
+    WHEN source = 'generated' AND difficulty_score IS NOT NULL THEN
+      CASE
+        WHEN difficulty_score <= 2 THEN 'Easy'
+        WHEN difficulty_score = 3 THEN 'Medium'
+        WHEN difficulty_score = 4 THEN 'Hard'
+        ELSE 'Very Hard'
+      END
+    ELSE NULL
+  END
+)`;
+
 function buildWhereClause(filters: QuestionFilters): { where: string; params: unknown[] } {
   const conditions: string[] = [];
   const params: unknown[] = [];
@@ -416,10 +441,10 @@ function buildWhereClause(filters: QuestionFilters): { where: string; params: un
   }
 
   // Enrichment-derived filters all imply status='success' so partial / failed
-  // enrichments never leak into filtered results. This keeps difficulty, topic,
-  // enriched_only, and the stats facets on the same footing.
-  const usesEnrichment =
-    filters.enriched_only || Boolean(filters.difficulty) || Boolean(filters.topic);
+  // enrichments never leak into filtered results. This keeps topic and
+  // enriched_only on the same footing. Difficulty is excluded here — it has
+  // its own generated-question fallback via EFFECTIVE_DIFFICULTY_SQL below.
+  const usesEnrichment = filters.enriched_only || Boolean(filters.topic);
   if (usesEnrichment) {
     conditions.push("enrichment IS NOT NULL");
     conditions.push("json_extract(enrichment, '$.status') = 'success'");
@@ -446,7 +471,7 @@ function buildWhereClause(filters: QuestionFilters): { where: string; params: un
       // returning the whole corpus.
       conditions.push("1 = 0");
     } else {
-      conditions.push("json_extract(enrichment, '$.difficulty_category') = ?");
+      conditions.push(`${EFFECTIVE_DIFFICULTY_SQL} = ?`);
       params.push(normalized);
     }
   }
@@ -563,8 +588,10 @@ export function getExamStats(): Record<string, { count: number; years: string[];
 
 /**
  * Aggregated facets derived from the enrichment column. Useful for driving
- * filter UIs and for the /api/questions/stats endpoint. Counts only include
- * questions whose enrichment status is 'success'.
+ * filter UIs and for the /api/questions/stats endpoint. `enriched_count` and
+ * `by_topic` only include questions whose enrichment status is 'success';
+ * `by_difficulty` also folds in generated questions via difficulty_score
+ * (see EFFECTIVE_DIFFICULTY_SQL).
  */
 export interface EnrichmentFacets {
   enriched_count: number;
@@ -583,10 +610,11 @@ export function getEnrichmentFacets(): EnrichmentFacets {
 
   const diffRows = db
     .prepare(
-      `SELECT IFNULL(json_extract(enrichment, '$.difficulty_category'), 'Unknown') AS difficulty,
+      `SELECT IFNULL(${EFFECTIVE_DIFFICULTY_SQL}, 'Unknown') AS difficulty,
               COUNT(*) AS c
        FROM questions
-       WHERE enrichment IS NOT NULL AND json_extract(enrichment, '$.status') = 'success'
+       WHERE (enrichment IS NOT NULL AND json_extract(enrichment, '$.status') = 'success')
+          OR (source = 'generated' AND difficulty_score IS NOT NULL)
        GROUP BY difficulty
        ORDER BY difficulty`
     )
