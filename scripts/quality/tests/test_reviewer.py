@@ -5,8 +5,11 @@ from __future__ import annotations
 import reviewer  # type: ignore
 
 
-def _scores_response(c, s, d, u, cost=0.00125):
-    text = f"CLARITY: {c}\nSYLLABUS: {s}\nDISTRACTORS: {d}\nUNIQUENESS: {u}"
+def _scores_response(c, s, d, u, diff=3, cost=0.00125):
+    text = (
+        f"CLARITY: {c}\nSYLLABUS: {s}\nDISTRACTORS: {d}\n"
+        f"UNIQUENESS: {u}\nDIFFICULTY: {diff}"
+    )
     return {"text": text, "cost_usd": cost}
 
 
@@ -25,6 +28,24 @@ def test_reviewer_one_dim_below_threshold(stub_haiku, sample_maths_question):
     assert not result["pass"]
     assert "distractors" in result["reason"]
     assert "distractors=2" in result["issues"][0]
+
+
+def test_reviewer_difficulty_is_advisory_and_scored(stub_haiku, sample_maths_question):
+    """ESA-62: DIFFICULTY is parsed and recorded but never gates the question."""
+    stub_haiku.responses = [_scores_response(5, 5, 4, 4, diff=5)]
+    result = reviewer.check(sample_maths_question)
+    assert result["pass"]
+    assert result["scores"]["difficulty"] == 5
+    assert result["difficulty_score_llm"] == 5
+    assert result["difficulty_band_llm"] == "very_hard"
+
+
+def test_reviewer_low_difficulty_does_not_block(stub_haiku, sample_maths_question):
+    stub_haiku.responses = [_scores_response(5, 5, 4, 4, diff=1)]
+    result = reviewer.check(sample_maths_question)
+    assert result["pass"], "difficulty alone must not block"
+    assert result["scores"]["difficulty"] == 1
+    assert result["difficulty_band_llm"] == "easy"
 
 
 def test_reviewer_unparseable(stub_haiku, sample_maths_question):

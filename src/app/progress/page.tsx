@@ -5,6 +5,7 @@ import {
   C,
   SH,
   DAYS_LEFT,
+  tierColor,
 } from "@/lib/constants";
 import {
   loadProgress,
@@ -165,20 +166,6 @@ export default function ProgressPage() {
       )
     : 0;
 
-  if (!stats) {
-    return (
-      <div className={styles.page}>
-        <Header activeProgress={false} streak={0} />
-        <main className={styles.main}>
-          <div style={{ color: C.sec, fontSize: "0.875rem" }}>Loading…</div>
-        </main>
-      </div>
-    );
-  }
-
-  const cards = buildStatsCards(stats);
-  const totalDone = stats.totalAnswered;
-
   const last14 = useMemo(() => {
     const days: { key: string; label: string; count: number; correct: number }[] = [];
     const cursor = new Date();
@@ -201,6 +188,19 @@ export default function ProgressPage() {
     return days;
   }, [recent, stats]);
 
+  if (!stats) {
+    return (
+      <div className={styles.page}>
+        <Header activeProgress={false} streak={0} />
+        <main className={styles.main}>
+          <div style={{ color: C.sec, fontSize: "0.875rem" }}>Loading…</div>
+        </main>
+      </div>
+    );
+  }
+
+  const cards = buildStatsCards(stats);
+  const totalDone = stats.totalAnswered;
   const maxDay = Math.max(1, ...last14.map((d) => d.count));
 
   return (
@@ -267,7 +267,7 @@ export default function ProgressPage() {
                   </div>
                   <div className={styles.radarBars}>
                     {radar.map(({ axis, v, answered, code }) => {
-                      const col = v >= 75 ? C.green : v >= 55 ? C.amber : v > 0 ? C.red : C.bdr2;
+                      const col = tierColor(v);
                       const href = code ? `/practice?module=${encodeURIComponent(code)}` : null;
                       const inner = (
                         <>

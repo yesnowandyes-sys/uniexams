@@ -1,69 +1,59 @@
-"""Shared LLM client for the Haiku-backed quality gates.
+"""Shared LLM client for LLM-backed quality gates.
 
-The three LLM-backed gates (`solver`, `reviewer`, `bio_judge`) all use the
-Anthropic Messages API via the proxy configured in the environment
-(`ANTHROPIC_BASE_URL`, `ANTHROPIC_API_KEY`, `ANTHROPIC_DEFAULT_HAIKU_MODEL`).
-This helper centralises:
+The LLM-backed gates (`solver`, `reviewer`, `bio_judge`) use GLM-5.2 via
+the z.ai OpenAI-compatible API. This helper centralises:
 
-- client construction
-- prompt-cache wiring for long static context (Bio Content Spec PDF)
+- client construction (reuses z.ai API key from generator_glm)
 - exponential backoff on rate limits / transient errors
-- cost estimation from `response.usage`
-
-Per `orchestration-review.md` §3, the Bio Content Spec is loaded once and
-cached across calls — this is the bulk of the cost saving that keeps the
-total 4-gate cost ≤ $0.005 / question.
+- cost estimation
 """
 
 from __future__ import annotations
 
 import logging
-import os
+import sys
 import time
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Optional
-
-try:
-    from google import genai
-    from google.genai.types import GenerateContentConfig
-except ImportError:  # pragma: no cover
-    genai = None  # type: ignore
 
 logger = logging.getLogger(__name__)
 
+# z.ai GLM-5.2 via OpenAI-compatible SDK (free tier).
+try:
+    import openai as _openai_module  # type: ignore
+except ImportError:
+    _openai_module = None  # type: ignore
 
-# Per-message model pricing (USD per million tokens).
-# Gemini free tier = $0. Paid tier rates shown for reference.
 MODEL_PRICING: dict[str, dict[str, float]] = {
-    "gemini-2.5-flash": {"input": 0.0, "output": 0.0},
-    "gemini-2.5-pro": {"input": 0.0, "output": 0.0},
-    "gemini-2.5-flash-paid": {"input": 0.30, "output": 2.40},
-    "gemini-2.5-pro-paid": {"input": 1.25, "output": 10.0},
-    # Legacy pricing (kept for reference)
-    "claude-haiku-4-5-20251001": {"input": 1.0, "output": 5.0, "cache_write": 1.25, "cache_read": 0.10},
-    "claude-3-5-haiku-20241022": {"input": 0.80, "output": 4.0, "cache_write": 1.0, "cache_read": 0.08},
-    "glm-4.5-air": {"input": 0.0, "output": 0.0, "cache_write": 0.0, "cache_read": 0.0},
-    "glm-5.2": {"input": 0.0, "output": 0.0, "cache_write": 0.0, "cache_read": 0.0},
+    "glm-5.2": {"input": 0.0, "output": 0.0},
 }
 
-# Primary API key from environment; fallback provided if quota exhausted.
-PRIMARY_API_KEY = os.environ.get("GEMINI_API_KEY")
-FALLBACK_API_KEY = "AIzaSyBkiGJSS45VVKwZuTL6oXPl-K3_Qv9z-44"  # Provided 2026-07-20
-DEFAULT_MODEL = os.environ.get("QUALITY_GATE_MODEL") or "gemini-2.5-flash"
+DEFAULT_MODEL = "glm-5.2"
 
 MAX_RETRIES = 4
 RETRY_BASE_DELAY = 1.5  # seconds, doubled each retry
 
+_client = None  # module-level singleton
 
-def _is_quota_error(exc: Exception) -> bool:
-    """Check if exception is a quota/rate-limit error (429)."""
-    status = getattr(exc, "status", None) or getattr(exc, "status_code", None)
-    if status == 429:
-        return True
-    msg = str(exc).lower()
-    if "quota exceeded" in msg or "resource_exhausted" in msg:
-        return True
-    return False
+
+def _get_client():
+    """Build (once) an OpenAI-compatible client pointed at z.ai."""
+    global _client
+    if _client is not None:
+        return _client
+    if _openai_module is None:
+        raise RuntimeError("openai SDK not installed — run `pip install openai`")
+    # Resolve API key the same way generator_glm does.
+    SCRIPTS_DIR = Path(__file__).resolve().parent
+    if str(SCRIPTS_DIR) not in sys.path:
+        sys.path.insert(0, str(SCRIPTS_DIR))
+    import generator_glm
+    api_key = generator_glm.resolve_api_key(None)
+    if not api_key:
+        raise RuntimeError("z.ai API key not available (set ZAI_API_KEY)")
+    _client = _openai_module.OpenAI(api_key=api_key, base_url=generator_glm.ZAI_BASE_URL)
+    return _client
 
 
 @dataclass
@@ -77,14 +67,8 @@ class LLMResult:
     model: str
 
 
-def _price(model: str) -> dict[str, float]:
-    return MODEL_PRICING.get(
-        model, {"input": 0.30, "output": 2.40, "cache_write": 0.0, "cache_read": 0.0}
-    )
-
-
 def _estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-    p = _price(model)
+    p = MODEL_PRICING.get(model, {"input": 0.0, "output": 0.0})
     return (
         input_tokens * p["input"] / 1_000_000
         + output_tokens * p["output"] / 1_000_000
@@ -100,46 +84,35 @@ def call_haiku(
     cache_system_prompt: bool = False,
     temperature: float = 0.0,
 ) -> LLMResult:
-    """Make a single Gemini call with retry/backoff.
+    """Make a single GLM-5.2 call via z.ai with retry/backoff.
 
-    Replaces the previous Anthropic Haiku path. Uses google-genai SDK
-    with GEMINI_API_KEY. The cache_system_prompt parameter is accepted
-    for backward compatibility but is a no-op (Gemini handles caching
-    automatically via implicit context caching).
+    Function name kept as `call_haiku` for backward compatibility with
+    existing imports in solver, reviewer, and bio_judge.
+    `cache_system_prompt` is accepted but ignored (no-op for z.ai).
     """
-    if genai is None:
-        raise RuntimeError(
-            "google-genai SDK not installed — run `pip install google-genai`"
-        )
+    if _openai_module is None:
+        raise RuntimeError("openai SDK not installed")
 
-    api_key = PRIMARY_API_KEY or FALLBACK_API_KEY
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set")
-
-    client = genai.Client(api_key=api_key)
-
-    # Track which key we're using for fallback switching
-    using_primary = (api_key == PRIMARY_API_KEY) and PRIMARY_API_KEY is not None
+    client = _get_client()
     effective_model = model or DEFAULT_MODEL
 
     last_exc: Optional[Exception] = None
     for attempt in range(MAX_RETRIES):
         try:
-            config = GenerateContentConfig(
-                system_instruction=system_prompt if system_prompt else None,
-                max_output_tokens=max_tokens,
+            response = client.chat.completions.create(
+                model=effective_model,
+                messages=[
+                    {"role": "system", "content": system_prompt} if system_prompt else None,
+                    {"role": "user", "content": user_prompt},
+                ],
+                max_tokens=max_tokens,
                 temperature=temperature,
             )
-            response = client.models.generate_content(
-                model=effective_model,
-                contents=user_prompt,
-                config=config,
-            )
-            text = response.text or ""
+            text = response.choices[0].message.content or "" if response.choices else ""
 
-            usage = getattr(response, "usage_metadata", None)
-            input_tokens = getattr(usage, "prompt_token_count", 0) or 0 if usage else 0
-            output_tokens = getattr(usage, "candidates_token_count", 0) or 0 if usage else 0
+            usage = response.usage
+            input_tokens = usage.prompt_tokens if usage else 0
+            output_tokens = usage.completion_tokens if usage else 0
 
             cost = _estimate_cost(effective_model, input_tokens, output_tokens)
             return LLMResult(
@@ -153,21 +126,11 @@ def call_haiku(
             )
         except Exception as exc:
             last_exc = exc
-            # Check if it's a quota error and we have a fallback key
-            if _is_quota_error(exc) and using_primary and FALLBACK_API_KEY:
-                logger.warning(
-                    "Primary API key quota exhausted, switching to fallback"
-                )
-                # Retry with fallback key
-                client = genai.Client(api_key=FALLBACK_API_KEY)
-                using_primary = False
-                continue
-            
             delay = RETRY_BASE_DELAY * (2 ** attempt) + 0.5
             logger.warning(
-                "Gemini call failed (attempt %d/%d), retrying in %.1fs: %s",
+                "GLM call failed (attempt %d/%d), retrying in %.1fs: %s",
                 attempt + 1, MAX_RETRIES, delay, last_exc,
             )
             time.sleep(delay)
 
-    raise RuntimeError(f"Gemini call failed after {MAX_RETRIES} attempts: {last_exc}")
+    raise RuntimeError(f"GLM call failed after {MAX_RETRIES} attempts: {last_exc}")

@@ -34,6 +34,14 @@ export const SH = {
   blue: "0 4px 14px rgba(37,99,235,0.22), 0 1px 3px rgba(37,99,235,0.12)",
 } as const;
 
+/** Shared accuracy → colour threshold used by the knowledge map and progress bars. */
+export function tierColor(v: number): string {
+  if (v >= 75) return C.green;
+  if (v >= 55) return C.amber;
+  if (v > 0) return C.red;
+  return C.bdr2;
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    CONSTANTS
    ═══════════════════════════════════════════════════════════════════ */

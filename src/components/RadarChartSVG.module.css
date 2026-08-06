@@ -1,0 +1,40 @@
+.dataShape {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rcGrow 0.55s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.dot {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rcDotIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes rcGrow {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rcDotIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dataShape,
+  .dot {
+    animation: none;
+  }
+}

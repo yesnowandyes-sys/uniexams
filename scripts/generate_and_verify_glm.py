@@ -23,6 +23,7 @@ import argparse
 import concurrent.futures
 import json
 import logging
+import math
 import os
 import random
 import re
@@ -60,13 +61,17 @@ ZAI_BASE_URL = generator_glm.ZAI_BASE_URL
 DEFAULT_MODEL = generator_glm.DEFAULT_MODEL
 MAX_TOKENS = 32768
 
-# Quota guard (same constants as generator_glm.py)
-QUOTA_COST_PER_QUESTION_PCT = generator_glm.QUOTA_COST_PER_QUESTION_PCT
-QUOTA_SAFETY_BUFFER = generator_glm.QUOTA_SAFETY_BUFFER
-QUOTA_HEADROOM_THRESHOLD_PCT = generator_glm.QUOTA_HEADROOM_THRESHOLD_PCT
+# Quota guard — block generation when usage exceeds expected usage.
+# Expected usage = elapsedPct * this multiplier.
+# Only run when actual percentage <= QUOTA_USAGE_MULTIPLIER * elapsedPct.
+QUOTA_USAGE_MULTIPLIER = 0.9
 
-# Quota poll interval while waiting for headroom
-QUOTA_POLL_INTERVAL_S = 60
+# Floor thresholds — below these elapsed percentages, allow generation unconditionally
+FIVE_HOUR_FLOOR_PCT = 10
+WEEKLY_FLOOR_PCT = 1
+
+# Lock file to prevent concurrent runs (e.g. overlapping cron triggers)
+LOCK_FILE = SCRIPTS_DIR / ".generate_and_verify_glm.lock"
 
 # Quota check: use the local dashboard endpoint (same as generator_glm.py).
 # The dashboard pre-computes elapsedPct correctly; calling z.ai directly
@@ -780,60 +785,46 @@ def _fetch_quota() -> Optional[dict[str, Any]]:
         with urllib.request.urlopen(_LOCAL_QUOTA_URL, timeout=5) as resp:
             return json.loads(resp.read())
     except Exception as exc:
-        logger.debug("Quota endpoint unreachable (non-fatal): %s", exc)
+        logger.warning("Quota endpoint unreachable: %s", exc)
         return None
 
 
 def _check_quota_allows() -> tuple[bool, Optional[str]]:
-    """Check if both weekly and 5-hour windows have sufficient headroom.
+    """Check if both weekly and 5-hour windows are within budget.
 
-    Returns (allowed, reset_info_string_or_None).
+    We only proceed when actual usage <= QUOTA_USAGE_MULTIPLIER * elapsed %.
+    This ensures we don't burn quota faster than time passes.
+
+    Returns (allowed, reason_string_or_None).
     """
     data = _fetch_quota()
     if data is None:
-        return True, None  # fail open
-
-    reset_info_parts: list[str] = []
+        return False, "quota endpoint unreachable"  # fail close
 
     for window_name in ("weekly", "fiveHour"):
         window = data.get(window_name, {})
         used = float(window.get("percentage", 0))
         elapsed = float(window.get("elapsedPct", 0))
-        headroom = elapsed - used
+        resets = window.get("resetsIn", "unknown")
 
-        # Skip check on freshly-reset windows (near-zero elapsed = plenty of budget)
-        if elapsed < QUOTA_HEADROOM_THRESHOLD_PCT:
+        # Floor threshold: below these elapsed percentages, skip the 90% rule
+        floor = FIVE_HOUR_FLOOR_PCT if window_name == "fiveHour" else WEEKLY_FLOOR_PCT
+        if elapsed <= floor:
+            logger.debug(
+                "%s window below floor (%.1f%% <= %d%%), skipping quota check",
+                window_name, elapsed, floor,
+            )
             continue
 
-        if headroom <= QUOTA_HEADROOM_THRESHOLD_PCT:
-            resets = window.get("resetsIn", "unknown")
-            reset_info_parts.append(
-                f"{window_name}: headroom={headroom:.2f}% (threshold={QUOTA_HEADROOM_THRESHOLD_PCT}%), "
+        budget = math.floor(QUOTA_USAGE_MULTIPLIER * elapsed)
+        if used > budget:
+            return False, (
+                f"{window_name}: {used:.1f}% used, "
+                f"budget is {budget}% (elapsed {elapsed:.1f}% × {QUOTA_USAGE_MULTIPLIER}), "
                 f"resets in {resets}"
             )
 
-    if reset_info_parts:
-        return False, "; ".join(reset_info_parts)
     return True, None
-
-
-def _wait_for_quota() -> bool:
-    """Poll the quota endpoint until headroom opens up or shutdown is requested.
-
-    Returns False if shutdown was requested.
-    """
-    logger.info("Quota headroom insufficient — waiting...")
-    while not _shutdown:
-        allowed, info = _check_quota_allows()
-        if allowed:
-            logger.info("Quota headroom restored — resuming generation.")
-            return True
-        logger.info("  Still waiting: %s (next check in %ds)", info, QUOTA_POLL_INTERVAL_S)
-        for _ in range(QUOTA_POLL_INTERVAL_S):
-            if _shutdown:
-                return False
-            time.sleep(1)
-    return False
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -1020,6 +1011,65 @@ def _build_work_queue() -> list[tuple[str, str]]:
 # ──────────────────────────────────────────────────────────────────────────
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# PID-based lock to prevent concurrent runs
+# ──────────────────────────────────────────────────────────────────────────
+
+
+def _acquire_lock() -> bool:
+    """Try to acquire the lock file. Returns True if lock acquired.
+    Returns False if another instance is already running.
+    """
+    try:
+        if LOCK_FILE.exists():
+            # Read existing PID
+            old_pid = LOCK_FILE.read_text().strip()
+            if old_pid:
+                # Check if the process is still alive
+                try:
+                    os.kill(int(old_pid), 0)  # signal 0 = check existence
+                    # Process exists — we cannot acquire the lock
+                    logger.info(
+                        "Another instance is running (PID %s). Exiting.",
+                        old_pid,
+                    )
+                    return False
+                except ProcessLookupError:
+                    # Stale lock — process is gone, remove it
+                    logger.info(
+                        "Stale lock from PID %s (process gone). Replacing.",
+                        old_pid,
+                    )
+                    LOCK_FILE.unlink()
+                except ValueError:
+                    # Corrupt PID — remove it
+                    logger.warning("Corrupt lock file. Replacing.")
+                    LOCK_FILE.unlink()
+                except PermissionError:
+                    logger.warning(
+                        "Cannot signal PID %s (permission denied). Assuming stale.",
+                        old_pid,
+                    )
+                    LOCK_FILE.unlink()
+
+        # Write our PID
+        LOCK_FILE.write_text(str(os.getpid()))
+        return True
+    except OSError as exc:
+        logger.warning("Could not acquire lock: %s", exc)
+        return False
+
+
+def _release_lock() -> None:
+    """Remove the lock file."""
+    try:
+        if LOCK_FILE.exists():
+            LOCK_FILE.unlink()
+    except OSError:
+        pass
+
+
+
 def run(
     *,
     client: Optional[openai.OpenAI] = None,
@@ -1030,8 +1080,9 @@ def run(
     no_wait: bool = False,
     max_runtime_s: float = 0.0,
 ) -> int:
-    """Main generate→verify loop. Returns count of verified questions inserted."""
+    """Main generate-then-verify loop. Returns count of verified questions inserted."""
 
+    # ── Build work queue ──
     if spec_code and difficulty:
         queue = [(spec_code, difficulty)]
     else:
@@ -1041,9 +1092,7 @@ def run(
         logger.error("No work to do.")
         return 0
 
-    logger.info(
-        "Queue: %d (spec, difficulty) combos", len(queue),
-    )
+    logger.info("Queue: %d (spec, difficulty) combos", len(queue))
 
     if dry_run:
         print(f"\nDry run — {len(queue)} combos queued:")
@@ -1053,17 +1102,44 @@ def run(
             print(f"  ... ({len(queue)} total)")
         print(f"\nGates per question: calculator, sympy, solver (GLM-5.2), reviewer (GLM-5.2)")
         print(f"  + chem_stoich (chemistry only) + bio_judge (biology only, GLM-5.2)")
-        print(f"Quota headroom threshold: {QUOTA_HEADROOM_THRESHOLD_PCT}%")
+        print(f"Quota rule: usage <= {QUOTA_USAGE_MULTIPLIER} x elapsed %")
         if max_runtime_s > 0:
             print(f"Max runtime: {_format_duration(max_runtime_s)}")
         return 0
 
-    # ── Pre-flight quota check (for cron use) ──
+    # ── Acquire PID lock (prevent concurrent runs from overlapping cron) ──
+    if not _acquire_lock():
+        logger.info("Could not acquire lock — another instance is running.")
+        return 0
+
+    try:
+        return _run_locked(
+            client=client,
+            max_questions=max_questions,
+            queue=queue,
+            no_wait=no_wait,
+            max_runtime_s=max_runtime_s,
+        )
+    finally:
+        _release_lock()
+
+
+def _run_locked(
+    *,
+    client: openai.OpenAI,
+    max_questions: Optional[int],
+    queue: list[tuple[str, str]],
+    no_wait: bool,
+    max_runtime_s: float,
+) -> int:
+    """Inner loop — only called while holding the PID lock."""
+
+    # ── Pre-flight quota check (for cron / no-wait mode) ──
     if no_wait:
         pre_allowed, pre_info = _check_quota_allows()
         if not pre_allowed:
             logger.info(
-                "Pre-flight: quota exhausted — exiting (cron will retry). %s",
+                "Pre-flight: over budget — exiting (cron will retry). %s",
                 pre_info,
             )
             return 0
@@ -1075,7 +1151,7 @@ def run(
     if max_runtime_s > 0:
         logger.info("Max runtime: %s", _format_duration(max_runtime_s))
 
-    # Ensure DB exists
+    # ── Ensure DB exists ──
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = _get_dbconn()
     _init_db(conn)
@@ -1119,12 +1195,8 @@ def run(
         allowed, reset_info = _check_quota_allows()
         if not allowed:
             logger.info("Quota guard: %s", reset_info)
-            if no_wait:
-                logger.info("Quota exhausted (no-wait mode) — exiting.")
-                break
-            if not _wait_for_quota():
-                logger.info("Shutdown while waiting for quota.")
-                break
+            logger.info("Quota exhausted — exiting (cron will retry).")
+            break
 
         sc, diff = queue[queue_idx]
         queue_idx += 1
@@ -1326,12 +1398,6 @@ def run(
     logger.info("=" * 60)
 
     return passed
-
-
-# ──────────────────────────────────────────────────────────────────────────
-# CLI
-# ──────────────────────────────────────────────────────────────────────────
-
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(

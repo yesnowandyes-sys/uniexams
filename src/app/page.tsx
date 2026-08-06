@@ -7,6 +7,7 @@ import {
   DAYS_LEFT,
   TOPICS,
   RADAR_DATA,
+  tierColor,
 } from "@/lib/constants";
 import {
   loadProgress,
@@ -316,7 +317,7 @@ export default function Dashboard() {
               </div>
               <div className={styles.radarBars}>
                 {radar.map(({ axis, v, code }) => {
-                  const col = v >= 75 ? C.green : v >= 55 ? C.amber : v > 0 ? C.red : C.bdr2;
+                  const col = tierColor(v);
                   const href = hasReal && code ? `/practice?module=${encodeURIComponent(code)}` : null;
                   const rowInner = (
                     <>
