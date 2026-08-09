@@ -81,7 +81,7 @@ function VariantA_OnBrandGrid() {
           Day Streak
         </div>
         <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
-          <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "1.875rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
+          <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "1.875rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
           <span style={{ fontSize: "0.75rem", fontWeight: 500, color: C.ter }}>days</span>
         </div>
       </div>
@@ -121,7 +121,7 @@ function VariantB_Ring() {
           </g>
         </svg>
         <div>
-          <div style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "1.375rem", fontWeight: 700, color: C.amber, lineHeight: 1 }}>
+          <div style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "1.375rem", fontWeight: 700, color: C.amber, lineHeight: 1 }}>
             12<span style={{ fontSize: "0.75rem", fontWeight: 500, color: C.ter }}> days</span>
           </div>
           <div style={{ fontSize: "0.625rem", color: C.ter, marginTop: 3 }}>86% to next tier</div>
@@ -141,7 +141,7 @@ function VariantC_Split() {
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: "0.625rem", color: C.ter }}>Current</div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-            <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "1.375rem", fontWeight: 700, color: C.amber }}>12</span>
+            <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "1.375rem", fontWeight: 700, color: C.amber }}>12</span>
             <span style={{ fontSize: "0.6875rem", color: C.ter }}>days</span>
           </div>
         </div>
@@ -149,7 +149,7 @@ function VariantC_Split() {
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: "0.625rem", color: C.ter }}>Best</div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-            <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "1.375rem", fontWeight: 700, color: C.sec }}>27</span>
+            <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "1.375rem", fontWeight: 700, color: C.sec }}>27</span>
             <span style={{ fontSize: "0.6875rem", color: C.ter }}>days</span>
           </div>
         </div>
@@ -180,7 +180,7 @@ function VariantD_Freeze() {
           Day Streak
         </div>
         <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
-          <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "1.875rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
+          <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "1.875rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
           <span style={{ fontSize: "0.75rem", fontWeight: 500, color: C.ter }}>days</span>
         </div>
       </div>
@@ -217,7 +217,7 @@ function VariantE_Lane() {
             Day Streak
           </div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
-            <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "2.25rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
+            <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "2.25rem", fontWeight: 700, lineHeight: 1, color: C.amber }}>12</span>
             <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: C.ter }}>days running</span>
           </div>
           <span style={{ fontSize: "0.6875rem", fontWeight: 600, color: C.sec }}>personal best 27</span>
@@ -244,7 +244,7 @@ function Row({
   return (
     <section style={{ marginBottom: 40 }}>
       <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 10 }}>
-        <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "0.75rem", fontWeight: 700, color: C.amber, background: C.aLite, border: `1px solid ${C.aBdr}`, padding: "2px 8px", borderRadius: 5 }}>
+        <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "0.75rem", fontWeight: 700, color: C.amber, background: C.aLite, border: `1px solid ${C.aBdr}`, padding: "2px 8px", borderRadius: 5 }}>
           {label}
         </span>
         <span style={{ fontSize: "0.8125rem", color: C.sec }}>{note}</span>
@@ -289,7 +289,7 @@ export default function StreakPreviewPage() {
 
         <section style={{ marginBottom: 40 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 10 }}>
-            <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "0.75rem", fontWeight: 700, color: C.amber, background: C.aLite, border: `1px solid ${C.aBdr}`, padding: "2px 8px", borderRadius: 5 }}>
+            <span style={{ fontFamily: "JetBrains Mono, 'DejaVu Sans Mono', monospace", fontSize: "0.75rem", fontWeight: 700, color: C.amber, background: C.aLite, border: `1px solid ${C.aBdr}`, padding: "2px 8px", borderRadius: 5 }}>
               E
             </span>
             <span style={{ fontSize: "0.8125rem", color: C.sec }}>
