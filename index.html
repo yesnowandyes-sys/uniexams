@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Tutor — Clean Slate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0}
+:root{
+  --bg:#F6F7FD;--surf:#fff;--alt:#EEF0FA;--bdr:#E2E5EA;--bdr2:#C7CCD4;
+  --text:#1B2027;--sec:#576073;--ter:#6B7280;
+  --blue:#2540C7;--mid:#3B5FEC;--lite:#EAF0FE;--liteb:#C7D6FB;
+  --green:#16A34A;--gLite:#F0FDF4;--gBdr:#86EFAC;
+  --red:#DC2626;--rLite:#FEF2F2;--rBdr:#FECACA;
+  --amber:#B45309;--aLite:#FFFBEB;--aBdr:#FDE68A;--flame:#F59E0B;
+  --streak:#B45309;--streakLite:#F3E3D1;
+  --teal:#0F766E;
+  --purp:#7C3AED;--pLite:#F5F3FF;--pBdr:#DDD6FE;
+  --subjBio:#15803D;
+  --navy:#1E293B;--navy2:#2A3B52;--navy3:#3A4C66;--navy-text:#AAB4C4;--navy-dim:#7C879C;
+  --sbw:236px;--sbw-c:76px;
+  --shadow-1:0 1px 2px rgba(20,25,50,.04),0 1px 6px rgba(20,25,50,.04);
+  --shadow-2:0 6px 16px rgba(20,25,50,.10);
+  --shadow-3:0 10px 26px rgba(20,25,50,.20),0 2px 8px rgba(20,25,50,.14);
+}
+html{overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+.view{display:none;opacity:1;transform:translateY(0);transition:opacity .22s ease,transform .22s ease}
+.view.active{display:block}
+.view.view-enter{opacity:0;transform:translateY(6px);transition:none}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--mid);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ═══ SIDEBAR ═══ */
+.sidebar{width:var(--sbw);flex-shrink:0;height:100vh;position:fixed;top:0;left:0;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);display:flex;flex-direction:column;padding:1.25rem 0 .9rem;z-index:200}
+.sb-brand{display:flex;align-items:center;gap:10px;padding:0 1.25rem;margin-bottom:1.5rem;text-decoration:none}
+.sb-brand-icon{width:34px;height:34px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.sb-brand-icon span{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.45rem;color:var(--blue);line-height:1}
+.sb-brand-txt{display:flex;flex-direction:column;line-height:1.15;white-space:nowrap}
+.sb-brand-txt b{font-size:.8125rem;font-weight:700;letter-spacing:.08em;color:#fff}
+.sb-brand-txt em{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.0625rem;color:#B9C6D8}
+.sb-nav{flex:1;overflow-y:auto;overflow-x:hidden;padding:0 .7rem}
+.sb-label{font-size:.6875rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--navy-dim);padding:1.1rem .7rem .45rem;white-space:nowrap}
+.sb-item{display:flex;align-items:center;gap:12px;width:100%;padding:.6rem .7rem;border-radius:10px;border:none;background:none;color:var(--navy-text);font-size:.85rem;font-weight:500;cursor:pointer;text-align:left;margin-bottom:2px;transition:background .12s,color .12s;white-space:nowrap;overflow:hidden}
+.sb-item svg{flex-shrink:0}
+.sb-item span{overflow:hidden;text-overflow:ellipsis}
+.sb-item:hover{background:rgba(255,255,255,.07);color:#fff}
+.sb-item:focus-visible{outline-color:#fff;outline-offset:-2px}
+.sb-item.active:focus-visible{outline-color:var(--blue)}
+.sb-item.active{background:#fff;color:var(--blue);font-weight:700;box-shadow:var(--shadow-2)}
+.sb-tag{margin-left:auto;font-size:.5625rem;font-weight:700;background:var(--flame);color:#fff;padding:2px 6px;border-radius:20px;letter-spacing:.02em;flex-shrink:0}
+.sb-footer{padding:.7rem;border-top:1px solid rgba(255,255,255,.09);margin-top:.5rem}
+.sb-user{display:flex;align-items:center;gap:10px;padding:.5rem;border-radius:10px;cursor:pointer}
+.sb-user:hover{background:rgba(255,255,255,.07)}
+.sb-user-av{width:34px;height:34px;border-radius:50%;background:var(--navy3);border:2px solid #4E627E;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;font-size:.8125rem;color:#fff}
+.sb-user-info{line-height:1.25;overflow:hidden;white-space:nowrap}
+.sb-user-info b{font-size:.8125rem;color:#fff;display:block;overflow:hidden;text-overflow:ellipsis}
+.sb-user-info span{font-size:.6875rem;color:var(--navy-dim)}
+
+/* ═══ MAIN / TOPBAR ═══ */
+.app-main{margin-left:var(--sbw);min-height:100vh;background:var(--bg)}
+.topbar{height:64px;background:var(--surf);border-bottom:1px solid var(--bdr);display:flex;align-items:center;padding:0 1.75rem;gap:14px;position:sticky;top:0;z-index:100}
+.topbar-title{font-size:1.0625rem;font-weight:800;letter-spacing:-.015em;margin-right:auto}
+.topbar-search{display:flex;align-items:center;gap:8px;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:0 12px;width:230px;height:38px;color:var(--ter);flex-shrink:0}
+.topbar-search input{border:none;background:none;outline:none;font-family:inherit;font-size:.8125rem;color:var(--text);width:100%;height:100%}
+.topbar-search input::placeholder{color:var(--ter)}
+.icon-btn{width:38px;height:38px;border-radius:9px;border:1px solid var(--bdr);background:var(--surf);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;flex-shrink:0;color:var(--sec);transition:background .1s,transform .1s}
+.icon-btn:hover{background:var(--alt)}
+.icon-btn:active{transform:scale(.93)}
+.icon-dot{position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:var(--red);border:1.5px solid var(--surf)}
+.topbar-streak{display:flex;align-items:center;gap:7px;background:var(--aLite);border:1px solid var(--aBdr);border-radius:20px;padding:5px 12px 5px 8px;flex-shrink:0}
+.topbar-streak span{font-size:.75rem;font-weight:700;color:var(--amber);font-family:'JetBrains Mono',monospace}
+.topbar-avatar{width:36px;height:36px;border-radius:50%;background:var(--lite);border:2px solid var(--liteb);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+
+.page{max-width:1240px;margin:0 auto;padding:1.75rem 2.25rem 2.5rem}
+.label{font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;padding:1.25rem 1.375rem;box-shadow:var(--shadow-1)}
+.section-title{font-size:.9375rem;font-weight:700}
+.section-sub{font-size:.8125rem;color:var(--ter);margin:0}
+.bar{height:6px;border-radius:4px;background:var(--alt);overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;transition:width .55s cubic-bezier(.16,1,.3,1)}
+
+/* ═══ HOME ═══ */
+.greeting{margin-bottom:1.1rem}
+.greeting h1{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:2.25rem;letter-spacing:-.005em;margin-bottom:2px}
+.greeting p{font-size:.875rem;color:var(--sec);line-height:1.6}
+.greeting strong{font-weight:600;color:var(--text)}
+
+/* ═══ Dial-first hero banner (Study Hub's blue-gradient grade-card pattern, widened) ═══ */
+.banner-card{background:linear-gradient(135deg,#3B53CD 0%,#4F6FEE 100%);border:none;border-radius:16px;padding:1.375rem 1.625rem;margin-bottom:1.1rem;display:flex;align-items:center;gap:1.5rem;box-shadow:0 10px 30px rgba(59,83,205,.28),0 2px 10px rgba(79,111,238,.20)}
+.dial-wrap{position:relative;width:140px;height:140px;flex-shrink:0}
+.dial-wrap svg{display:block;width:100%;height:100%;overflow:visible}
+.dial-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.dial-center b{font-family:'JetBrains Mono',monospace;font-size:1.625rem;font-weight:700;color:#fff;line-height:1}
+.dial-center span{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.75);margin-top:3px}
+.banner-info{flex:1;min-width:0}
+.banner-info .label{color:rgba(255,255,255,.7);margin-bottom:.4rem;display:block}
+.banner-info h2{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:1.5rem;color:#fff;letter-spacing:-.005em;margin-bottom:.4rem}
+.banner-info p{font-size:.8125rem;color:rgba(255,255,255,.8);line-height:1.55;max-width:440px;margin-bottom:.85rem}
+.banner-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.banner-delta{display:inline-flex;align-items:center;gap:6px;font-size:.6875rem;font-weight:700;color:#fff;background:rgba(255,255,255,.18);padding:5px 10px;border-radius:20px;flex-shrink:0}
+.btn-white{display:flex;align-items:center;justify-content:center;gap:8px;padding:.55rem 1.125rem;border-radius:9px;border:none;background:#fff;color:var(--blue);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;white-space:nowrap;flex-shrink:0}
+.btn-white:hover{filter:brightness(.97);box-shadow:var(--shadow-3);transform:translateY(-1px)}
+.btn-white:active{transform:scale(.97)}
+.btn-white:focus-visible{outline-color:#fff}
+
+/* Mini grid: Days Remaining + Daily Streak (Study Hub's plain hero-card pattern) */
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
+.hero-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.1rem 1.25rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.65rem}
+.hero-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* Days remaining */
+.days-num{font-family:'JetBrains Mono',monospace;font-size:2.25rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
+.days-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
+.days-meta{display:flex;flex-direction:column;gap:7px;margin-top:.85rem;font-size:.75rem;color:var(--sec);line-height:1.3}
+.days-meta b{color:var(--text);font-weight:600}
+.days-progress{margin-top:.85rem}
+.days-progress-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
+
+/* Streak */
+.streak-flame{width:26px;height:26px;border-radius:7px;background:var(--aLite);display:flex;align-items:center;justify-content:center}
+.streak-num{font-family:'JetBrains Mono',monospace;font-size:2.25rem;font-weight:700;color:var(--flame);line-height:1;letter-spacing:-.03em}
+.streak-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
+.streak-week{display:flex;gap:7px;margin-top:.75rem}
+.streak-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.streak-day-dot{width:100%;aspect-ratio:1;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--alt);box-shadow:inset 0 0 0 1px var(--bdr);opacity:0;transform:scale(.55);animation:cellIn .45s cubic-bezier(.34,1.56,.64,1) forwards}
+.streak-day-dot.done{background:var(--streak);box-shadow:none}
+.streak-day-dot.today{background:var(--lite);box-shadow:inset 0 0 0 2px var(--mid)}
+.streak-day span{font-size:.625rem;font-weight:600;color:var(--ter)}
+.streak-day:nth-child(1) .streak-day-dot{animation-delay:.05s}
+.streak-day:nth-child(2) .streak-day-dot{animation-delay:.1s}
+.streak-day:nth-child(3) .streak-day-dot{animation-delay:.15s}
+.streak-day:nth-child(4) .streak-day-dot{animation-delay:.2s}
+.streak-day:nth-child(5) .streak-day-dot{animation-delay:.25s}
+.streak-day:nth-child(6) .streak-day-dot{animation-delay:.3s}
+.streak-day:nth-child(7) .streak-day-dot{animation-delay:.35s}
+@keyframes cellIn{to{opacity:1;transform:scale(1)}}
+
+/* Focus Areas */
+.focus-section{margin-bottom:1.1rem}
+.na-header{display:flex;align-items:center;gap:7px;margin-bottom:.9rem}
+.focus-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.focus-row{display:flex;align-items:center;gap:12px;padding:.7rem .8rem;border-radius:11px;background:var(--alt)}
+.focus-row-body{flex:1;min-width:0}
+.focus-row-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px}
+.focus-name{font-size:.8125rem;font-weight:500;color:var(--text);line-height:1.3}
+.focus-tag{font-size:.625rem;font-weight:600;color:var(--ter);margin-left:6px}
+.focus-sub{font-size:.6875rem;color:var(--ter);margin-top:1px}
+.focus-pct{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;flex-shrink:0;padding:2px 7px;border-radius:6px}
+.focus-bar{height:6px;border-radius:6px;background:var(--surf);overflow:hidden}
+.focus-bar-fill{height:100%;border-radius:6px}
+
+.btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:.7rem 1.25rem;border-radius:10px;border:none;background:var(--mid);color:#fff;font-size:.875rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;width:100%}
+.btn-primary:hover{filter:brightness(1.08);box-shadow:0 6px 18px rgba(61,114,184,.32);transform:translateY(-1px)}
+.btn-primary:active{transform:scale(.97)}
+
+/* Achievements */
+.achv-card{background:var(--surf)}
+.achv-row-wrap{position:relative}
+.achv-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.achv-fade{position:absolute;top:0;right:0;bottom:4px;width:52px;display:flex;align-items:center;justify-content:flex-end;padding-right:2px;background:linear-gradient(90deg,rgba(255,255,255,0),var(--surf) 65%);pointer-events:none;border-radius:0 12px 12px 0;opacity:1;transition:opacity .25s ease}
+.achv-fade.hide{opacity:0}
+.achv{flex:0 0 142px;border:1px solid var(--bdr);border-radius:12px;padding:.8rem;text-align:center;box-shadow:var(--shadow-1);transition:transform .12s,box-shadow .12s}
+.achv:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.achv-icon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem}
+.achv-name{font-size:.75rem;font-weight:700;margin-bottom:2px}
+.achv-desc{font-size:.6875rem;color:var(--ter);line-height:1.4}
+.achv.locked{opacity:.55}
+.achv.locked .achv-icon{background:var(--alt) !important}
+.achv.locked .achv-icon svg{stroke:var(--ter) !important}
+
+/* ═══ SOON PLACEHOLDER ═══ */
+.soon-wrap{max-width:1180px;margin:0 auto;padding:4.5rem 2rem;text-align:center}
+.soon-icon{width:72px;height:72px;border-radius:20px;background:var(--lite);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.soon-wrap h2{font-size:1.375rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem}
+.soon-wrap p{font-size:.9375rem;color:var(--sec);max-width:420px;margin:0 auto 1.5rem;line-height:1.6}
+
+/* ═══ PRACTICE VIEW (exact layout copied from Current Rebranded) ═══ */
+.practice-wrap{max-width:1200px;margin:0 auto;padding:1.5rem 1.75rem}
+.practice-layout{display:flex;gap:1.5rem}
+.practice-main{flex:1;min-width:0}
+.practice-sidebar{width:268px;flex-shrink:0}
+.question-nav{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap}
+.qnum{width:36px;height:36px;border-radius:8px;border:2px solid var(--bdr);background:var(--surf);color:var(--ter);font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s,transform .1s;box-sizing:border-box;padding:0}
+.qnum:hover{transform:scale(1.08)}
+.qnum:active{transform:scale(.93)}
+.qnum.cur{border-color:var(--mid);font-weight:700;box-shadow:0 0 0 3px var(--lite)}
+.qnum.correct{background:var(--gLite);border-color:var(--green);color:var(--green)}
+.qnum.incorrect{background:var(--rLite);border-color:var(--red);color:var(--red)}
+
+.q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:.875rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1)}
+.q-meta{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
+.q-text{font-size:.9375rem;line-height:1.85;color:var(--text);margin:0}
+.pill{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:5px;font-size:.6875rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;line-height:1;user-select:none}
+
+.opts{display:flex;flex-direction:column;gap:8px;margin-bottom:.875rem}
+.opt{display:flex;align-items:center;padding:.75rem 1rem;border-radius:10px;border:2px solid var(--bdr);background:var(--surf);font-family:'Inter',sans-serif;text-align:left;width:100%;box-sizing:border-box;cursor:pointer;transition:background .1s,border-color .12s,box-shadow .12s,transform .1s}
+.opt:hover:not(.answered){background:var(--lite);border-color:var(--mid);box-shadow:0 0 0 3px var(--lite)}
+.opt:active:not(.answered){transform:scale(.985)}
+.opt.answered{cursor:default}
+.letter{width:28px;height:28px;border-radius:7px;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.8125rem;display:flex;align-items:center;justify-content:center;background:var(--alt);color:var(--sec);margin-right:.875rem;transition:background .12s,color .12s}
+.opt-text{flex:1;font-size:.875rem;line-height:1.6}
+.kbd-hint{margin-left:8px;opacity:.45;font-size:.6875rem;font-family:'JetBrains Mono',monospace}
+.state-badge{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:10px}
+.opt.correct-answer{border-color:var(--green);background:var(--gLite)}
+.opt.correct-answer .letter{background:var(--green);color:#fff}
+.opt.correct-answer .opt-text{color:var(--green);font-weight:500}
+.opt.wrong-answer{border-color:var(--red);background:var(--rLite)}
+.opt.wrong-answer .letter{background:var(--red);color:#fff}
+.opt.wrong-answer .opt-text{color:var(--red);font-weight:500}
+.opt.dimmed .opt-text{color:var(--ter)}
+
+.soln-toggle{display:flex;align-items:center;gap:8px;width:100%;padding:.625rem 1rem;border-radius:9px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:500;font-family:'Inter',sans-serif;box-sizing:border-box;text-align:left;cursor:pointer;transition:background .1s,border-color .12s,transform .1s}
+.soln-toggle:hover{background:var(--alt)}
+.soln-toggle:active{transform:scale(.99)}
+.soln-toggle.open{border-radius:9px 9px 0 0;border-color:var(--liteb);background:var(--lite);color:var(--mid)}
+.result-pill{padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:700;display:flex;align-items:center;gap:4px}
+.soln-content{padding:1.25rem 1.375rem;background:var(--lite);border:1px solid var(--liteb);border-top:none;border-radius:0 0 9px 9px}
+.soln-header{display:flex;align-items:center;gap:6px;margin-bottom:.75rem}
+.soln-label{font-size:.8125rem;font-weight:600;color:var(--blue)}
+.soln-text{font-size:.875rem;color:var(--text);line-height:1.9;white-space:pre-wrap;margin:0}
+
+.nav-btns{display:flex;align-items:center;gap:8px;margin-top:4px}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:background .1s,transform .1s}
+.nav-btn:hover:not(:disabled){background:var(--alt)}
+.nav-btn:active:not(:disabled){transform:scale(.96)}
+.nav-btn:disabled{opacity:.4;cursor:default}
+
+.sb-card{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:1.1rem 1.2rem;margin-bottom:12px;box-shadow:var(--shadow-1)}
+.sb-prog{display:flex;align-items:baseline;gap:5px;margin-bottom:10px}
+.sb-prog-num{font-family:'JetBrains Mono',monospace;font-size:1.875rem;font-weight:700;color:var(--mid);line-height:1}
+.sb-prog-lbl{font-size:.875rem;color:var(--ter)}
+.sb-stats{display:flex;justify-content:space-between;margin-top:10px;font-size:.75rem;color:var(--ter)}
+.sb-btn{margin-top:10px;width:100%;padding:8px 12px;border-radius:8px;border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:.8125rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;transition:filter .12s,transform .1s}
+.sb-btn:hover{filter:brightness(1.07)}
+.sb-btn:active{transform:scale(.97)}
+.kbd{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;background:var(--surf);border:1px solid var(--bdr2);border-bottom:2px solid var(--bdr2);color:var(--sec);line-height:1}
+
+/* Animations */
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.75)}}
+.streak-flame svg{animation:pdot 2.4s ease-in-out infinite}
+.dial-progress{transition:stroke-dashoffset 1.15s cubic-bezier(.22,1,.36,1)}
+.dial-marker{opacity:0;transform:scale(.4);transform-origin:122.7px 55.9px;transition:opacity .4s ease .95s,transform .4s cubic-bezier(.34,1.56,.64,1) .95s}
+.dial-marker.show{opacity:1;transform:scale(1)}
+@keyframes optPulse{0%{transform:scale(1)}35%{transform:scale(1.035)}100%{transform:scale(1)}}
+.opt.pulse-in{animation:optPulse .38s cubic-bezier(.34,1.56,.64,1)}
+@keyframes navPop{0%{transform:scale(.94)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
+.sb-item.nav-pop{animation:navPop .32s cubic-bezier(.34,1.56,.64,1)}
+
+/* Responsive */
+@media(max-width:1080px){
+.banner-card{flex-direction:column;text-align:center;gap:1.5rem}
+.banner-info p{margin-left:auto;margin-right:auto}
+.banner-actions{justify-content:center}
+}
+@media(max-width:860px){
+:root{--sbw:var(--sbw-c)}
+.sb-brand-txt,.sb-item span,.sb-user-info,.sb-label,.sb-tag{display:none}
+.sb-item{justify-content:center;padding:.65rem}
+.sb-brand{justify-content:center;padding:0}
+.sb-user{justify-content:center}
+.topbar{padding:0 1rem}.topbar-search{display:none}
+.page{padding:1.25rem 1rem 2rem}
+.mini-grid{grid-template-columns:1fr}
+.focus-list{grid-template-columns:1fr}
+.practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
+.banner-card{padding:1.375rem 1.25rem}
+}
+@media(max-width:480px){
+.page{padding:1rem .75rem 2rem}.greeting h1{font-size:1.75rem}
+.days-num,.streak-num{font-size:2rem}
+.topbar-title{font-size:.9375rem}
+.qnum{width:32px;height:32px}
+.dial-wrap{width:120px;height:120px}
+.dial-center b{font-size:1.375rem}
+}
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar">
+  <a class="sb-brand" href="#">
+    <div class="sb-brand-icon"><span>E</span></div>
+    <div class="sb-brand-txt"><b>EXAM</b><em>Tutor</em></div>
+  </a>
+  <nav class="sb-nav">
+    <button class="sb-item active" id="navHome" onclick="nav(this,'home','Home')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1V10.5Z"/></svg>
+      <span>Home</span>
+    </button>
+    <button class="sb-item" id="navPractice" onclick="nav(this,'practice','Practice')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
+      <span>Practice</span>
+    </button>
+    <div class="sb-label">Prepare</div>
+    <button class="sb-item" onclick="nav(this,'soon','Mock Exams')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg>
+      <span>Mock Exams</span>
+      <span class="sb-tag">NEW</span>
+    </button>
+    <button class="sb-item" onclick="nav(this,'soon','Topics')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg>
+      <span>Topics</span>
+    </button>
+    <div class="sb-label">Progress</div>
+    <button class="sb-item" onclick="nav(this,'soon','Analytics')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5V9.75M9.75 19.5V4.5M15 19.5v-7.5M20.25 19.5V12"/></svg>
+      <span>Analytics</span>
+    </button>
+    <button class="sb-item" onclick="nav(this,'soon','Achievements')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/><path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
+      <span>Achievements</span>
+    </button>
+    <button class="sb-item" onclick="nav(this,'soon','Leaderboard')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 21V13.5h4.5V21M9.75 21V9h4.5v12M15 21v-6h4.5v6"/></svg>
+      <span>Leaderboard</span>
+    </button>
+  </nav>
+  <div class="sb-footer">
+    <button class="sb-item" style="margin-bottom:8px" onclick="nav(this,'soon','Settings')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+      <span>Settings</span>
+    </button>
+    <div class="sb-user">
+      <div class="sb-user-av">A</div>
+      <div class="sb-user-info"><b>Alex Morgan</b><span>ESAT 2026 · Free plan</span></div>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<div class="app-main">
+  <header class="topbar">
+    <div class="topbar-title" id="topbarTitle">Home</div>
+    <div class="topbar-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+      <input type="text" placeholder="Search topics, questions...">
+    </div>
+    <div class="topbar-streak"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg><span>12</span></div>
+    <button class="icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg><div class="icon-dot"></div></button>
+    <div class="topbar-avatar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.6"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg></div>
+  </header>
+
+  <!-- ═══ HOME VIEW ═══ -->
+  <div id="view-home" class="view active">
+    <div class="page">
+      <div class="greeting">
+        <h1>Good morning, Alex.</h1>
+        <p>65 days to the ESAT. Your weakest area right now is <strong>Biology</strong> — today's session targets it.</p>
+      </div>
+
+      <!-- Dial-first hero banner: Study Hub's blue-gradient card pattern + clock-style dial + Practice Now -->
+      <div class="banner-card">
+        <div class="dial-wrap">
+          <svg viewBox="0 0 300 300">
+            <!-- track -->
+            <circle cx="150" cy="150" r="98" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="14"/>
+            <!-- progress arc: starts fully hidden (dashoffset = circumference), JS animates it in on load. Rotated -45deg so 0% begins at grade "1" (1:30 position) instead of 12 o'clock -->
+            <circle id="dialProgress" class="dial-progress" cx="150" cy="150" r="98" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-dasharray="615.75" stroke-dashoffset="615.75" transform="rotate(-45 150 150)"/>
+
+            <!-- tick marks between grades, angle-computed (9 grades x 40deg, midpoints) -->
+            <g stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round">
+              <line x1="244.3" y1="106.1" x2="253.3" y2="101.8"/>
+              <line x1="250.5" y1="176.9" x2="260.1" y2="179.5"/>
+              <line x1="209.7" y1="235.2" x2="215.4" y2="243.4"/>
+              <line x1="140.9" y1="253.6" x2="140.1" y2="263.6"/>
+              <line x1="76.5" y1="223.5" x2="69.4" y2="230.6"/>
+              <line x1="46.4" y1="159.1" x2="36.4" y2="159.9"/>
+              <line x1="64.8" y1="90.4" x2="56.6" y2="84.6"/>
+              <line x1="123.1" y1="49.5" x2="120.5" y2="39.9"/>
+              <line x1="194.0" y1="55.7" x2="198.2" y2="46.7"/>
+            </g>
+
+            <!-- grades 1-9 around the ring, clock-style, angle-computed (40deg apart, starting at 1:30 so "1" never sits at 12 o'clock and there's no 0) -->
+            <g font-family="Inter,sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
+              <text x="239.1" y="60.9" font-size="17" fill="rgba(255,255,255,.6)">1</text>
+              <text x="275.5" y="139.0" font-size="17" fill="rgba(255,255,255,.6)">2</text>
+              <text x="253.2" y="222.3" font-size="17" fill="rgba(255,255,255,.6)">3</text>
+              <text x="182.6" y="271.7" font-size="17" fill="rgba(255,255,255,.6)">4</text>
+              <text x="96.7" y="264.2" font-size="17" fill="rgba(255,255,255,.6)">5</text>
+              <text x="35.8" y="203.3" font-size="17" fill="rgba(255,255,255,.6)">6</text>
+              <text x="28.3" y="117.4" font-size="17" fill="rgba(255,255,255,.6)">7</text>
+              <text x="77.7" y="46.8" font-size="17" fill="rgba(255,255,255,.6)">8</text>
+              <text x="161.0" y="24.5" font-size="22" fill="#fff">9</text>
+            </g>
+
+            <!-- clean marker dot at current position (83%), fades/pops in once the arc finishes drawing -->
+            <circle id="dialMarker" class="dial-marker" cx="122.7" cy="55.9" r="6" fill="#fff" stroke="var(--blue)" stroke-width="2.5"/>
+          </svg>
+          <div class="dial-center">
+            <b>9</b>
+            <span>83%</span>
+          </div>
+        </div>
+        <div class="banner-info">
+          <span class="label">Predicted Grade</span>
+          <h2>On track for a Grade 9</h2>
+          <p>Based on your last 30 days of practice across all modules, you're tracking toward the top grade band — keep the streak going through Biology to lock it in.</p>
+          <div class="banner-actions">
+            <button class="btn-white" onclick="nav(document.getElementById('navPractice'),'practice','Practice')"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)" stroke="var(--blue)" stroke-width="0"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></svg>Practice Now</button>
+            <span class="banner-delta">↑ 4% vs last month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-grid">
+        <!-- Days Remaining -->
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Days Remaining</span>
+            <div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
+          </div>
+          <div class="days-num">65</div>
+          <div class="days-lbl">days to exam</div>
+          <div class="days-meta"><span>ESAT · <b>Thu, 9 Oct 2026</b></span><span>Cambridge · Imperial · UCL</span></div>
+          <div class="days-progress">
+            <div class="days-progress-lbl"><span>Study period</span><span>55 / 120 days</span></div>
+            <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
+          </div>
+        </div>
+
+        <!-- Daily Streak -->
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Daily Streak</span>
+            <div class="streak-flame"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
+          </div>
+          <div class="streak-num">12</div>
+          <div class="streak-lbl">day streak</div>
+          <div class="streak-week">
+            <div class="streak-day"><div class="streak-day-dot done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div><span>M</span></div>
+            <div class="streak-day"><div class="streak-day-dot done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div><span>T</span></div>
+            <div class="streak-day"><div class="streak-day-dot done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div><span>W</span></div>
+            <div class="streak-day"><div class="streak-day-dot done"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div><span>T</span></div>
+            <div class="streak-day"><div class="streak-day-dot today"></div><span>F</span></div>
+            <div class="streak-day"><div class="streak-day-dot"></div><span>S</span></div>
+            <div class="streak-day"><div class="streak-day-dot"></div><span>S</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card focus-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Focus Areas</h3></div>
+        <div class="focus-list">
+          <div class="focus-row" style="border-left:4px solid var(--mid)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Maths 1<span class="focus-tag">Compulsory</span></div><div class="focus-sub">96 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--mid)">74%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:74%;background:var(--mid)"></div></div></div></div>
+          <div class="focus-row" style="border-left:4px solid var(--purp)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Maths 2</div><div class="focus-sub">88 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--purp)">51%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:51%;background:var(--purp)"></div></div></div></div>
+          <div class="focus-row" style="border-left:4px solid var(--teal)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Physics</div><div class="focus-sub">104 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--teal)">62%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:62%;background:var(--teal)"></div></div></div></div>
+          <div class="focus-row" style="border-left:4px solid var(--amber)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Chemistry</div><div class="focus-sub">134 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--amber)">68%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:68%;background:var(--amber)"></div></div></div></div>
+          <div class="focus-row" style="border-left:4px solid var(--subjBio)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Biology</div><div class="focus-sub">142 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--subjBio)">40%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:40%;background:var(--subjBio)"></div></div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Achievements</h3></div>
+        <div class="achv-row-wrap">
+          <div class="achv-row" id="achvRow">
+            <div class="achv"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><div class="achv-name">7-Day Streak</div><div class="achv-desc">Practised 7 days in a row</div></div>
+            <div class="achv"><div class="achv-icon" style="background:var(--gLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><div class="achv-name">50 Questions</div><div class="achv-desc">Answered 50 practice Qs</div></div>
+            <div class="achv"><div class="achv-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><div class="achv-name">Speed Round</div><div class="achv-desc">10 Qs answered under 5 min</div></div>
+            <div class="achv locked"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><div class="achv-name">Perfect Score</div><div class="achv-desc">100% on a full mock exam</div></div>
+            <div class="achv locked"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><div class="achv-name">100-Day Streak</div><div class="achv-desc">Practised 100 days straight</div></div>
+          </div>
+          <div class="achv-fade" id="achvFade" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--ter)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PRACTICE VIEW (exact layout of Current Rebranded question page) ═══ -->
+  <div id="view-practice" class="view">
+    <div class="practice-wrap">
+      <div class="practice-layout">
+        <div class="practice-main">
+          <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
+          <div id="questionArea"></div>
+          <div id="answerAnnounce" class="sr-only" aria-live="polite"></div>
+          <div class="nav-btns">
+            <button class="nav-btn" id="prevBtn" onclick="navQ(-1)" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Previous</button>
+            <button class="nav-btn" id="nextBtn" onclick="navQ(1)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg> Next</button>
+          </div>
+        </div>
+        <div class="practice-sidebar">
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:8px">Session Progress</div>
+            <div class="sb-prog"><span class="sb-prog-num" id="sbProgNum">0</span><span class="sb-prog-lbl">of 10 answered</span></div>
+            <div class="bar" style="height:4px"><div class="bar-fill" id="sbProgBar" style="width:0%;background:var(--mid)"></div></div>
+            <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="sbCorrect">0</strong></span><span>Remaining: <strong style="font-family:'JetBrains Mono',monospace;color:var(--sec)" id="sbRemain">10</strong></span></div>
+          </div>
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
+            <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">1</span>–<span class="kbd">9</span><span style="margin-left:4px">Select answer</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">A</span>–<span class="kbd">D</span><span style="margin-left:4px">Select answer</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">S</span><span style="margin-left:4px">Toggle solution</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
+            </div>
+          </div>
+          <button class="sb-btn" onclick="resetSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ COMING SOON PLACEHOLDER (shared by unbuilt pages) ═══ -->
+  <div id="view-soon" class="view">
+    <div class="soon-wrap">
+      <div class="soon-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.6"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94M12 8.25v4.5m0 3h.008v.008H12v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+      <h2 id="soonTitle">Coming Soon</h2>
+      <p>This page is still being designed. Check back soon — for now, head to Home or start a Practice session.</p>
+      <button class="btn-primary" style="width:auto;padding:.8rem 1.75rem" onclick="nav(document.getElementById('navHome'),'home','Home')">Back to Home</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function nav(el,view,title){
+  document.querySelectorAll('.sb-item').forEach(i=>{i.classList.remove('active');i.removeAttribute('aria-current')});
+  el.classList.add('active');
+  el.setAttribute('aria-current','page');
+  el.classList.add('nav-pop');
+  el.addEventListener('animationend',()=>el.classList.remove('nav-pop'),{once:true});
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const target=document.getElementById('view-'+view);
+  target.classList.add('active','view-enter');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>target.classList.remove('view-enter')));
+  document.getElementById('topbarTitle').textContent=title;
+  if(view==='soon')document.getElementById('soonTitle').textContent=title;
+}
+
+/* ── Practice question engine (matches Study Hub / Current Rebranded exactly) ── */
+const QUESTIONS=[
+{q:"A polynomial f(x) = x³ + ax² + bx + 6 has roots 1, 2, and 3. What is the value of a?",opts:["−6","6","−1","11","−11"],ans:0,topic:"Algebra & Polynomials",diff:"Easy",soln:"By Vieta's formulas, the sum of the roots = −a.\nSum of roots = 1 + 2 + 3 = 6.\nSo −a = 6, which gives a = −6.\n\nVerification: (x−1)(x−2)(x−3) = x³ − 6x² + 11x − 6\nSo a = −6. Confirmed."},
+{q:"The sum of the first n terms of an arithmetic sequence is Sn = n² + 2n. What is the common difference?",opts:["1","2","3","4","n"],ans:1,topic:"Sequences & Series",diff:"Medium",soln:"Sn = n² + 2n\nSn₋₁ = (n−1)² + 2(n−1) = n² − 2n + 1 + 2n − 2 = n² − 1\n\nan = Sn − Sn₋₁ = (n² + 2n) − (n² − 1) = 2n + 1\n\nSo a₁ = 3, a₂ = 5, a₃ = 7...\nCommon difference d = 5 − 3 = 2."},
+{q:"In triangle ABC, angle A = 60°, side b = 8, side c = 5. What is the length of side a?",opts:["6","7","√39","√49","√89"],ans:1,topic:"Geometry & Trigonometry",diff:"Medium",soln:"By the cosine rule:\n\na² = b² + c² − 2bc·cos(A)\na² = 8² + 5² − 2(8)(5)cos(60°)\na² = 64 + 25 − 80(0.5)\na² = 89 − 40 = 49\na = 7"},
+{q:"A fair six-sided die is rolled twice. What is the probability that the sum is exactly 7?",opts:["1/12","1/9","1/6","5/36","7/36"],ans:2,topic:"Statistics & Probability",diff:"Easy",soln:"Total outcomes: 6 × 6 = 36.\n\nFavourable pairs (sum = 7):\n(1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways.\n\nP(sum = 7) = 6/36 = 1/6."},
+{q:"Evaluate: ∫₀¹ (3x² − 2x + 1) dx",opts:["0","1","2","3","1.5"],ans:1,topic:"Calculus",diff:"Medium",soln:"∫(3x² − 2x + 1) dx = x³ − x² + x + C\n\nEvaluate from 0 to 1:\n= [1³ − 1² + 1] − [0³ − 0² + 0]\n= [1 − 1 + 1] − 0\n= 1"},
+{q:"A car accelerates uniformly from rest to 20 m/s in 5 seconds. What distance does it travel?",opts:["25 m","50 m","75 m","100 m","10 m"],ans:1,topic:"Mechanics",diff:"Easy",soln:"Using s = ½(u + v)t:\ns = ½(0 + 20)(5)\ns = ½(20)(5)\ns = 50 m\n\nAlternatively: a = 20/5 = 4 m/s²\ns = ½(4)(25) = 50 m."},
+{q:"Two resistors of 6Ω and 3Ω are connected in parallel. What is the equivalent resistance?",opts:["9Ω","3Ω","2Ω","4.5Ω","18Ω"],ans:2,topic:"Electricity & Magnetism",diff:"Hard",soln:"For parallel resistors:\n1/R = 1/R₁ + 1/R₂\n1/R = 1/6 + 1/3\n1/R = 1/6 + 2/6 = 3/6 = 1/2\nR = 2Ω"},
+{q:"A sound wave has frequency 680 Hz and speed 340 m/s. What is its wavelength?",opts:["0.25 m","0.5 m","1.0 m","2.0 m","0.68 m"],ans:1,topic:"Waves & Optics",diff:"Hard",soln:"v = fλ\n\nλ = v/f\nλ = 340/680\nλ = 0.5 m"},
+{q:"An ideal gas at pressure P and volume V undergoes isothermal expansion to volume 2V. What is the new pressure?",opts:["P/2","2P","P","P/4","4P"],ans:0,topic:"Thermodynamics",diff:"Medium",soln:"For an isothermal process, PV = constant (Boyle's Law).\n\nP₁V₁ = P₂V₂\nP · V = P₂ · 2V\nP₂ = PV/2V = P/2"},
+{q:"In a hydrogen atom, an electron transitions from n=3 to n=1. The energy of the emitted photon is approximately:",opts:["1.89 eV","10.2 eV","12.09 eV","13.6 eV","3.4 eV"],ans:2,topic:"Modern Physics",diff:"Very Hard",soln:"Eₙ = −13.6/n² eV\n\nE₃ = −13.6/9 = −1.51 eV\nE₁ = −13.6/1 = −13.6 eV\n\nΔE = E₃ − E₁ = −1.51 − (−13.6) = 12.09 eV\n\nThe photon carries away this energy."}
+];
+const LETTERS="ABCDEFGHIJ";
+let idx=0,answers={},showSoln={},rightCount=0,justAnswered=false;
+
+function renderNav(){
+  const navEl=document.getElementById('qNav');navEl.innerHTML='';
+  QUESTIONS.forEach((_,i)=>{
+    const b=document.createElement('button');b.className='qnum';
+    const a=answers[i],revealed=a!==undefined;
+    let state='not yet answered';
+    if(revealed){const q=QUESTIONS[i];const ok=a===q.ans;b.classList.add(ok?'correct':'incorrect');state=ok?'answered correctly':'answered incorrectly'}
+    if(i===idx){b.classList.add('cur');b.setAttribute('aria-current','step')}
+    b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
+    if(revealed)b.innerHTML=a===QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
+    else b.textContent=i+1;
+    b.onclick=()=>{idx=i;render()};
+    navEl.appendChild(b);
+  });
+}
+
+function renderQuestion(){
+  const q=QUESTIONS[idx],area=document.getElementById('questionArea');
+  const a=answers[idx],isCorrect=a===q.ans,answered=a!==undefined;
+  const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
+  const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
+  let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
+  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${idx+1} of ${QUESTIONS.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
+  html+='<div class="opts">';
+  q.opts.forEach((o,oi)=>{
+    let cls='opt';if(answered)cls+=' answered';
+    if(answered){if(oi===q.ans)cls+=' correct-answer';else if(oi===a)cls+=' wrong-answer';else cls+=' dimmed'}
+    if(answered&&justAnswered&&oi===a)cls+=' pulse-in';
+    let letterBg='var(--alt)',letterCol='var(--sec)';
+    if(answered&&oi===q.ans){letterBg='var(--green)';letterCol='#fff'}
+    if(answered&&oi===a&&oi!==q.ans){letterBg='var(--red)';letterCol='#fff'}
+    const badge=answered?oi===q.ans?'<div class="state-badge" style="background:var(--green)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div>':oi===a?'<div class="state-badge" style="background:var(--red)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg></div>':'':'';
+    const stateLabel=answered?(oi===q.ans?' — correct answer':(oi===a?' — your answer, incorrect':'')):'';
+    html+=`<button class="${cls}" onclick="pick(${oi})" ${answered?'disabled':''} aria-label="${LETTERS[oi]}. ${o}${stateLabel}"><span class="letter" style="background:${letterBg};color:${letterCol}">${LETTERS[oi]}</span><span class="opt-text">${o}${answered?'':(oi<9?`<span class="kbd-hint">[${oi+1}]</span>`:'')}</span>${badge}</button>`;
+  });
+  html+='</div>';
+  if(answered){
+    const solOpen=showSoln[idx];
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="toggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span><span class="kbd">S</span></button>`;
+    if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
+  }
+  area.innerHTML=html;
+}
+
+function updateSidebar(){
+  const done=Object.keys(answers).length,rem=QUESTIONS.length-done;
+  rightCount=Object.entries(answers).filter(([i,a])=>a===QUESTIONS[i].ans).length;
+  document.getElementById('sbProgNum').textContent=done;
+  document.getElementById('sbCorrect').textContent=rightCount;
+  document.getElementById('sbRemain').textContent=rem;
+  const bar=document.getElementById('sbProgBar');
+  bar.style.width=(done/QUESTIONS.length*100)+'%';
+  bar.style.background=done===QUESTIONS.length?'var(--green)':'var(--mid)';
+}
+
+function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===QUESTIONS.length-1}
+
+function pick(i){
+  if(answers[idx]!==undefined)return;
+  answers[idx]=i;
+  justAnswered=true;
+  const q=QUESTIONS[idx],ok=i===q.ans,live=document.getElementById('answerAnnounce');
+  if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
+  render();
+  justAnswered=false;
+}
+function navQ(d){const n=idx+d;if(n>=0&&n<QUESTIONS.length){idx=n;render()}}
+function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
+function resetSession(){idx=0;answers={};showSoln={};render()}
+
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('view-practice').classList.contains('active'))return;
+  const t=e.target;if(['SELECT','INPUT','TEXTAREA'].includes(t.tagName))return;
+  if(/^[1-9]$/.test(e.key)){const i=parseInt(e.key)-1;if(i<QUESTIONS[idx].opts.length)pick(i);return}
+  if(/^[a-i]$/i.test(e.key)){const L=e.key.toUpperCase(),oi=LETTERS.indexOf(L);if(oi>=0&&oi<QUESTIONS[idx].opts.length)pick(oi);return}
+  if(e.key==='s'||e.key==='S'){if(answers[idx]!==undefined)toggleSoln();return}
+  if(e.key==='ArrowRight'||e.key==='Enter'){if(idx<QUESTIONS.length-1)navQ(1);return}
+  if(e.key==='ArrowLeft'&&idx>0)navQ(-1);
+});
+
+render();
+
+/* Hide the achievements scroll-fade once the row is scrolled to its end */
+(function(){
+  const row=document.getElementById('achvRow'),fade=document.getElementById('achvFade');
+  if(!row||!fade)return;
+  function check(){fade.classList.toggle('hide',row.scrollLeft+row.clientWidth>=row.scrollWidth-4)}
+  row.addEventListener('scroll',check);
+  window.addEventListener('resize',check);
+  check();
+})();
+
+/* Draw the predicted-grade ring in from 0 the first time the page loads */
+(function animateDial(){
+  const ring=document.getElementById('dialProgress');
+  const marker=document.getElementById('dialMarker');
+  if(!ring)return;
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      ring.style.strokeDashoffset='104.68';
+      if(marker)marker.classList.add('show');
+    });
+  });
+})();
+</script>
+</body>
+</html>
