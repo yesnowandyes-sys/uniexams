@@ -136,16 +136,27 @@ button{font-family:inherit}
 /* Focus Areas */
 .focus-section{margin-bottom:1.1rem}
 .na-header{display:flex;align-items:center;gap:7px;margin-bottom:.9rem}
-.focus-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
-.focus-row{display:flex;align-items:center;gap:12px;padding:.7rem .8rem;border-radius:11px;background:var(--alt)}
-.focus-row-body{flex:1;min-width:0}
-.focus-row-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px}
-.focus-name{font-size:.8125rem;font-weight:500;color:var(--text);line-height:1.3}
-.focus-tag{font-size:.625rem;font-weight:600;color:var(--ter);margin-left:6px}
-.focus-sub{font-size:.6875rem;color:var(--ter);margin-top:1px}
-.focus-pct{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;flex-shrink:0;padding:2px 7px;border-radius:6px}
-.focus-bar{height:6px;border-radius:6px;background:var(--surf);overflow:hidden}
-.focus-bar-fill{height:100%;border-radius:6px}
+.focus-list{display:flex;flex-direction:column;gap:8px}
+.focus-row{border-radius:11px;background:var(--alt);overflow:hidden}
+.focus-row>summary{list-style:none;cursor:pointer;padding:.75rem .8rem;display:flex;align-items:center;gap:14px;-webkit-tap-highlight-color:transparent}
+.focus-row>summary::-webkit-details-marker{display:none}
+.focus-row>summary:focus-visible{outline:2px solid var(--mid);outline-offset:-2px;border-radius:8px}
+.focus-name{flex:1;min-width:0;font-size:.8125rem;font-weight:500;color:var(--text)}
+.focus-stats{display:flex;gap:18px;flex-shrink:0}
+.focus-stat{display:flex;flex-direction:column;align-items:center;line-height:1}
+.focus-stat b{font-family:'JetBrains Mono',monospace;font-size:1.0625rem;font-weight:700;font-variant-numeric:tabular-nums}
+.focus-stat span{font-size:.5625rem;color:var(--ter);margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
+.focus-practice{border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:.75rem;padding:8px 14px;border-radius:8px;cursor:pointer;flex-shrink:0;transition:filter .12s}
+.focus-practice:hover{filter:brightness(1.08)}
+.focus-practice:focus-visible{outline:2px solid var(--mid);outline-offset:1px}
+.focus-chev{flex-shrink:0;color:var(--ter);transition:transform .18s ease}
+.focus-row[open]>summary .focus-chev{transform:rotate(90deg)}
+.focus-panel{padding:.15rem .8rem 1rem 1.6rem}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 16px}
+.topic-cell{display:flex;align-items:center;gap:6px;font-size:.71875rem;color:var(--sec);min-width:0}
+.topic-cell .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.topic-cell .tn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.topic-cell b{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--text);font-size:.71875rem;flex-shrink:0;font-variant-numeric:tabular-nums}
 
 .btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:.7rem 1.25rem;border-radius:10px;border:none;background:var(--mid);color:#fff;font-size:.875rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;width:100%}
 .btn-primary:hover{filter:brightness(1.08);box-shadow:0 6px 18px rgba(61,114,184,.32);transform:translateY(-1px)}
@@ -259,7 +270,6 @@ button{font-family:inherit}
 .topbar{padding:0 1rem}.topbar-search{display:none}
 .page{padding:1.25rem 1rem 2rem}
 .mini-grid{grid-template-columns:1fr}
-.focus-list{grid-template-columns:1fr}
 .practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
 .banner-card{padding:1.375rem 1.25rem}
 }
@@ -270,6 +280,8 @@ button{font-family:inherit}
 .qnum{width:32px;height:32px}
 .dial-wrap{width:120px;height:120px}
 .dial-center b{font-size:1.375rem}
+.topic-grid{grid-template-columns:repeat(2,1fr)}
+.focus-stats{gap:12px}
 }
 </style>
 </head>
@@ -442,11 +454,89 @@ button{font-family:inherit}
       <div class="card focus-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Focus Areas</h3></div>
         <div class="focus-list">
-          <div class="focus-row" style="border-left:4px solid var(--mid)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Maths 1<span class="focus-tag">Compulsory</span></div><div class="focus-sub">96 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--mid)">74%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:74%;background:var(--mid)"></div></div></div></div>
-          <div class="focus-row" style="border-left:4px solid var(--purp)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Maths 2</div><div class="focus-sub">88 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--purp)">51%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:51%;background:var(--purp)"></div></div></div></div>
-          <div class="focus-row" style="border-left:4px solid var(--teal)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Physics</div><div class="focus-sub">104 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--teal)">62%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:62%;background:var(--teal)"></div></div></div></div>
-          <div class="focus-row" style="border-left:4px solid var(--amber)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Chemistry</div><div class="focus-sub">134 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--amber)">68%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:68%;background:var(--amber)"></div></div></div></div>
-          <div class="focus-row" style="border-left:4px solid var(--subjBio)"><div class="focus-row-body"><div class="focus-row-top"><div><div class="focus-name">Biology</div><div class="focus-sub">142 questions</div></div><span class="focus-pct" style="color:#fff;background:var(--subjBio)">40%</span></div><div class="focus-bar"><div class="focus-bar-fill" style="width:40%;background:var(--subjBio)"></div></div></div></div>
+          <details class="focus-row" style="border-left:4px solid var(--mid)">
+            <summary>
+              <div class="focus-name">Maths 1</div>
+              <div class="focus-stats">
+                <div class="focus-stat"><b>7.8</b><span>Grade</span></div>
+                <div class="focus-stat"><b style="color:var(--green)">76%</b><span>Last 20 Qs</span></div>
+              </div>
+              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            </summary>
+            <div class="focus-panel">
+              <div class="topic-grid">
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Probability</span><b>91%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Statistics</span><b>88%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Algebra</span><b>82%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Coordinate Geometry</span><b>77%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Vectors</span><b>74%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Calculus</span><b>71%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Functions</span><b>69%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Trigonometry</span><b>65%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Differentiation</span><b>63%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Sequences &amp; Series</span><b>58%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Integration</span><b>55%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Exponentials &amp; Logs</span><b>47%</b></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="focus-row" style="border-left:4px solid var(--teal)">
+            <summary>
+              <div class="focus-name">Physics</div>
+              <div class="focus-stats">
+                <div class="focus-stat"><b>5.1</b><span>Grade</span></div>
+                <div class="focus-stat"><b style="color:var(--amber)">58%</b><span>Last 20 Qs</span></div>
+              </div>
+              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            </summary>
+            <div class="focus-panel">
+              <div class="topic-grid">
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Astrophysics</span><b>80%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Mechanics</span><b>74%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Nuclear Physics</span><b>72%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Electricity</span><b>68%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Materials</span><b>61%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Fields</span><b>60%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Oscillations</span><b>58%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Magnetism</span><b>55%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Waves</span><b>51%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Thermodynamics</span><b>45%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Particle Physics</span><b>44%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Quantum Physics</span><b>39%</b></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="focus-row" style="border-left:4px solid var(--amber)">
+            <summary>
+              <div class="focus-name">Chemistry</div>
+              <div class="focus-stats">
+                <div class="focus-stat"><b>6.6</b><span>Grade</span></div>
+                <div class="focus-stat"><b style="color:var(--amber)">62%</b><span>Last 20 Qs</span></div>
+              </div>
+              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            </summary>
+            <div class="focus-panel">
+              <div class="topic-grid">
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Bonding</span><b>84%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Acids &amp; Bases</span><b>77%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Spectroscopy</span><b>75%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Organic</span><b>70%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Periodicity</span><b>69%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Physical</span><b>66%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Equilibria</span><b>63%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Inorganic</span><b>58%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Electrochemistry</span><b>57%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Redox</span><b>52%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Thermochemistry</span><b>48%</b></div>
+                <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Kinetics</span><b>40%</b></div>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
 
