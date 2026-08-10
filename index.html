@@ -136,27 +136,28 @@ button{font-family:inherit}
 /* Focus Areas */
 .focus-section{margin-bottom:1.1rem}
 .na-header{display:flex;align-items:center;gap:7px;margin-bottom:.9rem}
-.focus-list{display:flex;flex-direction:column;gap:8px}
-.focus-row{border-radius:11px;background:var(--alt);overflow:hidden}
-.focus-row>summary{list-style:none;cursor:pointer;padding:.75rem .8rem;display:flex;align-items:center;gap:14px;-webkit-tap-highlight-color:transparent}
-.focus-row>summary::-webkit-details-marker{display:none}
-.focus-row>summary:focus-visible{outline:2px solid var(--mid);outline-offset:-2px;border-radius:8px}
-.focus-name{flex:1;min-width:0;font-size:.8125rem;font-weight:500;color:var(--text)}
-.focus-stats{display:flex;gap:18px;flex-shrink:0}
-.focus-stat{display:flex;flex-direction:column;align-items:center;line-height:1}
-.focus-stat b{font-family:'JetBrains Mono',monospace;font-size:1.0625rem;font-weight:700;font-variant-numeric:tabular-nums}
-.focus-stat span{font-size:.5625rem;color:var(--ter);margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
-.focus-practice{border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:.75rem;padding:8px 14px;border-radius:8px;cursor:pointer;flex-shrink:0;transition:filter .12s}
-.focus-practice:hover{filter:brightness(1.08)}
-.focus-practice:focus-visible{outline:2px solid var(--mid);outline-offset:1px}
-.focus-chev{flex-shrink:0;color:var(--ter);transition:transform .18s ease}
-.focus-row[open]>summary .focus-chev{transform:rotate(90deg)}
-.focus-panel{padding:.15rem .8rem 1rem 1.6rem}
-.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 16px}
-.topic-cell{display:flex;align-items:center;gap:6px;font-size:.71875rem;color:var(--sec);min-width:0}
+.focus-list{display:flex;gap:12px}
+.focus-tile{flex:1;min-width:0;background:var(--surf);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.focus-tile-top{padding:1rem .9rem .85rem;display:flex;flex-direction:column;align-items:center;gap:.55rem;text-align:center}
+.focus-tile-name{font-size:.8125rem;font-weight:700;color:var(--text)}
+.focus-tile-grade{font-size:.6875rem;color:var(--ter);display:flex;align-items:baseline;gap:5px}
+.focus-tile-grade b{font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--text);font-variant-numeric:tabular-nums}
+.focus-ring-cap{font-size:.625rem;color:var(--ter);margin-top:-6px}
+.focus-tile-practice{border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:.75rem;padding:9px 14px;border-radius:8px;cursor:pointer;width:100%;transition:filter .12s}
+.focus-tile-practice:hover{filter:brightness(1.08)}
+.focus-tile-practice:focus-visible{outline:2px solid var(--mid);outline-offset:1px}
+.focus-drop{border-top:1px solid var(--bdr);margin-top:auto}
+.focus-drop>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;padding:.55rem .7rem;font-size:.71875rem;font-weight:600;color:var(--sec);-webkit-tap-highlight-color:transparent}
+.focus-drop>summary::-webkit-details-marker{display:none}
+.focus-drop>summary:focus-visible{outline:2px solid var(--mid);outline-offset:-2px}
+.focus-drop[open]>summary{background:var(--lite);color:var(--mid)}
+.focus-drop-chev{transition:transform .18s ease}
+.focus-drop[open] .focus-drop-chev{transform:rotate(90deg)}
+.focus-drop-topics{max-height:220px;overflow-y:auto;padding:.55rem .8rem .7rem;display:flex;flex-direction:column;gap:8px;background:var(--alt)}
+.topic-cell{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--sec);min-width:0}
 .topic-cell .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .topic-cell .tn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
-.topic-cell b{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--text);font-size:.71875rem;flex-shrink:0;font-variant-numeric:tabular-nums}
+.topic-cell b{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--text);font-size:.75rem;flex-shrink:0;font-variant-numeric:tabular-nums}
 
 .btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:.7rem 1.25rem;border-radius:10px;border:none;background:var(--mid);color:#fff;font-size:.875rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;width:100%}
 .btn-primary:hover{filter:brightness(1.08);box-shadow:0 6px 18px rgba(61,114,184,.32);transform:translateY(-1px)}
@@ -270,6 +271,7 @@ button{font-family:inherit}
 .topbar{padding:0 1rem}.topbar-search{display:none}
 .page{padding:1.25rem 1rem 2rem}
 .mini-grid{grid-template-columns:1fr}
+.focus-list{flex-direction:column}
 .practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
 .banner-card{padding:1.375rem 1.25rem}
 }
@@ -280,8 +282,6 @@ button{font-family:inherit}
 .qnum{width:32px;height:32px}
 .dial-wrap{width:120px;height:120px}
 .dial-center b{font-size:1.375rem}
-.topic-grid{grid-template-columns:repeat(2,1fr)}
-.focus-stats{gap:12px}
 }
 </style>
 </head>
@@ -454,18 +454,17 @@ button{font-family:inherit}
       <div class="card focus-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Focus Areas</h3></div>
         <div class="focus-list">
-          <details class="focus-row" style="border-left:4px solid var(--mid)">
-            <summary>
-              <div class="focus-name">Maths 1</div>
-              <div class="focus-stats">
-                <div class="focus-stat"><b>7.8</b><span>Grade</span></div>
-                <div class="focus-stat"><b style="color:var(--green)">76%</b><span>Last 20 Qs</span></div>
-              </div>
-              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-            </summary>
-            <div class="focus-panel">
-              <div class="topic-grid">
+          <div class="focus-tile">
+            <div class="focus-tile-top">
+              <div class="focus-tile-name">Maths 1</div>
+              <div class="focus-tile-grade">Predicted grade <b>7.8</b></div>
+              <svg width="76" height="76" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="none" stroke="var(--bdr)" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="var(--mid)" stroke-width="7" stroke-linecap="round" stroke-dasharray="162.4 213.6" transform="rotate(-90 40 40)"/><text x="40" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="700" fill="var(--text)">76%</text></svg>
+              <div class="focus-ring-cap">last 20 Qs</div>
+              <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+            </div>
+            <details class="focus-drop">
+              <summary>Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+              <div class="focus-drop-topics">
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Probability</span><b>91%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Statistics</span><b>88%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Algebra</span><b>82%</b></div>
@@ -479,21 +478,20 @@ button{font-family:inherit}
                 <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Integration</span><b>55%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Exponentials &amp; Logs</span><b>47%</b></div>
               </div>
-            </div>
-          </details>
+            </details>
+          </div>
 
-          <details class="focus-row" style="border-left:4px solid var(--teal)">
-            <summary>
-              <div class="focus-name">Physics</div>
-              <div class="focus-stats">
-                <div class="focus-stat"><b>5.1</b><span>Grade</span></div>
-                <div class="focus-stat"><b style="color:var(--amber)">58%</b><span>Last 20 Qs</span></div>
-              </div>
-              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-            </summary>
-            <div class="focus-panel">
-              <div class="topic-grid">
+          <div class="focus-tile">
+            <div class="focus-tile-top">
+              <div class="focus-tile-name">Physics</div>
+              <div class="focus-tile-grade">Predicted grade <b>5.1</b></div>
+              <svg width="76" height="76" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="none" stroke="var(--bdr)" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="var(--teal)" stroke-width="7" stroke-linecap="round" stroke-dasharray="123.9 213.6" transform="rotate(-90 40 40)"/><text x="40" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="700" fill="var(--text)">58%</text></svg>
+              <div class="focus-ring-cap">last 20 Qs</div>
+              <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+            </div>
+            <details class="focus-drop">
+              <summary>Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+              <div class="focus-drop-topics">
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Astrophysics</span><b>80%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Mechanics</span><b>74%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Nuclear Physics</span><b>72%</b></div>
@@ -507,21 +505,20 @@ button{font-family:inherit}
                 <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Particle Physics</span><b>44%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Quantum Physics</span><b>39%</b></div>
               </div>
-            </div>
-          </details>
+            </details>
+          </div>
 
-          <details class="focus-row" style="border-left:4px solid var(--amber)">
-            <summary>
-              <div class="focus-name">Chemistry</div>
-              <div class="focus-stats">
-                <div class="focus-stat"><b>6.6</b><span>Grade</span></div>
-                <div class="focus-stat"><b style="color:var(--amber)">62%</b><span>Last 20 Qs</span></div>
-              </div>
-              <button class="focus-practice" onclick="event.stopPropagation();nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-              <svg class="focus-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-            </summary>
-            <div class="focus-panel">
-              <div class="topic-grid">
+          <div class="focus-tile">
+            <div class="focus-tile-top">
+              <div class="focus-tile-name">Chemistry</div>
+              <div class="focus-tile-grade">Predicted grade <b>6.6</b></div>
+              <svg width="76" height="76" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="none" stroke="var(--bdr)" stroke-width="7"/><circle cx="40" cy="40" r="34" fill="none" stroke="var(--amber)" stroke-width="7" stroke-linecap="round" stroke-dasharray="132.4 213.6" transform="rotate(-90 40 40)"/><text x="40" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="700" fill="var(--text)">62%</text></svg>
+              <div class="focus-ring-cap">last 20 Qs</div>
+              <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
+            </div>
+            <details class="focus-drop">
+              <summary>Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+              <div class="focus-drop-topics">
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Bonding</span><b>84%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Acids &amp; Bases</span><b>77%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Spectroscopy</span><b>75%</b></div>
@@ -535,8 +532,8 @@ button{font-family:inherit}
                 <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Thermochemistry</span><b>48%</b></div>
                 <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Kinetics</span><b>40%</b></div>
               </div>
-            </div>
-          </details>
+            </details>
+          </div>
         </div>
       </div>
 
