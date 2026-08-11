@@ -274,6 +274,11 @@ button{font-family:inherit}
 .achp-progress{padding-top:.55rem;border-top:1px solid var(--bdr)}
 .achp-progress-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
 .achp-progress-lbl b{color:var(--text);font-family:'JetBrains Mono',monospace}
+.achp-more-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:.8rem;border-radius:12px;border:1px dashed var(--bdr2);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;margin-bottom:1.6rem;transition:background .1s,border-color .1s}
+.achp-more-btn:hover{background:var(--alt);border-color:var(--liteb)}
+.achp-more-btn .achp-section-count{margin-left:0;background:var(--alt);color:var(--ter);font-weight:700;padding:2px 8px;border-radius:20px}
+.achp-more-btn svg{transition:transform .2s ease;flex-shrink:0}
+.achp-more-btn.open svg{transform:rotate(180deg)}
 @media(max-width:860px){.achp-stats{grid-template-columns:1fr}}
 
 /* ═══ SOON PLACEHOLDER ═══ */
@@ -1008,6 +1013,13 @@ button{font-family:inherit}
         </div>
       </div>
 
+      <button class="achp-more-btn" id="achpMoreBtn" onclick="toggleAchpMore()" aria-expanded="false" aria-controls="achpExtra">
+        <span id="achpMoreLabel">See more achievements</span>
+        <span class="achp-section-count" id="achpMoreCount">7 more</span>
+        <svg id="achpMoreChevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+
+      <div id="achpExtra" style="display:none">
       <!-- Mock Exams -->
       <div class="achp-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg><h3 class="section-title">Mock Exams</h3><span class="achp-section-count">1 of 3 earned</span></div>
@@ -1062,6 +1074,7 @@ button{font-family:inherit}
             <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -1324,6 +1337,21 @@ render();
     });
   });
 })();
+
+/* Achievements page: expand the rest of the categories */
+function toggleAchpMore(){
+  const extra=document.getElementById('achpExtra');
+  const btn=document.getElementById('achpMoreBtn');
+  const label=document.getElementById('achpMoreLabel');
+  const count=document.getElementById('achpMoreCount');
+  const open=extra.style.display==='none';
+  extra.style.display=open?'':'none';
+  btn.classList.toggle('open',open);
+  btn.setAttribute('aria-expanded',open?'true':'false');
+  label.textContent=open?'See fewer achievements':'See more achievements';
+  count.style.display=open?'none':'';
+  if(open)extra.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
 
 /* Achievements page: filter cards by unlocked/locked state */
 (function(){
