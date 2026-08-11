@@ -316,6 +316,93 @@ button{font-family:inherit}
 .achp-more-caption{font-size:.6875rem;font-weight:600;color:var(--ter)}
 @media(max-width:860px){.achp-stats{grid-template-columns:1fr}}
 
+/* ═══ LEADERBOARD PAGE ═══ */
+.lb-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.lb-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:1.25rem 0}
+.lb-tabs{display:flex;gap:8px}
+.lb-tab{display:flex;align-items:center;gap:7px;padding:.5rem .95rem;border-radius:20px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.lb-tab:hover{background:var(--alt)}
+.lb-tab.active{background:var(--lite);border-color:var(--liteb);color:var(--mid)}
+
+.lb-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;font-size:.8125rem;font-family:'Inter',sans-serif}
+.lb-avatar.big{width:56px;height:56px;font-size:1.0625rem;box-shadow:0 0 0 4px var(--surf),0 0 0 6px var(--aBdr)}
+
+.lb-podium{display:flex;align-items:flex-end;justify-content:center;gap:14px;padding:1.5rem 1rem .5rem;margin-bottom:1.1rem}
+.lb-podium-item{display:flex;flex-direction:column;align-items:center;gap:6px;width:150px}
+.lb-podium-item.rank1{width:170px}
+.lb-podium-crown{margin-bottom:-6px}
+.lb-podium-name{font-size:.8125rem;font-weight:700;color:var(--text);text-align:center;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-podium-xp{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;color:var(--ter)}
+.lb-podium-stand{width:100%;border-radius:10px 10px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:8px;box-shadow:var(--shadow-1)}
+.lb-podium-stand span{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:1.125rem;color:#fff}
+.lb-podium-stand.gold{height:88px;background:linear-gradient(180deg,#F7C948,#E0A825)}
+.lb-podium-stand.silver{height:64px;background:linear-gradient(180deg,#CBD3DE,#A6AFBC)}
+.lb-podium-stand.bronze{height:48px;background:linear-gradient(180deg,#D69A63,#B87A44)}
+
+.lb-list{display:flex;flex-direction:column;gap:8px}
+.lb-row{display:flex;align-items:center;gap:14px;background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:.7rem .9rem;box-shadow:var(--shadow-1);transition:transform .12s,box-shadow .12s}
+.lb-row:hover{transform:translateY(-1px);box-shadow:var(--shadow-2)}
+.lb-row.you{border-color:var(--liteb);background:var(--lite)}
+.lb-rank{width:26px;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--ter);text-align:center}
+.lb-row-info{flex:1;min-width:0}
+.lb-row-name{font-size:.8438rem;font-weight:700;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-you-tag{color:var(--mid);font-weight:600}
+.lb-row-meta{display:flex;align-items:center;gap:4px;font-size:.6875rem;color:var(--ter);margin-top:2px}
+.lb-row-xp{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.9375rem;color:var(--text);text-align:right;flex-shrink:0}
+.lb-row-xp span{font-size:.5938rem;color:var(--ter);font-weight:600;margin-left:2px}
+.lb-trend{display:flex;align-items:center;gap:2px;font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;width:34px;flex-shrink:0;justify-content:flex-end}
+.lb-trend.up{color:var(--green)}
+.lb-trend.down{color:var(--red)}
+.lb-trend.flat{color:var(--ter)}
+.lb-row-action{flex-shrink:0;width:86px;display:flex;justify-content:flex-end}
+.lb-pill{display:inline-flex;align-items:center;gap:4px;font-size:.6875rem;font-weight:700;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.lb-pill.you{background:var(--lite);color:var(--mid)}
+.lb-pill.friend{background:var(--gLite);color:var(--green)}
+.lb-add-btn{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;border:1px solid var(--liteb);background:var(--surf);color:var(--mid);font-size:.75rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s,transform .1s;white-space:nowrap}
+.lb-add-btn:hover{background:var(--lite)}
+.lb-add-btn:active{transform:scale(.95)}
+.lb-empty{text-align:center;color:var(--ter);font-size:.8125rem;padding:2rem 0}
+
+/* Friend requests */
+.lb-request-row{display:flex;align-items:center;gap:14px;padding:.75rem 0;border-bottom:1px solid var(--bdr)}
+.lb-request-row:last-child{border-bottom:none}
+.lb-request-actions{display:flex;gap:8px;flex-shrink:0}
+.lb-accept-btn{padding:7px 14px;border-radius:8px;border:none;background:var(--mid);color:#fff;font-size:.75rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;transition:filter .12s,transform .1s}
+.lb-accept-btn:hover{filter:brightness(1.08)}
+.lb-accept-btn:active{transform:scale(.95)}
+.lb-decline-btn{padding:7px 14px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.75rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s,transform .1s}
+.lb-decline-btn:hover{background:var(--alt)}
+.lb-decline-btn:active{transform:scale(.95)}
+
+/* Add-friend modal */
+.lb-modal-overlay{position:fixed;inset:0;background:rgba(15,20,35,.5);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:1000;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.lb-modal-overlay.open{opacity:1;pointer-events:auto}
+.lb-modal{background:var(--surf);border-radius:18px;box-shadow:var(--shadow-3);width:100%;max-width:440px;max-height:88vh;display:flex;flex-direction:column;transform:translateY(10px) scale(.98);transition:transform .18s ease}
+.lb-modal-overlay.open .lb-modal{transform:translateY(0) scale(1)}
+.lb-modal-head{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.375rem 1rem;border-bottom:1px solid var(--bdr)}
+.lb-modal-head h3{font-size:1.0625rem;font-weight:800;letter-spacing:-.01em}
+.lb-modal-close{width:32px;height:32px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--sec);flex-shrink:0}
+.lb-modal-close:hover{background:var(--alt)}
+.lb-modal-body{padding:1.25rem 1.375rem 1.5rem;overflow-y:auto}
+.lb-code-box{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--lite);border:1px solid var(--liteb);border-radius:10px;padding:.75rem .9rem;margin-bottom:1.25rem}
+.lb-code-box div span{display:block;font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mid);margin-bottom:2px}
+.lb-code-box div b{font-family:'JetBrains Mono',monospace;font-size:.9375rem;letter-spacing:.03em;color:var(--text)}
+.lb-copy-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:8px;border:1px solid var(--liteb);background:var(--surf);color:var(--mid);font-size:.75rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;flex-shrink:0}
+.lb-copy-btn:hover{background:var(--lite)}
+.lb-modal-search{display:flex;align-items:center;gap:8px;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:0 12px;height:40px;color:var(--ter);margin-bottom:1rem}
+.lb-modal-search input{border:none;background:none;outline:none;font-family:inherit;font-size:.8125rem;color:var(--text);width:100%;height:100%}
+.lb-modal-search input::placeholder{color:var(--ter)}
+.lb-modal-label{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ter);margin-bottom:.6rem}
+.lb-suggest-row{display:flex;align-items:center;gap:12px;padding:.65rem 0;border-bottom:1px solid var(--bdr)}
+.lb-suggest-row:last-child{border-bottom:none}
+
+/* Toast */
+.lb-toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;font-size:.8125rem;font-weight:600;padding:.75rem 1.1rem;border-radius:10px;box-shadow:var(--shadow-3);z-index:2000;opacity:0;transform:translateY(10px);transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+.lb-toast.show{opacity:1;transform:translateY(0)}
+
+@media(max-width:760px){.lb-podium{gap:8px}.lb-podium-item{width:110px}.lb-podium-item.rank1{width:126px}.lb-row-meta{display:none}}
+@media(max-width:480px){.lb-head{align-items:stretch}.lb-addfriend-btn{width:100% !important}}
+
 /* ═══ SOON PLACEHOLDER ═══ */
 .soon-wrap{max-width:1180px;margin:0 auto;padding:4.5rem 2rem;text-align:center}
 .soon-icon{width:72px;height:72px;border-radius:20px;background:var(--lite);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
@@ -461,7 +548,7 @@ button{font-family:inherit}
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/><path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
       <span>Achievements</span>
     </button>
-    <button class="sb-item" onclick="nav(this,'soon','Leaderboard')">
+    <button class="sb-item" id="navLeaderboard" onclick="nav(this,'leaderboard','Leaderboard')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 21V13.5h4.5V21M9.75 21V9h4.5v12M15 21v-6h4.5v6"/></svg>
       <span>Leaderboard</span>
     </button>
@@ -1109,6 +1196,95 @@ button{font-family:inherit}
     </div>
   </div>
 
+  <!-- ═══ LEADERBOARD VIEW ═══ -->
+  <div id="view-leaderboard" class="view">
+    <div class="page">
+      <div class="lb-head">
+        <div class="greeting" style="margin-bottom:0">
+          <h1>Leaderboard</h1>
+          <p>You're ranked <strong id="lbYourRank">#4</strong> this week. Add friends to see how you stack up against people you know.</p>
+        </div>
+        <button class="btn-primary lb-addfriend-btn" style="width:auto" onclick="openAddFriendModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.25"/><path d="M3 20a6.25 6.25 0 0 1 12 0"/><path d="M18 8.5v5M15.5 11h5"/></svg>
+          Add Friend
+        </button>
+      </div>
+
+      <div class="achp-stats" style="margin-top:1.25rem">
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Your Rank</span>
+            <div class="achp-stat-icon" style="background:var(--aLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5h10v3a5 5 0 0 1-5 5 5 5 0 0 1-5-5v-3Z"/><path d="M7 5.25H4.25a1 1 0 0 0-1 1V8a3.75 3.75 0 0 0 3.75 3.75M17 5.25h2.75a1 1 0 0 1 1 1V8A3.75 3.75 0 0 1 17 11.75"/><path d="M12 12.5V16m-3.5 4.25h7M8.75 20.25V18a3.25 3.25 0 0 1 3.25-3 3.25 3.25 0 0 1 3.25 3v2.25"/></svg></div>
+          </div>
+          <div class="achp-stat-num"><span id="lbRankStat">#4</span><span style="font-size:1.125rem;color:var(--ter);font-weight:600"> /2,481</span></div>
+          <div class="achp-stat-lbl">globally this week</div>
+          <div class="achp-stat-sub">You're in the <strong>top 1%</strong> of all students.</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Weekly XP</span>
+            <div class="achp-stat-icon" style="background:var(--lite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
+          </div>
+          <div class="achp-stat-num">1,240</div>
+          <div class="achp-stat-lbl">xp earned this week</div>
+          <div class="stat-delta" style="color:var(--green);margin-top:.7rem"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>18% vs last week</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Friends</span>
+            <div class="achp-stat-icon" style="background:var(--gLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><path d="M3 20a5.75 5.75 0 0 1 11 0"/><circle cx="17" cy="9" r="2.25"/><path d="M14.75 20a4.25 4.25 0 0 1 7.75-2.4"/></svg></div>
+          </div>
+          <div class="achp-stat-num" id="lbFriendCount">6</div>
+          <div class="achp-stat-lbl">friends added</div>
+          <div class="achp-stat-sub"><strong id="lbReqCount">2</strong> pending friend request(s)</div>
+        </div>
+      </div>
+
+      <div class="lb-toolbar">
+        <div class="lb-tabs" role="tablist" aria-label="Leaderboard scope">
+          <button class="lb-tab active" role="tab" aria-selected="true" onclick="lbSwitchTab('global',this)">Global</button>
+          <button class="lb-tab" role="tab" aria-selected="false" onclick="lbSwitchTab('friends',this)">Friends</button>
+        </div>
+        <span class="section-sub">Ranked by XP earned this week</span>
+      </div>
+
+      <div class="lb-podium" id="lbPodium"></div>
+      <div class="lb-list" id="lbList"></div>
+
+      <div class="card" style="margin-top:1.6rem">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><path d="M3 20a5.75 5.75 0 0 1 11 0"/><circle cx="17" cy="9" r="2.25"/><path d="M14.75 20a4.25 4.25 0 0 1 7.75-2.4"/></svg><h3 class="section-title">Friend Requests</h3></div>
+        <div id="lbRequests"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ADD FRIEND MODAL ═══ -->
+  <div class="lb-modal-overlay" id="lbModalOverlay" onclick="if(event.target===this)closeAddFriendModal()">
+    <div class="lb-modal" role="dialog" aria-modal="true" aria-labelledby="lbModalTitle">
+      <div class="lb-modal-head">
+        <h3 id="lbModalTitle">Add a Friend</h3>
+        <button class="lb-modal-close" onclick="closeAddFriendModal()" aria-label="Close">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="lb-modal-body">
+        <div class="lb-code-box">
+          <div><span>Your friend code</span><b id="lbFriendCode">EXAM-AM294</b></div>
+          <button class="lb-copy-btn" onclick="lbCopyCode()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8.25" y="8.25" width="11.25" height="11.25" rx="2"/><path d="M5.25 15H4.5A2.25 2.25 0 0 1 2.25 12.75v-7.5A2.25 2.25 0 0 1 4.5 3h7.5a2.25 2.25 0 0 1 2.25 2.25v.75"/></svg>
+            Copy
+          </button>
+        </div>
+        <div class="lb-modal-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          <input type="text" id="lbSearchInput" placeholder="Search by name or friend code..." oninput="renderSuggested(this.value)">
+        </div>
+        <div class="lb-modal-label">People you may know</div>
+        <div id="lbSuggestedList"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══ COMING SOON PLACEHOLDER (shared by unbuilt pages) ═══ -->
   <div id="view-soon" class="view">
     <div class="soon-wrap">
@@ -1457,6 +1633,257 @@ function toggleAchpMore(){
       });
     });
   });
+})();
+
+/* ═══ LEADERBOARD ═══ */
+const LB_PALETTE=[
+  {bg:'var(--lite)',fg:'var(--mid)'},
+  {bg:'var(--gLite)',fg:'var(--green)'},
+  {bg:'var(--pLite)',fg:'var(--purp)'},
+  {bg:'var(--aLite)',fg:'var(--flame)'},
+  {bg:'var(--rLite)',fg:'var(--red)'},
+  {bg:'#E6FBF8',fg:'var(--teal)'}
+];
+function lbInitials(name){return name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}
+function lbAvatarHtml(name,extraClass){
+  const idx=[...name].reduce((a,c)=>a+c.charCodeAt(0),0)%LB_PALETTE.length;
+  const p=LB_PALETTE[idx];
+  return `<div class="lb-avatar ${extraClass||''}" style="background:${p.bg};color:${p.fg}">${lbInitials(name)}</div>`;
+}
+
+let LB_DATA=[
+  {id:'me',name:'Alex Morgan',xp:1240,streak:12,isFriend:false,isMe:true,trend:{dir:'up',delta:2}},
+  {id:'u1',name:'Priya Chandran',xp:2450,streak:34,isFriend:false,trend:{dir:'up',delta:1}},
+  {id:'u2',name:'Marcus Webb',xp:2180,streak:21,isFriend:true,trend:{dir:'flat',delta:0}},
+  {id:'u3',name:'Sofia Reyes',xp:1890,streak:45,isFriend:true,trend:{dir:'up',delta:3}},
+  {id:'u4',name:'Daniel Osei',xp:1175,streak:8,isFriend:false,trend:{dir:'down',delta:1}},
+  {id:'u5',name:'Lily Chen',xp:1080,streak:19,isFriend:true,trend:{dir:'up',delta:1}},
+  {id:'u6',name:'Tomasz Nowak',xp:990,streak:5,isFriend:false,trend:{dir:'down',delta:2}},
+  {id:'u7',name:'Aisha Bello',xp:860,streak:27,isFriend:false,trend:{dir:'flat',delta:0}},
+  {id:'u8',name:'Jack Sullivan',xp:745,streak:3,isFriend:true,trend:{dir:'up',delta:4}},
+  {id:'u9',name:'Hana Kobayashi',xp:690,streak:14,isFriend:false,trend:{dir:'down',delta:1}},
+  {id:'u10',name:'Ravi Patel',xp:610,streak:9,isFriend:false,trend:{dir:'up',delta:2}},
+  {id:'u11',name:'Emily Clarke',xp:520,streak:6,isFriend:false,trend:{dir:'flat',delta:0}},
+  {id:'u12',name:'Noah Kim',xp:340,streak:2,isFriend:true,trend:{dir:'up',delta:1}},
+  {id:'u13',name:'Grace Adeyemi',xp:210,streak:1,isFriend:true,trend:{dir:'down',delta:1}}
+];
+let SUGGESTED=[
+  {id:'s1',name:'Oliver James',mutual:5},
+  {id:'s2',name:'Zara Ahmed',mutual:2},
+  {id:'s3',name:'Ben Foster',mutual:7},
+  {id:'s4',name:'Mia Torres',mutual:1}
+];
+let REQUESTS=[
+  {id:'r1',name:'Isla Fraser',mutual:3},
+  {id:'r2',name:'Kwame Asante',mutual:6}
+];
+let lbTab='global';
+
+function lbSortedList(){
+  let list=LB_DATA.slice();
+  if(lbTab==='friends')list=list.filter(p=>p.isFriend||p.isMe);
+  list.sort((a,b)=>b.xp-a.xp);
+  return list;
+}
+
+function lbTrendHtml(t){
+  if(!t||t.dir==='flat')return `<span class="lb-trend flat"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg></span>`;
+  if(t.dir==='up')return `<span class="lb-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>${t.delta}</span>`;
+  return `<span class="lb-trend down"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>${t.delta}</span>`;
+}
+
+function renderLeaderboard(){
+  const list=lbSortedList();
+  const top3=list.slice(0,3);
+  const rest=list.slice(3);
+
+  const podEl=document.getElementById('lbPodium');
+  if(podEl){
+    if(top3.length<3){
+      podEl.style.display='none';
+    }else{
+      podEl.style.display='';
+      const order=[top3[1],top3[0],top3[2]];
+      const rankCls=['rank2','rank1','rank3'];
+      const standCls=['silver','gold','bronze'];
+      const rankNum=[2,1,3];
+      podEl.innerHTML=order.map((p,i)=>`
+        <div class="lb-podium-item ${rankCls[i]}">
+          ${rankNum[i]===1?'<div class="lb-podium-crown"><svg width="18" height="18" viewBox="0 0 24 24" fill="var(--flame)"><path d="M4 9l3.5 2.5L12 5l4.5 6.5L20 9l-1.8 9H5.8L4 9Z"/></svg></div>':''}
+          ${lbAvatarHtml(p.name,rankNum[i]===1?'big':'')}
+          <div class="lb-podium-name">${p.name}${p.isMe?' (You)':''}</div>
+          <div class="lb-podium-xp">${p.xp.toLocaleString()} XP</div>
+          <div class="lb-podium-stand ${standCls[i]}"><span>${rankNum[i]}</span></div>
+        </div>`).join('');
+    }
+  }
+
+  const listEl=document.getElementById('lbList');
+  if(listEl){
+    if(!rest.length){
+      listEl.innerHTML=`<div class="lb-empty">${lbTab==='friends'?'That’s everyone — invite more friends to grow your circle.':'End of leaderboard.'}</div>`;
+    }else{
+      listEl.innerHTML=rest.map((p,i)=>{
+        const rank=i+4;
+        let action;
+        if(p.isMe)action=`<span class="lb-pill you">You</span>`;
+        else if(p.isFriend)action=`<span class="lb-pill friend"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Friend</span>`;
+        else action=`<button class="lb-add-btn" onclick="lbAddFriend('${p.id}')">+ Add</button>`;
+        return `<div class="lb-row${p.isMe?' you':''}">
+          <div class="lb-rank">${rank}</div>
+          ${lbAvatarHtml(p.name)}
+          <div class="lb-row-info">
+            <div class="lb-row-name">${p.name}${p.isMe?' <span class="lb-you-tag">(You)</span>':''}</div>
+            <div class="lb-row-meta"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="2"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg>${p.streak} day streak</div>
+          </div>
+          <div class="lb-row-xp">${p.xp.toLocaleString()}<span>XP</span></div>
+          ${lbTrendHtml(p.trend)}
+          <div class="lb-row-action">${action}</div>
+        </div>`;
+      }).join('');
+    }
+  }
+
+  lbRenderStats();
+}
+
+function lbRenderStats(){
+  const sorted=LB_DATA.slice().sort((a,b)=>b.xp-a.xp);
+  const meIdx=sorted.findIndex(p=>p.isMe);
+  const rankStat=document.getElementById('lbRankStat');
+  if(rankStat)rankStat.textContent='#'+(meIdx+1);
+  const rankPara=document.getElementById('lbYourRank');
+  if(rankPara)rankPara.textContent='#'+(meIdx+1);
+  const friendsCount=LB_DATA.filter(p=>p.isFriend).length;
+  const friendsEl=document.getElementById('lbFriendCount');
+  if(friendsEl)friendsEl.textContent=friendsCount;
+  const reqEl=document.getElementById('lbReqCount');
+  if(reqEl)reqEl.textContent=REQUESTS.length;
+}
+
+function lbSwitchTab(tab,el){
+  lbTab=tab;
+  document.querySelectorAll('.lb-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
+  el.classList.add('active');el.setAttribute('aria-selected','true');
+  renderLeaderboard();
+}
+
+function lbAddFriend(id){
+  const p=LB_DATA.find(x=>x.id===id);
+  if(!p||p.isFriend)return;
+  p.isFriend=true;
+  renderLeaderboard();
+  lbToast(`You and ${p.name} are now friends`);
+}
+
+function renderRequests(){
+  const wrap=document.getElementById('lbRequests');
+  if(!wrap)return;
+  if(!REQUESTS.length){
+    wrap.innerHTML=`<div class="lb-empty" style="padding:1.5rem 0">No pending friend requests.</div>`;
+    return;
+  }
+  wrap.innerHTML=REQUESTS.map(r=>`
+    <div class="lb-request-row" id="req-${r.id}">
+      ${lbAvatarHtml(r.name)}
+      <div class="lb-row-info">
+        <div class="lb-row-name">${r.name}</div>
+        <div class="lb-row-meta">${r.mutual} mutual friend${r.mutual===1?'':'s'}</div>
+      </div>
+      <div class="lb-request-actions">
+        <button class="lb-accept-btn" onclick="lbAcceptRequest('${r.id}')">Accept</button>
+        <button class="lb-decline-btn" onclick="lbDeclineRequest('${r.id}')">Decline</button>
+      </div>
+    </div>`).join('');
+}
+
+function lbAcceptRequest(id){
+  const idx=REQUESTS.findIndex(r=>r.id===id);
+  if(idx===-1)return;
+  const r=REQUESTS[idx];
+  REQUESTS.splice(idx,1);
+  LB_DATA.push({id:'f-'+r.id,name:r.name,xp:Math.floor(80+Math.random()*220),streak:Math.floor(Math.random()*10)+1,isFriend:true,trend:{dir:'flat',delta:0}});
+  renderRequests();
+  renderLeaderboard();
+  lbToast(`You and ${r.name} are now friends`);
+}
+
+function lbDeclineRequest(id){
+  const idx=REQUESTS.findIndex(r=>r.id===id);
+  if(idx===-1)return;
+  const r=REQUESTS[idx];
+  REQUESTS.splice(idx,1);
+  renderRequests();
+  lbRenderStats();
+  lbToast(`Declined ${r.name}'s request`);
+}
+
+function openAddFriendModal(){
+  document.getElementById('lbModalOverlay').classList.add('open');
+  document.getElementById('lbSearchInput').value='';
+  renderSuggested('');
+  document.getElementById('lbSearchInput').focus();
+  document.addEventListener('keydown',lbModalEsc);
+}
+function closeAddFriendModal(){
+  document.getElementById('lbModalOverlay').classList.remove('open');
+  document.removeEventListener('keydown',lbModalEsc);
+}
+function lbModalEsc(e){if(e.key==='Escape')closeAddFriendModal()}
+
+function renderSuggested(query){
+  const wrap=document.getElementById('lbSuggestedList');
+  const q=query.trim().toLowerCase();
+  const filtered=SUGGESTED.filter(p=>p.name.toLowerCase().includes(q));
+  if(!filtered.length){
+    wrap.innerHTML=`<div class="lb-empty" style="padding:1.5rem 0">No students found.</div>`;
+    return;
+  }
+  wrap.innerHTML=filtered.map(p=>`
+    <div class="lb-suggest-row" id="sugg-${p.id}">
+      ${lbAvatarHtml(p.name)}
+      <div class="lb-row-info">
+        <div class="lb-row-name">${p.name}</div>
+        <div class="lb-row-meta">${p.mutual} mutual friend${p.mutual===1?'':'s'}</div>
+      </div>
+      <button class="lb-add-btn" onclick="lbAddSuggested('${p.id}',this)">+ Add</button>
+    </div>`).join('');
+}
+
+function lbAddSuggested(id,btn){
+  const p=SUGGESTED.find(x=>x.id===id);
+  if(!p)return;
+  btn.outerHTML='<span class="lb-pill friend"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Requested</span>';
+  LB_DATA.push({id:'sf-'+p.id,name:p.name,xp:Math.floor(60+Math.random()*260),streak:Math.floor(Math.random()*12)+1,isFriend:true,trend:{dir:'flat',delta:0}});
+  lbRenderStats();
+  lbToast(`Friend request sent to ${p.name}`);
+}
+
+function lbCopyCode(){
+  const code=document.getElementById('lbFriendCode').textContent.trim();
+  const done=()=>lbToast('Friend code copied to clipboard');
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(code).then(done).catch(done);
+  else done();
+}
+
+let lbToastTimer=null;
+function lbToast(msg){
+  let t=document.getElementById('lbToast');
+  if(!t){
+    t=document.createElement('div');
+    t.id='lbToast';t.className='lb-toast';
+    document.body.appendChild(t);
+  }
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(lbToastTimer);
+  lbToastTimer=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+(function(){
+  if(!document.getElementById('view-leaderboard'))return;
+  renderLeaderboard();
+  renderRequests();
 })();
 </script>
 </body>
