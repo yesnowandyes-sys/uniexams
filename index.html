@@ -238,6 +238,7 @@ button{font-family:inherit}
 
 /* ═══ ACHIEVEMENTS PAGE ═══ */
 .achp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-bottom:1.1rem}
+.achp-stats .hero-top{margin-bottom:.65rem}
 .achp-stat-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .achp-stat-num{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
 .achp-stat-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
@@ -247,6 +248,8 @@ button{font-family:inherit}
 .achp-badge-preview-info{line-height:1.35}
 .achp-badge-preview-info b{display:block;font-size:.8125rem;font-weight:700;color:var(--text)}
 .achp-badge-preview-info span{font-size:.6875rem;color:var(--ter)}
+.achp-bar-block{margin-top:.85rem}
+.achp-bar-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
 
 .achp-tabs{display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
 .achp-tab{display:flex;align-items:center;gap:7px;padding:.5rem .95rem;border-radius:20px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
@@ -274,6 +277,11 @@ button{font-family:inherit}
 .achp-progress{padding-top:.55rem;border-top:1px solid var(--bdr)}
 .achp-progress-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
 .achp-progress-lbl b{color:var(--text);font-family:'JetBrains Mono',monospace}
+.achp-more-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:.8rem;border-radius:12px;border:1px dashed var(--bdr2);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;margin-bottom:1.6rem;transition:background .1s,border-color .1s}
+.achp-more-btn:hover{background:var(--alt);border-color:var(--liteb)}
+.achp-more-btn .achp-section-count{margin-left:0;background:var(--alt);color:var(--ter);font-weight:700;padding:2px 8px;border-radius:20px}
+.achp-more-btn svg{transition:transform .2s ease;flex-shrink:0}
+.achp-more-btn.open svg{transform:rotate(180deg)}
 @media(max-width:860px){.achp-stats{grid-template-columns:1fr}}
 
 /* ═══ SOON PLACEHOLDER ═══ */
@@ -838,8 +846,8 @@ button{font-family:inherit}
           </div>
           <div class="achp-stat-num">10<span style="font-size:1.125rem;color:var(--ter);font-weight:600">/24</span></div>
           <div class="achp-stat-lbl">badges earned</div>
-          <div class="days-progress">
-            <div class="days-progress-lbl"><span>Overall completion</span><span>42%</span></div>
+          <div class="achp-bar-block">
+            <div class="achp-bar-lbl"><span>Overall completion</span><span>42%</span></div>
             <div class="bar"><div class="bar-fill" style="width:42%;background:var(--purp)"></div></div>
           </div>
         </div>
@@ -853,8 +861,8 @@ button{font-family:inherit}
             <div class="achv-icon" style="background:var(--alt)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--ter)" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div>
             <div class="achp-badge-preview-info"><b>30-Day Streak</b><span>Practise 30 days in a row</span></div>
           </div>
-          <div class="days-progress">
-            <div class="days-progress-lbl"><span>Progress</span><span>12/30 days</span></div>
+          <div class="achp-bar-block">
+            <div class="achp-bar-lbl"><span>Progress</span><span>12/30 days</span></div>
             <div class="bar"><div class="bar-fill" style="width:40%;background:var(--streak)"></div></div>
           </div>
         </div>
@@ -1008,6 +1016,13 @@ button{font-family:inherit}
         </div>
       </div>
 
+      <button class="achp-more-btn" id="achpMoreBtn" onclick="toggleAchpMore()" aria-expanded="false" aria-controls="achpExtra">
+        <span id="achpMoreLabel">See more achievements</span>
+        <span class="achp-section-count" id="achpMoreCount">7 more</span>
+        <svg id="achpMoreChevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+
+      <div id="achpExtra" style="display:none">
       <!-- Mock Exams -->
       <div class="achp-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg><h3 class="section-title">Mock Exams</h3><span class="achp-section-count">1 of 3 earned</span></div>
@@ -1062,6 +1077,7 @@ button{font-family:inherit}
             <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -1324,6 +1340,21 @@ render();
     });
   });
 })();
+
+/* Achievements page: expand the rest of the categories */
+function toggleAchpMore(){
+  const extra=document.getElementById('achpExtra');
+  const btn=document.getElementById('achpMoreBtn');
+  const label=document.getElementById('achpMoreLabel');
+  const count=document.getElementById('achpMoreCount');
+  const open=extra.style.display==='none';
+  extra.style.display=open?'':'none';
+  btn.classList.toggle('open',open);
+  btn.setAttribute('aria-expanded',open?'true':'false');
+  label.textContent=open?'See fewer achievements':'See more achievements';
+  count.style.display=open?'none':'';
+  if(open)extra.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
 
 /* Achievements page: filter cards by unlocked/locked state */
 (function(){
