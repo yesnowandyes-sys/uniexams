@@ -240,6 +240,46 @@ button{font-family:inherit}
 @media(max-width:860px){.subj-item{flex-wrap:wrap;row-gap:8px}.subj-name-wrap{width:auto}.subj-bar-wrap{order:3;width:100%;flex-basis:100%}.subj-grade{width:auto}}
 @media(max-width:480px){.stat-grid{grid-template-columns:1fr}}
 
+/* ═══ ACHIEVEMENTS PAGE ═══ */
+.achp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-bottom:1.1rem}
+.achp-stat-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.achp-stat-num{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
+.achp-stat-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
+.achp-stat-sub{font-size:.75rem;color:var(--sec);margin-top:.7rem;line-height:1.4}
+.achp-badge-preview{display:flex;align-items:center;gap:10px;margin-top:.15rem}
+.achp-badge-preview .achv-icon{width:40px;height:40px;margin:0;flex-shrink:0}
+.achp-badge-preview-info{line-height:1.35}
+.achp-badge-preview-info b{display:block;font-size:.8125rem;font-weight:700;color:var(--text)}
+.achp-badge-preview-info span{font-size:.6875rem;color:var(--ter)}
+
+.achp-tabs{display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
+.achp-tab{display:flex;align-items:center;gap:7px;padding:.5rem .95rem;border-radius:20px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.achp-tab:hover{background:var(--alt)}
+.achp-tab.active{background:var(--lite);border-color:var(--liteb);color:var(--mid)}
+.achp-tab-count{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:700;background:rgba(20,25,50,.06);padding:1px 6px;border-radius:10px;line-height:1.5}
+.achp-tab.active .achp-tab-count{background:var(--liteb);color:var(--blue)}
+
+.achp-section{margin-bottom:1.6rem}
+.achp-section.hide{display:none}
+.achp-section-count{font-size:.75rem;color:var(--ter);margin-left:4px}
+.achp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(206px,1fr));gap:12px}
+
+.achp-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.1rem 1.15rem 1.2rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:.55rem;transition:transform .12s,box-shadow .12s}
+.achp-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.achp-card.locked{opacity:.62}
+.achp-card.locked .achv-icon{background:var(--alt) !important}
+.achp-card.locked .achv-icon svg{stroke:var(--ter) !important}
+.achp-card-top{display:flex;align-items:center;justify-content:space-between}
+.achp-card .achv-icon{margin:0;width:42px;height:42px}
+.achp-card .achv-name{font-size:.875rem}
+.achp-card .achv-desc{font-size:.75rem;line-height:1.5;flex:1}
+.achp-rarity{font-size:.5938rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:20px;flex-shrink:0}
+.achp-unlocked{display:flex;align-items:center;gap:5px;font-size:.6875rem;color:var(--green);font-weight:600;padding-top:.55rem;border-top:1px solid var(--bdr)}
+.achp-progress{padding-top:.55rem;border-top:1px solid var(--bdr)}
+.achp-progress-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
+.achp-progress-lbl b{color:var(--text);font-family:'JetBrains Mono',monospace}
+@media(max-width:860px){.achp-stats{grid-template-columns:1fr}}
+
 /* ═══ SOON PLACEHOLDER ═══ */
 .soon-wrap{max-width:1180px;margin:0 auto;padding:4.5rem 2rem;text-align:center}
 .soon-icon{width:72px;height:72px;border-radius:20px;background:var(--lite);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
@@ -381,7 +421,7 @@ button{font-family:inherit}
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5V9.75M9.75 19.5V4.5M15 19.5v-7.5M20.25 19.5V12"/></svg>
       <span>Analytics</span>
     </button>
-    <button class="sb-item" onclick="nav(this,'soon','Achievements')">
+    <button class="sb-item" id="navAchievements" onclick="nav(this,'achievements','Achievements')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/><path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
       <span>Achievements</span>
     </button>
@@ -606,7 +646,7 @@ button{font-family:inherit}
       </div>
 
       <div class="card">
-        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Achievements</h3></div>
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Achievements</h3><button class="focus-drop-trigger" style="margin-left:auto;padding:5px 10px" onclick="nav(document.getElementById('navAchievements'),'achievements','Achievements')">View all<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
         <div class="achv-row-wrap">
           <div class="achv-row" id="achvRow">
             <div class="achv"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><div class="achv-name">7-Day Streak</div><div class="achv-desc">Practised 7 days in a row</div></div>
@@ -781,6 +821,250 @@ button{font-family:inherit}
             <div class="heat-legend-cell" style="background:color-mix(in srgb, var(--mid) 68%, var(--surf))"></div>
             <div class="heat-legend-cell" style="background:var(--mid)"></div>
           More</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ACHIEVEMENTS VIEW ═══ -->
+  <div id="view-achievements" class="view">
+    <div class="page">
+      <div class="greeting">
+        <h1>Your Achievements</h1>
+        <p><strong>10 of 24</strong> badges unlocked — you're 3 questions away from your next one.</p>
+      </div>
+
+      <div class="achp-stats">
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Badges Unlocked</span>
+            <div class="achp-stat-icon" style="background:var(--pLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div>
+          </div>
+          <div class="achp-stat-num">10<span style="font-size:1.125rem;color:var(--ter);font-weight:600">/24</span></div>
+          <div class="achp-stat-lbl">badges earned</div>
+          <div class="days-progress">
+            <div class="days-progress-lbl"><span>Overall completion</span><span>42%</span></div>
+            <div class="bar"><div class="bar-fill" style="width:42%;background:var(--purp)"></div></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Next Badge</span>
+            <div class="achp-stat-icon" style="background:var(--aLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div>
+          </div>
+          <div class="achp-badge-preview" style="margin-top:.35rem">
+            <div class="achv-icon" style="background:var(--alt)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--ter)" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div>
+            <div class="achp-badge-preview-info"><b>30-Day Streak</b><span>Practise 30 days in a row</span></div>
+          </div>
+          <div class="days-progress">
+            <div class="days-progress-lbl"><span>Progress</span><span>12/30 days</span></div>
+            <div class="bar"><div class="bar-fill" style="width:40%;background:var(--streak)"></div></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Rarest Earned</span>
+            <div class="achp-stat-icon" style="background:var(--aLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div>
+          </div>
+          <div class="achp-badge-preview" style="margin-top:.35rem">
+            <div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div>
+            <div class="achp-badge-preview-info"><b>Founding Member</b><span>Joined during the ESAT beta</span></div>
+          </div>
+          <div class="achp-stat-sub">Only <strong>4%</strong> of students hold a Legendary badge.</div>
+        </div>
+      </div>
+
+      <div class="achp-tabs" role="tablist" aria-label="Filter achievements">
+        <button class="achp-tab active" data-filter="all" role="tab" aria-selected="true">All<span class="achp-tab-count">24</span></button>
+        <button class="achp-tab" data-filter="unlocked" role="tab" aria-selected="false">Unlocked<span class="achp-tab-count">10</span></button>
+        <button class="achp-tab" data-filter="locked" role="tab" aria-selected="false">Locked<span class="achp-tab-count">14</span></button>
+      </div>
+
+      <!-- Streaks -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg><h3 class="section-title">Streaks</h3><span class="achp-section-count">2 of 5 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">Getting Started</div>
+            <div class="achv-desc">Practised 3 days in a row</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 6 weeks ago</div>
+          </div>
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">7-Day Streak</div>
+            <div class="achv-desc">Practised 7 days in a row</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 3 weeks ago</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">30-Day Streak</div>
+            <div class="achv-desc">Practise 30 days in a row</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>12/30</b></div><div class="bar"><div class="bar-fill" style="width:40%;background:var(--streak)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--pLite);color:var(--purp)">Epic</span></div>
+            <div class="achv-name">100-Day Streak</div>
+            <div class="achv-desc">Practised 100 days straight</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>12/100</b></div><div class="bar"><div class="bar-fill" style="width:12%;background:var(--streak)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--aLite);color:var(--flame)">Legendary</span></div>
+            <div class="achv-name">Iron Will</div>
+            <div class="achv-desc">Practised 365 days straight</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>12/365</b></div><div class="bar"><div class="bar-fill" style="width:4%;background:var(--streak)"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Volume -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title">Practice Volume</h3><span class="achp-section-count">2 of 5 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--gLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">First Steps</div>
+            <div class="achv-desc">Answered your first practice question</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 2 months ago</div>
+          </div>
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--gLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">50 Questions</div>
+            <div class="achv-desc">Answered 50 practice questions</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 5 weeks ago</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">250 Questions</div>
+            <div class="achv-desc">Answered 250 practice questions</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>178/250</b></div><div class="bar"><div class="bar-fill" style="width:71%;background:var(--mid)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--pLite);color:var(--purp)">Epic</span></div>
+            <div class="achv-name">1,000 Questions</div>
+            <div class="achv-desc">Answered 1,000 practice questions</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>178/1,000</b></div><div class="bar"><div class="bar-fill" style="width:18%;background:var(--mid)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Marathon Runner</div>
+            <div class="achv-desc">Answered 500 questions in one month</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>178/500</b></div><div class="bar"><div class="bar-fill" style="width:36%;background:var(--mid)"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mastery & Accuracy -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Mastery &amp; Accuracy</h3><span class="achp-section-count">2 of 4 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">Perfect 10</div>
+            <div class="achv-desc">Answered 10 questions correctly in a row</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 2 weeks ago</div>
+          </div>
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Comeback Kid</div>
+            <div class="achv-desc">Brought a red topic up to green</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 9 days ago</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Subject Master: Maths</div>
+            <div class="achv-desc">Reach a 90% predicted grade in Maths 1</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>76/90</b></div><div class="bar"><div class="bar-fill" style="width:84%;background:var(--mid)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--pLite);color:var(--purp)">Epic</span></div>
+            <div class="achv-name">Flawless Set</div>
+            <div class="achv-desc">Score 100% on a 20-question set</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speed -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title">Speed</h3><span class="achp-section-count">1 of 3 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">Speed Round</div>
+            <div class="achv-desc">10 questions answered under 5 minutes</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 4 days ago</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Quickfire</div>
+            <div class="achv-desc">Answer 50 questions in a single day</div>
+            <div class="achp-progress"><div class="achp-progress-lbl"><span>Progress</span><b>31/50</b></div><div class="bar"><div class="bar-fill" style="width:62%;background:var(--mid)"></div></div></div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--pLite);color:var(--purp)">Epic</span></div>
+            <div class="achv-name">Lightning Reflexes</div>
+            <div class="achv-desc">Average under 20s/question over a 20-Q set</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mock Exams -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg><h3 class="section-title">Mock Exams</h3><span class="achp-section-count">1 of 3 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--pLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg></div><span class="achp-rarity" style="background:var(--pLite);color:var(--purp)">Epic</span></div>
+            <div class="achv-name">On Track for a 9</div>
+            <div class="achv-desc">Reached an 80%+ predicted grade</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · yesterday</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">First Mock Sat</div>
+            <div class="achv-desc">Complete your first full mock exam</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Mock Exams launching soon</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--aLite);color:var(--flame)">Legendary</span></div>
+            <div class="achv-name">Perfect Score</div>
+            <div class="achv-desc">100% on a full mock exam</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Mock Exams launching soon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special -->
+      <div class="achp-section">
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/><path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg><h3 class="section-title">Special</h3><span class="achp-section-count">2 of 4 earned</span></div>
+        <div class="achp-grid">
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--pLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.75 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Night Owl</div>
+            <div class="achv-desc">Practised after midnight</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 11 days ago</div>
+          </div>
+          <div class="achp-card" data-state="unlocked">
+            <div class="achp-card-top"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div><span class="achp-rarity" style="background:var(--aLite);color:var(--flame)">Legendary</span></div>
+            <div class="achv-name">Founding Member</div>
+            <div class="achv-desc">Joined Exam Tutor during the ESAT beta</div>
+            <div class="achp-unlocked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlocked · 2 months ago</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg></div><span class="achp-rarity" style="background:var(--lite);color:var(--mid)">Rare</span></div>
+            <div class="achv-name">Early Bird</div>
+            <div class="achv-desc">Practised before 7am</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
+          </div>
+          <div class="achp-card locked" data-state="locked">
+            <div class="achp-card-top"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><span class="achp-rarity" style="background:var(--alt);color:var(--sec)">Common</span></div>
+            <div class="achv-name">Welcome Back</div>
+            <div class="achv-desc">Returned to practice after a 7-day break</div>
+            <div class="achp-unlocked" style="color:var(--ter);border-top:1px solid var(--bdr)">Not yet attempted</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1041,6 +1325,27 @@ render();
     requestAnimationFrame(()=>{
       ring.style.strokeDashoffset='104.68';
       if(marker)marker.classList.add('show');
+    });
+  });
+})();
+
+/* Achievements page: filter cards by unlocked/locked state */
+(function(){
+  const tabs=document.querySelectorAll('.achp-tab');
+  if(!tabs.length)return;
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      const filter=tab.dataset.filter;
+      document.querySelectorAll('.achp-card').forEach(card=>{
+        card.style.display=(filter==='all'||card.dataset.state===filter)?'':'none';
+      });
+      document.querySelectorAll('.achp-section').forEach(sec=>{
+        const anyVisible=[...sec.querySelectorAll('.achp-card')].some(c=>c.style.display!=='none');
+        sec.classList.toggle('hide',!anyVisible);
+      });
     });
   });
 })();
