@@ -16,6 +16,7 @@
   --red:#DC2626;--rLite:#FEF2F2;--rBdr:#FECACA;
   --amber:#B45309;--aLite:#FFFBEB;--aBdr:#FDE68A;--flame:#F59E0B;
   --streak:#B45309;--streakLite:#F3E3D1;
+  --silver:#94A3B8;--gold:#CA8A04;--plat:#7C3AED;
   --teal:#0F766E;
   --purp:#7C3AED;--pLite:#F5F3FF;--pBdr:#DDD6FE;
   --subjBio:#15803D;
@@ -107,27 +108,54 @@ button{font-family:inherit}
 .btn-white:active{transform:scale(.97)}
 .btn-white:focus-visible{outline-color:#fff}
 
-/* Mini grid: Days Remaining + Daily Streak — compact horizontal cards with inline progress bars */
-.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
-.hero-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:.9rem 1.1rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
+/* Mini grid: Days Remaining + Daily Streak */
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem;align-items:stretch}
+.hero-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.2rem 1.35rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
 .hero-top{display:flex;justify-content:space-between;align-items:center}
-.hero-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hero-row{display:flex;align-items:center;gap:.9rem;margin-top:.6rem}
-.hero-numcol{flex-shrink:0;text-align:center}
-.hero-unit{font-size:.625rem;font-weight:600;color:var(--ter);text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
-.hero-div{background:var(--bdr);width:1px;align-self:stretch}
-.hero-side{flex:1;min-width:0}
-.hero-side-lbl{display:flex;justify-content:space-between;font-size:.6875rem;color:var(--ter);margin-bottom:5px}
-.hero-side-lbl b{color:var(--text);font-family:'JetBrains Mono',monospace;font-weight:700}
-.hero-side-cap{font-size:.6875rem;color:var(--sec);margin-top:6px}
-.hero-side-cap b{color:var(--text);font-weight:600}
+.hero-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
 /* Days remaining */
-.days-num{font-family:'JetBrains Mono',monospace;font-size:1.875rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
+.days-num{font-family:'JetBrains Mono',monospace;font-size:2.5rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em;margin-top:.85rem}
+.days-unit{font-size:.6875rem;font-weight:600;color:var(--ter);text-transform:uppercase;letter-spacing:.03em;margin-top:4px}
+.days-meta{font-size:.8125rem;color:var(--sec);margin-top:.75rem}
+.days-meta b{color:var(--text);font-weight:600}
+.days-prog{margin-top:.85rem}
+.days-prog-lbl{display:flex;justify-content:space-between;font-size:.6875rem;color:var(--ter);margin-bottom:6px}
+.days-prog-lbl b{font-family:'JetBrains Mono',monospace;color:var(--text)}
 
-/* Streak */
-.streak-flame{width:26px;height:26px;border-radius:7px;background:var(--aLite);display:flex;align-items:center;justify-content:center}
-.streak-num{font-family:'JetBrains Mono',monospace;font-size:1.875rem;font-weight:700;color:var(--flame);line-height:1;letter-spacing:-.03em}
+/* Streak: shared top bits */
+.streak-flame{width:30px;height:30px;border-radius:7px;background:var(--aLite);display:flex;align-items:center;justify-content:center}
+.streak-num{font-family:'JetBrains Mono',monospace;font-size:2.5rem;font-weight:700;color:var(--flame);line-height:1;letter-spacing:-.03em;margin-top:.85rem}
+.streak-unit{font-size:.6875rem;font-weight:600;color:var(--ter);text-transform:uppercase;letter-spacing:.03em;margin-top:4px}
+
+/* Streak: pre-Bronze 7-day checklist (streak < 7) */
+.wk-row{display:flex;justify-content:space-between;gap:6px;margin-top:.9rem}
+.wk-box{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.wk-check{width:100%;aspect-ratio:1;max-width:30px;border-radius:8px;background:var(--surf);border:2px solid var(--bdr2);display:flex;align-items:center;justify-content:center}
+.wk-box.done .wk-check{background:var(--streak);border-color:var(--streak)}
+.wk-box.today .wk-check{border-color:var(--streak);box-shadow:0 0 0 3px var(--aLite)}
+.wk-day-lbl{font-size:.5625rem;font-weight:700;color:var(--ter);text-transform:uppercase}
+.wk-box.done .wk-day-lbl{color:var(--streak)}
+.wk-goal{display:flex;align-items:center;gap:8px;margin-top:1rem;background:var(--aLite);border:1px solid var(--aBdr);border-radius:9px;padding:.55rem .75rem}
+.wk-goal-icon{width:22px;height:22px;border-radius:50%;background:var(--surf);border:2px dashed var(--aBdr);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wk-goal span{font-size:.75rem;color:var(--amber);font-weight:600}
+
+/* Streak: milestone ladder (streak >= 7) — legs live between medals so dashes never run under a badge */
+.q3b-row{margin-top:1.3rem}
+.q3b-medals{display:flex;align-items:flex-start}
+.q3b-leg{flex:1;min-width:16px;height:38px;display:flex;align-items:center;justify-content:space-between;gap:1px;padding:0 3px}
+.q3b-leg.complete{padding:0 1px}
+.q3b-leg-solid{width:100%;height:3px;border-radius:2px;background:var(--flame)}
+.q3b-dash{width:5px;height:2.5px;border-radius:1.5px;background:var(--bdr);flex-shrink:0}
+.q3b-dash.lit{background:var(--flame)}
+.q3b-medal{display:flex;flex-direction:column;align-items:center;gap:6px;width:52px;flex-shrink:0}
+.q3b-medal-wrap{position:relative;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:var(--surf);border-radius:50%}
+.q3b-medal-dot{width:28px;height:28px;border-radius:50%;background:var(--surf);border:2.5px solid var(--bdr2);display:flex;align-items:center;justify-content:center}
+.q3b-medal.reached .q3b-medal-dot{border-color:var(--rank);background:var(--rank)}
+.q3b-medal.current .q3b-medal-dot{border-color:var(--rank)}
+.q3b-medal.current .q3b-medal-wrap::before{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--rank);opacity:.3}
+.q3b-medal-lbl{font-size:.625rem;font-weight:700;color:var(--ter);text-align:center;line-height:1.25}
+.q3b-medal.reached .q3b-medal-lbl,.q3b-medal.current .q3b-medal-lbl{color:var(--rank)}
 
 /* Focus Areas */
 .focus-section{margin-bottom:1.1rem}
@@ -390,7 +418,7 @@ button{font-family:inherit}
 }
 @media(max-width:480px){
 .page{padding:1rem .75rem 2rem}.greeting h1{font-size:1.75rem}
-.days-num,.streak-num{font-size:1.625rem}
+.days-num,.streak-num{font-size:2rem}
 .topbar-title{font-size:.9375rem}
 .qnum{width:32px;height:32px}
 .dial-wrap{width:120px;height:120px}
@@ -535,14 +563,12 @@ button{font-family:inherit}
             <span class="label" style="color:var(--ter)">Days Remaining</span>
             <div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
           </div>
-          <div class="hero-row">
-            <div class="hero-numcol"><div class="days-num">65</div><div class="hero-unit">days</div></div>
-            <div class="hero-div"></div>
-            <div class="hero-side">
-              <div class="hero-side-lbl"><span>Study period</span><b>55/120</b></div>
-              <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
-              <div class="hero-side-cap">ESAT · <b>9 Oct 2026</b></div>
-            </div>
+          <div class="days-num">65</div>
+          <div class="days-unit">days to exam</div>
+          <div class="days-meta">ESAT · <b>9 Oct 2026</b></div>
+          <div class="days-prog">
+            <div class="days-prog-lbl"><span>Study period</span><b>55/120</b></div>
+            <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
           </div>
         </div>
 
@@ -552,15 +578,9 @@ button{font-family:inherit}
             <span class="label" style="color:var(--ter)">Daily Streak</span>
             <div class="streak-flame"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
           </div>
-          <div class="hero-row">
-            <div class="hero-numcol"><div class="streak-num">12</div><div class="hero-unit">days</div></div>
-            <div class="hero-div"></div>
-            <div class="hero-side">
-              <div class="hero-side-lbl"><span>Next badge · 30d</span><b>12/30</b></div>
-              <div class="bar"><div class="bar-fill" style="width:40%;background:var(--streak)"></div></div>
-              <div class="hero-side-cap">Best streak <b>21 days</b></div>
-            </div>
-          </div>
+          <div class="streak-num" id="streakNum"></div>
+          <div class="streak-unit">day streak</div>
+          <div id="streakBody"></div>
         </div>
       </div>
 
@@ -1214,6 +1234,68 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key==='Enter'){if(idx<QUESTIONS.length-1)navQ(1);return}
   if(e.key==='ArrowLeft'&&idx>0)navQ(-1);
 });
+
+/* ── Daily Streak card: pre-Bronze checklist below 7 days, milestone ladder from 7 days on ── */
+const DAILY_STREAK=3;
+const STREAK_TIERS=[{days:7,name:'Bronze',rank:'var(--streak)'},{days:14,name:'Silver',rank:'var(--silver)'},{days:30,name:'Gold',rank:'var(--gold)'},{days:60,name:'Platinum',rank:'var(--plat)'}];
+const FLAME_SVG='<svg width="13" height="13" viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg>';
+const FLAME_OUTLINE_SVG=rank=>`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="${rank}" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg>`;
+
+function renderPreBadgeChecklist(streak){
+  const days=['M','T','W','T','F','S','S'];
+  let boxes='';
+  days.forEach((d,i)=>{
+    const dayNum=i+1;
+    let cls='wk-box';
+    let inner='';
+    if(dayNum<=streak){cls+=' done';inner='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>'}
+    else if(dayNum===streak+1){cls+=' today'}
+    boxes+=`<div class="${cls}"><div class="wk-check">${inner}</div><div class="wk-day-lbl">${d}</div></div>`;
+  });
+  const toGo=7-streak;
+  return `<div class="wk-row">${boxes}</div>
+    <div class="wk-goal">
+      <div class="wk-goal-icon">${FLAME_OUTLINE_SVG('var(--amber)')}</div>
+      <span>${toGo} more day${toGo===1?'':'s'} to your first badge — Bronze</span>
+    </div>`;
+}
+
+function renderStreakLadder(streak){
+  const reachedIdx=STREAK_TIERS.filter(t=>streak>=t.days).length;
+  let medals='';
+  STREAK_TIERS.forEach((tier,i)=>{
+    const isReached=streak>=tier.days;
+    const isCurrent=!isReached&&i===reachedIdx;
+    let cls='q3b-medal';
+    if(isReached)cls+=' reached';
+    if(isCurrent)cls+=' current';
+    let lbl;
+    if(isCurrent)lbl=`${tier.days-streak}d to ${tier.name}`;
+    else lbl=`${tier.name}<br>${tier.days}d`;
+    const icon=isReached?FLAME_SVG:FLAME_OUTLINE_SVG(tier.rank);
+    medals+=`<div class="${cls}" style="--rank:${tier.rank}"><div class="q3b-medal-wrap"><div class="q3b-medal-dot">${icon}</div></div><div class="q3b-medal-lbl">${lbl}</div></div>`;
+    if(i<STREAK_TIERS.length-1){
+      const next=STREAK_TIERS[i+1];
+      if(streak>=next.days){
+        medals+='<div class="q3b-leg complete"><div class="q3b-leg-solid"></div></div>';
+      }else{
+        const span=next.days-tier.days;
+        const progress=Math.max(0,Math.min(1,(streak-tier.days)/span));
+        const lit=Math.round(progress*8);
+        let dashes='';
+        for(let d=0;d<8;d++)dashes+=`<div class="q3b-dash${d<lit?' lit':''}"></div>`;
+        medals+=`<div class="q3b-leg">${dashes}</div>`;
+      }
+    }
+  });
+  return `<div class="q3b-row"><div class="q3b-medals">${medals}</div></div>`;
+}
+
+function renderDailyStreak(){
+  document.getElementById('streakNum').textContent=DAILY_STREAK;
+  document.getElementById('streakBody').innerHTML=DAILY_STREAK<7?renderPreBadgeChecklist(DAILY_STREAK):renderStreakLadder(DAILY_STREAK);
+}
+renderDailyStreak();
 
 render();
 
