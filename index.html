@@ -277,11 +277,18 @@ button{font-family:inherit}
 .achp-progress{padding-top:.55rem;border-top:1px solid var(--bdr)}
 .achp-progress-lbl{display:flex;justify-content:space-between;font-size:.625rem;color:var(--ter);margin-bottom:4px}
 .achp-progress-lbl b{color:var(--text);font-family:'JetBrains Mono',monospace}
-.achp-more-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:.8rem;border-radius:12px;border:1px dashed var(--bdr2);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;margin-bottom:1.6rem;transition:background .1s,border-color .1s}
-.achp-more-btn:hover{background:var(--alt);border-color:var(--liteb)}
-.achp-more-btn .achp-section-count{margin-left:0;background:var(--alt);color:var(--ter);font-weight:700;padding:2px 8px;border-radius:20px}
-.achp-more-btn svg{transition:transform .2s ease;flex-shrink:0}
-.achp-more-btn.open svg{transform:rotate(180deg)}
+.achp-collapse-wrap{position:relative}
+.achp-collapse{max-height:210px;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.achp-collapse.expanded{max-height:6000px}
+.achp-fade-mask{position:absolute;left:0;right:0;bottom:0;height:130px;background:linear-gradient(180deg, rgba(246,247,253,0) 0%, var(--bg) 82%);pointer-events:none;transition:opacity .35s ease}
+.achp-collapse.expanded + .achp-fade-mask{opacity:0}
+.achp-more-wrap{display:flex;flex-direction:column;align-items:center;gap:7px;margin-top:-32px;margin-bottom:1.6rem;position:relative;z-index:2}
+.achp-more-circle{width:46px;height:46px;border-radius:50%;border:1px solid var(--bdr);background:var(--surf);box-shadow:var(--shadow-2);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--mid);flex-shrink:0;transition:transform .15s,box-shadow .15s}
+.achp-more-circle:hover{transform:translateY(-2px);box-shadow:var(--shadow-3)}
+.achp-more-circle:active{transform:scale(.94)}
+.achp-more-circle svg{transition:transform .3s ease}
+.achp-more-circle.open svg{transform:rotate(180deg)}
+.achp-more-caption{font-size:.6875rem;font-weight:600;color:var(--ter)}
 @media(max-width:860px){.achp-stats{grid-template-columns:1fr}}
 
 /* ═══ SOON PLACEHOLDER ═══ */
@@ -960,6 +967,8 @@ button{font-family:inherit}
         </div>
       </div>
 
+      <div class="achp-collapse-wrap">
+      <div class="achp-collapse" id="achpExtra">
       <!-- Mastery & Accuracy -->
       <div class="achp-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Mastery &amp; Accuracy</h3><span class="achp-section-count">2 of 4 earned</span></div>
@@ -1016,13 +1025,6 @@ button{font-family:inherit}
         </div>
       </div>
 
-      <button class="achp-more-btn" id="achpMoreBtn" onclick="toggleAchpMore()" aria-expanded="false" aria-controls="achpExtra">
-        <span id="achpMoreLabel">See more achievements</span>
-        <span class="achp-section-count" id="achpMoreCount">7 more</span>
-        <svg id="achpMoreChevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-
-      <div id="achpExtra" style="display:none">
       <!-- Mock Exams -->
       <div class="achp-section">
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg><h3 class="section-title">Mock Exams</h3><span class="achp-section-count">1 of 3 earned</span></div>
@@ -1078,6 +1080,14 @@ button{font-family:inherit}
           </div>
         </div>
       </div>
+      </div>
+      <div class="achp-fade-mask"></div>
+      </div>
+      <div class="achp-more-wrap">
+        <button class="achp-more-circle" id="achpMoreBtn" onclick="toggleAchpMore()" aria-expanded="false" aria-controls="achpExtra" aria-label="See more achievements">
+          <svg id="achpMoreChevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <span class="achp-more-caption" id="achpMoreCaption">14 more achievements</span>
       </div>
     </div>
   </div>
@@ -1341,19 +1351,17 @@ render();
   });
 })();
 
-/* Achievements page: expand the rest of the categories */
+/* Achievements page: expand the faded-out categories */
 function toggleAchpMore(){
   const extra=document.getElementById('achpExtra');
   const btn=document.getElementById('achpMoreBtn');
-  const label=document.getElementById('achpMoreLabel');
-  const count=document.getElementById('achpMoreCount');
-  const open=extra.style.display==='none';
-  extra.style.display=open?'':'none';
+  const caption=document.getElementById('achpMoreCaption');
+  const open=!extra.classList.contains('expanded');
+  extra.classList.toggle('expanded',open);
   btn.classList.toggle('open',open);
   btn.setAttribute('aria-expanded',open?'true':'false');
-  label.textContent=open?'See fewer achievements':'See more achievements';
-  count.style.display=open?'none':'';
-  if(open)extra.scrollIntoView({behavior:'smooth',block:'nearest'});
+  btn.setAttribute('aria-label',open?'See fewer achievements':'See more achievements');
+  caption.textContent=open?'See fewer achievements':'14 more achievements';
 }
 
 /* Achievements page: filter cards by unlocked/locked state */
