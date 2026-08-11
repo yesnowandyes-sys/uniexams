@@ -136,9 +136,6 @@ button{font-family:inherit}
 .wk-box.today .wk-check{border-color:var(--streak);box-shadow:0 0 0 3px var(--aLite)}
 .wk-day-lbl{font-size:.5625rem;font-weight:700;color:var(--ter);text-transform:uppercase}
 .wk-box.done .wk-day-lbl{color:var(--streak)}
-.wk-goal{display:flex;align-items:center;gap:8px;margin-top:1rem;background:var(--aLite);border:1px solid var(--aBdr);border-radius:9px;padding:.55rem .75rem}
-.wk-goal-icon{width:22px;height:22px;border-radius:50%;background:var(--surf);border:2px dashed var(--aBdr);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.wk-goal span{font-size:.75rem;color:var(--amber);font-weight:600}
 
 /* Streak: milestone ladder (streak >= 7) — legs live between medals so dashes never run under a badge */
 .q3b-row{margin-top:1.3rem}
@@ -1252,12 +1249,7 @@ function renderPreBadgeChecklist(streak){
     else if(dayNum===streak+1){cls+=' today'}
     boxes+=`<div class="${cls}"><div class="wk-check">${inner}</div><div class="wk-day-lbl">${d}</div></div>`;
   });
-  const toGo=7-streak;
-  return `<div class="wk-row">${boxes}</div>
-    <div class="wk-goal">
-      <div class="wk-goal-icon">${FLAME_OUTLINE_SVG('var(--amber)')}</div>
-      <span>${toGo} more day${toGo===1?'':'s'} to your first badge — Bronze</span>
-    </div>`;
+  return `<div class="wk-row">${boxes}</div>`;
 }
 
 function renderStreakLadder(streak){
