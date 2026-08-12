@@ -1532,27 +1532,35 @@ render();
 
   /* Generate one value per day for the last 365 days: a gradual start→end improvement plus daily noise. */
   function genDaily(seed,start,end,noiseAmp,opts={}){
-    const rng=seededRng(seed),days=365,out=[];
+    const rng=seededRng(seed),days=365,raw=[];
     for(let i=0;i<days;i++){
       const date=new Date(TODAY);date.setDate(date.getDate()-(days-1-i));
       const progress=i/(days-1);
       let val=start+(end-start)*progress+(rng()*2-1)*noiseAmp;
       if(opts.weekendBoost&&(date.getDay()===0||date.getDay()===6))val+=opts.weekendBoost;
+      raw.push({date,value:val});
+    }
+    /* Light moving average so day-to-day noise doesn't dominate the underlying trend. */
+    const smoothWindow=2;
+    return raw.map((p,i)=>{
+      const lo=Math.max(0,i-smoothWindow),hi=Math.min(raw.length-1,i+smoothWindow);
+      let sum=0,count=0;
+      for(let j=lo;j<=hi;j++){sum+=raw[j].value;count++}
+      let val=sum/count;
       if(opts.min!==undefined)val=Math.max(opts.min,val);
       if(opts.max!==undefined)val=Math.min(opts.max,val);
-      out.push({date,value:val});
-    }
-    return out;
+      return {date:p.date,value:val};
+    });
   }
 
   const DATA={
     accuracy:{
-      maths:genDaily(11,44,74,5,{min:15,max:100}),
-      physics:genDaily(22,34,62,5,{min:15,max:100}),
-      chemistry:genDaily(33,40,66,5,{min:15,max:100})
+      maths:genDaily(11,44,74,3,{min:15,max:100}),
+      physics:genDaily(22,34,62,3,{min:15,max:100}),
+      chemistry:genDaily(33,40,66,3,{min:15,max:100})
     },
-    avgTime:{overall:genDaily(44,185,112,12,{min:45,max:260})},
-    studyTime:{overall:genDaily(55,22,85,18,{min:0,max:180,weekendBoost:15})}
+    avgTime:{overall:genDaily(44,185,112,7,{min:45,max:260})},
+    studyTime:{overall:genDaily(55,22,85,10,{min:0,max:180,weekendBoost:9})}
   };
 
   function fmtMMSS(v){const s=Math.max(0,Math.round(v));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
