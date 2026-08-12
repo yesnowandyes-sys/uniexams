@@ -427,6 +427,68 @@ button{font-family:inherit}
 @media(max-width:760px){.lb-podium{gap:8px}.lb-podium-item{width:110px}.lb-podium-item.rank1{width:126px}.lb-row-meta{display:none}}
 @media(max-width:480px){.lb-head{align-items:stretch}.lb-addfriend-btn{width:100% !important}}
 
+/* ═══ SETTINGS VIEW ═══ */
+.settings-layout{display:grid;grid-template-columns:216px 1fr;gap:1.5rem;align-items:start}
+.settings-nav{position:sticky;top:88px;display:flex;flex-direction:column;gap:2px;background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:.6rem;box-shadow:var(--shadow-1)}
+.settings-nav button{display:flex;align-items:center;gap:10px;padding:.62rem .7rem;border-radius:9px;border:none;background:none;font-size:.8125rem;font-weight:600;color:var(--sec);cursor:pointer;text-align:left;width:100%;font-family:'Inter',sans-serif;transition:background .12s,color .12s}
+.settings-nav button svg{flex-shrink:0}
+.settings-nav button:hover{background:var(--alt);color:var(--text)}
+.settings-nav button.active{background:var(--lite);color:var(--blue)}
+.settings-content{display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+.settings-panel{display:none;flex-direction:column;gap:1.1rem}
+.settings-panel.active{display:flex}
+
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;padding:.85rem 0;border-bottom:1px solid var(--bdr)}
+.set-row:last-child{border-bottom:none}
+.set-row-txt b{display:block;font-size:.8438rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.set-row-txt span{font-size:.75rem;color:var(--ter);line-height:1.5}
+.set-row.disabled{opacity:.45;pointer-events:none}
+
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field label{font-size:.75rem;font-weight:600;color:var(--sec)}
+.field input[type=text],.field input[type=email],.field input[type=password],.field input[type=date],.field input[type=time],.field input[type=number],.field select{font-family:inherit;font-size:.8125rem;color:var(--text);background:var(--surf);border:1px solid var(--bdr);border-radius:9px;padding:.65rem .8rem;outline:none;transition:border-color .12s,box-shadow .12s;width:100%}
+.field input:focus,.field select:focus{border-color:var(--mid);box-shadow:0 0 0 3px var(--lite)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+.toggle{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0}
+.toggle input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
+.toggle-track{position:absolute;inset:0;background:var(--bdr2);border-radius:20px;transition:background .18s ease}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
+.toggle input:checked~.toggle-track{background:var(--mid)}
+.toggle input:checked~.toggle-thumb{transform:translateX(18px)}
+.toggle input:focus-visible~.toggle-track{outline:2px solid var(--mid);outline-offset:2px}
+
+.avatar-edit{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.1rem}
+.avatar-edit-pic{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.625rem;font-weight:700;color:#fff;flex-shrink:0;font-family:'Inter',sans-serif}
+.avatar-colors{display:flex;gap:8px;margin-top:.55rem}
+.avatar-color{width:24px;height:24px;border-radius:50%;border:none;cursor:pointer;padding:0}
+.avatar-color.active{box-shadow:0 0 0 2px var(--surf),0 0 0 4px var(--text)}
+
+.chip-toggle{display:inline-flex;align-items:center;gap:6px;padding:.45rem .85rem;border-radius:20px;border:1px solid var(--bdr2);background:var(--surf);font-size:.75rem;font-weight:600;color:var(--sec);cursor:pointer;transition:background .12s,color .12s,border-color .12s;font-family:'Inter',sans-serif}
+.chip-toggle.active{background:var(--lite);border-color:var(--liteb);color:var(--blue)}
+
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.6rem 1.1rem;border-radius:9px;border:1px solid var(--bdr2);background:var(--surf);color:var(--text);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s;white-space:nowrap}
+.btn-outline:hover{background:var(--alt)}
+.btn-danger{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.6rem 1.1rem;border-radius:9px;border:1px solid var(--rBdr);background:var(--rLite);color:var(--red);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;transition:background .12s;white-space:nowrap}
+.btn-danger:hover{background:#FEE2E2}
+.btn-danger-solid{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.62rem 1.2rem;border-radius:9px;border:none;background:var(--red);color:#fff;font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap}
+.btn-danger-solid:hover{filter:brightness(.94)}
+
+.plan-card{background:linear-gradient(135deg,#303F9D 0%,#232F7A 100%);border-radius:16px;padding:1.5rem 1.75rem;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;box-shadow:0 12px 26px -8px rgba(20,25,60,.5)}
+.plan-features{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.5rem;margin-top:.2rem}
+.plan-feature{display:flex;align-items:center;gap:8px;font-size:.8125rem;color:var(--sec)}
+.plan-feature svg{flex-shrink:0}
+
+.session-row{display:flex;align-items:center;gap:12px;padding:.75rem 0;border-bottom:1px solid var(--bdr)}
+.session-row:last-child{border-bottom:none}
+.session-icon{width:36px;height:36px;border-radius:9px;background:var(--alt);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--sec)}
+.session-info{flex:1;min-width:0}
+.session-info b{display:block;font-size:.8125rem;font-weight:600;color:var(--text)}
+.session-info span{font-size:.75rem;color:var(--ter)}
+
+@media(max-width:900px){.settings-layout{grid-template-columns:1fr}.settings-nav{position:static;flex-direction:row;flex-wrap:wrap;top:auto}}
+@media(max-width:560px){.field-row{grid-template-columns:1fr}.plan-card{flex-direction:column;align-items:flex-start}}
+
 /* ═══ SOON PLACEHOLDER ═══ */
 .soon-wrap{max-width:1180px;margin:0 auto;padding:4.5rem 2rem;text-align:center}
 .soon-icon{width:72px;height:72px;border-radius:20px;background:var(--lite);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
@@ -578,13 +640,13 @@ button{font-family:inherit}
     </button>
   </nav>
   <div class="sb-footer">
-    <button class="sb-item" style="margin-bottom:8px" onclick="nav(this,'soon','Settings')">
+    <button class="sb-item" id="navSettings" style="margin-bottom:8px" onclick="nav(this,'settings','Settings')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
       <span>Settings</span>
     </button>
-    <div class="sb-user">
-      <div class="sb-user-av">A</div>
-      <div class="sb-user-info"><b>Alex Morgan</b><span>ESAT 2026 · Free plan</span></div>
+    <div class="sb-user" onclick="nav(document.getElementById('navSettings'),'settings','Settings')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')this.click()">
+      <div class="sb-user-av" id="sbUserAv">A</div>
+      <div class="sb-user-info"><b id="sbUserName">Alex Morgan</b><span>ESAT 2026 · Free plan</span></div>
     </div>
   </div>
 </aside>
@@ -599,7 +661,7 @@ button{font-family:inherit}
     </div>
     <div class="topbar-streak"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg><span>12</span></div>
     <button class="icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg><div class="icon-dot"></div></button>
-    <div class="topbar-avatar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.6"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg></div>
+    <div class="topbar-avatar" onclick="nav(document.getElementById('navSettings'),'settings','Settings')" role="button" tabindex="0" aria-label="Open Settings" onkeydown="if(event.key==='Enter')this.click()" style="cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.6"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg></div>
   </header>
 
   <!-- ═══ HOME VIEW ═══ -->
@@ -1324,6 +1386,267 @@ button{font-family:inherit}
         </div>
         <div class="lb-modal-label">People you may know</div>
         <div id="lbSuggestedList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SETTINGS VIEW ═══ -->
+  <div id="view-settings" class="view">
+    <div class="page">
+      <div class="greeting">
+        <h1>Settings</h1>
+        <p>Manage your profile, study preferences, and account details.</p>
+      </div>
+
+      <div class="settings-layout">
+        <nav class="settings-nav" aria-label="Settings sections">
+          <button class="active" data-panel="profile" onclick="setSettingsPanel('profile',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+            Profile
+          </button>
+          <button data-panel="account" onclick="setSettingsPanel('account',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 9.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-5.25a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+            Account &amp; Security
+          </button>
+          <button data-panel="notifications" onclick="setSettingsPanel('notifications',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg>
+            Notifications
+          </button>
+          <button data-panel="study" onclick="setSettingsPanel('study',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg>
+            Study Preferences
+          </button>
+          <button data-panel="appearance" onclick="setSettingsPanel('appearance',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2.25M12 18.75V21M4.219 4.219l1.591 1.591M18.19 18.19l1.591 1.591M3 12h2.25M18.75 12H21M4.219 19.781l1.591-1.591M18.19 5.81l1.591-1.591M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z"/></svg>
+            Appearance
+          </button>
+          <button data-panel="plan" onclick="setSettingsPanel('plan',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6M5.25 18h13.5a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 18.75 6H5.25A2.25 2.25 0 0 0 3 8.25v7.5A2.25 2.25 0 0 0 5.25 18Z"/></svg>
+            Subscription
+          </button>
+          <button data-panel="danger" onclick="setSettingsPanel('danger',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v3.75m0 3.75h.008v.008H12v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            Danger Zone
+          </button>
+        </nav>
+
+        <div class="settings-content">
+
+          <!-- Profile -->
+          <div class="settings-panel active" id="panel-profile">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg><h3 class="section-title">Profile</h3></div>
+              <div class="avatar-edit">
+                <div class="avatar-edit-pic" id="avatarPreview">A</div>
+                <div>
+                  <div class="section-sub" style="margin-bottom:.5rem">Avatar color</div>
+                  <div class="avatar-colors" id="avatarColors"></div>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="setName">Full name</label><input id="setName" type="text"></div>
+                <div class="field"><label for="setEmail">Email address</label><input id="setEmail" type="email"></div>
+              </div>
+              <div class="field-row" style="margin-top:1rem">
+                <div class="field"><label for="setBoard">Exam</label>
+                  <select id="setBoard">
+                    <option>ESAT</option><option>TMUA</option><option>MAT</option><option>STEP</option><option>NSAA</option>
+                  </select>
+                </div>
+                <div class="field"><label for="setExamDate">Exam date</label><input id="setExamDate" type="date"></div>
+              </div>
+              <div class="field" style="margin-top:1rem;max-width:220px"><label for="setTarget">Target grade</label><input id="setTarget" type="text"></div>
+              <button class="btn-primary" style="width:auto;margin-top:1.25rem" onclick="saveProfile()">Save Profile</button>
+            </div>
+          </div>
+
+          <!-- Account & Security -->
+          <div class="settings-panel" id="panel-account">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 9.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-5.25a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25Z"/></svg><h3 class="section-title">Change Password</h3></div>
+              <div class="field"><label for="pwCurrent">Current password</label><input id="pwCurrent" type="password" placeholder="••••••••" autocomplete="current-password"></div>
+              <div class="field-row" style="margin-top:1rem">
+                <div class="field"><label for="pwNew">New password</label><input id="pwNew" type="password" placeholder="••••••••" autocomplete="new-password"></div>
+                <div class="field"><label for="pwConfirm">Confirm new password</label><input id="pwConfirm" type="password" placeholder="••••••••" autocomplete="new-password"></div>
+              </div>
+              <button class="btn-primary" style="width:auto;margin-top:1.1rem" onclick="changePassword()">Update Password</button>
+            </div>
+            <div class="card">
+              <div class="na-header" style="margin-bottom:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title">Two-Factor Authentication</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Require a code at sign-in</b><span>Adds an extra layer of security using an authenticator app.</span></div>
+                <label class="toggle"><input type="checkbox" id="tg2fa" onchange="toggleSetting('twoFactor',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+            </div>
+            <div class="card">
+              <div class="na-header" style="margin-bottom:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5v9a2.25 2.25 0 0 1-2.25 2.25h-13.5A2.25 2.25 0 0 1 3 16.5v-9m18 0A2.25 2.25 0 0 0 18.75 5.25H5.25A2.25 2.25 0 0 0 3 7.5m18 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.07 9.66A2.25 2.25 0 0 1 3 7.743V7.5"/></svg><h3 class="section-title">Connected Accounts</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Google</b><span id="googleConnStatus">Sign in faster with your Google account.</span></div>
+                <button class="btn-outline" id="googleConnBtn" onclick="toggleGoogleConnect()">Connect</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></svg><h3 class="section-title">Active Sessions</h3></div>
+              <div id="sessionsList"></div>
+              <button class="btn-outline" style="width:auto;margin-top:.9rem" onclick="logOutAllSessions()">Log out of all other devices</button>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="settings-panel" id="panel-notifications">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg><h3 class="section-title">Notifications</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Daily reminder</b><span>Get a nudge if you haven't practiced yet today.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgDaily" onchange="toggleSetting('dailyReminder',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row" id="reminderTimeRow">
+                <div class="set-row-txt"><b>Reminder time</b><span>We'll notify you around this time.</span></div>
+                <input type="time" id="reminderTime" style="width:auto;font-family:inherit;font-size:.8125rem;border:1px solid var(--bdr);border-radius:9px;padding:.5rem .7rem" onchange="toggleSetting('reminderTime',this.value)">
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Streak risk alerts</b><span>Warn me before my streak resets.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgStreak" onchange="toggleSetting('streakAlerts',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Weekly progress email</b><span>A summary of your accuracy and study time.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgWeekly" onchange="toggleSetting('weeklyEmail',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Achievement unlocks</b><span>Notify me when I earn a new badge.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgAch" onchange="toggleSetting('achievementAlerts',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Leaderboard activity</b><span>When a friend passes me on the leaderboard.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgLb" onchange="toggleSetting('leaderboardAlerts',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Product updates &amp; tips</b><span>Occasional emails about new features.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgMkt" onchange="toggleSetting('marketingEmail',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Study Preferences -->
+          <div class="settings-panel" id="panel-study">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title">Daily Goal</h3></div>
+              <div class="field" style="max-width:320px">
+                <label for="dailyGoalRange">Questions per day: <b id="dailyGoalVal">20</b></label>
+                <input type="range" id="dailyGoalRange" min="5" max="50" step="5" oninput="updateDailyGoal(this.value)">
+              </div>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5V9.75M9.75 19.5V4.5M15 19.5v-7.5M20.25 19.5V12"/></svg><h3 class="section-title">Subjects</h3></div>
+              <div class="section-sub" style="margin-bottom:.75rem">Choose which subjects appear in Practice and Mock Exams.</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap" id="subjectChips"></div>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5 6 13.5h4.5L9 19.5l7.5-9H12l1.5-6Z"/></svg><h3 class="section-title">Difficulty</h3></div>
+              <div class="seg-group" id="diffSeg" role="group" aria-label="Difficulty preference">
+                <button class="seg-btn" data-diff="adaptive" onclick="setDifficulty('adaptive',this)">Adaptive</button>
+                <button class="seg-btn" data-diff="easy" onclick="setDifficulty('easy',this)">Easy</button>
+                <button class="seg-btn" data-diff="medium" onclick="setDifficulty('medium',this)">Medium</button>
+                <button class="seg-btn" data-diff="hard" onclick="setDifficulty('hard',this)">Hard</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Practice Behavior</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Auto-reveal worked solutions</b><span>Show the solution as soon as I answer.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgAutoSol" onchange="toggleSetting('autoSolutions',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Sound effects</b><span>Play a sound on correct and incorrect answers.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgSound" onchange="toggleSetting('soundEffects',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Keyboard shortcuts</b><span>Use number keys and S to answer and reveal solutions.</span></div>
+                <label class="toggle"><input type="checkbox" id="tgKb" onchange="toggleSetting('keyboardShortcuts',this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appearance -->
+          <div class="settings-panel" id="panel-appearance">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2.25M12 18.75V21M4.219 4.219l1.591 1.591M18.19 18.19l1.591 1.591M3 12h2.25M18.75 12H21M4.219 19.781l1.591-1.591M18.19 5.81l1.591-1.591M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z"/></svg><h3 class="section-title">Theme</h3></div>
+              <div class="section-sub" style="margin-bottom:.9rem">Choose how Exam Tutor looks on this device.</div>
+              <div class="seg-group">
+                <button class="seg-btn active">Light</button>
+                <button class="seg-btn" disabled style="opacity:.5;cursor:not-allowed">Dark<span class="sb-tag" style="margin-left:6px">SOON</span></button>
+                <button class="seg-btn" disabled style="opacity:.5;cursor:not-allowed">System<span class="sb-tag" style="margin-left:6px">SOON</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscription -->
+          <div class="settings-panel" id="panel-plan">
+            <div class="plan-card">
+              <div>
+                <span class="label" style="color:rgba(255,255,255,.7)">Current Plan</span>
+                <h2 style="font-family:'Inter',sans-serif;font-weight:700;letter-spacing:-.015em;font-size:1.375rem;margin:.3rem 0 .5rem">Free</h2>
+                <p style="font-size:.8125rem;color:rgba(255,255,255,.85);max-width:380px;line-height:1.55">You're on the Free plan. Upgrade to Pro for unlimited mock exams, deeper analytics, and priority support.</p>
+              </div>
+              <button class="btn-white" style="width:auto" onclick="lbToast('Upgrade flow coming soon')">Upgrade to Pro</button>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title">Free plan includes</h3></div>
+              <div class="plan-features">
+                <div class="plan-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Unlimited practice questions</div>
+                <div class="plan-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Core analytics dashboard</div>
+                <div class="plan-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Achievements &amp; leaderboard</div>
+                <div class="plan-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>1 mock exam per month</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6M5.25 18h13.5a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 18.75 6H5.25A2.25 2.25 0 0 0 3 8.25v7.5A2.25 2.25 0 0 0 5.25 18Z"/></svg><h3 class="section-title">Billing History</h3></div>
+              <p class="section-sub">No billing history yet — you haven't subscribed to a paid plan.</p>
+            </div>
+          </div>
+
+          <!-- Danger Zone -->
+          <div class="settings-panel" id="panel-danger">
+            <div class="card">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-6.364-2.386 1.591-1.591M3 12h2.25m.386-6.364 1.591 1.591M12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/></svg><h3 class="section-title">Export Your Data</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Download your data</b><span>A JSON copy of your profile, settings, and practice history.</span></div>
+                <button class="btn-outline" onclick="exportData()">Export</button>
+              </div>
+            </div>
+            <div class="card" style="border-color:var(--rBdr)">
+              <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v3.75m0 3.75h.008v.008H12v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h3 class="section-title" style="color:var(--red)">Danger Zone</h3></div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Reset all progress</b><span>Clears your streak, XP, and answered questions. This cannot be undone.</span></div>
+                <button class="btn-danger" onclick="confirmDanger('reset')">Reset Progress</button>
+              </div>
+              <div class="set-row">
+                <div class="set-row-txt"><b>Delete account</b><span>Permanently deletes your account and all associated data.</span></div>
+                <button class="btn-danger-solid" onclick="confirmDanger('delete')">Delete Account</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SETTINGS CONFIRM MODAL ═══ -->
+  <div class="lb-modal-overlay" id="dangerModalOverlay" onclick="if(event.target===this)closeDangerModal()">
+    <div class="lb-modal" role="dialog" aria-modal="true" aria-labelledby="dangerModalTitle" style="max-width:400px">
+      <div class="lb-modal-head">
+        <h3 id="dangerModalTitle">Reset progress?</h3>
+        <button class="lb-modal-close" onclick="closeDangerModal()" aria-label="Close">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="lb-modal-body">
+        <p id="dangerModalText" style="font-size:.8125rem;color:var(--sec);line-height:1.6;margin-bottom:1.25rem"></p>
+        <div style="display:flex;gap:10px">
+          <button class="btn-outline" style="flex:1" onclick="closeDangerModal()">Cancel</button>
+          <button class="btn-danger-solid" style="flex:1" id="dangerModalConfirm">Confirm</button>
+        </div>
       </div>
     </div>
   </div>
@@ -2107,6 +2430,244 @@ function lbToast(msg){
   if(!document.getElementById('view-leaderboard'))return;
   renderLeaderboard();
   renderRequests();
+})();
+
+/* ── Settings ── */
+const SETTINGS_KEY='examTutorSettings';
+const AVATAR_COLORS={blue:'var(--mid)',green:'var(--green)',purple:'var(--purp)',amber:'var(--amber)',red:'var(--red)',teal:'var(--teal)'};
+const SUBJECT_OPTIONS=[{id:'maths1',name:'Maths 1'},{id:'maths2',name:'Maths 2'},{id:'physics',name:'Physics'},{id:'chemistry',name:'Chemistry'},{id:'biology',name:'Biology'}];
+const SESSIONS=[
+  {device:'MacBook Pro · Chrome',loc:'London, UK',current:true,active:'Active now'},
+  {device:'iPhone 15 · Safari',loc:'London, UK',current:false,active:'2 hours ago'},
+  {device:'iPad Air · Safari',loc:'Manchester, UK',current:false,active:'3 days ago'}
+];
+const defaultSettings={
+  name:'Alex Morgan',email:'alex.morgan@email.com',examBoard:'ESAT',examDate:'2026-10-15',targetGrade:'8.0',
+  avatarColor:'blue',googleConnected:false,twoFactor:false,
+  dailyReminder:true,reminderTime:'18:00',streakAlerts:true,weeklyEmail:true,achievementAlerts:true,leaderboardAlerts:false,marketingEmail:false,
+  dailyGoal:20,subjects:['maths1','physics','chemistry'],difficulty:'adaptive',autoSolutions:false,soundEffects:true,keyboardShortcuts:true
+};
+
+function loadSettings(){
+  try{return Object.assign({},defaultSettings,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'))}
+  catch(e){return Object.assign({},defaultSettings)}
+}
+let settings=loadSettings();
+function saveSettingsState(){localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings))}
+
+function setSettingsPanel(id,el){
+  document.querySelectorAll('.settings-nav button').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.settings-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+function toggleSetting(key,val){
+  settings[key]=val;
+  saveSettingsState();
+  if(key==='dailyReminder')document.getElementById('reminderTimeRow').classList.toggle('disabled',!val);
+  lbToast('Settings saved');
+}
+
+function renderAvatarColors(){
+  const wrap=document.getElementById('avatarColors');
+  wrap.innerHTML='';
+  Object.keys(AVATAR_COLORS).forEach(c=>{
+    const b=document.createElement('button');
+    b.type='button';
+    b.className='avatar-color'+(settings.avatarColor===c?' active':'');
+    b.style.background=AVATAR_COLORS[c];
+    b.setAttribute('aria-label',c+' avatar color');
+    b.onclick=()=>{settings.avatarColor=c;saveSettingsState();renderAvatarColors();applyProfileChrome()};
+    wrap.appendChild(b);
+  });
+}
+
+function renderSubjectChips(){
+  const wrap=document.getElementById('subjectChips');
+  wrap.innerHTML='';
+  SUBJECT_OPTIONS.forEach(s=>{
+    const b=document.createElement('button');
+    b.type='button';
+    b.className='chip-toggle'+(settings.subjects.includes(s.id)?' active':'');
+    b.textContent=s.name;
+    b.onclick=()=>{
+      if(settings.subjects.includes(s.id)){
+        if(settings.subjects.length===1){lbToast('At least one subject must stay selected');return}
+        settings.subjects=settings.subjects.filter(x=>x!==s.id);
+      }else settings.subjects.push(s.id);
+      saveSettingsState();
+      renderSubjectChips();
+    };
+    wrap.appendChild(b);
+  });
+}
+
+function setDifficulty(diff,el){
+  settings.difficulty=diff;
+  saveSettingsState();
+  document.querySelectorAll('#diffSeg .seg-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});
+  el.classList.add('active');
+  el.setAttribute('aria-pressed','true');
+  lbToast('Difficulty set to '+el.textContent);
+}
+
+function updateDailyGoal(v){
+  settings.dailyGoal=Number(v);
+  document.getElementById('dailyGoalVal').textContent=v;
+  saveSettingsState();
+}
+
+function renderSessions(){
+  const wrap=document.getElementById('sessionsList');
+  wrap.innerHTML='';
+  SESSIONS.forEach(s=>{
+    const row=document.createElement('div');
+    row.className='session-row';
+    row.innerHTML=`<div class="session-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.25 20.25h7.5M12 16.5v3.75"/></svg></div><div class="session-info"><b>${s.device}</b><span>${s.loc} · ${s.active}</span></div>`;
+    if(s.current){
+      const pill=document.createElement('span');
+      pill.className='pill';pill.style.background='var(--gLite)';pill.style.color='var(--green)';pill.textContent='This device';
+      row.appendChild(pill);
+    }else{
+      const btn=document.createElement('button');
+      btn.className='btn-outline';btn.textContent='Log out';
+      btn.onclick=()=>{row.remove();lbToast('Logged out of '+s.device)};
+      row.appendChild(btn);
+    }
+    wrap.appendChild(row);
+  });
+}
+
+function saveProfile(){
+  const name=document.getElementById('setName').value.trim();
+  const email=document.getElementById('setEmail').value.trim();
+  if(!name){lbToast('Name cannot be empty');return}
+  if(!/^\S+@\S+\.\S+$/.test(email)){lbToast('Enter a valid email address');return}
+  settings.name=name;
+  settings.email=email;
+  settings.examBoard=document.getElementById('setBoard').value;
+  settings.examDate=document.getElementById('setExamDate').value;
+  settings.targetGrade=document.getElementById('setTarget').value.trim();
+  saveSettingsState();
+  applyProfileChrome();
+  lbToast('Profile updated');
+}
+
+function changePassword(){
+  const cur=document.getElementById('pwCurrent').value;
+  const nw=document.getElementById('pwNew').value;
+  const cf=document.getElementById('pwConfirm').value;
+  if(!cur||!nw||!cf){lbToast('Fill in all password fields');return}
+  if(nw.length<8){lbToast('New password must be at least 8 characters');return}
+  if(nw!==cf){lbToast('New passwords do not match');return}
+  document.getElementById('pwCurrent').value='';
+  document.getElementById('pwNew').value='';
+  document.getElementById('pwConfirm').value='';
+  lbToast('Password updated');
+}
+
+function toggleGoogleConnect(){
+  settings.googleConnected=!settings.googleConnected;
+  saveSettingsState();
+  applyGoogleConnUI();
+  lbToast(settings.googleConnected?'Google account connected':'Google account disconnected');
+}
+function applyGoogleConnUI(){
+  const btn=document.getElementById('googleConnBtn'),status=document.getElementById('googleConnStatus');
+  if(settings.googleConnected){btn.textContent='Disconnect';status.textContent='Connected as '+settings.email}
+  else{btn.textContent='Connect';status.textContent='Sign in faster with your Google account.'}
+}
+
+function logOutAllSessions(){
+  document.querySelectorAll('#sessionsList .session-row').forEach(row=>{
+    if(!row.querySelector('.pill'))row.remove();
+  });
+  lbToast('Logged out of all other devices');
+}
+
+function exportData(){
+  const data={profile:{name:settings.name,email:settings.email,examBoard:settings.examBoard,examDate:settings.examDate,targetGrade:settings.targetGrade},settings:settings,exportedAt:new Date().toISOString()};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download='exam-tutor-data.json';
+  document.body.appendChild(a);a.click();a.remove();
+  URL.revokeObjectURL(url);
+  lbToast('Data export downloaded');
+}
+
+let dangerAction=null;
+function confirmDanger(type){
+  dangerAction=type;
+  const title=document.getElementById('dangerModalTitle'),text=document.getElementById('dangerModalText'),confirmBtn=document.getElementById('dangerModalConfirm');
+  if(type==='reset'){
+    title.textContent='Reset all progress?';
+    text.textContent='This clears your streak, XP, and answered questions. This action cannot be undone.';
+    confirmBtn.textContent='Reset Progress';
+  }else{
+    title.textContent='Delete your account?';
+    text.textContent='This permanently deletes your account and all associated data. This action cannot be undone.';
+    confirmBtn.textContent='Delete Account';
+  }
+  confirmBtn.onclick=runDangerAction;
+  document.getElementById('dangerModalOverlay').classList.add('open');
+}
+function closeDangerModal(){
+  document.getElementById('dangerModalOverlay').classList.remove('open');
+  dangerAction=null;
+}
+function runDangerAction(){
+  if(dangerAction==='reset')lbToast('Progress reset');
+  else if(dangerAction==='delete')lbToast('Account deletion requested');
+  closeDangerModal();
+}
+
+function applyProfileChrome(){
+  const initial=(settings.name.trim()[0]||'A').toUpperCase();
+  const av=document.getElementById('sbUserAv');
+  av.textContent=initial;
+  av.style.background=AVATAR_COLORS[settings.avatarColor]||'';
+  document.getElementById('sbUserName').textContent=settings.name;
+  const preview=document.getElementById('avatarPreview');
+  if(preview){preview.textContent=initial;preview.style.background=AVATAR_COLORS[settings.avatarColor]||''}
+}
+
+function renderSettings(){
+  document.getElementById('setName').value=settings.name;
+  document.getElementById('setEmail').value=settings.email;
+  document.getElementById('setBoard').value=settings.examBoard;
+  document.getElementById('setExamDate').value=settings.examDate;
+  document.getElementById('setTarget').value=settings.targetGrade;
+  document.getElementById('tg2fa').checked=settings.twoFactor;
+  document.getElementById('tgDaily').checked=settings.dailyReminder;
+  document.getElementById('reminderTime').value=settings.reminderTime;
+  document.getElementById('reminderTimeRow').classList.toggle('disabled',!settings.dailyReminder);
+  document.getElementById('tgStreak').checked=settings.streakAlerts;
+  document.getElementById('tgWeekly').checked=settings.weeklyEmail;
+  document.getElementById('tgAch').checked=settings.achievementAlerts;
+  document.getElementById('tgLb').checked=settings.leaderboardAlerts;
+  document.getElementById('tgMkt').checked=settings.marketingEmail;
+  document.getElementById('tgAutoSol').checked=settings.autoSolutions;
+  document.getElementById('tgSound').checked=settings.soundEffects;
+  document.getElementById('tgKb').checked=settings.keyboardShortcuts;
+  document.getElementById('dailyGoalRange').value=settings.dailyGoal;
+  document.getElementById('dailyGoalVal').textContent=settings.dailyGoal;
+  document.querySelectorAll('#diffSeg .seg-btn').forEach(b=>{
+    const active=b.dataset.diff===settings.difficulty;
+    b.classList.toggle('active',active);
+    b.setAttribute('aria-pressed',active?'true':'false');
+  });
+  renderAvatarColors();
+  renderSubjectChips();
+  renderSessions();
+  applyGoogleConnUI();
+  applyProfileChrome();
+}
+
+(function(){
+  if(!document.getElementById('view-settings'))return;
+  renderSettings();
 })();
 </script>
 </body>
