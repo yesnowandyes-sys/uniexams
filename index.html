@@ -218,13 +218,26 @@ button{font-family:inherit}
 .stat-delta svg{flex-shrink:0}
 
 .trend-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:10px}
-.trend-legend{display:flex;gap:16px;flex-wrap:wrap}
-.trend-legend-item{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--sec);font-weight:600}
+.trend-legend{display:flex;gap:8px;flex-wrap:wrap}
+.trend-legend-item{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;color:var(--ter);font-weight:600;font-family:'Inter',sans-serif;border:1px solid var(--bdr);background:var(--surf);border-radius:20px;padding:4px 10px 4px 8px;cursor:pointer;transition:border-color .12s,color .12s,background .12s}
+.trend-legend-item:hover{color:var(--text)}
+.trend-legend-item.active{color:var(--text);border-color:color-mix(in srgb, var(--dot) 55%, var(--bdr));background:color-mix(in srgb, var(--dot) 9%, var(--surf))}
+.trend-legend-item:focus-visible{outline:2px solid var(--mid);outline-offset:1px}
 .trend-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.trend-chart-wrap{width:100%;overflow-x:auto}
+.trend-chart-wrap{width:100%;overflow-x:auto;cursor:crosshair}
 .trend-chart-wrap svg{display:block;width:100%;height:auto;min-width:520px}
-.trend-pt{transition:r .12s}
-.trend-pt:hover{r:5}
+.trend-line{transition:stroke-width .15s,opacity .15s}
+.trend-line.dim{opacity:.18}
+.trend-line.focus{stroke-width:2.6}
+.trend-scrub{stroke:var(--bdr2);stroke-width:1;stroke-dasharray:3 3;pointer-events:none;opacity:0;transition:opacity .1s}
+.trend-scrub.show{opacity:1}
+.trend-scrubdot{opacity:0;transition:opacity .1s}
+.trend-scrubdot.show{opacity:1}
+.trend-headline{display:flex;align-items:flex-end;gap:14px;margin:.15rem 0 1rem}
+.trend-headline-num{font-family:'JetBrains Mono',monospace;font-size:2.125rem;font-weight:700;letter-spacing:-.02em;line-height:1;color:var(--text);font-variant-numeric:tabular-nums}
+.trend-headline-meta{padding-bottom:.3rem}
+.trend-headline-date{font-size:.75rem;color:var(--ter);font-family:'JetBrains Mono',monospace}
+.trend-headline-delta{margin-left:auto;padding-bottom:.35rem;font-size:.8125rem;font-weight:700;font-family:'JetBrains Mono',monospace}
 .trend-subhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem;flex-wrap:wrap;gap:10px}
 .trend-note{font-size:.6875rem;color:var(--ter);margin-top:.6rem;text-align:right}
 .seg-group{display:inline-flex;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:3px;gap:2px;flex-wrap:wrap}
@@ -887,6 +900,11 @@ button{font-family:inherit}
           </div>
           <div class="trend-legend" id="trendLegend"></div>
         </div>
+        <div class="trend-headline">
+          <div class="trend-headline-num" id="trendHeadlineNum">—</div>
+          <div class="trend-headline-meta"><div class="trend-headline-date" id="trendHeadlineDate"></div></div>
+          <div class="trend-headline-delta" id="trendHeadlineDelta"></div>
+        </div>
         <div class="trend-chart-wrap"><svg id="trendSvg" viewBox="0 0 720 200" role="img" aria-label="Performance trend chart"></svg></div>
         <div class="trend-note" id="trendNote"></div>
       </div>
@@ -1503,9 +1521,11 @@ render();
 })();
 
 /* ── Analytics: Performance Trend chart — switchable metric + timeframe (SVG, computed from data) ── */
+/* Precision Grid treatment: smoothed multi-series line, isolate-on-click legend, live scrub headline. */
 (function(){
   const svg=document.getElementById('trendSvg');
   if(!svg)return;
+  const wrap=svg.closest('.trend-chart-wrap');
   const TODAY=new Date(2026,7,10); // 10 Aug 2026 — kept in sync with the activity heatmap below
 
   function seededRng(seed){let s=seed;return()=>{s=(s*1103515245+12345)&0x7fffffff;return s/0x7fffffff}}
@@ -1537,48 +1557,43 @@ render();
 
   function fmtMMSS(v){const s=Math.max(0,Math.round(v));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
 
-  /* Grade boundaries: Grade 9 ≈ 85%, working down. Used to label the accuracy y-axis in grades, not raw %. */
+  /* Grade boundaries: Grade 9 ≈ 85%, working down. Used for the headline/note, not an axis. */
   const GRADE_BOUNDARIES=[{grade:9,pct:85},{grade:8,pct:77},{grade:7,pct:70},{grade:6,pct:62},{grade:5,pct:54},{grade:4,pct:46},{grade:3,pct:38},{grade:2,pct:30},{grade:1,pct:20}];
   function pctToGrade(pct){for(const b of GRADE_BOUNDARIES)if(pct>=b.pct)return b.grade;return 1}
-  function gradeTicksFor(dataMin,dataMax){
-    const gLow=Math.max(1,pctToGrade(dataMin)-1),gHigh=Math.min(9,pctToGrade(dataMax)+1);
-    const ticks=[];
-    for(let g=gLow;g<=gHigh;g++)ticks.push(GRADE_BOUNDARIES.find(b=>b.grade===g));
-    return ticks;
-  }
 
   const METRICS={
     accuracy:{
       unit:'percent',
+      betterWhen:'higher',
       series:[{key:'maths',label:'Maths 1',color:'var(--mid)'},{key:'physics',label:'Physics',color:'var(--teal)'},{key:'chemistry',label:'Chemistry',color:'var(--amber)'}],
       data:DATA.accuracy,
       fmtValue:v=>`${Math.round(v)}%`,
-      tooltipExtra:v=>` · Grade ${pctToGrade(v)}`,
-      note:'Y-axis shows predicted grade equivalent — Grade 9 ≈ 85%, Grade 1 ≈ 20%'
+      note:'Grade 9 ≈ 85% · Grade 1 ≈ 20%'
     },
     avgTime:{
       unit:'time',
+      betterWhen:'lower',
       series:[{key:'overall',label:'Avg time / question',color:'var(--mid)'}],
       data:DATA.avgTime,
       fmtValue:v=>fmtMMSS(v),
-      tooltipExtra:()=>'',
-      note:''
+      note:'Average time spent per question'
     },
     studyTime:{
       unit:'minutes',
+      betterWhen:'higher',
       series:[{key:'overall',label:'Study time / day',color:'var(--purp)'}],
       data:DATA.studyTime,
       fmtValue:v=>`${Math.round(v)} min`,
-      tooltipExtra:()=>'',
-      note:''
+      note:'Average minutes studied per day'
     }
   };
 
+  /* Buckets kept close to daily resolution so the curve reads as continuous, not a few widely-spaced steps. */
   const RANGES={
     week:{days:7,bucket:1,xfmt:d=>d.toLocaleDateString('en-GB',{weekday:'short'})},
-    month:{days:30,bucket:5,xfmt:d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})},
-    quarter:{days:91,bucket:7,xfmt:d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})},
-    all:{days:360,bucket:30,xfmt:d=>d.toLocaleDateString('en-GB',{month:'short'})}
+    month:{days:30,bucket:1,xfmt:d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})},
+    quarter:{days:91,bucket:2,xfmt:d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})},
+    all:{days:360,bucket:4,xfmt:d=>d.toLocaleDateString('en-GB',{month:'short'})}
   };
 
   function bucketSeries(daily,days,bucket){
@@ -1590,7 +1605,51 @@ render();
     return out;
   }
 
-  let metric='accuracy',range='quarter';
+  /* Catmull-Rom → cubic Bezier, so the many close-together points read as one smooth curve. */
+  function smoothPath(pts){
+    if(!pts.length)return '';
+    if(pts.length<2)return `M${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`;
+    let d=`M${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`;
+    for(let i=0;i<pts.length-1;i++){
+      const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+      const c1x=p1.x+(p2.x-p0.x)/6,c1y=p1.y+(p2.y-p0.y)/6;
+      const c2x=p2.x-(p3.x-p1.x)/6,c2y=p2.y-(p3.y-p1.y)/6;
+      d+=` C${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`;
+    }
+    return d;
+  }
+
+  let metric='accuracy',range='quarter',isolated=null;
+  const W=720,H=200,padL=6,padR=6,padT=10,padB=26;
+  const plotW=W-padL-padR,plotH=H-padT-padB;
+
+  function buildLegend(seriesData){
+    const legend=document.getElementById('trendLegend');
+    if(!legend)return;
+    if(seriesData.length<2){legend.innerHTML='';return;}
+    legend.innerHTML=seriesData.map(s=>`<button type="button" class="trend-legend-item${isolated===null||isolated===s.key?' active':''}" data-key="${s.key}" style="--dot:${s.color}"><span class="trend-legend-dot" style="background:${s.color}"></span>${s.label}</button>`).join('');
+    legend.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+      isolated=isolated===btn.dataset.key?null:btn.dataset.key;
+      render();
+    }));
+  }
+
+  function updateHeadline(seriesData,idx){
+    const cfg=METRICS[metric];
+    const s=isolated?seriesData.find(x=>x.key===isolated):seriesData[0];
+    const n=s.pts.length,i=idx===undefined?n-1:idx,p=s.pts[i];
+    const numEl=document.getElementById('trendHeadlineNum'),dateEl=document.getElementById('trendHeadlineDate'),deltaEl=document.getElementById('trendHeadlineDelta');
+    if(!numEl)return;
+    numEl.textContent=cfg.fmtValue(p.value);
+    numEl.style.color=(seriesData.length>1&&isolated)?s.color:'var(--text)';
+    const dateStr=p.date.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+    dateEl.textContent=(idx===undefined?'Latest · ':'')+dateStr+(cfg.unit==='percent'?` · Grade ${pctToGrade(p.value)}`:'')+(seriesData.length>1?` · ${s.label}`:'');
+    const delta=p.value-s.pts[0].value,up=delta>=0;
+    const good=cfg.betterWhen==='lower'?!up:up;
+    const deltaAbs=cfg.unit==='time'?fmtMMSS(Math.abs(delta)):Math.abs(delta).toFixed(cfg.unit==='minutes'?0:1)+(cfg.unit==='percent'?'%':cfg.unit==='minutes'?' min':'');
+    deltaEl.textContent=(up?'▲ +':'▼ ')+deltaAbs+' over range';
+    deltaEl.style.color=good?'var(--green)':'var(--red)';
+  }
 
   function render(){
     const cfg=METRICS[metric],rangeCfg=RANGES[range];
@@ -1598,57 +1657,81 @@ render();
     const n=seriesData[0].pts.length;
     const allVals=seriesData.flatMap(s=>s.pts.map(p=>p.value));
     const dataMin=Math.min(...allVals),dataMax=Math.max(...allVals);
+    const pad=(dataMax-dataMin)*.15||5;
+    const yMin=dataMin-pad,yMax=dataMax+pad;
 
-    let yMin,yMax,ticks;
-    if(cfg.unit==='percent'){
-      const g=gradeTicksFor(dataMin,dataMax);
-      ticks=g.map(t=>({value:t.pct,label:String(t.grade)}));
-      yMin=ticks[0].value-4;yMax=ticks[ticks.length-1].value+4;
-    }else{
-      const pad=Math.max((dataMax-dataMin)*0.2,dataMax*0.1,10);
-      yMin=Math.max(0,Math.floor((dataMin-pad)/10)*10);
-      yMax=Math.ceil((dataMax+pad)/10)*10;
-      const step=(yMax-yMin)/4;
-      ticks=[0,1,2,3,4].map(i=>{const v=yMin+step*i;return {value:v,label:cfg.unit==='time'?fmtMMSS(v):String(Math.round(v))}});
-    }
-
-    const W=720,H=200,padL=38,padR=10,padT=10,padB=28;
-    const plotW=W-padL-padR,plotH=H-padT-padB;
     const xAt=i=>padL+(n===1?plotW/2:(plotW*i)/(n-1));
     const yAt=v=>padT+plotH-((v-yMin)/(yMax-yMin))*plotH;
     const xLabelStep=Math.max(1,Math.ceil(n/8));
 
-    let html='';
-    ticks.forEach(t=>{
-      const y=yAt(t.value);
-      html+=`<line x1="${padL}" y1="${y.toFixed(1)}" x2="${W-padR}" y2="${y.toFixed(1)}" stroke="var(--bdr)" stroke-width="1"/>`;
-      html+=`<text x="${padL-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" font-weight="${cfg.unit==='percent'?'700':'500'}" fill="var(--ter)">${t.label}</text>`;
-    });
-    for(let i=0;i<n;i++){
-      if(i%xLabelStep!==0&&i!==n-1)continue;
-      html+=`<text x="${xAt(i).toFixed(1)}" y="${H-8}" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--ter)">${rangeCfg.xfmt(seriesData[0].pts[i].date)}</text>`;
+    /* Always show the last point's label; drop the preceding step if it would crowd it. */
+    const labelIdxs=[];
+    for(let i=0;i<n;i+=xLabelStep)labelIdxs.push(i);
+    if(labelIdxs[labelIdxs.length-1]!==n-1){
+      if(n-1-labelIdxs[labelIdxs.length-1]<xLabelStep*0.5)labelIdxs.pop();
+      labelIdxs.push(n-1);
     }
+
+    let html=`<line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="var(--bdr2)" stroke-width="1"/><g>`;
+    labelIdxs.forEach(i=>{
+      const anchor=i===0?'start':i===n-1?'end':'middle';
+      html+=`<text x="${xAt(i).toFixed(1)}" y="${H-8}" text-anchor="${anchor}" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--ter)">${rangeCfg.xfmt(seriesData[0].pts[i].date)}</text>`;
+    });
+    html+='</g>';
+
     seriesData.forEach(s=>{
-      const d=s.pts.map((p,i)=>`${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(p.value).toFixed(1)}`).join(' ');
-      html+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+      const pts=s.pts.map((p,i)=>({x:xAt(i),y:yAt(p.value)}));
+      const dim=isolated&&isolated!==s.key,focus=isolated===s.key;
+      const strokeColor=isolated===null?s.color:(focus?s.color:'var(--ter)');
+      html+=`<path class="trend-line${dim?' dim':''}${focus?' focus':''}" d="${smoothPath(pts)}" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+    });
+
+    html+=`<line class="trend-scrub" id="trendScrub" x1="0" y1="${padT}" x2="0" y2="${H-padB}"/>`;
+    seriesData.forEach(s=>{
       s.pts.forEach((p,i)=>{
-        const dateStr=p.date.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-        html+=`<circle class="trend-pt" cx="${xAt(i).toFixed(1)}" cy="${yAt(p.value).toFixed(1)}" r="3.5" fill="${s.color}" stroke="var(--surf)" stroke-width="2"><title>${s.label} · ${dateStr} · ${cfg.fmtValue(p.value)}${cfg.tooltipExtra(p.value)}</title></circle>`;
+        html+=`<circle class="trend-scrubdot" data-key="${s.key}" cx="${xAt(i).toFixed(1)}" cy="${yAt(p.value).toFixed(1)}" r="3.5" fill="${s.color}" stroke="var(--surf)" stroke-width="1.5"/>`;
       });
     });
-    svg.innerHTML=html;
 
-    const legend=document.getElementById('trendLegend');
-    if(legend)legend.innerHTML=seriesData.length>1?seriesData.map(s=>`<span class="trend-legend-item"><span class="trend-legend-dot" style="background:${s.color}"></span>${s.label}</span>`).join(''):'';
+    svg.innerHTML=html;
+    svg.__ctx={seriesData,xAt,n};
+
+    buildLegend(seriesData);
+    updateHeadline(seriesData);
 
     const note=document.getElementById('trendNote');
     if(note)note.textContent=cfg.note;
   }
 
+  function pointerMove(e){
+    const ctx=svg.__ctx;if(!ctx)return;
+    const rect=wrap.getBoundingClientRect(),scale=rect.width/W;
+    const relX=(e.clientX-rect.left)/scale;
+    let idx=Math.round(((relX-padL)/plotW)*(ctx.n-1));
+    idx=Math.max(0,Math.min(ctx.n-1,idx));
+    const x=ctx.xAt(idx),scrub=document.getElementById('trendScrub');
+    if(scrub){scrub.setAttribute('x1',x.toFixed(1));scrub.setAttribute('x2',x.toFixed(1));scrub.classList.add('show');}
+    svg.querySelectorAll('.trend-scrubdot').forEach(d=>d.classList.remove('show'));
+    ctx.seriesData.forEach(s=>{
+      if(isolated&&isolated!==s.key)return;
+      const dots=svg.querySelectorAll(`circle[data-key="${s.key}"]`);
+      if(dots[idx])dots[idx].classList.add('show');
+    });
+    updateHeadline(ctx.seriesData,idx);
+  }
+  function pointerLeave(){
+    const scrub=document.getElementById('trendScrub');
+    if(scrub)scrub.classList.remove('show');
+    svg.querySelectorAll('.trend-scrubdot').forEach(d=>d.classList.remove('show'));
+    const ctx=svg.__ctx;if(ctx)updateHeadline(ctx.seriesData);
+  }
+  wrap.addEventListener('pointermove',pointerMove);
+  wrap.addEventListener('pointerleave',pointerLeave);
+
   document.querySelectorAll('#metricSeg .seg-btn').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('#metricSeg .seg-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
     b.classList.add('active');b.setAttribute('aria-pressed','true');
-    metric=b.dataset.metric;render();
+    metric=b.dataset.metric;isolated=null;render();
   }));
   document.querySelectorAll('#rangeSeg .seg-btn').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('#rangeSeg .seg-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
