@@ -161,15 +161,16 @@ button{font-family:inherit}
 .focus-section{margin-bottom:1.1rem}
 .na-header{display:flex;align-items:center;gap:7px;margin-bottom:.9rem}
 .focus-list{display:flex;gap:12px;align-items:stretch}
-.focus-tile{flex:1;min-width:0;background:color-mix(in srgb, var(--accent) 7%, var(--surf));border-left:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-right:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-bottom:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-top:6px solid var(--accent);border-radius:8px 8px 14px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.15rem;padding:1.65rem .95rem 1.4rem}
-.focus-tile-name{font-size:.8125rem;font-weight:700;color:var(--text)}
-.focus-tile-grade{font-size:.6875rem;color:var(--ter);display:flex;align-items:baseline;gap:5px}
-.focus-tile-grade b{font-family:'JetBrains Mono',monospace;font-size:.9375rem;color:var(--text);font-variant-numeric:tabular-nums}
-.focus-tile-practice{border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:.75rem;padding:9px 14px;border-radius:8px;cursor:pointer;width:100%;transition:filter .12s}
+.focus-tile{flex:1;min-width:0;background:color-mix(in srgb, var(--accent) 7%, var(--surf));border-left:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-right:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-bottom:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-top:6px solid var(--accent);border-radius:8px 8px 14px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.3rem;padding:1.9rem .95rem 1.6rem}
+.focus-tile-name{font-size:.9375rem;font-weight:700;color:var(--text)}
+.focus-tile-grade{font-size:.8125rem;color:var(--ter);display:flex;align-items:baseline;gap:5px}
+.focus-tile-grade b{font-family:'JetBrains Mono',monospace;font-size:1.0625rem;color:var(--text);font-variant-numeric:tabular-nums}
+.focus-tile-actions{display:flex;flex-direction:column;gap:.5rem;width:100%}
+.focus-tile-practice{border:none;background:var(--mid);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:.8125rem;padding:10px 14px;border-radius:8px;cursor:pointer;width:100%;transition:filter .12s}
 .focus-tile-practice:hover{filter:brightness(1.08)}
 .focus-tile-practice:focus-visible{outline:2px solid var(--mid);outline-offset:1px}
 .focus-drop{width:100%}
-.focus-drop-trigger{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;padding:7px 12px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.75rem;font-weight:600;-webkit-tap-highlight-color:transparent}
+.focus-drop-trigger{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 12px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);font-size:.8125rem;font-weight:600;-webkit-tap-highlight-color:transparent}
 .focus-drop-trigger::-webkit-details-marker{display:none}
 .focus-drop-trigger:hover{background:var(--alt)}
 .focus-drop-trigger:focus-visible{outline:2px solid var(--mid);outline-offset:2px}
@@ -680,8 +681,9 @@ button{font-family:inherit}
         <div class="focus-list">
           <div class="focus-tile" style="--accent:var(--mid)">
             <div class="focus-tile-name">Maths 1</div>
-            <svg width="92" height="92" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="48" cy="48" r="38" fill="none" stroke="var(--mid)" stroke-width="8" stroke-linecap="round" stroke-dasharray="181.5 238.76" transform="rotate(-90 48 48)"/><text x="48" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">76%</text><text x="48" y="61" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8.5" fill="var(--ter)">last 20 Qs</text></svg>
+            <svg width="96" height="96" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="var(--bdr)" stroke-width="8.5"/><circle cx="50" cy="50" r="40" fill="none" stroke="var(--mid)" stroke-width="8.5" stroke-linecap="round" stroke-dasharray="191.0 251.33" transform="rotate(-90 50 50)"/><text x="50" y="47" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700" fill="var(--text)">76%</text><text x="50" y="63" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>7.8</b></div>
+            <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
               <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
@@ -704,12 +706,14 @@ button{font-family:inherit}
                 </div>
               </div></div>
             </details>
+            </div>
           </div>
 
           <div class="focus-tile" style="--accent:var(--teal)">
             <div class="focus-tile-name">Physics</div>
-            <svg width="92" height="92" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="48" cy="48" r="38" fill="none" stroke="var(--teal)" stroke-width="8" stroke-linecap="round" stroke-dasharray="138.5 238.76" transform="rotate(-90 48 48)"/><text x="48" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">58%</text><text x="48" y="61" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8.5" fill="var(--ter)">last 20 Qs</text></svg>
+            <svg width="96" height="96" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="var(--bdr)" stroke-width="8.5"/><circle cx="50" cy="50" r="40" fill="none" stroke="var(--teal)" stroke-width="8.5" stroke-linecap="round" stroke-dasharray="145.8 251.33" transform="rotate(-90 50 50)"/><text x="50" y="47" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700" fill="var(--text)">58%</text><text x="50" y="63" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>5.1</b></div>
+            <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
               <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
@@ -732,12 +736,14 @@ button{font-family:inherit}
                 </div>
               </div></div>
             </details>
+            </div>
           </div>
 
           <div class="focus-tile" style="--accent:var(--amber)">
             <div class="focus-tile-name">Chemistry</div>
-            <svg width="92" height="92" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="48" cy="48" r="38" fill="none" stroke="var(--amber)" stroke-width="8" stroke-linecap="round" stroke-dasharray="148.0 238.76" transform="rotate(-90 48 48)"/><text x="48" y="45" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">62%</text><text x="48" y="61" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8.5" fill="var(--ter)">last 20 Qs</text></svg>
+            <svg width="96" height="96" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="var(--bdr)" stroke-width="8.5"/><circle cx="50" cy="50" r="40" fill="none" stroke="var(--amber)" stroke-width="8.5" stroke-linecap="round" stroke-dasharray="155.8 251.33" transform="rotate(-90 50 50)"/><text x="50" y="47" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700" fill="var(--text)">62%</text><text x="50" y="63" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>6.6</b></div>
+            <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
               <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
@@ -760,6 +766,7 @@ button{font-family:inherit}
                 </div>
               </div></div>
             </details>
+            </div>
           </div>
         </div>
       </div>
