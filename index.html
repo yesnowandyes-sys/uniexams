@@ -28,7 +28,7 @@
 }
 html{overflow-x:hidden}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
-.view{display:none;opacity:1;transform:translateY(0);transition:opacity .22s ease,transform .22s ease}
+.view{display:none;opacity:1;transform:none;transition:opacity .22s ease,transform .22s ease}
 .view.active{display:block}
 .view.view-enter{opacity:0;transform:translateY(6px);transition:none}
 button{font-family:inherit}
@@ -594,6 +594,66 @@ button{font-family:inherit}
 .dial-wrap{width:120px;height:120px}
 .dial-center b{font-size:1.375rem}
 }
+
+/* ═══ MENTAL MATHS ═══ */
+.mm-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:.9rem 1.1rem;box-shadow:var(--shadow-1)}
+.mm-toolbar-group{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mm-toolbar-lbl{font-size:.75rem;font-weight:600;color:var(--sec)}
+.mm-toolbar select{font-family:inherit;font-size:.75rem;font-weight:600;border:1px solid var(--bdr);border-radius:8px;padding:6px 8px;color:var(--sec);background:var(--surf)}
+.mm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:1.1rem}
+.mm-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.1rem 1.2rem 1.2rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:.7rem;transition:transform .12s,box-shadow .12s}
+.mm-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.mm-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.mm-card-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--lite);color:var(--mid)}
+.mm-card-name{font-size:.9375rem;font-weight:700;color:var(--text)}
+.mm-card-meta{margin-top:3px}
+.mm-card-desc{font-size:.8125rem;color:var(--ter);line-height:1.55;flex:1}
+.mm-card-actions{display:flex;align-items:center;gap:8px}
+.mm-card-actions .btn-primary{flex:1}
+.mm-icon-btn{width:36px;height:36px;border-radius:9px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .1s}
+.mm-icon-btn:hover{background:var(--alt)}
+
+.mm-guide-tip{display:flex;gap:8px;align-items:flex-start;font-size:.8125rem;color:var(--sec);line-height:1.55;margin-bottom:.55rem}
+.mm-guide-tip svg{flex-shrink:0;margin-top:2px}
+.mm-guide-example{background:var(--lite);border:1px solid var(--liteb);border-radius:10px;padding:.85rem 1rem;margin-top:.55rem}
+.mm-guide-example b{display:block;font-size:.75rem;color:var(--mid);margin-bottom:4px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.mm-guide-example div{font-size:.8125rem;color:var(--text);line-height:1.7;white-space:pre-wrap}
+.mm-guide-section{margin-bottom:1.1rem}
+.mm-guide-section:last-child{margin-bottom:0}
+.mm-guide-section h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ter);margin-bottom:.6rem}
+
+.mm-field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem}
+.mm-chip-grid{display:flex;flex-wrap:wrap;gap:6px;max-height:190px;overflow-y:auto;padding:2px}
+.mm-chip{min-width:34px;height:34px;padding:0 8px;border-radius:8px;border:1.5px solid var(--bdr2);background:var(--surf);color:var(--sec);font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.mm-chip:hover{background:var(--alt)}
+.mm-chip.excluded{background:var(--rLite);border-color:var(--rBdr);color:var(--red);text-decoration:line-through}
+.mm-hint{font-size:.75rem;color:var(--ter);margin-top:.65rem;line-height:1.5}
+.mm-hint.warn{color:var(--red);font-weight:600}
+
+.mm-q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;padding:2rem 1.75rem;margin-bottom:1rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1);text-align:center}
+.mm-q-topic{font-size:.75rem;font-weight:700;color:var(--mid);text-transform:uppercase;letter-spacing:.04em;margin-bottom:1.1rem}
+.mm-q-expr{font-family:'JetBrains Mono',monospace;font-size:2.125rem;font-weight:700;color:var(--text);letter-spacing:-.01em;margin-bottom:1.6rem;line-height:1.3}
+.mm-q-form{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.mm-q-input{font-family:'JetBrains Mono',monospace;font-size:1.375rem;font-weight:700;text-align:center;width:180px;padding:.7rem .9rem;border-radius:10px;border:2px solid var(--bdr2);outline:none;color:var(--text);background:var(--surf);transition:border-color .12s,box-shadow .12s}
+.mm-q-input:focus{border-color:var(--mid);box-shadow:0 0 0 3px var(--lite)}
+.mm-q-input.correct{border-color:var(--green);background:var(--gLite);color:var(--green)}
+.mm-q-input.incorrect{border-color:var(--red);background:var(--rLite);color:var(--red)}
+.mm-q-input:disabled{opacity:1}
+.mm-q-feedback{margin-top:1.1rem;font-size:.875rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px}
+.mm-q-feedback.correct{color:var(--green)}
+.mm-q-feedback.incorrect{color:var(--red)}
+.mm-q-explain{margin-top:1rem;text-align:left;background:var(--lite);border:1px solid var(--liteb);border-radius:10px;padding:1rem 1.1rem;font-size:.8438rem;color:var(--text);line-height:1.8}
+.mm-q-btns{display:flex;justify-content:center;gap:10px;margin-top:1.25rem}
+
+.mm-timer-num{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--text)}
+.mm-summary{text-align:center;padding:2.5rem 1.5rem}
+.mm-summary-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.mm-summary h2{font-size:1.375rem;font-weight:800;margin-bottom:.5rem}
+.mm-summary-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:460px;margin:1.5rem auto 0}
+.mm-summary-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--text)}
+.mm-summary-stat span{font-size:.6875rem;color:var(--ter);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.mm-summary-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:1.75rem}
+@media(max-width:640px){.mm-summary-stats{grid-template-columns:1fr 1fr}.mm-toolbar{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -616,6 +676,11 @@ button{font-family:inherit}
       <span>Practice</span>
     </button>
     <div class="sb-label">Prepare</div>
+    <button class="sb-item" id="navMentalMaths" onclick="nav(this,'mentalmaths','Mental Maths')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.25" y="3" width="13.5" height="18" rx="1.75"/><path d="M8.25 7.5h7.5"/><circle cx="8.6" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="8.6" cy="15.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="15.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="15.5" r=".9" fill="currentColor" stroke="none"/><circle cx="8.6" cy="19" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="19" r=".9" fill="currentColor" stroke="none"/></svg>
+      <span>Mental Maths</span>
+      <span class="sb-tag">NEW</span>
+    </button>
     <button class="sb-item" onclick="nav(this,'soon','Mock Exams')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg>
       <span>Mock Exams</span>
@@ -892,6 +957,90 @@ button{font-family:inherit}
             </div>
           </div>
           <button class="sb-btn" onclick="resetSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MENTAL MATHS VIEW ═══ -->
+  <div id="view-mentalmaths" class="view">
+    <div class="page" id="mmHub">
+      <div class="greeting">
+        <h1>Mental Maths</h1>
+        <p>Sharpen the calculation speed and number sense that the <strong>ESAT</strong> rewards. Pick a skill, work through a mini guide to the method, then drill it until it's automatic.</p>
+      </div>
+
+      <div class="mm-toolbar">
+        <div class="mm-toolbar-group">
+          <span class="mm-toolbar-lbl">Questions per session</span>
+          <div class="seg-group seg-group-sm" id="mmLenSeg">
+            <button class="seg-btn" data-len="10" onclick="mmSetSessionLen(10,this)">10</button>
+            <button class="seg-btn" data-len="15" onclick="mmSetSessionLen(15,this)">15</button>
+            <button class="seg-btn" data-len="20" onclick="mmSetSessionLen(20,this)">20</button>
+            <button class="seg-btn" data-len="30" onclick="mmSetSessionLen(30,this)">30</button>
+          </div>
+        </div>
+        <div class="mm-toolbar-group">
+          <span class="mm-toolbar-lbl">Timed mode</span>
+          <label class="toggle"><input type="checkbox" id="mmTimedToggle" onchange="mmSetTimed(this.checked)"><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+          <select id="mmSecondsSelect" onchange="mmSetSeconds(this.value)" aria-label="Seconds per question">
+            <option value="5">5s / question</option><option value="8">8s / question</option><option value="12">12s / question</option><option value="20">20s / question</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mm-grid" id="mmSkillGrid"></div>
+    </div>
+
+    <!-- Guide modal -->
+    <div class="lb-modal-overlay" id="mmGuideOverlay" onclick="if(event.target===this)closeMMGuide()">
+      <div class="lb-modal" style="max-width:580px" role="dialog" aria-modal="true" aria-labelledby="mmGuideTitle">
+        <div class="lb-modal-head">
+          <h3 id="mmGuideTitle">Guide</h3>
+          <button class="lb-modal-close" onclick="closeMMGuide()" aria-label="Close guide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="lb-modal-body" id="mmGuideBody"></div>
+      </div>
+    </div>
+
+    <!-- Settings modal: range + excluded numbers -->
+    <div class="lb-modal-overlay" id="mmSettingsOverlay" onclick="if(event.target===this)closeMMSettings()">
+      <div class="lb-modal" style="max-width:520px" role="dialog" aria-modal="true" aria-labelledby="mmSettingsTitle">
+        <div class="lb-modal-head">
+          <h3 id="mmSettingsTitle">Customise problem set</h3>
+          <button class="lb-modal-close" onclick="closeMMSettings()" aria-label="Close settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="lb-modal-body" id="mmSettingsBody"></div>
+      </div>
+    </div>
+
+    <!-- Practice runner -->
+    <div class="practice-wrap" id="mmRunner" style="display:none">
+      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="mmExitSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Mental Maths</button>
+      <div class="practice-layout">
+        <div class="practice-main">
+          <div id="mmQuestionArea"></div>
+        </div>
+        <div class="practice-sidebar">
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:8px">Session Progress</div>
+            <div class="sb-prog"><span class="sb-prog-num" id="mmProgNum">0</span><span class="sb-prog-lbl" id="mmProgLbl">of 15 answered</span></div>
+            <div class="bar" style="height:4px"><div class="bar-fill" id="mmProgBar" style="width:0%;background:var(--mid)"></div></div>
+            <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="mmCorrect">0</strong></span><span>Streak: <strong style="font-family:'JetBrains Mono',monospace;color:var(--flame)" id="mmStreak">0</strong></span></div>
+          </div>
+          <div class="sb-card" id="mmTimerCard" style="display:none">
+            <div class="label" style="color:var(--ter);margin-bottom:8px">Time left</div>
+            <div class="mm-timer-num" id="mmTimerNum">10s</div>
+            <div class="bar" style="height:4px;margin-top:8px"><div class="bar-fill" id="mmTimerBar" style="width:100%;background:var(--amber)"></div></div>
+          </div>
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
+            <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Enter</span><span style="margin-left:4px">Check answer / next question</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Esc</span><span style="margin-left:4px">End session</span></div>
+            </div>
+          </div>
+          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="mmExitSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
         </div>
       </div>
     </div>
@@ -2668,6 +2817,575 @@ function renderSettings(){
 (function(){
   if(!document.getElementById('view-settings'))return;
   renderSettings();
+})();
+
+/* ══════════════════════════ MENTAL MATHS ══════════════════════════ */
+/* Note: functions below are top-level (not IIFE-wrapped) because they are invoked from inline onclick="" attributes, which resolve names against the global scope. */
+
+/* ── small helpers ── */
+function mmRandInt(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+function mmPick(arr){return arr[Math.floor(Math.random()*arr.length)]}
+function mmGcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const t=b;b=a%b;a=t}return a||1}
+function mmRoundSF(n,sf){if(n===0)return 0;const mag=Math.floor(Math.log10(Math.abs(n)))+1;const factor=Math.pow(10,sf-mag);return Math.round(n*factor)/factor}
+function mmFmt(n){if(!isFinite(n))return String(n);return Number.isInteger(n)?String(n):(Math.round(n*1000)/1000).toString()}
+function mmSup(n){const map={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','-':'⁻'};return String(n).split('').map(c=>map[c]||c).join('')}
+function mmRandExcl(min,max,excluded){
+  min=Math.max(0,Math.min(min,max));max=Math.max(min,max);
+  const pool=[];
+  for(let i=min;i<=max;i++)if(!excluded.includes(i))pool.push(i);
+  if(!pool.length)return min;
+  return pool[Math.floor(Math.random()*pool.length)];
+}
+/* value = int(digitsStr) * 10^shift, built as a string so large/small numbers stay exact */
+function mmDigitsShifted(digitsStr,shift){
+  if(shift>=0)return digitsStr+'0'.repeat(shift);
+  const k=-shift;
+  if(k<digitsStr.length){
+    const point=digitsStr.length-k;
+    return digitsStr.slice(0,point)+'.'+digitsStr.slice(point);
+  }
+  return '0.'+'0'.repeat(k-digitsStr.length)+digitsStr;
+}
+function mmQ(topic,expr,ans,explain){return {topic,expr,inputType:'number',placeholder:'?',checkType:'number',correct:{value:ans,display:mmFmt(ans)},explain}}
+
+/* ── persistent settings (range + excluded numbers per operation, session prefs) ── */
+const MM_STORE_KEY='examtutor_mm_settings_v1';
+const MM_DEFAULTS={
+  addition:{min:10,max:99,excluded:[]},
+  subtraction:{min:10,max:99,excluded:[]},
+  multiplication:{min:2,max:12,excluded:[]},
+  division:{min:2,max:12,excluded:[]},
+  session:{length:15,timed:false,seconds:12}
+};
+let mmStore=null;
+try{mmStore=JSON.parse(localStorage.getItem(MM_STORE_KEY))}catch(e){mmStore=null}
+if(!mmStore||typeof mmStore!=='object')mmStore={};
+['addition','subtraction','multiplication','division'].forEach(k=>{
+  mmStore[k]=Object.assign({},MM_DEFAULTS[k],mmStore[k]||{});
+  if(!Array.isArray(mmStore[k].excluded))mmStore[k].excluded=[];
+});
+mmStore.session=Object.assign({},MM_DEFAULTS.session,mmStore.session||{});
+function mmSave(){try{localStorage.setItem(MM_STORE_KEY,JSON.stringify(mmStore))}catch(e){}}
+
+/* ── question generators ── */
+function mmMultiplyTip(a,b,ans){
+  if(b===11&&a>=10&&a<100){const d1=Math.floor(a/10),d2=a%10,mid=d1+d2;if(mid<10)return `Trick for ×11: split the digits of ${a} (${d1} and ${d2}), add them (${d1}+${d2}=${mid}), then slide that sum between the digits → ${d1}${mid}${d2}.`}
+  if(a===b&&a%10===5){const d=Math.floor(a/10);return `Trick for squaring a number ending in 5: tens digit d=${d}. Compute d×(d+1)=${d*(d+1)}, then append 25 → ${d*(d+1)}25.`}
+  const tens=Math.floor(b/10)*10,ones=b%10;
+  if(ones===0)return `${a} × ${b} = ${a} × ${tens/10} × 10 = ${a*(tens/10)} × 10 = ${ans}.`;
+  return `Split ${b} = ${tens} + ${ones}:\n${a} × ${tens} = ${a*tens}\n${a} × ${ones} = ${a*ones}\nAdd: ${a*tens} + ${a*ones} = ${ans}`;
+}
+function mmGenAddition(){
+  const s=mmStore.addition;
+  const a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
+  const ans=a+b,rb=Math.round(b/10)*10,diff=Math.abs(b-rb);
+  const explain=diff===0?`${a} + ${b} = ${ans}\n\n${b} is already a multiple of 10, so no rounding needed.`
+    :`${a} + ${b} = ${ans}\n\nMental method: round ${b} to ${rb}, add (${a} + ${rb} = ${a+rb}), then ${b>rb?'add':'subtract'} ${diff} back → ${ans}.`;
+  return mmQ('Addition',`${a} + ${b}`,ans,explain);
+}
+function mmGenSubtraction(){
+  const s=mmStore.subtraction;
+  let a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
+  if(b>a)[a,b]=[b,a];
+  const ans=a-b,rb=Math.round(b/10)*10,diff=Math.abs(b-rb);
+  const explain=diff===0?`${a} − ${b} = ${ans}\n\n${b} is already a multiple of 10, so no rounding needed.`
+    :`${a} − ${b} = ${ans}\n\nMental method: round ${b} to ${rb}, subtract (${a} − ${rb} = ${a-rb}), then ${b>rb?'subtract':'add'} ${diff} back → ${ans}.`;
+  return mmQ('Subtraction',`${a} − ${b}`,ans,explain);
+}
+function mmGenMultiplication(){
+  const s=mmStore.multiplication;
+  const a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
+  const ans=a*b;
+  return mmQ('Multiplication',`${a} × ${b}`,ans,`${a} × ${b} = ${ans}\n\n${mmMultiplyTip(a,b,ans)}`);
+}
+function mmGenDivision(){
+  const s=mmStore.division;
+  const excl0=s.excluded.includes(0)?s.excluded:s.excluded.concat([0]);
+  const b=mmRandExcl(Math.max(1,s.min),Math.max(1,s.max),excl0);
+  const q=mmRandExcl(s.min,s.max,s.excluded);
+  const a=b*q;
+  return mmQ('Division',`${a} ÷ ${b}`,q,`${a} ÷ ${b} = ${q}\n\nCheck: ${b} × ${q} = ${a}.`);
+}
+function mmSquareTip(n){
+  if(n%10===5){const d=Math.floor(n/10);return `Trick for numbers ending in 5: tens digit d = ${d}. Compute d × (d+1) = ${d*(d+1)}, then append "25" → ${d*(d+1)}25.`}
+  const base=Math.round(n/10)*10,rem=n-base;
+  if(rem===0)return `${n} is a multiple of 10, so ${n}² = ${n/10}² × 100.`;
+  const sign=rem>=0?'+':'−',absR=Math.abs(rem);
+  return `Split ${n} = ${base} ${sign} ${absR}:\n(${base} ${sign} ${absR})² = ${base}² ${sign} 2×${base}×${absR} + ${absR}²\n= ${base*base} ${sign} ${2*base*absR} + ${absR*absR}\n= ${n*n}`;
+}
+function mmGenSquares(){
+  if(Math.random()<0.5){
+    const n=mmRandInt(2,25),ans=n*n;
+    return mmQ('Squares',`${n}²`,ans,`${n}² = ${n} × ${n} = ${ans}\n\n${mmSquareTip(n)}`);
+  }
+  const n=mmRandInt(2,20),sq=n*n;
+  return mmQ('Square Roots',`√${sq}`,n,`√${sq} = ${n}, because ${n} × ${n} = ${sq}.\n\nTip: memorise the squares from 1² to 20² so you recognise them instantly instead of calculating.`);
+}
+const MM_PCT_LIST=[
+  {p:10,tip:'10% = divide by 10.'},{p:5,tip:'5% = half of 10%.'},{p:20,tip:'20% = double 10%.'},
+  {p:25,tip:'25% = divide by 4 (a quarter).'},{p:50,tip:'50% = half.'},{p:75,tip:'75% = three quarters.'},
+  {p:15,tip:'15% = 10% + 5%.'},{p:30,tip:'30% = 3 × 10%.'},{p:40,tip:'40% = 4 × 10%.'},
+  {p:60,tip:'60% = 6 × 10%.'},{p:70,tip:'70% = 7 × 10%.'},{p:80,tip:'80% = 8 × 10%.'},{p:90,tip:'90% = 100% − 10%.'}
+];
+function mmGenPercentages(){
+  const choice=mmPick(MM_PCT_LIST),pct=choice.p;
+  const denom=100/mmGcd(100,pct);
+  const base=denom*mmRandInt(1,9);
+  const part=pct*base/100;
+  const mode=mmRandInt(0,2);
+  if(mode===0)return mmQ('Percentages',`${pct}% of ${base}`,part,`${pct}% of ${base} = ${part}\n\n${choice.tip} 10% of ${base} = ${base/10}.`);
+  if(mode===1)return mmQ('Percentages',`${part} is what % of ${base}?`,pct,`${part} ÷ ${base} × 100 = ${pct}%\n\n${choice.tip}`);
+  return mmQ('Percentages',`${part} is ${pct}% of what number?`,base,`${part} ÷ ${pct} × 100 = ${base}\n\nIf ${pct}% is ${part}, then 1% is ${mmFmt(part/pct)}, and 100% is ${base}.`);
+}
+function mmReduce(p,q){const g=mmGcd(p,q);return [p/g,q/g]}
+function mmParseFraction(str){
+  str=String(str).trim();
+  if(str==='')return null;
+  if(str.includes('/')){
+    const parts=str.split('/');
+    if(parts.length!==2)return null;
+    const p=parseFloat(parts[0]),q=parseFloat(parts[1]);
+    if(isNaN(p)||isNaN(q)||q===0)return null;
+    return {value:p/q};
+  }
+  const v=parseFloat(str);
+  if(isNaN(v))return null;
+  return {value:v};
+}
+function mmGenFractions(){
+  const mode=mmRandInt(0,2);
+  if(mode===0){
+    const q=mmPick([4,6,8,9,10,12,15,16,20]);
+    const p=mmRandInt(1,q-1);
+    const [rp,rq]=mmReduce(p,q);
+    const k=mmRandInt(2,5);
+    const bigP=rp*k,bigQ=rq*k;
+    return {topic:'Fractions',expr:`Simplify ${bigP}/${bigQ} to its lowest terms`,inputType:'fraction',placeholder:'e.g. 3/4',checkType:'reduced',
+      correct:{value:rp/rq,display:`${rp}/${rq}`},
+      explain:`${bigP}/${bigQ} = ${rp}/${rq}\n\nDivide the numerator and denominator by their highest common factor: HCF(${bigP}, ${bigQ}) = ${mmGcd(bigP,bigQ)}.`};
+  }
+  if(mode===1){
+    const denoms=[2,3,4,5,6,8,10,12];
+    const q1=mmPick(denoms),q2=mmPick(denoms.filter(d=>d!==q1));
+    const p1=mmRandInt(1,q1-1),p2=mmRandInt(1,q2-1);
+    const lcm=q1*q2/mmGcd(q1,q2);
+    const num=p1*(lcm/q1)+p2*(lcm/q2);
+    const [rp,rq]=mmReduce(num,lcm);
+    return {topic:'Fractions',expr:`${p1}/${q1} + ${p2}/${q2}`,inputType:'fraction',placeholder:'e.g. 5/6',checkType:'number',
+      correct:{value:num/lcm,display:`${rp}/${rq}`},
+      explain:`Common denominator = ${lcm} (LCM of ${q1} and ${q2}).\n${p1}/${q1} = ${p1*(lcm/q1)}/${lcm}\n${p2}/${q2} = ${p2*(lcm/q2)}/${lcm}\nSum = ${num}/${lcm} = ${rp}/${rq}`};
+  }
+  const q=mmPick([2,4,5,8,10,20,25]);
+  const p=mmRandInt(1,q-1);
+  const pct=p/q*100;
+  return {topic:'Fractions',expr:`Express ${p}/${q} as a percentage`,inputType:'number',placeholder:'? %',checkType:'number',
+    correct:{value:pct,display:`${mmFmt(pct)}%`},
+    explain:`${p}/${q} = ${mmFmt(pct)}%\n\nMultiply the fraction by 100: (${p} × 100) ÷ ${q} = ${mmFmt(pct)}.`};
+}
+function mmGenIndices(){
+  const mode=mmRandInt(0,4);
+  if(mode===0){const base=mmRandInt(2,6),exp=mmRandInt(2,4),ans=Math.pow(base,exp);
+    return mmQ('Indices',`${base}${mmSup(exp)}`,ans,`${base}${mmSup(exp)} = ${Array(exp).fill(base).join(' × ')} = ${ans}`);}
+  if(mode===1){const base=mmPick([2,3,4,5,10]),e1=mmRandInt(2,6),e2=mmRandInt(2,6);
+    return mmQ('Indices — aᵐ × aⁿ = aᵐ⁺ⁿ',`${base}${mmSup(e1)} × ${base}${mmSup(e2)} = ${base} raised to what power?`,e1+e2,
+      `When multiplying powers of the same base, add the exponents: ${e1} + ${e2} = ${e1+e2}.\nSo ${base}${mmSup(e1)} × ${base}${mmSup(e2)} = ${base}${mmSup(e1+e2)}.`);}
+  if(mode===2){const base=mmPick([2,3,4,5,10]),e2=mmRandInt(2,5),e1=e2+mmRandInt(1,5);
+    return mmQ('Indices — aᵐ ÷ aⁿ = aᵐ⁻ⁿ',`${base}${mmSup(e1)} ÷ ${base}${mmSup(e2)} = ${base} raised to what power?`,e1-e2,
+      `When dividing powers of the same base, subtract the exponents: ${e1} − ${e2} = ${e1-e2}.\nSo ${base}${mmSup(e1)} ÷ ${base}${mmSup(e2)} = ${base}${mmSup(e1-e2)}.`);}
+  if(mode===3){const base=mmPick([2,3,4,5]),e1=mmRandInt(2,4),e2=mmRandInt(2,3);
+    return mmQ('Indices — (aᵐ)ⁿ = aᵐⁿ',`(${base}${mmSup(e1)})${mmSup(e2)} = ${base} raised to what power?`,e1*e2,
+      `When raising a power to a power, multiply the exponents: ${e1} × ${e2} = ${e1*e2}.\nSo (${base}${mmSup(e1)})${mmSup(e2)} = ${base}${mmSup(e1*e2)}.`);}
+  const useCube=Math.random()<0.5;
+  const n=useCube?3:2,base=mmRandInt(2,useCube?6:12),val=Math.pow(base,n);
+  return mmQ('Indices — fractional powers',`${val}^(1/${n})`,base,
+    `A power of 1/${n} means the ${useCube?'cube':'square'} root.\n${base}${mmSup(n)} = ${val}, so ${val}^(1/${n}) = ${base}.`);
+}
+function mmGenAlgebra(){
+  const mode=mmRandInt(0,2);
+  if(mode===0){
+    const a=mmRandInt(2,9),x=mmRandInt(-10,12),b=mmRandInt(-15,15),c=a*x+b;
+    const bStr=b>=0?`+ ${b}`:`− ${Math.abs(b)}`;
+    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}`,x,
+      `${a}x ${bStr} = ${c}\n${a}x = ${c} ${b>=0?'−':'+'} ${Math.abs(b)} = ${c-b}\nx = ${c-b} ÷ ${a} = ${x}`);
+  }
+  if(mode===1){
+    let a=mmRandInt(2,9),c=mmRandInt(2,9);while(c===a)c=mmRandInt(2,9);
+    const x=mmRandInt(-8,8),b=mmRandInt(-12,12),d=(a-c)*x+b;
+    const bStr=b>=0?`+ ${b}`:`− ${Math.abs(b)}`,dStr=d>=0?`+ ${d}`:`− ${Math.abs(d)}`;
+    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}x ${dStr}`,x,
+      `Collect x terms on one side: ${a}x − ${c}x = ${d} − (${b}) → ${a-c}x = ${d-b}\nx = ${d-b} ÷ ${a-c} = ${x}`);
+  }
+  const n=mmRandInt(2,3);
+  const coeffs=[];
+  for(let i=0;i<n;i++){let c=mmRandInt(-9,9);while(c===0)c=mmRandInt(-9,9);coeffs.push(c)}
+  const sum=coeffs.reduce((s,c)=>s+c,0);
+  let expr='';
+  coeffs.forEach((c,i)=>{expr+= i===0?(c<0?'−':'')+Math.abs(c)+'x':(c<0?' − ':' + ')+Math.abs(c)+'x'});
+  return mmQ('Algebra',`Simplify: ${expr} = ?x`,sum,
+    `Add the coefficients of x: ${coeffs.join(' + ').replace(/\+ -/g,'− ')} = ${sum}\nSo the expression simplifies to ${sum}x.`);
+}
+function mmGenEstimation(){
+  const mode=mmRandInt(0,2);
+  if(mode===0){
+    const a=mmRandInt(11,987),b=mmRandInt(11,987);
+    const ra=mmRoundSF(a,1),rb=mmRoundSF(b,1),ans=ra*rb;
+    return mmQ('Estimation',`Estimate ${a} × ${b} by rounding each number to 1 significant figure`,ans,
+      `Round each number to 1 s.f.: ${a} → ${ra}, ${b} → ${rb}\nEstimate ≈ ${ra} × ${rb} = ${ans}`);
+  }
+  const mantissaInt=mmRandInt(11,99);
+  const d1=Math.floor(mantissaInt/10),d2=mantissaInt%10;
+  const mantissaStr=d2===0?`${d1}`:`${d1}.${d2}`;
+  const exp=mode===1?mmRandInt(2,8):mmRandInt(-6,-2);
+  const numberStr=mmDigitsShifted(String(mantissaInt),exp-1);
+  return mmQ('Standard Form',`Write ${numberStr} in standard form as ${mantissaStr} × 10 raised to what power?`,exp,
+    `${numberStr} = ${mantissaStr} × 10${mmSup(exp)}\n\nCount how many places the decimal point moves to leave a single non-zero digit before the point — that count (with sign) is the exponent.`);
+}
+
+/* ── check an answer against a generated question ── */
+function mmCheckAnswer(q,raw){
+  raw=String(raw).trim();
+  if(raw==='')return false;
+  if(q.checkType==='reduced'){
+    if(!raw.includes('/'))return false;
+    const parts=raw.split('/');
+    if(parts.length!==2)return false;
+    const p=parseInt(parts[0],10),d=parseInt(parts[1],10);
+    if(isNaN(p)||isNaN(d)||d===0)return false;
+    if(mmGcd(p,d)!==1)return false;
+    return Math.abs(p/d-q.correct.value)<1e-6;
+  }
+  const parsed=mmParseFraction(raw);
+  if(!parsed)return false;
+  return Math.abs(parsed.value-q.correct.value)<1e-6;
+}
+
+/* ── skills catalogue + guides ── */
+const MM_SKILLS=[
+  {key:'addition',name:'Addition',sym:'+',tag:'Core · Configurable',configurable:true,desc:'Add two numbers quickly using rounding and compensation.',gen:mmGenAddition},
+  {key:'subtraction',name:'Subtraction',sym:'−',tag:'Core · Configurable',configurable:true,desc:'Subtract confidently by rounding the smaller number first.',gen:mmGenSubtraction},
+  {key:'multiplication',name:'Multiplication',sym:'×',tag:'Core · Configurable',configurable:true,desc:'Multiply two numbers using splitting and classic shortcuts.',gen:mmGenMultiplication},
+  {key:'division',name:'Division',sym:'÷',tag:'Core · Configurable',configurable:true,desc:'Divide exactly by thinking in terms of multiplication facts.',gen:mmGenDivision},
+  {key:'squares',name:'Squares & Roots',sym:'√',tag:'ESAT favourite',configurable:false,desc:'Square numbers and find roots without a calculator.',gen:mmGenSquares},
+  {key:'percentages',name:'Percentages',sym:'%',tag:'ESAT favourite',configurable:false,desc:'Find percentages, reverse percentages, and shares of a number fast.',gen:mmGenPercentages},
+  {key:'fractions',name:'Fractions',sym:'½',tag:'Core',configurable:false,desc:'Simplify, add and convert fractions in your head.',gen:mmGenFractions},
+  {key:'indices',name:'Powers & Indices',sym:'xⁿ',tag:'ESAT favourite',configurable:false,desc:'Apply the laws of indices and evaluate powers and roots.',gen:mmGenIndices},
+  {key:'algebra',name:'Algebra',sym:'x=',tag:'ESAT favourite',configurable:false,desc:'Solve linear equations and simplify expressions on sight.',gen:mmGenAlgebra},
+  {key:'estimation',name:'Estimation & Standard Form',sym:'≈',tag:'ESAT favourite',configurable:false,desc:'Round, estimate and work confidently in standard form.',gen:mmGenEstimation}
+];
+const MM_GUIDES={
+  addition:{intro:'Fast addition is about avoiding awkward carries — round one number to a friendly multiple of 10, add, then correct the difference.',
+    tips:['Round the larger operand to the nearest 10, add, then adjust by the amount you rounded.','Add left-to-right for multi-digit sums so you always know the running total.','Look for pairs that sum to 10 or 100 and combine those first.','For three or more numbers, group friendly pairs before adding the rest.'],
+    examples:[{q:'68 + 57',steps:'Round 57 up to 60.\n68 + 60 = 128\n128 − 3 = 125 (we added 3 too many, so subtract it back)'}]},
+  subtraction:{intro:'Subtraction is quickest when you round the number being subtracted, not the one you start with.',
+    tips:['Round the smaller number to the nearest 10, subtract, then correct.','Use "counting up" from the smaller number to the larger for close values.','Subtracting 9, 19, 29… ? Subtract 10, 20, 30… then add 1 back.','Break the larger number into hundreds/tens/units and subtract each part.'],
+    examples:[{q:'132 − 48',steps:'Round 48 up to 50.\n132 − 50 = 82\n82 + 2 = 84 (we subtracted 2 too many, so add it back)'}]},
+  multiplication:{intro:'Break awkward multiplications into friendly pieces using the distributive law, and learn a handful of instant shortcuts.',
+    tips:['Split the second number into tens and units, multiply each separately, then add.','×11 for a 2-digit number: add its digits and slide the sum between them (e.g. 23×11 → 2,5,3 → 253).','×5: multiply by 10, then halve.','×9: multiply by 10, then subtract the original number.','Squaring a number ending in 5: tens digit d → d×(d+1), then append 25.'],
+    examples:[{q:'34 × 7',steps:'34 = 30 + 4\n30 × 7 = 210\n4 × 7 = 28\n210 + 28 = 238'},{q:'23 × 11',steps:'Digits of 23: 2 and 3. Sum = 2 + 3 = 5.\nSlide 5 between them: 2, 5, 3 → 253'}]},
+  division:{intro:'Mental division is really about recognising multiplication facts in reverse — ask "what times this number gets close to that?"',
+    tips:['Think "divisor × ? ≈ dividend" and adjust up or down.','÷5: multiply by 2, then divide by 10.','÷4: halve, then halve again.','Check divisibility fast: even → ÷2 works; digit sum ÷3 → ÷3 works; ends in 0 or 5 → ÷5 works.','Simplify awkward divisions by cancelling a common factor from both numbers first.'],
+    examples:[{q:'168 ÷ 8',steps:'168 ÷ 2 = 84\n84 ÷ 2 = 42\n42 ÷ 2 = 21 (divided by 2 three times = ÷8)'}]},
+  squares:{intro:'Knowing your squares up to 20² cold — and one or two expansion tricks — makes surds and quadratics much faster in the exam.',
+    tips:['Memorise 1² to 20² so you recognise them instantly.','Numbers ending in 5: tens digit d → d×(d+1), then append 25 (e.g. 45² → 4×5=20 → 2025).','For any n, write n = a ± b where a is a round number, then use (a±b)² = a² ± 2ab + b².','Square roots: bracket the answer between two known squares, then refine (e.g. √70 is between 8²=64 and 9²=81, closer to 8.4).'],
+    examples:[{q:'23²',steps:'Split 23 = 20 + 3\n(20+3)² = 20² + 2×20×3 + 3²\n= 400 + 120 + 9 = 529'}]},
+  percentages:{intro:'Almost every percentage can be built from 10%, 5% and 1% — find those first, then combine.',
+    tips:['10% = divide by 10. Every other "nice" percentage is a multiple or fraction of this.','5% = half of 10%. 1% = a tenth of 10%.','25% = quarter, 50% = half, 75% = three quarters — use direct division instead of building from 10%.','Reverse percentages: if you know the part and the percentage, divide by the percentage and multiply by 100 to find the whole.','Percentage increase/decrease: find the percentage of the original, then add or subtract it.'],
+    examples:[{q:'35% of 80',steps:'10% of 80 = 8\n30% of 80 = 3 × 8 = 24\n5% of 80 = half of 8 = 4\n35% = 30% + 5% = 24 + 4 = 28'}]},
+  fractions:{intro:'Fraction fluency is about spotting common factors quickly and always finding the lowest common denominator with the smallest possible numbers.',
+    tips:['To simplify, divide top and bottom by their highest common factor — look for 2, 3 and 5 first.','To add or subtract, find the lowest common multiple of the denominators, not just multiply them together.','To convert to a percentage, multiply the fraction by 100.','Recognise common fraction-decimal-percentage equivalents: 1/2=50%, 1/4=25%, 1/5=20%, 1/8=12.5%, 1/3≈33.3%.'],
+    examples:[{q:'Simplify 18/24',steps:'HCF(18, 24) = 6\n18 ÷ 6 = 3, 24 ÷ 6 = 4\n18/24 = 3/4'},{q:'1/4 + 1/6',steps:'LCM(4, 6) = 12\n1/4 = 3/12, 1/6 = 2/12\n3/12 + 2/12 = 5/12'}]},
+  indices:{intro:'The laws of indices turn intimidating powers into simple addition and subtraction of exponents — learn the rules, not just the answers.',
+    tips:['aᵐ × aⁿ = aᵐ⁺ⁿ — multiplying same-base powers adds the exponents.','aᵐ ÷ aⁿ = aᵐ⁻ⁿ — dividing same-base powers subtracts the exponents.','(aᵐ)ⁿ = aᵐⁿ — a power of a power multiplies the exponents.','a⁰ = 1 for any nonzero a, and a⁻ⁿ = 1/aⁿ.','a^(1/n) means the nth root of a; a^(m/n) means the nth root of a, raised to the mth power.'],
+    examples:[{q:'3⁴ × 3²',steps:'Same base, add exponents: 4 + 2 = 6\n3⁴ × 3² = 3⁶ = 729'},{q:'27^(1/3)',steps:'27^(1/3) is the cube root of 27.\n3³ = 27, so 27^(1/3) = 3'}]},
+  algebra:{intro:'Manipulating expressions and solving for x quickly comes down to doing the same operation to both sides and collecting like terms.',
+    tips:['Whatever you do to one side of an equation, do to the other.','Collect x-terms on one side and constants on the other before dividing.','When expanding (x+a)(x+b), the coefficient of x is a+b and the constant term is a×b.','Combine like terms by adding their coefficients — the variable part doesn\'t change.'],
+    examples:[{q:'Solve: 4x − 5 = 19',steps:'4x = 19 + 5 = 24\nx = 24 ÷ 4 = 6'},{q:'Simplify: 3x + 5x − 2x',steps:'Add the coefficients: 3 + 5 − 2 = 6\nResult: 6x'}]},
+  estimation:{intro:'Under time pressure, rounding to 1 significant figure gives a fast sanity check on any calculation, and standard form keeps very large or small numbers manageable.',
+    tips:['Round each number to 1 significant figure before estimating a product or quotient.','In standard form, a × 10ⁿ always has 1 ≤ a < 10.','Moving the decimal point left increases the exponent; moving it right decreases it.','For numbers less than 1, the exponent in standard form is negative.','Use estimation to sanity-check a precise calculation — if the two are wildly different, you\'ve made an error.'],
+    examples:[{q:'Estimate 412 × 89',steps:'Round to 1 s.f.: 412 → 400, 89 → 90\n400 × 90 = 36000'},{q:'Write 52000 in standard form',steps:'Move the decimal point 4 places left: 5.2\n52000 = 5.2 × 10⁴'}]}
+};
+const MM_GEAR_SVG='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>';
+const MM_BOOK_SVG='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25a8.988 8.988 0 0 0-6 2.292m0-14.25v14.25"/></svg>';
+
+/* ── hub rendering ── */
+function mmRenderHub(){
+  document.getElementById('mmSkillGrid').innerHTML=MM_SKILLS.map(s=>`
+    <div class="mm-card">
+      <div class="mm-card-top">
+        <div class="mm-card-icon"><svg width="20" height="20" viewBox="0 0 24 24"><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" font-family="'JetBrains Mono',monospace" fill="currentColor">${s.sym}</text></svg></div>
+        ${s.configurable?`<button class="mm-icon-btn" title="Customise problem set" aria-label="Customise ${s.name} problem set" onclick="mmOpenSettings('${s.key}')">${MM_GEAR_SVG}</button>`:''}
+      </div>
+      <div>
+        <div class="mm-card-name">${s.name}</div>
+        <div class="mm-card-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${s.tag}</span></div>
+      </div>
+      <p class="mm-card-desc">${s.desc}</p>
+      <div class="mm-card-actions">
+        <button class="btn-primary" onclick="mmStartSession('${s.key}')">Practice</button>
+        <button class="mm-icon-btn" title="View guide" aria-label="View ${s.name} guide" onclick="mmOpenGuide('${s.key}')">${MM_BOOK_SVG}</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ── guide modal ── */
+function mmOpenGuide(key){
+  const skill=MM_SKILLS.find(x=>x.key===key),guide=MM_GUIDES[key];
+  document.getElementById('mmGuideTitle').textContent=`${skill.name} — Method Guide`;
+  let html=`<div class="mm-guide-section"><p style="font-size:.875rem;color:var(--sec);line-height:1.65;margin:0">${guide.intro}</p></div>`;
+  html+=`<div class="mm-guide-section"><h4>Key techniques</h4>`;
+  guide.tips.forEach(t=>{html+=`<div class="mm-guide-tip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M4.5 12.75l6 6 9-13.5"/></svg><span>${t}</span></div>`});
+  html+=`</div>`;
+  if(guide.examples&&guide.examples.length){
+    html+=`<div class="mm-guide-section"><h4>Worked example${guide.examples.length>1?'s':''}</h4>`;
+    guide.examples.forEach(ex=>{html+=`<div class="mm-guide-example"><b>${ex.q}</b><div>${ex.steps}</div></div>`});
+    html+='</div>';
+  }
+  html+=`<button class="btn-primary" style="margin-top:.25rem" onclick="closeMMGuide();mmStartSession('${key}')">Practice this skill</button>`;
+  document.getElementById('mmGuideBody').innerHTML=html;
+  document.getElementById('mmGuideOverlay').classList.add('open');
+}
+function closeMMGuide(){document.getElementById('mmGuideOverlay').classList.remove('open')}
+
+/* ── settings modal: operand range + excluded numbers ── */
+let mmSettingsKey=null;
+function mmOpenSettings(key){
+  mmSettingsKey=key;
+  const s=mmStore[key],skill=MM_SKILLS.find(x=>x.key===key);
+  document.getElementById('mmSettingsTitle').textContent=`Customise ${skill.name}`;
+  document.getElementById('mmSettingsBody').innerHTML=`
+    <div class="mm-field-row">
+      <div class="field"><label for="mmMin">Minimum number</label><input type="number" id="mmMin" value="${s.min}" min="0" max="999"></div>
+      <div class="field"><label for="mmMax">Maximum number</label><input type="number" id="mmMax" value="${s.max}" min="0" max="999"></div>
+    </div>
+    <label class="mm-toolbar-lbl" style="display:block;margin-bottom:.5rem">Tap a number to stop it appearing in problems</label>
+    <div class="mm-chip-grid" id="mmChipGrid"></div>
+    <p class="mm-hint" id="mmExclHint"></p>
+    <div style="display:flex;gap:10px;margin-top:1.25rem">
+      <button class="btn-outline" onclick="mmResetSettings()">Reset to defaults</button>
+      <button class="btn-primary" style="width:auto" onclick="closeMMSettings()">Done</button>
+    </div>
+  `;
+  /* Deferred via setTimeout: a blur-triggered 'change' can fire synchronously mid-click
+     (e.g. the user clicks a chip right after editing Max) — rebuilding the chip grid inside
+     that same gesture would swap out the element mid-click and silently swallow the click. */
+  document.getElementById('mmMin').onchange=()=>setTimeout(mmApplyRangeChange,0);
+  document.getElementById('mmMax').onchange=()=>setTimeout(mmApplyRangeChange,0);
+  mmRenderChips();
+  document.getElementById('mmSettingsOverlay').classList.add('open');
+}
+function mmApplyRangeChange(){
+  const s=mmStore[mmSettingsKey];
+  let min=parseInt(document.getElementById('mmMin').value,10);
+  let max=parseInt(document.getElementById('mmMax').value,10);
+  if(isNaN(min))min=s.min;
+  if(isNaN(max))max=s.max;
+  min=Math.max(0,Math.min(min,999));max=Math.max(0,Math.min(max,999));
+  if(min>max)[min,max]=[max,min];
+  if(min===s.min&&max===s.max)return;
+  s.min=min;s.max=max;
+  s.excluded=s.excluded.filter(n=>n>=min&&n<=max);
+  mmSave();
+  mmRenderChips();
+}
+function mmRenderChips(){
+  const s=mmStore[mmSettingsKey];
+  const cap=Math.min(s.max,s.min+59);
+  let html='';
+  for(let n=s.min;n<=cap;n++){
+    const off=s.excluded.includes(n);
+    html+=`<button type="button" class="mm-chip${off?' excluded':''}" onclick="mmToggleExclude(${n})" aria-pressed="${off}">${n}</button>`;
+  }
+  document.getElementById('mmChipGrid').innerHTML=html||'<span class="mm-hint">Set a minimum and maximum first.</span>';
+  const hint=document.getElementById('mmExclHint');
+  const excludedInRange=s.excluded.filter(n=>n>=s.min&&n<=s.max).length;
+  const poolSize=(s.max-s.min+1)-excludedInRange;
+  let msg=cap<s.max
+    ? `Showing ${s.min}–${cap} (range too wide to list every number). ${excludedInRange} excluded.`
+    : `${excludedInRange} number${excludedInRange===1?'':'s'} excluded from problems.`;
+  hint.className='mm-hint';
+  if(poolSize<=0){msg+=' All numbers in range are excluded, so problems will fall back to the minimum — exclude fewer numbers.';hint.className='mm-hint warn'}
+  hint.textContent=msg;
+}
+function mmToggleExclude(n){
+  const s=mmStore[mmSettingsKey];
+  const i=s.excluded.indexOf(n);
+  if(i>=0)s.excluded.splice(i,1);else s.excluded.push(n);
+  mmSave();
+  mmRenderChips();
+}
+function mmResetSettings(){
+  mmStore[mmSettingsKey]=Object.assign({},MM_DEFAULTS[mmSettingsKey],{excluded:[]});
+  mmSave();
+  const s=mmStore[mmSettingsKey];
+  document.getElementById('mmMin').value=s.min;
+  document.getElementById('mmMax').value=s.max;
+  mmRenderChips();
+}
+function closeMMSettings(){document.getElementById('mmSettingsOverlay').classList.remove('open')}
+
+/* ── global session preferences ── */
+function mmSetSessionLen(n,btn){
+  mmStore.session.length=n;mmSave();
+  document.querySelectorAll('#mmLenSeg .seg-btn').forEach(b=>b.classList.toggle('active',b===btn));
+}
+function mmSetTimed(v){mmStore.session.timed=v;mmSave()}
+function mmSetSeconds(v){mmStore.session.seconds=parseInt(v,10)||12;mmSave()}
+function mmInitToolbar(){
+  document.querySelectorAll('#mmLenSeg .seg-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.len,10)===mmStore.session.length));
+  document.getElementById('mmTimedToggle').checked=mmStore.session.timed;
+  document.getElementById('mmSecondsSelect').value=String(mmStore.session.seconds);
+}
+
+/* ── practice runner ── */
+let mmSession=null,mmAnswerState=null;
+function mmStartSession(key){
+  const skill=MM_SKILLS.find(x=>x.key===key);
+  const len=mmStore.session.length;
+  const questions=[];
+  for(let i=0;i<len;i++)questions.push(skill.gen());
+  mmSession={skillKey:key,skillName:skill.name,questions,idx:0,correct:0,streak:0,bestStreak:0,times:[],answered:new Array(len).fill(false),timerHandle:null};
+  document.getElementById('mmHub').style.display='none';
+  document.getElementById('mmRunner').style.display='block';
+  document.getElementById('mmProgLbl').textContent=`of ${len} answered`;
+  mmUpdateSidebar();
+  mmRenderMMQuestion();
+}
+function mmExitSession(){
+  mmClearTimer();
+  mmSession=null;mmAnswerState=null;
+  document.getElementById('mmRunner').style.display='none';
+  document.getElementById('mmHub').style.display='block';
+}
+function mmRenderMMQuestion(){
+  const sess=mmSession,q=sess.questions[sess.idx];
+  mmAnswerState=null;
+  sess.qStartedAt=Date.now();
+  document.getElementById('mmQuestionArea').innerHTML=`
+    <div class="mm-q-card">
+      <div class="mm-q-topic">${q.topic} · Question ${sess.idx+1} of ${sess.questions.length}</div>
+      <div class="mm-q-expr">${q.expr}</div>
+      <form class="mm-q-form" id="mmQForm" onsubmit="return mmSubmitAnswer(event)">
+        <input class="mm-q-input" id="mmQInput" type="text" inputmode="${q.inputType==='number'?'decimal':'text'}" placeholder="${q.placeholder}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Your answer">
+        <button class="btn-primary" style="width:auto" type="submit">Check</button>
+      </form>
+      <div id="mmFeedback"></div>
+    </div>
+  `;
+  const input=document.getElementById('mmQInput');
+  if(input)input.focus();
+  mmStartTimer();
+}
+function mmSubmitAnswer(e){
+  if(e)e.preventDefault();
+  if(mmAnswerState)return false;
+  const sess=mmSession,q=sess.questions[sess.idx];
+  const raw=document.getElementById('mmQInput').value;
+  mmFinishAnswer(mmCheckAnswer(q,raw),raw);
+  return false;
+}
+function mmFinishAnswer(ok,raw){
+  mmClearTimer();
+  const sess=mmSession,q=sess.questions[sess.idx];
+  mmAnswerState={given:raw,isCorrect:ok};
+  sess.answered[sess.idx]=true;
+  sess.times.push(Date.now()-sess.qStartedAt);
+  if(ok){sess.correct++;sess.streak++;sess.bestStreak=Math.max(sess.bestStreak,sess.streak)}
+  else sess.streak=0;
+  const input=document.getElementById('mmQInput');
+  if(input){input.disabled=true;input.classList.add(ok?'correct':'incorrect')}
+  const submitBtn=document.querySelector('#mmQForm button[type=submit]');
+  if(submitBtn)submitBtn.disabled=true;
+  document.getElementById('mmFeedback').innerHTML=`
+    <div class="mm-q-feedback ${ok?'correct':'incorrect'}">
+      ${ok?'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct'
+        :`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Not quite — the answer is ${q.correct.display}`}
+    </div>
+    <div class="mm-q-explain">${q.explain.replace(/\n/g,'<br>')}</div>
+    <div class="mm-q-btns">
+      <button class="btn-primary" style="width:auto" onclick="mmNextQuestion()">${sess.idx<sess.questions.length-1?'Next question':'See results'}</button>
+    </div>
+  `;
+  mmUpdateSidebar();
+}
+function mmNextQuestion(){
+  const sess=mmSession;
+  if(sess.idx<sess.questions.length-1){sess.idx++;mmRenderMMQuestion()}
+  else mmShowSummary();
+}
+function mmClearTimer(){if(mmSession&&mmSession.timerHandle){clearInterval(mmSession.timerHandle);mmSession.timerHandle=null}}
+function mmStartTimer(){
+  const card=document.getElementById('mmTimerCard');
+  if(!mmStore.session.timed){card.style.display='none';return}
+  card.style.display='block';
+  const total=mmStore.session.seconds;
+  let remaining=total;
+  document.getElementById('mmTimerNum').textContent=remaining+'s';
+  document.getElementById('mmTimerBar').style.width='100%';
+  mmSession.timerHandle=setInterval(()=>{
+    remaining--;
+    if(remaining<=0){
+      clearInterval(mmSession.timerHandle);mmSession.timerHandle=null;
+      document.getElementById('mmTimerNum').textContent='0s';
+      document.getElementById('mmTimerBar').style.width='0%';
+      if(!mmAnswerState){const input=document.getElementById('mmQInput');mmFinishAnswer(false,input?input.value:'')}
+      return;
+    }
+    document.getElementById('mmTimerNum').textContent=remaining+'s';
+    document.getElementById('mmTimerBar').style.width=(remaining/total*100)+'%';
+  },1000);
+}
+function mmUpdateSidebar(){
+  const sess=mmSession;
+  const done=sess.answered.filter(Boolean).length;
+  document.getElementById('mmProgNum').textContent=done;
+  document.getElementById('mmCorrect').textContent=sess.correct;
+  document.getElementById('mmStreak').textContent=sess.streak;
+  document.getElementById('mmProgBar').style.width=(done/sess.questions.length*100)+'%';
+}
+function mmShowSummary(){
+  mmClearTimer();
+  document.getElementById('mmTimerCard').style.display='none';
+  const sess=mmSession,total=sess.questions.length;
+  const acc=Math.round(sess.correct/total*100);
+  const avgS=(sess.times.reduce((a,b)=>a+b,0)/sess.times.length/1000).toFixed(1);
+  const tone=acc>=80?'var(--green)':acc>=50?'var(--amber)':'var(--red)';
+  const toneBg=acc>=80?'var(--gLite)':acc>=50?'var(--aLite)':'var(--rLite)';
+  const msg=acc>=80?'Excellent speed and accuracy.':acc>=50?'Solid session — a bit more practice will sharpen this up.':'Good effort. Review the method guide and try again.';
+  document.getElementById('mmQuestionArea').innerHTML=`
+    <div class="mm-q-card mm-summary" style="border-left-color:${tone}">
+      <div class="mm-summary-icon" style="background:${toneBg}"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="${tone}" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg></div>
+      <h2>Session complete — ${sess.skillName}</h2>
+      <p style="font-size:.875rem;color:var(--sec);margin:0">${msg}</p>
+      <div class="mm-summary-stats">
+        <div class="mm-summary-stat"><b>${sess.correct}/${total}</b><span>Correct</span></div>
+        <div class="mm-summary-stat"><b>${acc}%</b><span>Accuracy</span></div>
+        <div class="mm-summary-stat"><b>${avgS}s</b><span>Avg. time</span></div>
+      </div>
+      <p style="font-size:.75rem;color:var(--ter);margin-top:1rem">Best streak this session: <strong style="color:var(--flame)">${sess.bestStreak}</strong></p>
+      <div class="mm-summary-btns">
+        <button class="btn-outline" onclick="mmOpenGuide('${sess.skillKey}')">Review guide</button>
+        <button class="btn-primary" style="width:auto" onclick="mmStartSession('${sess.skillKey}')">Practice again</button>
+        <button class="btn-outline" onclick="mmExitSession()">Back to Mental Maths</button>
+      </div>
+    </div>
+  `;
+  mmUpdateSidebar();
+}
+
+document.addEventListener('keydown',e=>{
+  if(!mmSession)return;
+  if(!document.getElementById('view-mentalmaths').classList.contains('active'))return;
+  if(document.getElementById('mmSettingsOverlay').classList.contains('open'))return;
+  if(document.getElementById('mmGuideOverlay').classList.contains('open'))return;
+  if(e.key==='Escape'){mmExitSession();return}
+  if(e.key==='Enter'&&mmAnswerState){e.preventDefault();mmNextQuestion()}
+});
+
+(function(){
+  if(!document.getElementById('view-mentalmaths'))return;
+  mmRenderHub();
+  mmInitToolbar();
 })();
 </script>
 </body>
