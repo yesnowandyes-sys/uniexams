@@ -639,7 +639,10 @@ button{font-family:inherit}
 .mm-guide-section:last-child{margin-bottom:0}
 .mm-guide-section h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ter);margin-bottom:.6rem}
 
-.mm-field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem}
+.mm-operand-block{margin-bottom:1.1rem}
+.mm-field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0}
+.mm-tip-box{background:var(--lite);border:1px solid var(--liteb);border-radius:10px;padding:.75rem .9rem;font-size:.8125rem;color:var(--text);line-height:1.6}
+.mm-tip-box strong{color:var(--mid);font-family:'JetBrains Mono',monospace;font-weight:700}
 .mm-chip-grid{display:flex;flex-wrap:wrap;gap:6px;max-height:190px;overflow-y:auto;padding:2px}
 .mm-chip{min-width:34px;height:34px;padding:0 8px;border-radius:8px;border:1.5px solid var(--bdr2);background:var(--surf);color:var(--sec);font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
 .mm-chip:hover{background:var(--alt)}
@@ -659,7 +662,6 @@ button{font-family:inherit}
 .mm-q-feedback{margin-top:1.1rem;font-size:.875rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px}
 .mm-q-feedback.correct{color:var(--green)}
 .mm-q-feedback.incorrect{color:var(--red)}
-.mm-q-explain{margin-top:1rem;text-align:left;background:var(--lite);border:1px solid var(--liteb);border-radius:10px;padding:1rem 1.1rem;font-size:.8438rem;color:var(--text);line-height:1.8}
 .mm-q-btns{display:flex;justify-content:center;gap:10px;margin-top:1.25rem}
 
 .mm-timer-num{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--text)}
@@ -1043,9 +1045,10 @@ button{font-family:inherit}
           <span class="mm-toolbar-lbl">Questions per session</span>
           <div class="seg-group seg-group-sm" id="mmLenSeg">
             <button class="seg-btn" data-len="10" onclick="mmSetSessionLen(10,this)">10</button>
-            <button class="seg-btn" data-len="15" onclick="mmSetSessionLen(15,this)">15</button>
             <button class="seg-btn" data-len="20" onclick="mmSetSessionLen(20,this)">20</button>
-            <button class="seg-btn" data-len="30" onclick="mmSetSessionLen(30,this)">30</button>
+            <button class="seg-btn" data-len="50" onclick="mmSetSessionLen(50,this)">50</button>
+            <button class="seg-btn" data-len="100" onclick="mmSetSessionLen(100,this)">100</button>
+            <button class="seg-btn" data-len="0" onclick="mmSetSessionLen(0,this)">∞</button>
           </div>
         </div>
         <div class="mm-toolbar-group">
@@ -1071,9 +1074,9 @@ button{font-family:inherit}
       </div>
     </div>
 
-    <!-- Settings modal: range + excluded numbers -->
+    <!-- Settings modal: digit-count classes + range per operand (+ excluded numbers for multiplication) -->
     <div class="lb-modal-overlay" id="mmSettingsOverlay" onclick="if(event.target===this)closeMMSettings()">
-      <div class="lb-modal" style="max-width:520px" role="dialog" aria-modal="true" aria-labelledby="mmSettingsTitle">
+      <div class="lb-modal" style="max-width:560px" role="dialog" aria-modal="true" aria-labelledby="mmSettingsTitle">
         <div class="lb-modal-head">
           <h3 id="mmSettingsTitle">Customise problem set</h3>
           <button class="lb-modal-close" onclick="closeMMSettings()" aria-label="Close settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
@@ -1084,7 +1087,7 @@ button{font-family:inherit}
 
     <!-- Practice runner -->
     <div class="practice-wrap" id="mmRunner" style="display:none">
-      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="mmExitSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Mental Maths</button>
+      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="mmEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Mental Maths</button>
       <div class="practice-layout">
         <div class="practice-main">
           <div id="mmQuestionArea"></div>
@@ -1092,8 +1095,8 @@ button{font-family:inherit}
         <div class="practice-sidebar">
           <div class="sb-card">
             <div class="label" style="color:var(--ter);margin-bottom:8px">Session Progress</div>
-            <div class="sb-prog"><span class="sb-prog-num" id="mmProgNum">0</span><span class="sb-prog-lbl" id="mmProgLbl">of 15 answered</span></div>
-            <div class="bar" style="height:4px"><div class="bar-fill" id="mmProgBar" style="width:0%;background:var(--mid)"></div></div>
+            <div class="sb-prog"><span class="sb-prog-num" id="mmProgNum">0</span><span class="sb-prog-lbl" id="mmProgLbl">of 20 answered</span></div>
+            <div class="bar" id="mmProgBarWrap" style="height:4px"><div class="bar-fill" id="mmProgBar" style="width:0%;background:var(--mid)"></div></div>
             <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="mmCorrect">0</strong></span><span>Streak: <strong style="font-family:'JetBrains Mono',monospace;color:var(--flame)" id="mmStreak">0</strong></span></div>
           </div>
           <div class="sb-card" id="mmTimerCard" style="display:none">
@@ -1108,7 +1111,7 @@ button{font-family:inherit}
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Esc</span><span style="margin-left:4px">End session</span></div>
             </div>
           </div>
-          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="mmExitSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
+          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="mmEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
         </div>
       </div>
     </div>
@@ -2914,80 +2917,127 @@ function mmDigitsShifted(digitsStr,shift){
   }
   return '0.'+'0'.repeat(k-digitsStr.length)+digitsStr;
 }
-function mmQ(topic,expr,ans,explain){return {topic,expr,inputType:'number',placeholder:'?',checkType:'number',correct:{value:ans,display:mmFmt(ans)},explain}}
+function mmQ(topic,expr,ans){return {topic,expr,inputType:'number',placeholder:'?',checkType:'number',correct:{value:ans,display:mmFmt(ans)}}}
 
-/* ── persistent settings (range + excluded numbers per operation, session prefs) ── */
-const MM_STORE_KEY='examtutor_mm_settings_v1';
-const MM_DEFAULTS={
-  addition:{min:10,max:99,excluded:[]},
-  subtraction:{min:10,max:99,excluded:[]},
-  multiplication:{min:2,max:12,excluded:[]},
-  division:{min:2,max:12,excluded:[]},
-  session:{length:15,timed:false,seconds:12}
+/* ── persistent settings: per-operand digit class + range (session prefs; multiplication also keeps an excluded-numbers list) ── */
+const MM_STORE_KEY='examtutor_mm_settings_v2';
+const MM_DIGIT_BOUNDS={1:[1,9],2:[10,99],3:[100,999]};
+const MM_OPERAND_LABELS={
+  addition:['First number','Second number'],
+  subtraction:['Larger number','Smaller number'],
+  multiplication:['First number','Second number'],
+  division:['Dividend (being divided)','Divisor (dividing by)']
 };
+const MM_DEFAULTS={
+  addition:{aDigits:2,bDigits:2,aMin:10,aMax:99,bMin:10,bMax:99},
+  subtraction:{aDigits:2,bDigits:2,aMin:10,aMax:99,bMin:10,bMax:99},
+  multiplication:{aDigits:1,bDigits:1,aMin:1,aMax:9,bMin:1,bMax:9,excluded:[]},
+  division:{aDigits:2,bDigits:1,aMin:10,aMax:99,bMin:1,bMax:9,excluded:[]},
+  session:{length:20,timed:false,seconds:12}
+};
+const MM_SESSION_LENGTHS=[10,20,50,100,0];
 let mmStore=null;
 try{mmStore=JSON.parse(localStorage.getItem(MM_STORE_KEY))}catch(e){mmStore=null}
 if(!mmStore||typeof mmStore!=='object')mmStore={};
 ['addition','subtraction','multiplication','division'].forEach(k=>{
-  mmStore[k]=Object.assign({},MM_DEFAULTS[k],mmStore[k]||{});
-  if(!Array.isArray(mmStore[k].excluded))mmStore[k].excluded=[];
+  const def=MM_DEFAULTS[k],existing=mmStore[k];
+  if(!existing||typeof existing!=='object'||existing.aDigits===undefined){
+    mmStore[k]=Object.assign({},def);
+    if(Array.isArray(def.excluded))mmStore[k].excluded=[];
+  }else{
+    mmStore[k]=Object.assign({},def,existing);
+    if(Array.isArray(def.excluded)&&!Array.isArray(mmStore[k].excluded))mmStore[k].excluded=[];
+  }
 });
 mmStore.session=Object.assign({},MM_DEFAULTS.session,mmStore.session||{});
+if(!MM_SESSION_LENGTHS.includes(mmStore.session.length))mmStore.session.length=20;
 function mmSave(){try{localStorage.setItem(MM_STORE_KEY,JSON.stringify(mmStore))}catch(e){}}
 
-/* ── question generators ── */
-function mmMultiplyTip(a,b,ans){
-  if(b===11&&a>=10&&a<100){const d1=Math.floor(a/10),d2=a%10,mid=d1+d2;if(mid<10)return `Trick for ×11: split the digits of ${a} (${d1} and ${d2}), add them (${d1}+${d2}=${mid}), then slide that sum between the digits → ${d1}${mid}${d2}.`}
-  if(a===b&&a%10===5){const d=Math.floor(a/10);return `Trick for squaring a number ending in 5: tens digit d=${d}. Compute d×(d+1)=${d*(d+1)}, then append 25 → ${d*(d+1)}25.`}
-  const tens=Math.floor(b/10)*10,ones=b%10;
-  if(ones===0)return `${a} × ${b} = ${a} × ${tens/10} × 10 = ${a*(tens/10)} × 10 = ${ans}.`;
-  return `Split ${b} = ${tens} + ${ones}:\n${a} × ${tens} = ${a*tens}\n${a} × ${ones} = ${a*ones}\nAdd: ${a*tens} + ${a*ones} = ${ans}`;
+/* ── method tips by digit-size combination, used in Settings and the Guide modal ── */
+const MM_DIGIT_TIPS={
+  addition:[
+    {a:1,b:1,tip:'Add the digits directly — the only thing to watch for is a sum over 9 carrying into a new digit.'},
+    {a:1,b:2,tip:'Add the 1-digit number to the units digit of the 2-digit number, then carry into the tens if it overflows.'},
+    {a:1,b:3,tip:'Same idea as 1-digit + 2-digit — add to the units digit only, and carry through the tens and hundreds if needed.'},
+    {a:2,b:2,tip:'Round one number to the nearest 10, add, then adjust back by the amount you rounded.'},
+    {a:2,b:3,tip:'Split the 3-digit number into "hundreds" and "the rest"; add the 2-digit number to the rest, then reattach the hundreds.'},
+    {a:3,b:3,tip:'Add hundreds, tens and units separately (left to right), carrying into the next column as you go.'}
+  ],
+  subtraction:[
+    {a:1,b:1,tip:'Count up from the smaller digit to the larger one.'},
+    {a:2,b:1,tip:'Subtract the 1-digit number from the units digit; borrow from the tens if it goes negative.'},
+    {a:2,b:2,tip:'Round the number you\'re subtracting to the nearest 10, subtract, then correct by adding or subtracting the difference.'},
+    {a:3,b:1,tip:'Only the units digit changes — subtract there directly, borrowing from the tens only if needed.'},
+    {a:3,b:2,tip:'Round the 2-digit number to the nearest 10 first, subtract, then adjust back.'},
+    {a:3,b:3,tip:'Subtract hundreds, tens and units separately, borrowing from the column to the left whenever a digit is too small.'}
+  ],
+  multiplication:[
+    {a:1,b:1,tip:'Straight recall — know your times tables to 12×12 cold.'},
+    {a:1,b:2,tip:'Split the 2-digit number into tens and units, multiply each by the 1-digit number, then add the results.'},
+    {a:1,b:3,tip:'Split the 3-digit number into hundreds, tens and units, multiply each by the 1-digit number, then add.'},
+    {a:2,b:2,tip:'Split one number into tens and units and use the distributive law: (a+b)×c = a×c + b×c.'},
+    {a:2,b:3,tip:'Split the 3-digit number into hundreds and "the rest", multiply each part by the 2-digit number, then add.'},
+    {a:3,b:3,tip:'Break both numbers into hundreds/tens/units and multiply pair by pair, or round one to the nearest 100 and adjust.'}
+  ],
+  division:[
+    {a:1,b:1,tip:'Recall the multiplication fact in reverse: "what times the divisor gives the dividend?"'},
+    {a:2,b:1,tip:'Divide the tens digit first, then bring down the units digit — bus-stop division done in your head.'},
+    {a:2,b:2,tip:'Think "divisor × ? ≈ dividend" and adjust the guess up or down until it matches exactly.'},
+    {a:3,b:1,tip:'Divide hundreds, then tens, then units, carrying any remainder forward each time.'},
+    {a:3,b:2,tip:'Estimate how many times the divisor fits into the first two digits of the dividend, then refine.'},
+    {a:3,b:3,tip:'Round both numbers to convenient multiples to estimate the quotient, then check by multiplying back.'}
+  ]
+};
+function mmDigitTipPair(op,aD,bD){
+  if(op==='addition'||op==='multiplication')return aD<=bD?[aD,bD]:[bD,aD];
+  return [aD,bD];
 }
+function mmDigitComboLabel(op,aD,bD){
+  const sym=op==='addition'?'+':op==='subtraction'?'−':op==='multiplication'?'×':'÷';
+  return `${aD}-digit ${sym} ${bD}-digit`;
+}
+function mmDigitTip(op,aD,bD){
+  const [x,y]=mmDigitTipPair(op,aD,bD);
+  const found=(MM_DIGIT_TIPS[op]||[]).find(t=>t.a===x&&t.b===y);
+  return found?found.tip:'Break the larger number into parts and combine with the smaller one step by step.';
+}
+
+/* ── question generators ── */
 function mmGenAddition(){
   const s=mmStore.addition;
-  const a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
-  const ans=a+b,rb=Math.round(b/10)*10,diff=Math.abs(b-rb);
-  const explain=diff===0?`${a} + ${b} = ${ans}\n\n${b} is already a multiple of 10, so no rounding needed.`
-    :`${a} + ${b} = ${ans}\n\nMental method: round ${b} to ${rb}, add (${a} + ${rb} = ${a+rb}), then ${b>rb?'add':'subtract'} ${diff} back → ${ans}.`;
-  return mmQ('Addition',`${a} + ${b}`,ans,explain);
+  const a=mmRandInt(s.aMin,s.aMax),b=mmRandInt(s.bMin,s.bMax);
+  return mmQ('Addition',`${a} + ${b}`,a+b);
 }
 function mmGenSubtraction(){
   const s=mmStore.subtraction;
-  let a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
+  let a=mmRandInt(s.aMin,s.aMax),b=mmRandInt(s.bMin,s.bMax);
   if(b>a)[a,b]=[b,a];
-  const ans=a-b,rb=Math.round(b/10)*10,diff=Math.abs(b-rb);
-  const explain=diff===0?`${a} − ${b} = ${ans}\n\n${b} is already a multiple of 10, so no rounding needed.`
-    :`${a} − ${b} = ${ans}\n\nMental method: round ${b} to ${rb}, subtract (${a} − ${rb} = ${a-rb}), then ${b>rb?'subtract':'add'} ${diff} back → ${ans}.`;
-  return mmQ('Subtraction',`${a} − ${b}`,ans,explain);
+  return mmQ('Subtraction',`${a} − ${b}`,a-b);
 }
 function mmGenMultiplication(){
   const s=mmStore.multiplication;
-  const a=mmRandExcl(s.min,s.max,s.excluded),b=mmRandExcl(s.min,s.max,s.excluded);
-  const ans=a*b;
-  return mmQ('Multiplication',`${a} × ${b}`,ans,`${a} × ${b} = ${ans}\n\n${mmMultiplyTip(a,b,ans)}`);
+  const a=mmRandExcl(s.aMin,s.aMax,s.excluded),b=mmRandExcl(s.bMin,s.bMax,s.excluded);
+  return mmQ('Multiplication',`${a} × ${b}`,a*b);
 }
 function mmGenDivision(){
   const s=mmStore.division;
-  const excl0=s.excluded.includes(0)?s.excluded:s.excluded.concat([0]);
-  const b=mmRandExcl(Math.max(1,s.min),Math.max(1,s.max),excl0);
-  const q=mmRandExcl(s.min,s.max,s.excluded);
-  const a=b*q;
-  return mmQ('Division',`${a} ÷ ${b}`,q,`${a} ÷ ${b} = ${q}\n\nCheck: ${b} × ${q} = ${a}.`);
-}
-function mmSquareTip(n){
-  if(n%10===5){const d=Math.floor(n/10);return `Trick for numbers ending in 5: tens digit d = ${d}. Compute d × (d+1) = ${d*(d+1)}, then append "25" → ${d*(d+1)}25.`}
-  const base=Math.round(n/10)*10,rem=n-base;
-  if(rem===0)return `${n} is a multiple of 10, so ${n}² = ${n/10}² × 100.`;
-  const sign=rem>=0?'+':'−',absR=Math.abs(rem);
-  return `Split ${n} = ${base} ${sign} ${absR}:\n(${base} ${sign} ${absR})² = ${base}² ${sign} 2×${base}×${absR} + ${absR}²\n= ${base*base} ${sign} ${2*base*absR} + ${absR*absR}\n= ${n*n}`;
+  const bLo=Math.max(1,s.bMin),bHi=Math.max(bLo,s.bMax);
+  for(let attempt=0;attempt<40;attempt++){
+    const b=mmRandInt(bLo,bHi);
+    const qMin=Math.max(1,Math.ceil(s.aMin/b)),qMax=Math.floor(s.aMax/b);
+    if(qMin<=qMax){const q=mmRandInt(qMin,qMax);return mmQ('Division',`${b*q} ÷ ${b}`,q)}
+  }
+  for(let b=bLo;b<=bHi;b++){
+    const qMin=Math.max(1,Math.ceil(s.aMin/b)),qMax=Math.floor(s.aMax/b);
+    if(qMin<=qMax){const q=mmRandInt(qMin,qMax);return mmQ('Division',`${b*q} ÷ ${b}`,q)}
+  }
+  const b=bLo,q=Math.max(1,Math.round(s.aMin/b));
+  return mmQ('Division',`${b*q} ÷ ${b}`,q);
 }
 function mmGenSquares(){
-  if(Math.random()<0.5){
-    const n=mmRandInt(2,25),ans=n*n;
-    return mmQ('Squares',`${n}²`,ans,`${n}² = ${n} × ${n} = ${ans}\n\n${mmSquareTip(n)}`);
-  }
+  if(Math.random()<0.5){const n=mmRandInt(2,25);return mmQ('Squares',`${n}²`,n*n)}
   const n=mmRandInt(2,20),sq=n*n;
-  return mmQ('Square Roots',`√${sq}`,n,`√${sq} = ${n}, because ${n} × ${n} = ${sq}.\n\nTip: memorise the squares from 1² to 20² so you recognise them instantly instead of calculating.`);
+  return mmQ('Square Roots',`√${sq}`,n);
 }
 const MM_PCT_LIST=[
   {p:10,tip:'10% = divide by 10.'},{p:5,tip:'5% = half of 10%.'},{p:20,tip:'20% = double 10%.'},
@@ -3001,9 +3051,9 @@ function mmGenPercentages(){
   const base=denom*mmRandInt(1,9);
   const part=pct*base/100;
   const mode=mmRandInt(0,2);
-  if(mode===0)return mmQ('Percentages',`${pct}% of ${base}`,part,`${pct}% of ${base} = ${part}\n\n${choice.tip} 10% of ${base} = ${base/10}.`);
-  if(mode===1)return mmQ('Percentages',`${part} is what % of ${base}?`,pct,`${part} ÷ ${base} × 100 = ${pct}%\n\n${choice.tip}`);
-  return mmQ('Percentages',`${part} is ${pct}% of what number?`,base,`${part} ÷ ${pct} × 100 = ${base}\n\nIf ${pct}% is ${part}, then 1% is ${mmFmt(part/pct)}, and 100% is ${base}.`);
+  if(mode===0)return mmQ('Percentages',`${pct}% of ${base}`,part);
+  if(mode===1)return mmQ('Percentages',`${part} is what % of ${base}?`,pct);
+  return mmQ('Percentages',`${part} is ${pct}% of what number?`,base);
 }
 function mmReduce(p,q){const g=mmGcd(p,q);return [p/g,q/g]}
 function mmParseFraction(str){
@@ -3029,8 +3079,7 @@ function mmGenFractions(){
     const k=mmRandInt(2,5);
     const bigP=rp*k,bigQ=rq*k;
     return {topic:'Fractions',expr:`Simplify ${bigP}/${bigQ} to its lowest terms`,inputType:'fraction',placeholder:'e.g. 3/4',checkType:'reduced',
-      correct:{value:rp/rq,display:`${rp}/${rq}`},
-      explain:`${bigP}/${bigQ} = ${rp}/${rq}\n\nDivide the numerator and denominator by their highest common factor: HCF(${bigP}, ${bigQ}) = ${mmGcd(bigP,bigQ)}.`};
+      correct:{value:rp/rq,display:`${rp}/${rq}`}};
   }
   if(mode===1){
     const denoms=[2,3,4,5,6,8,10,12];
@@ -3040,48 +3089,40 @@ function mmGenFractions(){
     const num=p1*(lcm/q1)+p2*(lcm/q2);
     const [rp,rq]=mmReduce(num,lcm);
     return {topic:'Fractions',expr:`${p1}/${q1} + ${p2}/${q2}`,inputType:'fraction',placeholder:'e.g. 5/6',checkType:'number',
-      correct:{value:num/lcm,display:`${rp}/${rq}`},
-      explain:`Common denominator = ${lcm} (LCM of ${q1} and ${q2}).\n${p1}/${q1} = ${p1*(lcm/q1)}/${lcm}\n${p2}/${q2} = ${p2*(lcm/q2)}/${lcm}\nSum = ${num}/${lcm} = ${rp}/${rq}`};
+      correct:{value:num/lcm,display:`${rp}/${rq}`}};
   }
   const q=mmPick([2,4,5,8,10,20,25]);
   const p=mmRandInt(1,q-1);
   const pct=p/q*100;
   return {topic:'Fractions',expr:`Express ${p}/${q} as a percentage`,inputType:'number',placeholder:'? %',checkType:'number',
-    correct:{value:pct,display:`${mmFmt(pct)}%`},
-    explain:`${p}/${q} = ${mmFmt(pct)}%\n\nMultiply the fraction by 100: (${p} × 100) ÷ ${q} = ${mmFmt(pct)}.`};
+    correct:{value:pct,display:`${mmFmt(pct)}%`}};
 }
 function mmGenIndices(){
   const mode=mmRandInt(0,4);
-  if(mode===0){const base=mmRandInt(2,6),exp=mmRandInt(2,4),ans=Math.pow(base,exp);
-    return mmQ('Indices',`${base}${mmSup(exp)}`,ans,`${base}${mmSup(exp)} = ${Array(exp).fill(base).join(' × ')} = ${ans}`);}
+  if(mode===0){const base=mmRandInt(2,6),exp=mmRandInt(2,4);
+    return mmQ('Indices',`${base}${mmSup(exp)}`,Math.pow(base,exp));}
   if(mode===1){const base=mmPick([2,3,4,5,10]),e1=mmRandInt(2,6),e2=mmRandInt(2,6);
-    return mmQ('Indices — aᵐ × aⁿ = aᵐ⁺ⁿ',`${base}${mmSup(e1)} × ${base}${mmSup(e2)} = ${base} raised to what power?`,e1+e2,
-      `When multiplying powers of the same base, add the exponents: ${e1} + ${e2} = ${e1+e2}.\nSo ${base}${mmSup(e1)} × ${base}${mmSup(e2)} = ${base}${mmSup(e1+e2)}.`);}
+    return mmQ('Indices — aᵐ × aⁿ = aᵐ⁺ⁿ',`${base}${mmSup(e1)} × ${base}${mmSup(e2)} = ${base} raised to what power?`,e1+e2);}
   if(mode===2){const base=mmPick([2,3,4,5,10]),e2=mmRandInt(2,5),e1=e2+mmRandInt(1,5);
-    return mmQ('Indices — aᵐ ÷ aⁿ = aᵐ⁻ⁿ',`${base}${mmSup(e1)} ÷ ${base}${mmSup(e2)} = ${base} raised to what power?`,e1-e2,
-      `When dividing powers of the same base, subtract the exponents: ${e1} − ${e2} = ${e1-e2}.\nSo ${base}${mmSup(e1)} ÷ ${base}${mmSup(e2)} = ${base}${mmSup(e1-e2)}.`);}
+    return mmQ('Indices — aᵐ ÷ aⁿ = aᵐ⁻ⁿ',`${base}${mmSup(e1)} ÷ ${base}${mmSup(e2)} = ${base} raised to what power?`,e1-e2);}
   if(mode===3){const base=mmPick([2,3,4,5]),e1=mmRandInt(2,4),e2=mmRandInt(2,3);
-    return mmQ('Indices — (aᵐ)ⁿ = aᵐⁿ',`(${base}${mmSup(e1)})${mmSup(e2)} = ${base} raised to what power?`,e1*e2,
-      `When raising a power to a power, multiply the exponents: ${e1} × ${e2} = ${e1*e2}.\nSo (${base}${mmSup(e1)})${mmSup(e2)} = ${base}${mmSup(e1*e2)}.`);}
+    return mmQ('Indices — (aᵐ)ⁿ = aᵐⁿ',`(${base}${mmSup(e1)})${mmSup(e2)} = ${base} raised to what power?`,e1*e2);}
   const useCube=Math.random()<0.5;
   const n=useCube?3:2,base=mmRandInt(2,useCube?6:12),val=Math.pow(base,n);
-  return mmQ('Indices — fractional powers',`${val}^(1/${n})`,base,
-    `A power of 1/${n} means the ${useCube?'cube':'square'} root.\n${base}${mmSup(n)} = ${val}, so ${val}^(1/${n}) = ${base}.`);
+  return mmQ('Indices — fractional powers',`${val}^(1/${n})`,base);
 }
 function mmGenAlgebra(){
   const mode=mmRandInt(0,2);
   if(mode===0){
     const a=mmRandInt(2,9),x=mmRandInt(-10,12),b=mmRandInt(-15,15),c=a*x+b;
     const bStr=b>=0?`+ ${b}`:`− ${Math.abs(b)}`;
-    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}`,x,
-      `${a}x ${bStr} = ${c}\n${a}x = ${c} ${b>=0?'−':'+'} ${Math.abs(b)} = ${c-b}\nx = ${c-b} ÷ ${a} = ${x}`);
+    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}`,x);
   }
   if(mode===1){
     let a=mmRandInt(2,9),c=mmRandInt(2,9);while(c===a)c=mmRandInt(2,9);
     const x=mmRandInt(-8,8),b=mmRandInt(-12,12),d=(a-c)*x+b;
     const bStr=b>=0?`+ ${b}`:`− ${Math.abs(b)}`,dStr=d>=0?`+ ${d}`:`− ${Math.abs(d)}`;
-    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}x ${dStr}`,x,
-      `Collect x terms on one side: ${a}x − ${c}x = ${d} − (${b}) → ${a-c}x = ${d-b}\nx = ${d-b} ÷ ${a-c} = ${x}`);
+    return mmQ('Algebra',`Solve for x: ${a}x ${bStr} = ${c}x ${dStr}`,x);
   }
   const n=mmRandInt(2,3);
   const coeffs=[];
@@ -3089,24 +3130,21 @@ function mmGenAlgebra(){
   const sum=coeffs.reduce((s,c)=>s+c,0);
   let expr='';
   coeffs.forEach((c,i)=>{expr+= i===0?(c<0?'−':'')+Math.abs(c)+'x':(c<0?' − ':' + ')+Math.abs(c)+'x'});
-  return mmQ('Algebra',`Simplify: ${expr} = ?x`,sum,
-    `Add the coefficients of x: ${coeffs.join(' + ').replace(/\+ -/g,'− ')} = ${sum}\nSo the expression simplifies to ${sum}x.`);
+  return mmQ('Algebra',`Simplify: ${expr} = ?x`,sum);
 }
 function mmGenEstimation(){
   const mode=mmRandInt(0,2);
   if(mode===0){
     const a=mmRandInt(11,987),b=mmRandInt(11,987);
-    const ra=mmRoundSF(a,1),rb=mmRoundSF(b,1),ans=ra*rb;
-    return mmQ('Estimation',`Estimate ${a} × ${b} by rounding each number to 1 significant figure`,ans,
-      `Round each number to 1 s.f.: ${a} → ${ra}, ${b} → ${rb}\nEstimate ≈ ${ra} × ${rb} = ${ans}`);
+    const ra=mmRoundSF(a,1),rb=mmRoundSF(b,1);
+    return mmQ('Estimation',`Estimate ${a} × ${b} by rounding each number to 1 significant figure`,ra*rb);
   }
   const mantissaInt=mmRandInt(11,99);
   const d1=Math.floor(mantissaInt/10),d2=mantissaInt%10;
   const mantissaStr=d2===0?`${d1}`:`${d1}.${d2}`;
   const exp=mode===1?mmRandInt(2,8):mmRandInt(-6,-2);
   const numberStr=mmDigitsShifted(String(mantissaInt),exp-1);
-  return mmQ('Standard Form',`Write ${numberStr} in standard form as ${mantissaStr} × 10 raised to what power?`,exp,
-    `${numberStr} = ${mantissaStr} × 10${mmSup(exp)}\n\nCount how many places the decimal point moves to leave a single non-zero digit before the point — that count (with sign) is the exponent.`);
+  return mmQ('Standard Form',`Write ${numberStr} in standard form as ${mantissaStr} × 10 raised to what power?`,exp);
 }
 
 /* ── check an answer against a generated question ── */
@@ -3142,17 +3180,13 @@ const MM_SKILLS=[
 ];
 const MM_GUIDES={
   addition:{intro:'Fast addition is about avoiding awkward carries — round one number to a friendly multiple of 10, add, then correct the difference.',
-    tips:['Round the larger operand to the nearest 10, add, then adjust by the amount you rounded.','Add left-to-right for multi-digit sums so you always know the running total.','Look for pairs that sum to 10 or 100 and combine those first.','For three or more numbers, group friendly pairs before adding the rest.'],
-    examples:[{q:'68 + 57',steps:'Round 57 up to 60.\n68 + 60 = 128\n128 − 3 = 125 (we added 3 too many, so subtract it back)'}]},
+    tips:['Round the larger operand to the nearest 10, add, then adjust by the amount you rounded.','Add left-to-right for multi-digit sums so you always know the running total.','Look for pairs that sum to 10 or 100 and combine those first.','For three or more numbers, group friendly pairs before adding the rest.']},
   subtraction:{intro:'Subtraction is quickest when you round the number being subtracted, not the one you start with.',
-    tips:['Round the smaller number to the nearest 10, subtract, then correct.','Use "counting up" from the smaller number to the larger for close values.','Subtracting 9, 19, 29… ? Subtract 10, 20, 30… then add 1 back.','Break the larger number into hundreds/tens/units and subtract each part.'],
-    examples:[{q:'132 − 48',steps:'Round 48 up to 50.\n132 − 50 = 82\n82 + 2 = 84 (we subtracted 2 too many, so add it back)'}]},
+    tips:['Round the smaller number to the nearest 10, subtract, then correct.','Use "counting up" from the smaller number to the larger for close values.','Subtracting 9, 19, 29… ? Subtract 10, 20, 30… then add 1 back.','Break the larger number into hundreds/tens/units and subtract each part.']},
   multiplication:{intro:'Break awkward multiplications into friendly pieces using the distributive law, and learn a handful of instant shortcuts.',
-    tips:['Split the second number into tens and units, multiply each separately, then add.','×11 for a 2-digit number: add its digits and slide the sum between them (e.g. 23×11 → 2,5,3 → 253).','×5: multiply by 10, then halve.','×9: multiply by 10, then subtract the original number.','Squaring a number ending in 5: tens digit d → d×(d+1), then append 25.'],
-    examples:[{q:'34 × 7',steps:'34 = 30 + 4\n30 × 7 = 210\n4 × 7 = 28\n210 + 28 = 238'},{q:'23 × 11',steps:'Digits of 23: 2 and 3. Sum = 2 + 3 = 5.\nSlide 5 between them: 2, 5, 3 → 253'}]},
+    tips:['Split the second number into tens and units, multiply each separately, then add.','×11 for a 2-digit number: add its digits and slide the sum between them (e.g. 23×11 → 2,5,3 → 253).','×5: multiply by 10, then halve.','×9: multiply by 10, then subtract the original number.','Squaring a number ending in 5: tens digit d → d×(d+1), then append 25.']},
   division:{intro:'Mental division is really about recognising multiplication facts in reverse — ask "what times this number gets close to that?"',
-    tips:['Think "divisor × ? ≈ dividend" and adjust up or down.','÷5: multiply by 2, then divide by 10.','÷4: halve, then halve again.','Check divisibility fast: even → ÷2 works; digit sum ÷3 → ÷3 works; ends in 0 or 5 → ÷5 works.','Simplify awkward divisions by cancelling a common factor from both numbers first.'],
-    examples:[{q:'168 ÷ 8',steps:'168 ÷ 2 = 84\n84 ÷ 2 = 42\n42 ÷ 2 = 21 (divided by 2 three times = ÷8)'}]},
+    tips:['Think "divisor × ? ≈ dividend" and adjust up or down.','÷5: multiply by 2, then divide by 10.','÷4: halve, then halve again.','Check divisibility fast: even → ÷2 works; digit sum ÷3 → ÷3 works; ends in 0 or 5 → ÷5 works.','Simplify awkward divisions by cancelling a common factor from both numbers first.']},
   squares:{intro:'Knowing your squares up to 20² cold — and one or two expansion tricks — makes surds and quadratics much faster in the exam.',
     tips:['Memorise 1² to 20² so you recognise them instantly.','Numbers ending in 5: tens digit d → d×(d+1), then append 25 (e.g. 45² → 4×5=20 → 2025).','For any n, write n = a ± b where a is a round number, then use (a±b)² = a² ± 2ab + b².','Square roots: bracket the answer between two known squares, then refine (e.g. √70 is between 8²=64 and 9²=81, closer to 8.4).'],
     examples:[{q:'23²',steps:'Split 23 = 20 + 3\n(20+3)² = 20² + 2×20×3 + 3²\n= 400 + 120 + 9 = 529'}]},
@@ -3204,6 +3238,11 @@ function mmOpenGuide(key){
   html+=`<div class="mm-guide-section"><h4>Key techniques</h4>`;
   guide.tips.forEach(t=>{html+=`<div class="mm-guide-tip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M4.5 12.75l6 6 9-13.5"/></svg><span>${t}</span></div>`});
   html+=`</div>`;
+  if(MM_DIGIT_TIPS[key]){
+    html+=`<div class="mm-guide-section"><h4>Method by number size</h4>`;
+    MM_DIGIT_TIPS[key].forEach(t=>{html+=`<div class="mm-tip-box" style="margin-bottom:.55rem"><strong>${mmDigitComboLabel(key,t.a,t.b)}:</strong> ${t.tip}</div>`});
+    html+='</div>';
+  }
   if(guide.examples&&guide.examples.length){
     html+=`<div class="mm-guide-section"><h4>Worked example${guide.examples.length>1?'s':''}</h4>`;
     guide.examples.forEach(ex=>{html+=`<div class="mm-guide-example"><b>${ex.q}</b><div>${ex.steps}</div></div>`});
@@ -3215,64 +3254,104 @@ function mmOpenGuide(key){
 }
 function closeMMGuide(){document.getElementById('mmGuideOverlay').classList.remove('open')}
 
-/* ── settings modal: operand range + excluded numbers ── */
+/* ── settings modal: per-operand digit class + range (multiplication also gets excluded numbers) ── */
 let mmSettingsKey=null;
 function mmOpenSettings(key){
   mmSettingsKey=key;
-  const s=mmStore[key],skill=MM_SKILLS.find(x=>x.key===key);
+  const skill=MM_SKILLS.find(x=>x.key===key);
   document.getElementById('mmSettingsTitle').textContent=`Customise ${skill.name}`;
-  document.getElementById('mmSettingsBody').innerHTML=`
-    <div class="mm-field-row">
-      <div class="field"><label for="mmMin">Minimum number</label><input type="number" id="mmMin" value="${s.min}" min="0" max="999"></div>
-      <div class="field"><label for="mmMax">Maximum number</label><input type="number" id="mmMax" value="${s.max}" min="0" max="999"></div>
-    </div>
-    <label class="mm-toolbar-lbl" style="display:block;margin-bottom:.5rem">Tap a number to stop it appearing in problems</label>
-    <div class="mm-chip-grid" id="mmChipGrid"></div>
-    <p class="mm-hint" id="mmExclHint"></p>
+  mmRenderSettingsBody();
+  document.getElementById('mmSettingsOverlay').classList.add('open');
+}
+function mmOperandBlockHtml(which,label,s){
+  const d=s[which+'Digits'],U=which.toUpperCase();
+  return `
+    <div class="mm-operand-block">
+      <label class="mm-toolbar-lbl" style="display:block;margin-bottom:.5rem">${label}</label>
+      <div class="seg-group seg-group-sm">
+        ${[1,2,3].map(n=>`<button type="button" class="seg-btn${d===n?' active':''}" onclick="mmSetDigitClass('${which}',${n})">${n} digit</button>`).join('')}
+      </div>
+      <div class="mm-field-row" style="margin-top:.65rem">
+        <div class="field"><label for="mm${U}Min">Min</label><input type="number" id="mm${U}Min" value="${s[which+'Min']}" min="${MM_DIGIT_BOUNDS[d][0]}" max="${MM_DIGIT_BOUNDS[d][1]}"></div>
+        <div class="field"><label for="mm${U}Max">Max</label><input type="number" id="mm${U}Max" value="${s[which+'Max']}" min="${MM_DIGIT_BOUNDS[d][0]}" max="${MM_DIGIT_BOUNDS[d][1]}"></div>
+      </div>
+    </div>`;
+}
+function mmRenderSettingsBody(){
+  const key=mmSettingsKey,s=mmStore[key],labels=MM_OPERAND_LABELS[key],isMult=key==='multiplication';
+  let html=mmOperandBlockHtml('a',labels[0],s)+mmOperandBlockHtml('b',labels[1],s);
+  html+=`<div class="mm-tip-box"><strong>${mmDigitComboLabel(key,s.aDigits,s.bDigits)}</strong> — ${mmDigitTip(key,s.aDigits,s.bDigits)}</div>`;
+  if(isMult){
+    html+=`
+    <details class="focus-drop" style="margin-top:1rem">
+      <summary class="focus-drop-trigger">Exclude specific numbers<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="focus-drop-outer"><div class="focus-drop-inner">
+        <div class="focus-drop-panel">
+          <div class="mm-chip-grid" id="mmChipGrid"></div>
+          <p class="mm-hint" id="mmExclHint"></p>
+        </div>
+      </div></div>
+    </details>`;
+  }
+  html+=`
     <div style="display:flex;gap:10px;margin-top:1.25rem">
       <button class="btn-outline" onclick="mmResetSettings()">Reset to defaults</button>
       <button class="btn-primary" style="width:auto" onclick="closeMMSettings()">Done</button>
     </div>
   `;
-  /* Deferred via setTimeout: a blur-triggered 'change' can fire synchronously mid-click
-     (e.g. the user clicks a chip right after editing Max) — rebuilding the chip grid inside
-     that same gesture would swap out the element mid-click and silently swallow the click. */
-  document.getElementById('mmMin').onchange=()=>setTimeout(mmApplyRangeChange,0);
-  document.getElementById('mmMax').onchange=()=>setTimeout(mmApplyRangeChange,0);
-  mmRenderChips();
-  document.getElementById('mmSettingsOverlay').classList.add('open');
+  document.getElementById('mmSettingsBody').innerHTML=html;
+  ['a','b'].forEach(which=>{
+    const U=which.toUpperCase();
+    document.getElementById('mm'+U+'Min').onchange=()=>mmApplyOperandRange(which,'Min');
+    document.getElementById('mm'+U+'Max').onchange=()=>mmApplyOperandRange(which,'Max');
+  });
+  if(isMult)mmRenderChips();
 }
-function mmApplyRangeChange(){
-  const s=mmStore[mmSettingsKey];
-  let min=parseInt(document.getElementById('mmMin').value,10);
-  let max=parseInt(document.getElementById('mmMax').value,10);
-  if(isNaN(min))min=s.min;
-  if(isNaN(max))max=s.max;
-  min=Math.max(0,Math.min(min,999));max=Math.max(0,Math.min(max,999));
-  if(min>max)[min,max]=[max,min];
-  if(min===s.min&&max===s.max)return;
-  s.min=min;s.max=max;
-  s.excluded=s.excluded.filter(n=>n>=min&&n<=max);
+function mmSetDigitClass(which,digits){
+  const s=mmStore[mmSettingsKey],bounds=MM_DIGIT_BOUNDS[digits];
+  s[which+'Digits']=digits;s[which+'Min']=bounds[0];s[which+'Max']=bounds[1];
+  /* Subtraction/division read A as the larger-class operand and B as the smaller — keep that consistent so results stay non-negative/whole. */
+  if(mmSettingsKey==='subtraction'||mmSettingsKey==='division'){
+    if(which==='a'&&s.bDigits>s.aDigits){s.bDigits=s.aDigits;const bb=MM_DIGIT_BOUNDS[s.bDigits];s.bMin=bb[0];s.bMax=bb[1]}
+    if(which==='b'&&s.bDigits>s.aDigits){s.aDigits=s.bDigits;const ab=MM_DIGIT_BOUNDS[s.aDigits];s.aMin=ab[0];s.aMax=ab[1]}
+  }
   mmSave();
-  mmRenderChips();
+  mmRenderSettingsBody();
+}
+function mmApplyOperandRange(which,part){
+  const s=mmStore[mmSettingsKey],U=which.toUpperCase(),bounds=MM_DIGIT_BOUNDS[s[which+'Digits']];
+  let v=parseInt(document.getElementById('mm'+U+part).value,10);
+  if(isNaN(v))v=part==='Min'?bounds[0]:bounds[1];
+  v=Math.max(bounds[0],Math.min(v,bounds[1]));
+  if(part==='Min'){if(v>s[which+'Max'])v=s[which+'Max'];s[which+'Min']=v}
+  else{if(v<s[which+'Min'])v=s[which+'Min'];s[which+'Max']=v}
+  mmSave();
+  /* Deferred: a blur-triggered 'change' can fire synchronously mid-click (e.g. the user clicks a
+     chip right after editing Max) — rebuilding the chip grid inside that same gesture would swap
+     out the element mid-click and silently swallow the click, so the DOM update waits a tick. */
+  if(mmSettingsKey==='multiplication')setTimeout(mmRenderChips,0);
 }
 function mmRenderChips(){
   const s=mmStore[mmSettingsKey];
-  const cap=Math.min(s.max,s.min+59);
+  const grid=document.getElementById('mmChipGrid');
+  if(!grid)return;
+  const lo=Math.min(s.aMin,s.bMin),hi=Math.max(s.aMax,s.bMax);
+  const cap=Math.min(hi,lo+59);
   let html='';
-  for(let n=s.min;n<=cap;n++){
+  for(let n=lo;n<=cap;n++){
     const off=s.excluded.includes(n);
     html+=`<button type="button" class="mm-chip${off?' excluded':''}" onclick="mmToggleExclude(${n})" aria-pressed="${off}">${n}</button>`;
   }
-  document.getElementById('mmChipGrid').innerHTML=html||'<span class="mm-hint">Set a minimum and maximum first.</span>';
+  grid.innerHTML=html||'<span class="mm-hint">No numbers in range.</span>';
   const hint=document.getElementById('mmExclHint');
-  const excludedInRange=s.excluded.filter(n=>n>=s.min&&n<=s.max).length;
-  const poolSize=(s.max-s.min+1)-excludedInRange;
-  let msg=cap<s.max
-    ? `Showing ${s.min}–${cap} (range too wide to list every number). ${excludedInRange} excluded.`
+  const excludedInRange=s.excluded.filter(n=>n>=lo&&n<=hi).length;
+  const poolA=(s.aMax-s.aMin+1)-s.excluded.filter(n=>n>=s.aMin&&n<=s.aMax).length;
+  const poolB=(s.bMax-s.bMin+1)-s.excluded.filter(n=>n>=s.bMin&&n<=s.bMax).length;
+  let msg=cap<hi
+    ? `Showing ${lo}–${cap} (range too wide to list every number). ${excludedInRange} excluded.`
     : `${excludedInRange} number${excludedInRange===1?'':'s'} excluded from problems.`;
   hint.className='mm-hint';
-  if(poolSize<=0){msg+=' All numbers in range are excluded, so problems will fall back to the minimum — exclude fewer numbers.';hint.className='mm-hint warn'}
+  if(poolA<=0||poolB<=0){msg+=' All numbers are excluded for at least one number, so problems will fall back to the minimum — exclude fewer numbers.';hint.className='mm-hint warn'}
   hint.textContent=msg;
 }
 function mmToggleExclude(n){
@@ -3283,12 +3362,11 @@ function mmToggleExclude(n){
   mmRenderChips();
 }
 function mmResetSettings(){
-  mmStore[mmSettingsKey]=Object.assign({},MM_DEFAULTS[mmSettingsKey],{excluded:[]});
+  const def=MM_DEFAULTS[mmSettingsKey],fresh=Object.assign({},def);
+  if(Array.isArray(def.excluded))fresh.excluded=[];
+  mmStore[mmSettingsKey]=fresh;
   mmSave();
-  const s=mmStore[mmSettingsKey];
-  document.getElementById('mmMin').value=s.min;
-  document.getElementById('mmMax').value=s.max;
-  mmRenderChips();
+  mmRenderSettingsBody();
 }
 function closeMMSettings(){document.getElementById('mmSettingsOverlay').classList.remove('open')}
 
@@ -3309,15 +3387,17 @@ function mmInitToolbar(){
 let mmSession=null,mmAnswerState=null;
 function mmStartSession(key){
   const skill=MM_SKILLS.find(x=>x.key===key);
-  const len=mmStore.session.length;
-  const questions=[];
-  for(let i=0;i<len;i++)questions.push(skill.gen());
-  mmSession={skillKey:key,skillName:skill.name,questions,idx:0,correct:0,streak:0,bestStreak:0,times:[],answered:new Array(len).fill(false),timerHandle:null};
+  const len=mmStore.session.length; // 0 = infinite
+  mmSession={skillKey:key,skillName:skill.name,skill,length:len,questions:[],idx:0,correct:0,streak:0,bestStreak:0,times:[],answered:[],timerHandle:null};
   document.getElementById('mmHub').style.display='none';
   document.getElementById('mmRunner').style.display='block';
-  document.getElementById('mmProgLbl').textContent=`of ${len} answered`;
+  document.getElementById('mmProgLbl').textContent=len===0?'answered':`of ${len} answered`;
+  document.getElementById('mmProgBarWrap').style.display=len===0?'none':'block';
   mmUpdateSidebar();
   mmRenderMMQuestion();
+}
+function mmEnsureQuestion(i){
+  while(mmSession.questions.length<=i){mmSession.questions.push(mmSession.skill.gen());mmSession.answered.push(false)}
 }
 function mmExitSession(){
   mmClearTimer();
@@ -3325,13 +3405,20 @@ function mmExitSession(){
   document.getElementById('mmRunner').style.display='none';
   document.getElementById('mmHub').style.display='block';
 }
+function mmEndSession(){
+  if(mmSession&&mmSession.answered.some(Boolean))mmShowSummary();
+  else mmExitSession();
+}
 function mmRenderMMQuestion(){
-  const sess=mmSession,q=sess.questions[sess.idx];
+  const sess=mmSession;
+  mmEnsureQuestion(sess.idx);
+  const q=sess.questions[sess.idx];
   mmAnswerState=null;
   sess.qStartedAt=Date.now();
+  const topicLine=sess.length===0?`${q.topic} · Question ${sess.idx+1}`:`${q.topic} · Question ${sess.idx+1} of ${sess.length}`;
   document.getElementById('mmQuestionArea').innerHTML=`
     <div class="mm-q-card">
-      <div class="mm-q-topic">${q.topic} · Question ${sess.idx+1} of ${sess.questions.length}</div>
+      <div class="mm-q-topic">${topicLine}</div>
       <div class="mm-q-expr">${q.expr}</div>
       <form class="mm-q-form" id="mmQForm" onsubmit="return mmSubmitAnswer(event)">
         <input class="mm-q-input" id="mmQInput" type="text" inputmode="${q.inputType==='number'?'decimal':'text'}" placeholder="${q.placeholder}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Your answer">
@@ -3364,22 +3451,22 @@ function mmFinishAnswer(ok,raw){
   if(input){input.disabled=true;input.classList.add(ok?'correct':'incorrect')}
   const submitBtn=document.querySelector('#mmQForm button[type=submit]');
   if(submitBtn)submitBtn.disabled=true;
+  const isLast=sess.length!==0&&sess.idx>=sess.length-1;
   document.getElementById('mmFeedback').innerHTML=`
     <div class="mm-q-feedback ${ok?'correct':'incorrect'}">
       ${ok?'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct'
         :`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Not quite — the answer is ${q.correct.display}`}
     </div>
-    <div class="mm-q-explain">${q.explain.replace(/\n/g,'<br>')}</div>
     <div class="mm-q-btns">
-      <button class="btn-primary" style="width:auto" onclick="mmNextQuestion()">${sess.idx<sess.questions.length-1?'Next question':'See results'}</button>
+      <button class="btn-primary" style="width:auto" onclick="mmNextQuestion()">${isLast?'See results':'Next question'}</button>
     </div>
   `;
   mmUpdateSidebar();
 }
 function mmNextQuestion(){
   const sess=mmSession;
-  if(sess.idx<sess.questions.length-1){sess.idx++;mmRenderMMQuestion()}
-  else mmShowSummary();
+  if(sess.length!==0&&sess.idx>=sess.length-1){mmShowSummary();return}
+  sess.idx++;mmRenderMMQuestion();
 }
 function mmClearTimer(){if(mmSession&&mmSession.timerHandle){clearInterval(mmSession.timerHandle);mmSession.timerHandle=null}}
 function mmStartTimer(){
@@ -3409,12 +3496,12 @@ function mmUpdateSidebar(){
   document.getElementById('mmProgNum').textContent=done;
   document.getElementById('mmCorrect').textContent=sess.correct;
   document.getElementById('mmStreak').textContent=sess.streak;
-  document.getElementById('mmProgBar').style.width=(done/sess.questions.length*100)+'%';
+  if(sess.length!==0)document.getElementById('mmProgBar').style.width=(done/sess.length*100)+'%';
 }
 function mmShowSummary(){
   mmClearTimer();
   document.getElementById('mmTimerCard').style.display='none';
-  const sess=mmSession,total=sess.questions.length;
+  const sess=mmSession,total=sess.answered.filter(Boolean).length;
   const acc=Math.round(sess.correct/total*100);
   const avgS=(sess.times.reduce((a,b)=>a+b,0)/sess.times.length/1000).toFixed(1);
   const tone=acc>=80?'var(--green)':acc>=50?'var(--amber)':'var(--red)';
@@ -3446,7 +3533,7 @@ document.addEventListener('keydown',e=>{
   if(!document.getElementById('view-mentalmaths').classList.contains('active'))return;
   if(document.getElementById('mmSettingsOverlay').classList.contains('open'))return;
   if(document.getElementById('mmGuideOverlay').classList.contains('open'))return;
-  if(e.key==='Escape'){mmExitSession();return}
+  if(e.key==='Escape'){mmEndSession();return}
   if(e.key==='Enter'&&mmAnswerState){e.preventDefault();mmNextQuestion()}
 });
 
