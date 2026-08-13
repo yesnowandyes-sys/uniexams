@@ -1107,7 +1107,7 @@ button{font-family:inherit}
           <div class="sb-card">
             <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
             <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
-              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Enter</span><span style="margin-left:4px">Check answer / next question</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Enter</span><span style="margin-left:4px">Next question</span></div>
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Esc</span><span style="margin-left:4px">End session</span></div>
             </div>
           </div>
@@ -3421,7 +3421,7 @@ function mmRenderMMQuestion(){
       <div class="mm-q-topic">${topicLine}</div>
       <div class="mm-q-expr">${q.expr}</div>
       <form class="mm-q-form" id="mmQForm" onsubmit="return mmSubmitAnswer(event)">
-        <input class="mm-q-input" id="mmQInput" type="text" inputmode="${q.inputType==='number'?'decimal':'text'}" placeholder="${q.placeholder}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Your answer">
+        <input class="mm-q-input" id="mmQInput" type="text" inputmode="${q.inputType==='number'?'decimal':'text'}" placeholder="${q.placeholder}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Your answer" oninput="mmLiveCheck()">
         <button class="btn-primary" style="width:auto" type="submit">Check</button>
       </form>
       <div id="mmFeedback"></div>
@@ -3430,6 +3430,15 @@ function mmRenderMMQuestion(){
   const input=document.getElementById('mmQInput');
   if(input)input.focus();
   mmStartTimer();
+}
+/* Auto-marks correct the instant the typed value matches — no need to press Check. A wrong or
+   incomplete value still needs an explicit Check/Enter, since there's no way to tell "wrong" from
+   "still typing". */
+function mmLiveCheck(){
+  if(mmAnswerState)return;
+  const sess=mmSession,q=sess.questions[sess.idx];
+  const raw=document.getElementById('mmQInput').value;
+  if(mmCheckAnswer(q,raw))mmFinishAnswer(true,raw);
 }
 function mmSubmitAnswer(e){
   if(e)e.preventDefault();
