@@ -161,7 +161,7 @@ button{font-family:inherit}
 .focus-section{margin-bottom:1.1rem}
 .na-header{display:flex;align-items:center;gap:7px;margin-bottom:.9rem}
 .focus-list{display:flex;gap:22px;align-items:stretch}
-.focus-tile{flex:1;min-width:0;background:color-mix(in srgb, var(--accent) 7%, var(--surf));border-left:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-right:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-bottom:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-top:6px solid var(--accent);border-radius:8px 8px 14px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.3rem;padding:1.9rem .95rem 1.6rem}
+.focus-tile{position:relative;flex:1;min-width:0;background:color-mix(in srgb, var(--accent) 7%, var(--surf));border-left:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-right:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-bottom:1px solid color-mix(in srgb, var(--accent) 22%, var(--surf));border-top:6px solid var(--accent);border-radius:8px 8px 14px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.1rem;padding:1.9rem .95rem 1.6rem}
 .focus-tile-name{font-size:.875rem;font-weight:700;color:var(--text)}
 .focus-tile-grade{font-size:.75rem;color:var(--ter);display:flex;align-items:baseline;gap:5px}
 .focus-tile-grade b{font-family:'JetBrains Mono',monospace;font-size:.9375rem;color:var(--text);font-variant-numeric:tabular-nums}
@@ -184,6 +184,23 @@ button{font-family:inherit}
 .focus-drop-label{font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ter);padding:6px 8px 5px}
 .focus-drop-sep{height:1px;background:var(--bdr);margin:2px 4px 4px}
 .topic-cell{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--sec);min-width:0;padding:6px 8px;border-radius:7px}
+.focus-head-row{display:flex;align-items:center;gap:8px;width:100%}
+.focus-status-chip{font-size:.5625rem;font-weight:700;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.02em;flex-shrink:0}
+.focus-sw-row{display:flex;gap:10px;width:100%}
+.focus-sw-item{flex:1;min-width:0;background:var(--surf);border:1px solid var(--bdr);border-radius:9px;padding:.45rem .55rem;text-align:left}
+.focus-sw-label{display:flex;align-items:center;gap:4px;font-size:.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--ter);margin-bottom:2px}
+.focus-sw-label .dot{width:6px;height:6px;border-radius:50%}
+.focus-sw-name{font-size:.6875rem;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.focus-sw-item b{font-family:'JetBrains Mono',monospace;font-size:.6875rem;color:var(--sec);font-variant-numeric:tabular-nums;font-weight:600}
+.focus-info{position:relative;margin-left:auto}
+.focus-info-btn{width:21px;height:21px;border-radius:50%;border:1px solid var(--bdr);background:var(--surf);color:var(--ter);font-size:.6875rem;font-weight:700;font-family:Georgia,serif;font-style:italic;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
+.focus-info-btn::-webkit-details-marker{display:none}
+.focus-info-btn:focus-visible{outline:2px solid var(--mid);outline-offset:2px}
+.focus-info[open] .focus-info-btn{background:var(--mid);border-color:var(--mid);color:#fff}
+.focus-info-pop{position:absolute;top:27px;right:0;width:184px;background:var(--surf);border:1px solid var(--bdr);border-radius:10px;box-shadow:var(--shadow-2);padding:.6rem .65rem;text-align:left;z-index:5}
+.focus-info-row{display:flex;justify-content:space-between;gap:10px;font-size:.6875rem;color:var(--sec);padding:3px 0}
+.focus-info-row b{color:var(--text);font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;font-weight:700}
+.focus-info-sep{height:1px;background:var(--bdr);margin:3px 0}
 .topic-cell:hover{background:var(--alt)}
 .topic-cell .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .topic-cell .tn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
@@ -820,9 +837,26 @@ button{font-family:inherit}
         <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Focus Areas</h3></div>
         <div class="focus-list">
           <div class="focus-tile" style="--accent:var(--mid)">
-            <div class="focus-tile-name">Maths 1</div>
+            <div class="focus-head-row">
+              <div class="focus-tile-name">Maths 1</div>
+              <span class="focus-status-chip" style="background:var(--gLite);color:var(--green)">On track</span>
+              <details class="focus-info">
+                <summary class="focus-info-btn">i</summary>
+                <div class="focus-info-pop">
+                  <div class="focus-info-row"><span>Target grade</span><b>8.0</b></div>
+                  <div class="focus-info-row"><span>Gap to target</span><b>−0.2</b></div>
+                  <div class="focus-info-sep"></div>
+                  <div class="focus-info-row"><span>Sessions this week</span><b>3</b></div>
+                  <div class="focus-info-row"><span>Current streak</span><b>4 days</b></div>
+                </div>
+              </details>
+            </div>
             <svg width="88" height="88" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--mid)" stroke-width="8" stroke-linecap="round" stroke-dasharray="176.7 232.48" transform="rotate(-90 46 46)"/><text x="46" y="43" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">76%</text><text x="46" y="58" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>7.8</b></div>
+            <div class="focus-sw-row">
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Probability</div><b>91%</b></div>
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Exp &amp; Logs</div><b>47%</b></div>
+            </div>
             <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
@@ -850,9 +884,26 @@ button{font-family:inherit}
           </div>
 
           <div class="focus-tile" style="--accent:var(--teal)">
-            <div class="focus-tile-name">Physics</div>
+            <div class="focus-head-row">
+              <div class="focus-tile-name">Physics</div>
+              <span class="focus-status-chip" style="background:var(--rLite);color:var(--red)">Needs focus</span>
+              <details class="focus-info">
+                <summary class="focus-info-btn">i</summary>
+                <div class="focus-info-pop">
+                  <div class="focus-info-row"><span>Target grade</span><b>6.0</b></div>
+                  <div class="focus-info-row"><span>Gap to target</span><b>−0.9</b></div>
+                  <div class="focus-info-sep"></div>
+                  <div class="focus-info-row"><span>Sessions this week</span><b>1</b></div>
+                  <div class="focus-info-row"><span>Current streak</span><b>1 day</b></div>
+                </div>
+              </details>
+            </div>
             <svg width="88" height="88" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--teal)" stroke-width="8" stroke-linecap="round" stroke-dasharray="134.8 232.48" transform="rotate(-90 46 46)"/><text x="46" y="43" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">58%</text><text x="46" y="58" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>5.1</b></div>
+            <div class="focus-sw-row">
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Astrophysics</div><b>80%</b></div>
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Quantum Physics</div><b>39%</b></div>
+            </div>
             <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
@@ -880,9 +931,26 @@ button{font-family:inherit}
           </div>
 
           <div class="focus-tile" style="--accent:var(--amber)">
-            <div class="focus-tile-name">Chemistry</div>
+            <div class="focus-head-row">
+              <div class="focus-tile-name">Chemistry</div>
+              <span class="focus-status-chip" style="background:var(--aLite);color:var(--amber)">Steady</span>
+              <details class="focus-info">
+                <summary class="focus-info-btn">i</summary>
+                <div class="focus-info-pop">
+                  <div class="focus-info-row"><span>Target grade</span><b>7.0</b></div>
+                  <div class="focus-info-row"><span>Gap to target</span><b>−0.4</b></div>
+                  <div class="focus-info-sep"></div>
+                  <div class="focus-info-row"><span>Sessions this week</span><b>4</b></div>
+                  <div class="focus-info-row"><span>Current streak</span><b>6 days</b></div>
+                </div>
+              </details>
+            </div>
             <svg width="88" height="88" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--amber)" stroke-width="8" stroke-linecap="round" stroke-dasharray="144.1 232.48" transform="rotate(-90 46 46)"/><text x="46" y="43" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="var(--text)">62%</text><text x="46" y="58" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="var(--ter)">last 20 Qs</text></svg>
             <div class="focus-tile-grade">Predicted grade <b>6.6</b></div>
+            <div class="focus-sw-row">
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Bonding</div><b>84%</b></div>
+              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Kinetics</div><b>40%</b></div>
+            </div>
             <div class="focus-tile-actions">
             <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
             <details class="focus-drop">
