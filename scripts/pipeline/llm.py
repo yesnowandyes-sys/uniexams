@@ -18,6 +18,7 @@ import openai
 
 ZAI_BASE_URL = "https://api.z.ai/api/coding/paas/v4"
 SCRIPTS_DIR = Path(__file__).resolve().parent.parent
+REQUEST_TIMEOUT = 60.0  # seconds; z.ai calls have hung indefinitely without this
 
 OPENCLAW_AUTH_DBS = [
     Path.home() / ".openclaw" / "agents" / "esat-manager" / "agent" / "openclaw-agent.sqlite",
@@ -35,7 +36,7 @@ def _get_zai_api_key() -> str:
         candidate = key_file.read_text().strip()
         if candidate:
             try:
-                client = openai.OpenAI(api_key=candidate, base_url=ZAI_BASE_URL)
+                client = openai.OpenAI(api_key=candidate, base_url=ZAI_BASE_URL, timeout=REQUEST_TIMEOUT)
                 client.chat.completions.create(
                     model="glm-4.7", messages=[{"role": "user", "content": "ping"}], max_tokens=1
                 )
@@ -69,7 +70,7 @@ _client = None
 def get_client() -> openai.OpenAI:
     global _client
     if _client is None:
-        _client = openai.OpenAI(api_key=_get_zai_api_key(), base_url=ZAI_BASE_URL)
+        _client = openai.OpenAI(api_key=_get_zai_api_key(), base_url=ZAI_BASE_URL, timeout=REQUEST_TIMEOUT)
     return _client
 
 
