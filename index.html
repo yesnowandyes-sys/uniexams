@@ -98,15 +98,33 @@ button{font-family:inherit}
 .btn-white:active{transform:scale(.97)}
 .btn-white:focus-visible{outline-color:#fff}
 
-/* Mini grid: Days Remaining + Daily Streak */
+/* Overall predicted grade + Practice CTA — the new lead card at the top of Home */
+.perf-hero{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.5rem 1.75rem;margin-bottom:1.1rem;box-shadow:var(--shadow-2);border-top:3px solid var(--mid);flex-wrap:wrap}
+.perf-hero-label{color:var(--ter)}
+.perf-hero-grade-row{display:flex;align-items:baseline;gap:14px;margin-top:.55rem;flex-wrap:wrap}
+.perf-hero-grade{font-family:'JetBrains Mono',monospace;font-size:2.75rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
+.perf-hero-grade span{font-size:1.125rem;font-weight:600;color:var(--ter);margin-left:2px}
+.perf-hero-delta{display:inline-flex;align-items:center;gap:4px;font-size:.8125rem;font-weight:700;font-family:'JetBrains Mono',monospace}
+.perf-hero-delta svg{flex-shrink:0}
+.perf-hero-delta.up{color:var(--green)}
+.perf-hero-delta.down{color:var(--red)}
+.perf-hero-chips{display:flex;gap:8px;margin-top:.9rem;flex-wrap:wrap}
+.perf-chip{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:5px 11px;border-radius:20px}
+.perf-chip .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.perf-chip.track{background:var(--gLite);color:var(--green)}
+.perf-chip.track .dot{background:var(--green)}
+.perf-chip.steady{background:var(--aLite);color:var(--amber)}
+.perf-chip.steady .dot{background:var(--amber)}
+.perf-chip.focus{background:var(--rLite);color:var(--red)}
+.perf-chip.focus .dot{background:var(--red)}
+.perf-hero .perf-hero-cta.btn-primary{width:auto;flex-shrink:0;padding:.9rem 1.9rem;font-size:.9375rem}
+@media(max-width:600px){.perf-hero{flex-direction:column;align-items:flex-start}.perf-hero .perf-hero-cta.btn-primary{width:100%}}
+
+/* Mini grid: Days Remaining + Daily Streak — now a secondary strip beneath the modules, so no accent slice */
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem;align-items:stretch}
 .hero-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.2rem 1.35rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
-
-/* Lead cards at the top of Home: no hero banner above them anymore, so give them a touch more
-   presence — deeper shadow, a hair more padding, a slim accent top edge in each card's own color */
-.mini-grid-lead .hero-card{padding:1.375rem 1.5rem;box-shadow:var(--shadow-2)}
-.mini-grid-lead .hero-card:first-child{border-top:3px solid var(--mid)}
-.mini-grid-lead .hero-card:last-child{border-top:3px solid var(--flame)}
+.mini-grid-sub .hero-card{padding:1.05rem 1.2rem}
+.mini-grid-sub .days-num,.mini-grid-sub .streak-num{font-size:2.125rem;margin-top:.7rem}
 .hero-top{display:flex;justify-content:space-between;align-items:center}
 .hero-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
@@ -217,6 +235,15 @@ button{font-family:inherit}
 .achv.locked{opacity:.55}
 .achv.locked .achv-icon{background:var(--alt) !important}
 .achv.locked .achv-icon svg{stroke:var(--ter) !important}
+
+/* This Week snapshot */
+.week-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-bottom:1.1rem}
+.week-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.05rem 1.2rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:2px}
+.week-top{display:flex;align-items:center;gap:8px;color:var(--ter)}
+.week-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.week-num{font-family:'JetBrains Mono',monospace;font-size:1.625rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.02em;margin-top:.6rem}
+.week-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.03em;text-transform:uppercase;margin-top:3px}
+@media(max-width:860px){.week-grid{grid-template-columns:1fr}}
 
 /* ═══ ANALYTICS ═══ */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:1.1rem}
@@ -735,32 +762,24 @@ button{font-family:inherit}
     <div class="page">
       <div class="home-eyebrow">GOOD MORNING, <b>ALEX</b> · 65 DAYS TO THE ESAT</div>
 
-      <div class="mini-grid mini-grid-lead">
-        <!-- Days Remaining -->
-        <div class="hero-card">
-          <div class="hero-top">
-            <span class="label" style="color:var(--ter)">Days Remaining</span>
-            <div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
+      <!-- Overall predicted grade + Practice CTA -->
+      <div class="card perf-hero">
+        <div>
+          <span class="label perf-hero-label">Overall Predicted Grade</span>
+          <div class="perf-hero-grade-row">
+            <div class="perf-hero-grade">6.5<span>/9</span></div>
+            <div class="perf-hero-delta up"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 19V5M6 11l6-6 6 6"/></svg>+0.3 this month</div>
           </div>
-          <div class="days-num">65</div>
-          <div class="days-unit">days to exam</div>
-          <div class="days-meta">ESAT · <b>9 Oct 2026</b></div>
-          <div class="days-prog">
-            <div class="days-prog-lbl"><span>Study period</span><b>55/120</b></div>
-            <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
+          <div class="perf-hero-chips">
+            <span class="perf-chip track"><span class="dot"></span>1 on track</span>
+            <span class="perf-chip steady"><span class="dot"></span>1 steady</span>
+            <span class="perf-chip focus"><span class="dot"></span>1 needs focus</span>
           </div>
         </div>
-
-        <!-- Daily Streak -->
-        <div class="hero-card">
-          <div class="hero-top">
-            <span class="label" style="color:var(--ter)">Daily Streak</span>
-            <div class="streak-flame"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
-          </div>
-          <div class="streak-num" id="streakNum"></div>
-          <div class="streak-unit">day streak</div>
-          <div id="streakBody"></div>
-        </div>
+        <button class="btn-primary perf-hero-cta" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">
+          Practice
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
 
       <div class="card focus-section">
@@ -906,6 +925,52 @@ button{font-family:inherit}
             </details>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="mini-grid mini-grid-sub">
+        <!-- Days Remaining -->
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Days Remaining</span>
+            <div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
+          </div>
+          <div class="days-num">65</div>
+          <div class="days-unit">days to exam</div>
+          <div class="days-meta">ESAT · <b>9 Oct 2026</b></div>
+          <div class="days-prog">
+            <div class="days-prog-lbl"><span>Study period</span><b>55/120</b></div>
+            <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
+          </div>
+        </div>
+
+        <!-- Daily Streak -->
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="label" style="color:var(--ter)">Daily Streak</span>
+            <div class="streak-flame"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
+          </div>
+          <div class="streak-num" id="streakNum"></div>
+          <div class="streak-unit">day streak</div>
+          <div id="streakBody"></div>
+        </div>
+      </div>
+
+      <div class="week-grid">
+        <div class="week-card">
+          <div class="week-top"><div class="week-icon" style="background:var(--lite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
+          <div class="week-num">142</div>
+          <div class="week-lbl">Questions answered</div>
+        </div>
+        <div class="week-card">
+          <div class="week-top"><div class="week-icon" style="background:var(--gLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
+          <div class="week-num">4h 20m</div>
+          <div class="week-lbl">Time practised</div>
+        </div>
+        <div class="week-card">
+          <div class="week-top"><div class="week-icon" style="background:var(--aLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
+          <div class="week-num">68%</div>
+          <div class="week-lbl">Accuracy · +4%</div>
         </div>
       </div>
 
