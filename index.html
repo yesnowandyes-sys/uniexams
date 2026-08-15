@@ -245,6 +245,34 @@ button{font-family:inherit}
 .week-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.03em;text-transform:uppercase;margin-top:3px}
 @media(max-width:860px){.week-grid{grid-template-columns:1fr}}
 
+/* ═══ HOME (Quick Glance redesign) ═══ */
+.suggest-list{display:flex;flex-direction:column;gap:10px;margin-top:.2rem}
+.suggest-row{display:flex;align-items:center;gap:14px;padding:.9rem 1rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf)}
+.suggest-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.suggest-body{flex:1;min-width:0}
+.suggest-title{font-size:.8125rem;font-weight:700;color:var(--text)}
+.suggest-sub{font-size:.75rem;color:var(--ter);margin-top:2px}
+.suggest-cta{flex-shrink:0;width:auto;padding:.55rem 1.1rem;font-size:.8125rem}
+
+.hp-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.1rem;margin-bottom:1.1rem}
+.hp-stat{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1rem 1.1rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:6px}
+.hp-stat-top{display:flex;align-items:center;gap:8px;color:var(--ter)}
+.hp-stat-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hp-stat-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.03em;text-transform:uppercase}
+.hp-stat-num{font-family:'JetBrains Mono',monospace;font-size:1.625rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.hp-stat-num span{font-size:.9375rem;color:var(--ter);font-weight:600}
+.hp-stat-sub{font-size:.6875rem;color:var(--ter)}
+
+.mod-strip{display:flex;gap:10px}
+.mod-pill{flex:1;display:flex;align-items:center;gap:10px;padding:.8rem .95rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf);box-shadow:var(--shadow-1)}
+.mod-pill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--accent)}
+.mod-pill-body{flex:1;min-width:0}
+.mod-pill-name{font-size:.75rem;font-weight:700;color:var(--text)}
+.mod-pill-status{font-size:.625rem;font-weight:600;margin-top:1px}
+.mod-pill-grade{font-family:'JetBrains Mono',monospace;font-size:.9375rem;font-weight:700;color:var(--text);flex-shrink:0}
+@media(max-width:860px){.hp-stat-grid{grid-template-columns:1fr 1fr}.mod-strip{flex-direction:column}}
+@media(max-width:480px){.hp-stat-grid{grid-template-columns:1fr}}
+
 /* ═══ ANALYTICS ═══ */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:1.1rem}
 .stat-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.1rem 1.25rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;min-width:0}
@@ -782,209 +810,70 @@ button{font-family:inherit}
         </button>
       </div>
 
-      <div class="card focus-section">
-        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--mid)"/></svg><h3 class="section-title">Focus Areas</h3></div>
-        <div class="focus-list">
-          <div class="focus-tile" style="--accent:var(--mid)">
-            <div class="focus-head-row">
-              <div class="focus-tile-name">Maths 1</div>
-              <span class="focus-status-chip" style="background:var(--gLite);color:var(--green)">On track</span>
-              <details class="focus-info">
-                <summary class="focus-info-btn">i</summary>
-                <div class="focus-info-pop">
-                  <div class="focus-info-row"><span>Target grade</span><b>8.0</b></div>
-                  <div class="focus-info-row"><span>Gap to target</span><b>−0.2</b></div>
-                  <div class="focus-info-sep"></div>
-                  <div class="focus-info-row"><span>Sessions this week</span><b>3</b></div>
-                  <div class="focus-info-row"><span>Current streak</span><b>4 days</b></div>
-                </div>
-              </details>
-            </div>
-            <svg width="64" height="64" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--mid)" stroke-width="8" stroke-linecap="round" stroke-dasharray="176.7 232.48" transform="rotate(-90 46 46)"/><text x="46" y="42" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="14" font-weight="700" fill="var(--text)">76%</text><text x="46" y="56" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" fill="var(--ter)">last 20 Qs</text></svg>
-            <div class="focus-tile-grade">Predicted grade <b>7.8</b></div>
-            <div class="focus-sw-row">
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Probability</div><b>91%</b></div>
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Exp &amp; Logs</div><b>47%</b></div>
-            </div>
-            <div class="focus-tile-actions">
-            <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-            <details class="focus-drop">
-              <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-              <div class="focus-drop-outer"><div class="focus-drop-inner">
-                <div class="focus-drop-panel">
-                  <div class="focus-drop-label">12 topics · best to worst</div>
-                  <div class="focus-drop-sep"></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Probability</span><b>91%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Statistics</span><b>88%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Algebra</span><b>82%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Coordinate Geometry</span><b>77%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Vectors</span><b>74%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Calculus</span><b>71%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Functions</span><b>69%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Trigonometry</span><b>65%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Differentiation</span><b>63%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Sequences &amp; Series</span><b>58%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Integration</span><b>55%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Exponentials &amp; Logs</span><b>47%</b></div>
-                </div>
-              </div></div>
-            </details>
-            </div>
-          </div>
-
-          <div class="focus-tile" style="--accent:var(--teal)">
-            <div class="focus-head-row">
-              <div class="focus-tile-name">Physics</div>
-              <span class="focus-status-chip" style="background:var(--rLite);color:var(--red)">Needs focus</span>
-              <details class="focus-info">
-                <summary class="focus-info-btn">i</summary>
-                <div class="focus-info-pop">
-                  <div class="focus-info-row"><span>Target grade</span><b>6.0</b></div>
-                  <div class="focus-info-row"><span>Gap to target</span><b>−0.9</b></div>
-                  <div class="focus-info-sep"></div>
-                  <div class="focus-info-row"><span>Sessions this week</span><b>1</b></div>
-                  <div class="focus-info-row"><span>Current streak</span><b>1 day</b></div>
-                </div>
-              </details>
-            </div>
-            <svg width="64" height="64" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--teal)" stroke-width="8" stroke-linecap="round" stroke-dasharray="134.8 232.48" transform="rotate(-90 46 46)"/><text x="46" y="42" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="14" font-weight="700" fill="var(--text)">58%</text><text x="46" y="56" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" fill="var(--ter)">last 20 Qs</text></svg>
-            <div class="focus-tile-grade">Predicted grade <b>5.1</b></div>
-            <div class="focus-sw-row">
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Astrophysics</div><b>80%</b></div>
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Quantum Physics</div><b>39%</b></div>
-            </div>
-            <div class="focus-tile-actions">
-            <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-            <details class="focus-drop">
-              <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-              <div class="focus-drop-outer"><div class="focus-drop-inner">
-                <div class="focus-drop-panel">
-                  <div class="focus-drop-label">12 topics · best to worst</div>
-                  <div class="focus-drop-sep"></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Astrophysics</span><b>80%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Mechanics</span><b>74%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Nuclear Physics</span><b>72%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Electricity</span><b>68%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Materials</span><b>61%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Fields</span><b>60%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Oscillations</span><b>58%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Magnetism</span><b>55%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Waves</span><b>51%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Thermodynamics</span><b>45%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Particle Physics</span><b>44%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Quantum Physics</span><b>39%</b></div>
-                </div>
-              </div></div>
-            </details>
-            </div>
-          </div>
-
-          <div class="focus-tile" style="--accent:var(--amber)">
-            <div class="focus-head-row">
-              <div class="focus-tile-name">Chemistry</div>
-              <span class="focus-status-chip" style="background:var(--aLite);color:var(--amber)">Steady</span>
-              <details class="focus-info">
-                <summary class="focus-info-btn">i</summary>
-                <div class="focus-info-pop">
-                  <div class="focus-info-row"><span>Target grade</span><b>7.0</b></div>
-                  <div class="focus-info-row"><span>Gap to target</span><b>−0.4</b></div>
-                  <div class="focus-info-sep"></div>
-                  <div class="focus-info-row"><span>Sessions this week</span><b>4</b></div>
-                  <div class="focus-info-row"><span>Current streak</span><b>6 days</b></div>
-                </div>
-              </details>
-            </div>
-            <svg width="64" height="64" viewBox="0 0 92 92"><circle cx="46" cy="46" r="37" fill="none" stroke="var(--bdr)" stroke-width="8"/><circle cx="46" cy="46" r="37" fill="none" stroke="var(--amber)" stroke-width="8" stroke-linecap="round" stroke-dasharray="144.1 232.48" transform="rotate(-90 46 46)"/><text x="46" y="42" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="14" font-weight="700" fill="var(--text)">62%</text><text x="46" y="56" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" fill="var(--ter)">last 20 Qs</text></svg>
-            <div class="focus-tile-grade">Predicted grade <b>6.6</b></div>
-            <div class="focus-sw-row">
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--green)"></span>Best</div><div class="focus-sw-name">Bonding</div><b>84%</b></div>
-              <div class="focus-sw-item"><div class="focus-sw-label"><span class="dot" style="background:var(--red)"></span>Worst</div><div class="focus-sw-name">Kinetics</div><b>40%</b></div>
-            </div>
-            <div class="focus-tile-actions">
-            <button class="focus-tile-practice" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Practice</button>
-            <details class="focus-drop">
-              <summary class="focus-drop-trigger">Topics<svg class="focus-drop-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-              <div class="focus-drop-outer"><div class="focus-drop-inner">
-                <div class="focus-drop-panel">
-                  <div class="focus-drop-label">12 topics · best to worst</div>
-                  <div class="focus-drop-sep"></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Bonding</span><b>84%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Acids &amp; Bases</span><b>77%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Spectroscopy</span><b>75%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--green)"></span><span class="tn">Organic</span><b>70%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Periodicity</span><b>69%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Physical</span><b>66%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Equilibria</span><b>63%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Inorganic</span><b>58%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Electrochemistry</span><b>57%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--amber)"></span><span class="tn">Redox</span><b>52%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Thermochemistry</span><b>48%</b></div>
-                  <div class="topic-cell"><span class="dot" style="background:var(--red)"></span><span class="tn">Kinetics</span><b>40%</b></div>
-                </div>
-              </div></div>
-            </details>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mini-grid mini-grid-sub">
-        <!-- Days Remaining -->
-        <div class="hero-card">
-          <div class="hero-top">
-            <span class="label" style="color:var(--ter)">Days Remaining</span>
-            <div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
-          </div>
-          <div class="days-num">65</div>
-          <div class="days-unit">days to exam</div>
-          <div class="days-meta">ESAT · <b>9 Oct 2026</b></div>
-          <div class="days-prog">
-            <div class="days-prog-lbl"><span>Study period</span><b>55/120</b></div>
-            <div class="bar"><div class="bar-fill" style="width:46%;background:var(--mid)"></div></div>
-          </div>
-        </div>
-
-        <!-- Daily Streak -->
-        <div class="hero-card">
-          <div class="hero-top">
-            <span class="label" style="color:var(--ter)">Daily Streak</span>
-            <div class="streak-flame"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
-          </div>
-          <div class="streak-num" id="streakNum"></div>
-          <div class="streak-unit">day streak</div>
-          <div id="streakBody"></div>
-        </div>
-      </div>
-
-      <div class="week-grid">
-        <div class="week-card">
-          <div class="week-top"><div class="week-icon" style="background:var(--lite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
-          <div class="week-num">142</div>
-          <div class="week-lbl">Questions answered</div>
-        </div>
-        <div class="week-card">
-          <div class="week-top"><div class="week-icon" style="background:var(--gLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
-          <div class="week-num">4h 20m</div>
-          <div class="week-lbl">Time practised</div>
-        </div>
-        <div class="week-card">
-          <div class="week-top"><div class="week-icon" style="background:var(--aLite)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg></div><span class="label" style="color:var(--ter)">This Week</span></div>
-          <div class="week-num">68%</div>
-          <div class="week-lbl">Accuracy · +4%</div>
-        </div>
-      </div>
-
+      <!-- Suggested for you -->
       <div class="card">
-        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Achievements</h3><button class="focus-drop-trigger" style="margin-left:auto;padding:5px 10px" onclick="nav(document.getElementById('navAchievements'),'achievements','Achievements')">View all<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
-        <div class="achv-row-wrap">
-          <div class="achv-row" id="achvRow">
-            <div class="achv"><div class="achv-icon" style="background:var(--aLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><div class="achv-name">7-Day Streak</div><div class="achv-desc">Practised 7 days in a row</div></div>
-            <div class="achv"><div class="achv-icon" style="background:var(--gLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><div class="achv-name">50 Questions</div><div class="achv-desc">Answered 50 practice Qs</div></div>
-            <div class="achv"><div class="achv-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><div class="achv-name">Speed Round</div><div class="achv-desc">10 Qs answered under 5 min</div></div>
-            <div class="achv locked"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><div class="achv-name">Perfect Score</div><div class="achv-desc">100% on a full mock exam</div></div>
-            <div class="achv locked"><div class="achv-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div><div class="achv-name">100-Day Streak</div><div class="achv-desc">Practised 100 days straight</div></div>
+        <div class="na-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg><h3 class="section-title">Suggested for you</h3></div>
+        <div class="suggest-list">
+          <div class="suggest-row">
+            <div class="suggest-icon" style="background:var(--rLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8"><path d="M12 9v3.75m0 3.75h.008M4.062 19.5h15.876a1.5 1.5 0 0 0 1.299-2.25L13.299 4.5a1.5 1.5 0 0 0-2.598 0L2.763 17.25a1.5 1.5 0 0 0 1.299 2.25Z"/></svg></div>
+            <div class="suggest-body">
+              <div class="suggest-title">Exponentials &amp; Logs · Maths 1</div>
+              <div class="suggest-sub">Your weakest topic — 47% · 12 questions, ~10 min</div>
+            </div>
+            <button class="btn-primary suggest-cta" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Start</button>
           </div>
-          <div class="achv-fade" id="achvFade" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--ter)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+          <div class="suggest-row">
+            <div class="suggest-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><rect x="5.25" y="3" width="13.5" height="18" rx="1.75"/><path d="M8.25 7.5h7.5"/></svg></div>
+            <div class="suggest-body">
+              <div class="suggest-title">Mental Maths · 2-digit × 2-digit</div>
+              <div class="suggest-sub">A regular favourite — quick 5 minute drill</div>
+            </div>
+            <button class="btn-primary suggest-cta" style="background:var(--surf);color:var(--mid);border:1px solid var(--liteb)" onclick="nav(document.getElementById('navMentalMaths'),'mentalmaths','Mental Maths')">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick-glance stats -->
+      <div class="hp-stat-grid">
+        <div class="hp-stat">
+          <div class="hp-stat-top"><div class="hp-stat-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div><span class="hp-stat-lbl">Days left</span></div>
+          <div class="hp-stat-num">65</div>
+          <div class="hp-stat-sub">ESAT · 9 Oct 2026</div>
+        </div>
+        <div class="hp-stat">
+          <div class="hp-stat-top"><div class="hp-stat-icon" style="background:var(--aLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><span class="hp-stat-lbl">Streak</span></div>
+          <div class="hp-stat-num"><span id="streakNum"></span><span>days</span></div>
+          <div class="hp-stat-sub">Best: 21 days</div>
+          <div id="streakBody" style="display:none"></div>
+        </div>
+        <div class="hp-stat">
+          <div class="hp-stat-top"><div class="hp-stat-icon" style="background:var(--gLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><span class="hp-stat-lbl">Today's target</span></div>
+          <div class="hp-stat-num">18<span>/25</span></div>
+          <div class="bar" style="margin-top:4px"><div class="bar-fill" style="width:72%;background:var(--green)"></div></div>
+        </div>
+        <div class="hp-stat">
+          <div class="hp-stat-top"><div class="hp-stat-icon" style="background:var(--pLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div><span class="hp-stat-lbl">Avg / question</span></div>
+          <div class="hp-stat-num">54<span>s</span></div>
+          <div class="hp-stat-sub" style="color:var(--green)">−6s vs last week</div>
+        </div>
+      </div>
+
+      <!-- Module status -->
+      <div class="mod-strip">
+        <div class="mod-pill">
+          <div class="mod-pill-dot" style="--accent:var(--mid)"></div>
+          <div class="mod-pill-body"><div class="mod-pill-name">Maths 1</div><div class="mod-pill-status" style="color:var(--green)">On track</div></div>
+          <div class="mod-pill-grade">7.8</div>
+        </div>
+        <div class="mod-pill">
+          <div class="mod-pill-dot" style="--accent:var(--teal)"></div>
+          <div class="mod-pill-body"><div class="mod-pill-name">Physics</div><div class="mod-pill-status" style="color:var(--red)">Needs focus</div></div>
+          <div class="mod-pill-grade">5.1</div>
+        </div>
+        <div class="mod-pill">
+          <div class="mod-pill-dot" style="--accent:var(--amber)"></div>
+          <div class="mod-pill-body"><div class="mod-pill-name">Chemistry</div><div class="mod-pill-status" style="color:var(--amber)">Steady</div></div>
+          <div class="mod-pill-grade">6.6</div>
         </div>
       </div>
     </div>
