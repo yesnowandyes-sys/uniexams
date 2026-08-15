@@ -93,20 +93,7 @@ button{font-family:inherit}
 .home-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:1rem}
 .home-eyebrow b{color:var(--text)}
 
-/* ═══ Dial-first hero banner: data-first — dial is the focal point, copy cut to one clause ═══ */
-.banner-card{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);border:none;border-radius:14px;padding:.75rem 1.375rem;margin-bottom:1.1rem;display:flex;align-items:center;gap:1rem;box-shadow:0 12px 26px -8px rgba(20,25,60,.5)}
-.dial-wrap{position:relative;width:92px;height:92px;flex-shrink:0}
-.dial-wrap svg{display:block;width:100%;height:100%;overflow:visible}
-.dial-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
-.dial-center b{font-family:'JetBrains Mono',monospace;font-size:1.125rem;font-weight:700;color:#fff;line-height:1}
-.dial-center span{font-family:'JetBrains Mono',monospace;font-size:.5625rem;font-weight:600;color:rgba(255,255,255,.75);margin-top:2px}
-.banner-info{flex:1;min-width:0}
-.banner-info .label{color:rgba(255,255,255,.7);margin-bottom:.25rem;display:block}
-.banner-info h2{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:-.015em;font-size:1rem;color:#fff;margin-bottom:.25rem}
-.banner-info p{font-size:.8125rem;color:rgba(255,255,255,.8);line-height:1.5;max-width:440px;margin-bottom:.5rem}
-.banner-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.banner-delta{display:inline-flex;align-items:center;gap:6px;font-size:.6875rem;font-weight:700;color:#fff;background:rgba(255,255,255,.18);padding:5px 10px;border-radius:20px;flex-shrink:0}
-.btn-white{display:flex;align-items:center;justify-content:center;gap:8px;padding:.45rem 1rem;border-radius:9px;border:none;background:#fff;color:var(--blue);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;white-space:nowrap;flex-shrink:0}
+.btn-white{display:flex;align-items:center;justify-content:center;gap:8px;padding:.55rem 1.125rem;border-radius:9px;border:none;background:#fff;color:var(--blue);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;white-space:nowrap;flex-shrink:0}
 .btn-white:hover{filter:brightness(.97);box-shadow:var(--shadow-3);transform:translateY(-1px)}
 .btn-white:active{transform:scale(.97)}
 .btn-white:focus-visible{outline-color:#fff}
@@ -114,6 +101,12 @@ button{font-family:inherit}
 /* Mini grid: Days Remaining + Daily Streak */
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem;align-items:stretch}
 .hero-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.2rem 1.35rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
+
+/* Lead cards at the top of Home: no hero banner above them anymore, so give them a touch more
+   presence — deeper shadow, a hair more padding, a slim accent top edge in each card's own color */
+.mini-grid-lead .hero-card{padding:1.375rem 1.5rem;box-shadow:var(--shadow-2)}
+.mini-grid-lead .hero-card:first-child{border-top:3px solid var(--mid)}
+.mini-grid-lead .hero-card:last-child{border-top:3px solid var(--flame)}
 .hero-top{display:flex;justify-content:space-between;align-items:center}
 .hero-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
@@ -576,20 +569,12 @@ button{font-family:inherit}
 /* Animations */
 @keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.75)}}
 .streak-flame svg{animation:pdot 2.4s ease-in-out infinite}
-.dial-progress{transition:stroke-dashoffset 1.15s cubic-bezier(.22,1,.36,1)}
-.dial-marker{opacity:0;transform:scale(.4);transform-origin:122.7px 55.9px;transition:opacity .4s ease .95s,transform .4s cubic-bezier(.34,1.56,.64,1) .95s}
-.dial-marker.show{opacity:1;transform:scale(1)}
 @keyframes optPulse{0%{transform:scale(1)}35%{transform:scale(1.035)}100%{transform:scale(1)}}
 .opt.pulse-in{animation:optPulse .38s cubic-bezier(.34,1.56,.64,1)}
 @keyframes navPop{0%{transform:scale(.94)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
 .sb-item.nav-pop{animation:navPop .32s cubic-bezier(.34,1.56,.64,1)}
 
 /* Responsive */
-@media(max-width:1080px){
-.banner-card{flex-direction:column;text-align:center;gap:1.5rem}
-.banner-info p{margin-left:auto;margin-right:auto}
-.banner-actions{justify-content:center}
-}
 @media(max-width:860px){
 :root{--sbw:var(--sbw-c)}
 .sb-brand-txt,.sb-item span,.sb-user-info,.sb-label,.sb-tag{display:none}
@@ -601,15 +586,12 @@ button{font-family:inherit}
 .mini-grid{grid-template-columns:1fr}
 .focus-list{flex-direction:column}
 .practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
-.banner-card{padding:.75rem 1.125rem}
 }
 @media(max-width:480px){
 .page{padding:1rem .75rem 2rem}.greeting h1{font-size:1.75rem}
 .days-num,.streak-num{font-size:2rem}
 .topbar-title{font-size:.9375rem}
 .qnum{width:32px;height:32px}
-.dial-wrap{width:76px;height:76px}
-.dial-center b{font-size:.9375rem}
 }
 
 /* ═══ MENTAL MATHS ═══ */
@@ -753,61 +735,7 @@ button{font-family:inherit}
     <div class="page">
       <div class="home-eyebrow">GOOD MORNING, <b>ALEX</b> · 65 DAYS TO THE ESAT</div>
 
-      <!-- Data-first hero banner: dial is the focal point, copy cut to one clause -->
-      <div class="banner-card">
-        <div class="dial-wrap">
-          <svg viewBox="0 0 300 300">
-            <!-- track -->
-            <circle cx="150" cy="150" r="98" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="14"/>
-            <!-- progress arc: starts fully hidden (dashoffset = circumference), JS animates it in on load. Rotated -45deg so 0% begins at grade "1" (1:30 position) instead of 12 o'clock -->
-            <circle id="dialProgress" class="dial-progress" cx="150" cy="150" r="98" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-dasharray="615.75" stroke-dashoffset="615.75" transform="rotate(-45 150 150)"/>
-
-            <!-- tick marks between grades, angle-computed (9 grades x 40deg, midpoints) -->
-            <g stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round">
-              <line x1="244.3" y1="106.1" x2="253.3" y2="101.8"/>
-              <line x1="250.5" y1="176.9" x2="260.1" y2="179.5"/>
-              <line x1="209.7" y1="235.2" x2="215.4" y2="243.4"/>
-              <line x1="140.9" y1="253.6" x2="140.1" y2="263.6"/>
-              <line x1="76.5" y1="223.5" x2="69.4" y2="230.6"/>
-              <line x1="46.4" y1="159.1" x2="36.4" y2="159.9"/>
-              <line x1="64.8" y1="90.4" x2="56.6" y2="84.6"/>
-              <line x1="123.1" y1="49.5" x2="120.5" y2="39.9"/>
-              <line x1="194.0" y1="55.7" x2="198.2" y2="46.7"/>
-            </g>
-
-            <!-- grades 1-9 around the ring, clock-style, angle-computed (40deg apart, starting at 1:30 so "1" never sits at 12 o'clock and there's no 0) -->
-            <g font-family="Inter,sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
-              <text x="239.1" y="60.9" font-size="17" fill="rgba(255,255,255,.6)">1</text>
-              <text x="275.5" y="139.0" font-size="17" fill="rgba(255,255,255,.6)">2</text>
-              <text x="253.2" y="222.3" font-size="17" fill="rgba(255,255,255,.6)">3</text>
-              <text x="182.6" y="271.7" font-size="17" fill="rgba(255,255,255,.6)">4</text>
-              <text x="96.7" y="264.2" font-size="17" fill="rgba(255,255,255,.6)">5</text>
-              <text x="35.8" y="203.3" font-size="17" fill="rgba(255,255,255,.6)">6</text>
-              <text x="28.3" y="117.4" font-size="17" fill="rgba(255,255,255,.6)">7</text>
-              <text x="77.7" y="46.8" font-size="17" fill="rgba(255,255,255,.6)">8</text>
-              <text x="161.0" y="24.5" font-size="22" fill="#fff">9</text>
-            </g>
-
-            <!-- clean marker dot at current position (83%), fades/pops in once the arc finishes drawing -->
-            <circle id="dialMarker" class="dial-marker" cx="122.7" cy="55.9" r="6" fill="#fff" stroke="var(--navy)" stroke-width="2.5"/>
-          </svg>
-          <div class="dial-center">
-            <b>9</b>
-            <span>83%</span>
-          </div>
-        </div>
-        <div class="banner-info">
-          <span class="label">Predicted Grade</span>
-          <h2>On track for a Grade 9</h2>
-          <p>Last 30 days, all modules. Keep the streak through Biology to lock it in.</p>
-          <div class="banner-actions">
-            <button class="btn-white" onclick="nav(document.getElementById('navPractice'),'practice','Practice')"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)" stroke="var(--blue)" stroke-width="0"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></svg>Practice Now</button>
-            <span class="banner-delta">↑ 4% vs last month</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mini-grid">
+      <div class="mini-grid mini-grid-lead">
         <!-- Days Remaining -->
         <div class="hero-card">
           <div class="hero-top">
@@ -2352,19 +2280,6 @@ render();
 
   const totalEl=document.getElementById('heatTotal');
   if(totalEl)totalEl.textContent=`${total} questions practised in the last ${WEEKS} weeks`;
-})();
-
-/* Draw the predicted-grade ring in from 0 the first time the page loads */
-(function animateDial(){
-  const ring=document.getElementById('dialProgress');
-  const marker=document.getElementById('dialMarker');
-  if(!ring)return;
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(()=>{
-      ring.style.strokeDashoffset='104.68';
-      if(marker)marker.classList.add('show');
-    });
-  });
 })();
 
 /* Achievements page: expand the faded-out categories */
