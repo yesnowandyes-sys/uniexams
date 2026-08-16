@@ -90,7 +90,7 @@ button{font-family:inherit}
 .greeting p{font-size:.875rem;color:var(--sec);line-height:1.6}
 .greeting strong{font-weight:600;color:var(--text)}
 
-.home-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:clamp(9.6px, calc(2.667vh - 8.53px), 16px)}
+.home-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:1rem}
 .home-eyebrow b{color:var(--text)}
 
 .btn-white{display:flex;align-items:center;justify-content:center;gap:8px;padding:.55rem 1.125rem;border-radius:9px;border:none;background:#fff;color:var(--blue);font-size:.8125rem;font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-.01em;cursor:pointer;transition:filter .12s,box-shadow .12s,transform .1s;white-space:nowrap;flex-shrink:0}
@@ -99,16 +99,16 @@ button{font-family:inherit}
 .btn-white:focus-visible{outline-color:#fff}
 
 /* Overall predicted grade + Practice CTA — the new lead card at the top of Home */
-.perf-hero{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:clamp(14.4px, calc(4vh - 12.8px), 24px) 1.5rem;margin-bottom:clamp(9.6px, calc(3.333vh - 13.07px), 17.6px);box-shadow:var(--shadow-2);border-top:3px solid var(--mid);flex-wrap:wrap}
+.perf-hero{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.5rem 1.75rem;box-shadow:var(--shadow-2);border-top:3px solid var(--mid);flex-wrap:wrap}
 .perf-hero-label{color:var(--ter)}
-.perf-hero-grade-row{display:flex;align-items:baseline;gap:14px;margin-top:clamp(4.8px, calc(1.667vh - 6.53px), 8.8px);flex-wrap:wrap}
-.perf-hero-grade{font-family:'JetBrains Mono',monospace;font-size:clamp(34px, calc(4.167vh + 5.67px), 44px);font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
-.perf-hero-grade span{font-size:1.0625rem;font-weight:600;color:var(--ter);margin-left:2px}
+.perf-hero-grade-row{display:flex;align-items:baseline;gap:14px;margin-top:.55rem;flex-wrap:wrap}
+.perf-hero-grade{font-family:'JetBrains Mono',monospace;font-size:2.75rem;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.03em}
+.perf-hero-grade span{font-size:1.125rem;font-weight:600;color:var(--ter);margin-left:2px}
 .perf-hero-delta{display:inline-flex;align-items:center;gap:4px;font-size:.8125rem;font-weight:700;font-family:'JetBrains Mono',monospace}
 .perf-hero-delta svg{flex-shrink:0}
 .perf-hero-delta.up{color:var(--green)}
 .perf-hero-delta.down{color:var(--red)}
-.perf-hero-chips{display:flex;gap:8px;margin-top:clamp(8px, calc(2.667vh - 10.13px), 14.4px);flex-wrap:wrap}
+.perf-hero-chips{display:flex;gap:8px;margin-top:.9rem;flex-wrap:wrap}
 .perf-chip{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:5px 11px;border-radius:20px}
 .perf-chip .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .perf-chip.track{background:var(--gLite);color:var(--green)}
@@ -117,7 +117,7 @@ button{font-family:inherit}
 .perf-chip.steady .dot{background:var(--amber)}
 .perf-chip.focus{background:var(--rLite);color:var(--red)}
 .perf-chip.focus .dot{background:var(--red)}
-.perf-hero .perf-hero-cta.btn-primary{width:auto;flex-shrink:0;padding:clamp(10.4px, calc(1.667vh - 0.93px), 14.4px) 1.6rem;font-size:.875rem}
+.perf-hero .perf-hero-cta.btn-primary{width:auto;flex-shrink:0;padding:.9rem 1.9rem;font-size:.9375rem}
 @media(max-width:600px){.perf-hero{flex-direction:column;align-items:flex-start}.perf-hero .perf-hero-cta.btn-primary{width:100%}}
 
 /* Mini grid: Days Remaining + Daily Streak — now a secondary strip beneath the modules, so no accent slice */
@@ -246,28 +246,36 @@ button{font-family:inherit}
 @media(max-width:860px){.week-grid{grid-template-columns:1fr}}
 
 /* ═══ HOME (Quick Glance redesign) ═══ */
-.home-page-tight{padding-top:clamp(16px, calc(5vh - 18px), 28px);padding-bottom:clamp(16px, calc(10vh - 52px), 40px)}
-.suggest-card{padding:clamp(12px, calc(3.333vh - 10.67px), 20px) 1.1rem}
-.suggest-card .na-header{margin-bottom:clamp(8px, calc(2.667vh - 10.13px), 14.4px)}
-.suggest-list{display:flex;flex-direction:column;gap:clamp(7px, calc(1.25vh - 1.5px), 10px);margin-top:0}
-.suggest-row{display:flex;align-items:center;gap:14px;padding:clamp(8px, calc(2.667vh - 10.13px), 14.4px) .85rem;border:1px solid var(--bdr);border-radius:11px;background:var(--surf)}
-.suggest-icon{width:clamp(32px, calc(3.333vh + 9.33px), 40px);height:clamp(32px, calc(3.333vh + 9.33px), 40px);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* Home page fills the viewport below the topbar. The eyebrow stays snug at
+   its natural size; .home-fill (the 4 cards) takes the rest of the height
+   and space-between grows the gaps between them on tall screens, so the
+   module row lands at the bottom instead of leaving dead space below it.
+   Card padding/type stays a fixed, comfortable size throughout — only the
+   gaps stretch. On screens too short for the content, this simply overflows
+   and the page scrolls (min-height never clips). */
+.home-page-fill{display:flex;flex-direction:column;min-height:calc(100vh - 64px)}
+.home-fill{flex:1;min-height:0;display:flex;flex-direction:column;gap:1.1rem;justify-content:space-between}
+.suggest-card{padding:1.25rem 1.375rem}
+.suggest-card .na-header{margin-bottom:.9rem}
+.suggest-list{display:flex;flex-direction:column;gap:10px;margin-top:0}
+.suggest-row{display:flex;align-items:center;gap:14px;padding:.9rem 1rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf)}
+.suggest-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .suggest-body{flex:1;min-width:0}
 .suggest-title{font-size:.8125rem;font-weight:700;color:var(--text)}
-.suggest-sub{font-size:.75rem;color:var(--ter);margin-top:1px}
-.suggest-cta{flex-shrink:0;width:auto;padding:clamp(7.2px, calc(.667vh + 2.67px), 8.8px) .95rem;font-size:.8125rem}
+.suggest-sub{font-size:.75rem;color:var(--ter);margin-top:2px}
+.suggest-cta{flex-shrink:0;width:auto;padding:.55rem 1.1rem;font-size:.8125rem}
 
-.hp-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12.8px, calc(2vh - 0.8px), 17.6px);margin-top:clamp(9.6px, calc(3.333vh - 13.07px), 17.6px);margin-bottom:clamp(9.6px, calc(3.333vh - 13.07px), 17.6px)}
-.hp-stat{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:clamp(10.4px, calc(2.333vh - 5.47px), 16px) .85rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:3px}
+.hp-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.hp-stat{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1rem 1.1rem;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:6px}
 .hp-stat-top{display:flex;align-items:center;gap:8px;color:var(--ter)}
-.hp-stat-icon{width:clamp(22px, calc(1.667vh + 10.67px), 26px);height:clamp(22px, calc(1.667vh + 10.67px), 26px);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hp-stat-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hp-stat-lbl{font-size:.6875rem;font-weight:600;color:var(--ter);letter-spacing:.03em;text-transform:uppercase}
-.hp-stat-num{font-family:'JetBrains Mono',monospace;font-size:clamp(22px, calc(1.667vh + 10.67px), 26px);font-weight:700;color:var(--text);letter-spacing:-.02em}
-.hp-stat-num span{font-size:.875rem;color:var(--ter);font-weight:600}
+.hp-stat-num{font-family:'JetBrains Mono',monospace;font-size:1.625rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.hp-stat-num span{font-size:.9375rem;color:var(--ter);font-weight:600}
 .hp-stat-sub{font-size:.6875rem;color:var(--ter)}
 
-.mod-strip{display:flex;gap:clamp(8px, calc(.833vh + 2.33px), 10px)}
-.mod-pill{flex:1;display:flex;align-items:center;gap:10px;padding:clamp(8px, calc(2vh - 5.6px), 12.8px) .8rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf);box-shadow:var(--shadow-1)}
+.mod-strip{display:flex;gap:10px}
+.mod-pill{flex:1;display:flex;align-items:center;gap:10px;padding:.8rem .95rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf);box-shadow:var(--shadow-1)}
 .mod-pill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--accent)}
 .mod-pill-body{flex:1;min-width:0}
 .mod-pill-name{font-size:.75rem;font-weight:700;color:var(--text)}
@@ -790,9 +798,10 @@ button{font-family:inherit}
 
   <!-- ═══ HOME VIEW ═══ -->
   <div id="view-home" class="view active">
-    <div class="page home-page-tight">
+    <div class="page home-page-fill">
       <div class="home-eyebrow">GOOD MORNING, <b>ALEX</b> · 65 DAYS TO THE ESAT</div>
 
+      <div class="home-fill">
       <!-- Overall predicted grade + Practice CTA -->
       <div class="card perf-hero">
         <div>
@@ -878,6 +887,7 @@ button{font-family:inherit}
           <div class="mod-pill-body"><div class="mod-pill-name">Chemistry</div><div class="mod-pill-status" style="color:var(--amber)">Steady</div></div>
           <div class="mod-pill-grade">6.6</div>
         </div>
+      </div>
       </div>
     </div>
   </div>
