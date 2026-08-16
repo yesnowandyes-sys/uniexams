@@ -739,6 +739,13 @@ button{font-family:inherit}
 .tp-select-ring{fill:none;stroke:var(--blue);stroke-width:3;transform-origin:center;transform-box:fill-box;animation:tpPulseRing 1.6s ease-in-out infinite}
 @keyframes tpPulseRing{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.1)}}
 
+.tp-root{pointer-events:none}
+.tp-root-pulse{fill:none;stroke:var(--mid);stroke-width:2;transform-origin:center;transform-box:fill-box;animation:tpRootPulse 2.6s ease-out infinite}
+@keyframes tpRootPulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.45);opacity:0}}
+.tp-subject-node{cursor:pointer;outline:none}
+.tp-subject-node circle{transition:filter .12s}
+.tp-subject-node:hover circle,.tp-subject-node:focus-visible circle{filter:brightness(1.1) url(#tpNodeShadow)}
+
 .tp-controls{position:absolute;top:16px;right:16px;display:flex;flex-direction:column;gap:8px;z-index:5;transition:right .3s cubic-bezier(.16,1,.3,1)}
 .tp-map-container.panel-open .tp-controls{right:calc(400px + 16px)}
 .tp-ctrl-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--bdr);background:var(--surf);box-shadow:var(--shadow-2);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--sec);transition:background .1s,transform .1s}
@@ -3564,11 +3571,35 @@ let tpTweenRAF=null;
 const tpPointers=new Map();
 let tpDragState=null,tpDownInfo=null,tpMoved=false;
 
-const TP_MAX_ROWS=3,TP_ROW_SPACING=118,TP_COL_SPACING=132,TP_ISLAND_GAP=170;
-const TP_NODE_MIN_R=17,TP_NODE_MAX_R=30;
+const TP_GAP_RAD=6*Math.PI/180;
+const TP_R_ROOT=48,TP_R_SUBJECT=152,TP_R_TOPIC_A=300,TP_R_TOPIC_B=374;
+const TP_NODE_MIN_R=13,TP_NODE_MAX_R=23;
 
 function tpNodeRadius(subCount){
-  return TP_NODE_MIN_R+Math.min(TP_NODE_MAX_R-TP_NODE_MIN_R,Math.round(Math.sqrt(subCount)*2.6));
+  return TP_NODE_MIN_R+Math.min(TP_NODE_MAX_R-TP_NODE_MIN_R,Math.round(Math.sqrt(subCount)*2));
+}
+function polarXY(r,angleRad){
+  return {x:Math.cos(angleRad)*r,y:Math.sin(angleRad)*r};
+}
+/* d3-style radial link: leaves each endpoint along its own angle and bends smoothly
+   through the middle, so branches read as organic mind-map curves, not straight spokes. */
+function radialLinkPath(r1,a1,r2,a2){
+  const p0=polarXY(r1,a1),p3=polarXY(r2,a2);
+  const rMid=(r1+r2)/2;
+  const c1=polarXY(rMid,a1),c2=polarXY(rMid,a2);
+  return `M${p0.x.toFixed(1)},${p0.y.toFixed(1)} C${c1.x.toFixed(1)},${c1.y.toFixed(1)} ${c2.x.toFixed(1)},${c2.y.toFixed(1)} ${p3.x.toFixed(1)},${p3.y.toFixed(1)}`;
+}
+function tpSectorBBox(rInner,rOuter,a0,a1,pad){
+  const pts=[{x:0,y:0}];
+  const steps=10;
+  for(let i=0;i<=steps;i++){
+    const a=a0+(a1-a0)*(i/steps);
+    pts.push(polarXY(rOuter,a));
+  }
+  pts.push(polarXY(rInner,a0),polarXY(rInner,a1));
+  const xs=pts.map(p=>p.x),ys=pts.map(p=>p.y);
+  const minX=Math.min(...xs)-pad,minY=Math.min(...ys)-pad;
+  return {x:minX,y:minY,w:Math.max(...xs)+pad-minX,h:Math.max(...ys)+pad-minY};
 }
 
 function tpStarPath(cx,cy,rOuter){
@@ -3588,59 +3619,39 @@ function tpStarsFor(mastery){
   return 0;
 }
 
-const TP_ROW_OF={M1:0,M2:0,P:0,C:1,B:1};
 function tpBuildWorld(){
-  const PAD_X=70,PAD_TOP=95,PAD_BOTTOM=45,ROW_GAP=100;
-  const rowMods=[[],[]];
-  TAXONOMY.forEach(mod=>rowMods[TP_ROW_OF[mod.code]??0].push(mod));
+  const totalTopics=TAXONOMY.reduce((s,m)=>s+m.topics.length,0);
+  const anglePerTopic=(2*Math.PI-TP_GAP_RAD*TAXONOMY.length)/totalTopics;
 
-  const rowData=rowMods.map(mods=>{
-    let cursorX=PAD_X,rowMinY=Infinity,rowMaxY=-Infinity;
-    const rowIslands=[];
-    mods.forEach(mod=>{
-      const n=mod.topics.length;
-      const raw=mod.topics.map((topic,i)=>{
-        const col=Math.floor(i/TP_MAX_ROWS);
-        const row=i-col*TP_MAX_ROWS;
-        const rowsInCol=Math.min(TP_MAX_ROWS,n-col*TP_MAX_ROWS);
-        const localY=(row-(rowsInCol-1)/2)*TP_ROW_SPACING;
-        const jitterX=(col%2===1)?TP_COL_SPACING*0.3:0;
-        return {topic,localX:col*TP_COL_SPACING+jitterX,localY,r:tpNodeRadius(topic.subtopics.length)};
-      });
-      const minLX=Math.min(...raw.map(nd=>nd.localX-nd.r));
-      const maxLX=Math.max(...raw.map(nd=>nd.localX+nd.r));
-      const minLY=Math.min(...raw.map(nd=>nd.localY-nd.r));
-      const maxLY=Math.max(...raw.map(nd=>nd.localY+nd.r));
-      const islandLeft=cursorX;
-      const islandRight=islandLeft+(maxLX-minLX);
-      rowIslands.push({mod,raw,islandLeft,islandRight,minLX});
-      rowMinY=Math.min(rowMinY,minLY);
-      rowMaxY=Math.max(rowMaxY,maxLY);
-      cursorX=islandRight+TP_ISLAND_GAP;
-    });
-    return {rowIslands,rowMinY,rowMaxY,rowHeight:(rowMaxY-rowMinY)+PAD_TOP+PAD_BOTTOM};
-  });
-
-  const totalRowsHeight=rowData.reduce((s,r)=>s+r.rowHeight,0)+ROW_GAP*(rowData.length-1);
-  let yCursor=-totalRowsHeight/2;
+  let angleCursor=-Math.PI/2;
   const islands=[];
-  rowData.forEach(rd=>{
-    const rowTop=yCursor;
-    const yShift=rowTop+PAD_TOP-rd.rowMinY;
-    rd.rowIslands.forEach(ri=>{
-      const nodes=ri.raw.map(nd=>({topic:nd.topic,x:ri.islandLeft-ri.minLX+nd.localX,y:nd.localY+yShift,r:nd.r}));
-      const bbox={x:ri.islandLeft-PAD_X*0.4,y:rowTop,w:(ri.islandRight-ri.islandLeft)+PAD_X*0.8,h:rd.rowHeight};
-      islands.push({mod:ri.mod,nodes,bbox,labelX:(ri.islandLeft+ri.islandRight)/2,labelY:rowTop+34});
+  TAXONOMY.forEach(mod=>{
+    const n=mod.topics.length;
+    const wedgeAngle=anglePerTopic*n;
+    const angleStart=angleCursor,angleEnd=angleCursor+wedgeAngle;
+    const angleMid=(angleStart+angleEnd)/2;
+    const innerPad=Math.min(wedgeAngle*0.14,anglePerTopic*0.4);
+    const usableStart=angleStart+innerPad,usableEnd=angleEnd-innerPad;
+
+    const nodes=mod.topics.map((topic,i)=>{
+      const t=n===1?0.5:i/(n-1);
+      const angle=usableStart+(usableEnd-usableStart)*t;
+      const orbitR=(i%2===0)?TP_R_TOPIC_A:TP_R_TOPIC_B;
+      const p=polarXY(orbitR,angle);
+      return {topic,x:p.x,y:p.y,angle,orbitR,r:tpNodeRadius(topic.subtopics.length)};
     });
-    yCursor+=rd.rowHeight+ROW_GAP;
+
+    const sp=polarXY(TP_R_SUBJECT,angleMid);
+    const subjectNode={x:sp.x,y:sp.y,angle:angleMid,r:30};
+    const bbox=tpSectorBBox(0,TP_R_TOPIC_B+70,angleStart,angleEnd,50);
+
+    islands.push({mod,angleStart,angleEnd,angleMid,subjectNode,nodes,bbox});
+    angleCursor=angleEnd+TP_GAP_RAD;
   });
 
-  const xs=islands.flatMap(isl=>[isl.bbox.x,isl.bbox.x+isl.bbox.w]);
-  const ys=islands.flatMap(isl=>[isl.bbox.y,isl.bbox.y+isl.bbox.h]);
-  const bbox={x:Math.min(...xs)-40,y:Math.min(...ys)-40,w:0,h:0};
-  bbox.w=Math.max(...xs)+40-bbox.x;
-  bbox.h=Math.max(...ys)+40-bbox.y;
-  return {islands,bbox};
+  const worldR=TP_R_TOPIC_B+TP_NODE_MAX_R+90;
+  const bbox={x:-worldR,y:-worldR,w:worldR*2,h:worldR*2};
+  return {islands,bbox,root:{x:0,y:0,r:TP_R_ROOT}};
 }
 
 function tpFindNode(code){
@@ -3672,23 +3683,11 @@ function tpFitRect(rect,pad){
   if(w/h>aspect)h=w/aspect;else w=h*aspect;
   return {x:cx-w/2,y:cy-h/2,w,h};
 }
-/* On tall/narrow (portrait) containers, fitting the whole (wide) world to the container's
-   aspect ratio would blow the camera height up far past the content, shrinking every node
-   to a speck. Instead anchor the camera height to one island's natural size and centre on
-   the first island, so mobile opens on a legible slice — pan to reach the rest, same as
-   jumping to an island on desktop. */
+/* The mind map radiates evenly from the centre in every direction, so its bounding box
+   is already roughly square — fitting it straight to the container works on any aspect,
+   phone or desktop, without the wide-world special-casing the old layout needed. */
 function tpInitialFitRect(){
-  const svg=document.getElementById('tpMapSvg');
-  const cRect=svg?svg.getBoundingClientRect():null;
-  const b=tpWorld.bbox;
-  if(!cRect||!cRect.width||cRect.width>=cRect.height*0.9)return tpFitRect(b,1.08);
-  const aspect=cRect.width/cRect.height;
-  const first=tpWorld.islands[0].bbox;
-  const h=first.h*1.15;
-  const w=h*aspect;
-  const cx=first.x+Math.min(first.w,w)/2-10;
-  const cy=first.y+first.h/2;
-  return {x:cx-w/2,y:cy-h/2,w,h};
+  return tpFitRect(tpWorld.bbox,1.04);
 }
 
 function tpApplyViewBox(){
@@ -3717,19 +3716,30 @@ function tpAnimateCameraTo(target,duration){
   tpTweenRAF=requestAnimationFrame(step);
 }
 
+function tpWedgePath(rInner,rOuter,a0,a1){
+  const p0=polarXY(rInner,a0),p1=polarXY(rOuter,a0),p2=polarXY(rOuter,a1),p3=polarXY(rInner,a1);
+  const largeArc=(a1-a0)>Math.PI?1:0;
+  return `M${p0.x.toFixed(1)},${p0.y.toFixed(1)} L${p1.x.toFixed(1)},${p1.y.toFixed(1)} A${rOuter.toFixed(1)},${rOuter.toFixed(1)} 0 ${largeArc} 1 ${p2.x.toFixed(1)},${p2.y.toFixed(1)} L${p3.x.toFixed(1)},${p3.y.toFixed(1)} A${rInner.toFixed(1)},${rInner.toFixed(1)} 0 ${largeArc} 0 ${p0.x.toFixed(1)},${p0.y.toFixed(1)} Z`;
+}
 function tpIslandHtml(island){
   const meta=MODULE_META[island.mod.code];
-  const b=island.bbox,cx=b.x+b.w/2,cy=b.y+b.h/2;
+  const wedge=tpWedgePath(TP_R_ROOT+6,TP_R_TOPIC_B+40,island.angleStart,island.angleEnd);
+  const lp=polarXY(TP_R_TOPIC_B+64,island.angleMid);
+  const cos=Math.cos(island.angleMid);
+  const anchor=cos>0.2?'start':cos<-0.2?'end':'middle';
   return `<g class="tp-island">
-    <ellipse cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" rx="${(b.w/2).toFixed(1)}" ry="${(b.h/2).toFixed(1)}" fill="${meta.color}" opacity="0.08" filter="url(#tpBlobBlur)"/>
-    <text class="tp-island-label" x="${island.labelX.toFixed(1)}" y="${island.labelY.toFixed(1)}" text-anchor="middle" font-size="27" fill="${meta.color}">${island.mod.name}</text>
-    <text class="tp-island-sub" x="${island.labelX.toFixed(1)}" y="${(island.labelY+20).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="var(--ter)">${island.mod.topics.length} topics</text>
+    <path d="${wedge}" fill="${meta.color}" opacity="0.07"/>
+    <text class="tp-island-label" x="${lp.x.toFixed(1)}" y="${lp.y.toFixed(1)}" text-anchor="${anchor}" font-size="19" fill="${meta.color}">${island.mod.name}</text>
+    <text class="tp-island-sub" x="${lp.x.toFixed(1)}" y="${(lp.y+17).toFixed(1)}" text-anchor="${anchor}" font-size="9.5" fill="var(--ter)">${island.mod.topics.length} topics</text>
   </g>`;
 }
 function tpTrailHtml(island){
   const meta=MODULE_META[island.mod.code];
-  const pts=island.nodes.map(nd=>`${nd.x.toFixed(1)},${nd.y.toFixed(1)}`).join(' ');
-  return `<polyline points="${pts}" fill="none" stroke="${meta.color}" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 15"/>`;
+  let html=`<path d="${radialLinkPath(TP_R_ROOT,island.angleMid,TP_R_SUBJECT,island.angleMid)}" fill="none" stroke="${meta.color}" stroke-width="7" stroke-linecap="round" stroke-opacity="0.6"/>`;
+  island.nodes.forEach(nd=>{
+    html+=`<path d="${radialLinkPath(TP_R_SUBJECT,island.angleMid,nd.orbitR,nd.angle)}" fill="none" stroke="${meta.color}" stroke-width="3" stroke-linecap="round" stroke-opacity="0.42"/>`;
+  });
+  return html;
 }
 
 function tpRenderWorld(){
@@ -3739,11 +3749,17 @@ function tpRenderWorld(){
   svg.innerHTML=`
     <defs>
       <filter id="tpNodeShadow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(20,25,50,.3)"/></filter>
-      <filter id="tpBlobBlur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="36"/></filter>
+      <radialGradient id="tpRootGrad" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#5B7CFA"/><stop offset="100%" stop-color="#1E293B"/></radialGradient>
     </defs>
     <rect id="tpBgRect" x="${w.x}" y="${w.y}" width="${w.w}" height="${w.h}" fill="transparent" pointer-events="all"/>
     <g id="tpIslandsLayer">${tpWorld.islands.map(tpIslandHtml).join('')}</g>
     <g id="tpTrailsLayer">${tpWorld.islands.map(tpTrailHtml).join('')}</g>
+    <g class="tp-root">
+      <circle class="tp-root-pulse" r="${tpWorld.root.r+10}"/>
+      <circle r="${tpWorld.root.r}" fill="url(#tpRootGrad)" filter="url(#tpNodeShadow)"/>
+      <text text-anchor="middle" dy="-.1em" font-size="14" font-weight="700" fill="#fff" font-family="'Instrument Serif',serif" font-style="italic">ESAT</text>
+      <text text-anchor="middle" dy="1.35em" font-size="8" fill="rgba(255,255,255,.85)" font-family="Inter,sans-serif">50 topics</text>
+    </g>
     <g id="tpNodesLayer"></g>`;
   tpRenderNodes();
   tpApplyViewBox();
@@ -3755,6 +3771,12 @@ function tpRenderNodes(){
   let html='';
   tpWorld.islands.forEach(island=>{
     const meta=MODULE_META[island.mod.code];
+    const sn=island.subjectNode;
+    html+=`<g class="tp-subject-node" data-subject="${island.mod.code}" tabindex="0" role="button" aria-label="${island.mod.name} — ${island.mod.topics.length} topics, jump in" transform="translate(${sn.x.toFixed(1)},${sn.y.toFixed(1)})" onkeydown="if(event.key==='Enter')tpJumpTo('${island.mod.code}')">
+      <title>${island.mod.name} · ${island.mod.topics.length} topics</title>
+      <circle r="${sn.r}" fill="${meta.color}" filter="url(#tpNodeShadow)"/>
+      <text text-anchor="middle" dy=".32em" font-size="12.5" font-weight="800" fill="#fff" font-family="Inter,sans-serif">${island.mod.code}</text>
+    </g>`;
     island.nodes.forEach(nd=>{
       const topic=nd.topic;
       const prog=TOPIC_PROGRESS[topic.code];
@@ -3937,7 +3959,8 @@ function tpInitInteraction(){
     tpPointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
     if(tpPointers.size===1){
       const nodeEl=e.target.closest('.tp-node');
-      tpDownInfo={code:nodeEl?nodeEl.dataset.code:null};
+      const subjEl=e.target.closest('.tp-subject-node');
+      tpDownInfo={code:nodeEl?nodeEl.dataset.code:null,subject:subjEl?subjEl.dataset.subject:null};
       tpMoved=false;
       tpDragState={mode:'pan',startClientX:e.clientX,startClientY:e.clientY,startCam:{...tpCamera}};
       container.classList.add('grabbing');
@@ -3979,7 +4002,9 @@ function tpInitInteraction(){
     if(tpPointers.size===0){
       container.classList.remove('grabbing');
       if(tpDownInfo&&!tpMoved){
-        if(tpDownInfo.code)tpSelectTopic(tpDownInfo.code);else tpDeselect();
+        if(tpDownInfo.code)tpSelectTopic(tpDownInfo.code);
+        else if(tpDownInfo.subject)tpJumpTo(tpDownInfo.subject);
+        else tpDeselect();
       }
       tpDragState=null;
       tpDownInfo=null;
