@@ -721,6 +721,29 @@ button{font-family:inherit}
 .mm-summary-stat span{font-size:.6875rem;color:var(--ter);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
 .mm-summary-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:1.75rem}
 @media(max-width:640px){.mm-summary-stats{grid-template-columns:1fr 1fr}.mm-toolbar{flex-direction:column;align-items:flex-start}}
+
+/* ═══ TOPICS / SKILL TREE ═══ */
+.st-wrap{width:100%;overflow-x:auto}
+.st-wrap svg{display:block;width:100%;height:auto;min-width:420px;max-width:640px;margin:0 auto}
+.st-link{stroke:var(--bdr);stroke-width:1.5}
+.st-hub circle{filter:drop-shadow(0 3px 8px rgba(20,25,50,.18))}
+.st-hub text{font-family:'Inter',sans-serif}
+.st-node{cursor:pointer;outline:none}
+.st-node circle{transition:stroke-width .12s,filter .12s}
+.st-node:hover circle:first-of-type,.st-node:focus-visible circle:first-of-type{stroke-width:3}
+.st-node text{font-family:'JetBrains Mono',monospace;font-weight:700}
+.st-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--bdr)}
+.st-legend-item{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--sec)}
+.st-legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.topic-detail-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.subtopic-list{display:flex;flex-direction:column}
+.subtopic-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--bdr)}
+.subtopic-row:last-child{border-bottom:none;padding-bottom:0}
+.subtopic-code{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;color:var(--ter);width:52px;flex-shrink:0}
+.subtopic-name{flex:1;font-size:.8125rem;color:var(--text);min-width:0;line-height:1.4}
+.subtopic-bar-wrap{width:110px;flex-shrink:0}
+.subtopic-pct{width:38px;flex-shrink:0;text-align:right;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700}
+@media(max-width:640px){.subtopic-row{flex-wrap:wrap}.subtopic-bar-wrap{order:3;width:100%;flex-basis:100%}.subtopic-code{width:auto}}
 </style>
 </head>
 <body>
@@ -753,7 +776,7 @@ button{font-family:inherit}
       <span>Mock Exams</span>
       <span class="sb-tag">NEW</span>
     </button>
-    <button class="sb-item" onclick="nav(this,'soon','Topics')">
+    <button class="sb-item" id="navTopics" onclick="nav(this,'topics','Topics')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg>
       <span>Topics</span>
     </button>
@@ -1009,6 +1032,33 @@ button{font-family:inherit}
           <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="mmEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══ TOPICS VIEW ═══ -->
+  <div id="view-topics" class="view">
+    <div class="page">
+      <div class="greeting">
+        <h1>Topic Mastery Map</h1>
+        <p>The ESAT syllabus broken into <strong>5 modules</strong>, <strong>50 topics</strong> and <strong>270 subtopics</strong>. Each node is a topic — its colour shows how well you know it, its size shows how much ground it covers. Click a node to drill into subtopics.</p>
+      </div>
+
+      <div class="stat-grid" id="tpStatGrid"></div>
+
+      <div class="card" style="margin-bottom:1.1rem">
+        <div class="trend-head">
+          <div class="na-header" style="margin-bottom:0">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg>
+            <h3 class="section-title">Skill Tree</h3>
+          </div>
+          <div class="seg-group" id="tpSubjectSeg" role="group" aria-label="Subject"></div>
+        </div>
+        <p class="section-sub" style="margin:.1rem 0 1.1rem">Node size = subtopics covered &middot; ring fill = mastery. Click a topic for its subtopic breakdown.</p>
+        <div class="st-wrap"><svg id="tpTreeSvg" role="img" aria-label="Topic skill tree"></svg></div>
+        <div class="st-legend" id="tpLegend"></div>
+      </div>
+
+      <div class="card" id="tpDetailCard"></div>
     </div>
   </div>
 
@@ -3433,6 +3483,229 @@ document.addEventListener('keydown',e=>{
   mmRenderHub();
   mmInitToolbar();
 })();
+
+/* ═══ Topics / Skill Tree ═══ */
+const TAXONOMY=[{"code":"M1","name":"Mathematics 1","topics":[{"code":"M1","name":"Units","subtopics":[{"code":"M1.1","name":"Use standard units of mass, length, time, money and other measures."},{"code":"M1.2","name":"Change freely between related standard units…"}]},{"code":"M2","name":"Number","subtopics":[{"code":"M2.1","name":"Order positive and negative integers, decimals and fractions."},{"code":"M2.2","name":"Apply the four operations (addition, subtraction, multiplication and division) to integers…"},{"code":"M2.3","name":"Use the concepts and vocabulary of prime numbers, factors (divisors), multiples, common factors…"},{"code":"M2.4","name":"Recognise and use relationships between operations, including inverse operations."},{"code":"M2.5","name":"Apply systematic listing strategies."},{"code":"M2.6","name":"Use and understand the terms: square, positive and negative square root, cube and cube root."},{"code":"M2.7","name":"Use index laws to simplify numerical expressions, and for multiplication and division of…"},{"code":"M2.8","name":"Interpret, order and calculate with numbers written in standard index form (standard form)…"},{"code":"M2.9","name":"Convert between terminating decimals, percentages and fractions."},{"code":"M2.10","name":"Use fractions, decimals and percentages interchangeably in calculations."},{"code":"M2.11","name":"Calculate exactly with fractions, surds and multiples of π."},{"code":"M2.12","name":"Calculate with upper and lower bounds, and use in contextual problems."},{"code":"M2.13","name":"Round numbers and measures to an appropriate degree of accuracy, e.g."},{"code":"M2.14","name":"Use approximation to produce estimates of calculations, including expressions involving  π  or…"}]},{"code":"M3","name":"Ratio and proportion","subtopics":[{"code":"M3.1","name":"Understand and use scale factors, scale diagrams and maps."},{"code":"M3.2","name":"Express a quantity as a fraction of another, where the fraction is less than 1 or greater than 1."},{"code":"M3.3","name":"Understand and use ratio notation."},{"code":"M3.4","name":"Divide a given quantity into two (or more) parts in a given part : part ratio."},{"code":"M3.5","name":"Apply ratio to real contexts and problems, such as those involving conversion, comparison…"},{"code":"M3.6","name":"Understand and use proportion."},{"code":"M3.7","name":"Identify and work with fractions in ratio problems."},{"code":"M3.8","name":"Define percentage as ‘number of parts per hundred’."},{"code":"M3.9","name":"Understand and use direct and inverse proportion, including algebraic representations."},{"code":"M3.10","name":"Compare lengths, areas and volumes using ratio notation."},{"code":"M3.11","name":"Set up, solve and interpret the answers in growth and decay problems, including compound…"}]},{"code":"M4","name":"Algebra","subtopics":[{"code":"M4.1","name":"Understand, use and interpret algebraic notation; for instance: 𝑎𝑏 in place of 𝑎 × 𝑏 ; 3𝑦 in…"},{"code":"M4.2","name":"Use index laws in algebra for multiplication and division of integer, fractional, and negative…"},{"code":"M4.3","name":"Substitute numerical values into formulae and expressions, including scientific formulae."},{"code":"M4.4","name":"Collect like terms, multiply a single term over a bracket, take out common factors, and expand…"},{"code":"M4.5","name":"Factorise quadratic expressions of the form 𝑥2  + 𝑏𝑥 + 𝑐 , including the difference of two squares."},{"code":"M4.6","name":"Simplify expressions involving sums, products and powers, including the laws of indices."},{"code":"M4.7","name":"Rearrange formulae to change the subject."},{"code":"M4.8","name":"Understand the difference between an equation and an identity."},{"code":"M4.9","name":"Work with coordinates in all four quadrants."},{"code":"M4.10","name":"Identify and interpret gradients and intercepts of linear functions ( 𝑦 = 𝑚𝑥 + 𝑐 ) graphically…"},{"code":"M4.11","name":"Identify and interpret roots, intercepts and turning points of quadratic functions graphically."},{"code":"M4.12","name":"Recognise, sketch and interpret graphs of…"},{"code":"M4.13","name":"Interpret graphs (including reciprocal graphs and exponential graphs) and graphs of non-standard…"},{"code":"M4.14","name":"Calculate or estimate gradients of graphs and areas under graphs (including quadratic and other…"},{"code":"M4.15","name":"Set up and solve, both algebraically and graphically, simple equations including simultaneous…"},{"code":"M4.16","name":"Solve quadratic equations (including those that require rearrangement) algebraically by…"},{"code":"M4.17","name":"Solve linear inequalities in one or two variables."},{"code":"M4.18","name":"Generate terms of a sequence using term-to-term or position-to-term rules."},{"code":"M4.19","name":"Deduce expressions to calculate the 𝑛th term of linear or quadratic sequences."}]},{"code":"M5","name":"Geometry","subtopics":[{"code":"M5.1","name":"Use conventional terms and notation: points, lines, line segments, vertices, edges, planes…"},{"code":"M5.2","name":"Recall and use the properties of angles at a point, angles on a straight line, perpendicular…"},{"code":"M5.3","name":"Derive and apply the properties and definitions of special types of quadrilaterals, including…"},{"code":"M5.4","name":"Understand and use the basic congruence criteria for triangles (SSS, SAS, ASA, RHS)."},{"code":"M5.5","name":"Apply angle facts, triangle congruence, similarity, and properties of quadrilaterals to results…"},{"code":"M5.6","name":"Identify, describe and construct congruent and similar shapes, including on coordinate axes, by…"},{"code":"M5.7","name":"Know and use the formula for Pythagoras’ theorem: a2 + b2 = c2 Use Pythagoras’ theorem in both 2…"},{"code":"M5.8","name":"Identify and use conventional circle terms: centre, radius, chord, diameter, circumference…"},{"code":"M5.9","name":"Apply the standard circle theorems concerning angles, radii, tangents and chords, and use them…"},{"code":"M5.10","name":"Solve geometrical problems on 2-dimensional coordinate axes."},{"code":"M5.11","name":"Know the terminology faces, surfaces, edges and vertices when applied to cubes, cuboids, prisms…"},{"code":"M5.12","name":"Interpret plans and elevations of 3-dimensional shapes."},{"code":"M5.13","name":"Use and interpret maps and scale drawings."},{"code":"M5.14","name":"Know and apply formulae to calculate"},{"code":"M5.15","name":"Know the formulae"},{"code":"M5.16","name":"Calculate arc lengths, angles and areas of sectors of circles."},{"code":"M5.17","name":"Apply the concepts of congruence and similarity in simple figures, including the relationships…"},{"code":"M5.18","name":"Know and use the trigonometric ratios: Apply these to find angles and lengths in right-angled…"},{"code":"M5.19","name":"Apply addition and subtraction of vectors, multiplication of vectors by a scalar, and…"}]},{"code":"M6","name":"Statistics","subtopics":[{"code":"M6.1","name":"Interpret and construct tables, charts and diagrams, including…"},{"code":"M6.2","name":"Interpret and construct diagrams for grouped discrete data and continuous data…"},{"code":"M6.3","name":"Calculate the mean, mode, median and range for ungrouped data."},{"code":"M6.4","name":"Use and interpret scatter graphs of bivariate data."}]},{"code":"M7","name":"Probability","subtopics":[{"code":"M7.1","name":"Analyse the frequency of outcomes of probability experiments using tables and frequency trees."},{"code":"M7.2","name":"Apply ideas of randomness, fairness and equally likely events to calculate expected outcomes of…"},{"code":"M7.3","name":"Relate relative expected frequencies to theoretical probability, using appropriate language and…"},{"code":"M7.4","name":"Apply the property that the probabilities of an exhaustive set of outcomes sum to one."},{"code":"M7.5","name":"Enumerate sets and combinations of sets systematically, using tables, grids, Venn diagrams and…"},{"code":"M7.6","name":"Construct theoretical possibility spaces for single and combined experiments with equally likely…"},{"code":"M7.7","name":"Know when to add or multiply two probabilities, and understand conditional probability."}]}]},{"code":"M2","name":"Mathematics 2","topics":[{"code":"MM1","name":"Algebra and functions","subtopics":[{"code":"MM1.1","name":"Laws of indices for all rational exponents."},{"code":"MM1.2","name":"Use and manipulation of surds."},{"code":"MM1.3","name":"Quadratic functions and their graphs; the discriminant of a quadratic function; completing the…"},{"code":"MM1.4","name":"Simultaneous equations: analytical solution by substitution, e.g."},{"code":"MM1.5","name":"Solution of linear and quadratic inequalities."},{"code":"MM1.6","name":"Algebraic manipulation of polynomials, including…"},{"code":"MM1.7","name":"Qualitative understanding that a function is a many-to-one (or sometimes just a one- to-one)…"}]},{"code":"MM2","name":"Sequences and series","subtopics":[{"code":"MM2.1","name":"Sequences, including those given by a formula for the 𝑛th term and those generated by a simple…"},{"code":"MM2.2","name":"Arithmetic series, including the formula for the sum of the first n natural numbers."},{"code":"MM2.3","name":"The sum of a finite geometric series."},{"code":"MM2.4","name":"Binomial expansion of  (1 + 𝑥)𝑛  for positive integer n, and for expressions of the form (𝑎+…"}]},{"code":"MM3","name":"Coordinate geometry in the (x, y) plane","subtopics":[{"code":"MM3.1","name":"Equation of a straight line, including 𝑦−𝑦1 = 𝑚(𝑥−𝑥1) 𝑎𝑥+ 𝑏𝑦+ 𝑐= 0 Conditions for two straight…"},{"code":"MM3.2","name":"Coordinate geometry of the circle: using the equation of a circle in the forms (𝑥−𝑎)2 + (𝑦−𝑏)2 =…"},{"code":"MM3.3","name":"Use of the following circle properties: The perpendicular from the centre to a chord bisects the…"}]},{"code":"MM4","name":"Trigonometry","subtopics":[{"code":"MM4.1","name":"The sine and cosine rules, and the area of a triangle in the form 2 𝑎𝑏sin C."},{"code":"MM4.2","name":"Radian measure, including use for arc length and area of sector and segment."},{"code":"MM4.3","name":"The values of sine, cosine, and tangent for the angles 0°, 30°, 45°, 60°, 90°."},{"code":"MM4.4","name":"The sine, cosine, and tangent functions; their graphs, symmetries, and periodicity."},{"code":"MM4.5","name":"Knowledge and use of tan 𝜃= sin 𝜃 cos 𝜃 sin2 𝜃+ cos2 𝜃= 1 There are many ways to define…"},{"code":"MM4.6","name":"Solution of simple trigonometric equations in a given interval (this may involve the use of the…"}]},{"code":"MM5","name":"Exponentials and logarithms","subtopics":[{"code":"MM5.1","name":"𝑦= 𝑎𝑥 and its graph, for simple positive values of 𝑎."},{"code":"MM5.2","name":"Laws of logarithms: 𝑎𝑏= 𝑐⟺𝑏= log𝑎𝑐 log𝑎𝑥+ log𝑎𝑦= log𝑎(𝑥𝑦) log𝑎𝑥−log𝑎𝑦= log𝑎(𝑥 𝑦) 𝑘log𝑎𝑥=…"},{"code":"MM5.3","name":"The solution of equations of the form 𝑎𝑥= 𝑏, and equations which can be reduced to this form…"}]},{"code":"MM6","name":"Differentiation","subtopics":[{"code":"MM6.1","name":"The derivative of 𝑓(𝑥) as the gradient of the tangent to the graph 𝑦= 𝑓(𝑥) at a point."},{"code":"MM6.2","name":"Differentiation of 𝑥𝑛 for rational n, and related sums and differences."},{"code":"MM6.3","name":"Applications of differentiation to gradients, tangents, normals, stationary points (maxima and…"}]},{"code":"MM7","name":"Integration","subtopics":[{"code":"MM7.1","name":"Definite integration as related to the ‘area between a curve and an axis’."},{"code":"MM7.2","name":"Finding definite and indefinite integrals of 𝑥𝑛 for n rational, 𝑛≠1, and related sums and…"},{"code":"MM7.3","name":"An understanding of the Fundamental Theorem of Calculus and its significance to integration."},{"code":"MM7.4","name":"Combining integrals with either equal or contiguous ranges."},{"code":"MM7.5","name":"Approximation of the area under a curve using the trapezium rule; determination of whether this…"},{"code":"MM7.6","name":"Solving differential equations of the form 𝑑𝑦 𝑑𝑥= 𝑓(𝑥) Solving the expression 𝑑𝑦 𝑑𝑥= 𝑓(𝑥) is…"}]},{"code":"MM8","name":"Graphs of functions","subtopics":[{"code":"MM8.1","name":"Recognise and be able to sketch the graphs of common functions that appear in this…"},{"code":"MM8.2","name":"Knowledge of the effect of simple transformations on the graph of 𝑦= 𝑓(𝑥) with positive or…"},{"code":"MM8.3","name":"Understand how altering the values of 𝑚 and 𝑐 affects the graph of  𝑦= 𝑚𝑥+ 𝑐."},{"code":"MM8.4","name":"Understand how altering the values of 𝑎, 𝑏 and 𝑐 in 𝑦= 𝑎(𝑥+ 𝑏)2 + 𝑐 affects the corresponding graph."},{"code":"MM8.5","name":"Use differentiation to help determine the shape of the graph of a given function; including…"},{"code":"MM8.6","name":"Use algebraic techniques to determine where the graph of a function intersects the coordinate…"},{"code":"MM8.7","name":"Geometric interpretation of algebraic solutions of equations; relationship between the…"}]}]},{"code":"P","name":"Physics","topics":[{"code":"P1","name":"Electricity","subtopics":[{"code":"P1.1","name":"Electrostatics"},{"code":"P1.2","name":"Electric circuits"}]},{"code":"P2","name":"Magnetism","subtopics":[{"code":"P2.1","name":"Properties of magnets"},{"code":"P2.2","name":"Magnetic field due to an electric current…"},{"code":"P2.3","name":"The motor effect"},{"code":"P2.4","name":"Electromagnetic induction"},{"code":"P2.5","name":"Transformers"}]},{"code":"P3","name":"Mechanics","subtopics":[{"code":"P3.1","name":"Kinematics"},{"code":"P3.2","name":"Forces"},{"code":"P3.3","name":"Force and extension"},{"code":"P3.4","name":"Newton’s laws"},{"code":"P3.5","name":"Mass and weight"},{"code":"P3.6","name":"Momentum"},{"code":"P3.7","name":"Energy"}]},{"code":"P4","name":"Thermal physics","subtopics":[{"code":"P4.1","name":"Conduction"},{"code":"P4.2","name":"Convection"},{"code":"P4.3","name":"Thermal radiation"},{"code":"P4.4","name":"Heat capacity"}]},{"code":"P5","name":"Matter","subtopics":[{"code":"P5.1","name":"States of matter"},{"code":"P5.2","name":"Ideal gases"},{"code":"P5.3","name":"State changes"},{"code":"P5.4","name":"Density"},{"code":"P5.5","name":"Pressure"}]},{"code":"P6","name":"Waves","subtopics":[{"code":"P6.1","name":"Wave properties"},{"code":"P6.2","name":"Wave behaviour"},{"code":"P6.3","name":"Optics"},{"code":"P6.4","name":"Sound waves"},{"code":"P6.5","name":"Electromagnetic spectrum"}]},{"code":"P7","name":"Radioactivity","subtopics":[{"code":"P7.1","name":"Atomic structure"},{"code":"P7.2","name":"Radioactive decay"},{"code":"P7.3","name":"Ionising radiation"},{"code":"P7.4","name":"Half-life"}]}]},{"code":"C","name":"Chemistry","topics":[{"code":"C1","name":"Atomic structure","subtopics":[{"code":"C1.1","name":"Describe the structure of the atom as a central nucleus (containing protons and neutrons)…"},{"code":"C1.2","name":"Know the relative masses and charges of protons, neutrons and electrons, and recognise that most…"},{"code":"C1.3","name":"Know and be able to use the terms atomic number and mass number, together with standard notation…"},{"code":"C1.4","name":"Use the atomic number to write the electron configurations of the first 20 elements in the…"},{"code":"C1.5","name":"Know the definition of isotopes as atoms of an element with the same number of protons but…"},{"code":"C1.6","name":"Know and use the concept of relative atomic mass, Ar , including calculating values from given data."}]},{"code":"C2","name":"The Periodic Table","subtopics":[{"code":"C2.1","name":"Know that Periods are horizontal rows and Groups are vertical columns."},{"code":"C2.2","name":"Know that the elements are arranged in the order of increasing atomic number."},{"code":"C2.3","name":"Recall the position of metals and non-metals in the Periodic Table: alkali metals (Group 1)…"},{"code":"C2.4","name":"Know and use the relationship between the position of an atom in the Periodic Table (Group and…"},{"code":"C2.5","name":"Understand that elements in the same Group have similar chemical properties and that down a…"}]},{"code":"C3","name":"Chemical reactions, formulae and equations","subtopics":[{"code":"C3.1","name":"Understand that in a chemical reaction, new substances are formed by the rearrangement of atoms…"},{"code":"C3.2","name":"Know the chemical formulae of simple, common ionic and covalent compounds."},{"code":"C3.3","name":"Know and use state symbols: solid (s), liquid (l), gas (g), aqueous solution (aq)."},{"code":"C3.4","name":"Be able to construct and balance a chemical equation, including ionic and half- equations."},{"code":"C3.5","name":"Understand that often chemical reactions can be reversible and do not go to completion."}]},{"code":"C4","name":"Quantitative chemistry","subtopics":[{"code":"C4.1","name":"Use Ar values to calculate the relative molar mass, Mr."},{"code":"C4.2","name":"Know that Avogadro’s number gives the number of particles in one mole of a substance."},{"code":"C4.3","name":"Know that one mole of a substance is the Ar or Mr in grams, and perform conversions of grams to…"},{"code":"C4.4","name":"Calculate the percentage composition by mass of a compound using given Ar values."},{"code":"C4.5","name":"Know that the empirical formula is the simplest integer ratio of atoms in a compound."},{"code":"C4.6","name":"Use balanced chemical equations to calculate the masses of reactants and products, including if…"},{"code":"C4.7","name":"Be able to construct balanced chemical equations from reacting masses or gas volumes data."},{"code":"C4.8","name":"Understand that (for an ideal gas) one mole of a gas occupies a set volume at a given…"},{"code":"C4.9","name":"Solutions"},{"code":"C4.10","name":"Use the concentrations of solutions (or find the concentrations from given data) and the…"},{"code":"C4.11","name":"the equation: percentage yield  = actual yield (g) predicted yield (g) × 100 25.0 g of ethanoic…"}]},{"code":"C5","name":"Oxidation, reduction and redox","subtopics":[{"code":"C5.1","name":"Know that on a basic level, oxidation is the gain of oxygen and that reduction is the removal of…"},{"code":"C5.2","name":"Know and be able to use the concept that oxidation and reduction are the transfer of electrons, i.e."},{"code":"C5.4","name":"Identify any chemical equation that involves: oxidation only, reduction only, redox (both…"},{"code":"C5.3","name":"Determine and use the oxidation states of atoms in simple inorganic compounds."},{"code":"C5.5","name":"Understand the concept of disproportionation and recognise reactions (or species) where this occurs."},{"code":"C5.6","name":"Understand the terms oxidising agent and reducing agent, and be able to identify them in reactions."}]},{"code":"C6","name":"Chemical bonding, structure and properties","subtopics":[{"code":"C6.1","name":"Define and understand the differences between elements, compounds and mixtures."},{"code":"C6.2","name":"Understand that atoms often react to form compounds which have the electron configuration of a…"},{"code":"C6.3","name":"Ionic bonding"},{"code":"C6.4","name":"Covalent bonding"},{"code":"C6.5","name":"Metallic bonding"},{"code":"C6.6","name":"Understand that intermolecular forces can exist between molecules, and that these forces must be…"},{"code":"C6.7","name":"Be able to relate structure and bonding to physical properties, such as melting point and…"}]},{"code":"C7","name":"Group chemistry","subtopics":[{"code":"C7.1","name":"Know the physical and chemical properties of the alkali metals (Group 1), the halogens (Group…"},{"code":"C7.2","name":"Describe the trends in chemical reactivity and physical properties of the alkali metals (Group…"},{"code":"C7.3","name":"The halogens (Group 17)"}]},{"code":"C8","name":"Separation techniques","subtopics":[{"code":"C8.1","name":"Know that chemical processes are required to displace constituent elements from their compounds."},{"code":"C8.2","name":"Know that physical processes are required to separate mixtures, including miscible/immiscible…"},{"code":"C8.3","name":"Know when to apply the following separation techniques: simple/fractional distillation, paper…"},{"code":"C8.4","name":"Know how to establish the purity of a substance using chromatography."}]},{"code":"C9","name":"Acids, bases and salts","subtopics":[{"code":"C9.1","name":"Acids"},{"code":"C9.2","name":"Bases"},{"code":"C9.3","name":"Know that the reaction of an acid with a base can lead to neutralisation and is often exothermic."}]},{"code":"C10","name":"Rates of reaction","subtopics":[{"code":"C10.1","name":"Describe the qualitative effects on a rate of reaction of concentration, temperature, particle…"},{"code":"C10.2","name":"Know that the rate of reaction can be found by measuring the loss of a reactant or the gain of a…"},{"code":"C10.3","name":"Interpret data in graphical form concerning the rate of a reaction."},{"code":"C10.4","name":"Use collision theory to explain changes in the rate of a reaction."},{"code":"C10.5","name":"Understand that particles must have sufficient energy when they collide to react, and that this…"},{"code":"C10.6","name":"Know that catalysts"}]},{"code":"C11","name":"Energetics","subtopics":[{"code":"C11.1","name":"Understand the concepts of an exothermic reaction, for which ΔH is negative (negative enthalpy…"},{"code":"C11.2","name":"Know that if a reversible reaction is exothermic in one direction, it is endothermic in the…"},{"code":"C11.3","name":"Be able to interpret energy level diagrams."},{"code":"C11.4","name":"Be able to calculate energy changes from specific heat capacities and changes in temperature in…"},{"code":"C11.5","name":"Know that bond breaking is endothermic, and bond formation is exothermic, and be able to use…"}]},{"code":"C12","name":"Electrolysis","subtopics":[{"code":"C12.1","name":"Understand the terms electrode, cathode (negative electrode), anode (positive electrode) and…"},{"code":"C12.2","name":"Understand why direct current (dc), and not alternating current (ac), is used in electrolysis."},{"code":"C12.3","name":"Understand that in electrolysis at the cathode, the cations (positively charged ions) receive…"},{"code":"C12.4","name":"Understand and be able to predict the products of the electrolysis of the following…"},{"code":"C12.5","name":"Be able to write half-equations for the processes taking place at each electrode."},{"code":"C12.6","name":"Explain how electrolysis is used to electroplate objects."}]},{"code":"C13","name":"Carbon/Organic chemistry","subtopics":[{"code":"C13.1","name":"General concepts"},{"code":"C13.2","name":"Alkanes (saturated hydrocarbons)"},{"code":"C13.3","name":"Alkenes (unsaturated hydrocarbons)"},{"code":"C13.4","name":"Polymers"},{"code":"C13.5","name":"Alcohols"},{"code":"C13.6","name":"Carboxylic acids"}]},{"code":"C14","name":"Metals","subtopics":[{"code":"C14.1","name":"Understand that the reactivity of a metal is linked to its tendency to form positive ions and…"},{"code":"C14.2","name":"Be able to use displacement reactions to establish the order of reactivity of metals and vice versa."},{"code":"C14.3","name":"Describe how the uses of metals are related to their physical and chemical properties, e.g."},{"code":"C14.4","name":"Know that most metal ores are the oxides of the metal, and that the extraction of metals always…"},{"code":"C14.5","name":"Know that common properties of transition metals include…"}]},{"code":"C15","name":"Kinetic/Particle theory","subtopics":[{"code":"C15.1","name":"Be able to describe the packing and movement of particles in the three states of matter: solid…"},{"code":"C15.2","name":"Understand the changes to the packing and movement of particles in the following changes of…"}]},{"code":"C16","name":"Chemical tests","subtopics":[{"code":"C16.1","name":"Know and recognise the following tests for gases…"},{"code":"C16.2","name":"Know, recognise and describe the following tests for the anions…"},{"code":"C16.3","name":"Know and recognise the test for the following metal cations using aqueous sodium hydroxide…"},{"code":"C16.4","name":"Recall and recognise the flame test for the cations of the following metals: Li (crimson red)…"},{"code":"C16.5","name":"Know and recognise the test for the presence of water using anhydrous copper(II) sulfate (colour…"}]},{"code":"C17","name":"Air and water","subtopics":[{"code":"C17.1","name":"Know and be able to use the composition of dry air, and understand that fractional distillation…"},{"code":"C17.2","name":"Know the origins and describe the effects of greenhouse gases such as CO2 and CH4."},{"code":"C17.3","name":"Know the origins and effects of gaseous pollutants such as CO, CO2, SO2 and NOx."},{"code":"C17.4","name":"Know the purpose of chlorine and fluoride ions in the treatment of drinking water."}]}]},{"code":"B","name":"Biology","topics":[{"code":"B1","name":"Cells","subtopics":[{"code":"B1.1","name":"Know and understand the structure and function of the main sub-cellular components of eukaryotic…"},{"code":"B1.2","name":"Know and understand the structure and function of the main sub-cellular components of…"},{"code":"B1.3","name":"Know and understand the levels of organisation within organisms as: cells to tissues to organs…"}]},{"code":"B2","name":"Movement across membranes","subtopics":[{"code":"B2.1","name":"Know and understand the processes of diffusion, osmosis (in terms of water potential), and…"}]},{"code":"B3","name":"Cell division and sex determination","subtopics":[{"code":"B3.1","name":"Mitosis and the cell cycle"},{"code":"B3.2","name":"Meiosis and the cell cycle"},{"code":"B3.3","name":"Asexual and sexual reproduction"},{"code":"B3.4","name":"Sex determination"}]},{"code":"B4","name":"Inheritance","subtopics":[{"code":"B4.1","name":"Know and understand the nucleus as a site of genetic material in eukaryotic cells."},{"code":"B4.2","name":"Know and understand the following genetic terms…"},{"code":"B4.3","name":"Monohybrid crosses"}]},{"code":"B5","name":"DNA","subtopics":[{"code":"B5.1","name":"Know and understand that"},{"code":"B5.2","name":"Know and understand the structure of DNA"},{"code":"B5.3","name":"Protein synthesis"},{"code":"B5.4","name":"Gene mutations"}]},{"code":"B6","name":"Gene technologies","subtopics":[{"code":"B6.1","name":"Genetic engineering"},{"code":"B6.2","name":"Stem cells"},{"code":"B6.3","name":"Selective breeding"}]},{"code":"B7","name":"Variation","subtopics":[{"code":"B7.1","name":"Natural selection and evolution"},{"code":"B7.2","name":"Sources of variation"}]},{"code":"B8","name":"Enzymes","subtopics":[{"code":"B8.1","name":"Know and understand that enzymes are primarily proteins that function as biological catalysts."},{"code":"B8.2","name":"Know and understand the general mechanism of enzyme action, including the role of the active…"},{"code":"B8.3","name":"Know and understand how the factors of temperature and pH can affect the rate of enzyme action."},{"code":"B8.4","name":"Know the role of amylases, proteases and lipases in the digestion of carbohydrates, proteins and…"}]},{"code":"B9","name":"Animal physiology","subtopics":[{"code":"B9.1","name":"Respiration"},{"code":"B9.2","name":"Organ systems"},{"code":"B9.3","name":"Homeostasis"},{"code":"B9.4","name":"Hormones"},{"code":"B9.5","name":"Disease and body defence"}]},{"code":"B10","name":"Ecosystems","subtopics":[{"code":"B10.1","name":"Levels of organisation in an ecosystem"},{"code":"B10.2","name":"Material cycling"},{"code":"B10.3","name":"Biodiversity"}]},{"code":"B11","name":"Plant physiology","subtopics":[{"code":"B11.1","name":"Importance of photosynthesis"},{"code":"B11.2","name":"Transport systems in plants"}]}]}];
+const MODULE_META={
+  M1:{short:'Maths 1',color:'var(--mid)'},
+  M2:{short:'Maths 2',color:'var(--purp)'},
+  P:{short:'Physics',color:'var(--teal)'},
+  C:{short:'Chemistry',color:'var(--amber)'},
+  B:{short:'Biology',color:'var(--subjBio)'}
+};
+const MODULE_BASE={M1:70,M2:61,P:59,C:63,B:74};
+const BAND_COLOR={mastered:'var(--green)',proficient:'var(--mid)',developing:'var(--amber)',weak:'var(--red)',none:'var(--bdr2)'};
+const BAND_LABEL={mastered:'Mastered',proficient:'Proficient',developing:'Developing',weak:'Needs Work',none:'Not started'};
+
+function tpBand(pct){
+  if(pct==null)return 'none';
+  if(pct>=85)return 'mastered';
+  if(pct>=70)return 'proficient';
+  if(pct>=50)return 'developing';
+  return 'weak';
+}
+
+let tpSeed=90210;
+function tpRnd(){tpSeed=(tpSeed*1103515245+12345)&0x7fffffff;return tpSeed/0x7fffffff}
+
+const TOPIC_PROGRESS={};
+TAXONOMY.forEach(mod=>{
+  const base=MODULE_BASE[mod.code]||65;
+  mod.topics.forEach(topic=>{
+    const started=tpRnd()<0.82;
+    const subEntries={};
+    let mastery=null,questions=0;
+    if(started){
+      mastery=Math.round(Math.min(97,Math.max(12,base+(tpRnd()*36-18))));
+      questions=topic.subtopics.length*(2+Math.floor(tpRnd()*7));
+      topic.subtopics.forEach(st=>{
+        const sm=Math.round(Math.min(99,Math.max(5,mastery+(tpRnd()*30-15))));
+        subEntries[st.code]={mastery:sm,questions:2+Math.floor(tpRnd()*9)};
+      });
+    }else{
+      topic.subtopics.forEach(st=>{subEntries[st.code]={mastery:null,questions:0}});
+    }
+    TOPIC_PROGRESS[topic.code]={started,mastery,questions,subtopics:subEntries};
+  });
+});
+
+let tpActiveModule='M1',tpActiveTopic=null;
+
+function tpRenderSubjectTabs(){
+  const seg=document.getElementById('tpSubjectSeg');
+  if(!seg)return;
+  seg.innerHTML=TAXONOMY.map(mod=>{
+    const meta=MODULE_META[mod.code];
+    return `<button class="seg-btn${mod.code===tpActiveModule?' active':''}" onclick="tpSetModule('${mod.code}')" aria-pressed="${mod.code===tpActiveModule}"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${meta.color};margin-right:6px;vertical-align:middle"></span>${meta.short}</button>`;
+  }).join('');
+}
+
+function tpSetModule(code){
+  tpActiveModule=code;
+  tpActiveTopic=null;
+  tpRenderSubjectTabs();
+  tpRenderTree();
+}
+
+function tpSelectTopic(code){
+  tpActiveTopic=code;
+  tpRenderTree();
+}
+
+function tpRenderTree(){
+  const mod=TAXONOMY.find(m=>m.code===tpActiveModule);
+  const meta=MODULE_META[mod.code];
+  const n=mod.topics.length;
+
+  if(!tpActiveTopic||!mod.topics.some(t=>t.code===tpActiveTopic)){
+    const started=mod.topics.filter(t=>TOPIC_PROGRESS[t.code].started);
+    const pick=started.length?started.reduce((a,b)=>TOPIC_PROGRESS[a.code].mastery<=TOPIC_PROGRESS[b.code].mastery?a:b):mod.topics[0];
+    tpActiveTopic=pick.code;
+  }
+
+  const orbit=132+n*7;
+  const hubR=42;
+  const half=orbit+72;
+  const svg=document.getElementById('tpTreeSvg');
+  svg.setAttribute('viewBox',`${-half} ${-half} ${half*2} ${half*2}`);
+
+  const positions=mod.topics.map((topic,i)=>{
+    const angle=-Math.PI/2+i*(2*Math.PI/n);
+    return {topic,x:Math.cos(angle)*orbit,y:Math.sin(angle)*orbit};
+  });
+
+  let linksHtml='';
+  positions.forEach(({x,y})=>{linksHtml+=`<line class="st-link" x1="0" y1="0" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`});
+
+  let nodesHtml='';
+  positions.forEach(({topic,x,y})=>{
+    const count=topic.subtopics.length;
+    const r=16+Math.min(13,Math.round(Math.sqrt(count)*3));
+    const prog=TOPIC_PROGRESS[topic.code];
+    const band=prog.started?tpBand(prog.mastery):'none';
+    const color=BAND_COLOR[band];
+    const pct=prog.started?prog.mastery/100:0;
+    const ringR=r-3;
+    const circ=2*Math.PI*ringR;
+    const dash=(circ*pct).toFixed(1);
+    const gap=(circ-circ*pct).toFixed(1);
+    const isSelected=tpActiveTopic===topic.code;
+    const title=`${topic.code} \u00b7 ${topic.name} \u2014 ${prog.started?prog.mastery+'% mastery':'not started'}`;
+    nodesHtml+=`<g class="st-node${isSelected?' selected':''}" tabindex="0" role="button" aria-label="${title.replace(/"/g,'&quot;')}" transform="translate(${x.toFixed(1)},${y.toFixed(1)})" onclick="tpSelectTopic('${topic.code}')" onkeydown="if(event.key==='Enter')tpSelectTopic('${topic.code}')">
+      <title>${title}</title>
+      ${isSelected?`<circle r="${r+5}" fill="none" stroke="var(--blue)" stroke-width="2"/>`:''}
+      <circle r="${r}" fill="${band==='none'?'var(--surf)':'color-mix(in srgb, '+color+' 14%, var(--surf))'}" stroke="${band==='none'?'var(--bdr2)':color}" stroke-width="2" stroke-dasharray="${band==='none'?'3 3':'none'}"/>
+      ${band!=='none'?`<circle r="${ringR}" fill="none" stroke="var(--alt)" stroke-width="3"/><circle r="${ringR}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash} ${gap}" stroke-linecap="round" transform="rotate(-90)"/>`:''}
+      <text text-anchor="middle" dy=".32em" font-size="${r>=26?11:9.5}" fill="${band==='none'?'var(--ter)':'var(--text)'}">${topic.code}</text>
+    </g>`;
+  });
+
+  svg.innerHTML=`${linksHtml}
+    <g class="st-hub">
+      <circle r="${hubR}" fill="${meta.color}"/>
+      <text text-anchor="middle" dy="-.15em" font-size="13" font-weight="800" fill="#fff" font-family="Inter,sans-serif">${mod.code}</text>
+      <text text-anchor="middle" dy="1.35em" font-size="8.5" fill="rgba(255,255,255,.85)" font-family="Inter,sans-serif">${n} topics</text>
+    </g>
+    ${nodesHtml}`;
+
+  tpRenderDetail();
+}
+
+function tpRenderDetail(){
+  const mod=TAXONOMY.find(m=>m.code===tpActiveModule);
+  const topic=mod.topics.find(t=>t.code===tpActiveTopic);
+  const meta=MODULE_META[mod.code];
+  const prog=TOPIC_PROGRESS[topic.code];
+  const band=prog.started?tpBand(prog.mastery):'none';
+  const card=document.getElementById('tpDetailCard');
+  if(!card)return;
+
+  const headRight=prog.started
+    ?`<div class="stat-num" style="font-size:1.75rem;color:${BAND_COLOR[band]}">${prog.mastery}%</div><div class="stat-lbl">${BAND_LABEL[band]}</div>`
+    :`<div class="stat-num" style="font-size:1.75rem;color:var(--ter)">\u2014</div><div class="stat-lbl">Not started</div>`;
+
+  const subRows=topic.subtopics.map(st=>{
+    const sp=prog.subtopics[st.code];
+    const sband=sp.mastery==null?'none':tpBand(sp.mastery);
+    const barWidth=sp.mastery==null?0:sp.mastery;
+    return `<div class="subtopic-row">
+      <span class="subtopic-code">${st.code}</span>
+      <span class="subtopic-name">${st.name}</span>
+      <div class="subtopic-bar-wrap"><div class="bar"><div class="bar-fill" style="width:${barWidth}%;background:${BAND_COLOR[sband]}"></div></div></div>
+      <span class="subtopic-pct" style="color:${sp.mastery==null?'var(--ter)':'var(--text)'}">${sp.mastery==null?'\u2014':sp.mastery+'%'}</span>
+    </div>`;
+  }).join('');
+
+  card.innerHTML=`
+    <div class="topic-detail-head">
+      <div>
+        <span class="pill" style="background:color-mix(in srgb, ${meta.color} 14%, var(--surf));color:${meta.color}">${topic.code}</span>
+        <h3 style="margin-top:8px;font-size:1.125rem">${topic.name}</h3>
+        <div class="section-sub" style="margin-top:2px">${meta.short} &middot; ${topic.subtopics.length} subtopics${prog.started?` &middot; ${prog.questions} questions answered`:''}</div>
+      </div>
+      <div style="text-align:right">${headRight}</div>
+    </div>
+    <div class="bar" style="margin-bottom:1.1rem"><div class="bar-fill" style="width:${prog.started?prog.mastery:0}%;background:${BAND_COLOR[band]}"></div></div>
+    <div class="subtopic-list">${subRows}</div>
+    <button class="btn-primary" style="width:auto;margin-top:1.1rem;padding:.7rem 1.5rem" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
+      Practice this topic
+    </button>`;
+}
+
+function tpRenderLegend(){
+  const el=document.getElementById('tpLegend');
+  if(!el)return;
+  const bands=[['mastered','Mastered \u2014 85%+'],['proficient','Proficient \u2014 70\u201384%'],['developing','Developing \u2014 50\u201369%'],['weak','Needs Work \u2014 below 50%'],['none','Not started']];
+  el.innerHTML=bands.map(([k,label])=>{
+    const dotStyle=k==='none'?'background:var(--surf);border:1.5px dashed var(--bdr2)':`background:${BAND_COLOR[k]}`;
+    return `<div class="st-legend-item"><span class="st-legend-dot" style="${dotStyle}"></span>${label}</div>`;
+  }).join('');
+}
+
+function tpRenderStats(){
+  const el=document.getElementById('tpStatGrid');
+  if(!el)return;
+  const allTopics=TAXONOMY.flatMap(m=>m.topics);
+  const started=allTopics.filter(t=>TOPIC_PROGRESS[t.code].started);
+  const avgMastery=started.length?Math.round(started.reduce((s,t)=>s+TOPIC_PROGRESS[t.code].mastery,0)/started.length):0;
+  const totalQuestions=allTopics.reduce((s,t)=>s+TOPIC_PROGRESS[t.code].questions,0);
+
+  const moduleAvg=TAXONOMY.map(m=>{
+    const ts=m.topics.filter(t=>TOPIC_PROGRESS[t.code].started);
+    const avg=ts.length?ts.reduce((s,t)=>s+TOPIC_PROGRESS[t.code].mastery,0)/ts.length:-1;
+    return {name:MODULE_META[m.code].short,avg};
+  }).filter(m=>m.avg>=0);
+  const strongest=moduleAvg.reduce((a,b)=>a.avg>=b.avg?a:b);
+  const weakest=moduleAvg.reduce((a,b)=>a.avg<=b.avg?a:b);
+
+  el.innerHTML=`
+    <div class="stat-card">
+      <div class="stat-top"><span class="label" style="color:var(--ter)">Topics Practiced</span><div class="hero-icon" style="background:var(--lite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg></div></div>
+      <div class="stat-num">${started.length}<span style="font-size:1rem;color:var(--ter);font-weight:600">/${allTopics.length}</span></div>
+      <div class="stat-lbl">across 5 subjects</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="label" style="color:var(--ter)">Overall Mastery</span><div class="hero-icon" style="background:var(--gLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--green)"/></svg></div></div>
+      <div class="stat-num">${avgMastery}%</div>
+      <div class="stat-lbl">avg across topics practiced</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="label" style="color:var(--ter)">Strongest Subject</span><div class="hero-icon" style="background:var(--pLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div></div>
+      <div class="stat-num" style="font-size:1.375rem">${strongest.name}</div>
+      <div class="stat-lbl">${Math.round(strongest.avg)}% avg mastery</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="label" style="color:var(--ter)">Needs Most Work</span><div class="hero-icon" style="background:var(--aLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M12 9v3.75m0 3.75h.008v.008H12v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div></div>
+      <div class="stat-num" style="font-size:1.375rem">${weakest.name}</div>
+      <div class="stat-lbl">${Math.round(weakest.avg)}% avg mastery</div>
+    </div>`;
+}
+
+tpRenderSubjectTabs();
+tpRenderTree();
+tpRenderStats();
+tpRenderLegend();
 </script>
 </body>
 </html>
