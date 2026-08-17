@@ -1,0 +1,33 @@
+name: Deploy to Porkbun hosting
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload index.html via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.PORKBUN_FTP_SERVER }}
+          username: ${{ secrets.PORKBUN_FTP_USERNAME }}
+          password: ${{ secrets.PORKBUN_FTP_PASSWORD }}
+          server-dir: ${{ secrets.PORKBUN_FTP_DIR }}
+          local-dir: ./
+          state-name: .ftp-deploy-sync-state.json
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            app.py
+            auto-pull.sh
+            taxonomy-reference.md
+            scripts/**
+            pull.log
