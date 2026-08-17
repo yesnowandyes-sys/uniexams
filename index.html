@@ -722,52 +722,40 @@ button{font-family:inherit}
 .mm-summary-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:1.75rem}
 @media(max-width:640px){.mm-summary-stats{grid-template-columns:1fr 1fr}.mm-toolbar{flex-direction:column;align-items:flex-start}}
 
-/* ═══ TOPICS / GAME MAP ═══ */
-#view-topics.active{display:flex;flex-direction:column;height:calc(100vh - 64px);padding:16px 20px 20px;box-sizing:border-box}
-.tp-map-container{position:relative;flex:1;min-height:0;border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#EEF1FB 0%,#E4E9F8 100%);border:1px solid var(--bdr);box-shadow:var(--shadow-1);cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
-.tp-map-container.grabbing{cursor:grabbing}
-.tp-map-container svg{display:block;width:100%;height:100%}
+/* ═══ TOPICS ═══ */
+.tp-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem}
+.tp-search{display:flex;align-items:center;gap:8px;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:0 12px;width:260px;height:38px;color:var(--ter);flex-shrink:0}
+.tp-search input{border:none;background:none;outline:none;font-family:inherit;font-size:.8125rem;color:var(--text);width:100%;height:100%}
+.tp-search input::placeholder{color:var(--ter)}
 
-.tp-island-label{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;pointer-events:none}
-.tp-island-sub{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.02em;text-transform:uppercase;pointer-events:none}
+.tp-module-card{margin-bottom:1.1rem}
+.tp-module-card:last-child{margin-bottom:0}
+.tp-module-head{display:flex;align-items:center;gap:9px}
+.tp-module-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;background:var(--accent)}
+.tp-module-meta{font-size:.8125rem;color:var(--ter);margin-left:auto;flex-shrink:0;text-align:right}
+.tp-module-avg{font-family:'JetBrains Mono',monospace;font-weight:700}
 
-.tp-node{cursor:pointer;outline:none}
-.tp-node .tp-node-circle{transition:stroke-width .12s}
-.tp-node:hover .tp-node-circle,.tp-node:focus-visible .tp-node-circle{stroke-width:4}
-.tp-node.unstarted .tp-node-circle{opacity:.7}
-.tp-node-code{font-family:'JetBrains Mono',monospace;font-weight:700;pointer-events:none}
-.tp-select-ring{fill:none;stroke:var(--blue);stroke-width:3;transform-origin:center;transform-box:fill-box;animation:tpPulseRing 1.6s ease-in-out infinite}
-@keyframes tpPulseRing{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.1)}}
+.tp-topic-list{display:flex;flex-direction:column;margin-top:.6rem}
+.tp-topic{border-top:1px solid var(--bdr)}
+.tp-topic-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:.85rem 6px;border-radius:8px;-webkit-tap-highlight-color:transparent}
+.tp-topic-summary::-webkit-details-marker{display:none}
+.tp-topic-summary:hover{background:var(--alt)}
+.tp-topic-summary:focus-visible{outline:2px solid var(--mid);outline-offset:-2px}
+.tp-topic-code{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;color:var(--ter);width:42px;flex-shrink:0}
+.tp-topic-name-wrap{flex:1;min-width:0}
+.tp-topic-name{font-size:.8125rem;font-weight:600;color:var(--text);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tp-topic-sub{font-size:.6875rem;color:var(--ter);margin-top:1px}
+.tp-topic-status{font-size:.625rem;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.tp-topic-pct{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;width:38px;text-align:right;flex-shrink:0}
+.tp-topic-chev{color:var(--ter);flex-shrink:0;transition:transform .2s ease}
+.tp-topic[open] .tp-topic-chev{transform:rotate(180deg)}
+.tp-topic[open]>.tp-topic-summary .tp-topic-name{color:var(--mid)}
 
-.tp-clouds{pointer-events:none}
-.tp-island{cursor:pointer;outline:none;transition:filter .12s}
-.tp-island:hover,.tp-island:focus-visible{filter:brightness(1.05)}
-.tp-deco{pointer-events:none}
+.tp-topic>.tp-outer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .26s cubic-bezier(.16,1,.3,1)}
+.tp-topic[open]>.tp-outer{grid-template-rows:1fr}
+.tp-inner{overflow:hidden;min-height:0}
+.tp-topic-body{padding:0 6px 1.1rem 58px}
 
-.tp-controls{position:absolute;top:16px;right:16px;display:flex;flex-direction:column;gap:8px;z-index:5;transition:right .3s cubic-bezier(.16,1,.3,1)}
-.tp-map-container.panel-open .tp-controls{right:calc(400px + 16px)}
-.tp-ctrl-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--bdr);background:var(--surf);box-shadow:var(--shadow-2);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--sec);transition:background .1s,transform .1s}
-.tp-ctrl-btn:hover{background:var(--alt);color:var(--text)}
-.tp-ctrl-btn:active{transform:scale(.92)}
-
-.tp-jump{position:absolute;top:16px;left:16px;display:flex;flex-wrap:wrap;gap:6px;max-width:calc(100% - 210px);z-index:5}
-.tp-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:20px;border:1px solid var(--bdr);background:var(--surf);box-shadow:var(--shadow-1);font-size:.75rem;font-weight:600;color:var(--sec);cursor:pointer;transition:background .12s,transform .1s;font-family:'Inter',sans-serif}
-.tp-chip:hover{background:var(--alt);color:var(--text);transform:translateY(-1px)}
-.tp-chip-dot{width:8px;height:8px;border-radius:50%;background:var(--chip-color);flex-shrink:0}
-
-.tp-legend{position:absolute;bottom:16px;left:16px;display:flex;flex-wrap:wrap;gap:5px 12px;background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:8px 14px;box-shadow:var(--shadow-1);font-size:.6875rem;color:var(--sec);z-index:5;max-width:calc(100% - 32px)}
-.tp-legend-item{display:flex;align-items:center;gap:5px;white-space:nowrap}
-.tp-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.tp-legend-dash{width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--bdr2);flex-shrink:0}
-
-.tp-detail-panel{position:absolute;top:0;right:0;height:100%;width:400px;max-width:88%;background:var(--surf);border-left:1px solid var(--bdr);box-shadow:-10px 0 28px rgba(20,25,50,.14);transform:translateX(105%);transition:transform .3s cubic-bezier(.16,1,.3,1);z-index:10;overflow-y:auto;padding:1.5rem 1.4rem 2rem;box-sizing:border-box}
-.tp-detail-panel.open{transform:translateX(0)}
-.tp-panel-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);color:var(--sec);display:flex;align-items:center;justify-content:center;cursor:pointer}
-.tp-panel-close:hover{background:var(--alt);color:var(--text)}
-.tp-rating-row{display:flex;align-items:center;gap:10px;margin:.8rem 0 1.15rem}
-.tp-rating-text{font-size:.8125rem;font-weight:700}
-
-.topic-detail-head{margin-bottom:.3rem;padding-right:2.3rem}
 .subtopic-list{display:flex;flex-direction:column}
 .subtopic-row{padding:9px 0;border-bottom:1px solid var(--bdr)}
 .subtopic-row:last-child{border-bottom:none;padding-bottom:0}
@@ -778,12 +766,15 @@ button{font-family:inherit}
 .subtopic-bar-wrap{flex:1}
 .subtopic-pct{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;flex-shrink:0;width:36px;text-align:right}
 
-@media(max-width:760px){
-  #view-topics.active{padding:10px}
-  .tp-detail-panel{top:auto;bottom:0;right:0;left:0;height:74%;width:100%;max-width:100%;border-left:none;border-top:1px solid var(--bdr);border-radius:16px 16px 0 0;box-shadow:0 -10px 28px rgba(20,25,50,.18);transform:translateY(105%)}
-  .tp-detail-panel.open{transform:translateY(0)}
-  .tp-jump{max-width:calc(100% - 56px)}
-  .tp-map-container.panel-open .tp-controls{right:16px}
+.tp-empty{text-align:center;color:var(--ter);font-size:.875rem;padding:3.5rem 0}
+
+@media(max-width:640px){
+  .tp-toolbar{flex-direction:column;align-items:stretch}
+  .tp-search{width:100%}
+  .tp-module-head{flex-wrap:wrap;row-gap:4px}
+  .tp-module-meta{margin-left:0;width:100%;text-align:left}
+  .tp-topic-status{display:none}
+  .tp-topic-body{padding-left:6px}
 }
 </style>
 </head>
@@ -1078,20 +1069,29 @@ button{font-family:inherit}
 
   <!-- ═══ TOPICS VIEW ═══ -->
   <div id="view-topics" class="view">
-    <div class="tp-map-container" id="tpMapContainer">
-      <svg id="tpMapSvg" role="img" aria-label="Topic skill map"></svg>
-
-      <div class="tp-jump" id="tpJumpChips"></div>
-
-      <div class="tp-controls">
-        <button class="tp-ctrl-btn" onclick="tpZoomButton(0.72)" aria-label="Zoom in"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M21 21l-4.5-4.5M10.5 7.5v6M7.5 10.5h6"/></svg></button>
-        <button class="tp-ctrl-btn" onclick="tpZoomButton(1.39)" aria-label="Zoom out"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M21 21l-4.5-4.5M7.5 10.5h6"/></svg></button>
-        <button class="tp-ctrl-btn" onclick="tpFitAllBtn()" aria-label="Fit whole map"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5H5.25A.75.75 0 0 0 4.5 5.25V9M15 4.5h3.75a.75.75 0 0 1 .75.75V9M19.5 15v3.75a.75.75 0 0 1-.75.75H15M9 19.5H5.25a.75.75 0 0 1-.75-.75V15"/></svg></button>
+    <div class="page">
+      <div class="greeting">
+        <h1>Topics</h1>
+        <p><strong id="tpTotalCount">—</strong> topics across 5 modules and <strong id="tpTotalSub">—</strong> subtopics · <strong id="tpTotalStarted">—</strong> already underway. Browse the full ESAT specification and jump straight into practice.</p>
       </div>
 
-      <div class="tp-legend" id="tpLegend"></div>
+      <div class="tp-toolbar">
+        <div class="seg-group" id="tpModuleSeg" role="group" aria-label="Filter by module">
+          <button class="seg-btn active" data-mod="all" aria-pressed="true">All</button>
+          <button class="seg-btn" data-mod="M1" aria-pressed="false">Maths 1</button>
+          <button class="seg-btn" data-mod="M2" aria-pressed="false">Maths 2</button>
+          <button class="seg-btn" data-mod="P" aria-pressed="false">Physics</button>
+          <button class="seg-btn" data-mod="C" aria-pressed="false">Chemistry</button>
+          <button class="seg-btn" data-mod="B" aria-pressed="false">Biology</button>
+        </div>
+        <div class="tp-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          <input type="text" id="tpSearchInput" placeholder="Search topics or subtopics…" oninput="tpOnSearch(this.value)" aria-label="Search topics or subtopics">
+        </div>
+      </div>
 
-      <div class="tp-detail-panel" id="tpDetailPanel"></div>
+      <div id="tpModulesWrap"></div>
+      <div class="tp-empty" id="tpEmptyState" style="display:none">No topics match your search.</div>
     </div>
   </div>
 
@@ -3563,347 +3563,20 @@ TAXONOMY.forEach(mod=>{
   });
 });
 
-let tpActiveTopic=null;
-let tpWorld=null,tpCamera=null,tpMinW=260,tpMaxW=2000;
-let tpTweenRAF=null;
-const tpPointers=new Map();
-let tpDragState=null,tpDownInfo=null,tpMoved=false;
-
-const MODULE_TERRAIN={
-  M1:{top:'#8FD68A',base:'#5F9A56',accent:'#3B5FEC',deco:'meadow'},
-  M2:{top:'#C9A8F5',base:'#8B6BC4',accent:'#7C3AED',deco:'crystal'},
-  P:{top:'#AEE3F0',base:'#5FA8C7',accent:'#0F766E',deco:'ice'},
-  C:{top:'#F5C063',base:'#C2792F',accent:'#B45309',deco:'desert'},
-  B:{top:'#5FBF6E',base:'#3D8A4A',accent:'#15803D',deco:'jungle'}
-};
-const TP_ISLAND_ANCHOR={
-  M1:{x:-640,y:-280},M2:{x:600,y:-320},P:{x:-740,y:260},C:{x:220,y:320},B:{x:800,y:40}
-};
-const TP_NODE_MIN_R=14,TP_NODE_MAX_R=24;
-
-function tpNodeRadius(subCount){
-  return TP_NODE_MIN_R+Math.min(TP_NODE_MAX_R-TP_NODE_MIN_R,Math.round(Math.sqrt(subCount)*2));
-}
-function tpSeededRng(seedStr){
-  let h=0;
-  for(let i=0;i<seedStr.length;i++)h=(h*31+seedStr.charCodeAt(i))>>>0;
-  let state=h||1;
-  return function(){state=(state*1103515245+12345)&0x7fffffff;return state/0x7fffffff};
-}
-/* Organic "potato" outline: jittered points around an ellipse, joined with quadratic
-   curves through their midpoints so the island reads as a hand-drawn landmass, not a
-   perfect ring. Reused with the same seed at a Y offset to make the darker cliff base
-   beneath the grass top, like the layered platforms in a classic overworld map. */
-function tpBlobPath(cx,cy,rx,ry,rng,points){
-  const n=points||16;
-  const pts=[];
-  for(let i=0;i<n;i++){
-    const a=(i/n)*Math.PI*2;
-    const jitter=0.86+rng()*0.3;
-    pts.push({x:cx+Math.cos(a)*rx*jitter,y:cy+Math.sin(a)*ry*jitter});
-  }
-  let d=`M ${((pts[0].x+pts[n-1].x)/2).toFixed(1)} ${((pts[0].y+pts[n-1].y)/2).toFixed(1)} `;
-  for(let i=0;i<n;i++){
-    const p=pts[i],next=pts[(i+1)%n];
-    d+=`Q ${p.x.toFixed(1)} ${p.y.toFixed(1)} ${((p.x+next.x)/2).toFixed(1)} ${((p.y+next.y)/2).toFixed(1)} `;
-  }
-  return d+'Z';
-}
-function tpPlaceDecorations(rx,ry,nodePositions,rng,count){
-  const props=[];
-  let attempts=0;
-  while(props.length<count&&attempts<count*14){
-    attempts++;
-    const a=rng()*Math.PI*2,rr=0.5+rng()*0.55;
-    const x=Math.cos(a)*rx*rr,y=Math.sin(a)*ry*rr;
-    if(nodePositions.some(nd=>Math.hypot(nd.x-x,nd.y-y)<nd.r+28))continue;
-    if(props.some(p=>Math.hypot(p.x-x,p.y-y)<24))continue;
-    props.push({x,y,scale:0.75+rng()*0.55,type:rng()});
-  }
-  return props;
+function tpModuleAvgMastery(mod){
+  const started=mod.topics.map(t=>TOPIC_PROGRESS[t.code]).filter(p=>p.started);
+  if(!started.length)return null;
+  return Math.round(started.reduce((s,p)=>s+p.mastery,0)/started.length);
 }
 
-function tpStarPath(cx,cy,rOuter){
-  const rInner=rOuter*0.45;
-  let d='';
-  for(let i=0;i<10;i++){
-    const rr=i%2===0?rOuter:rInner;
-    const ang=-Math.PI/2+i*Math.PI/5;
-    d+=(i===0?'M':'L')+(cx+Math.cos(ang)*rr).toFixed(1)+','+(cy+Math.sin(ang)*rr).toFixed(1)+' ';
-  }
-  return d+'Z';
-}
-function tpStarsFor(mastery){
-  if(mastery>=85)return 3;
-  if(mastery>=70)return 2;
-  if(mastery>=50)return 1;
-  return 0;
+function tpTopicMatchesQuery(topic,needle){
+  if(!needle)return true;
+  if(topic.code.toLowerCase().includes(needle)||topic.name.toLowerCase().includes(needle))return true;
+  return topic.subtopics.some(st=>st.code.toLowerCase().includes(needle)||st.name.toLowerCase().includes(needle));
 }
 
-function tpBuildWorld(){
-  const islands=TAXONOMY.map(mod=>{
-    const n=mod.topics.length;
-    const rng=tpSeededRng(mod.code);
-    const stepX=64;
-    const raw=mod.topics.map((topic,i)=>({
-      topic,
-      lx:i*stepX,
-      ly:Math.sin(i*0.85)*66+(rng()-0.5)*20,
-      r:tpNodeRadius(topic.subtopics.length)
-    }));
-    const cx0=raw.reduce((s,p)=>s+p.lx,0)/n,cy0=raw.reduce((s,p)=>s+p.ly,0)/n;
-    const anchor=TP_ISLAND_ANCHOR[mod.code];
-    const nodes=raw.map(p=>({topic:p.topic,x:anchor.x+(p.lx-cx0),y:anchor.y+(p.ly-cy0),r:p.r}));
-
-    const xs=nodes.map(nd=>nd.x),ys=nodes.map(nd=>nd.y);
-    const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
-    const blobCx=(minX+maxX)/2,blobCy=(minY+maxY)/2;
-    const blobRx=(maxX-minX)/2+72,blobRy=(maxY-minY)/2+72;
-    const blob=tpBlobPath(blobCx,blobCy,blobRx,blobRy,tpSeededRng(mod.code+'blob'));
-
-    const decoRng=tpSeededRng(mod.code+'deco');
-    const decorations=tpPlaceDecorations(blobRx,blobRy,nodes.map(nd=>({x:nd.x-blobCx,y:nd.y-blobCy,r:nd.r})),decoRng,Math.round(6+n*0.7))
-      .map(p=>({x:p.x+blobCx,y:p.y+blobCy,scale:p.scale,type:p.type}));
-
-    const bbox={x:blobCx-blobRx-50,y:blobCy-blobRy-70,w:(blobRx+50)*2,h:(blobRy+70)*2};
-    return {mod,nodes,blob,blobCx,blobCy,blobRx,blobRy,decorations,bbox,labelX:blobCx,labelY:blobCy-blobRy-28};
-  });
-
-  const xs=islands.flatMap(isl=>[isl.bbox.x,isl.bbox.x+isl.bbox.w]);
-  const ys=islands.flatMap(isl=>[isl.bbox.y,isl.bbox.y+isl.bbox.h]);
-  const bbox={x:Math.min(...xs)-70,y:Math.min(...ys)-70,w:0,h:0};
-  bbox.w=Math.max(...xs)+70-bbox.x;
-  bbox.h=Math.max(...ys)+70-bbox.y;
-  return {islands,bbox};
-}
-
-function tpFindNode(code){
-  for(const island of tpWorld.islands){
-    const nd=island.nodes.find(n=>n.topic.code===code);
-    if(nd)return {nd,island};
-  }
-  return null;
-}
-function tpFindTopic(code){
-  for(const mod of TAXONOMY){
-    const topic=mod.topics.find(t=>t.code===code);
-    if(topic)return {mod,topic};
-  }
-  return null;
-}
-
-function tpFitRectFallback(rect,pad){
-  const w=rect.w*pad,h=rect.h*pad;
-  return {x:rect.x+rect.w/2-w/2,y:rect.y+rect.h/2-h/2,w,h};
-}
-function tpFitRect(rect,pad){
-  const svg=document.getElementById('tpMapSvg');
-  const cRect=svg?svg.getBoundingClientRect():null;
-  if(!cRect||!cRect.width)return tpFitRectFallback(rect,pad);
-  const aspect=cRect.width/cRect.height;
-  const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2;
-  let w=rect.w*pad,h=rect.h*pad;
-  if(w/h>aspect)h=w/aspect;else w=h*aspect;
-  return {x:cx-w/2,y:cy-h/2,w,h};
-}
-/* The overworld is scattered wide, like the world it's modelled on. On a tall/narrow
-   phone screen, fitting that whole width would shrink every island to a speck — so
-   open on one island at a legible size instead, same as tapping a jump chip, and let
-   the player pan to the rest. */
-function tpInitialFitRect(){
-  const svg=document.getElementById('tpMapSvg');
-  const cRect=svg?svg.getBoundingClientRect():null;
-  if(!cRect||!cRect.width||cRect.width>=cRect.height*0.85)return tpFitRect(tpWorld.bbox,1.04);
-  return tpFitRect(tpWorld.islands[0].bbox,1.3);
-}
-
-function tpApplyViewBox(){
-  const svg=document.getElementById('tpMapSvg');
-  if(svg&&tpCamera)svg.setAttribute('viewBox',`${tpCamera.x.toFixed(1)} ${tpCamera.y.toFixed(1)} ${tpCamera.w.toFixed(1)} ${tpCamera.h.toFixed(1)}`);
-}
-function tpClampCamera(){
-  const b=tpWorld.bbox;
-  const margin=Math.max(tpCamera.w,tpCamera.h)*0.4;
-  const lo=Math.min(b.x-margin,b.x+b.w+margin-tpCamera.w),hi=Math.max(b.x-margin,b.x+b.w+margin-tpCamera.w);
-  tpCamera.x=Math.min(Math.max(tpCamera.x,lo),hi);
-  const loY=Math.min(b.y-margin,b.y+b.h+margin-tpCamera.h),hiY=Math.max(b.y-margin,b.y+b.h+margin-tpCamera.h);
-  tpCamera.y=Math.min(Math.max(tpCamera.y,loY),hiY);
-}
-function tpAnimateCameraTo(target,duration){
-  if(tpTweenRAF)cancelAnimationFrame(tpTweenRAF);
-  const start={...tpCamera};
-  const t0=performance.now();
-  function step(now){
-    const t=Math.min(1,(now-t0)/duration);
-    const e=1-Math.pow(1-t,3);
-    tpCamera={x:start.x+(target.x-start.x)*e,y:start.y+(target.y-start.y)*e,w:start.w+(target.w-start.w)*e,h:start.h+(target.h-start.h)*e};
-    tpApplyViewBox();
-    if(t<1)tpTweenRAF=requestAnimationFrame(step);else tpTweenRAF=null;
-  }
-  tpTweenRAF=requestAnimationFrame(step);
-}
-
-function tpSvgTree(x,y,scale,fg){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><rect x="-2.2" y="4" width="4.4" height="9" rx="1.5" fill="#7C5A3A"/><circle cx="0" cy="-3" r="10" fill="${fg}"/><circle cx="-6" cy="1" r="7.5" fill="${fg}"/><circle cx="6" cy="1" r="7.5" fill="${fg}"/></g>`;
-}
-function tpSvgPine(x,y,scale,fg){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><rect x="-2" y="6" width="4" height="7" fill="#7C5A3A"/><path d="M0 -14 L9 5 L-9 5 Z" fill="${fg}"/><path d="M0 -6 L7 6 L-7 6 Z" fill="${fg}"/></g>`;
-}
-function tpSvgBush(x,y,scale,fg){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><ellipse cx="0" cy="1" rx="11" ry="6.5" fill="${fg}"/><ellipse cx="-6.5" cy="-1" rx="6.5" ry="4.5" fill="${fg}"/><ellipse cx="6.5" cy="-1" rx="6.5" ry="4.5" fill="${fg}"/></g>`;
-}
-function tpSvgRock(x,y,scale){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><path d="M-9 5 Q-10 -3 -2 -5 Q7 -7 9 1 Q10 6 3 6 Z" fill="#B4BAC4" stroke="#8A93A3" stroke-width="1"/></g>`;
-}
-function tpSvgCrystal(x,y,scale,fg){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><path d="M0 -13 L6 -2 L3 9 L-3 9 L-6 -2 Z" fill="${fg}" opacity="0.9"/><path d="M0 -13 L6 -2 L0 -2 Z" fill="#fff" opacity="0.35"/></g>`;
-}
-function tpSvgIceSpike(x,y,scale){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><path d="M0 -14 L5 4 L-5 4 Z" fill="#E0F2FE" stroke="#93C5FD" stroke-width="1"/></g>`;
-}
-function tpSvgCactus(x,y,scale){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})"><rect x="-2.5" y="-13" width="5" height="18" rx="2.5" fill="#4D9D5B"/><rect x="-8" y="-6" width="5" height="4" rx="2" fill="#4D9D5B"/><rect x="3" y="-9" width="5" height="4" rx="2" fill="#4D9D5B"/></g>`;
-}
-function tpSvgDune(x,y,scale,fg){
-  return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(16*scale).toFixed(1)}" ry="${(6*scale).toFixed(1)}" fill="${fg}" opacity="0.55"/>`;
-}
-function tpSvgCloud(x,y,scale){
-  return `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${scale.toFixed(2)})" opacity="0.92"><ellipse cx="0" cy="2" rx="24" ry="12" fill="#fff"/><ellipse cx="-16" cy="4" rx="14" ry="9" fill="#fff"/><ellipse cx="16" cy="4" rx="14" ry="9" fill="#fff"/><ellipse cx="0" cy="-6" rx="14" ry="10" fill="#fff"/></g>`;
-}
-function tpDecorationHtml(terrain,props){
-  return props.map(p=>{
-    const roll=p.type;
-    if(terrain.deco==='meadow')return roll<0.5?tpSvgTree(p.x,p.y,p.scale,'#4C9A4F'):tpSvgBush(p.x,p.y,p.scale,'#5EB35F');
-    if(terrain.deco==='crystal')return roll<0.55?tpSvgCrystal(p.x,p.y,p.scale,'#A78BFA'):tpSvgBush(p.x,p.y,p.scale,'#8B6BC4');
-    if(terrain.deco==='ice')return roll<0.55?tpSvgIceSpike(p.x,p.y,p.scale):tpSvgRock(p.x,p.y,p.scale);
-    if(terrain.deco==='desert')return roll<0.4?tpSvgCactus(p.x,p.y,p.scale):(roll<0.75?tpSvgRock(p.x,p.y,p.scale):tpSvgDune(p.x,p.y,p.scale,terrain.base));
-    return roll<0.6?tpSvgPine(p.x,p.y,p.scale,'#1E7A3B'):tpSvgBush(p.x,p.y,p.scale,'#2E9950');
-  }).join('');
-}
-function tpIslandHtml(island){
-  const terrain=MODULE_TERRAIN[island.mod.code];
-  const baseBlob=tpBlobPath(island.blobCx,island.blobCy+14,island.blobRx,island.blobRy,tpSeededRng(island.mod.code+'blob'));
-  return `<g class="tp-island" data-subject="${island.mod.code}" tabindex="0" role="button" aria-label="${island.mod.name} — ${island.mod.topics.length} topics, jump in" onkeydown="if(event.key==='Enter')tpJumpTo('${island.mod.code}')">
-    <title>${island.mod.name} · ${island.mod.topics.length} topics</title>
-    <path d="${baseBlob}" fill="${terrain.base}"/>
-    <path d="${island.blob}" fill="${terrain.top}"/>
-    <g class="tp-deco">${tpDecorationHtml(terrain,island.decorations)}</g>
-    <g class="tp-signpost" transform="translate(${island.labelX.toFixed(1)},${island.labelY.toFixed(1)})">
-      <rect x="-60" y="-18" width="120" height="36" rx="9" fill="#fff" stroke="${terrain.accent}" stroke-width="2"/>
-      <text class="tp-island-label" text-anchor="middle" dy="-1" font-size="14" fill="${terrain.accent}">${island.mod.name}</text>
-      <text class="tp-island-sub" text-anchor="middle" dy="13" font-size="8.5" fill="var(--ter)">${island.mod.topics.length} topics</text>
-    </g>
-  </g>`;
-}
-function tpRoadHtml(island){
-  const pts=island.nodes.map(nd=>`${nd.x.toFixed(1)},${nd.y.toFixed(1)}`).join(' ');
-  return `<polyline points="${pts}" fill="none" stroke="#D8B979" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><polyline points="${pts}" fill="none" stroke="#F1E0AE" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 20"/>`;
-}
-
-function tpRenderWorld(){
-  const svg=document.getElementById('tpMapSvg');
-  if(!svg)return;
-  const w=tpWorld.bbox;
-  const cloudRng=tpSeededRng('clouds');
-  let cloudsHtml='';
-  for(let i=0;i<10;i++){
-    cloudsHtml+=tpSvgCloud(w.x+cloudRng()*w.w,w.y+cloudRng()*w.h*0.9,0.7+cloudRng()*0.9);
-  }
-  svg.innerHTML=`
-    <defs>
-      <filter id="tpNodeShadow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(20,25,50,.3)"/></filter>
-      <linearGradient id="tpOceanGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#BFE3F7"/><stop offset="100%" stop-color="#8FCBEA"/></linearGradient>
-    </defs>
-    <rect id="tpBgRect" x="${w.x}" y="${w.y}" width="${w.w}" height="${w.h}" fill="url(#tpOceanGrad)" pointer-events="all"/>
-    <g class="tp-clouds">${cloudsHtml}</g>
-    <g id="tpIslandsLayer">${tpWorld.islands.map(tpIslandHtml).join('')}</g>
-    <g id="tpRoadsLayer">${tpWorld.islands.map(tpRoadHtml).join('')}</g>
-    <g id="tpNodesLayer"></g>`;
-  tpRenderNodes();
-  tpApplyViewBox();
-}
-
-function tpRenderNodes(){
-  const layer=document.getElementById('tpNodesLayer');
-  if(!layer)return;
-  let html='';
-  tpWorld.islands.forEach(island=>{
-    const meta=MODULE_META[island.mod.code];
-    island.nodes.forEach(nd=>{
-      const topic=nd.topic;
-      const prog=TOPIC_PROGRESS[topic.code];
-      const band=prog.started?tpBand(prog.mastery):'none';
-      const isSelected=tpActiveTopic===topic.code;
-      const stars=prog.started?tpStarsFor(prog.mastery):0;
-      const fill=band==='none'?'var(--surf)':`color-mix(in srgb, ${meta.color} 55%, white)`;
-      const stroke=band==='none'?'var(--bdr2)':meta.color;
-      const textColor=band==='none'?'var(--ter)':'#fff';
-      const title=`${topic.code} · ${topic.name} — ${prog.started?prog.mastery+'% mastery':'not started'}`.replace(/"/g,'&quot;');
-      let starsHtml='';
-      if(prog.started){
-        const y=nd.r+13;
-        for(let i=0;i<3;i++){
-          const x=(i-1)*11;
-          const isFilled=i<stars;
-          starsHtml+=`<path d="${tpStarPath(x,y,4.5)}" fill="${isFilled?'var(--flame)':'var(--alt)'}" stroke="${isFilled?'var(--flame)':'var(--bdr2)'}" stroke-width="0.75"/>`;
-        }
-      }
-      html+=`<g class="tp-node${isSelected?' selected':''}${band==='none'?' unstarted':''}" data-code="${topic.code}" tabindex="0" role="button" aria-label="${title}" transform="translate(${nd.x.toFixed(1)},${nd.y.toFixed(1)})" onkeydown="if(event.key==='Enter')tpSelectTopic('${topic.code}')">
-        <title>${title}</title>
-        <ellipse cx="0" cy="${(nd.r*0.6).toFixed(1)}" rx="${(nd.r*0.85).toFixed(1)}" ry="${(nd.r*0.32).toFixed(1)}" fill="rgba(20,25,50,.18)"/>
-        ${isSelected?`<circle class="tp-select-ring" r="${nd.r+6}"/>`:''}
-        <circle class="tp-node-circle" r="${nd.r}" fill="${fill}" stroke="${stroke}" stroke-width="${band==='none'?2:2.5}" stroke-dasharray="${band==='none'?'3 4':'none'}" filter="${band==='none'?'':'url(#tpNodeShadow)'}"/>
-        <text class="tp-node-code" text-anchor="middle" dy=".32em" font-size="${nd.r>=25?11:9.5}" fill="${textColor}">${topic.code}</text>
-        ${starsHtml}
-      </g>`;
-    });
-  });
-  layer.innerHTML=html;
-}
-
-function tpSelectTopic(code){
-  tpActiveTopic=code;
-  tpRenderNodes();
-  tpRenderDetail();
-  document.getElementById('tpDetailPanel').classList.add('open');
-  document.getElementById('tpMapContainer').classList.add('panel-open');
-  tpFocusNode(code);
-}
-function tpDeselect(){
-  if(tpActiveTopic===null)return;
-  tpActiveTopic=null;
-  tpRenderNodes();
-  document.getElementById('tpDetailPanel').classList.remove('open');
-  document.getElementById('tpMapContainer').classList.remove('panel-open');
-}
-function tpFocusNode(code){
-  const found=tpFindNode(code);
-  if(!found)return;
-  const svg=document.getElementById('tpMapSvg');
-  const rect=svg.getBoundingClientRect();
-  if(!rect.width)return;
-  const mobile=window.innerWidth<760;
-  const targetFracX=mobile?0.5:0.31;
-  const targetFracY=mobile?0.32:0.5;
-  const cam=tpCamera;
-  tpAnimateCameraTo({x:found.nd.x-targetFracX*cam.w,y:found.nd.y-targetFracY*cam.h,w:cam.w,h:cam.h},420);
-}
-
-function tpRenderDetail(){
-  if(!tpActiveTopic)return;
-  const found=tpFindTopic(tpActiveTopic);
-  if(!found)return;
-  const {mod,topic}=found;
-  const meta=MODULE_META[mod.code];
-  const prog=TOPIC_PROGRESS[topic.code];
-  const band=prog.started?tpBand(prog.mastery):'none';
-  const stars=prog.started?tpStarsFor(prog.mastery):0;
-  const panel=document.getElementById('tpDetailPanel');
-  if(!panel)return;
-
-  const starsBig=[0,1,2].map(i=>`<path d="${tpStarPath(i*24,0,10)}" fill="${i<stars?'var(--flame)':'var(--alt)'}" stroke="${i<stars?'var(--flame)':'var(--bdr2)'}" stroke-width="1"/>`).join('');
-
-  const subRows=topic.subtopics.map(st=>{
+function tpSubtopicRowsHtml(prog,topic){
+  return topic.subtopics.map(st=>{
     const sp=prog.subtopics[st.code];
     const sband=sp.mastery==null?'none':tpBand(sp.mastery);
     const barWidth=sp.mastery==null?0:sp.mastery;
@@ -3912,172 +3585,91 @@ function tpRenderDetail(){
       <div class="subtopic-row-bottom"><div class="subtopic-bar-wrap"><div class="bar"><div class="bar-fill" style="width:${barWidth}%;background:${BAND_COLOR[sband]}"></div></div></div><span class="subtopic-pct" style="color:${sp.mastery==null?'var(--ter)':'var(--text)'}">${sp.mastery==null?'—':sp.mastery+'%'}</span></div>
     </div>`;
   }).join('');
+}
 
-  panel.innerHTML=`
-    <button class="tp-panel-close" onclick="tpDeselect()" aria-label="Close">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 18 18 6M6 6l12 12"/></svg>
-    </button>
-    <div class="topic-detail-head">
-      <div>
-        <span class="pill" style="background:color-mix(in srgb, ${meta.color} 14%, var(--surf));color:${meta.color}">${topic.code}</span>
-        <h3 style="margin-top:8px;font-size:1.125rem">${topic.name}</h3>
-        <div class="section-sub" style="margin-top:2px">${meta.short} &middot; ${topic.subtopics.length} subtopics${prog.started?` &middot; ${prog.questions} questions answered`:''}</div>
-      </div>
+function tpTopicRowHtml(topic){
+  const prog=TOPIC_PROGRESS[topic.code];
+  const band=prog.started?tpBand(prog.mastery):'none';
+  const statusBg=band==='none'?'var(--alt)':`color-mix(in srgb, ${BAND_COLOR[band]} 14%, var(--surf))`;
+  const statusColor=band==='none'?'var(--ter)':BAND_COLOR[band];
+  return `<details class="tp-topic" data-code="${topic.code}">
+    <summary class="tp-topic-summary">
+      <span class="tp-topic-code">${topic.code}</span>
+      <span class="tp-topic-name-wrap">
+        <span class="tp-topic-name">${topic.name}</span>
+        <span class="tp-topic-sub">${topic.subtopics.length} subtopics${prog.started?` · ${prog.questions} questions answered`:''}</span>
+      </span>
+      <span class="tp-topic-status" style="background:${statusBg};color:${statusColor}">${BAND_LABEL[band]}</span>
+      <span class="tp-topic-pct" style="color:${prog.started?'var(--text)':'var(--ter)'}">${prog.started?prog.mastery+'%':'—'}</span>
+      <svg class="tp-topic-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </summary>
+    <div class="tp-outer"><div class="tp-inner"><div class="tp-topic-body">
+      <div class="subtopic-list">${tpSubtopicRowsHtml(prog,topic)}</div>
+      <button class="btn-primary" style="width:auto;margin-top:.9rem;padding:.6rem 1.2rem;font-size:.8125rem" onclick="event.preventDefault();nav(document.getElementById('navPractice'),'practice','Practice')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
+        Practice this topic
+      </button>
+    </div></div>
+  </details>`;
+}
+
+function tpModuleCardHtml(mod,query){
+  const meta=MODULE_META[mod.code];
+  const topics=mod.topics.filter(t=>tpTopicMatchesQuery(t,query));
+  if(!topics.length)return '';
+  const avg=tpModuleAvgMastery(mod);
+  const countLabel=topics.length!==mod.topics.length?`${topics.length} of ${mod.topics.length} topics`:`${mod.topics.length} topics`;
+  const avgLabel=avg==null?'':` · <span class="tp-module-avg" style="color:${BAND_COLOR[tpBand(avg)]}">${avg}% avg mastery</span>`;
+  return `<div class="card tp-module-card" style="--accent:${meta.color}">
+    <div class="tp-module-head">
+      <span class="tp-module-dot"></span>
+      <h3 class="section-title">${mod.name}</h3>
+      <span class="tp-module-meta">${countLabel}${avgLabel}</span>
     </div>
-    <div class="tp-rating-row">
-      <svg width="96" height="22" viewBox="-12 -11 96 22">${starsBig}</svg>
-      <span class="tp-rating-text" style="color:${BAND_COLOR[band]}">${prog.started?prog.mastery+'% · '+BAND_LABEL[band]:'Not started yet'}</span>
-    </div>
-    <div class="subtopic-list">${subRows}</div>
-    <button class="btn-primary" style="width:auto;margin-top:1.1rem;padding:.7rem 1.5rem" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
-      Practice this topic
-    </button>`;
+    <div class="tp-topic-list">${topics.map(tpTopicRowHtml).join('')}</div>
+  </div>`;
 }
 
-function tpRenderJumpChips(){
-  const el=document.getElementById('tpJumpChips');
-  if(!el)return;
-  el.innerHTML=TAXONOMY.map(mod=>{
-    const meta=MODULE_META[mod.code];
-    return `<button class="tp-chip" style="--chip-color:${meta.color}" onclick="tpJumpTo('${mod.code}')"><span class="tp-chip-dot"></span>${meta.short}</button>`;
-  }).join('');
-}
-function tpJumpTo(moduleCode){
-  const island=tpWorld.islands.find(isl=>isl.mod.code===moduleCode);
-  if(!island)return;
-  tpAnimateCameraTo(tpFitRect(island.bbox,1.25),550);
-}
-function tpZoomButton(factor){
-  const svg=document.getElementById('tpMapSvg');
-  const rect=svg.getBoundingClientRect();
-  if(!rect.width)return;
-  const worldX=tpCamera.x+0.5*tpCamera.w,worldY=tpCamera.y+0.5*tpCamera.h;
-  const newW=Math.min(tpMaxW,Math.max(tpMinW,tpCamera.w*factor));
-  const newH=newW*(tpCamera.h/tpCamera.w);
-  tpAnimateCameraTo({x:worldX-0.5*newW,y:worldY-0.5*newH,w:newW,h:newH},280);
-}
-function tpFitAllBtn(){
-  tpDeselect();
-  tpAnimateCameraTo(tpInitialFitRect(),500);
-}
-function tpOnShow(){
-  requestAnimationFrame(()=>{
-    if(!tpWorld)return;
-    tpCamera=tpInitialFitRect();
-    tpApplyViewBox();
-  });
+let tpModuleFilter='all';
+let tpSearchQuery='';
+
+function tpRender(){
+  const wrap=document.getElementById('tpModulesWrap');
+  const empty=document.getElementById('tpEmptyState');
+  if(!wrap)return;
+  const query=tpSearchQuery.trim().toLowerCase();
+  const mods=TAXONOMY.filter(m=>tpModuleFilter==='all'||m.code===tpModuleFilter);
+  const cards=mods.map(m=>tpModuleCardHtml(m,query)).filter(Boolean);
+  wrap.innerHTML=cards.join('');
+  if(empty)empty.style.display=cards.length?'none':'block';
 }
 
-function tpRenderLegend(){
-  const el=document.getElementById('tpLegend');
-  if(!el)return;
-  const tiers=[[3,'Mastered'],[2,'Proficient'],[1,'Developing'],[0,'Needs work']];
-  let html=tiers.map(([stars,label])=>{
-    const starsHtml=[0,1,2].map(i=>`<path d="${tpStarPath(i*10,0,4.2)}" fill="${i<stars?'var(--flame)':'var(--alt)'}" stroke="${i<stars?'var(--flame)':'var(--bdr2)'}" stroke-width="0.6"/>`).join('');
-    return `<div class="tp-legend-item"><svg width="28" height="10" viewBox="-5 -5 28 10">${starsHtml}</svg><span>${label}</span></div>`;
-  }).join('');
-  html+=`<div class="tp-legend-item"><span class="tp-legend-dash"></span><span>Not started</span></div>`;
-  el.innerHTML=html;
+function tpOnSearch(value){
+  tpSearchQuery=value;
+  tpRender();
 }
 
-/* Pan / zoom / tap interaction */
-function tpClientToFrac(clientX,clientY,rect){
-  return {fx:(clientX-rect.left)/rect.width,fy:(clientY-rect.top)/rect.height};
-}
-function tpZoomAtClient(clientX,clientY,rect,factor){
-  const {fx,fy}=tpClientToFrac(clientX,clientY,rect);
-  const worldX=tpCamera.x+fx*tpCamera.w,worldY=tpCamera.y+fy*tpCamera.h;
-  const newW=Math.min(tpMaxW,Math.max(tpMinW,tpCamera.w*factor));
-  const newH=newW*(tpCamera.h/tpCamera.w);
-  tpCamera={x:worldX-fx*newW,y:worldY-fy*newH,w:newW,h:newH};
-  tpClampCamera();
-  tpApplyViewBox();
-}
+function tpOnShow(){}
 
-function tpInitInteraction(){
-  const svg=document.getElementById('tpMapSvg');
-  const container=document.getElementById('tpMapContainer');
-  if(!svg||!container)return;
+(function tpInitSummary(){
+  const allTopics=TAXONOMY.flatMap(m=>m.topics);
+  const startedCount=allTopics.filter(t=>TOPIC_PROGRESS[t.code].started).length;
+  const subCount=allTopics.reduce((s,t)=>s+t.subtopics.length,0);
+  const setText=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};
+  setText('tpTotalCount',allTopics.length);
+  setText('tpTotalSub',subCount);
+  setText('tpTotalStarted',startedCount);
+})();
 
-  svg.addEventListener('wheel',e=>{
-    e.preventDefault();
-    const rect=svg.getBoundingClientRect();
-    tpZoomAtClient(e.clientX,e.clientY,rect,e.deltaY>0?1.14:1/1.14);
-  },{passive:false});
+document.querySelectorAll('#tpModuleSeg .seg-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#tpModuleSeg .seg-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
+  b.classList.add('active');
+  b.setAttribute('aria-pressed','true');
+  tpModuleFilter=b.dataset.mod;
+  tpRender();
+}));
 
-  svg.addEventListener('pointerdown',e=>{
-    e.preventDefault();
-    svg.setPointerCapture(e.pointerId);
-    tpPointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
-    if(tpPointers.size===1){
-      const nodeEl=e.target.closest('.tp-node');
-      const islandEl=nodeEl?null:e.target.closest('.tp-island');
-      tpDownInfo={code:nodeEl?nodeEl.dataset.code:null,subject:islandEl?islandEl.dataset.subject:null};
-      tpMoved=false;
-      tpDragState={mode:'pan',startClientX:e.clientX,startClientY:e.clientY,startCam:{...tpCamera}};
-      container.classList.add('grabbing');
-    }else if(tpPointers.size===2){
-      const pts=[...tpPointers.values()];
-      tpDragState={mode:'pinch',startDist:Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y)||1,startCam:{...tpCamera},startMid:{x:(pts[0].x+pts[1].x)/2,y:(pts[0].y+pts[1].y)/2}};
-    }
-  });
-
-  svg.addEventListener('pointermove',e=>{
-    if(!tpPointers.has(e.pointerId))return;
-    tpPointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
-    if(!tpDragState)return;
-    const rect=svg.getBoundingClientRect();
-    if(tpDragState.mode==='pan'&&tpPointers.size===1){
-      const dx=e.clientX-tpDragState.startClientX,dy=e.clientY-tpDragState.startClientY;
-      if(Math.hypot(dx,dy)>4)tpMoved=true;
-      const cam=tpDragState.startCam;
-      tpCamera={x:cam.x-dx*(cam.w/rect.width),y:cam.y-dy*(cam.h/rect.height),w:cam.w,h:cam.h};
-      tpClampCamera();
-      tpApplyViewBox();
-    }else if(tpDragState.mode==='pinch'&&tpPointers.size===2){
-      tpMoved=true;
-      const pts=[...tpPointers.values()];
-      const dist=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y)||1;
-      const cam=tpDragState.startCam;
-      let newW=Math.min(tpMaxW,Math.max(tpMinW,cam.w*(tpDragState.startDist/dist)));
-      const newH=newW*(cam.h/cam.w);
-      const {fx,fy}=tpClientToFrac(tpDragState.startMid.x,tpDragState.startMid.y,rect);
-      const worldMidX=cam.x+fx*cam.w,worldMidY=cam.y+fy*cam.h;
-      tpCamera={x:worldMidX-fx*newW,y:worldMidY-fy*newH,w:newW,h:newH};
-      tpClampCamera();
-      tpApplyViewBox();
-    }
-  });
-
-  function onUp(e){
-    tpPointers.delete(e.pointerId);
-    if(tpPointers.size===0){
-      container.classList.remove('grabbing');
-      if(tpDownInfo&&!tpMoved){
-        if(tpDownInfo.code)tpSelectTopic(tpDownInfo.code);
-        else if(tpDownInfo.subject)tpJumpTo(tpDownInfo.subject);
-        else tpDeselect();
-      }
-      tpDragState=null;
-      tpDownInfo=null;
-    }else if(tpPointers.size===1){
-      const [,pt]=[...tpPointers.entries()][0];
-      tpDragState={mode:'pan',startClientX:pt.x,startClientY:pt.y,startCam:{...tpCamera}};
-    }
-  }
-  svg.addEventListener('pointerup',onUp);
-  svg.addEventListener('pointercancel',onUp);
-}
-
-tpWorld=tpBuildWorld();
-tpMinW=260;
-tpMaxW=tpWorld.bbox.w*1.2;
-tpCamera=tpFitRectFallback(tpWorld.bbox,1.08);
-tpRenderWorld();
-tpRenderJumpChips();
-tpRenderLegend();
-tpInitInteraction();
+tpRender();
 </script>
 </body>
 </html>
