@@ -985,11 +985,6 @@ button{font-family:inherit}
   <!-- ═══ MENTAL MATHS VIEW ═══ -->
   <div id="view-mentalmaths" class="view">
     <div class="page" id="mmHub">
-      <div class="greeting">
-        <h1>Mental Maths</h1>
-        <p>Sharpen the calculation speed and number sense that the <strong>ESAT</strong> rewards. Pick a skill, work through a mini guide to the method, then drill it until it's automatic.</p>
-      </div>
-
       <div class="mm-toolbar">
         <div class="mm-toolbar-group">
           <span class="mm-toolbar-lbl">Questions per session</span>
@@ -1070,11 +1065,6 @@ button{font-family:inherit}
   <!-- ═══ TOPICS VIEW ═══ -->
   <div id="view-topics" class="view">
     <div class="page">
-      <div class="greeting">
-        <h1>Topics</h1>
-        <p><strong id="tpTotalCount">—</strong> topics across 5 modules and <strong id="tpTotalSub">—</strong> subtopics · <strong id="tpTotalStarted">—</strong> already underway. Browse the full ESAT specification and jump straight into practice.</p>
-      </div>
-
       <div class="tp-toolbar">
         <div class="seg-group" id="tpModuleSeg" role="group" aria-label="Filter by module">
           <button class="seg-btn active" data-mod="all" aria-pressed="true">All</button>
@@ -1098,11 +1088,6 @@ button{font-family:inherit}
   <!-- ═══ ANALYTICS VIEW ═══ -->
   <div id="view-analytics" class="view">
     <div class="page">
-      <div class="greeting">
-        <h1>Your Analytics</h1>
-        <p><strong>1,066</strong> questions answered across 3 subjects. Overall accuracy is <strong>64%</strong> and climbing — up 3% since last month.</p>
-      </div>
-
       <div class="stat-grid">
         <div class="stat-card">
           <div class="stat-top">
@@ -1247,11 +1232,6 @@ button{font-family:inherit}
   <!-- ═══ ACHIEVEMENTS VIEW ═══ -->
   <div id="view-achievements" class="view">
     <div class="page">
-      <div class="greeting">
-        <h1>Your Achievements</h1>
-        <p><strong>10 of 24</strong> badges unlocked — you're 3 questions away from your next one.</p>
-      </div>
-
       <div class="achp-stats">
         <div class="hero-card">
           <div class="hero-top">
@@ -1502,11 +1482,7 @@ button{font-family:inherit}
   <!-- ═══ LEADERBOARD VIEW ═══ -->
   <div id="view-leaderboard" class="view">
     <div class="page">
-      <div class="lb-head">
-        <div class="greeting" style="margin-bottom:0">
-          <h1>Leaderboard</h1>
-          <p>You're ranked <strong id="lbYourRank">#4</strong> this week. Add friends to see how you stack up against people you know.</p>
-        </div>
+      <div class="lb-head" style="justify-content:flex-end;margin-bottom:1.1rem">
         <button class="btn-primary lb-addfriend-btn" style="width:auto" onclick="openAddFriendModal()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.25"/><path d="M3 20a6.25 6.25 0 0 1 12 0"/><path d="M18 8.5v5M15.5 11h5"/></svg>
           Add Friend
@@ -1591,11 +1567,6 @@ button{font-family:inherit}
   <!-- ═══ SETTINGS VIEW ═══ -->
   <div id="view-settings" class="view">
     <div class="page">
-      <div class="greeting">
-        <h1>Settings</h1>
-        <p>Manage your profile, study preferences, and account details.</p>
-      </div>
-
       <div class="settings-layout">
         <nav class="settings-nav" aria-label="Settings sections">
           <button class="active" data-panel="profile" onclick="setSettingsPanel('profile',this)">
