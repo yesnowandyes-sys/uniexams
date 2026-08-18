@@ -8,7 +8,7 @@ from flask import Flask, send_from_directory
 app = Flask(__name__)
 
 # The repo auto-pulls from GitHub into this directory
-REPO_DIR = '/home/ubuntu/exam-tutor'
+REPO_DIR = '/home/ubuntu/uniexams'
 
 # index.html is a single self-contained file (inline CSS/JS, client-side-only
 # nav, no local assets) — there is nothing else in REPO_DIR that should ever

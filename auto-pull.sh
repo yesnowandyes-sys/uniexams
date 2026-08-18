@@ -1,8 +1,8 @@
 #!/bin/bash
-# Auto-pull exam-tutor repo from GitHub every 60 seconds
-REPO_DIR="/home/ubuntu/exam-tutor"
-LOCK_FILE="/tmp/exam-tutor-pull.lock"
-LOG_FILE="/home/ubuntu/exam-tutor/pull.log"
+# Auto-pull uniexams repo from GitHub every 60 seconds
+REPO_DIR="/home/ubuntu/uniexams"
+LOCK_FILE="/tmp/uniexams-pull.lock"
+LOG_FILE="/home/ubuntu/uniexams/pull.log"
 
 exec 9>"$LOCK_FILE"
 flock -n 9 || exit 0
