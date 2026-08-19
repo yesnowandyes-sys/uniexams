@@ -1884,9 +1884,11 @@ body.authed #loginScreen{display:none}
 
 <script>
 /* ═══ AUTH ═══ */
+/* Temporary public URL (Cloudflare quick tunnel) until uniexams-backend has a
+   permanent domain — swap this for the real one once that's set up. */
 const API_BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1')
   ? 'http://127.0.0.1:8000'
-  : 'https://api.uniexams.co.uk';
+  : 'https://file-apollo-contribution-pharmaceutical.trycloudflare.com';
 const ACCESS_KEY='examTutorAccessToken',REFRESH_KEY='examTutorRefreshToken';
 
 function getAccessToken(){return localStorage.getItem(ACCESS_KEY)}
