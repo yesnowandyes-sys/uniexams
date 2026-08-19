@@ -778,8 +778,6 @@ button{font-family:inherit}
 }
 
 /* ═══ LOGIN ═══ */
-body:not(.authed) #appShell{display:none}
-body.authed #loginScreen{display:none}
 #loginScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);padding:1.5rem}
 .login-card{width:100%;max-width:380px;background:var(--surf);border-radius:18px;box-shadow:var(--shadow-3);padding:2rem 1.75rem}
 .login-brand{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem}
@@ -796,17 +794,279 @@ body.authed #loginScreen{display:none}
 .login-create-note{display:none;font-size:.75rem;color:var(--sec);text-align:center;margin-top:.75rem}
 .login-create-note.show{display:block}
 .login-btn[disabled]{opacity:.65;cursor:not-allowed}
+
+/* ═══ WELCOME / LANDING ═══ */
+#welcomeScreen{display:none;background:var(--bg)}
+#loginScreen{display:none}
+#appShell{display:none}
+body[data-screen="welcome"] #welcomeScreen{display:block}
+body[data-screen="login"] #loginScreen{display:flex}
+body[data-screen="app"] #appShell{display:block}
+
+.w-container{max-width:1160px;margin:0 auto;padding:0 1.75rem}
+.w-nav{position:sticky;top:0;z-index:50;background:rgba(246,247,253,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--bdr)}
+.w-nav-inner{max-width:1160px;margin:0 auto;padding:0 1.75rem;height:64px;display:flex;align-items:center;gap:1.75rem}
+.w-brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.w-brand-icon{width:34px;height:34px;border-radius:9px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.w-brand-icon span{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.45rem;color:#fff;line-height:1}
+.w-brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.w-brand-txt b{font-size:.8125rem;font-weight:700;letter-spacing:.08em;color:var(--text)}
+.w-brand-txt em{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.0625rem;color:var(--sec)}
+.w-nav-links{display:flex;align-items:center;gap:1.5rem}
+.w-nav-links a{font-size:.8125rem;font-weight:600;color:var(--sec);text-decoration:none}
+.w-nav-links a:hover{color:var(--text)}
+.w-nav .btn-primary,.w-nav .btn-outline{width:auto;padding:.55rem 1.1rem}
+@media(max-width:760px){.w-nav-links{display:none}}
+
+.w-hero{padding:4.5rem 0 4rem;text-align:center;background:radial-gradient(ellipse 900px 420px at 50% -10%,var(--lite),transparent)}
+.w-hero-badge{background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:1.25rem}
+.w-hero h1{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:clamp(2.25rem,4.5vw,3.4rem);letter-spacing:-.01em;line-height:1.12;max-width:760px;margin:0 auto .9rem}
+.w-hero p{font-size:1rem;color:var(--sec);line-height:1.65;max-width:560px;margin:0 auto 2rem}
+.w-hero-ctas{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-bottom:3rem}
+.w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.85rem 1.6rem;font-size:.9375rem}
+.w-hero-stats{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.w-hero-stat span{font-size:.75rem;color:var(--ter);font-weight:600}
+
+.w-section{padding:3.5rem 0}
+.w-section-head{text-align:center;max-width:600px;margin:0 auto 2.25rem}
+.w-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem}
+.w-section-head h2{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:1.9rem;letter-spacing:-.01em;margin-bottom:.5rem}
+.w-section-head p{font-size:.875rem;color:var(--sec);line-height:1.6}
+
+.w-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.w-feature{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.4rem 1.4rem 1.5rem;box-shadow:var(--shadow-1)}
+.w-feature-icon{width:38px;height:38px;border-radius:10px;background:var(--lite);color:var(--mid);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+.w-feature h3{font-size:.9375rem;font-weight:700;margin-bottom:.4rem}
+.w-feature p{font-size:.8125rem;color:var(--ter);line-height:1.6}
+@media(max-width:860px){.w-feature-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.w-feature-grid{grid-template-columns:1fr}}
+
+.w-sample{background:var(--surf);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.w-sample-widget{max-width:720px;margin:0 auto}
+.w-sample-note{text-align:center;font-size:.75rem;color:var(--ter);margin-top:1rem}
+
+.w-how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:wstep}
+.w-how-step{position:relative;padding-left:2.75rem}
+.w-how-step::before{counter-increment:wstep;content:counter(wstep);position:absolute;left:0;top:0;width:2rem;height:2rem;border-radius:50%;background:var(--navy);color:#fff;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.8125rem;display:flex;align-items:center;justify-content:center}
+.w-how-step h3{font-size:.9375rem;font-weight:700;margin-bottom:.35rem}
+.w-how-step p{font-size:.8125rem;color:var(--ter);line-height:1.6}
+@media(max-width:760px){.w-how-steps{grid-template-columns:1fr;gap:1.75rem}}
+
+.w-faq{max-width:720px;margin:0 auto}
+.w-faq-item{border-bottom:1px solid var(--bdr);padding:1.1rem 0}
+.w-faq-item summary{font-size:.875rem;font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.w-faq-item summary::-webkit-details-marker{display:none}
+.w-faq-item summary::after{content:'+';font-size:1.25rem;font-weight:400;color:var(--ter);flex-shrink:0;transition:transform .15s}
+.w-faq-item[open] summary::after{transform:rotate(45deg)}
+.w-faq-item p{font-size:.8125rem;color:var(--sec);line-height:1.65;margin-top:.7rem}
+
+.w-cta-band{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);border-radius:20px;padding:3rem 2rem;text-align:center;margin:0 1.75rem}
+.w-cta-band h2{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#fff;font-size:1.9rem;margin-bottom:.6rem}
+.w-cta-band p{color:var(--navy-text);font-size:.875rem;margin-bottom:1.5rem}
+.w-cta-band .btn-white{width:auto;margin:0 auto;padding:.85rem 1.75rem;font-size:.9375rem}
+
+.w-footer{padding:2.5rem 0 2.5rem;border-top:1px solid var(--bdr)}
+.w-footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.w-footer-links{display:flex;gap:1.5rem}
+.w-footer-links a{font-size:.8125rem;color:var(--ter);text-decoration:none}
+.w-footer-links a:hover{color:var(--text)}
+.w-footer-copy{font-size:.75rem;color:var(--ter)}
+
+@media(max-width:640px){
+.w-hero{padding:3rem 0 2.5rem}
+.w-hero-stats{gap:1.5rem}
+.w-cta-band{margin:0 1rem;padding:2.25rem 1.25rem}
+.w-footer-inner{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
-<body>
+<body data-screen="welcome">
+<script>if(localStorage.getItem('examTutorAccessToken'))document.body.dataset.screen='app';</script>
+
+<!-- ═══ WELCOME (first-time visitor landing page) ═══ -->
+<div id="welcomeScreen">
+
+  <header class="w-nav">
+    <div class="w-nav-inner">
+      <a class="w-brand" href="#welcomeScreen">
+        <div class="w-brand-icon"><span>E</span></div>
+        <div class="w-brand-txt"><b>EXAM</b><em>Tutor</em></div>
+      </a>
+      <nav class="w-nav-links">
+        <a href="#wFeatures">Features</a>
+        <a href="#wSample">Sample questions</a>
+        <a href="#wHow">How it works</a>
+        <a href="#wFaq">FAQ</a>
+      </nav>
+      <button type="button" class="btn-primary" onclick="showLoginScreen()">Log in</button>
+    </div>
+  </header>
+
+  <section class="w-hero">
+    <div class="w-container">
+      <span class="pill w-hero-badge">Built from real ESAT past-paper questions</span>
+      <h1>Master the ESAT with confidence, one worked solution at a time</h1>
+      <p>Practice with real past-paper questions, drill mental maths, and track your progress topic by topic — everything you need to prepare for the Engineering and Science Admissions Test, in one place.</p>
+      <div class="w-hero-ctas">
+        <button type="button" class="btn-primary" onclick="showLoginScreen()">Log in to your dashboard</button>
+        <a href="#wSample" class="btn-outline">Try a sample question</a>
+      </div>
+      <div class="w-hero-stats">
+        <div class="w-hero-stat"><b>1,586+</b><span>Practice questions</span></div>
+        <div class="w-hero-stat"><b>5</b><span>Subject modules</span></div>
+        <div class="w-hero-stat"><b>100+</b><span>Topics &amp; subtopics</span></div>
+        <div class="w-hero-stat"><b>24/7</b><span>Mental maths trainer</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-section" id="wFeatures">
+    <div class="w-container">
+      <div class="w-section-head">
+        <div class="w-eyebrow">Why EXAM Tutor</div>
+        <h2>Everything you need to prepare, in one dashboard</h2>
+        <p>Once you're logged in, your dashboard brings together practice, drilling, and progress tracking so you always know what to work on next.</p>
+      </div>
+      <div class="w-feature-grid">
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
+          <h3>Real past-paper questions</h3>
+          <p>Over 1,586 questions across Mathematics, Physics, Chemistry and Biology, sourced from real exam-style material — not generated filler.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg></div>
+          <h3>Full worked solutions</h3>
+          <p>Every question comes with a step-by-step worked solution, so you understand the method — not just the answer.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.25" y="3" width="13.5" height="18" rx="1.75"/><path d="M8.25 7.5h7.5"/><circle cx="8.6" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="12" r=".9" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Mental maths trainer</h3>
+          <p>Sharpen your speed and accuracy with configurable drills — set the digit ranges and operations you want to practise.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg></div>
+          <h3>Topic-by-topic analytics</h3>
+          <p>See exactly where you're strong and where you need work, broken down by module, topic and subtopic.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 3h7.5v4.5a3.75 3.75 0 0 1-7.5 0V3Z"/><path d="M8.25 4.5H4.5v1.5a3.75 3.75 0 0 0 3.75 3.75M15.75 4.5h3.75v1.5a3.75 3.75 0 0 1-3.75 3.75M12 12.75v3.75m0 0h-2.25m2.25 0h2.25m-4.5 3.75h4.5"/></svg></div>
+          <h3>Streaks &amp; achievements</h3>
+          <p>Stay consistent with daily streaks and unlockable achievements that reward steady practice, not just cramming.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 21h7.5M12 17.25V21M6.75 3h10.5v4.5a4.5 4.5 0 0 1-9 0V3ZM6.75 4.5H3.375A1.125 1.125 0 0 0 2.25 5.625v.75A3.375 3.375 0 0 0 5.625 9.75M17.25 4.5h3.375c.621 0 1.125.504 1.125 1.125v.75a3.375 3.375 0 0 1-3.375 3.375"/></svg></div>
+          <h3>Friends &amp; leaderboard</h3>
+          <p>Add friends and compare progress on the leaderboard to keep yourself accountable in the run-up to exam day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-section w-sample" id="wSample">
+    <div class="w-container">
+      <div class="w-section-head">
+        <div class="w-eyebrow">Try it yourself</div>
+        <h2>10 real example questions — no account needed</h2>
+        <p>These are the same example questions you'll see when you first open the Practice tool. Pick an answer, then reveal the worked solution.</p>
+      </div>
+      <div class="w-sample-widget">
+        <div class="question-nav" id="wQNav" role="tablist" aria-label="Sample questions"></div>
+        <div id="wQuestionArea"></div>
+        <div id="wAnswerAnnounce" class="sr-only" aria-live="polite"></div>
+        <div class="nav-btns">
+          <button class="nav-btn" id="wPrevBtn" onclick="wNavQ(-1)" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Previous</button>
+          <button class="nav-btn" id="wNextBtn" onclick="wNavQ(1)">Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+        </div>
+      </div>
+      <p class="w-sample-note">Log in to unlock the full 1,586-question bank, personalised analytics and the mental maths trainer.</p>
+    </div>
+  </section>
+
+  <section class="w-section" id="wHow">
+    <div class="w-container">
+      <div class="w-section-head">
+        <div class="w-eyebrow">Getting started</div>
+        <h2>Up and running in three steps</h2>
+      </div>
+      <div class="w-how-steps">
+        <div class="w-how-step">
+          <h3>Log in to your dashboard</h3>
+          <p>Sign in with your account to reach your personal Home, Practice, Mental Maths and Analytics pages.</p>
+        </div>
+        <div class="w-how-step">
+          <h3>Practice by topic</h3>
+          <p>Work through real ESAT-style questions with instant feedback, then reveal the full worked solution.</p>
+        </div>
+        <div class="w-how-step">
+          <h3>Track your progress</h3>
+          <p>Watch your predicted grade, streaks and topic mastery improve as you keep practising.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-section" id="wFaq">
+    <div class="w-container">
+      <div class="w-section-head">
+        <div class="w-eyebrow">FAQ</div>
+        <h2>Common questions</h2>
+      </div>
+      <div class="w-faq">
+        <details class="w-faq-item">
+          <summary>What is this site for?</summary>
+          <p>EXAM Tutor helps students prepare for the ESAT (Engineering and Science Admissions Test), used by universities including Cambridge and Imperial, by practising with real exam-style questions in Mathematics, Physics, Chemistry and Biology.</p>
+        </details>
+        <details class="w-faq-item">
+          <summary>Are the questions real?</summary>
+          <p>Yes. The question bank is built from real past-paper style questions, not AI-generated filler, and every question includes a full worked solution.</p>
+        </details>
+        <details class="w-faq-item">
+          <summary>Which topics are covered?</summary>
+          <p>Five modules: Mathematics 1, Mathematics 2, Physics, Chemistry and Biology, broken down into over 100 topics and subtopics so you can practise exactly what you need.</p>
+        </details>
+        <details class="w-faq-item">
+          <summary>How do I get an account?</summary>
+          <p>Account creation is opening soon — check back shortly. If you already have login details, use the Log in button above to reach your dashboard.</p>
+        </details>
+        <details class="w-faq-item">
+          <summary>Do I need to install anything?</summary>
+          <p>No. EXAM Tutor runs entirely in your browser, so you can practise from any device with an internet connection.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-container">
+    <div class="w-cta-band">
+      <h2>Ready to see where you stand?</h2>
+      <p>Log in to unlock the full question bank, mental maths trainer and your personal analytics dashboard.</p>
+      <button type="button" class="btn-white" onclick="showLoginScreen()">Log in to your dashboard</button>
+    </div>
+  </div>
+
+  <footer class="w-footer">
+    <div class="w-container w-footer-inner">
+      <div class="w-footer-links">
+        <a href="#wFeatures">Features</a>
+        <a href="#wSample">Sample questions</a>
+        <a href="#wHow">How it works</a>
+        <a href="#wFaq">FAQ</a>
+        <a href="javascript:void(0)" onclick="showLoginScreen()">Log in</a>
+      </div>
+      <div class="w-footer-copy">© 2026 EXAM Tutor. Not affiliated with any exam board or university.</div>
+    </div>
+  </footer>
+
+</div>
 
 <!-- ═══ LOGIN ═══ -->
 <div id="loginScreen">
   <div class="login-card">
-    <div class="login-brand">
+    <a class="login-brand" href="javascript:void(0)" onclick="showWelcome()" style="text-decoration:none">
       <div class="login-brand-icon">E</div>
       <div class="login-brand-txt">EXAM<em> Tutor</em></div>
-    </div>
+    </a>
     <div class="login-title">Log in</div>
     <div class="login-sub">Sign in to continue to your practice.</div>
     <div class="login-error" id="loginError"></div>
@@ -1923,8 +2183,9 @@ async function refreshAccessToken(){
   }catch(e){return false}
 }
 
-function showLoginScreen(){document.body.classList.remove('authed')}
-function showApp(){document.body.classList.add('authed')}
+function showWelcome(){document.body.dataset.screen='welcome'}
+function showLoginScreen(){document.body.dataset.screen='login'}
+function showApp(){document.body.dataset.screen='app'}
 
 async function applyCurrentUserToChrome(){
   try{
@@ -1973,7 +2234,7 @@ async function handleLogin(event){
 async function handleLogout(){
   const refreshToken=getRefreshToken();
   clearTokens();
-  showLoginScreen();
+  showWelcome();
   const errorBox=document.getElementById('loginError');
   if(errorBox)errorBox.classList.remove('show');
   if(refreshToken){
@@ -1989,7 +2250,7 @@ function handleCreateAccountClick(){
 }
 
 async function initAuth(){
-  if(!getAccessToken()){showLoginScreen();return}
+  if(!getAccessToken()){showWelcome();return}
   const res=await apiFetch('/users/me').catch(()=>null);
   if(res&&res.ok){
     showApp();
@@ -2100,6 +2361,69 @@ function pick(i){
 function navQ(d){const n=idx+d;if(n>=0&&n<QUESTIONS.length){idx=n;render()}}
 function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
 function resetSession(){idx=0;answers={};showSoln={};render()}
+
+/* ── Welcome-page sample question widget (reuses QUESTIONS/LETTERS, kept fully separate from the gated Practice engine above) ── */
+let wIdx=0,wAnswers={},wShowSoln={};
+
+function wRenderNav(){
+  const navEl=document.getElementById('wQNav');if(!navEl)return;navEl.innerHTML='';
+  QUESTIONS.forEach((_,i)=>{
+    const b=document.createElement('button');b.className='qnum';
+    const a=wAnswers[i],revealed=a!==undefined;
+    let state='not yet answered';
+    if(revealed){const q=QUESTIONS[i];const ok=a===q.ans;b.classList.add(ok?'correct':'incorrect');state=ok?'answered correctly':'answered incorrectly'}
+    if(i===wIdx){b.classList.add('cur');b.setAttribute('aria-current','step')}
+    b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
+    if(revealed)b.innerHTML=a===QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
+    else b.textContent=i+1;
+    b.onclick=()=>{wIdx=i;wRender()};
+    navEl.appendChild(b);
+  });
+}
+
+function wRenderQuestion(){
+  const q=QUESTIONS[wIdx],area=document.getElementById('wQuestionArea');if(!area)return;
+  const a=wAnswers[wIdx],isCorrect=a===q.ans,answered=a!==undefined;
+  const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
+  const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
+  let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
+  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${wIdx+1} of ${QUESTIONS.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
+  html+='<div class="opts">';
+  q.opts.forEach((o,oi)=>{
+    let cls='opt';if(answered)cls+=' answered';
+    if(answered){if(oi===q.ans)cls+=' correct-answer';else if(oi===a)cls+=' wrong-answer';else cls+=' dimmed'}
+    let letterBg='var(--alt)',letterCol='var(--sec)';
+    if(answered&&oi===q.ans){letterBg='var(--green)';letterCol='#fff'}
+    if(answered&&oi===a&&oi!==q.ans){letterBg='var(--red)';letterCol='#fff'}
+    const badge=answered?oi===q.ans?'<div class="state-badge" style="background:var(--green)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div>':oi===a?'<div class="state-badge" style="background:var(--red)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg></div>':'':'';
+    const stateLabel=answered?(oi===q.ans?' — correct answer':(oi===a?' — your answer, incorrect':'')):'';
+    html+=`<button class="${cls}" onclick="wPick(${oi})" ${answered?'disabled':''} aria-label="${LETTERS[oi]}. ${o}${stateLabel}"><span class="letter" style="background:${letterBg};color:${letterCol}">${LETTERS[oi]}</span><span class="opt-text">${o}${answered?'':(oi<9?`<span class="kbd-hint">[${oi+1}]</span>`:'')}</span>${badge}</button>`;
+  });
+  html+='</div>';
+  if(answered){
+    const solOpen=wShowSoln[wIdx];
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="wToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span></button>`;
+    if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
+  }
+  area.innerHTML=html;
+}
+
+function wRender(){
+  wRenderNav();wRenderQuestion();
+  const prevBtn=document.getElementById('wPrevBtn'),nextBtn=document.getElementById('wNextBtn');
+  if(prevBtn)prevBtn.disabled=wIdx===0;
+  if(nextBtn)nextBtn.disabled=wIdx===QUESTIONS.length-1;
+}
+function wPick(i){
+  if(wAnswers[wIdx]!==undefined)return;
+  wAnswers[wIdx]=i;
+  const q=QUESTIONS[wIdx],ok=i===q.ans,live=document.getElementById('wAnswerAnnounce');
+  if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
+  wRender();
+}
+function wNavQ(d){const n=wIdx+d;if(n>=0&&n<QUESTIONS.length){wIdx=n;wRender()}}
+function wToggleSoln(){wShowSoln[wIdx]=!wShowSoln[wIdx];wRender()}
+if(document.getElementById('wQNav'))wRender();
 
 document.addEventListener('keydown',e=>{
   if(!document.getElementById('view-practice').classList.contains('active'))return;
