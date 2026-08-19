@@ -6,6 +6,7 @@
 <title>UniExams</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0}
 :root{
@@ -778,7 +779,7 @@ button{font-family:inherit}
 }
 
 /* ═══ LOGIN ═══ */
-#loginScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 900px 420px at 50% -10%,var(--lite),transparent),var(--bg);padding:1.5rem}
+#loginScreen,#signupScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 900px 420px at 50% -10%,var(--lite),transparent),var(--bg);padding:1.5rem}
 .login-card{width:100%;max-width:380px;background:var(--surf);border-radius:18px;box-shadow:var(--shadow-3);padding:2rem 1.75rem}
 .login-brand{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem}
 .login-brand-icon{width:34px;height:34px;border-radius:9px;background:var(--mid);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem}
@@ -791,16 +792,20 @@ button{font-family:inherit}
 .login-error.show{display:block}
 .login-divider{display:flex;align-items:center;gap:10px;margin:1.25rem 0;color:var(--ter);font-size:.75rem}
 .login-divider::before,.login-divider::after{content:'';flex:1;height:1px;background:var(--bdr)}
-.login-create-note{display:none;font-size:.75rem;color:var(--sec);text-align:center;margin-top:.75rem}
-.login-create-note.show{display:block}
 .login-btn[disabled]{opacity:.65;cursor:not-allowed}
+.google-btn-slot{display:flex;justify-content:center;min-height:40px}
+.login-foot-link{font-size:.8125rem;color:var(--sec);text-align:center;margin-top:1.25rem}
+.login-foot-link a{color:var(--mid);font-weight:600;text-decoration:none}
+.login-foot-link a:hover{text-decoration:underline}
 
 /* ═══ WELCOME / LANDING ═══ */
 #welcomeScreen{display:none;background:var(--bg)}
 #loginScreen{display:none}
+#signupScreen{display:none}
 #appShell{display:none}
 body[data-screen="welcome"] #welcomeScreen{display:block}
 body[data-screen="login"] #loginScreen{display:flex}
+body[data-screen="signup"] #signupScreen{display:flex}
 body[data-screen="app"] #appShell{display:block}
 
 .w-container{max-width:1160px;margin:0 auto;padding:0 1.75rem}
@@ -909,9 +914,10 @@ body[data-screen="app"] #appShell{display:block}
       <h1>Master the ESAT with confidence, one worked solution at a time</h1>
       <p>Practice with real past-paper questions, drill mental maths, and track your progress topic by topic — everything you need to prepare for the Engineering and Science Admissions Test, in one place.</p>
       <div class="w-hero-ctas">
-        <button type="button" class="btn-primary" onclick="showLoginScreen()">Log in to your dashboard</button>
+        <button type="button" class="btn-primary" onclick="showSignupScreen()">Create your free account</button>
         <a href="#wSample" class="btn-outline">Try a sample question</a>
       </div>
+      <p style="font-size:.8125rem;color:var(--ter);margin-top:.75rem">Already have an account? <a href="javascript:void(0)" onclick="showLoginScreen()" style="color:var(--mid);font-weight:600;text-decoration:none">Log in</a></p>
       <div class="w-hero-stats">
         <div class="w-hero-stat"><b>1,586+</b><span>Practice questions</span></div>
         <div class="w-hero-stat"><b>5</b><span>Subject modules</span></div>
@@ -1027,7 +1033,7 @@ body[data-screen="app"] #appShell{display:block}
         </details>
         <details class="w-faq-item">
           <summary>How do I get an account?</summary>
-          <p>Account creation is opening soon — check back shortly. If you already have login details, use the Log in button above to reach your dashboard.</p>
+          <p>Click "Log in" above, then "Create an account" — sign up with an email and password, or continue with Google. Mental Maths and past-paper practice are free; the full generated question bank unlocks with a one-time payment.</p>
         </details>
         <details class="w-faq-item">
           <summary>Do I need to install anything?</summary>
@@ -1040,8 +1046,8 @@ body[data-screen="app"] #appShell{display:block}
   <div class="w-container">
     <div class="w-cta-band">
       <h2>Ready to see where you stand?</h2>
-      <p>Log in to unlock the full question bank, mental maths trainer and your personal analytics dashboard.</p>
-      <button type="button" class="btn-white" onclick="showLoginScreen()">Log in to your dashboard</button>
+      <p>Create a free account to start with Mental Maths and past-paper practice — unlock the full generated question bank with a one-time payment whenever you're ready.</p>
+      <button type="button" class="btn-white" onclick="showSignupScreen()">Create your free account</button>
     </div>
   </div>
 
@@ -1070,6 +1076,8 @@ body[data-screen="app"] #appShell{display:block}
     <div class="login-title">Log in</div>
     <div class="login-sub">Sign in to continue to your practice.</div>
     <div class="login-error" id="loginError"></div>
+    <div class="google-btn-slot" id="googleSignInLogin"></div>
+    <div class="login-divider">or</div>
     <form id="loginForm" onsubmit="handleLogin(event)">
       <div class="login-fields">
         <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="username" required></div>
@@ -1077,9 +1085,31 @@ body[data-screen="app"] #appShell{display:block}
       </div>
       <button type="submit" class="btn-primary login-btn" id="loginSubmitBtn">Log in</button>
     </form>
+    <div class="login-foot-link">New here? <a href="javascript:void(0)" onclick="showSignupScreen()">Create an account</a></div>
+  </div>
+</div>
+
+<!-- ═══ CREATE ACCOUNT ═══ -->
+<div id="signupScreen">
+  <div class="login-card">
+    <a class="login-brand" href="javascript:void(0)" onclick="showWelcome()" style="text-decoration:none">
+      <div class="login-brand-icon">U</div>
+      <div class="login-brand-txt">UNI<em> Exams</em></div>
+    </a>
+    <div class="login-title">Create your account</div>
+    <div class="login-sub">Mental Maths and past-paper practice are free to start — no card required.</div>
+    <div class="login-error" id="signupError"></div>
+    <div class="google-btn-slot" id="googleSignInSignup"></div>
     <div class="login-divider">or</div>
-    <button type="button" class="btn-outline" style="width:100%" onclick="handleCreateAccountClick()">Create an account</button>
-    <div class="login-create-note" id="createAccountNote">Account creation is coming soon — check back later.</div>
+    <form id="signupForm" onsubmit="handleRegister(event)">
+      <div class="login-fields">
+        <div class="field"><label for="signupName">Name</label><input id="signupName" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="signupEmail">Email</label><input id="signupEmail" type="email" autocomplete="username" required></div>
+        <div class="field"><label for="signupPassword">Password</label><input id="signupPassword" type="password" autocomplete="new-password" minlength="8" required></div>
+      </div>
+      <button type="submit" class="btn-primary login-btn" id="signupSubmitBtn">Create account</button>
+    </form>
+    <div class="login-foot-link">Already have an account? <a href="javascript:void(0)" onclick="showLoginScreen()">Log in</a></div>
   </div>
 </div>
 
@@ -2150,6 +2180,7 @@ const API_BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1'
   ? 'http://127.0.0.1:8000'
   : 'https://fairfield-influenced-zealand-position.trycloudflare.com';
 const ACCESS_KEY='examTutorAccessToken',REFRESH_KEY='examTutorRefreshToken';
+const GOOGLE_CLIENT_ID='13634532940-ojpjn0gugji8tnjphhbqdiq1dg65k2ke.apps.googleusercontent.com';
 
 function getAccessToken(){return localStorage.getItem(ACCESS_KEY)}
 function getRefreshToken(){return localStorage.getItem(REFRESH_KEY)}
@@ -2185,6 +2216,7 @@ async function refreshAccessToken(){
 
 function showWelcome(){document.body.dataset.screen='welcome'}
 function showLoginScreen(){document.body.dataset.screen='login'}
+function showSignupScreen(){document.body.dataset.screen='signup'}
 function showApp(){document.body.dataset.screen='app'}
 
 async function applyCurrentUserToChrome(){
@@ -2245,8 +2277,72 @@ async function handleLogout(){
   }
 }
 
-function handleCreateAccountClick(){
-  document.getElementById('createAccountNote').classList.add('show');
+async function handleRegister(event){
+  event.preventDefault();
+  const name=document.getElementById('signupName').value.trim();
+  const email=document.getElementById('signupEmail').value.trim();
+  const password=document.getElementById('signupPassword').value;
+  const errorBox=document.getElementById('signupError');
+  const btn=document.getElementById('signupSubmitBtn');
+  errorBox.classList.remove('show');
+  btn.disabled=true;btn.textContent='Creating account…';
+  try{
+    const res=await fetch(API_BASE+'/auth/register',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,email,password})
+    });
+    if(!res.ok){
+      let msg='Could not create your account. Please try again.';
+      if(res.status===409)msg='That email is already registered — try logging in instead.';
+      else if(res.status===422)msg='Please check your details (password needs at least 8 characters).';
+      throw new Error(msg);
+    }
+    const data=await res.json();
+    setTokens(data.accessToken,data.refreshToken);
+    document.getElementById('signupForm').reset();
+    showApp();
+    await applyCurrentUserToChrome();
+  }catch(e){
+    errorBox.textContent=e.message||'Could not reach the server. Please try again.';
+    errorBox.classList.add('show');
+  }finally{
+    btn.disabled=false;btn.textContent='Create account';
+  }
+}
+
+async function handleGoogleCredential(response){
+  const onLoginScreen=document.body.dataset.screen==='login';
+  const errorBox=document.getElementById(onLoginScreen?'loginError':'signupError');
+  if(errorBox)errorBox.classList.remove('show');
+  try{
+    const res=await fetch(API_BASE+'/auth/google',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({idToken:response.credential})
+    });
+    if(!res.ok)throw new Error('Google sign-in failed. Please try again.');
+    const data=await res.json();
+    setTokens(data.accessToken,data.refreshToken);
+    showApp();
+    await applyCurrentUserToChrome();
+  }catch(e){
+    if(errorBox){
+      errorBox.textContent=e.message||'Could not reach the server. Please try again.';
+      errorBox.classList.add('show');
+    }
+  }
+}
+
+function initGoogleSignIn(){
+  if(!GOOGLE_CLIENT_ID)return;
+  if(typeof google==='undefined'||!google.accounts||!google.accounts.id){
+    setTimeout(initGoogleSignIn,150);
+    return;
+  }
+  google.accounts.id.initialize({client_id:GOOGLE_CLIENT_ID,callback:handleGoogleCredential});
+  const loginSlot=document.getElementById('googleSignInLogin');
+  if(loginSlot)google.accounts.id.renderButton(loginSlot,{theme:'outline',size:'large',width:280,text:'continue_with'});
+  const signupSlot=document.getElementById('googleSignInSignup');
+  if(signupSlot)google.accounts.id.renderButton(signupSlot,{theme:'outline',size:'large',width:280,text:'signup_with'});
 }
 
 async function initAuth(){
@@ -4133,6 +4229,7 @@ document.querySelectorAll('#tpModuleSeg .seg-btn').forEach(b=>b.addEventListener
 
 tpRender();
 initAuth();
+initGoogleSignIn();
 </script>
 </body>
 </html>
