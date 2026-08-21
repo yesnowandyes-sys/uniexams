@@ -587,7 +587,7 @@ button{font-family:inherit}
 
 .q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:.875rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1)}
 .q-meta{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
-.q-text{font-size:.9375rem;line-height:1.85;color:var(--text);margin:0}
+.q-text{font-size:.9375rem;line-height:1.85;color:var(--text);margin:0;white-space:pre-wrap}
 .pill{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:5px;font-size:.6875rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;line-height:1;user-select:none}
 
 .opts{display:flex;flex-direction:column;gap:8px;margin-bottom:.875rem}
@@ -768,6 +768,17 @@ button{font-family:inherit}
 .subtopic-pct{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;flex-shrink:0;width:36px;text-align:right}
 
 .tp-empty{text-align:center;color:var(--ter);font-size:.875rem;padding:3.5rem 0}
+
+.pp-paper-list{display:flex;flex-direction:column;gap:10px;margin-top:.6rem}
+.pp-paper-row{display:flex;align-items:center;gap:14px;padding:.85rem 1.125rem;border:1px solid var(--bdr);border-radius:12px;background:var(--surf)}
+.pp-paper-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--lite)}
+.pp-paper-body{flex:1;min-width:0}
+.pp-paper-title{font-size:.84375rem;font-weight:700;color:var(--text);line-height:1.3}
+.pp-paper-sub{font-size:.78125rem;color:var(--ter);margin-top:4px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center;gap:5px}
+.pp-chip{display:inline-flex;align-items:center;height:18px;padding:0 7px;border-radius:5px;background:var(--alt);color:var(--sec);font-size:.625rem;font-weight:600}
+.pp-paper-cta{flex-shrink:0;width:auto;padding:8px 1.1rem;font-size:.8125rem}
+.pp-runner-head{display:flex;align-items:center;gap:14px;margin-bottom:1.1rem;flex-wrap:wrap}
+.pp-runner-title{font-size:.84375rem;font-weight:700;color:var(--text)}
 
 @media(max-width:640px){
   .tp-toolbar{flex-direction:column;align-items:stretch}
@@ -1139,6 +1150,11 @@ body[data-screen="app"] #appShell{display:block}
       <span>Mental Maths</span>
       <span class="sb-tag">NEW</span>
     </button>
+    <button class="sb-item" id="navPastPapers" onclick="nav(this,'pastpapers','Past Papers')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.75h6.879a1.5 1.5 0 0 1 1.06.44l2.872 2.87a1.5 1.5 0 0 1 .439 1.061V19.5a1.5 1.5 0 0 1-1.5 1.5h-9.75a1.5 1.5 0 0 1-1.5-1.5V5.25a1.5 1.5 0 0 1 1.5-1.5Z"/><path d="M14.25 3.9V7.5a1.5 1.5 0 0 0 1.5 1.5h3.6M8.25 12.75h7.5M8.25 15.75h7.5M8.25 9.75h3"/></svg>
+      <span>Past Papers</span>
+      <span class="sb-tag">NEW</span>
+    </button>
     <button class="sb-item" onclick="nav(this,'soon','Mock Exams')">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.75h6a1.5 1.5 0 0 1 1.5 1.5V6h1.5A1.5 1.5 0 0 1 19.5 7.5v12a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 19.5v-12A1.5 1.5 0 0 1 6 6h1.5V5.25A1.5 1.5 0 0 1 9 3.75Z"/><path d="M9 3.75h6v3H9zM8.25 12h7.5M8.25 15.5h7.5M8.25 8.5h3"/></svg>
       <span>Mock Exams</span>
@@ -1397,6 +1413,67 @@ body[data-screen="app"] #appShell{display:block}
             </div>
           </div>
           <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="mmEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PAST PAPERS VIEW ═══ -->
+  <div id="view-pastpapers" class="view">
+    <div class="page" id="ppHub">
+      <div class="tp-toolbar">
+        <div class="seg-group" id="ppExamSeg" role="group" aria-label="Filter by exam board">
+          <button class="seg-btn active" data-exam="all" aria-pressed="true" onclick="ppSetExamFilter('all',this)">All</button>
+          <button class="seg-btn" data-exam="ESAT" aria-pressed="false" onclick="ppSetExamFilter('ESAT',this)">ESAT</button>
+          <button class="seg-btn" data-exam="ENGAA" aria-pressed="false" onclick="ppSetExamFilter('ENGAA',this)">ENGAA</button>
+          <button class="seg-btn" data-exam="NSAA" aria-pressed="false" onclick="ppSetExamFilter('NSAA',this)">NSAA</button>
+          <button class="seg-btn" data-exam="TMUA" aria-pressed="false" onclick="ppSetExamFilter('TMUA',this)">TMUA</button>
+        </div>
+        <div class="tp-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          <input type="text" id="ppSearchInput" placeholder="Search papers…" oninput="ppOnSearch(this.value)" aria-label="Search past papers">
+        </div>
+      </div>
+
+      <div id="ppGroupsWrap"></div>
+      <div class="tp-empty" id="ppLoadingState" style="display:none">Loading past papers…</div>
+      <div class="tp-empty" id="ppEmptyState" style="display:none">No papers match your search.</div>
+      <div class="tp-empty" id="ppErrorState" style="display:none">Couldn't load past papers. <a href="javascript:void(0)" onclick="ppLoadPapers()" style="color:var(--mid);font-weight:600;text-decoration:none">Try again</a>.</div>
+    </div>
+
+    <!-- Practice runner (same interface as the Practice page) -->
+    <div class="practice-wrap" id="ppRunner" style="display:none">
+      <div class="pp-runner-head">
+        <button class="nav-btn" onclick="ppEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Past Papers</button>
+        <span class="pp-runner-title" id="ppRunnerTitle"></span>
+      </div>
+      <div class="practice-layout">
+        <div class="practice-main">
+          <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
+          <div id="ppQuestionArea"></div>
+          <div id="ppAnswerAnnounce" class="sr-only" aria-live="polite"></div>
+          <div class="nav-btns">
+            <button class="nav-btn" id="ppPrevBtn" onclick="ppNavQ(-1)" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Previous</button>
+            <button class="nav-btn" id="ppNextBtn" onclick="ppNavQ(1)">Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+          </div>
+        </div>
+        <div class="practice-sidebar">
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:8px">Session Progress</div>
+            <div class="sb-prog"><span class="sb-prog-num" id="ppProgNum">0</span><span class="sb-prog-lbl" id="ppProgLbl">of 10 answered</span></div>
+            <div class="bar" style="height:4px"><div class="bar-fill" id="ppProgBar" style="width:0%;background:var(--mid)"></div></div>
+            <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="ppCorrect">0</strong></span><span>Remaining: <strong style="font-family:'JetBrains Mono',monospace;color:var(--sec)" id="ppRemain">10</strong></span></div>
+          </div>
+          <div class="sb-card">
+            <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
+            <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">1</span>–<span class="kbd">9</span><span style="margin-left:4px">Select answer</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">A</span>–<span class="kbd">H</span><span style="margin-left:4px">Select answer</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">S</span><span style="margin-left:4px">Toggle solution</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
+            </div>
+          </div>
+          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="ppEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
         </div>
       </div>
     </div>
@@ -2373,6 +2450,7 @@ function nav(el,view,title){
   document.getElementById('topbarTitle').textContent=title;
   if(view==='soon')document.getElementById('soonTitle').textContent=title;
   if(view==='topics'&&typeof tpOnShow==='function')tpOnShow();
+  if(view==='pastpapers'&&typeof ppOnShow==='function')ppOnShow();
 }
 
 /* ── Practice question engine (matches Study Hub / Current Rebranded exactly) ── */
@@ -2460,6 +2538,199 @@ function pick(i){
 function navQ(d){const n=idx+d;if(n>=0&&n<QUESTIONS.length){idx=n;render()}}
 function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
 function resetSession(){idx=0;answers={};showSoln={};render()}
+
+/* ── Past Papers: browse real past papers, then practice one with the same question engine/UI as Practice ── */
+let ppPapers=[],ppPapersLoaded=false,ppExamFilter='all',ppSearchQuery='';
+let ppQuestions=[],ppIdx=0,ppAnswers={},ppShowSoln={},ppJustAnswered=false,ppCurrentLabel='';
+
+async function ppLoadPapers(){
+  const loading=document.getElementById('ppLoadingState'),error=document.getElementById('ppErrorState'),wrap=document.getElementById('ppGroupsWrap');
+  error.style.display='none';wrap.innerHTML='';loading.style.display='block';
+  try{
+    const res=await apiFetch('/questions/papers');
+    if(!res.ok)throw new Error('bad status');
+    ppPapers=await res.json();
+    ppPapersLoaded=true;
+    loading.style.display='none';
+    ppRenderGroups();
+  }catch(e){
+    loading.style.display='none';
+    error.style.display='block';
+  }
+}
+
+function ppOnShow(){
+  if(!ppPapersLoaded)ppLoadPapers();
+}
+
+const PP_SUBJECT_LABEL={maths1:'Maths 1',maths2:'Maths 2',physics:'Physics',chemistry:'Chemistry',biology:'Biology'};
+const PP_EXAM_ACCENT={ESAT:'var(--mid)',ENGAA:'var(--teal)',NSAA:'var(--purp)',TMUA:'var(--amber)'};
+
+function ppPaperRowHtml(p){
+  const subs=(p.subjects||[]).map(s=>`<span class="pp-chip">${PP_SUBJECT_LABEL[s]||s}</span>`).join('');
+  return `<div class="pp-paper-row">
+    <div class="pp-paper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M7.5 3.75h6.879a1.5 1.5 0 0 1 1.06.44l2.872 2.87a1.5 1.5 0 0 1 .439 1.061V19.5a1.5 1.5 0 0 1-1.5 1.5h-9.75a1.5 1.5 0 0 1-1.5-1.5V5.25a1.5 1.5 0 0 1 1.5-1.5Z"/><path d="M8.25 12.75h7.5M8.25 15.75h7.5M8.25 9.75h3"/></svg></div>
+    <div class="pp-paper-body">
+      <div class="pp-paper-title">${p.label}</div>
+      <div class="pp-paper-sub"><span>${p.questionCount} questions</span>${subs}</div>
+    </div>
+    <button class="btn-primary pp-paper-cta" onclick="ppStart('${p.examType}','${p.year}','${p.paper}','${p.label.replace(/'/g,"\\'")}')">Practice</button>
+  </div>`;
+}
+
+function ppGroupCardHtml(examType,papers){
+  const totalQ=papers.reduce((s,p)=>s+p.questionCount,0);
+  return `<div class="card tp-module-card" style="--accent:${PP_EXAM_ACCENT[examType]||'var(--mid)'}">
+    <div class="tp-module-head">
+      <span class="tp-module-dot"></span>
+      <h3 class="section-title">${examType}</h3>
+      <span class="tp-module-meta">${papers.length} paper${papers.length===1?'':'s'} · ${totalQ} questions</span>
+    </div>
+    <div class="pp-paper-list">${papers.map(ppPaperRowHtml).join('')}</div>
+  </div>`;
+}
+
+function ppRenderGroups(){
+  const wrap=document.getElementById('ppGroupsWrap'),empty=document.getElementById('ppEmptyState');
+  if(!wrap)return;
+  const query=ppSearchQuery.trim().toLowerCase();
+  const filtered=ppPapers.filter(p=>{
+    if(ppExamFilter!=='all'&&p.examType!==ppExamFilter)return false;
+    if(query&&!p.label.toLowerCase().includes(query)&&!p.examType.toLowerCase().includes(query))return false;
+    return true;
+  });
+  const byExam={};
+  filtered.forEach(p=>{(byExam[p.examType]=byExam[p.examType]||[]).push(p)});
+  const groups=Object.keys(byExam);
+  wrap.innerHTML=groups.map(examType=>ppGroupCardHtml(examType,byExam[examType])).join('');
+  empty.style.display=groups.length?'none':'block';
+}
+
+function ppOnSearch(value){ppSearchQuery=value;ppRenderGroups()}
+function ppSetExamFilter(examType,btn){
+  ppExamFilter=examType;
+  document.querySelectorAll('#ppExamSeg .seg-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});
+  btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+  ppRenderGroups();
+}
+
+async function ppStart(examType,year,paper,label){
+  const hub=document.getElementById('ppHub'),runner=document.getElementById('ppRunner');
+  try{
+    const res=await apiFetch('/questions/papers/questions?'+new URLSearchParams({exam_type:examType,year,paper}));
+    if(!res.ok)throw new Error('bad status');
+    const data=await res.json();
+    ppQuestions=data.map(q=>{
+      const entries=Object.entries(q.options).sort((a,b)=>a[0]<b[0]?-1:1);
+      return{
+        text:q.questionText,
+        keys:entries.map(e=>e[0]),
+        opts:entries.map(e=>e[1]),
+        ansKey:q.correctAnswer,
+        topic:q.topicName||PP_SUBJECT_LABEL[q.subjectSlug]||examType,
+        diff:q.difficulty||'Medium',
+        soln:q.workedSolution
+      };
+    });
+    ppIdx=0;ppAnswers={};ppShowSoln={};ppCurrentLabel=label;
+    document.getElementById('ppRunnerTitle').textContent=label;
+    hub.style.display='none';runner.style.display='block';
+    ppRender();
+  }catch(e){
+    alert("Couldn't load that paper. Please try again.");
+  }
+}
+
+function ppRenderNav(){
+  const navEl=document.getElementById('ppQNav');navEl.innerHTML='';
+  ppQuestions.forEach((_,i)=>{
+    const b=document.createElement('button');b.className='qnum';
+    const a=ppAnswers[i],revealed=a!==undefined;
+    let state='not yet answered';
+    if(revealed){const ok=a===ppQuestions[i].ansKey;b.classList.add(ok?'correct':'incorrect');state=ok?'answered correctly':'answered incorrectly'}
+    if(i===ppIdx){b.classList.add('cur');b.setAttribute('aria-current','step')}
+    b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
+    if(revealed)b.innerHTML=a===ppQuestions[i].ansKey?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
+    else b.textContent=i+1;
+    b.onclick=()=>{ppIdx=i;ppRender()};
+    navEl.appendChild(b);
+  });
+}
+
+function ppRenderQuestion(){
+  const q=ppQuestions[ppIdx],area=document.getElementById('ppQuestionArea');
+  const a=ppAnswers[ppIdx],isCorrect=a===q.ansKey,answered=a!==undefined;
+  const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
+  const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
+  let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
+  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${ppIdx+1} of ${ppQuestions.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.text}</p></div>`;
+  html+='<div class="opts">';
+  q.opts.forEach((o,oi)=>{
+    const key=q.keys[oi];
+    let cls='opt';if(answered)cls+=' answered';
+    if(answered){if(key===q.ansKey)cls+=' correct-answer';else if(key===a)cls+=' wrong-answer';else cls+=' dimmed'}
+    if(answered&&ppJustAnswered&&key===a)cls+=' pulse-in';
+    let letterBg='var(--alt)',letterCol='var(--sec)';
+    if(answered&&key===q.ansKey){letterBg='var(--green)';letterCol='#fff'}
+    if(answered&&key===a&&key!==q.ansKey){letterBg='var(--red)';letterCol='#fff'}
+    const badge=answered?key===q.ansKey?'<div class="state-badge" style="background:var(--green)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div>':key===a?'<div class="state-badge" style="background:var(--red)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg></div>':'':'';
+    const stateLabel=answered?(key===q.ansKey?' — correct answer':(key===a?' — your answer, incorrect':'')):'';
+    html+=`<button class="${cls}" onclick="ppPick('${key}')" ${answered?'disabled':''} aria-label="${key}. ${o}${stateLabel}"><span class="letter" style="background:${letterBg};color:${letterCol}">${key}</span><span class="opt-text">${o}${answered?'':(oi<9?`<span class="kbd-hint">[${oi+1}]</span>`:'')}</span>${badge}</button>`;
+  });
+  html+='</div>';
+  if(answered){
+    const solOpen=ppShowSoln[ppIdx];
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="ppToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+q.ansKey}</span><span class="kbd">S</span></button>`;
+    if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
+  }
+  area.innerHTML=html;
+}
+
+function ppUpdateSidebar(){
+  const done=Object.keys(ppAnswers).length,rem=ppQuestions.length-done;
+  const right=Object.entries(ppAnswers).filter(([i,a])=>a===ppQuestions[i].ansKey).length;
+  document.getElementById('ppProgNum').textContent=done;
+  document.getElementById('ppProgLbl').textContent=`of ${ppQuestions.length} answered`;
+  document.getElementById('ppCorrect').textContent=right;
+  document.getElementById('ppRemain').textContent=rem;
+  const bar=document.getElementById('ppProgBar');
+  bar.style.width=(ppQuestions.length?done/ppQuestions.length*100:0)+'%';
+  bar.style.background=done===ppQuestions.length?'var(--green)':'var(--mid)';
+}
+
+function ppRender(){
+  ppRenderNav();ppRenderQuestion();ppUpdateSidebar();
+  document.getElementById('ppPrevBtn').disabled=ppIdx===0;
+  document.getElementById('ppNextBtn').disabled=ppIdx===ppQuestions.length-1;
+}
+
+function ppPick(key){
+  if(ppAnswers[ppIdx]!==undefined)return;
+  ppAnswers[ppIdx]=key;
+  ppJustAnswered=true;
+  const q=ppQuestions[ppIdx],ok=key===q.ansKey,live=document.getElementById('ppAnswerAnnounce');
+  if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${q.ansKey}.`;
+  ppRender();
+  ppJustAnswered=false;
+}
+function ppNavQ(d){const n=ppIdx+d;if(n>=0&&n<ppQuestions.length){ppIdx=n;ppRender()}}
+function ppToggleSoln(){ppShowSoln[ppIdx]=!ppShowSoln[ppIdx];ppRender()}
+function ppEndSession(){
+  document.getElementById('ppRunner').style.display='none';
+  document.getElementById('ppHub').style.display='block';
+}
+
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('view-pastpapers').classList.contains('active'))return;
+  if(document.getElementById('ppRunner').style.display==='none')return;
+  const t=e.target;if(['SELECT','INPUT','TEXTAREA'].includes(t.tagName))return;
+  const q=ppQuestions[ppIdx];if(!q)return;
+  if(/^[1-9]$/.test(e.key)){const i=parseInt(e.key)-1;if(i<q.opts.length)ppPick(q.keys[i]);return}
+  if(/^[a-h]$/i.test(e.key)){const key=e.key.toUpperCase();if(q.keys.includes(key))ppPick(key);return}
+  if(e.key==='s'||e.key==='S'){if(ppAnswers[ppIdx]!==undefined)ppToggleSoln();return}
+  if(e.key==='ArrowRight'||e.key==='Enter'){if(ppIdx<ppQuestions.length-1)ppNavQ(1);return}
+  if(e.key==='ArrowLeft'&&ppIdx>0)ppNavQ(-1);
+});
 
 /* ── Welcome-page sample question widget (reuses QUESTIONS/LETTERS, kept fully separate from the gated Practice engine above) ── */
 let wIdx=0,wAnswers={},wShowSoln={};
