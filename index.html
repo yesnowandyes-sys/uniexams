@@ -888,11 +888,20 @@ body[data-screen="app"] #appShell{display:block}
    stacked layout is taller than the screen anyway, and the max-height queries
    further down tighten the card once the screen is too short to hold it. */
 .w-hero{display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
-/* stretch + auto margin, not center: the copy column fills the (taller) card's height with
-   the headline pinned to the top, so revealing a worked solution can't bounce it down */
+/* stretch, so the copy column is as tall as the (taller) card and has a field to
+   be positioned within — see the golden-section spacers on .w-hero-copy below */
 /* 1 : φ — the copy is the small square of the golden rectangle, the card the large one */
 .w-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:clamp(2rem,3.4vw,var(--g5));align-items:stretch}
+/* The copy rests on the column's golden section rather than at its very top: the
+   space the shorter copy leaves beside the card is split 1 : φ, above and below,
+   so the block sits about ⅜ of the way down instead of hugging the nav. Spacers
+   rather than a fixed padding, so the drop tracks the card's height at every
+   viewport, and it collapses to nothing once the copy is the taller of the two
+   (short screens, and the stacked layout below 940px). */
 .w-hero-copy{display:flex;flex-direction:column}
+.w-hero-copy::before,.w-hero-copy::after{content:'';display:block;flex-shrink:0}
+.w-hero-copy::before{flex-grow:1;flex-basis:0}
+.w-hero-copy::after{flex-grow:1.618;flex-basis:0}
 /* Headline is the loudest thing on the page; everything below it steps down. */
 /* 2.9rem ≈ .65rem × φ³ — three φ steps up from the stat captions */
 .w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(2rem,2.9vw,2.9rem);letter-spacing:-.028em;line-height:1.1;margin:0 0 var(--g2);text-wrap:balance}
