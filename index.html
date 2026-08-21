@@ -922,13 +922,11 @@ body[data-screen="app"] #appShell{display:block}
    type sizes, same spacing. No drop shadow — the border alone frames it. */
 .w-hero-demo{position:relative}
 .w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:20px;overflow:hidden}
-/* White header, separated from the body by its rule alone — the blue eyebrow
-   carries the colour so the bar doesn't need a fill to read as a header. */
-.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:var(--g2) var(--g3);background:var(--surf);border-bottom:1px solid var(--bdr)}
-.w-demo-head-txt{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap}
+/* Caption sits above the card as plain text — no bar, no fill, so the card's
+   own rounded corners are the top edge. */
+.w-demo-label{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap;margin-bottom:var(--g2);padding-left:.2rem}
 .w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
-.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:var(--text)}
-.w-demo-pill{background:var(--gLite);color:var(--green);border:1px solid var(--gBdr);flex-shrink:0}
+.w-demo-label b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:var(--text)}
 /* Roomier than the real screen on purpose — same type sizes, more air around
    them, so the card reads as generous rather than cramped. */
 .w-demo-body{padding:var(--g3)}
@@ -951,7 +949,7 @@ body[data-screen="app"] #appShell{display:block}
 @media(min-width:941px) and (max-height:820px){
 .w-hero-badge{margin-bottom:.85rem}
 .w-hero-sub{margin-bottom:1.1rem}
-.w-demo-head{padding:.6rem 1.15rem}
+.w-demo-label{margin-bottom:.7rem}
 .w-demo-body{padding:1rem 1.15rem}
 .w-demo-body .question-nav{margin-bottom:.8rem}
 .w-demo-body .q-card{padding:1rem;margin-bottom:.75rem}
@@ -963,7 +961,7 @@ body[data-screen="app"] #appShell{display:block}
 @media(min-width:941px) and (max-height:730px){
 .w-hero{padding:.75rem 0}
 .w-hero-badge{margin-bottom:.7rem}
-.w-demo-head{padding:.5rem 1.05rem}
+.w-demo-label{margin-bottom:.55rem}
 .w-demo-body{padding:.85rem 1rem}
 .w-demo-body .question-nav{margin-bottom:.65rem}
 .w-demo-body .q-card{padding:.85rem .95rem;margin-bottom:.6rem}
@@ -1035,7 +1033,6 @@ body[data-screen="app"] #appShell{display:block}
 .w-hero-stats{gap:1.1rem 1.5rem;margin-top:1.75rem}
 .w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:100%}
 .w-demo-body{padding:1rem}
-.w-demo-head{padding:.75rem 1rem}
 .w-demo-body .q-card{padding:1rem}
 .w-cta-band{padding:2.25rem 1.25rem}
 .w-footer-inner{flex-direction:column;align-items:flex-start}
@@ -1088,14 +1085,11 @@ body[data-screen="app"] #appShell{display:block}
       </div>
 
       <div class="w-hero-demo" id="wSample">
+        <div class="w-demo-label">
+          <span class="w-demo-eyebrow">Try it yourself</span>
+          <b>10 real example questions</b>
+        </div>
         <div class="w-demo-card">
-          <div class="w-demo-head">
-            <div class="w-demo-head-txt">
-              <span class="w-demo-eyebrow">Try it yourself</span>
-              <b>10 real example questions</b>
-            </div>
-            <span class="pill w-demo-pill">No account needed</span>
-          </div>
           <div class="w-demo-body">
             <div class="question-nav" id="wQNav" role="tablist" aria-label="Sample questions"></div>
             <div id="wQuestionArea"></div>
