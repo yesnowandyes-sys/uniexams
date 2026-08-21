@@ -855,7 +855,10 @@ body[data-screen="app"] #appShell{display:block}
 /* Landing page fills the viewport on wide monitors instead of sitting in a
    narrow 1160px strip; the gutter grows with the screen so it never touches
    the edges. --w-max is the single knob for the whole landing page width. */
-:root{--w-max:min(1920px,94vw);--w-gutter:clamp(1.25rem,3vw,4rem)}
+/* --g1…--g5 is a φ scale (each step ×1.618) used for the hero's rhythm, so the
+   spacing steps down by the same ratio the spiral tightens by. */
+:root{--w-max:min(1920px,94vw);--w-gutter:clamp(1.25rem,3vw,4rem);
+  --g1:.53rem;--g2:.85rem;--g3:1.375rem;--g4:2.225rem;--g5:3.6rem}
 .w-container{width:100%;max-width:var(--w-max);margin:0 auto;padding:0 var(--w-gutter)}
 .w-nav{position:sticky;top:0;z-index:50;background:rgba(246,247,253,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--bdr)}
 .w-nav-inner{width:100%;max-width:var(--w-max);margin:0 auto;padding:0 var(--w-gutter);height:60px;display:flex;align-items:center;gap:1.75rem}
@@ -884,19 +887,27 @@ body[data-screen="app"] #appShell{display:block}
    whitespace. The other limits: the min-height is dropped below 941px where the
    stacked layout is taller than the screen anyway, and the max-height queries
    further down tighten the card once the screen is too short to hold it. */
-.w-hero{display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
+.w-hero{position:relative;display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
+/* The golden spiral the hero is composed on, drawn faintly behind it: it opens at
+   the sample card on the right, sweeps over the top and tightens into an eye that
+   sits over the CTA buttons. Absolute so it stays out of the flex flow. */
+.w-hero-spiral{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.w-hero-grid{position:relative;z-index:1}
+.w-hero-copy,.w-hero-demo{position:relative;z-index:1}
 /* stretch + auto margin, not center: the copy column fills the (taller) card's height with
    the headline pinned to the top, so revealing a worked solution can't bounce it down */
-.w-hero-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(2rem,4vw,4.5rem);align-items:stretch}
+/* 1 : φ — the copy is the small square of the golden rectangle, the card the large one */
+.w-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:clamp(2rem,3.4vw,var(--g5));align-items:stretch}
 .w-hero-copy{display:flex;flex-direction:column}
 /* align-self: the copy column is a flex column, so the pill would stretch to full width */
-.w-hero-badge{align-self:flex-start;background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:.85rem;font-size:.6875rem}
+.w-hero-badge{align-self:flex-start;background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:var(--g3);font-size:.6875rem}
 /* Headline is the loudest thing on the page; everything below it steps down. */
-.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(2rem,2.9vw,2.9rem);letter-spacing:-.028em;line-height:1.1;margin:0 0 .8rem;text-wrap:balance}
+/* 2.9rem ≈ .6875rem × φ³ — three φ steps up from the badge and the stat captions */
+.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(2rem,2.9vw,2.9rem);letter-spacing:-.028em;line-height:1.1;margin:0 0 var(--g2);text-wrap:balance}
 /* Deliberately no accent face/colour here — the headline reads as one voice.
    Scoped to .w-hero-sub, not `.w-hero p`, so it can't outrank the other
    paragraphs in the hero (the log-in line and the sample-card note). */
-.w-hero-sub{font-size:.875rem;color:var(--ter);line-height:1.7;margin:0 0 1.3rem;max-width:46ch}
+.w-hero-sub{font-size:.875rem;color:var(--ter);line-height:1.7;margin:0 0 var(--g3);max-width:46ch}
 .w-hero-ctas{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-bottom:.75rem}
 .w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.85rem 1.6rem;font-size:.9375rem}
 /* margin-bottom guarantees a gap when the auto-margin on .w-hero-stats collapses to 0 */
@@ -916,45 +927,56 @@ body[data-screen="app"] #appShell{display:block}
    overrides here are minimal on purpose: same vertical option stack, same
    type sizes, same spacing. No drop shadow — the border alone frames it. */
 .w-hero-demo{position:relative}
-.w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;overflow:hidden}
-.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 1.25rem;border-bottom:1px solid var(--bdr);background:var(--alt)}
+.w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:20px;overflow:hidden}
+/* Navy header rather than the flat grey: it reads as the chrome of a real app
+   surface and ties the card to the brand mark and the CTA band. */
+.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:var(--g2) var(--g3);background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%)}
 .w-demo-head-txt{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap}
-.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
-.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:var(--ter)}
-.w-demo-pill{background:var(--gLite);color:var(--green);border:1px solid var(--gBdr);flex-shrink:0}
-.w-demo-body{padding:1rem 1.25rem 1.1rem}
-.w-demo-body .question-nav{margin-bottom:.8rem}
+.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--liteb)}
+.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:#fff}
+.w-demo-pill{background:rgba(134,239,172,.15);color:#86EFAC;border:1px solid rgba(134,239,172,.32);flex-shrink:0}
+/* Roomier than the real screen on purpose — same type sizes, more air around
+   them, so the card reads as generous rather than cramped. */
+.w-demo-body{padding:var(--g3)}
+.w-demo-body .question-nav{margin-bottom:var(--g3)}
 /* flat inside the card — the outer border is the only frame */
-.w-demo-body .q-card{box-shadow:none;padding:1rem 1.15rem;margin-bottom:.75rem}
-.w-demo-body .nav-btns{margin-top:.75rem}
+.w-demo-body .q-card{box-shadow:none;padding:var(--g3);margin-bottom:var(--g2)}
+.w-demo-body .opts{gap:10px}
+.w-demo-body .opt{padding:.85rem 1rem}
+.w-demo-body .nav-btns{margin-top:var(--g2)}
 /* Same row the real practice screen uses: question counter left, pills right */
 .w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
 .w-demo-qhead .label{flex:1;min-width:0}
 /* clear the sticky 60px header when jumping to an anchor */
 #wFeatures,#wSample,#wHow,#wFaq{scroll-margin-top:76px}
 
-/* Below ~730px of viewport the sample card no longer fits the space the hero has
-   to give, so the card's own spacing starts giving instead. Above this it is
-   untouched and matches the real practice screen exactly. */
-@media(min-width:941px) and (max-height:730px){
-.w-hero-badge{margin-bottom:.7rem}
+/* The card's roominess above is a luxury for screens with the height to spare.
+   Below ~820px of viewport it gives that back and settles at the real practice
+   screen's own spacing; below ~730px it goes tighter still. Type sizes never
+   change — only the space around them. */
+@media(min-width:941px) and (max-height:820px){
+.w-hero-badge{margin-bottom:.85rem}
 .w-hero-sub{margin-bottom:1.1rem}
-.w-demo-head{padding:.55rem 1.15rem}
-.w-demo-body{padding:.85rem 1.05rem .9rem}
+.w-demo-head{padding:.6rem 1.15rem}
+.w-demo-body{padding:1rem 1.15rem}
+.w-demo-body .question-nav{margin-bottom:.8rem}
+.w-demo-body .q-card{padding:1rem;margin-bottom:.75rem}
+.w-demo-body .opts{gap:8px}
+.w-demo-body .opt{padding:.75rem 1rem}
+.w-demo-body .nav-btns{margin-top:.75rem}
+.w-sample-note{margin-top:.55rem}
+}
+@media(min-width:941px) and (max-height:730px){
+.w-hero{padding:.75rem 0}
+.w-hero-badge{margin-bottom:.7rem}
+.w-demo-head{padding:.5rem 1.05rem}
+.w-demo-body{padding:.85rem 1rem}
 .w-demo-body .question-nav{margin-bottom:.65rem}
-.w-demo-body .q-card{padding:.85rem 1rem;margin-bottom:.6rem}
+.w-demo-body .q-card{padding:.85rem .95rem;margin-bottom:.6rem}
 .w-demo-body .opts{gap:6px}
 .w-demo-body .opt{padding:.6rem .85rem}
 .w-demo-body .nav-btns{margin-top:.6rem}
-.w-sample-note{margin-top:.5rem}
-}
-/* Last resort for very short viewports — the option rows themselves give a
-   little here, which they don't at any taller size. */
-@media(min-width:941px) and (max-height:690px){
-.w-hero{padding:.75rem 0}
-.w-demo-body .opts{gap:5px}
-.w-demo-body .opt{padding:.5rem .85rem}
-.w-sample-note{margin-top:.4rem}
+.w-sample-note{margin-top:.45rem}
 }
 
 .w-section{padding:clamp(3rem,4.5vw,4.75rem) 0}
@@ -1006,8 +1028,10 @@ body[data-screen="app"] #appShell{display:block}
 .w-footer-copy{font-size:.75rem;color:var(--ter)}
 
 @media(max-width:940px){
-/* stacked: the hero is taller than the screen on its own, so drop the fill */
+/* stacked: the hero is taller than the screen on its own, so drop the fill.
+   The spiral goes too — it only means anything against the two-column layout. */
 .w-hero{display:block;min-height:0;padding:1.75rem 0 2.5rem}
+.w-hero-spiral{display:none}
 .w-hero-grid{grid-template-columns:1fr;gap:2.5rem}
 .w-hero-sub{max-width:none}
 /* stacked: no taller neighbour to fill, so restore the explicit gap */
@@ -1050,6 +1074,26 @@ body[data-screen="app"] #appShell{display:block}
 
   <section class="w-hero">
     <div class="w-container w-hero-grid">
+      <!-- The golden spiral the hero is composed on: quarter-arcs across Fibonacci
+           squares (89·55·34·21·13·8). Its 89-square is the right 61.8% of the
+           viewBox, which is exactly the 1:φ column split, so stretching it over the
+           grid box lands the big square on the sample card and the eye over the CTA
+           buttons. preserveAspectRatio=none is deliberate for that alignment;
+           non-scaling-stroke keeps the line an even hairline through the stretch.
+           Kept near-invisible — it's the underlying geometry, not an illustration.
+           The viewBox is 106 tall against an 89-tall drawing: the 17 units of empty
+           space below lift the eye off the column's empty lower half and onto the
+           buttons, which sit above centre because the stats are bottom-anchored. -->
+      <svg class="w-hero-spiral" viewBox="0 0 144 106" fill="none" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="wSpiralFade" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#3B5FEC" stop-opacity="0"/>
+            <stop offset=".42" stop-color="#3B5FEC" stop-opacity=".13"/>
+            <stop offset="1" stop-color="#3B5FEC" stop-opacity=".16"/>
+          </linearGradient>
+        </defs>
+        <path d="M144 89 A89 89 0 0 0 55 0 A55 55 0 0 0 0 55 A34 34 0 0 0 34 89 A21 21 0 0 0 55 68 A13 13 0 0 0 42 55 A8 8 0 0 0 34 63" stroke="url(#wSpiralFade)" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+      </svg>
 
       <div class="w-hero-copy">
         <span class="pill w-hero-badge">Built from real ESAT past-paper questions</span>
