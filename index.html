@@ -873,11 +873,18 @@ body[data-screen="app"] #appShell{display:block}
 
 /* Hero: copy on the left, live question card on the right.
    The card is the wider half — it's the thing that sells the product. */
-/* Tight top padding on purpose: the whole hero — including the caption under the
-   sample card — is meant to clear the fold on a normal laptop viewport. */
-.w-hero{padding:clamp(1.25rem,1.7vw,1.85rem) 0 clamp(2.5rem,4vw,3.5rem);background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
-/* start, not center: revealing a worked solution grows the card, and centring would
-   bounce the headline down with it */
+/* The hero sizes itself to the screen rather than to a fixed padding: it fills
+   exactly the space below the sticky nav — no dead band above or below it — and
+   centres its content in whatever height that is, so the breathing room stays
+   symmetric as the screen grows or shrinks. svh (not vh) so a mobile address bar
+   can't overshoot it; the plain-vh line is the fallback for older browsers.
+   Capped at 1040px: up to a ~1100px-tall viewport (1080p and every laptop) the
+   hero fills the screen exactly, and past that it stops growing so an unusually
+   tall monitor gets the next section peeking in rather than a taller field of
+   whitespace. The other limits: the min-height is dropped below 941px where the
+   stacked layout is taller than the screen anyway, and the max-height queries
+   further down tighten the card once the screen is too short to hold it. */
+.w-hero{display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
 /* stretch + auto margin, not center: the copy column fills the (taller) card's height with
    the headline pinned to the top, so revealing a worked solution can't bounce it down */
 .w-hero-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(2rem,4vw,4.5rem);align-items:stretch}
@@ -926,12 +933,10 @@ body[data-screen="app"] #appShell{display:block}
 /* clear the sticky 60px header when jumping to an anchor */
 #wFeatures,#wSample,#wHow,#wFaq{scroll-margin-top:76px}
 
-/* Short desktop viewports (1366×768, scaled 1080p, browsers with deep chrome):
-   trim the hero's remaining slack so the sample card and its caption still land
-   above the fold. Only the spacing moves — option sizing stays true to the real
-   practice screen. */
-@media(min-width:941px) and (max-height:830px){
-.w-hero{padding-top:1rem;padding-bottom:2rem}
+/* Below ~730px of viewport the sample card no longer fits the space the hero has
+   to give, so the card's own spacing starts giving instead. Above this it is
+   untouched and matches the real practice screen exactly. */
+@media(min-width:941px) and (max-height:730px){
 .w-hero-badge{margin-bottom:.7rem}
 .w-hero-sub{margin-bottom:1.1rem}
 .w-demo-head{padding:.55rem 1.15rem}
@@ -945,8 +950,8 @@ body[data-screen="app"] #appShell{display:block}
 }
 /* Last resort for very short viewports — the option rows themselves give a
    little here, which they don't at any taller size. */
-@media(min-width:941px) and (max-height:700px){
-.w-hero{padding-top:.75rem;padding-bottom:1.5rem}
+@media(min-width:941px) and (max-height:690px){
+.w-hero{padding:.75rem 0}
 .w-demo-body .opts{gap:5px}
 .w-demo-body .opt{padding:.5rem .85rem}
 .w-sample-note{margin-top:.4rem}
@@ -1001,6 +1006,8 @@ body[data-screen="app"] #appShell{display:block}
 .w-footer-copy{font-size:.75rem;color:var(--ter)}
 
 @media(max-width:940px){
+/* stacked: the hero is taller than the screen on its own, so drop the fill */
+.w-hero{display:block;min-height:0;padding:1.75rem 0 2.5rem}
 .w-hero-grid{grid-template-columns:1fr;gap:2.5rem}
 .w-hero-sub{max-width:none}
 /* stacked: no taller neighbour to fill, so restore the explicit gap */
