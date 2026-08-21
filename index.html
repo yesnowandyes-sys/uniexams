@@ -867,46 +867,51 @@ body[data-screen="app"] #appShell{display:block}
 .w-nav .btn-primary,.w-nav .btn-outline{width:auto;padding:.55rem 1.1rem}
 @media(max-width:760px){.w-nav-links{display:none}}
 
-/* Hero: copy on the left, live question card on the right */
-.w-hero{padding:3.5rem 0 3.75rem;background:radial-gradient(ellipse 820px 560px at 18% -18%,var(--lite),transparent)}
-.w-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:3.25rem;align-items:start}
-.w-hero-copy{padding-top:.35rem}
-.w-hero-badge{background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:1.15rem}
-.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(1.75rem,2.85vw,2.4rem);letter-spacing:-.022em;line-height:1.15;margin:0 0 .95rem}
+/* Hero: copy on the left, live question card on the right.
+   The card is the wider half — it's the thing that sells the product. */
+.w-hero{padding:3.25rem 0 3.5rem;background:radial-gradient(ellipse 820px 520px at 16% -20%,var(--lite),transparent)}
+/* start, not center: revealing a worked solution grows the card, and centring would
+   bounce the headline down with it */
+.w-hero-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:2.75rem;align-items:start}
+.w-hero-badge{background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:1.1rem}
+.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(1.75rem,2.7vw,2.25rem);letter-spacing:-.022em;line-height:1.14;margin:0 0 .85rem}
 .w-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue);letter-spacing:0}
-.w-hero p{font-size:.9375rem;color:var(--sec);line-height:1.7;max-width:36em;margin:0 0 1.65rem}
-.w-hero-ctas{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-bottom:.8rem}
-.w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.85rem 1.6rem;font-size:.9375rem}
+.w-hero p{font-size:.9375rem;color:var(--sec);line-height:1.65;margin:0 0 1.5rem}
+.w-hero-ctas{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-bottom:.75rem}
+.w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.8rem 1.5rem;font-size:.9375rem}
 .w-hero-login{font-size:.8125rem;color:var(--ter)}
 .w-hero-login a{color:var(--mid);font-weight:600;text-decoration:none}
 .w-hero-login a:hover{text-decoration:underline}
-.w-hero-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.35rem 1.5rem;margin-top:2.1rem;padding-top:1.6rem;border-top:1px solid var(--bdr);max-width:26rem}
-.w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
-.w-hero-stat span{font-size:.75rem;color:var(--ter);font-weight:600}
-.w-hero-boards{margin-top:1.75rem}
-.w-hero-boards-label{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ter);margin-bottom:.6rem}
-.w-hero-boards-list{display:flex;flex-wrap:wrap;gap:.4rem}
-.w-hero-boards-list span{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;color:var(--sec);background:var(--surf);border:1px solid var(--bdr);border-radius:7px;padding:.32rem .62rem}
+.w-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem .9rem;margin-top:1.75rem;padding-top:1.4rem;border-top:1px solid var(--bdr)}
+.w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:700;color:var(--text);letter-spacing:-.03em}
+.w-hero-stat span{display:block;font-size:.71rem;color:var(--ter);font-weight:600;line-height:1.35;margin-top:1px}
+/* Names the four sources behind the "past papers" claim above */
+.w-hero-boards{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;margin-top:1.4rem}
+.w-hero-boards-label{font-size:.6875rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ter);margin-right:.2rem}
+.w-hero-boards span.bd{font-family:'JetBrains Mono',monospace;font-size:.71rem;font-weight:600;color:var(--sec);background:var(--surf);border:1px solid var(--bdr);border-radius:6px;padding:.28rem .5rem}
 
-/* Hero question card */
+/* Hero question card — kept deliberately short: one row of question pills,
+   a compact stem, and answers in two columns (every sample option is <10 chars). */
 .w-hero-demo{position:relative}
-/* No blue slice on the outer shell — the question box inside carries it, and doubling them stripes the card */
 .w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;box-shadow:var(--shadow-2);overflow:hidden}
-.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.15rem;border-bottom:1px solid var(--bdr);background:linear-gradient(180deg,var(--alt),var(--surf))}
-.w-demo-head-txt{min-width:0}
-.w-demo-eyebrow{display:block;font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:2px}
-.w-demo-head b{font-size:.875rem;font-weight:700;letter-spacing:-.01em}
+.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;border-bottom:1px solid var(--bdr);background:linear-gradient(180deg,var(--alt),var(--surf))}
+.w-demo-head-txt{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap}
+.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
+.w-demo-head b{font-size:.8125rem;font-weight:700;letter-spacing:-.01em;color:var(--sec)}
 .w-demo-pill{background:var(--gLite);color:var(--green);border:1px solid var(--gBdr);flex-shrink:0}
-.w-demo-body{padding:1.15rem}
-.w-demo-body .question-nav{margin-bottom:.95rem}
-.w-demo-body .q-card{padding:1.05rem 1.15rem;margin-bottom:.75rem;border-radius:12px}
-.w-demo-body .q-text{font-size:.875rem;line-height:1.75}
-.w-demo-body .opt{padding:.65rem .85rem}
-.w-demo-body .letter{width:26px;height:26px;margin-right:.7rem}
+.w-demo-body{padding:1rem}
+.w-demo-body .question-nav{gap:5px;margin-bottom:.8rem}
+.w-demo-body .qnum{width:30px;height:30px;border-width:1.5px}
+.w-demo-body .q-card{padding:.85rem 1rem;margin-bottom:.7rem;border-radius:12px;border-left-width:4px}
+.w-demo-body .q-text{font-size:.875rem;line-height:1.65}
+.w-demo-body .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:.7rem}
+.w-demo-body .opts .opt:nth-child(odd):last-child{grid-column:1/-1}
+.w-demo-body .opt{padding:.55rem .7rem;border-width:1.5px}
+.w-demo-body .letter{width:24px;height:24px;margin-right:.6rem;font-size:.75rem}
 .w-demo-body .opt-text{font-size:.84375rem}
-.w-demo-body .nav-btns{margin-top:.8rem}
-.w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.8rem}
-.w-demo-qhead .label{flex:1;min-width:0}
+.w-demo-body .nav-btns{margin-top:.7rem}
+.w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.6rem}
+.w-demo-qhead .label{flex:1;min-width:0;font-size:.65rem}
 /* clear the sticky 64px header when jumping to an anchor */
 #wFeatures,#wSample,#wHow,#wFaq{scroll-margin-top:84px}
 
@@ -919,7 +924,6 @@ body[data-screen="app"] #appShell{display:block}
 /* Two wide primary columns on the left, one narrow column on the right */
 .w-feature-grid{display:grid;grid-template-columns:1.16fr 1.16fr .78fr;gap:1.1rem}
 .w-feature{position:relative;background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.4rem 1.4rem 1.5rem;box-shadow:var(--shadow-1)}
-.w-feature-accent{border-left:5px solid var(--blue);padding-left:calc(1.4rem - 4px)}
 .w-feature-icon{width:38px;height:38px;border-radius:10px;background:var(--lite);color:var(--mid);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
 .w-feature h3{font-size:.9375rem;font-weight:700;margin-bottom:.4rem}
 .w-feature p{font-size:.8125rem;color:var(--ter);line-height:1.6}
@@ -1000,7 +1004,7 @@ body[data-screen="app"] #appShell{display:block}
       <div class="w-hero-copy">
         <span class="pill w-hero-badge">Built from real ESAT past-paper questions</span>
         <h1>Improve your ESAT ability with thousands of <em>realistic</em> practice questions</h1>
-        <p>Work through our original ESAT question bank, study full worked solutions to real past-paper questions from ESAT, ENGAA, NSAA and TMUA, and drill your speed with mental maths practice — everything you need to prepare for the Engineering and Science Admissions Test, in one place.</p>
+        <p>An original ESAT question bank, free worked solutions to real past-paper questions, and mental maths drills — everything you need to prepare, in one place.</p>
         <div class="w-hero-ctas">
           <button type="button" class="btn-primary" onclick="showSignupScreen()">Create your free account</button>
           <a href="#wHow" class="btn-outline">See how it works</a>
@@ -1009,12 +1013,11 @@ body[data-screen="app"] #appShell{display:block}
         <div class="w-hero-stats">
           <div class="w-hero-stat"><b>1,586+</b><span>Practice questions</span></div>
           <div class="w-hero-stat"><b>100%</b><span>With worked solutions</span></div>
-          <div class="w-hero-stat"><b>4</b><span>Past-paper sources</span></div>
           <div class="w-hero-stat"><b>100+</b><span>Topics &amp; subtopics</span></div>
         </div>
         <div class="w-hero-boards">
-          <span class="w-hero-boards-label">Past papers covered</span>
-          <div class="w-hero-boards-list"><span>ESAT</span><span>ENGAA</span><span>NSAA</span><span>TMUA</span></div>
+          <span class="w-hero-boards-label">Past papers</span>
+          <span class="bd">ESAT</span><span class="bd">ENGAA</span><span class="bd">NSAA</span><span class="bd">TMUA</span>
         </div>
       </div>
 
@@ -1037,7 +1040,7 @@ body[data-screen="app"] #appShell{display:block}
             </div>
           </div>
         </div>
-        <p class="w-sample-note">Pick an answer, then reveal the worked solution. Log in to unlock the full 1,586-question bank, personalised analytics and the mental maths trainer.</p>
+        <p class="w-sample-note">Pick an answer, then reveal the worked solution — no account needed.</p>
       </div>
 
     </div>
@@ -1054,7 +1057,7 @@ body[data-screen="app"] #appShell{display:block}
            selling points, the narrow right column holds the motivation features.
            Row 1 → questions | solutions | leaderboard.  Row 2 → analysis | drills | streaks. -->
       <div class="w-feature-grid">
-        <div class="w-feature w-feature-accent">
+        <div class="w-feature">
           <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
           <h3>Original practice questions</h3>
           <p>Across Maths, Physics, Chemistry and Biology, you'll always have fresh, original material to practise with.</p>
@@ -1070,7 +1073,7 @@ body[data-screen="app"] #appShell{display:block}
           <h3>Competitive Leaderboard</h3>
           <p>Race friends on your own leaderboard, or check the <b>global rankings</b> to see how you compare to everyone else.</p>
         </div>
-        <div class="w-feature w-feature-accent">
+        <div class="w-feature">
           <div class="w-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"/><path d="M12 3h5.25A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H12V3Z"/></svg></div>
           <h3>In-depth strengths &amp; weaknesses analysis</h3>
           <p>Your results are broken down by module, topic and subtopic, so you always know exactly what to revise next.</p>
