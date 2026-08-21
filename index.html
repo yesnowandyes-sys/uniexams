@@ -584,6 +584,13 @@ button{font-family:inherit}
 .qnum.cur{border-color:var(--mid);font-weight:700;box-shadow:0 0 0 3px var(--lite)}
 .qnum.correct{background:var(--gLite);border-color:var(--green);color:var(--green)}
 .qnum.incorrect{background:var(--rLite);border-color:var(--red);color:var(--red)}
+.question-nav.qnav-collapsed{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding-bottom:3px;scrollbar-width:thin}
+.question-nav.qnav-collapsed .qnum{flex-shrink:0}
+.question-nav.qnav-collapsed::-webkit-scrollbar{height:5px}
+.question-nav.qnav-collapsed::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
+.qnav-toggle{display:none;align-items:center;gap:4px;margin:-4px 0 1.25rem 1px;padding:2px;border:none;background:none;color:var(--mid);font-size:.75rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer}
+.qnav-toggle svg{transition:transform .2s ease}
+.qnav-toggle.open svg{transform:rotate(180deg)}
 
 .q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:.875rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1)}
 .q-meta{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
@@ -1309,6 +1316,10 @@ body[data-screen="app"] #appShell{display:block}
       <div class="practice-layout">
         <div class="practice-main">
           <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
+          <button class="qnav-toggle" id="qNavToggle" type="button" onclick="toggleQNav()">
+            <span id="qNavToggleLabel">Show all</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
           <div id="questionArea"></div>
           <div id="answerAnnounce" class="sr-only" aria-live="polite"></div>
           <div class="nav-btns">
@@ -1450,6 +1461,10 @@ body[data-screen="app"] #appShell{display:block}
       <div class="practice-layout">
         <div class="practice-main">
           <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
+          <button class="qnav-toggle" id="ppQNavToggle" type="button" onclick="togglePpQNav()">
+            <span id="ppQNavToggleLabel">Show all</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
           <div id="ppQuestionArea"></div>
           <div id="ppAnswerAnnounce" class="sr-only" aria-live="polite"></div>
           <div class="nav-btns">
@@ -2469,6 +2484,30 @@ const QUESTIONS=[
 const LETTERS="ABCDEFGHIJ";
 let idx=0,answers={},showSoln={},rightCount=0,justAnswered=false;
 
+/* ── Shared question-nav collapse: strips over the threshold start as one scrollable line, expandable to the full grid ── */
+const QNAV_COLLAPSE_THRESHOLD=15;
+let qNavCollapsed=true;
+
+function qnavSync(navEl,toggleEl,labelEl,count,collapsed){
+  if(!navEl||!toggleEl)return;
+  if(count<=QNAV_COLLAPSE_THRESHOLD){
+    navEl.classList.remove('qnav-collapsed');
+    toggleEl.style.display='none';
+    return;
+  }
+  toggleEl.style.display='inline-flex';
+  navEl.classList.toggle('qnav-collapsed',collapsed);
+  toggleEl.classList.toggle('open',!collapsed);
+  if(labelEl)labelEl.textContent=collapsed?`Show all ${count}`:'Show less';
+}
+
+function qnavScrollCurrent(navEl){
+  const cur=navEl&&navEl.querySelector('.cur');
+  if(cur)cur.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+
+function toggleQNav(){qNavCollapsed=!qNavCollapsed;renderNav();qnavScrollCurrent(document.getElementById('qNav'))}
+
 function renderNav(){
   const navEl=document.getElementById('qNav');navEl.innerHTML='';
   QUESTIONS.forEach((_,i)=>{
@@ -2483,6 +2522,7 @@ function renderNav(){
     b.onclick=()=>{idx=i;render()};
     navEl.appendChild(b);
   });
+  qnavSync(navEl,document.getElementById('qNavToggle'),document.getElementById('qNavToggleLabel'),QUESTIONS.length,qNavCollapsed);
 }
 
 function renderQuestion(){
@@ -2524,7 +2564,7 @@ function updateSidebar(){
   bar.style.background=done===QUESTIONS.length?'var(--green)':'var(--mid)';
 }
 
-function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===QUESTIONS.length-1}
+function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===QUESTIONS.length-1;qnavScrollCurrent(document.getElementById('qNav'))}
 
 function pick(i){
   if(answers[idx]!==undefined)return;
@@ -2537,11 +2577,13 @@ function pick(i){
 }
 function navQ(d){const n=idx+d;if(n>=0&&n<QUESTIONS.length){idx=n;render()}}
 function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
-function resetSession(){idx=0;answers={};showSoln={};render()}
+function resetSession(){idx=0;answers={};showSoln={};qNavCollapsed=true;render()}
 
 /* ── Past Papers: browse real past papers, then practice one with the same question engine/UI as Practice ── */
 let ppPapers=[],ppPapersLoaded=false,ppExamFilter='all',ppSearchQuery='';
 let ppQuestions=[],ppIdx=0,ppAnswers={},ppShowSoln={},ppJustAnswered=false,ppCurrentLabel='';
+let ppQNavCollapsed=true;
+function togglePpQNav(){ppQNavCollapsed=!ppQNavCollapsed;ppRenderNav();qnavScrollCurrent(document.getElementById('ppQNav'))}
 
 async function ppLoadPapers(){
   const loading=document.getElementById('ppLoadingState'),error=document.getElementById('ppErrorState'),wrap=document.getElementById('ppGroupsWrap');
@@ -2632,7 +2674,7 @@ async function ppStart(examType,year,paper,label){
         soln:q.workedSolution
       };
     });
-    ppIdx=0;ppAnswers={};ppShowSoln={};ppCurrentLabel=label;
+    ppIdx=0;ppAnswers={};ppShowSoln={};ppQNavCollapsed=true;ppCurrentLabel=label;
     document.getElementById('ppRunnerTitle').textContent=label;
     hub.style.display='none';runner.style.display='block';
     ppRender();
@@ -2655,6 +2697,7 @@ function ppRenderNav(){
     b.onclick=()=>{ppIdx=i;ppRender()};
     navEl.appendChild(b);
   });
+  qnavSync(navEl,document.getElementById('ppQNavToggle'),document.getElementById('ppQNavToggleLabel'),ppQuestions.length,ppQNavCollapsed);
 }
 
 function ppRenderQuestion(){
@@ -2702,6 +2745,7 @@ function ppRender(){
   ppRenderNav();ppRenderQuestion();ppUpdateSidebar();
   document.getElementById('ppPrevBtn').disabled=ppIdx===0;
   document.getElementById('ppNextBtn').disabled=ppIdx===ppQuestions.length-1;
+  qnavScrollCurrent(document.getElementById('ppQNav'));
 }
 
 function ppPick(key){
