@@ -592,6 +592,32 @@ button{font-family:inherit}
 .qnav-toggle svg{transition:transform .2s ease}
 .qnav-toggle.open svg{transform:rotate(180deg)}
 
+/* ── Practice setup screen (module/topic/count picker before a session starts) ── */
+.prac-setup-wrap{max-width:1200px;margin:0 auto;padding:1.5rem 1.75rem}
+.prac-setup-grid{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;align-items:start}
+.prac-setup-side{display:flex;flex-direction:column;gap:1.1rem}
+.prac-modules-actions{margin-left:auto;display:flex;gap:10px}
+.prac-link-btn{border:none;background:none;padding:0;font-size:.75rem;font-weight:600;color:var(--mid);cursor:pointer;font-family:'Inter',sans-serif}
+.prac-link-btn:hover{text-decoration:underline}
+.prac-module-block{border-top:1px solid var(--bdr);padding-top:.9rem;margin-top:.9rem}
+.prac-module-block:first-child{border-top:none;padding-top:0;margin-top:0}
+.prac-module-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.prac-module-chip{gap:8px}
+.prac-module-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.prac-module-count{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:700;opacity:.75}
+.prac-module-avg{font-size:.75rem;font-weight:600;margin-left:2px}
+.prac-expand-btn{margin-left:auto;border:none;background:none;color:var(--ter);cursor:pointer;padding:4px;display:flex;transition:transform .18s ease}
+.prac-expand-btn[aria-expanded="true"]{transform:rotate(180deg)}
+.prac-topic-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:.75rem}
+.prac-topic-chip{padding:.35rem .7rem .35rem .6rem;font-size:.75rem}
+.prac-topic-chip .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.prac-topic-chip b{font-family:'JetBrains Mono',monospace;font-weight:700;opacity:.7;font-size:.6875rem}
+.prac-sel-summary{font-size:.8125rem;color:var(--sec);line-height:1.5}
+.prac-sel-summary b{color:var(--text);font-family:'JetBrains Mono',monospace}
+.prac-suggest-meta{margin-left:auto;font-size:.75rem;color:var(--ter);font-weight:600}
+@media(max-width:900px){.prac-setup-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.prac-setup-wrap{padding:1rem .75rem}}
+
 .q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:.875rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1)}
 .q-meta{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
 .q-text{font-size:.9375rem;line-height:1.85;color:var(--text);margin:0;white-space:pre-wrap}
@@ -1310,9 +1336,68 @@ body[data-screen="app"] #appShell{display:block}
     </div>
   </div>
 
-  <!-- ═══ PRACTICE VIEW (exact layout of Current Rebranded question page) ═══ -->
+  <!-- ═══ PRACTICE VIEW ═══ -->
   <div id="view-practice" class="view">
-    <div class="practice-wrap">
+
+    <!-- Setup screen: choose modules/topics + question count before a session starts -->
+    <div class="page" id="pracSetup">
+      <div class="prac-setup-wrap">
+
+        <!-- Suggested for you: weakest topics, computed from real topic mastery -->
+        <div class="card suggest-card" id="pracSuggestCard" style="margin-bottom:1.1rem">
+          <div class="na-header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purp)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg>
+            <h3 class="section-title">Suggested for you</h3>
+            <span class="prac-suggest-meta" id="pracSuggestMeta"></span>
+          </div>
+          <div class="suggest-list" id="pracSuggestList"></div>
+          <button class="btn-primary" id="pracSuggestBtn" style="width:auto;margin-top:.9rem;padding:.6rem 1.2rem;font-size:.8125rem">
+            Start suggested session
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div class="prac-setup-grid">
+          <div class="card prac-modules-card">
+            <div class="na-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg>
+              <h3 class="section-title">Modules &amp; topics</h3>
+              <span class="prac-modules-actions">
+                <button type="button" class="prac-link-btn" onclick="pracSelectAll()">Select all</button>
+                <button type="button" class="prac-link-btn" onclick="pracClearAll()">Clear</button>
+              </span>
+            </div>
+            <div class="section-sub" style="margin:-.35rem 0 .9rem">Pick the modules and topics this session should draw from — the dot shows your current mastery in each.</div>
+            <div id="pracModuleList"></div>
+          </div>
+
+          <div class="prac-setup-side">
+            <div class="card">
+              <div class="label" style="color:var(--ter);margin-bottom:8px">Questions per session</div>
+              <div class="seg-group seg-group-sm" id="pracLenSeg">
+                <button class="seg-btn" data-len="5" onclick="pracSetCount(5,this)">5</button>
+                <button class="seg-btn active" data-len="10" onclick="pracSetCount(10,this)">10</button>
+                <button class="seg-btn" data-len="20" onclick="pracSetCount(20,this)">20</button>
+                <button class="seg-btn" data-len="30" onclick="pracSetCount(30,this)">30</button>
+                <button class="seg-btn" data-len="50" onclick="pracSetCount(50,this)">50</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="label" style="color:var(--ter);margin-bottom:8px">Ready to go</div>
+              <div id="pracSelSummary" class="prac-sel-summary"></div>
+              <button class="btn-primary" id="pracStartBtn" style="width:100%;margin-top:.9rem" onclick="pracStartSession()">
+                Start session
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Practice runner -->
+    <div class="practice-wrap" id="pracRunner" style="display:none">
+      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="pracEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to setup</button>
       <div class="practice-layout">
         <div class="practice-main">
           <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
@@ -1330,7 +1415,7 @@ body[data-screen="app"] #appShell{display:block}
         <div class="practice-sidebar">
           <div class="sb-card">
             <div class="label" style="color:var(--ter);margin-bottom:8px">Session Progress</div>
-            <div class="sb-prog"><span class="sb-prog-num" id="sbProgNum">0</span><span class="sb-prog-lbl">of 10 answered</span></div>
+            <div class="sb-prog"><span class="sb-prog-num" id="sbProgNum">0</span><span class="sb-prog-lbl" id="sbProgLbl">of 10 answered</span></div>
             <div class="bar" style="height:4px"><div class="bar-fill" id="sbProgBar" style="width:0%;background:var(--mid)"></div></div>
             <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="sbCorrect">0</strong></span><span>Remaining: <strong style="font-family:'JetBrains Mono',monospace;color:var(--sec)" id="sbRemain">10</strong></span></div>
           </div>
@@ -1343,7 +1428,7 @@ body[data-screen="app"] #appShell{display:block}
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
             </div>
           </div>
-          <button class="sb-btn" onclick="resetSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
+          <button class="sb-btn" onclick="pracEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
         </div>
       </div>
     </div>
@@ -2469,18 +2554,25 @@ function nav(el,view,title){
 }
 
 /* ── Practice question engine (matches Study Hub / Current Rebranded exactly) ── */
-const QUESTIONS=[
-{q:"A polynomial f(x) = x³ + ax² + bx + 6 has roots 1, 2, and 3. What is the value of a?",opts:["−6","6","−1","11","−11"],ans:0,topic:"Algebra & Polynomials",diff:"Easy",soln:"By Vieta's formulas, the sum of the roots = −a.\nSum of roots = 1 + 2 + 3 = 6.\nSo −a = 6, which gives a = −6.\n\nVerification: (x−1)(x−2)(x−3) = x³ − 6x² + 11x − 6\nSo a = −6. Confirmed."},
-{q:"The sum of the first n terms of an arithmetic sequence is Sn = n² + 2n. What is the common difference?",opts:["1","2","3","4","n"],ans:1,topic:"Sequences & Series",diff:"Medium",soln:"Sn = n² + 2n\nSn₋₁ = (n−1)² + 2(n−1) = n² − 2n + 1 + 2n − 2 = n² − 1\n\nan = Sn − Sn₋₁ = (n² + 2n) − (n² − 1) = 2n + 1\n\nSo a₁ = 3, a₂ = 5, a₃ = 7...\nCommon difference d = 5 − 3 = 2."},
-{q:"In triangle ABC, angle A = 60°, side b = 8, side c = 5. What is the length of side a?",opts:["6","7","√39","√49","√89"],ans:1,topic:"Geometry & Trigonometry",diff:"Medium",soln:"By the cosine rule:\n\na² = b² + c² − 2bc·cos(A)\na² = 8² + 5² − 2(8)(5)cos(60°)\na² = 64 + 25 − 80(0.5)\na² = 89 − 40 = 49\na = 7"},
-{q:"A fair six-sided die is rolled twice. What is the probability that the sum is exactly 7?",opts:["1/12","1/9","1/6","5/36","7/36"],ans:2,topic:"Statistics & Probability",diff:"Easy",soln:"Total outcomes: 6 × 6 = 36.\n\nFavourable pairs (sum = 7):\n(1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways.\n\nP(sum = 7) = 6/36 = 1/6."},
-{q:"Evaluate: ∫₀¹ (3x² − 2x + 1) dx",opts:["0","1","2","3","1.5"],ans:1,topic:"Calculus",diff:"Medium",soln:"∫(3x² − 2x + 1) dx = x³ − x² + x + C\n\nEvaluate from 0 to 1:\n= [1³ − 1² + 1] − [0³ − 0² + 0]\n= [1 − 1 + 1] − 0\n= 1"},
-{q:"A car accelerates uniformly from rest to 20 m/s in 5 seconds. What distance does it travel?",opts:["25 m","50 m","75 m","100 m","10 m"],ans:1,topic:"Mechanics",diff:"Easy",soln:"Using s = ½(u + v)t:\ns = ½(0 + 20)(5)\ns = ½(20)(5)\ns = 50 m\n\nAlternatively: a = 20/5 = 4 m/s²\ns = ½(4)(25) = 50 m."},
-{q:"Two resistors of 6Ω and 3Ω are connected in parallel. What is the equivalent resistance?",opts:["9Ω","3Ω","2Ω","4.5Ω","18Ω"],ans:2,topic:"Electricity & Magnetism",diff:"Hard",soln:"For parallel resistors:\n1/R = 1/R₁ + 1/R₂\n1/R = 1/6 + 1/3\n1/R = 1/6 + 2/6 = 3/6 = 1/2\nR = 2Ω"},
-{q:"A sound wave has frequency 680 Hz and speed 340 m/s. What is its wavelength?",opts:["0.25 m","0.5 m","1.0 m","2.0 m","0.68 m"],ans:1,topic:"Waves & Optics",diff:"Hard",soln:"v = fλ\n\nλ = v/f\nλ = 340/680\nλ = 0.5 m"},
-{q:"An ideal gas at pressure P and volume V undergoes isothermal expansion to volume 2V. What is the new pressure?",opts:["P/2","2P","P","P/4","4P"],ans:0,topic:"Thermodynamics",diff:"Medium",soln:"For an isothermal process, PV = constant (Boyle's Law).\n\nP₁V₁ = P₂V₂\nP · V = P₂ · 2V\nP₂ = PV/2V = P/2"},
-{q:"In a hydrogen atom, an electron transitions from n=3 to n=1. The energy of the emitted photon is approximately:",opts:["1.89 eV","10.2 eV","12.09 eV","13.6 eV","3.4 eV"],ans:2,topic:"Modern Physics",diff:"Very Hard",soln:"Eₙ = −13.6/n² eV\n\nE₃ = −13.6/9 = −1.51 eV\nE₁ = −13.6/1 = −13.6 eV\n\nΔE = E₃ − E₁ = −1.51 − (−13.6) = 12.09 eV\n\nThe photon carries away this energy."}
+/* module/topicCode tag each sample question to a real TAXONOMY topic (defined below) so the
+   session picker's module/topic filters have something real to match against. */
+const QUESTION_BANK=[
+{q:"A polynomial f(x) = x³ + ax² + bx + 6 has roots 1, 2, and 3. What is the value of a?",opts:["−6","6","−1","11","−11"],ans:0,topic:"Algebra & Polynomials",module:"M2",topicCode:"MM1",diff:"Easy",soln:"By Vieta's formulas, the sum of the roots = −a.\nSum of roots = 1 + 2 + 3 = 6.\nSo −a = 6, which gives a = −6.\n\nVerification: (x−1)(x−2)(x−3) = x³ − 6x² + 11x − 6\nSo a = −6. Confirmed."},
+{q:"The sum of the first n terms of an arithmetic sequence is Sn = n² + 2n. What is the common difference?",opts:["1","2","3","4","n"],ans:1,topic:"Sequences & Series",module:"M2",topicCode:"MM2",diff:"Medium",soln:"Sn = n² + 2n\nSn₋₁ = (n−1)² + 2(n−1) = n² − 2n + 1 + 2n − 2 = n² − 1\n\nan = Sn − Sn₋₁ = (n² + 2n) − (n² − 1) = 2n + 1\n\nSo a₁ = 3, a₂ = 5, a₃ = 7...\nCommon difference d = 5 − 3 = 2."},
+{q:"In triangle ABC, angle A = 60°, side b = 8, side c = 5. What is the length of side a?",opts:["6","7","√39","√49","√89"],ans:1,topic:"Geometry & Trigonometry",module:"M2",topicCode:"MM4",diff:"Medium",soln:"By the cosine rule:\n\na² = b² + c² − 2bc·cos(A)\na² = 8² + 5² − 2(8)(5)cos(60°)\na² = 64 + 25 − 80(0.5)\na² = 89 − 40 = 49\na = 7"},
+{q:"A fair six-sided die is rolled twice. What is the probability that the sum is exactly 7?",opts:["1/12","1/9","1/6","5/36","7/36"],ans:2,topic:"Statistics & Probability",module:"M1",topicCode:"M7",diff:"Easy",soln:"Total outcomes: 6 × 6 = 36.\n\nFavourable pairs (sum = 7):\n(1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways.\n\nP(sum = 7) = 6/36 = 1/6."},
+{q:"Evaluate: ∫₀¹ (3x² − 2x + 1) dx",opts:["0","1","2","3","1.5"],ans:1,topic:"Calculus",module:"M2",topicCode:"MM7",diff:"Medium",soln:"∫(3x² − 2x + 1) dx = x³ − x² + x + C\n\nEvaluate from 0 to 1:\n= [1³ − 1² + 1] − [0³ − 0² + 0]\n= [1 − 1 + 1] − 0\n= 1"},
+{q:"A car accelerates uniformly from rest to 20 m/s in 5 seconds. What distance does it travel?",opts:["25 m","50 m","75 m","100 m","10 m"],ans:1,topic:"Mechanics",module:"P",topicCode:"P3",diff:"Easy",soln:"Using s = ½(u + v)t:\ns = ½(0 + 20)(5)\ns = ½(20)(5)\ns = 50 m\n\nAlternatively: a = 20/5 = 4 m/s²\ns = ½(4)(25) = 50 m."},
+{q:"Two resistors of 6Ω and 3Ω are connected in parallel. What is the equivalent resistance?",opts:["9Ω","3Ω","2Ω","4.5Ω","18Ω"],ans:2,topic:"Electricity & Magnetism",module:"P",topicCode:"P1",diff:"Hard",soln:"For parallel resistors:\n1/R = 1/R₁ + 1/R₂\n1/R = 1/6 + 1/3\n1/R = 1/6 + 2/6 = 3/6 = 1/2\nR = 2Ω"},
+{q:"A sound wave has frequency 680 Hz and speed 340 m/s. What is its wavelength?",opts:["0.25 m","0.5 m","1.0 m","2.0 m","0.68 m"],ans:1,topic:"Waves & Optics",module:"P",topicCode:"P6",diff:"Hard",soln:"v = fλ\n\nλ = v/f\nλ = 340/680\nλ = 0.5 m"},
+{q:"An ideal gas at pressure P and volume V undergoes isothermal expansion to volume 2V. What is the new pressure?",opts:["P/2","2P","P","P/4","4P"],ans:0,topic:"Thermodynamics",module:"P",topicCode:"P5",diff:"Medium",soln:"For an isothermal process, PV = constant (Boyle's Law).\n\nP₁V₁ = P₂V₂\nP · V = P₂ · 2V\nP₂ = PV/2V = P/2"},
+{q:"In a hydrogen atom, an electron transitions from n=3 to n=1. The energy of the emitted photon is approximately:",opts:["1.89 eV","10.2 eV","12.09 eV","13.6 eV","3.4 eV"],ans:2,topic:"Modern Physics",module:"P",topicCode:"P7",diff:"Very Hard",soln:"Eₙ = −13.6/n² eV\n\nE₃ = −13.6/9 = −1.51 eV\nE₁ = −13.6/1 = −13.6 eV\n\nΔE = E₃ − E₁ = −1.51 − (−13.6) = 12.09 eV\n\nThe photon carries away this energy."}
 ];
+/* The logged-out welcome-page sample widget below always shows this fixed 10-question set. */
+const QUESTIONS=QUESTION_BANK;
+/* The gated Practice runner uses a session-specific pool built by pracStartSession() (see the
+   Practice setup section further down), independent of the fixed welcome-page sample above. */
+let PRACTICE_QUESTIONS=[];
 const LETTERS="ABCDEFGHIJ";
 let idx=0,answers={},showSoln={},rightCount=0,justAnswered=false;
 
@@ -2510,28 +2602,28 @@ function toggleQNav(){qNavCollapsed=!qNavCollapsed;renderNav();qnavScrollCurrent
 
 function renderNav(){
   const navEl=document.getElementById('qNav');navEl.innerHTML='';
-  QUESTIONS.forEach((_,i)=>{
+  PRACTICE_QUESTIONS.forEach((_,i)=>{
     const b=document.createElement('button');b.className='qnum';
     const a=answers[i],revealed=a!==undefined;
     let state='not yet answered';
-    if(revealed){const q=QUESTIONS[i];const ok=a===q.ans;b.classList.add(ok?'correct':'incorrect');state=ok?'answered correctly':'answered incorrectly'}
+    if(revealed){const q=PRACTICE_QUESTIONS[i];const ok=a===q.ans;b.classList.add(ok?'correct':'incorrect');state=ok?'answered correctly':'answered incorrectly'}
     if(i===idx){b.classList.add('cur');b.setAttribute('aria-current','step')}
     b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
-    if(revealed)b.innerHTML=a===QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
+    if(revealed)b.innerHTML=a===PRACTICE_QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
     else b.textContent=i+1;
     b.onclick=()=>{idx=i;render()};
     navEl.appendChild(b);
   });
-  qnavSync(navEl,document.getElementById('qNavToggle'),document.getElementById('qNavToggleLabel'),QUESTIONS.length,qNavCollapsed);
+  qnavSync(navEl,document.getElementById('qNavToggle'),document.getElementById('qNavToggleLabel'),PRACTICE_QUESTIONS.length,qNavCollapsed);
 }
 
 function renderQuestion(){
-  const q=QUESTIONS[idx],area=document.getElementById('questionArea');
+  const q=PRACTICE_QUESTIONS[idx],area=document.getElementById('questionArea');
   const a=answers[idx],isCorrect=a===q.ans,answered=a!==undefined;
   const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
   const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
   let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
-  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${idx+1} of ${QUESTIONS.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
+  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${idx+1} of ${PRACTICE_QUESTIONS.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
   html+='<div class="opts">';
   q.opts.forEach((o,oi)=>{
     let cls='opt';if(answered)cls+=' answered';
@@ -2554,30 +2646,31 @@ function renderQuestion(){
 }
 
 function updateSidebar(){
-  const done=Object.keys(answers).length,rem=QUESTIONS.length-done;
-  rightCount=Object.entries(answers).filter(([i,a])=>a===QUESTIONS[i].ans).length;
+  const done=Object.keys(answers).length,rem=PRACTICE_QUESTIONS.length-done;
+  rightCount=Object.entries(answers).filter(([i,a])=>a===PRACTICE_QUESTIONS[i].ans).length;
   document.getElementById('sbProgNum').textContent=done;
   document.getElementById('sbCorrect').textContent=rightCount;
   document.getElementById('sbRemain').textContent=rem;
+  const lbl=document.getElementById('sbProgLbl');
+  if(lbl)lbl.textContent=`of ${PRACTICE_QUESTIONS.length} answered`;
   const bar=document.getElementById('sbProgBar');
-  bar.style.width=(done/QUESTIONS.length*100)+'%';
-  bar.style.background=done===QUESTIONS.length?'var(--green)':'var(--mid)';
+  bar.style.width=(done/PRACTICE_QUESTIONS.length*100)+'%';
+  bar.style.background=done===PRACTICE_QUESTIONS.length?'var(--green)':'var(--mid)';
 }
 
-function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===QUESTIONS.length-1;qnavScrollCurrent(document.getElementById('qNav'))}
+function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===PRACTICE_QUESTIONS.length-1;qnavScrollCurrent(document.getElementById('qNav'))}
 
 function pick(i){
   if(answers[idx]!==undefined)return;
   answers[idx]=i;
   justAnswered=true;
-  const q=QUESTIONS[idx],ok=i===q.ans,live=document.getElementById('answerAnnounce');
+  const q=PRACTICE_QUESTIONS[idx],ok=i===q.ans,live=document.getElementById('answerAnnounce');
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
   render();
   justAnswered=false;
 }
-function navQ(d){const n=idx+d;if(n>=0&&n<QUESTIONS.length){idx=n;render()}}
+function navQ(d){const n=idx+d;if(n>=0&&n<PRACTICE_QUESTIONS.length){idx=n;render()}}
 function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
-function resetSession(){idx=0;answers={};showSoln={};qNavCollapsed=true;render()}
 
 /* ── Past Papers: browse real past papers, then practice one with the same question engine/UI as Practice ── */
 let ppPapers=[],ppPapersLoaded=false,ppExamFilter='all',ppSearchQuery='';
@@ -2841,11 +2934,13 @@ if(document.getElementById('wQNav'))wRender();
 
 document.addEventListener('keydown',e=>{
   if(!document.getElementById('view-practice').classList.contains('active'))return;
+  const runner=document.getElementById('pracRunner');
+  if(!runner||runner.style.display==='none'||!PRACTICE_QUESTIONS.length)return;
   const t=e.target;if(['SELECT','INPUT','TEXTAREA'].includes(t.tagName))return;
-  if(/^[1-9]$/.test(e.key)){const i=parseInt(e.key)-1;if(i<QUESTIONS[idx].opts.length)pick(i);return}
-  if(/^[a-i]$/i.test(e.key)){const L=e.key.toUpperCase(),oi=LETTERS.indexOf(L);if(oi>=0&&oi<QUESTIONS[idx].opts.length)pick(oi);return}
+  if(/^[1-9]$/.test(e.key)){const i=parseInt(e.key)-1;if(i<PRACTICE_QUESTIONS[idx].opts.length)pick(i);return}
+  if(/^[a-i]$/i.test(e.key)){const L=e.key.toUpperCase(),oi=LETTERS.indexOf(L);if(oi>=0&&oi<PRACTICE_QUESTIONS[idx].opts.length)pick(oi);return}
   if(e.key==='s'||e.key==='S'){if(answers[idx]!==undefined)toggleSoln();return}
-  if(e.key==='ArrowRight'||e.key==='Enter'){if(idx<QUESTIONS.length-1)navQ(1);return}
+  if(e.key==='ArrowRight'||e.key==='Enter'){if(idx<PRACTICE_QUESTIONS.length-1)navQ(1);return}
   if(e.key==='ArrowLeft'&&idx>0)navQ(-1);
 });
 
@@ -2905,8 +3000,6 @@ function renderDailyStreak(){
   document.getElementById('streakBody').innerHTML=DAILY_STREAK<7?renderPreBadgeChecklist(DAILY_STREAK):renderStreakLadder(DAILY_STREAK);
 }
 renderDailyStreak();
-
-render();
 
 /* Hide the achievements scroll-fade once the row is scrolled to its end */
 (function(){
@@ -4445,6 +4538,170 @@ function tpModuleAvgMastery(mod){
   return Math.round(started.reduce((s,p)=>s+p.mastery,0)/started.length);
 }
 
+/* ── Practice setup: module/topic picker + weakest-topic suggestions ── */
+let pracSelectedTopics=new Set();
+let pracExpandedModules=new Set();
+let pracCount=10;
+
+function pracTopicKey(modCode,topicCode){return modCode+'|'+topicCode}
+
+function pracSelectAll(){
+  pracSelectedTopics=new Set();
+  TAXONOMY.forEach(mod=>mod.topics.forEach(t=>pracSelectedTopics.add(pracTopicKey(mod.code,t.code))));
+  pracRenderModules();
+}
+function pracClearAll(){pracSelectedTopics=new Set();pracRenderModules()}
+
+function pracToggleModule(modCode){
+  const mod=TAXONOMY.find(m=>m.code===modCode);if(!mod)return;
+  const allSelected=mod.topics.every(t=>pracSelectedTopics.has(pracTopicKey(modCode,t.code)));
+  mod.topics.forEach(t=>{
+    const key=pracTopicKey(modCode,t.code);
+    if(allSelected)pracSelectedTopics.delete(key);else pracSelectedTopics.add(key);
+  });
+  pracRenderModules();
+}
+function pracToggleTopic(modCode,topicCode){
+  const key=pracTopicKey(modCode,topicCode);
+  if(pracSelectedTopics.has(key))pracSelectedTopics.delete(key);else pracSelectedTopics.add(key);
+  pracRenderModules();
+}
+function pracToggleExpand(modCode){
+  if(pracExpandedModules.has(modCode))pracExpandedModules.delete(modCode);else pracExpandedModules.add(modCode);
+  pracRenderModules();
+}
+
+function pracTopicChipHtml(mod,topic){
+  const key=pracTopicKey(mod.code,topic.code);
+  const active=pracSelectedTopics.has(key);
+  const prog=TOPIC_PROGRESS[topic.code];
+  const band=prog.started?tpBand(prog.mastery):'none';
+  const pctLabel=prog.started?prog.mastery+'%':'—';
+  return `<button type="button" class="chip-toggle prac-topic-chip${active?' active':''}" onclick="pracToggleTopic('${mod.code}','${topic.code}')" aria-pressed="${active}">
+    <span class="dot" style="background:${BAND_COLOR[band]}"></span>${topic.name}<b>${pctLabel}</b>
+  </button>`;
+}
+
+function pracModuleBlockHtml(mod){
+  const meta=MODULE_META[mod.code];
+  const topics=mod.topics;
+  const selectedCount=topics.filter(t=>pracSelectedTopics.has(pracTopicKey(mod.code,t.code))).length;
+  const allSelected=selectedCount===topics.length&&topics.length>0;
+  const avg=tpModuleAvgMastery(mod);
+  const expanded=pracExpandedModules.has(mod.code);
+  const chipStyle=allSelected?`border-color:${meta.color};color:${meta.color};background:color-mix(in srgb, ${meta.color} 12%, var(--surf))`:'';
+  return `<div class="prac-module-block">
+    <div class="prac-module-head">
+      <button type="button" class="chip-toggle prac-module-chip${allSelected?' active':''}" style="${chipStyle}" onclick="pracToggleModule('${mod.code}')" aria-pressed="${allSelected}">
+        <span class="prac-module-dot" style="background:${meta.color}"></span>${mod.name}
+        <span class="prac-module-count">${selectedCount}/${topics.length}</span>
+      </button>
+      <span class="prac-module-avg" style="color:${avg==null?'var(--ter)':BAND_COLOR[tpBand(avg)]}">${avg==null?'Not started':avg+'% avg'}</span>
+      <button type="button" class="prac-expand-btn" aria-expanded="${expanded}" aria-label="${expanded?'Collapse':'Expand'} ${mod.name} topics" onclick="pracToggleExpand('${mod.code}')">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>
+    ${expanded?`<div class="prac-topic-grid">${topics.map(t=>pracTopicChipHtml(mod,t)).join('')}</div>`:''}
+  </div>`;
+}
+
+function pracRenderModules(){
+  const wrap=document.getElementById('pracModuleList');
+  if(!wrap)return;
+  wrap.innerHTML=TAXONOMY.map(pracModuleBlockHtml).join('');
+  pracUpdateSummary();
+}
+
+function pracUpdateSummary(){
+  const el=document.getElementById('pracSelSummary'),btn=document.getElementById('pracStartBtn');
+  if(!el||!btn)return;
+  const selectedCount=pracSelectedTopics.size;
+  const modsWithSelection=TAXONOMY.filter(m=>m.topics.some(t=>pracSelectedTopics.has(pracTopicKey(m.code,t.code))));
+  if(!selectedCount){
+    el.innerHTML=`<span style="color:var(--red)">Select at least one topic to start.</span>`;
+    btn.disabled=true;
+  }else{
+    el.innerHTML=`<b>${pracCount}</b> question${pracCount===1?'':'s'} across <b>${selectedCount}</b> topic${selectedCount===1?'':'s'} in ${modsWithSelection.length} module${modsWithSelection.length===1?'':'s'}`;
+    btn.disabled=false;
+  }
+}
+
+function pracSetCount(n,btn){
+  pracCount=n;
+  document.querySelectorAll('#pracLenSeg .seg-btn').forEach(b=>b.classList.toggle('active',b===btn));
+  pracUpdateSummary();
+}
+
+function pracWeakestTopics(n){
+  const all=[];
+  TAXONOMY.forEach(mod=>mod.topics.forEach(t=>{
+    const prog=TOPIC_PROGRESS[t.code];
+    if(prog.started&&prog.mastery!=null)all.push({mod,topic:t,mastery:prog.mastery});
+  }));
+  all.sort((a,b)=>a.mastery-b.mastery);
+  return all.slice(0,n);
+}
+
+function pracRenderSuggestion(){
+  const card=document.getElementById('pracSuggestCard'),wrap=document.getElementById('pracSuggestList');
+  if(!card||!wrap)return;
+  const weakest=pracWeakestTopics(3);
+  if(!weakest.length){card.style.display='none';return}
+  card.style.display='';
+  const suggestedCount=Math.min(30,Math.max(10,weakest.length*8));
+  wrap.innerHTML=weakest.map(w=>{
+    const band=tpBand(w.mastery);
+    return `<div class="suggest-row">
+      <div class="suggest-icon" style="background:color-mix(in srgb, ${BAND_COLOR[band]} 16%, var(--surf))"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${BAND_COLOR[band]}" stroke-width="1.8"><path d="M12 9v3.75m0 3.75h.008M4.062 19.5h15.876a1.5 1.5 0 0 0 1.299-2.25L13.299 4.5a1.5 1.5 0 0 0-2.598 0L2.763 17.25a1.5 1.5 0 0 0 1.299 2.25Z"/></svg></div>
+      <div class="suggest-body">
+        <div class="suggest-title">${w.topic.name} · ${MODULE_META[w.mod.code].short}</div>
+        <div class="suggest-sub">${BAND_LABEL[band]} — ${w.mastery}% mastery</div>
+      </div>
+    </div>`;
+  }).join('');
+  const metaEl=document.getElementById('pracSuggestMeta');
+  if(metaEl)metaEl.textContent=`${suggestedCount} questions · ~${Math.round(suggestedCount*0.8)} min`;
+  const btn=document.getElementById('pracSuggestBtn');
+  if(btn)btn.onclick=()=>pracStartSuggested(weakest,suggestedCount);
+}
+
+function pracStartSuggested(weakest,count){
+  pracSelectedTopics=new Set(weakest.map(w=>pracTopicKey(w.mod.code,w.topic.code)));
+  pracExpandedModules=new Set(weakest.map(w=>w.mod.code));
+  pracCount=count;
+  pracRenderModules();
+  document.querySelectorAll('#pracLenSeg .seg-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.len,10)===count));
+  pracStartSession();
+}
+
+function pracStartSession(){
+  if(!pracSelectedTopics.size)return;
+  let pool=QUESTION_BANK.filter(q=>pracSelectedTopics.has(pracTopicKey(q.module,q.topicCode)));
+  if(!pool.length){
+    const modCodes=new Set([...pracSelectedTopics].map(k=>k.split('|')[0]));
+    pool=QUESTION_BANK.filter(q=>modCodes.has(q.module));
+  }
+  if(!pool.length){
+    pool=QUESTION_BANK;
+    if(typeof lbToast==='function')lbToast('No preview questions for that selection yet — showing our full sample set.');
+  }
+  PRACTICE_QUESTIONS=Array.from({length:pracCount},(_,i)=>pool[i%pool.length]);
+  idx=0;answers={};showSoln={};qNavCollapsed=true;
+  document.getElementById('pracSetup').style.display='none';
+  document.getElementById('pracRunner').style.display='';
+  render();
+}
+
+function pracEndSession(){
+  document.getElementById('pracRunner').style.display='none';
+  document.getElementById('pracSetup').style.display='';
+}
+
+function pracInit(){
+  pracSelectAll();
+  pracRenderSuggestion();
+}
+
 function tpTopicMatchesQuery(topic,needle){
   if(!needle)return true;
   if(topic.code.toLowerCase().includes(needle)||topic.name.toLowerCase().includes(needle))return true;
@@ -4546,6 +4803,7 @@ document.querySelectorAll('#tpModuleSeg .seg-btn').forEach(b=>b.addEventListener
 }));
 
 tpRender();
+pracInit();
 initAuth();
 initGoogleSignIn();
 </script>
