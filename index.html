@@ -887,13 +887,7 @@ body[data-screen="app"] #appShell{display:block}
    whitespace. The other limits: the min-height is dropped below 941px where the
    stacked layout is taller than the screen anyway, and the max-height queries
    further down tighten the card once the screen is too short to hold it. */
-.w-hero{position:relative;display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
-/* The golden spiral the hero is composed on, drawn faintly behind it: it opens at
-   the sample card on the right, sweeps over the top and tightens into an eye that
-   sits over the CTA buttons. Absolute so it stays out of the flex flow. */
-.w-hero-spiral{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
-.w-hero-grid{position:relative;z-index:1}
-.w-hero-copy,.w-hero-demo{position:relative;z-index:1}
+.w-hero{display:flex;align-items:center;min-height:min(calc(100vh - 60px),1040px);min-height:min(calc(100svh - 60px),1040px);padding:clamp(1rem,3.5vh,3rem) 0;background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
 /* stretch + auto margin, not center: the copy column fills the (taller) card's height with
    the headline pinned to the top, so revealing a worked solution can't bounce it down */
 /* 1 : φ — the copy is the small square of the golden rectangle, the card the large one */
@@ -928,13 +922,13 @@ body[data-screen="app"] #appShell{display:block}
    type sizes, same spacing. No drop shadow — the border alone frames it. */
 .w-hero-demo{position:relative}
 .w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:20px;overflow:hidden}
-/* Navy header rather than the flat grey: it reads as the chrome of a real app
-   surface and ties the card to the brand mark and the CTA band. */
-.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:var(--g2) var(--g3);background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%)}
+/* White header, separated from the body by its rule alone — the blue eyebrow
+   carries the colour so the bar doesn't need a fill to read as a header. */
+.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:var(--g2) var(--g3);background:var(--surf);border-bottom:1px solid var(--bdr)}
 .w-demo-head-txt{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap}
-.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--liteb)}
-.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:#fff}
-.w-demo-pill{background:rgba(134,239,172,.15);color:#86EFAC;border:1px solid rgba(134,239,172,.32);flex-shrink:0}
+.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
+.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:var(--text)}
+.w-demo-pill{background:var(--gLite);color:var(--green);border:1px solid var(--gBdr);flex-shrink:0}
 /* Roomier than the real screen on purpose — same type sizes, more air around
    them, so the card reads as generous rather than cramped. */
 .w-demo-body{padding:var(--g3)}
@@ -1028,10 +1022,8 @@ body[data-screen="app"] #appShell{display:block}
 .w-footer-copy{font-size:.75rem;color:var(--ter)}
 
 @media(max-width:940px){
-/* stacked: the hero is taller than the screen on its own, so drop the fill.
-   The spiral goes too — it only means anything against the two-column layout. */
+/* stacked: the hero is taller than the screen on its own, so drop the fill */
 .w-hero{display:block;min-height:0;padding:1.75rem 0 2.5rem}
-.w-hero-spiral{display:none}
 .w-hero-grid{grid-template-columns:1fr;gap:2.5rem}
 .w-hero-sub{max-width:none}
 /* stacked: no taller neighbour to fill, so restore the explicit gap */
@@ -1074,26 +1066,6 @@ body[data-screen="app"] #appShell{display:block}
 
   <section class="w-hero">
     <div class="w-container w-hero-grid">
-      <!-- The golden spiral the hero is composed on: quarter-arcs across Fibonacci
-           squares (89·55·34·21·13·8). Its 89-square is the right 61.8% of the
-           viewBox, which is exactly the 1:φ column split, so stretching it over the
-           grid box lands the big square on the sample card and the eye over the CTA
-           buttons. preserveAspectRatio=none is deliberate for that alignment;
-           non-scaling-stroke keeps the line an even hairline through the stretch.
-           Kept near-invisible — it's the underlying geometry, not an illustration.
-           The viewBox is 106 tall against an 89-tall drawing: the 17 units of empty
-           space below lift the eye off the column's empty lower half and onto the
-           buttons, which sit above centre because the stats are bottom-anchored. -->
-      <svg class="w-hero-spiral" viewBox="0 0 144 106" fill="none" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="wSpiralFade" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0" stop-color="#3B5FEC" stop-opacity="0"/>
-            <stop offset=".42" stop-color="#3B5FEC" stop-opacity=".13"/>
-            <stop offset="1" stop-color="#3B5FEC" stop-opacity=".16"/>
-          </linearGradient>
-        </defs>
-        <path d="M144 89 A89 89 0 0 0 55 0 A55 55 0 0 0 0 55 A34 34 0 0 0 34 89 A21 21 0 0 0 55 68 A13 13 0 0 0 42 55 A8 8 0 0 0 34 63" stroke="url(#wSpiralFade)" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
-      </svg>
 
       <div class="w-hero-copy">
         <span class="pill w-hero-badge">Built from real ESAT past-paper questions</span>
