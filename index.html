@@ -852,9 +852,13 @@ body[data-screen="login"] #loginScreen{display:flex}
 body[data-screen="signup"] #signupScreen{display:flex}
 body[data-screen="app"] #appShell{display:block}
 
-.w-container{max-width:1160px;margin:0 auto;padding:0 1.75rem}
+/* Landing page fills the viewport on wide monitors instead of sitting in a
+   narrow 1160px strip; the gutter grows with the screen so it never touches
+   the edges. --w-max is the single knob for the whole landing page width. */
+:root{--w-max:min(1920px,94vw);--w-gutter:clamp(1.25rem,3vw,4rem)}
+.w-container{width:100%;max-width:var(--w-max);margin:0 auto;padding:0 var(--w-gutter)}
 .w-nav{position:sticky;top:0;z-index:50;background:rgba(246,247,253,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--bdr)}
-.w-nav-inner{max-width:1160px;margin:0 auto;padding:0 1.75rem;height:64px;display:flex;align-items:center;gap:1.75rem}
+.w-nav-inner{width:100%;max-width:var(--w-max);margin:0 auto;padding:0 var(--w-gutter);height:68px;display:flex;align-items:center;gap:1.75rem}
 .w-brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
 .w-brand-icon{width:34px;height:34px;border-radius:9px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .w-brand-icon span{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.45rem;color:#fff;line-height:1}
@@ -869,57 +873,63 @@ body[data-screen="app"] #appShell{display:block}
 
 /* Hero: copy on the left, live question card on the right.
    The card is the wider half — it's the thing that sells the product. */
-.w-hero{padding:3.25rem 0 3.5rem;background:radial-gradient(ellipse 820px 520px at 16% -20%,var(--lite),transparent)}
+.w-hero{padding:clamp(2.75rem,5vw,4.5rem) 0 clamp(3rem,5vw,4.5rem);background:radial-gradient(ellipse 60vw 620px at 14% -18%,var(--lite),transparent)}
 /* start, not center: revealing a worked solution grows the card, and centring would
    bounce the headline down with it */
-.w-hero-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:2.75rem;align-items:start}
-.w-hero-badge{background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:1.1rem}
-.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(1.75rem,2.7vw,2.25rem);letter-spacing:-.022em;line-height:1.14;margin:0 0 .85rem}
-.w-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue);letter-spacing:0}
-.w-hero p{font-size:.9375rem;color:var(--sec);line-height:1.65;margin:0 0 1.5rem}
+/* stretch + auto margin, not center: the copy column fills the (taller) card's height with
+   the headline pinned to the top, so revealing a worked solution can't bounce it down */
+.w-hero-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(2rem,4vw,4.5rem);align-items:stretch}
+.w-hero-copy{display:flex;flex-direction:column}
+/* align-self: the copy column is a flex column, so the pill would stretch to full width */
+.w-hero-badge{align-self:flex-start;background:var(--lite);color:var(--mid);border:1px solid var(--liteb);margin-bottom:1.25rem;font-size:.6875rem}
+/* Headline is the loudest thing on the page; everything below it steps down. */
+.w-hero h1{font-family:'Space Grotesk',sans-serif;font-style:normal;font-weight:700;font-size:clamp(2rem,2.9vw,2.9rem);letter-spacing:-.028em;line-height:1.1;margin:0 0 1rem;text-wrap:balance}
+/* Deliberately no accent face/colour here — the headline reads as one voice.
+   Scoped to .w-hero-sub, not `.w-hero p`, so it can't outrank the other
+   paragraphs in the hero (the log-in line and the sample-card note). */
+.w-hero-sub{font-size:.875rem;color:var(--ter);line-height:1.7;margin:0 0 1.6rem;max-width:46ch}
 .w-hero-ctas{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-bottom:.75rem}
-.w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.8rem 1.5rem;font-size:.9375rem}
-.w-hero-login{font-size:.8125rem;color:var(--ter)}
+.w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:auto;padding:.85rem 1.6rem;font-size:.9375rem}
+/* margin-bottom guarantees a gap when the auto-margin on .w-hero-stats collapses to 0 */
+.w-hero-login{font-size:.75rem;color:var(--ter);margin-bottom:1.9rem}
 .w-hero-login a{color:var(--mid);font-weight:600;text-decoration:none}
 .w-hero-login a:hover{text-decoration:underline}
-.w-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem .9rem;margin-top:1.75rem;padding-top:1.4rem;border-top:1px solid var(--bdr)}
-.w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:700;color:var(--text);letter-spacing:-.03em}
-.w-hero-stat span{display:block;font-size:.71rem;color:var(--ter);font-weight:600;line-height:1.35;margin-top:1px}
+/* auto: pins the stats + board chips to the bottom of the copy column */
+.w-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem .9rem;margin-top:auto;padding-top:1.4rem;border-top:1px solid var(--bdr)}
+.w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.0625rem;font-weight:700;color:var(--sec);letter-spacing:-.02em}
+.w-hero-stat span{display:block;font-size:.65rem;color:var(--ter);font-weight:600;line-height:1.35;margin-top:2px}
 /* Names the four sources behind the "past papers" claim above */
 .w-hero-boards{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;margin-top:1.4rem}
-.w-hero-boards-label{font-size:.6875rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ter);margin-right:.2rem}
-.w-hero-boards span.bd{font-family:'JetBrains Mono',monospace;font-size:.71rem;font-weight:600;color:var(--sec);background:var(--surf);border:1px solid var(--bdr);border-radius:6px;padding:.28rem .5rem}
+.w-hero-boards-label{font-size:.625rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ter);margin-right:.2rem}
+.w-hero-boards span.bd{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;color:var(--ter);background:var(--surf);border:1px solid var(--bdr);border-radius:6px;padding:.26rem .48rem}
 
-/* Hero question card — kept deliberately short: one row of question pills,
-   a compact stem, and answers in two columns (every sample option is <10 chars). */
+/* Hero question card — a faithful preview of the real practice screen, so the
+   overrides here are minimal on purpose: same vertical option stack, same
+   type sizes, same spacing. No drop shadow — the border alone frames it. */
 .w-hero-demo{position:relative}
-.w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;box-shadow:var(--shadow-2);overflow:hidden}
-.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;border-bottom:1px solid var(--bdr);background:linear-gradient(180deg,var(--alt),var(--surf))}
+.w-demo-card{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;overflow:hidden}
+.w-demo-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1.25rem;border-bottom:1px solid var(--bdr);background:var(--alt)}
 .w-demo-head-txt{display:flex;align-items:baseline;gap:.5rem;min-width:0;flex-wrap:wrap}
-.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
-.w-demo-head b{font-size:.8125rem;font-weight:700;letter-spacing:-.01em;color:var(--sec)}
+.w-demo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
+.w-demo-head b{font-size:.75rem;font-weight:700;letter-spacing:-.01em;color:var(--ter)}
 .w-demo-pill{background:var(--gLite);color:var(--green);border:1px solid var(--gBdr);flex-shrink:0}
-.w-demo-body{padding:1rem}
-.w-demo-body .question-nav{gap:5px;margin-bottom:.8rem}
-.w-demo-body .qnum{width:30px;height:30px;border-width:1.5px}
-.w-demo-body .q-card{padding:.85rem 1rem;margin-bottom:.7rem;border-radius:12px;border-left-width:4px}
-.w-demo-body .q-text{font-size:.875rem;line-height:1.65}
-.w-demo-body .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:.7rem}
-.w-demo-body .opts .opt:nth-child(odd):last-child{grid-column:1/-1}
-.w-demo-body .opt{padding:.55rem .7rem;border-width:1.5px}
-.w-demo-body .letter{width:24px;height:24px;margin-right:.6rem;font-size:.75rem}
-.w-demo-body .opt-text{font-size:.84375rem}
-.w-demo-body .nav-btns{margin-top:.7rem}
-.w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.6rem}
-.w-demo-qhead .label{flex:1;min-width:0;font-size:.65rem}
+.w-demo-body{padding:1.25rem 1.35rem 1.35rem}
+.w-demo-body .question-nav{margin-bottom:1rem}
+/* flat inside the card — the outer border is the only frame */
+.w-demo-body .q-card{box-shadow:none;padding:1.15rem 1.25rem;margin-bottom:.875rem}
+.w-demo-body .nav-btns{margin-top:.875rem}
+/* Same row the real practice screen uses: question counter left, pills right */
+.w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.875rem}
+.w-demo-qhead .label{flex:1;min-width:0}
 /* clear the sticky 64px header when jumping to an anchor */
 #wFeatures,#wSample,#wHow,#wFaq{scroll-margin-top:84px}
 
-.w-section{padding:3.5rem 0}
-.w-section-head{text-align:center;max-width:600px;margin:0 auto 2.25rem}
-.w-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem}
-.w-section-head h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;font-size:1.7rem;letter-spacing:-.02em;margin-bottom:.5rem}
-.w-section-head p{font-size:.875rem;color:var(--sec);line-height:1.6}
+.w-section{padding:clamp(3rem,4.5vw,4.75rem) 0}
+.w-section-head{text-align:center;max-width:620px;margin:0 auto 2.5rem}
+.w-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem}
+/* one clear step below the hero h1, one clear step above the card headings */
+.w-section-head h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;font-size:clamp(1.5rem,2vw,2rem);letter-spacing:-.025em;line-height:1.15;margin-bottom:.55rem}
+.w-section-head p{font-size:.8125rem;color:var(--ter);line-height:1.65}
 
 /* Two wide primary columns on the left, one narrow column on the right */
 .w-feature-grid{display:grid;grid-template-columns:1.16fr 1.16fr .78fr;gap:1.1rem}
@@ -932,7 +942,7 @@ body[data-screen="app"] #appShell{display:block}
 @media(max-width:980px){.w-feature-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.w-feature-grid{grid-template-columns:1fr}}
 
-.w-sample-note{font-size:.75rem;color:var(--ter);line-height:1.6;margin-top:.9rem;padding-left:.2rem}
+.w-sample-note{font-size:.75rem;color:var(--ter);line-height:1.6;margin:.9rem 0 0;padding-left:.2rem}
 
 .w-how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:wstep}
 .w-how-step{position:relative;padding-left:2.75rem}
@@ -949,9 +959,10 @@ body[data-screen="app"] #appShell{display:block}
 .w-faq-item[open] summary::after{transform:rotate(45deg)}
 .w-faq-item p{font-size:.8125rem;color:var(--sec);line-height:1.65;margin-top:.7rem}
 
-.w-cta-band{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);border-radius:20px;padding:3rem 2rem;text-align:center;margin:0 1.75rem}
-.w-cta-band h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;color:#fff;font-size:1.7rem;letter-spacing:-.02em;margin-bottom:.6rem}
-.w-cta-band p{color:var(--navy-text);font-size:.875rem;margin-bottom:1.5rem}
+/* No side margin — the .w-container it sits in already supplies the gutter */
+.w-cta-band{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);border-radius:20px;padding:clamp(2.5rem,4vw,3.5rem) 2rem;text-align:center}
+.w-cta-band h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;color:#fff;font-size:clamp(1.5rem,2vw,2rem);letter-spacing:-.025em;margin-bottom:.6rem}
+.w-cta-band p{color:var(--navy-text);font-size:.8125rem;line-height:1.65;max-width:52ch;margin:0 auto 1.6rem}
 .w-cta-band .btn-white{width:auto;margin:0 auto;padding:.85rem 1.75rem;font-size:.9375rem}
 
 .w-footer{padding:2.5rem 0 2.5rem;border-top:1px solid var(--bdr)}
@@ -963,15 +974,19 @@ body[data-screen="app"] #appShell{display:block}
 
 @media(max-width:940px){
 .w-hero-grid{grid-template-columns:1fr;gap:2.5rem}
-.w-hero p{max-width:none}
-.w-hero-copy{padding-top:0}
+.w-hero-sub{max-width:none}
+/* stacked: no taller neighbour to fill, so restore the explicit gap */
+.w-hero-stats{margin-top:.5rem}
+.w-hero-login{margin-bottom:1.4rem}
 }
 @media(max-width:640px){
 .w-hero{padding:2.75rem 0 2.5rem}
 .w-hero-stats{gap:1.1rem 1.5rem;margin-top:1.75rem}
 .w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:100%}
-.w-demo-body{padding:.9rem}
-.w-cta-band{margin:0 1rem;padding:2.25rem 1.25rem}
+.w-demo-body{padding:1rem}
+.w-demo-head{padding:.75rem 1rem}
+.w-demo-body .q-card{padding:1rem}
+.w-cta-band{padding:2.25rem 1.25rem}
 .w-footer-inner{flex-direction:column;align-items:flex-start}
 }
 </style>
@@ -1003,8 +1018,8 @@ body[data-screen="app"] #appShell{display:block}
 
       <div class="w-hero-copy">
         <span class="pill w-hero-badge">Built from real ESAT past-paper questions</span>
-        <h1>Improve your ESAT ability with thousands of <em>realistic</em> practice questions</h1>
-        <p>An original ESAT question bank, free worked solutions to real past-paper questions, and mental maths drills — everything you need to prepare, in one place.</p>
+        <h1>Improve your ESAT ability with thousands of realistic practice questions</h1>
+        <p class="w-hero-sub">An original ESAT question bank, free worked solutions to real past-paper questions, and mental maths drills — everything you need to prepare, in one place.</p>
         <div class="w-hero-ctas">
           <button type="button" class="btn-primary" onclick="showSignupScreen()">Create your free account</button>
           <a href="#wHow" class="btn-outline">See how it works</a>
@@ -2949,8 +2964,8 @@ function wRenderQuestion(){
   const a=wAnswers[wIdx],isCorrect=a===q.ans,answered=a!==undefined;
   const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
   const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
-  /* Topic/difficulty live in the card header rather than a separate meta row — the hero card
-     column is narrower than the old full-width sample section, so the vertical space matters. */
+  /* Same header row as the real practice screen (counter left, pills right), with the topic
+     pill added — this card is the visitor's only preview of what practice actually looks like. */
   let html=`<div class="q-card"><div class="w-demo-qhead"><span class="label" style="color:var(--ter)">Question ${wIdx+1} of ${QUESTIONS.length}</span><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
   html+='<div class="opts">';
   q.opts.forEach((o,oi)=>{
