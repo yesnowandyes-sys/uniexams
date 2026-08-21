@@ -919,6 +919,21 @@ body[data-screen="app"] #appShell{display:block}
    of whitespace. It closes up under the copy instead, and the column still starts
    flush with the card so nothing here moves when a worked solution is revealed. */
 .w-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem .9rem;margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--bdr)}
+
+/* Side-by-side layout only: the copy sets ragged-left and hugs the gap, so its
+   hard right edge and the card's left edge frame the gutter as one line. Read
+   with the golden-section drop above, it lands the CTA near the eye of the
+   spiral the 1 : φ grid describes. The stats rail keeps its full-width rule —
+   it's the base the column stands on — and only its contents shift right.
+   Below 941px the card sits underneath rather than beside, so the whole thing
+   reverts to ragged-right and none of this applies. */
+@media(min-width:941px){
+.w-hero-copy{align-items:flex-end;text-align:right}
+/* the sub is width-capped at 46ch, so it needs the auto margin to sit right */
+.w-hero-sub{margin-left:auto}
+.w-hero-ctas{justify-content:flex-end}
+.w-hero-stats{width:100%;text-align:right}
+}
 .w-hero-stat b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.0625rem;font-weight:700;color:var(--sec);letter-spacing:-.02em}
 .w-hero-stat span{display:block;font-size:.65rem;color:var(--ter);font-weight:600;line-height:1.35;margin-top:2px}
 
