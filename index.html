@@ -322,65 +322,122 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 @media(max-width:860px){.hp-stat-grid{grid-template-columns:1fr 1fr}.mod-strip{flex-direction:column}}
 
 /* ═══ HOME ON A PHONE ═══
-   Same four cards, each carrying less. Desktop sizes them for a screen that has
-   height to spare; on a phone that turned Home into one card per scroll, and the
-   numbers — the whole point of the page — were the part you had to go looking
-   for. So: the suggestion rows drop their trailing detail (the count and the
-   estimate; the topic and its percentage are what you choose on), every stat
-   drops its footnote and its icon and keeps its number, and the module pills go
-   three-across instead of stacked. Everything lands above the fold on a 375×667
-   screen, which is what makes the stats glanceable again.
+   Same four cards, rearranged so the whole set fits one screen at any size: the
+   two suggestions keep their row each, the four stats go 2×2 instead of a column
+   of four, and the module pills go three-across instead of stacked. What is cut
+   is text, not size — the suggestion rows drop their trailing detail (the topic
+   and its percentage are what you choose on) and the hero drops its three status
+   chips, which the module strip at the bottom already says per subject.
+
+   The stack then fills the screen, and it is the cards that take up the slack,
+   not the gaps between them: each one grows, so the module strip lands at the
+   bottom of the screen on any phone and every card is as big as that screen can
+   afford. Type and padding scale with the height too, between a floor that fits
+   a 568px screen and a ceiling that stops a tall phone looking blown up.
+
+   dvh, not vh: 100vh on a phone counts the address bar as if it were not there,
+   which would put the module strip just below the fold.
 
    .hp-sm-hide is the general opt-out: put it on a span of copy that is only
    worth the width on a bigger screen. */
 @media(max-width:600px){
 .hp-sm-hide{display:none}
-/* No viewport-filling here. The desktop page stretches the gaps between cards so
-   the module strip lands at the bottom of the window; on a tall phone that same
-   rule pushed 90px of empty background between every card once the cards got
-   this small. The column is just a stack with a fixed gap instead — it ends
-   where it ends, and on the tallest phones that leaves ordinary empty page
-   below it rather than holes in the middle. */
-.home-page-fill{min-height:0;padding-top:14px;padding-bottom:18px}
-.home-fill{gap:11px;justify-content:flex-start}
-.home-eyebrow{font-size:.6875rem;margin-bottom:10px}
+.home-page-fill{min-height:calc(100dvh - var(--tbh));padding-top:clamp(9px,1.4vh,18px);padding-bottom:clamp(10px,1.6vh,20px)}
+.home-fill{gap:clamp(7px,1.2vh,15px)}
+.home-eyebrow{font-size:.6875rem;margin-bottom:clamp(7px,1.2vh,14px)}
+/* Every card takes a share of whatever the screen has left over. The suggestions
+   and the stats take twice the share of the hero and the strip, which have one
+   line of content each and go strange when they get much taller than that. */
+.home-fill>*{flex:1 1 auto}
+.home-fill>.suggest-card,.home-fill>.hp-stat-grid{flex-grow:2}
 
-/* Suggested for you */
-.suggest-card{padding:12px 13px}
-.suggest-card .na-header{margin-bottom:9px;gap:6px}
-.suggest-list{gap:8px}
-.suggest-row{gap:10px;padding:9px 10px;border-radius:10px}
-.suggest-icon{width:30px;height:30px;border-radius:8px}
-.suggest-icon svg{width:16px;height:16px}
-.suggest-title{font-size:.78125rem}
-.suggest-sub{font-size:.6875rem;margin-top:2px}
-.suggest-cta{padding:6px .7rem;font-size:.75rem;border-radius:8px}
+/* Hero */
+.perf-hero{padding:clamp(9px,1.5vh,19px) 1.05rem}
+.perf-hero-label{font-size:.6875rem}
+.perf-hero-grade{font-size:clamp(27px,4.4vh,41px)}
+.perf-hero-delta{font-size:.75rem}
+.perf-hero .perf-hero-cta.btn-primary{padding:clamp(9px,1.3vh,15px) 1.2rem;font-size:.875rem}
 
-/* Stats: 2×2, label over number, nothing else */
-.hp-stat-grid{grid-template-columns:1fr 1fr;gap:8px}
-.hp-stat{padding:9px 11px;gap:2px;border-radius:11px}
-.hp-stat-icon{display:none}
-.hp-stat-lbl{font-size:.5625rem;letter-spacing:.04em}
-.hp-stat-num{font-size:22px}
-.hp-stat-num span{font-size:.8125rem}
-.hp-stat-sub{display:none}
+/* Suggested for you. The title is sized off the width, not the height: it is the
+   one line here long enough to wrap, and wrapping costs more than the two points
+   of type it would save. */
+.suggest-card{display:flex;flex-direction:column;padding:clamp(10px,1.5vh,18px) .9rem}
+.suggest-card .na-header{margin-bottom:clamp(7px,1.2vh,14px);gap:6px}
+.suggest-list{flex:1;gap:clamp(7px,1vh,12px)}
+.suggest-row{flex:1;gap:9px;padding:clamp(7px,1.2vh,15px) .7rem;border-radius:11px}
+.suggest-icon{width:clamp(28px,3.8vh,38px);height:clamp(28px,3.8vh,38px);border-radius:9px}
+.suggest-title{font-size:clamp(.72rem,3.3vw,.8125rem)}
+.suggest-sub{font-size:clamp(.6875rem,3vw,.75rem);margin-top:2px}
+.suggest-cta{padding:clamp(6px,.9vh,10px) .8rem;font-size:.78125rem;border-radius:9px}
+/* On the narrowest phones still in use the icon is the width that decides
+   whether the topic wraps to a second line, and the row is better off without
+   it: the warning triangle repeats what "your weakest topic" already says. */
+@media(max-width:345px){.suggest-icon{display:none}}
+
+/* Stats: 2×2, each cell centred on its number so the extra height reads as room
+   around it rather than a gap underneath. */
+.hp-stat-grid{grid-template-columns:1fr 1fr;gap:clamp(7px,1.1vh,13px);align-content:stretch}
+.hp-stat{justify-content:center;gap:clamp(2px,.5vh,6px);padding:clamp(7px,1.2vh,15px) .8rem;border-radius:12px}
+.hp-stat-top{gap:6px}
+.hp-stat-icon{width:clamp(20px,2.6vh,24px);height:clamp(20px,2.6vh,24px);border-radius:6px}
+.hp-stat-icon svg{width:13px;height:13px}
+.hp-stat-lbl{font-size:.625rem;letter-spacing:.03em}
+.hp-stat-num{font-size:clamp(21px,3.2vh,30px)}
+.hp-stat-num span{font-size:.875rem}
+.hp-stat-sub{font-size:.625rem}
 
 /* Modules: three across — name, status, grade in a column each */
-.mod-strip{flex-direction:row;gap:8px}
-.mod-pill{flex-direction:column;align-items:center;text-align:center;gap:1px;padding:8px 4px;border-radius:10px}
-.mod-pill-dot{width:6px;height:6px;margin-bottom:3px}
+.mod-strip{flex-direction:row;gap:clamp(7px,1.1vh,13px)}
+.mod-pill{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1px;padding:clamp(7px,1.1vh,13px) 4px;border-radius:11px}
+.mod-pill-dot{width:7px;height:7px;margin-bottom:2px}
 .mod-pill-body{flex:0 0 auto}
-.mod-pill-name{font-size:.6875rem}
-.mod-pill-status{font-size:.5625rem;margin-top:1px}
-.mod-pill-grade{font-size:.9375rem;margin-top:2px}
+.mod-pill-name{font-size:clamp(.6875rem,3vw,.75rem)}
+.mod-pill-status{font-size:clamp(.5938rem,2.6vw,.625rem);margin-top:1px}
+.mod-pill-grade{font-size:clamp(.9375rem,2.4vh,1.0625rem);margin-top:2px}
 }
-/* A tall phone has room to spare once the cards are this size, so the stats get
-   their footnotes back — the exam date, the best streak, the time trend. It is
-   the height that decides, not the width: they are what gets cut first when the
-   whole stack has to fit a 667px screen. */
-@media(max-width:600px) and (min-height:760px){
-.hp-stat{gap:3px}
-.hp-stat-sub{display:block;font-size:.625rem}
+/* ── The squeeze: phones 700px tall and under ──
+   A 4.7" phone — and any phone once Safari's bars are showing — has 100px less
+   to work with than the clamps above assume, and the stack has to lose it
+   somewhere. It comes off the parts that are not the numbers: the stat icons and
+   footnotes go, the type steps down, and the padding tightens. These are floors,
+   not fixed sizes — the cards still grow to fill whatever the screen turns out
+   to have, which is what the toolbars collapsing gives back the moment you
+   scroll. Height decides all of it, not width. */
+@media(max-width:600px) and (max-height:700px){
+.home-page-fill{padding-top:clamp(7px,1.3vh,9px);padding-bottom:clamp(8px,1.4vh,10px)}
+.home-fill{gap:clamp(6px,1.1vh,8px)}
+.home-eyebrow{font-size:.625rem;margin-bottom:clamp(5px,1vh,8px)}
+
+.perf-hero{padding:clamp(6px,1.3vh,9px) .85rem}
+.perf-hero-label{font-size:.625rem}
+.perf-hero-grade{font-size:clamp(24px,4.4vh,29px)}
+.perf-hero-delta{font-size:.6875rem}
+.perf-hero .perf-hero-cta.btn-primary{padding:clamp(7px,1.4vh,10px) 1rem;font-size:.8125rem}
+
+.suggest-card{padding:clamp(7px,1.4vh,10px) .8rem}
+.suggest-card .na-header{margin-bottom:clamp(5px,1vh,7px)}
+.suggest-card .section-title{font-size:.8125rem}
+.suggest-list{gap:clamp(5px,1vh,7px)}
+.suggest-row{padding:clamp(4px,1vh,7px) .6rem}
+.suggest-icon{width:clamp(24px,4.4vh,30px);height:clamp(24px,4.4vh,30px)}
+.suggest-title{font-size:clamp(.6875rem,3.2vw,.75rem)}
+.suggest-sub{font-size:clamp(.625rem,2.9vw,.6875rem);margin-top:1px}
+.suggest-cta{padding:clamp(5px,.9vh,7px) .7rem;font-size:.75rem}
+
+.hp-stat-grid{gap:clamp(5px,1vh,7px)}
+.hp-stat{padding:clamp(4px,1vh,7px) .7rem;gap:1px}
+.hp-stat-icon{display:none}
+.hp-stat-lbl{font-size:.5625rem}
+.hp-stat-num{font-size:clamp(18px,3.4vh,23px)}
+.hp-stat-num span{font-size:.75rem}
+.hp-stat-sub{display:none}
+
+.mod-strip{gap:clamp(5px,1vh,7px)}
+.mod-pill{padding:clamp(4px,1vh,7px) 3px}
+.mod-pill-dot{margin-bottom:1px}
+.mod-pill-name{font-size:clamp(.6563rem,2.9vw,.6875rem)}
+.mod-pill-status{font-size:.5625rem}
+.mod-pill-grade{font-size:clamp(.8125rem,2.4vh,.9375rem);margin-top:1px}
 }
 
 /* ═══ ANALYTICS ═══ */
@@ -646,6 +703,16 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .field input[type=text],.field input[type=email],.field input[type=password],.field input[type=date],.field input[type=time],.field input[type=number],.field select{font-family:inherit;font-size:.8125rem;color:var(--text);background:var(--surf);border:1px solid var(--bdr);border-radius:9px;padding:.65rem .8rem;outline:none;transition:border-color .12s,box-shadow .12s;width:100%}
 .field input:focus,.field select:focus{border-color:var(--mid);box-shadow:0 0 0 3px var(--lite)}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+/* iOS Safari zooms the page in when you focus a field whose text is under 16px,
+   and it does not zoom back out when you leave it — which is what tapping the
+   email box on the login screen did. 16px is the threshold, so every control on
+   a touch screen gets exactly that; the compact 13px stays on pointer devices.
+   The alternative fix, maximum-scale=1 on the viewport meta, would also stop
+   anyone pinch-zooming the page on purpose. */
+@media(pointer:coarse){
+input,select,textarea{font-size:16px}
+.field input[type=text],.field input[type=email],.field input[type=password],.field input[type=date],.field input[type=time],.field input[type=number],.field select{font-size:16px;padding:.6rem .75rem}
+}
 
 .toggle{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0}
 .toggle input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
