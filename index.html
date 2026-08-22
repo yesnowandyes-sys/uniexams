@@ -22,7 +22,7 @@
   --purp:#7C3AED;--pLite:#F5F3FF;--pBdr:#DDD6FE;
   --subjBio:#15803D;
   --navy:#1E293B;--navy2:#2A3B52;--navy3:#3A4C66;--navy-text:#AAB4C4;--navy-dim:#7C879C;
-  --sbw:236px;--sbw-c:76px;
+  --sbw:236px;
   --shadow-1:0 1px 2px rgba(20,25,50,.04),0 1px 6px rgba(20,25,50,.04);
   --shadow-2:0 6px 16px rgba(20,25,50,.10);
   --shadow-3:0 10px 26px rgba(20,25,50,.20),0 2px 8px rgba(20,25,50,.14);
@@ -65,6 +65,13 @@ button{font-family:inherit}
 /* ═══ MAIN / TOPBAR ═══ */
 .app-main{margin-left:var(--sbw);min-height:100vh;background:var(--bg)}
 .topbar{height:64px;background:var(--surf);border-bottom:1px solid var(--bdr);display:flex;align-items:center;padding:0 1.75rem;gap:14px;position:sticky;top:0;z-index:100}
+/* Menu button and scrim exist only for the off-canvas drawer below 860px — see
+   the responsive block near the end of the app styles. Qualified as
+   .icon-btn.nav-toggle because it borrows the .icon-btn look, and that rule's
+   own display:flex is declared below this one. */
+.icon-btn.nav-toggle{display:none;margin-left:-2px}
+.nav-scrim{display:none;position:fixed;inset:0;z-index:150;background:rgba(15,23,42,.48);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .26s ease}
+body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .topbar-title{font-size:1.0625rem;font-weight:800;letter-spacing:-.015em;margin-right:auto}
 .topbar-search{display:flex;align-items:center;gap:8px;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:0 12px;width:230px;height:38px;color:var(--ter);flex-shrink:0}
 .topbar-search input{border:none;background:none;outline:none;font-family:inherit;font-size:.8125rem;color:var(--text);width:100%;height:100%}
@@ -676,22 +683,46 @@ button{font-family:inherit}
 
 /* Responsive */
 @media(max-width:860px){
-:root{--sbw:var(--sbw-c)}
-.sb-brand-txt,.sb-item span,.sb-user-info,.sb-label,.sb-tag{display:none}
-.sb-item{justify-content:center;padding:.65rem}
-.sb-brand{justify-content:center;padding:0}
-.sb-user{justify-content:center}
-.topbar{padding:0 1rem}.topbar-search{display:none}
+/* The sidebar becomes an off-canvas drawer. It used to collapse to a 76px rail
+   of unlabelled icons, which on a phone spent a fifth of the screen on glyphs
+   nobody could read and squeezed every page into the strip that was left.
+   Hidden by default instead: the content gets the full width, and the topbar's
+   menu button slides the sidebar in over a scrim — with its labels, section
+   headings and user block intact, so navigating is easier here than the rail
+   ever made it. */
+/* visibility, not just the transform, so a closed drawer is out of the tab
+   order and off the accessibility tree. Its timing is the 0s-with-a-delay
+   idiom: on the way in it flips to visible immediately (otherwise the panel
+   stays invisible for the whole slide and pops in at the end, and focus can't
+   be moved into it); on the way out it waits for the slide to finish. */
+.sidebar{width:min(272px,80vw);transform:translateX(-100%);visibility:hidden;transition:transform .26s cubic-bezier(.4,0,.2,1),visibility 0s linear .26s}
+body.nav-open .sidebar{transform:none;visibility:visible;box-shadow:var(--shadow-3);transition:transform .26s cubic-bezier(.4,0,.2,1),visibility 0s}
+/* Nothing behind the scrim should scroll while the drawer is over it */
+body.nav-open{overflow:hidden}
+.nav-scrim{display:block}
+.icon-btn.nav-toggle{display:flex}
+.app-main{margin-left:0}
+.topbar{padding:0 1rem;gap:10px}.topbar-search{display:none}
 .page{padding:1.25rem 1rem 2rem}
 .mini-grid{grid-template-columns:1fr}
 .focus-list{flex-direction:column}
 .practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
+}
+/* Users who ask for less motion get the drawer's arrival without the slide.
+   Both selectors: a transition is read off the state being moved *to*, so the
+   open rule has to be silenced too or opening would still animate. */
+@media(prefers-reduced-motion:reduce){
+.sidebar,body.nav-open .sidebar{transition:none}
+.nav-scrim{transition:none}
 }
 @media(max-width:480px){
 .page{padding:1rem .75rem 2rem}.greeting h1{font-size:1.75rem}
 .days-num,.streak-num{font-size:2rem}
 .topbar-title{font-size:.9375rem}
 .qnum{width:32px;height:32px}
+/* The streak pill and the bell are the two things the topbar can spare once the
+   menu button is in it — the streak is on the Home page anyway. */
+.topbar-streak,.topbar-bell{display:none}
 }
 
 /* ═══ MENTAL MATHS ═══ */
@@ -943,7 +974,13 @@ body[data-screen="app"] #appShell{display:block}
 .w-demo-body .nav-btns{margin-top:var(--g2)}
 /* Same row the real practice screen uses: question counter left, pills right */
 .w-demo-qhead{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
-.w-demo-qhead .label{flex:1;min-width:0}
+/* Grows to push the pills right, but never shrinks — it used to be allowed to
+   collapse below its own text, which slid the counter out under the topic pill. */
+.w-demo-qhead .label{flex:1 0 auto;white-space:nowrap}
+/* The topic is the one part of the row that gives way when the row is too
+   narrow for all three, so a long topic name ellipsises instead of overflowing. */
+.w-demo-qhead .w-topic-pill{display:inline-block;box-sizing:border-box;min-width:0;max-width:100%;line-height:22px;overflow:hidden;text-overflow:ellipsis}
+.w-qcount-short{display:none}
 /* clear the sticky 60px header when jumping to an anchor */
 #wFeatures,#wSample,#wHow,#wFaq{scroll-margin-top:76px}
 
@@ -1025,7 +1062,10 @@ body[data-screen="app"] #appShell{display:block}
 @media(max-width:940px){
 /* stacked: the hero is taller than the screen on its own, so drop the fill */
 .w-hero{display:block;min-height:0;padding:1.75rem 0 2.5rem}
-.w-hero-grid{grid-template-columns:1fr;gap:2.5rem}
+/* minmax(0,…), not a bare 1fr: the card's number strip is a nowrap row on a
+   phone, and an auto minimum would let its full width push the column — and
+   the page — wider than the screen instead of scrolling inside the card. */
+.w-hero-grid{grid-template-columns:minmax(0,1fr);gap:2.5rem}
 .w-hero-sub{max-width:none}
 .w-hero-stats{margin-top:2.1rem}
 }
@@ -1033,10 +1073,57 @@ body[data-screen="app"] #appShell{display:block}
 .w-hero{padding:2.75rem 0 2.5rem}
 .w-hero-stats{gap:1.1rem 1.5rem;margin-top:1.9rem}
 .w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:100%}
-.w-demo-body{padding:1rem}
-.w-demo-body .q-card{padding:1rem}
 .w-cta-band{padding:2.25rem 1.25rem}
 .w-footer-inner{flex-direction:column;align-items:flex-start}
+
+/* ── The sample card on a phone ───────────────────────────────────────────
+   At 375px the card was 680px tall — taller than the screen — and most of
+   that was frame rather than content: a two-row grid of question numbers, a
+   bordered question box nested inside the bordered card, and five answer
+   rows padded for a mouse. The type sizes are the ones that survive; what
+   goes is the packaging around them. */
+
+/* The counter's long form doesn't leave room for the topic pill here. */
+.w-qcount-full{display:none}
+.w-qcount-short{display:inline}
+
+/* One row that scrolls, not two rows that stack: the strip is a way back to a
+   question you've seen, and it shouldn't cost a fifth of the card to offer it.
+   wRenderNav keeps the current number scrolled into view. */
+.w-demo-body .question-nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:5px;padding-bottom:4px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.w-demo-body .question-nav .qnum{flex-shrink:0}
+.w-demo-body .question-nav::-webkit-scrollbar{height:4px}
+.w-demo-body .question-nav::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
+
+/* Drop the inner box's own frame — it repeats the card's, and on a narrow
+   screen the two nested paddings cost ~35px of the line the question is set
+   on. The blue rule stays as the accent; the rest of the border goes. */
+.w-demo-body{padding:.85rem .8rem}
+.w-demo-body .question-nav{margin-bottom:.9rem}
+.w-demo-body .q-card{background:none;border:none;border-left:3px solid var(--blue);border-radius:0;box-shadow:none;padding:0 0 0 .7rem;margin-bottom:1rem}
+.w-demo-body .q-card .q-text{line-height:1.6}
+.w-demo-body .w-demo-qhead{gap:5px;margin-bottom:.5rem}
+
+/* Sized for a thumb rather than a cursor: ~46px tall, which is still above the
+   44px touch target, with the air taken out of the padding instead of the type. */
+.w-demo-body .opts{gap:7px}
+.w-demo-body .opt{padding:.55rem .7rem}
+/* "[1]…[5]" are shortcuts for a keyboard this screen doesn't have */
+.w-demo-body .kbd-hint{display:none}
+.w-demo-body .opt .letter{width:24px;height:24px;font-size:.75rem;margin-right:.65rem}
+.w-demo-body .nav-btns{margin-top:.9rem}
+.w-demo-body .nav-btn{flex:1;justify-content:center;padding:9px 12px}
+.w-demo-body .soln-toggle{padding:.6rem .75rem;gap:6px}
+.w-demo-body .soln-content{padding:.9rem .85rem}
+}
+/* Below the iPhone SE's width there's no longer room for the counter and both
+   pills on one line, and wrapping strands the difficulty pill on a line of its
+   own. Hold the row on one line instead and let the topic — the only part with
+   a variable length — ellipsise; short topic names are unaffected either way. */
+@media(max-width:360px){
+.w-demo-body{padding:.75rem .65rem}
+.w-demo-body .qnum{width:29px;height:29px}
+.w-demo-body .w-demo-qhead{flex-wrap:nowrap}
 }
 </style>
 </head>
@@ -1277,8 +1364,11 @@ body[data-screen="app"] #appShell{display:block}
 
 <div class="app-shell" id="appShell">
 
+<!-- Closes the mobile drawer on a tap outside it; inert on wider screens -->
+<div class="nav-scrim" id="navScrim" onclick="closeNav()" aria-hidden="true"></div>
+
 <!-- ═══ SIDEBAR ═══ -->
-<aside class="sidebar">
+<aside class="sidebar" id="appSidebar">
   <a class="sb-brand" href="#">
     <div class="sb-brand-icon"><span>U</span></div>
     <div class="sb-brand-txt"><b>UNI</b><em>Exams</em></div>
@@ -1345,13 +1435,16 @@ body[data-screen="app"] #appShell{display:block}
 <!-- ═══ MAIN ═══ -->
 <div class="app-main">
   <header class="topbar">
+    <button type="button" class="icon-btn nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" aria-controls="appSidebar">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+    </button>
     <div class="topbar-title" id="topbarTitle">Home</div>
     <div class="topbar-search">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
       <input type="text" placeholder="Search topics, questions...">
     </div>
     <div class="topbar-streak"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg><span>12</span></div>
-    <button class="icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg><div class="icon-dot"></div></button>
+    <button class="icon-btn topbar-bell" aria-label="Notifications"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022 23.848 23.848 0 0 0 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a2.875 2.875 0 0 1-5.714 0"/></svg><div class="icon-dot"></div></button>
     <div class="topbar-avatar" onclick="nav(document.getElementById('navSettings'),'settings','Settings')" role="button" tabindex="0" aria-label="Open Settings" onkeydown="if(event.key==='Enter')this.click()" style="cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.6"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg></div>
   </header>
 
@@ -2561,6 +2654,7 @@ async function handleLogin(event){
 async function handleLogout(){
   const refreshToken=getRefreshToken();
   clearTokens();
+  closeNav();
   showWelcome();
   const errorBox=document.getElementById('loginError');
   if(errorBox)errorBox.classList.remove('show');
@@ -2652,7 +2746,38 @@ async function initAuth(){
   }
 }
 
+/* ── Mobile nav drawer ────────────────────────────────────────────────────
+   Below 860px the sidebar is off-canvas (see the responsive CSS). Everything
+   here is a no-op on wider screens, where the sidebar is simply always there:
+   the class does nothing to it and the menu button isn't rendered. */
+const navDrawerMq=window.matchMedia('(max-width:860px)');
+function setNavOpen(open){
+  const wasOpen=document.body.classList.contains('nav-open');
+  document.body.classList.toggle('nav-open',open);
+  const btn=document.getElementById('navToggle');
+  if(btn)btn.setAttribute('aria-expanded',open?'true':'false');
+  /* Follow the drawer with focus so a keyboard or screen-reader user lands in
+     it, and hand focus back to the button it came from on the way out —
+     including when the way out was a tap on the scrim, which leaves focus on
+     <body> rather than in the drawer. Skipped when the drawer closed because
+     the screen grew past the breakpoint: nobody asked for focus to move then. */
+  if(open){
+    const first=document.querySelector('.sidebar .sb-item.active')||document.querySelector('.sidebar .sb-item');
+    if(first)first.focus({preventScroll:true});
+  }else if(wasOpen&&btn&&navDrawerMq.matches){
+    const a=document.activeElement;
+    if(!a||a===document.body||a.closest('.sidebar'))btn.focus({preventScroll:true});
+  }
+}
+function toggleNav(){setNavOpen(!document.body.classList.contains('nav-open'))}
+function closeNav(){if(document.body.classList.contains('nav-open'))setNavOpen(false)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
+/* Growing past the breakpoint puts the sidebar back on screen for good; the
+   leftover class would otherwise keep the scrim and the body scroll-lock on. */
+navDrawerMq.addEventListener('change',e=>{if(!e.matches)closeNav()});
+
 function nav(el,view,title){
+  closeNav();
   document.querySelectorAll('.sb-item').forEach(i=>{i.classList.remove('active');i.removeAttribute('aria-current')});
   el.classList.add('active');
   el.setAttribute('aria-current','page');
@@ -3001,6 +3126,13 @@ function wRenderNav(){
     b.onclick=()=>{wIdx=i;wRender()};
     navEl.appendChild(b);
   });
+  /* On a phone the strip is one scrolling row, so Prev/Next can walk the current
+     question off the end of it. Centre it when that happens. No-op on wider
+     screens, where the strip wraps and never overflows. */
+  if(navEl.scrollWidth>navEl.clientWidth){
+    const cur=navEl.querySelector('.qnum.cur');
+    if(cur)navEl.scrollTo({left:Math.max(0,cur.offsetLeft-(navEl.clientWidth-cur.offsetWidth)/2),behavior:'smooth'});
+  }
 }
 
 function wRenderQuestion(){
@@ -3010,7 +3142,11 @@ function wRenderQuestion(){
   const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
   /* Same header row as the real practice screen (counter left, pills right), with the topic
      pill added — this card is the visitor's only preview of what practice actually looks like. */
-  let html=`<div class="q-card"><div class="w-demo-qhead"><span class="label" style="color:var(--ter)">Question ${wIdx+1} of ${QUESTIONS.length}</span><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
+  /* Two spellings of the counter, one shown at a time (see .w-qcount-* in the CSS):
+     the long one everywhere it fits, and "1 / 10" on a phone, where the full
+     wording pushed the topic pill off the edge of the card. */
+  const counter=`<span class="label" style="color:var(--ter)"><span class="w-qcount-full">Question ${wIdx+1} of ${QUESTIONS.length}</span><span class="w-qcount-short">${wIdx+1} / ${QUESTIONS.length}</span></span>`;
+  let html=`<div class="q-card"><div class="w-demo-qhead">${counter}<span class="pill w-topic-pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
   html+='<div class="opts">';
   q.opts.forEach((o,oi)=>{
     let cls='opt';if(answered)cls+=' answered';
