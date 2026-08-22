@@ -506,6 +506,28 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .lb-code-box div b{font-family:'JetBrains Mono',monospace;font-size:.9375rem;letter-spacing:.03em;color:var(--text)}
 .lb-copy-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:8px;border:1px solid var(--liteb);background:var(--surf);color:var(--mid);font-size:.75rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;flex-shrink:0}
 .lb-copy-btn:hover{background:var(--lite)}
+/* ── Confirm dialog (ending a practice session) ──
+   The modal overlay's timing and scrim, but no head/body split and no close X:
+   a question with two answers, both of them buttons, so there is no way to
+   dismiss it by accident and no ambiguity about which one loses the session. */
+.confirm-overlay{position:fixed;inset:0;background:rgba(15,20,35,.5);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:1100;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.confirm-overlay.open{opacity:1;pointer-events:auto}
+.confirm-card{background:var(--surf);border-radius:16px;box-shadow:var(--shadow-3);width:100%;max-width:380px;padding:1.375rem 1.375rem 1.25rem;transform:translateY(10px) scale(.98);transition:transform .18s ease}
+.confirm-overlay.open .confirm-card{transform:none}
+.confirm-card h3{font-size:1.0625rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.4rem}
+.confirm-card p{font-size:.875rem;color:var(--sec);line-height:1.6;margin-bottom:1.25rem}
+.confirm-actions{display:flex;gap:10px}
+.confirm-actions button{flex:1;min-height:44px;padding:.6rem 1rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:.875rem;font-weight:700;cursor:pointer;transition:background .12s,filter .12s,transform .1s}
+.confirm-actions button:active{transform:scale(.97)}
+/* Staying is the safe answer, so it is the solid one; ending is the outline. */
+.confirm-stay{border:none;background:var(--mid);color:#fff}
+.confirm-stay:hover{filter:brightness(1.07)}
+.confirm-end{border:1px solid var(--rBdr);background:var(--rLite);color:var(--red)}
+.confirm-end:hover{filter:brightness(.97)}
+@media(prefers-reduced-motion:reduce){
+.confirm-overlay,.confirm-card{transition:none}
+}
+
 .lb-modal-search{display:flex;align-items:center;gap:8px;background:var(--alt);border:1px solid var(--bdr);border-radius:9px;padding:0 12px;height:40px;color:var(--ter);margin-bottom:1rem}
 .lb-modal-search input{border:none;background:none;outline:none;font-family:inherit;font-size:.8125rem;color:var(--text);width:100%;height:100%}
 .lb-modal-search input::placeholder{color:var(--ter)}
@@ -814,8 +836,14 @@ body.nav-open{overflow:hidden}
 .practice-wrap .soln-toggle,.practice-wrap .soln-toggle.open{position:fixed;left:0;right:0;bottom:calc(var(--pracbar) + env(safe-area-inset-bottom,0px));z-index:91;margin:0;min-height:47px;padding:.7rem .85rem;gap:7px;border:none;border-top:1px solid var(--liteb);border-radius:0;background:var(--lite);color:var(--mid);font-weight:600}
 .practice-wrap .result-pill{font-size:.6875rem;padding:2px 6px}
 /* the panel is on its own now rather than hanging off the button, so it gets its
-   border and its corners back */
-.practice-wrap .soln-content{padding:.9rem 1rem;border:1px solid var(--liteb);border-radius:9px;scroll-margin-top:74px;scroll-margin-bottom:calc(var(--pracbar) + var(--solnbar) + 12px)}
+   border and its corners back.
+
+   The margin below it is scrolling room, not spacing: to lift the end of the
+   working clear of the two fixed bars the page has to have that much left to
+   scroll, and on iOS it needs enough spare for the browser's own toolbars on top
+   of that. It is only in the document while a solution is open, which is exactly
+   when it is needed. */
+.practice-wrap .soln-content{padding:.9rem 1rem;margin-bottom:96px;border:1px solid var(--liteb);border-radius:9px;scroll-margin-top:74px;scroll-margin-bottom:calc(var(--pracbar) + var(--solnbar) + 12px)}
 .practice-wrap .soln-text{line-height:1.75}
 
 /* ── Previous / Next, never below the fold ── */
@@ -1525,6 +1553,20 @@ body[data-screen="app"] #appShell{display:block}
 <!-- Closes the mobile drawer on a tap outside it; inert on wider screens -->
 <div class="nav-scrim" id="navScrim" onclick="closeNav()" aria-hidden="true"></div>
 
+<!-- Leaving a session throws the answers away, and on a phone the way out is a
+     small icon button next to a strip of numbers you tap all the time. Shared by
+     the Practice and Past Papers runners; see pracAskEnd(). -->
+<div class="confirm-overlay" id="confirmOverlay" onclick="if(event.target===this)closeConfirm()">
+  <div class="confirm-card" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmBody">
+    <h3 id="confirmTitle">End this session?</h3>
+    <p id="confirmBody"></p>
+    <div class="confirm-actions">
+      <button class="confirm-stay" id="confirmStay" onclick="closeConfirm()">Keep going</button>
+      <button class="confirm-end" id="confirmEnd" onclick="confirmEndSession()">End session</button>
+    </div>
+  </div>
+</div>
+
 <!-- ═══ SIDEBAR ═══ -->
 <aside class="sidebar" id="appSidebar">
   <a class="sb-brand" href="#">
@@ -1767,7 +1809,7 @@ body[data-screen="app"] #appShell{display:block}
            stacks and the sidebar is pulled above the question, the back button and
            the question strip still come first. -->
       <div class="prac-head">
-        <button class="nav-btn prac-back" onclick="pracEndSession()" aria-label="Back to setup"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to setup</span></button>
+        <button class="nav-btn prac-back" onclick="pracAskEnd()" aria-label="Back to setup"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to setup</span></button>
         <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
         <button class="qnav-toggle" id="qNavToggle" type="button" onclick="toggleQNav()">
           <span id="qNavToggleLabel">Show all</span>
@@ -1799,7 +1841,7 @@ body[data-screen="app"] #appShell{display:block}
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
             </div>
           </div>
-          <button class="sb-btn" onclick="pracEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
+          <button class="sb-btn" onclick="pracAskEnd()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
         </div>
       </div>
     </div>
@@ -1913,7 +1955,7 @@ body[data-screen="app"] #appShell{display:block}
     <!-- Practice runner (same interface as the Practice page) -->
     <div class="practice-wrap" id="ppRunner" style="display:none">
       <div class="pp-runner-head">
-        <button class="nav-btn prac-back" onclick="ppEndSession()" aria-label="Back to Past Papers"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to Past Papers</span></button>
+        <button class="nav-btn prac-back" onclick="pracAskEnd('pp')" aria-label="Back to Past Papers"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to Past Papers</span></button>
         <span class="pp-runner-title" id="ppRunnerTitle"></span>
       </div>
       <div class="prac-head">
@@ -1948,7 +1990,7 @@ body[data-screen="app"] #appShell{display:block}
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
             </div>
           </div>
-          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="ppEndSession()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
+          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="pracAskEnd('pp')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End session</button>
         </div>
       </div>
     </div>
@@ -3024,6 +3066,45 @@ function qnavScrollCurrent(navEl){
    and a smooth scroll for hiding a solution, where you are moving within the
    same question and the motion is what says where you went. */
 const pracCompact=()=>window.matchMedia('(max-width:860px)').matches;
+
+/* ── Confirm before ending a session ──
+   Practice and Past Papers both throw the session's answers away on the way out,
+   and on a phone the way out is a small icon button sitting right beside a strip
+   of numbers you tap all the time. So ask, every time a runner is open — the
+   message carries the progress, so what saying yes costs is on the screen rather
+   than in your memory. Mental Maths is deliberately not wired up here: it hands
+   you a summary instead of discarding, so there is nothing to warn about. */
+let confirmEndAction=null,confirmReturnFocus=null;
+const confirmIsOpen=()=>document.getElementById('confirmOverlay').classList.contains('open');
+
+function pracAskEnd(kind){
+  const s=kind==='pp'
+    ?{done:Object.keys(ppAnswers).length,total:ppQuestions.length,back:'the paper list',go:ppEndSession}
+    :{done:Object.keys(answers).length,total:PRACTICE_QUESTIONS.length,back:'the setup screen',go:pracEndSession};
+  confirmEndAction=s.go;
+  document.getElementById('confirmBody').textContent=s.done
+    ?`You've answered ${s.done} of ${s.total}. Ending now discards those answers and takes you back to ${s.back}.`
+    :`This set of questions will be dropped and you'll go back to ${s.back}.`;
+  const ov=document.getElementById('confirmOverlay');
+  confirmReturnFocus=document.activeElement;
+  ov.classList.add('open');
+  /* Focus lands on "Keep going" — the answer that changes nothing. */
+  document.getElementById('confirmStay').focus();
+}
+function closeConfirm(){
+  document.getElementById('confirmOverlay').classList.remove('open');
+  confirmEndAction=null;
+  if(confirmReturnFocus&&confirmReturnFocus.focus)confirmReturnFocus.focus();
+  confirmReturnFocus=null;
+}
+function confirmEndSession(){
+  const go=confirmEndAction;
+  closeConfirm();
+  if(go)go();
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&confirmIsOpen()){e.preventDefault();closeConfirm()}
+});
 /* The reveal button is fixed above the nav bar on a phone, so the column has to
    reserve a row for it — but only once there is one to reserve for. */
 function pracMarkRevealed(area,answered){
@@ -3037,13 +3118,22 @@ function pracScrollToSolution(areaId){
   if(!pracCompact())return;
   const el=document.querySelector('#'+areaId+' .soln-content');
   if(!el)return;
-  /* scroll-margin keeps the panel clear of the sticky topbar above and the two
-     fixed bars below, so "end" lands it fully in view rather than under them.
-     A solution too tall to fit at all is aligned to its top instead — the start
-     of the working is the part you want first. */
+  /* scroll-margin is the clearance the panel needs: the sticky topbar above it,
+     the two fixed bars below it.
+
+     visualViewport rather than innerHeight, and the scroll worked out by hand
+     rather than scrollIntoView, because on iOS the layout viewport carries on
+     behind the browser's own toolbars. innerHeight counts that hidden strip, so
+     "the panel fits" and "its bottom is on screen" both came out optimistic and
+     the last couple of lines of the working sat underneath the toolbar. */
   const cs=getComputedStyle(el),mt=parseFloat(cs.scrollMarginTop)||0,mb=parseFloat(cs.scrollMarginBottom)||0;
-  const fits=el.getBoundingClientRect().height<=window.innerHeight-mt-mb;
-  el.scrollIntoView({block:fits?'end':'start',behavior:'smooth'});
+  const vh=(window.visualViewport&&window.visualViewport.height)||window.innerHeight;
+  const r=el.getBoundingClientRect(),y=window.scrollY;
+  /* Bottom-aligned, so what you land on is the end of the working. When the
+     solution is too long to fit whole, the question above it is what gives way —
+     start at the top of the solution and read down. */
+  const top=r.height<=vh-mt-mb ? y+r.bottom+mb-vh : y+r.top-mt;
+  window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
 }
 
 function toggleQNav(){qNavCollapsed=!qNavCollapsed;renderNav();qnavScrollCurrent(document.getElementById('qNav'))}
@@ -3321,6 +3411,8 @@ function ppEndSession(){
 
 document.addEventListener('keydown',e=>{
   if(!document.getElementById('view-pastpapers').classList.contains('active'))return;
+  /* the confirm dialog is over the question — don't let its keys reach it */
+  if(confirmIsOpen())return;
   if(document.getElementById('ppRunner').style.display==='none')return;
   const t=e.target;if(['SELECT','INPUT','TEXTAREA'].includes(t.tagName))return;
   const q=ppQuestions[ppIdx];if(!q)return;
@@ -3428,6 +3520,8 @@ if(document.getElementById('wQNav'))wRender();
 
 document.addEventListener('keydown',e=>{
   if(!document.getElementById('view-practice').classList.contains('active'))return;
+  /* the confirm dialog is over the question — don't let its keys reach it */
+  if(confirmIsOpen())return;
   const runner=document.getElementById('pracRunner');
   if(!runner||runner.style.display==='none'||!PRACTICE_QUESTIONS.length)return;
   const t=e.target;if(['SELECT','INPUT','TEXTAREA'].includes(t.tagName))return;
