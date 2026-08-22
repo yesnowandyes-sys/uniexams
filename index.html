@@ -141,7 +141,22 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .perf-chip.focus{background:var(--rLite);color:var(--red)}
 .perf-chip.focus .dot{background:var(--red)}
 .perf-hero .perf-hero-cta.btn-primary{width:auto;flex-shrink:0;padding:clamp(12px, calc(.8vh + 6.8px), 14.4px) 1.9rem;font-size:.9375rem}
-@media(max-width:600px){.perf-hero{flex-direction:column;align-items:flex-start}.perf-hero .perf-hero-cta.btn-primary{width:100%}}
+/* On a phone the hero stays a single row — grade on the left, a compact Practice
+   button on the right — instead of stacking into a full-width button, and the
+   on-track/steady/needs-focus chips go entirely: the module strip at the bottom
+   of Home already says the same thing per subject. That takes the card from
+   roughly a third of the screen down to two lines. */
+@media(max-width:600px){
+.perf-hero{gap:.7rem;padding:.75rem .95rem;border-top-width:2px;flex-wrap:nowrap}
+.perf-hero>div{min-width:0}
+.perf-hero-label{font-size:.625rem}
+.perf-hero-grade-row{gap:9px;margin-top:2px}
+.perf-hero-grade{font-size:30px}
+.perf-hero-grade span{font-size:.9375rem}
+.perf-hero-delta{font-size:.6875rem}
+.perf-hero-chips{display:none}
+.perf-hero .perf-hero-cta.btn-primary{padding:.62rem 1.05rem;font-size:.8125rem}
+}
 
 /* Mini grid: Days Remaining + Daily Streak — now a secondary strip beneath the modules, so no accent slice */
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem;align-items:stretch}
@@ -305,7 +320,68 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .mod-pill-status{font-size:.75rem;font-weight:600;margin-top:3px}
 .mod-pill-grade{font-family:'JetBrains Mono',monospace;font-size:1.0625rem;font-weight:700;color:var(--text);flex-shrink:0}
 @media(max-width:860px){.hp-stat-grid{grid-template-columns:1fr 1fr}.mod-strip{flex-direction:column}}
-@media(max-width:480px){.hp-stat-grid{grid-template-columns:1fr}}
+
+/* ═══ HOME ON A PHONE ═══
+   Same four cards, each carrying less. Desktop sizes them for a screen that has
+   height to spare; on a phone that turned Home into one card per scroll, and the
+   numbers — the whole point of the page — were the part you had to go looking
+   for. So: the suggestion rows drop their trailing detail (the count and the
+   estimate; the topic and its percentage are what you choose on), every stat
+   drops its footnote and its icon and keeps its number, and the module pills go
+   three-across instead of stacked. Everything lands above the fold on a 375×667
+   screen, which is what makes the stats glanceable again.
+
+   .hp-sm-hide is the general opt-out: put it on a span of copy that is only
+   worth the width on a bigger screen. */
+@media(max-width:600px){
+.hp-sm-hide{display:none}
+/* No viewport-filling here. The desktop page stretches the gaps between cards so
+   the module strip lands at the bottom of the window; on a tall phone that same
+   rule pushed 90px of empty background between every card once the cards got
+   this small. The column is just a stack with a fixed gap instead — it ends
+   where it ends, and on the tallest phones that leaves ordinary empty page
+   below it rather than holes in the middle. */
+.home-page-fill{min-height:0;padding-top:14px;padding-bottom:18px}
+.home-fill{gap:11px;justify-content:flex-start}
+.home-eyebrow{font-size:.6875rem;margin-bottom:10px}
+
+/* Suggested for you */
+.suggest-card{padding:12px 13px}
+.suggest-card .na-header{margin-bottom:9px;gap:6px}
+.suggest-list{gap:8px}
+.suggest-row{gap:10px;padding:9px 10px;border-radius:10px}
+.suggest-icon{width:30px;height:30px;border-radius:8px}
+.suggest-icon svg{width:16px;height:16px}
+.suggest-title{font-size:.78125rem}
+.suggest-sub{font-size:.6875rem;margin-top:2px}
+.suggest-cta{padding:6px .7rem;font-size:.75rem;border-radius:8px}
+
+/* Stats: 2×2, label over number, nothing else */
+.hp-stat-grid{grid-template-columns:1fr 1fr;gap:8px}
+.hp-stat{padding:9px 11px;gap:2px;border-radius:11px}
+.hp-stat-icon{display:none}
+.hp-stat-lbl{font-size:.5625rem;letter-spacing:.04em}
+.hp-stat-num{font-size:22px}
+.hp-stat-num span{font-size:.8125rem}
+.hp-stat-sub{display:none}
+
+/* Modules: three across — name, status, grade in a column each */
+.mod-strip{flex-direction:row;gap:8px}
+.mod-pill{flex-direction:column;align-items:center;text-align:center;gap:1px;padding:8px 4px;border-radius:10px}
+.mod-pill-dot{width:6px;height:6px;margin-bottom:3px}
+.mod-pill-body{flex:0 0 auto}
+.mod-pill-name{font-size:.6875rem}
+.mod-pill-status{font-size:.5625rem;margin-top:1px}
+.mod-pill-grade{font-size:.9375rem;margin-top:2px}
+}
+/* A tall phone has room to spare once the cards are this size, so the stats get
+   their footnotes back — the exam date, the best streak, the time trend. It is
+   the height that decides, not the width: they are what gets cut first when the
+   whole stack has to fit a 667px screen. */
+@media(max-width:600px) and (min-height:760px){
+.hp-stat{gap:3px}
+.hp-stat-sub{display:block;font-size:.625rem}
+}
 
 /* ═══ ANALYTICS ═══ */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:1.1rem}
@@ -1704,7 +1780,7 @@ body[data-screen="app"] #appShell{display:block}
           <span class="label perf-hero-label">Overall Predicted Grade</span>
           <div class="perf-hero-grade-row">
             <div class="perf-hero-grade">6.5<span>/9</span></div>
-            <div class="perf-hero-delta up"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 19V5M6 11l6-6 6 6"/></svg>+0.3 this month</div>
+            <div class="perf-hero-delta up"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 19V5M6 11l6-6 6 6"/></svg>+0.3<span class="hp-sm-hide">&nbsp;this month</span></div>
           </div>
           <div class="perf-hero-chips">
             <span class="perf-chip track"><span class="dot"></span>1 on track</span>
@@ -1726,7 +1802,7 @@ body[data-screen="app"] #appShell{display:block}
             <div class="suggest-icon" style="background:var(--rLite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8"><path d="M12 9v3.75m0 3.75h.008M4.062 19.5h15.876a1.5 1.5 0 0 0 1.299-2.25L13.299 4.5a1.5 1.5 0 0 0-2.598 0L2.763 17.25a1.5 1.5 0 0 0 1.299 2.25Z"/></svg></div>
             <div class="suggest-body">
               <div class="suggest-title">Exponentials &amp; Logs · Maths 1</div>
-              <div class="suggest-sub">Your weakest topic — 47% · 12 questions, ~10 min</div>
+              <div class="suggest-sub">Your weakest topic — 47%<span class="hp-sm-hide"> · 12 questions, ~10 min</span></div>
             </div>
             <button class="btn-primary suggest-cta" onclick="nav(document.getElementById('navPractice'),'practice','Practice')">Start</button>
           </div>
@@ -1734,7 +1810,7 @@ body[data-screen="app"] #appShell{display:block}
             <div class="suggest-icon" style="background:var(--lite)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><rect x="5.25" y="3" width="13.5" height="18" rx="1.75"/><path d="M8.25 7.5h7.5"/></svg></div>
             <div class="suggest-body">
               <div class="suggest-title">Mental Maths · 2-digit × 2-digit</div>
-              <div class="suggest-sub">A regular favourite — quick 5 minute drill</div>
+              <div class="suggest-sub">Quick 5 minute drill<span class="hp-sm-hide"> — a regular favourite</span></div>
             </div>
             <button class="btn-primary suggest-cta" style="background:var(--surf);color:var(--mid);border:1px solid var(--liteb)" onclick="nav(document.getElementById('navMentalMaths'),'mentalmaths','Mental Maths')">Start</button>
           </div>
@@ -1750,7 +1826,7 @@ body[data-screen="app"] #appShell{display:block}
         </div>
         <div class="hp-stat">
           <div class="hp-stat-top"><div class="hp-stat-icon" style="background:var(--aLite)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg></div><span class="hp-stat-lbl">Streak</span></div>
-          <div class="hp-stat-num"><span id="streakNum"></span><span>days</span></div>
+          <div class="hp-stat-num"><span id="streakNum"></span><span>&nbsp;days</span></div>
           <div class="hp-stat-sub">Best: 21 days</div>
           <div id="streakBody" style="display:none"></div>
         </div>
