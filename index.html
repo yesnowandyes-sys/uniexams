@@ -32,8 +32,14 @@
   --shadow-2:0 6px 16px rgba(20,25,50,.10);
   --shadow-3:0 10px 26px rgba(20,25,50,.20),0 2px 8px rgba(20,25,50,.14);
 }
+/* Horizontal overflow is clipped at the root only. Setting overflow-x on <body>
+   as well computes its overflow-y to auto, which makes <body> a scroll container
+   that never actually scrolls — and position:sticky sticks to its nearest
+   scrolling ancestor, so every sticky in the app (the topbar, the runner's action
+   bar) silently stopped sticking. The root's overflow propagates to the viewport,
+   so clipping still happens; max-width keeps <body> itself inside it. */
 html{overflow-x:hidden}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;max-width:100vw}
 .view{display:none;opacity:1;transform:none;transition:opacity .22s ease,transform .22s ease}
 .view.active{display:block}
 .view.view-enter{opacity:0;transform:translateY(6px);transition:none}
@@ -632,10 +638,11 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .qnum.cur{border-color:var(--mid);font-weight:700;box-shadow:0 0 0 3px var(--lite)}
 .qnum.correct{background:var(--gLite);border-color:var(--green);color:var(--green)}
 .qnum.incorrect{background:var(--rLite);border-color:var(--red);color:var(--red)}
-/* The strip and its two arrows. The arrows replace the old "Show all 24" toggle:
-   that button spent a whole row of the runner on a choice between a line you
-   could scroll and a grid that pushed the question further down still. They hide
-   themselves when the whole strip already fits, and disable at each end. */
+/* The strip and its pager. The arrows replace the old "Show all 24" toggle: that
+   button spent a whole row of the runner on a choice between a line you could
+   scroll and a grid that pushed the question further down still. Both sit after
+   the strip, so the numbers themselves start flush with the question card below;
+   they hide when the whole strip already fits, and disable at each end. */
 .qnav-strip{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
 .qnav-strip .question-nav{flex:1;min-width:0}
 .qnav-arrow{width:30px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid var(--bdr);border-radius:8px;background:var(--surf);color:var(--sec);cursor:pointer;transition:background .1s,opacity .12s}
@@ -748,25 +755,30 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .kbd{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.625rem;font-weight:600;background:var(--surf);border:1px solid var(--bdr2);border-bottom:2px solid var(--bdr2);color:var(--sec);line-height:1}
 
 /* ═══ THE PRACTICE RUNNER ON A WIDE SCREEN ═══
-   The runner is a screen, not a page: it fills the window below the topbar and
-   the only thing in it that scrolls is the question. Before this it was a column
-   taller than the window, so a question of any length pushed the reveal button
-   and Previous/Next below the fold — the same complaint the phone rules further
-   down were written to answer, one breakpoint up.
+   The question column is an ordinary run of the page — card, options, solution,
+   one after another, no box of its own to scroll inside. A scroller here meant a
+   grey bar down the side of the options on any window too short for five of them,
+   which is most laptops, for content that was only a screen and a bit long.
 
-   Mental Maths keeps the ordinary page scroll: its runner is one short card with
-   nothing below it to lose. */
+   What has to stay on screen is the pair of things you press: the reveal button
+   and Previous/Next. They sit in a block at the foot of the column that sticks to
+   the bottom of the window while there is still page below it, and sits wherever
+   it falls when the whole question already fits. */
 @media(min-width:861px){
-#pracRunner,#ppRunner{height:calc(100vh - var(--tbh));display:flex;flex-direction:column;overflow:hidden;padding-top:1.25rem;padding-bottom:1.25rem}
-#pracRunner .practice-layout,#ppRunner .practice-layout{flex:1;min-height:0}
-#pracRunner .practice-main,#ppRunner .practice-main{display:flex;flex-direction:column;min-height:0}
-/* The one scroller. position:relative so pracScrollToSolution can measure the
-   panel's offsetTop against it; the negative margin lets the scrollbar sit in
-   the gutter instead of over the right edge of the cards. */
-#questionArea,#ppQuestionArea{flex:1;min-height:0;overflow-y:auto;position:relative;padding-right:12px;margin-right:-12px}
-#pracRunner .prac-actions,#ppRunner .prac-actions{padding-top:.85rem;margin-top:.55rem;border-top:1px solid var(--bdr)}
-#pracRunner .practice-sidebar,#ppRunner .practice-sidebar{overflow-y:auto;overflow-x:hidden}
-#pracRunner .practice-sidebar>.sb-btn,#ppRunner .practice-sidebar>.sb-btn{margin-bottom:0}
+/* The exit is the sidebar's End Session button, which the phone hides — so the
+   head's back button is the phone's exit and only the phone's. Gone from here,
+   the numbers start at the left edge of the question card. */
+#pracRunner .prac-back{display:none}
+/* The head sits outside .practice-layout so a phone can pull the progress card
+   above the question, which on a wide screen would otherwise let the strip run on
+   under the sidebar. Stop it where the question card stops: the sidebar's width
+   plus the column gap. */
+.prac-head,.pp-runner-head{margin-right:calc(268px + 1.5rem)}
+#pracRunner .prac-actions,#ppRunner .prac-actions{position:sticky;bottom:0;z-index:10;margin-top:.55rem;padding:.85rem 0 1rem;background:var(--bg);border-top:1px solid var(--bdr)}
+/* Progress and the shortcuts ride down with a long question rather than scrolling
+   off the top of it. align-self so the column is only as tall as its cards — a
+   stretched flex item fills the row and has nowhere to stick to. */
+#pracRunner .practice-sidebar,#ppRunner .practice-sidebar{position:sticky;top:calc(var(--tbh) + 1.25rem);align-self:flex-start}
 }
 
 /* Animations */
@@ -1842,9 +1854,11 @@ body[data-screen="app"] #appShell{display:block}
            the question strip still come first. -->
       <div class="prac-head">
         <button class="nav-btn prac-back" onclick="pracAskEnd()" aria-label="Back to setup"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to setup</span></button>
+        <!-- Both arrows after the strip, so question 1 starts flush with the left
+             edge of the question card below it. -->
         <div class="qnav-strip">
-          <button class="qnav-arrow" id="qNavPrev" type="button" onclick="qnavPage('qNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
           <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
+          <button class="qnav-arrow" id="qNavPrev" type="button" onclick="qnavPage('qNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
           <button class="qnav-arrow" id="qNavNext" type="button" onclick="qnavPage('qNav',1)" aria-label="Scroll to later questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
         </div>
       </div>
@@ -1877,7 +1891,10 @@ body[data-screen="app"] #appShell{display:block}
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">←</span><span class="kbd">→</span><span style="margin-left:4px">Navigate</span></div>
             </div>
           </div>
-          <button class="sb-btn" onclick="pracAskEnd()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75"/></svg>New session</button>
+          <!-- The way out of the runner, and the same red-tinted treatment Past
+               Papers gives it: it discards the session's answers, so it should not
+               also be the brightest button on the screen. -->
+          <button class="sb-btn" style="background:var(--rLite);color:var(--red)" onclick="pracAskEnd()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18 18 6M6 6l12 12"/></svg>End Session</button>
         </div>
       </div>
     </div>
@@ -1996,8 +2013,8 @@ body[data-screen="app"] #appShell{display:block}
       </div>
       <div class="prac-head">
         <div class="qnav-strip">
-          <button class="qnav-arrow" id="ppQNavPrev" type="button" onclick="qnavPage('ppQNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
           <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
+          <button class="qnav-arrow" id="ppQNavPrev" type="button" onclick="qnavPage('ppQNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
           <button class="qnav-arrow" id="ppQNavNext" type="button" onclick="qnavPage('ppQNav',1)" aria-label="Scroll to later questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
         </div>
       </div>
@@ -3112,9 +3129,9 @@ window.addEventListener('resize',()=>{qnavSyncArrows('qNav');qnavSyncArrows('ppQ
 
 /* ── Scroll behaviour for the runner ──
    The reveal button and Previous/Next are always on screen — fixed to the bottom
-   of the window on a phone, pinned to the foot of a window-height column on a
-   wide screen — so a press can land while the reading is scrolled anywhere.
-   Three rules put the reading where the press implies it should be:
+   of the window on a phone, stuck to it on a wide screen — so a press can land
+   while the page is scrolled anywhere. Three rules put the page where the press
+   implies it should be:
 
      new question   → back to the top, the view you get on load
      show solution  → down far enough that the whole panel is in view
@@ -3124,16 +3141,15 @@ window.addEventListener('resize',()=>{qnavSyncArrows('qNav');qnavSyncArrows('ppQ
    and a smooth scroll for hiding a solution, where you are moving within the
    same question and the motion is what says where you went.
 
-   What scrolls differs by width: the window on a phone, the question area itself
-   on a wide screen, where the runner fills the viewport and the page does not
-   scroll at all. pracScroller() picks, and returns null for anything that is not
-   a scroller — the landing page's sample, which shares these calls but is a card
-   in an ordinary scrolling page. */
+   It is the window that scrolls at both widths; what differs is how much
+   clearance the bars need. pracActionBar() returns the block holding them, and
+   null for the landing page's sample — which shares these calls but has no bars
+   and does its own scrolling. */
 const pracCompact=()=>window.matchMedia('(max-width:860px)').matches;
-function pracScroller(areaId){
+function pracActionBar(areaId){
   const el=areaId&&document.getElementById(areaId);
-  if(!el||pracCompact())return null;
-  return getComputedStyle(el).overflowY==='auto'?el:null;
+  const wrap=el&&el.closest('.practice-wrap');
+  return wrap?wrap.querySelector('.prac-actions'):null;
 }
 
 /* ── Confirm before ending a session ──
@@ -3181,35 +3197,36 @@ function pracMarkRevealed(area,answered){
   if(wrap)wrap.classList.toggle('has-reveal',!!answered);
 }
 function pracScrollTop(smooth,areaId){
-  const behavior=smooth?'smooth':'auto';
-  const sc=pracScroller(areaId);
-  if(sc)sc.scrollTo({top:0,behavior});
-  else if(pracCompact())window.scrollTo({top:0,behavior});
+  if(!pracCompact()&&!pracActionBar(areaId))return;
+  window.scrollTo({top:0,behavior:smooth?'smooth':'auto'});
 }
 function pracScrollToSolution(areaId){
   const el=document.querySelector('#'+areaId+' .soln-content');
   if(!el)return;
-  const sc=pracScroller(areaId);
-  if(sc){
-    /* The wide-screen runner: the panel sits in a scroller of known height with
-       nothing fixed over it, so the arithmetic is just offsets. Same rule as the
-       phone below — land on the end of the working when it fits, on its start
-       when it doesn't. */
-    const pad=12,vh=sc.clientHeight,top=el.offsetTop,h=el.offsetHeight;
-    const y=h<=vh-pad*2 ? top+h+pad-vh : top-pad;
-    sc.scrollTo({top:Math.max(0,y),behavior:'smooth'});
-    return;
-  }
-  if(!pracCompact())return;
-  /* scroll-margin is the clearance the panel needs: the sticky topbar above it,
-     the two fixed bars below it.
+  const bar=pracActionBar(areaId);
+  if(!pracCompact()&&!bar)return;
+  /* The clearance the panel needs above and below: the sticky topbar, and the
+     bars carrying the reveal button and Previous/Next.
 
-     visualViewport rather than innerHeight, and the scroll worked out by hand
+     On a phone that clearance is written as scroll-margin in the phone rules,
+     because the bars are fixed at heights the sheet already knows. On a wide
+     screen the block is sticky and its height depends on whether the reveal row
+     is in it, so it is measured. */
+  let mt,mb;
+  if(pracCompact()){
+    const cs=getComputedStyle(el);
+    mt=parseFloat(cs.scrollMarginTop)||0;
+    mb=parseFloat(cs.scrollMarginBottom)||0;
+  }else{
+    const tb=document.querySelector('.topbar');
+    mt=(tb?tb.offsetHeight:0)+12;
+    mb=(bar?bar.offsetHeight:0)+12;
+  }
+  /* visualViewport rather than innerHeight, and the scroll worked out by hand
      rather than scrollIntoView, because on iOS the layout viewport carries on
      behind the browser's own toolbars. innerHeight counts that hidden strip, so
      "the panel fits" and "its bottom is on screen" both came out optimistic and
      the last couple of lines of the working sat underneath the toolbar. */
-  const cs=getComputedStyle(el),mt=parseFloat(cs.scrollMarginTop)||0,mb=parseFloat(cs.scrollMarginBottom)||0;
   const vh=(window.visualViewport&&window.visualViewport.height)||window.innerHeight;
   const r=el.getBoundingClientRect(),y=window.scrollY;
   /* Bottom-aligned, so what you land on is the end of the working. When the
