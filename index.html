@@ -749,7 +749,11 @@ body.nav-open{overflow:hidden}
    screen), and Previous/Next become a fixed bar, so the only thing scrolling
    ever has to reach is the question itself. */
 @media(max-width:860px){
-:root{--pracbar:60px}
+/* --pracbar is the nav bar's full outer height (8 + 44 + 8 of padding and button,
+   plus its 1px top border); --solnbar the reveal button's. Everything that has to
+   clear them — the reveal button's own offset, the column's bottom padding, the
+   solution panel's scroll-margin — is written in terms of the two. */
+:root{--pracbar:61px}
 
 /* ── One row: back, then the strip ── */
 .practice-wrap .prac-head{display:flex;align-items:center;gap:8px;min-width:0;margin-bottom:.7rem}
@@ -760,15 +764,13 @@ body.nav-open{overflow:hidden}
 .pp-runner-head{gap:10px;margin-bottom:.7rem;flex-wrap:nowrap;min-width:0}
 .pp-runner-title{font-size:.8125rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-/* The strip always scrolls sideways here whatever the collapse state — a wrapped
-   grid of 50 numbers would eat the screen — so the "show all" toggle has no job
-   left and its whole row goes. qnavSync writes display inline, hence !important.
-   iOS paints its overlay scrollbar *over* the last few pixels of the scroller as
-   a dark bar, which is what was cutting across the bottom of the numbers; with
-   no scrollbar drawn there is nothing to overlap. */
-.practice-wrap .question-nav{flex:1;min-width:0;margin-bottom:0;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding-bottom:0;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
-.practice-wrap .question-nav::-webkit-scrollbar{display:none}
-.practice-wrap .question-nav .qnum{flex-shrink:0}
+/* The strip shares the head row with the back button and always scrolls sideways
+   here whatever the collapse state — a wrapped grid of 50 numbers would eat the
+   screen — so the "show all" toggle has no job left and its whole row goes.
+   qnavSync writes display inline, hence !important. (The scrolling itself is set
+   up further down, with the rest of what the runner and the landing sample
+   share.) */
+.practice-wrap .question-nav{flex:1;min-width:0;margin-bottom:0}
 .practice-wrap .qnav-toggle{display:none !important}
 
 /* ── Progress above the question, folded into a single strip ── */
@@ -798,28 +800,29 @@ body.nav-open{overflow:hidden}
 /* block, not the pill's usual inline-flex, so a long topic name can ellipsise
    rather than shove the difficulty pill off the row */
 .practice-wrap .q-card-topic{display:block;max-width:40vw;min-width:0;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.practice-wrap .q-card{padding:.95rem 1rem 1.05rem;margin-bottom:.7rem;border-radius:12px;border-left-width:4px}
-.practice-wrap .q-text{line-height:1.7}
-.practice-wrap .opts{gap:7px;margin-bottom:.7rem}
-.practice-wrap .opt{padding:.6rem .75rem}
-.practice-wrap .opt .letter{width:25px;height:25px;font-size:.75rem;margin-right:.7rem}
-.practice-wrap .opt-text{line-height:1.5}
-/* "[1]…[5]" and "S" are shortcuts for a keyboard this screen doesn't have */
-.practice-wrap .kbd-hint,.practice-wrap .soln-toggle .kbd{display:none}
+/* the card and options themselves are sized at the end of the sheet, where the
+   landing page's sample gets the same treatment */
 
 /* ── Reveal ── */
-/* Answering makes this the only thing you want to press, so it reads as the
-   primary action rather than a grey secondary one, and pick() scrolls it up to
-   just above the nav bar — the scroll-margin is what keeps it clear of it. */
-.practice-wrap .soln-toggle{min-height:46px;padding:.7rem .8rem;gap:7px;scroll-margin-bottom:calc(var(--pracbar) + 18px)}
-.practice-wrap .soln-toggle:not(.open){border-color:var(--liteb);background:var(--lite);color:var(--mid);font-weight:600}
+/* Scrolling to this button was never going to be reliable: how close it lands to
+   the nav bar depends on how long the question and its options are and on how
+   much of the screen the browser's own toolbars are taking. So it doesn't scroll
+   — it sits on top of the nav bar as a second fixed row, on screen at every
+   height, and reads as the primary action because after answering it is the only
+   thing left to press. Out of flow, so where the renderers emit it in the markup
+   no longer matters. The panel it opens stays in the column above. */
+.practice-wrap .soln-toggle,.practice-wrap .soln-toggle.open{position:fixed;left:0;right:0;bottom:calc(var(--pracbar) + env(safe-area-inset-bottom,0px));z-index:91;margin:0;min-height:47px;padding:.7rem .85rem;gap:7px;border:none;border-top:1px solid var(--liteb);border-radius:0;background:var(--lite);color:var(--mid);font-weight:600}
 .practice-wrap .result-pill{font-size:.6875rem;padding:2px 6px}
-.practice-wrap .soln-content{padding:.9rem 1rem}
+/* the panel is on its own now rather than hanging off the button, so it gets its
+   border and its corners back */
+.practice-wrap .soln-content{padding:.9rem 1rem;border:1px solid var(--liteb);border-radius:9px;scroll-margin-top:74px;scroll-margin-bottom:calc(var(--pracbar) + var(--solnbar) + 12px)}
 .practice-wrap .soln-text{line-height:1.75}
 
 /* ── Previous / Next, never below the fold ── */
-.practice-wrap{padding:.85rem .75rem 1.25rem}
-#pracRunner,#ppRunner{padding-bottom:calc(var(--pracbar) + env(safe-area-inset-bottom,0px) + 14px)}
+.practice-wrap{padding:.85rem .75rem 1.25rem;--solnbar:47px}
+/* the reveal button's row is only reserved once a question has been answered */
+.practice-wrap:not(.has-reveal){--solnbar:0px}
+#pracRunner,#ppRunner{padding-bottom:calc(var(--pracbar) + var(--solnbar) + env(safe-area-inset-bottom,0px) + 14px)}
 .practice-wrap .nav-btns{position:fixed;left:0;right:0;bottom:0;z-index:90;margin:0;gap:10px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--bdr)}
 .practice-wrap .nav-btns .nav-btn{flex:1;justify-content:center;min-height:44px;border-radius:10px;font-size:.875rem;font-weight:600}
 /* forward is the common move, so it carries the weight */
@@ -844,10 +847,8 @@ body.nav-open{overflow:hidden}
    this width; a step down in type keeps them on one rather than wrapping. */
 .practice-wrap .practice-sidebar .sb-stats{font-size:.6875rem;gap:10px}
 .practice-wrap .practice-sidebar .sb-prog-num{font-size:1.25rem}
-.practice-wrap .q-card{padding:.85rem .85rem .95rem}
-.practice-wrap .opt{padding:.55rem .65rem}
-.practice-wrap .opt .letter{margin-right:.6rem}
-.practice-wrap .nav-btns{gap:8px;padding:7px 10px calc(7px + env(safe-area-inset-bottom,0px))}
+/* the vertical padding holds at 8px — it is baked into --pracbar */
+.practice-wrap .nav-btns{gap:8px;padding-left:10px;padding-right:10px}
 }
 
 /* ═══ MENTAL MATHS ═══ */
@@ -1211,54 +1212,74 @@ body[data-screen="app"] #appShell{display:block}
 .w-cta-band .btn-primary{width:100%}
 .w-footer-inner{flex-direction:column;align-items:flex-start}
 
-/* ── The sample card on a phone ───────────────────────────────────────────
-   At 375px the card was 680px tall — taller than the screen — and most of
-   that was frame rather than content: a two-row grid of question numbers, a
-   bordered question box nested inside the bordered card, and five answer
-   rows padded for a mouse. The type sizes are the ones that survive; what
-   goes is the packaging around them. */
-
-/* The counter's long form doesn't leave room for the topic pill here. */
+/* The counter's long form doesn't leave room for the topic pill here.
+   (The rest of the sample's phone layout is at the end of the sheet, shared
+   with the practice runner it is a preview of.) */
 .w-qcount-full{display:none}
 .w-qcount-short{display:inline}
-
-/* One row that scrolls, not two rows that stack: the strip is a way back to a
-   question you've seen, and it shouldn't cost a fifth of the card to offer it.
-   wRenderNav keeps the current number scrolled into view. */
-.w-demo-body .question-nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:5px;padding-bottom:4px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
-.w-demo-body .question-nav .qnum{flex-shrink:0}
-.w-demo-body .question-nav::-webkit-scrollbar{height:4px}
-.w-demo-body .question-nav::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
-
-/* Drop the inner box's own frame — it repeats the card's, and on a narrow
-   screen the two nested paddings cost ~35px of the line the question is set
-   on. The blue rule stays as the accent; the rest of the border goes. */
-.w-demo-body{padding:.85rem .8rem}
-.w-demo-body .question-nav{margin-bottom:.9rem}
-.w-demo-body .q-card{background:none;border:none;border-left:3px solid var(--blue);border-radius:0;box-shadow:none;padding:0 0 0 .7rem;margin-bottom:1rem}
-.w-demo-body .q-card .q-text{line-height:1.6}
-.w-demo-body .w-demo-qhead{gap:5px;margin-bottom:.5rem}
-
-/* Sized for a thumb rather than a cursor: ~46px tall, which is still above the
-   44px touch target, with the air taken out of the padding instead of the type. */
-.w-demo-body .opts{gap:7px}
-.w-demo-body .opt{padding:.55rem .7rem}
-/* "[1]…[5]" are shortcuts for a keyboard this screen doesn't have */
-.w-demo-body .kbd-hint{display:none}
-.w-demo-body .opt .letter{width:24px;height:24px;font-size:.75rem;margin-right:.65rem}
-.w-demo-body .nav-btns{margin-top:.9rem}
-.w-demo-body .nav-btn{flex:1;justify-content:center;padding:9px 12px}
-.w-demo-body .soln-toggle{padding:.6rem .75rem;gap:6px}
-.w-demo-body .soln-content{padding:.9rem .85rem}
 }
 /* Below the iPhone SE's width there's no longer room for the counter and both
    pills on one line, and wrapping strands the difficulty pill on a line of its
    own. Hold the row on one line instead and let the topic — the only part with
    a variable length — ellipsise; short topic names are unaffected either way. */
 @media(max-width:360px){
-.w-demo-body{padding:.75rem .65rem}
 .w-demo-body .qnum{width:29px;height:29px}
 .w-demo-body .w-demo-qhead{flex-wrap:nowrap}
+}
+
+/* ═══ THE QUESTION CARD ON A SMALL SCREEN ═══
+   The practice runner and the landing page's sample are the same component, so
+   below 860px they get the same card, the same options and the same strip. The
+   sample used to diverge here: it was a bordered card with a bordered question
+   card inside it, and the fix for two nested frames on a narrow screen had been
+   to strip the inner one back to a bare blue rule — which left a visitor's only
+   preview of practice looking like nothing in the product. The outer frame goes
+   instead, and what's left is the practice card itself.
+
+   Last in the sheet on purpose: it has to beat both the runner's rules and the
+   sample's own, which sit at four different breakpoints above. The runner adds
+   its fixed bars on top of this; the sample doesn't — it is a card in a page,
+   not a screen. */
+@media(max-width:860px){
+/* iOS paints its overlay scrollbar *over* the last few pixels of a scroller as a
+   dark bar, which is what was cutting across the bottom of the numbers; with no
+   scrollbar drawn there is nothing to overlap. */
+.practice-wrap .question-nav,.w-demo-body .question-nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding-bottom:0;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+.practice-wrap .question-nav::-webkit-scrollbar,.w-demo-body .question-nav::-webkit-scrollbar{display:none}
+.practice-wrap .question-nav .qnum,.w-demo-body .question-nav .qnum{flex-shrink:0}
+
+.practice-wrap .q-card,.w-demo-body .q-card{background:var(--surf);border:1px solid var(--bdr);border-left:4px solid var(--blue);border-radius:12px;box-shadow:var(--shadow-1);padding:.95rem 1rem 1.05rem;margin-bottom:.7rem}
+.practice-wrap .q-text,.w-demo-body .q-text{line-height:1.7}
+.practice-wrap .opts,.w-demo-body .opts{gap:7px;margin-bottom:.7rem}
+.practice-wrap .opt,.w-demo-body .opt{padding:.6rem .75rem}
+.practice-wrap .opt .letter,.w-demo-body .opt .letter{width:25px;height:25px;font-size:.75rem;margin-right:.7rem}
+.practice-wrap .opt-text,.w-demo-body .opt-text{line-height:1.5}
+/* "[1]…[5]" and "S" are shortcuts for a keyboard this screen doesn't have */
+.practice-wrap .kbd-hint,.w-demo-body .kbd-hint,.practice-wrap .soln-toggle .kbd{display:none}
+
+/* ── The sample: one frame, not two ── */
+.w-demo-card{background:none;border:none;border-radius:0;overflow:visible}
+.w-demo-body{padding:0}
+.w-demo-body .question-nav{gap:5px;margin-bottom:.7rem}
+.w-demo-body .w-demo-qhead{gap:6px;margin-bottom:.6rem}
+/* The sample keeps its buttons in the flow — there is a page either side of it,
+   so a bar fixed to the screen would belong to the page, not to the card. They
+   get the runner's weight and hit area all the same. */
+.w-demo-body .nav-btns{margin-top:.75rem;gap:10px}
+.w-demo-body .nav-btn{flex:1;justify-content:center;min-height:44px;border-radius:10px;font-size:.875rem;font-weight:600}
+.w-demo-body .nav-btns .nav-btn:last-child:not(:disabled){background:var(--mid);border-color:var(--mid);color:#fff}
+.w-demo-body .soln-toggle{min-height:46px;padding:.7rem .8rem;gap:7px;scroll-margin-bottom:16px}
+.w-demo-body .soln-toggle:not(.open){border-color:var(--liteb);background:var(--lite);color:var(--mid);font-weight:600}
+.w-demo-body .result-pill{font-size:.6875rem;padding:2px 6px}
+/* clear of the landing page's sticky 60px nav when wToggleSoln scrolls to it */
+.w-demo-body .soln-content{padding:.9rem 1rem;scroll-margin-top:72px;scroll-margin-bottom:16px}
+}
+/* One step tighter again on the narrowest phones. Here rather than with the
+   other 480px rules so it lands after the block above, not before it. */
+@media(max-width:480px){
+.practice-wrap .q-card,.w-demo-body .q-card{padding:.85rem .85rem .95rem}
+.practice-wrap .opt,.w-demo-body .opt{padding:.55rem .65rem}
+.practice-wrap .opt .letter,.w-demo-body .opt .letter{margin-right:.6rem}
 }
 </style>
 </head>
@@ -2990,21 +3011,39 @@ function qnavScrollCurrent(navEl){
   else if(right>navEl.scrollLeft+navEl.clientWidth)navEl.scrollLeft=right-navEl.clientWidth;
 }
 
-/* ── Phone-only scroll nudges for the runner ──
-   Below 860px Previous/Next are a fixed bar, so a tap can land while the page is
-   scrolled anywhere. Two corrections keep the reading position honest: a new
-   question starts at the top of the page, and answering lifts the reveal button
-   up to just above the bar (its scroll-margin-bottom does the clearing) instead
-   of leaving it below the fold. Wide screens fit the whole column and are left
-   alone. */
+/* ── Phone-only scroll behaviour for the runner ──
+   Below 860px the reveal button and Previous/Next are fixed to the bottom of the
+   screen, so a tap can land while the page is scrolled anywhere. Three rules put
+   the page where the tap implies it should be:
+
+     new question   → back to the top, the view you get on load
+     show solution  → down far enough that the whole panel is in view
+     hide solution  → back to the top again
+
+   Jumps for a new question (new content, so an animated scroll is just noise)
+   and a smooth scroll for hiding a solution, where you are moving within the
+   same question and the motion is what says where you went. */
 const pracCompact=()=>window.matchMedia('(max-width:860px)').matches;
-function pracScrollTop(){
-  if(pracCompact())window.scrollTo({top:0,behavior:'smooth'});
+/* The reveal button is fixed above the nav bar on a phone, so the column has to
+   reserve a row for it — but only once there is one to reserve for. */
+function pracMarkRevealed(area,answered){
+  const wrap=area.closest('.practice-wrap');
+  if(wrap)wrap.classList.toggle('has-reveal',!!answered);
 }
-function pracScrollToReveal(areaId){
+function pracScrollTop(smooth){
+  if(pracCompact())window.scrollTo({top:0,behavior:smooth?'smooth':'auto'});
+}
+function pracScrollToSolution(areaId){
   if(!pracCompact())return;
-  const el=document.querySelector('#'+areaId+' .soln-toggle');
-  if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'});
+  const el=document.querySelector('#'+areaId+' .soln-content');
+  if(!el)return;
+  /* scroll-margin keeps the panel clear of the sticky topbar above and the two
+     fixed bars below, so "end" lands it fully in view rather than under them.
+     A solution too tall to fit at all is aligned to its top instead — the start
+     of the working is the part you want first. */
+  const cs=getComputedStyle(el),mt=parseFloat(cs.scrollMarginTop)||0,mb=parseFloat(cs.scrollMarginBottom)||0;
+  const fits=el.getBoundingClientRect().height<=window.innerHeight-mt-mb;
+  el.scrollIntoView({block:fits?'end':'start',behavior:'smooth'});
 }
 
 function toggleQNav(){qNavCollapsed=!qNavCollapsed;renderNav();qnavScrollCurrent(document.getElementById('qNav'))}
@@ -3052,6 +3091,7 @@ function renderQuestion(){
     if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
   }
   area.innerHTML=html;
+  pracMarkRevealed(area,answered);
 }
 
 function updateSidebar(){
@@ -3077,10 +3117,14 @@ function pick(i){
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
   render();
   justAnswered=false;
-  pracScrollToReveal('questionArea');
 }
 function navQ(d){const n=idx+d;if(n>=0&&n<PRACTICE_QUESTIONS.length){idx=n;render();pracScrollTop()}}
-function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
+function toggleSoln(){
+  const opening=!showSoln[idx];
+  showSoln[idx]=opening;
+  render();
+  if(opening)pracScrollToSolution('questionArea');else pracScrollTop(true);
+}
 
 /* ── Past Papers: browse real past papers, then practice one with the same question engine/UI as Practice ── */
 let ppPapers=[],ppPapersLoaded=false,ppExamFilter='all',ppSearchQuery='';
@@ -3231,6 +3275,7 @@ function ppRenderQuestion(){
     if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
   }
   area.innerHTML=html;
+  pracMarkRevealed(area,answered);
 }
 
 function ppUpdateSidebar(){
@@ -3260,10 +3305,14 @@ function ppPick(key){
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${q.ansKey}.`;
   ppRender();
   ppJustAnswered=false;
-  pracScrollToReveal('ppQuestionArea');
 }
 function ppNavQ(d){const n=ppIdx+d;if(n>=0&&n<ppQuestions.length){ppIdx=n;ppRender();pracScrollTop()}}
-function ppToggleSoln(){ppShowSoln[ppIdx]=!ppShowSoln[ppIdx];ppRender()}
+function ppToggleSoln(){
+  const opening=!ppShowSoln[ppIdx];
+  ppShowSoln[ppIdx]=opening;
+  ppRender();
+  if(opening)pracScrollToSolution('ppQuestionArea');else pracScrollTop(true);
+}
 function ppEndSession(){
   document.getElementById('ppRunner').style.display='none';
   document.getElementById('ppHub').style.display='block';
@@ -3296,7 +3345,7 @@ function wRenderNav(){
     b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
     if(revealed)b.innerHTML=a===QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
     else b.textContent=i+1;
-    b.onclick=()=>{wIdx=i;wRender()};
+    b.onclick=()=>{wIdx=i;wRender();wScrollCardTop()};
     navEl.appendChild(b);
   });
   /* On a phone the strip is one scrolling row, so Prev/Next can walk the current
@@ -3352,9 +3401,29 @@ function wPick(i){
   const q=QUESTIONS[wIdx],ok=i===q.ans,live=document.getElementById('wAnswerAnnounce');
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
   wRender();
+  /* Nothing is fixed over the bottom of the screen here, so "nearest" really is
+     the minimum scroll that puts the whole button in view — the runner needs a
+     fixed bar for the same guarantee, this doesn't. */
+  if(pracCompact()){
+    const t=document.querySelector('#wQuestionArea .soln-toggle');
+    if(t)t.scrollIntoView({block:'nearest',behavior:'smooth'});
+  }
 }
-function wNavQ(d){const n=wIdx+d;if(n>=0&&n<QUESTIONS.length){wIdx=n;wRender()}}
-function wToggleSoln(){wShowSoln[wIdx]=!wShowSoln[wIdx];wRender()}
+function wNavQ(d){const n=wIdx+d;if(n>=0&&n<QUESTIONS.length){wIdx=n;wRender();wScrollCardTop()}}
+function wToggleSoln(){
+  const opening=!wShowSoln[wIdx];
+  wShowSoln[wIdx]=opening;
+  wRender();
+  if(opening)pracScrollToSolution('wQuestionArea');else wScrollCardTop(true);
+}
+/* Same three rules the runner follows, but the sample is a card in a page rather
+   than a screen, so its "back to the top" is the top of the card. #wSample's
+   scroll-margin-top clears the landing page's sticky nav. */
+function wScrollCardTop(smooth){
+  if(!pracCompact())return;
+  const el=document.getElementById('wSample');
+  if(el)el.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'});
+}
 if(document.getElementById('wQNav'))wRender();
 
 document.addEventListener('keydown',e=>{
