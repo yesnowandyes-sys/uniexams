@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Answer options are full of bare numbers ("3.5", "1 800", "10 24"). iOS Safari
+     reads those as phone numbers and dates and rewrites them as blue tappable
+     links, which is why option text came out blue on a phone and black everywhere
+     else. Nothing on this site is a phone number. -->
+<meta name="format-detection" content="telephone=no,date=no,address=no,email=no">
 <title>UniExams</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -33,6 +38,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webk
 .view.active{display:block}
 .view.view-enter{opacity:0;transform:translateY(6px);transition:none}
 button{font-family:inherit}
+/* Belt and braces alongside the format-detection meta: iOS tags the runs it has
+   decided are phone numbers or dates with this attribute and colours them blue
+   from its own UA sheet, which is how answer options ended up blue on a phone. */
+a[x-apple-data-detectors]{color:inherit !important;-webkit-text-fill-color:inherit !important;text-decoration:none !important}
 :focus-visible{outline:2px solid var(--mid);outline-offset:2px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
@@ -584,7 +593,9 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .practice-layout{display:flex;gap:1.5rem}
 .practice-main{flex:1;min-width:0}
 .practice-sidebar{width:268px;flex-shrink:0}
-.question-nav{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap}
+/* position:relative so the buttons' offsetLeft is measured against the strip —
+   qnavScrollCurrent() scrolls it by hand. */
+.question-nav{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap;position:relative}
 .qnum{width:36px;height:36px;border-radius:8px;border:2px solid var(--bdr);background:var(--surf);color:var(--ter);font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s,transform .1s;box-sizing:border-box;padding:0}
 .qnum:hover{transform:scale(1.08)}
 .qnum:active{transform:scale(.93)}
@@ -598,6 +609,12 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .qnav-toggle{display:none;align-items:center;gap:4px;margin:-4px 0 1.25rem 1px;padding:2px;border:none;background:none;color:var(--mid);font-size:.75rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer}
 .qnav-toggle svg{transition:transform .2s ease}
 .qnav-toggle.open svg{transform:rotate(180deg)}
+/* The runner's head — back button, question strip, "show all" — lives outside
+   .practice-layout so a phone can pull the progress card above the question
+   without the head coming with it. On a wide screen it is just a plain block and
+   its children stack exactly as they did when they were in the main column. */
+.prac-head{display:block}
+.prac-head>.prac-back{margin-bottom:1.1rem}
 
 /* ── Practice setup screen (module/topic/count picker before a session starts) ── */
 .prac-setup-wrap{max-width:1200px;margin:0 auto;padding:1.5rem 1.75rem}
@@ -627,16 +644,25 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 
 .q-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:.875rem;border-left:5px solid var(--blue);box-shadow:var(--shadow-1)}
 .q-meta{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
+.q-card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:.875rem}
+.q-card-pills{display:flex;align-items:center;gap:6px;min-width:0}
+/* On a wide screen the topic already has its own pill in the .q-meta row above
+   the card; the phone rules drop that row and show this copy instead, so the
+   card carries the topic without costing a line of its own. */
+.q-card-topic{display:none}
 .q-text{font-size:.9375rem;line-height:1.85;color:var(--text);margin:0;white-space:pre-wrap}
 .pill{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:5px;font-size:.6875rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;line-height:1;user-select:none}
 
 .opts{display:flex;flex-direction:column;gap:8px;margin-bottom:.875rem}
-.opt{display:flex;align-items:center;padding:.75rem 1rem;border-radius:10px;border:2px solid var(--bdr);background:var(--surf);font-family:'Inter',sans-serif;text-align:left;width:100%;box-sizing:border-box;cursor:pointer;transition:background .1s,border-color .12s,box-shadow .12s,transform .1s}
+/* colour spelled out rather than left to the UA: a <button> with no colour of
+   its own picks up the platform button colour, which is not the body text
+   colour on every mobile browser. The answered states below override it. */
+.opt{display:flex;align-items:center;padding:.75rem 1rem;border-radius:10px;border:2px solid var(--bdr);background:var(--surf);color:var(--text);font-family:'Inter',sans-serif;text-align:left;width:100%;box-sizing:border-box;cursor:pointer;transition:background .1s,border-color .12s,box-shadow .12s,transform .1s;-webkit-tap-highlight-color:transparent}
 .opt:hover:not(.answered){background:var(--lite);border-color:var(--mid);box-shadow:0 0 0 3px var(--lite)}
 .opt:active:not(.answered){transform:scale(.985)}
 .opt.answered{cursor:default}
 .letter{width:28px;height:28px;border-radius:7px;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.8125rem;display:flex;align-items:center;justify-content:center;background:var(--alt);color:var(--sec);margin-right:.875rem;transition:background .12s,color .12s}
-.opt-text{flex:1;font-size:.875rem;line-height:1.6}
+.opt-text{flex:1;font-size:.875rem;line-height:1.6;color:var(--text)}
 .kbd-hint{margin-left:8px;opacity:.45;font-size:.6875rem;font-family:'JetBrains Mono',monospace}
 .state-badge{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:10px}
 .opt.correct-answer{border-color:var(--green);background:var(--gLite)}
@@ -708,6 +734,97 @@ body.nav-open{overflow:hidden}
 .focus-list{flex-direction:column}
 .practice-wrap{padding:1rem}.practice-layout{flex-direction:column}.practice-sidebar{width:100%}
 }
+
+/* ═══ THE PRACTICE RUNNER ON A PHONE ═══
+   The wide-screen runner spends its first ~250px on chrome before the question
+   appears: a full-width back button, the question strip, the strip's "show all"
+   toggle, then a topic pill and a difficulty pill that the card's own header
+   repeats. Previous/Next hang off the bottom of a column taller than the screen,
+   and so does the "show worked solution" button that you want the instant you
+   answer. On a phone that put the card in the middle of the viewport with the
+   last option, the solution button and both nav buttons all below the fold.
+
+   Here: the chrome folds into one row, the progress card moves above the
+   question, the keyboard-shortcut card goes (there is no keyboard on this
+   screen), and Previous/Next become a fixed bar, so the only thing scrolling
+   ever has to reach is the question itself. */
+@media(max-width:860px){
+:root{--pracbar:60px}
+
+/* ── One row: back, then the strip ── */
+.practice-wrap .prac-head{display:flex;align-items:center;gap:8px;min-width:0;margin-bottom:.7rem}
+.practice-wrap .prac-head>.prac-back{margin-bottom:0}
+/* icon-only: "Back to setup" is the one place you can get to from here anyway */
+.practice-wrap .prac-back{flex-shrink:0;gap:0;padding:0 12px;min-height:42px}
+.practice-wrap .prac-back-lbl{display:none}
+.pp-runner-head{gap:10px;margin-bottom:.7rem;flex-wrap:nowrap;min-width:0}
+.pp-runner-title{font-size:.8125rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* The strip always scrolls sideways here whatever the collapse state — a wrapped
+   grid of 50 numbers would eat the screen — so the "show all" toggle has no job
+   left and its whole row goes. qnavSync writes display inline, hence !important.
+   iOS paints its overlay scrollbar *over* the last few pixels of the scroller as
+   a dark bar, which is what was cutting across the bottom of the numbers; with
+   no scrollbar drawn there is nothing to overlap. */
+.practice-wrap .question-nav{flex:1;min-width:0;margin-bottom:0;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding-bottom:0;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+.practice-wrap .question-nav::-webkit-scrollbar{display:none}
+.practice-wrap .question-nav .qnum{flex-shrink:0}
+.practice-wrap .qnav-toggle{display:none !important}
+
+/* ── Progress above the question, folded into a single strip ── */
+.practice-wrap .practice-layout{gap:0}
+.practice-wrap .practice-sidebar{order:-1;width:100%}
+.practice-wrap .practice-sidebar .sb-card{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:12px;row-gap:8px;padding:.6rem .85rem;margin-bottom:.7rem;border-radius:10px}
+.practice-wrap .practice-sidebar .sb-card>.label{display:none}
+.practice-wrap .practice-sidebar .sb-prog{grid-column:1;grid-row:1;margin:0}
+.practice-wrap .practice-sidebar .sb-prog-num{font-size:1.375rem}
+.practice-wrap .practice-sidebar .sb-prog-lbl{font-size:.75rem}
+.practice-wrap .practice-sidebar .sb-stats{grid-column:2;grid-row:1;margin:0;justify-content:flex-end;gap:14px}
+.practice-wrap .practice-sidebar .sb-card>.bar{grid-column:1/-1;grid-row:2;margin:0}
+/* the timer keeps its label — "10s" on its own would be anyone's guess */
+.practice-wrap .practice-sidebar #mmTimerCard>.label{display:block;grid-column:1;grid-row:1;margin:0}
+.practice-wrap .practice-sidebar .mm-timer-num{grid-column:2;grid-row:1;font-size:1.25rem;text-align:right}
+/* No keyboard to give shortcuts to, and the head's back button already ends the
+   session — both of these would otherwise sit between progress and question. */
+.practice-wrap .practice-sidebar .sb-kbd-card,.practice-wrap .practice-sidebar>.sb-btn{display:none}
+
+/* ── The question card ── */
+/* The row above the card said "Algebra · Hard" and then the card's own header
+   said "Question 3 of 20 · Hard" — a whole line for one pill that wasn't already
+   there. The topic moves into the header and the row goes. */
+.practice-wrap .q-meta{display:none}
+.practice-wrap .q-card-head{gap:8px;margin-bottom:.7rem}
+.practice-wrap .q-card-head .label{white-space:nowrap}
+/* block, not the pill's usual inline-flex, so a long topic name can ellipsise
+   rather than shove the difficulty pill off the row */
+.practice-wrap .q-card-topic{display:block;max-width:40vw;min-width:0;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.practice-wrap .q-card{padding:.95rem 1rem 1.05rem;margin-bottom:.7rem;border-radius:12px;border-left-width:4px}
+.practice-wrap .q-text{line-height:1.7}
+.practice-wrap .opts{gap:7px;margin-bottom:.7rem}
+.practice-wrap .opt{padding:.6rem .75rem}
+.practice-wrap .opt .letter{width:25px;height:25px;font-size:.75rem;margin-right:.7rem}
+.practice-wrap .opt-text{line-height:1.5}
+/* "[1]…[5]" and "S" are shortcuts for a keyboard this screen doesn't have */
+.practice-wrap .kbd-hint,.practice-wrap .soln-toggle .kbd{display:none}
+
+/* ── Reveal ── */
+/* Answering makes this the only thing you want to press, so it reads as the
+   primary action rather than a grey secondary one, and pick() scrolls it up to
+   just above the nav bar — the scroll-margin is what keeps it clear of it. */
+.practice-wrap .soln-toggle{min-height:46px;padding:.7rem .8rem;gap:7px;scroll-margin-bottom:calc(var(--pracbar) + 18px)}
+.practice-wrap .soln-toggle:not(.open){border-color:var(--liteb);background:var(--lite);color:var(--mid);font-weight:600}
+.practice-wrap .result-pill{font-size:.6875rem;padding:2px 6px}
+.practice-wrap .soln-content{padding:.9rem 1rem}
+.practice-wrap .soln-text{line-height:1.75}
+
+/* ── Previous / Next, never below the fold ── */
+.practice-wrap{padding:.85rem .75rem 1.25rem}
+#pracRunner,#ppRunner{padding-bottom:calc(var(--pracbar) + env(safe-area-inset-bottom,0px) + 14px)}
+.practice-wrap .nav-btns{position:fixed;left:0;right:0;bottom:0;z-index:90;margin:0;gap:10px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--bdr)}
+.practice-wrap .nav-btns .nav-btn{flex:1;justify-content:center;min-height:44px;border-radius:10px;font-size:.875rem;font-weight:600}
+/* forward is the common move, so it carries the weight */
+.practice-wrap .nav-btns .nav-btn:last-child:not(:disabled){background:var(--mid);border-color:var(--mid);color:#fff}
+}
 /* Users who ask for less motion get the drawer's arrival without the slide.
    Both selectors: a transition is read off the state being moved *to*, so the
    open rule has to be silenced too or opening would still animate. */
@@ -723,6 +840,14 @@ body.nav-open{overflow:hidden}
 /* The streak pill and the bell are the two things the topbar can spare once the
    menu button is in it — the streak is on the Home page anyway. */
 .topbar-streak,.topbar-bell{display:none}
+/* "3 of 10 answered" and "Correct: 3  Remaining: 7" only just share a line at
+   this width; a step down in type keeps them on one rather than wrapping. */
+.practice-wrap .practice-sidebar .sb-stats{font-size:.6875rem;gap:10px}
+.practice-wrap .practice-sidebar .sb-prog-num{font-size:1.25rem}
+.practice-wrap .q-card{padding:.85rem .85rem .95rem}
+.practice-wrap .opt{padding:.55rem .65rem}
+.practice-wrap .opt .letter{margin-right:.6rem}
+.practice-wrap .nav-btns{gap:8px;padding:7px 10px calc(7px + env(safe-area-inset-bottom,0px))}
 }
 
 /* ═══ MENTAL MATHS ═══ */
@@ -1617,19 +1742,24 @@ body[data-screen="app"] #appShell{display:block}
 
     <!-- Practice runner -->
     <div class="practice-wrap" id="pracRunner" style="display:none">
-      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="pracEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to setup</button>
+      <!-- Head sits outside .practice-layout so that on a phone, where the layout
+           stacks and the sidebar is pulled above the question, the back button and
+           the question strip still come first. -->
+      <div class="prac-head">
+        <button class="nav-btn prac-back" onclick="pracEndSession()" aria-label="Back to setup"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to setup</span></button>
+        <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
+        <button class="qnav-toggle" id="qNavToggle" type="button" onclick="toggleQNav()">
+          <span id="qNavToggleLabel">Show all</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
       <div class="practice-layout">
         <div class="practice-main">
-          <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
-          <button class="qnav-toggle" id="qNavToggle" type="button" onclick="toggleQNav()">
-            <span id="qNavToggleLabel">Show all</span>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
           <div id="questionArea"></div>
           <div id="answerAnnounce" class="sr-only" aria-live="polite"></div>
           <div class="nav-btns">
             <button class="nav-btn" id="prevBtn" onclick="navQ(-1)" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Previous</button>
-            <button class="nav-btn" id="nextBtn" onclick="navQ(1)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg> Next</button>
+            <button class="nav-btn" id="nextBtn" onclick="navQ(1)">Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
           </div>
         </div>
         <div class="practice-sidebar">
@@ -1639,7 +1769,7 @@ body[data-screen="app"] #appShell{display:block}
             <div class="bar" style="height:4px"><div class="bar-fill" id="sbProgBar" style="width:0%;background:var(--mid)"></div></div>
             <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="sbCorrect">0</strong></span><span>Remaining: <strong style="font-family:'JetBrains Mono',monospace;color:var(--sec)" id="sbRemain">10</strong></span></div>
           </div>
-          <div class="sb-card">
+          <div class="sb-card sb-kbd-card">
             <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
             <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">1</span>–<span class="kbd">9</span><span style="margin-left:4px">Select answer</span></div>
@@ -1704,7 +1834,9 @@ body[data-screen="app"] #appShell{display:block}
 
     <!-- Practice runner -->
     <div class="practice-wrap" id="mmRunner" style="display:none">
-      <button class="nav-btn" style="margin-bottom:1.1rem" onclick="mmEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Mental Maths</button>
+      <div class="prac-head">
+        <button class="nav-btn prac-back" onclick="mmEndSession()" aria-label="Back to Mental Maths"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to Mental Maths</span></button>
+      </div>
       <div class="practice-layout">
         <div class="practice-main">
           <div id="mmQuestionArea"></div>
@@ -1721,7 +1853,7 @@ body[data-screen="app"] #appShell{display:block}
             <div class="mm-timer-num" id="mmTimerNum">10s</div>
             <div class="bar" style="height:4px;margin-top:8px"><div class="bar-fill" id="mmTimerBar" style="width:100%;background:var(--amber)"></div></div>
           </div>
-          <div class="sb-card">
+          <div class="sb-card sb-kbd-card">
             <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
             <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">Enter</span><span style="margin-left:4px">Next question</span></div>
@@ -1760,16 +1892,18 @@ body[data-screen="app"] #appShell{display:block}
     <!-- Practice runner (same interface as the Practice page) -->
     <div class="practice-wrap" id="ppRunner" style="display:none">
       <div class="pp-runner-head">
-        <button class="nav-btn" onclick="ppEndSession()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg> Back to Past Papers</button>
+        <button class="nav-btn prac-back" onclick="ppEndSession()" aria-label="Back to Past Papers"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to Past Papers</span></button>
         <span class="pp-runner-title" id="ppRunnerTitle"></span>
+      </div>
+      <div class="prac-head">
+        <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
+        <button class="qnav-toggle" id="ppQNavToggle" type="button" onclick="togglePpQNav()">
+          <span id="ppQNavToggleLabel">Show all</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
       </div>
       <div class="practice-layout">
         <div class="practice-main">
-          <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
-          <button class="qnav-toggle" id="ppQNavToggle" type="button" onclick="togglePpQNav()">
-            <span id="ppQNavToggleLabel">Show all</span>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
           <div id="ppQuestionArea"></div>
           <div id="ppAnswerAnnounce" class="sr-only" aria-live="polite"></div>
           <div class="nav-btns">
@@ -1784,7 +1918,7 @@ body[data-screen="app"] #appShell{display:block}
             <div class="bar" style="height:4px"><div class="bar-fill" id="ppProgBar" style="width:0%;background:var(--mid)"></div></div>
             <div class="sb-stats"><span>Correct: <strong style="font-family:'JetBrains Mono',monospace;color:var(--green)" id="ppCorrect">0</strong></span><span>Remaining: <strong style="font-family:'JetBrains Mono',monospace;color:var(--sec)" id="ppRemain">10</strong></span></div>
           </div>
-          <div class="sb-card">
+          <div class="sb-card sb-kbd-card">
             <div class="label" style="color:var(--ter);margin-bottom:10px">Keyboard Shortcuts</div>
             <div style="display:flex;flex-direction:column;gap:8px;font-size:.8125rem;color:var(--sec)">
               <div style="display:flex;align-items:center;gap:8px"><span class="kbd">1</span>–<span class="kbd">9</span><span style="margin-left:4px">Select answer</span></div>
@@ -2845,9 +2979,32 @@ function qnavSync(navEl,toggleEl,labelEl,count,collapsed){
   if(labelEl)labelEl.textContent=collapsed?`Show all ${count}`:'Show less';
 }
 
+/* scrollLeft by hand rather than scrollIntoView: the strip is the only thing
+   that should move. scrollIntoView also scrolls the *page* when the strip is off
+   screen, which on a phone yanks you back to the top the moment you answer. */
 function qnavScrollCurrent(navEl){
   const cur=navEl&&navEl.querySelector('.cur');
-  if(cur)cur.scrollIntoView({block:'nearest',inline:'nearest'});
+  if(!cur||navEl.scrollWidth<=navEl.clientWidth)return;
+  const pad=8,left=cur.offsetLeft-pad,right=cur.offsetLeft+cur.offsetWidth+pad;
+  if(left<navEl.scrollLeft)navEl.scrollLeft=left;
+  else if(right>navEl.scrollLeft+navEl.clientWidth)navEl.scrollLeft=right-navEl.clientWidth;
+}
+
+/* ── Phone-only scroll nudges for the runner ──
+   Below 860px Previous/Next are a fixed bar, so a tap can land while the page is
+   scrolled anywhere. Two corrections keep the reading position honest: a new
+   question starts at the top of the page, and answering lifts the reveal button
+   up to just above the bar (its scroll-margin-bottom does the clearing) instead
+   of leaving it below the fold. Wide screens fit the whole column and are left
+   alone. */
+const pracCompact=()=>window.matchMedia('(max-width:860px)').matches;
+function pracScrollTop(){
+  if(pracCompact())window.scrollTo({top:0,behavior:'smooth'});
+}
+function pracScrollToReveal(areaId){
+  if(!pracCompact())return;
+  const el=document.querySelector('#'+areaId+' .soln-toggle');
+  if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
 
 function toggleQNav(){qNavCollapsed=!qNavCollapsed;renderNav();qnavScrollCurrent(document.getElementById('qNav'))}
@@ -2863,7 +3020,7 @@ function renderNav(){
     b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
     if(revealed)b.innerHTML=a===PRACTICE_QUESTIONS[i].ans?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
     else b.textContent=i+1;
-    b.onclick=()=>{idx=i;render()};
+    b.onclick=()=>{idx=i;render();pracScrollTop()};
     navEl.appendChild(b);
   });
   qnavSync(navEl,document.getElementById('qNavToggle'),document.getElementById('qNavToggleLabel'),PRACTICE_QUESTIONS.length,qNavCollapsed);
@@ -2875,7 +3032,7 @@ function renderQuestion(){
   const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
   const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
   let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
-  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${idx+1} of ${PRACTICE_QUESTIONS.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.q}</p></div>`;
+  html+=`<div class="q-card"><div class="q-card-head"><span class="label" style="color:var(--ter)">Question ${idx+1} of ${PRACTICE_QUESTIONS.length}</span><span class="q-card-pills"><span class="pill q-card-topic" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></span></div><p class="q-text">${q.q}</p></div>`;
   html+='<div class="opts">';
   q.opts.forEach((o,oi)=>{
     let cls='opt';if(answered)cls+=' answered';
@@ -2891,7 +3048,7 @@ function renderQuestion(){
   html+='</div>';
   if(answered){
     const solOpen=showSoln[idx];
-    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="toggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span><span class="kbd">S</span></button>`;
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="toggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span><span class="kbd">S</span></button>`;
     if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
   }
   area.innerHTML=html;
@@ -2920,8 +3077,9 @@ function pick(i){
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${LETTERS[q.ans]}.`;
   render();
   justAnswered=false;
+  pracScrollToReveal('questionArea');
 }
-function navQ(d){const n=idx+d;if(n>=0&&n<PRACTICE_QUESTIONS.length){idx=n;render()}}
+function navQ(d){const n=idx+d;if(n>=0&&n<PRACTICE_QUESTIONS.length){idx=n;render();pracScrollTop()}}
 function toggleSoln(){showSoln[idx]=!showSoln[idx];render()}
 
 /* ── Past Papers: browse real past papers, then practice one with the same question engine/UI as Practice ── */
@@ -3023,6 +3181,7 @@ async function ppStart(examType,year,paper,label){
     document.getElementById('ppRunnerTitle').textContent=label;
     hub.style.display='none';runner.style.display='block';
     ppRender();
+    window.scrollTo(0,0);
   }catch(e){
     alert("Couldn't load that paper. Please try again.");
   }
@@ -3039,7 +3198,7 @@ function ppRenderNav(){
     b.setAttribute('aria-label',`Question ${i+1}, ${state}`);
     if(revealed)b.innerHTML=a===ppQuestions[i].ansKey?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg>':'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg>';
     else b.textContent=i+1;
-    b.onclick=()=>{ppIdx=i;ppRender()};
+    b.onclick=()=>{ppIdx=i;ppRender();pracScrollTop()};
     navEl.appendChild(b);
   });
   qnavSync(navEl,document.getElementById('ppQNavToggle'),document.getElementById('ppQNavToggleLabel'),ppQuestions.length,ppQNavCollapsed);
@@ -3051,7 +3210,7 @@ function ppRenderQuestion(){
   const diffCol=q.diff==='Easy'?'var(--green)':q.diff==='Medium'?'var(--amber)':q.diff==='Hard'?'var(--red)':'var(--purp)';
   const diffBg=q.diff==='Easy'?'var(--gLite)':q.diff==='Medium'?'var(--aLite)':q.diff==='Hard'?'var(--rLite)':'var(--pLite)';
   let html=`<div class="q-meta"><span class="pill" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div>`;
-  html+=`<div class="q-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem"><span class="label" style="color:var(--ter)">Question ${ppIdx+1} of ${ppQuestions.length}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></div><p class="q-text">${q.text}</p></div>`;
+  html+=`<div class="q-card"><div class="q-card-head"><span class="label" style="color:var(--ter)">Question ${ppIdx+1} of ${ppQuestions.length}</span><span class="q-card-pills"><span class="pill q-card-topic" style="background:var(--lite);color:var(--mid);border:1px solid var(--liteb)">${q.topic}</span><span class="pill" style="background:${diffBg};color:${diffCol}">${q.diff}</span></span></div><p class="q-text">${q.text}</p></div>`;
   html+='<div class="opts">';
   q.opts.forEach((o,oi)=>{
     const key=q.keys[oi];
@@ -3068,7 +3227,7 @@ function ppRenderQuestion(){
   html+='</div>';
   if(answered){
     const solOpen=ppShowSoln[ppIdx];
-    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="ppToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+q.ansKey}</span><span class="kbd">S</span></button>`;
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="ppToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+q.ansKey}</span><span class="kbd">S</span></button>`;
     if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
   }
   area.innerHTML=html;
@@ -3101,12 +3260,14 @@ function ppPick(key){
   if(live)live.textContent=ok?'Correct.':`Incorrect. The correct answer is ${q.ansKey}.`;
   ppRender();
   ppJustAnswered=false;
+  pracScrollToReveal('ppQuestionArea');
 }
-function ppNavQ(d){const n=ppIdx+d;if(n>=0&&n<ppQuestions.length){ppIdx=n;ppRender()}}
+function ppNavQ(d){const n=ppIdx+d;if(n>=0&&n<ppQuestions.length){ppIdx=n;ppRender();pracScrollTop()}}
 function ppToggleSoln(){ppShowSoln[ppIdx]=!ppShowSoln[ppIdx];ppRender()}
 function ppEndSession(){
   document.getElementById('ppRunner').style.display='none';
   document.getElementById('ppHub').style.display='block';
+  window.scrollTo(0,0);
 }
 
 document.addEventListener('keydown',e=>{
@@ -3173,7 +3334,7 @@ function wRenderQuestion(){
   html+='</div>';
   if(answered){
     const solOpen=wShowSoln[wIdx];
-    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="wToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${solOpen?'var(--mid)':'var(--ter)'}" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span></button>`;
+    html+=`<button class="soln-toggle${solOpen?' open':''}" onclick="wToggleSoln()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25"/></svg><span style="flex:1">${solOpen?'Hide worked solution':'Show worked solution'}</span><span class="result-pill" style="background:${isCorrect?'var(--gLite)':'var(--rLite)'};color:${isCorrect?'var(--green)':'var(--red)'}">${isCorrect?'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 12.75l6 6 9-13.5"/></svg> Correct':'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18 18 6M6 6l12 12"/></svg> Answer: '+LETTERS[q.ans]}</span></button>`;
     if(solOpen)html+=`<div class="soln-content"><div class="soln-header"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.8"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25"/><path d="M18.259 8.715 18 9.75l-.259-1.035L14.25 6l1.036-.259L18 2.25"/></svg><span class="soln-label">Worked Solution</span></div><p class="soln-text">${q.soln}</p></div>`;
   }
   area.innerHTML=html;
@@ -4680,7 +4841,9 @@ function mmClearTimer(){if(mmSession&&mmSession.timerHandle){clearInterval(mmSes
 function mmStartTimer(){
   const card=document.getElementById('mmTimerCard');
   if(!mmStore.session.timed){card.style.display='none';return}
-  card.style.display='block';
+  /* cleared rather than set to block, so the phone rules can lay this card out
+     as the same one-line strip as the progress card above it */
+  card.style.display='';
   const total=mmStore.session.seconds;
   let remaining=total;
   document.getElementById('mmTimerNum').textContent=remaining+'s';
@@ -4954,11 +5117,15 @@ function pracStartSession(){
   document.getElementById('pracSetup').style.display='none';
   document.getElementById('pracRunner').style.display='';
   render();
+  /* On a phone the setup grid stacks, so "Start session" is at the bottom of a
+     long page — without this the runner opens already scrolled past question 1. */
+  window.scrollTo(0,0);
 }
 
 function pracEndSession(){
   document.getElementById('pracRunner').style.display='none';
   document.getElementById('pracSetup').style.display='';
+  window.scrollTo(0,0);
 }
 
 function pracInit(){
