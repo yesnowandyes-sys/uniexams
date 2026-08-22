@@ -1046,13 +1046,18 @@ body[data-screen="app"] #appShell{display:block}
 .w-faq-item[open] summary::after{transform:rotate(45deg)}
 .w-faq-item p{font-size:.8125rem;color:var(--sec);line-height:1.65;margin-top:.7rem}
 
-/* Not a card — a closing line. A filled panel here read as a third heavy block
-   stacked under the FAQ and the footer; the text alone does the same job.
+/* Closing call-to-action: a short tinted bar, text left / button right, so the
+   strip is filled edge to edge. A full-width centred panel here was mostly
+   empty space, and the FAQ's own bottom padding left it sitting high between
+   the FAQ and the footer — hence the matching margin-bottom below.
    No side margin: the .w-container it sits in already supplies the gutter. */
-.w-cta-band{padding:clamp(2.25rem,3.5vw,3.25rem) 1rem;text-align:center}
-.w-cta-band h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;color:var(--text);font-size:clamp(1.3rem,1.7vw,1.65rem);letter-spacing:-.025em;margin-bottom:.5rem}
-.w-cta-band p{color:var(--ter);font-size:.8125rem;line-height:1.65;max-width:52ch;margin:0 auto 1.4rem}
-.w-cta-band .btn-primary{width:auto;margin:0 auto;padding:.85rem 1.75rem;font-size:.9375rem}
+.w-cta-band{display:flex;align-items:center;justify-content:space-between;gap:1.25rem 2rem;flex-wrap:wrap;background:var(--lite);border:1px solid var(--liteb);border-radius:16px;padding:1.6rem 1.75rem;margin-bottom:clamp(3rem,4.5vw,4.75rem)}
+/* 20rem basis, so the row wraps only below the 640px breakpoint that stacks it
+   properly — otherwise the button drops to a stray half-width line first. */
+.w-cta-text{flex:1 1 20rem}
+.w-cta-band h2{font-family:'Inter',sans-serif;font-style:normal;font-weight:800;color:var(--text);font-size:1.25rem;letter-spacing:-.025em;line-height:1.25;margin-bottom:.3rem}
+.w-cta-band p{color:var(--sec);font-size:.8125rem;line-height:1.6;max-width:62ch;margin:0}
+.w-cta-band .btn-primary{width:auto;flex-shrink:0;padding:.8rem 1.6rem;font-size:.875rem}
 
 .w-footer{padding:2.5rem 0 2.5rem;border-top:1px solid var(--bdr)}
 .w-footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
@@ -1075,7 +1080,10 @@ body[data-screen="app"] #appShell{display:block}
 .w-hero{padding:2.75rem 0 2.5rem}
 .w-hero-stats{gap:1.1rem 1.5rem;margin-top:1.9rem}
 .w-hero-ctas .btn-primary,.w-hero-ctas .btn-outline{width:100%}
-.w-cta-band{padding:2rem .25rem 2.25rem}
+/* Stacked, and the button goes full width — a right-hand button on a phone
+   ends up alone on its own line anyway. */
+.w-cta-band{flex-direction:column;align-items:stretch;text-align:left;padding:1.4rem 1.25rem;gap:1.1rem}
+.w-cta-band .btn-primary{width:100%}
 .w-footer-inner{flex-direction:column;align-items:flex-start}
 
 /* ── The sample card on a phone ───────────────────────────────────────────
@@ -1296,8 +1304,10 @@ body[data-screen="app"] #appShell{display:block}
 
   <div class="w-container">
     <div class="w-cta-band">
-      <h2>Ready to see where you stand?</h2>
-      <p>Create a free account to start with Mental Maths and past-paper practice — unlock the full generated question bank with a one-time payment whenever you're ready.</p>
+      <div class="w-cta-text">
+        <h2>Ready to see where you stand?</h2>
+        <p>Create a free account to start with Mental Maths and past-paper practice — unlock the full generated question bank with a one-time payment whenever you're ready.</p>
+      </div>
       <button type="button" class="btn-primary" onclick="showSignupScreen()">Create your free account</button>
     </div>
   </div>
