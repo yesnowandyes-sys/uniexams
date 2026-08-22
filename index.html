@@ -699,13 +699,13 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .practice-sidebar{width:268px;flex-shrink:0}
 /* The strip is always a single scrolling line, at every width. Wrapped, a
    24-question session laid three rows of numbers across the top of the screen
-   and a 50-question one laid six; the arrows either side page through the line
-   instead, and a touch screen swipes it.
+   and a 50-question one laid six.
    position:relative so the buttons' offsetLeft is measured against the strip —
-   qnavScrollCurrent() scrolls it by hand.
+   qnavCentreCurrent() scrolls it by hand.
    The scrollbar is hidden rather than styled: iOS paints its overlay bar *over*
-   the last few pixels of a scroller, which cut across the bottom of the numbers. */
-.question-nav{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;position:relative;padding:2px 0;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+   the last few pixels of a scroller, which cut across the bottom of the numbers.
+   user-select because dragging the strip would otherwise select the numbers. */
+.question-nav{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;position:relative;padding:2px 0;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;user-select:none;-webkit-user-select:none}
 .question-nav::-webkit-scrollbar{display:none}
 .question-nav .qnum{flex-shrink:0}
 .qnum{width:36px;height:36px;border-radius:8px;border:2px solid var(--bdr);background:var(--surf);color:var(--ter);font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s,transform .1s;box-sizing:border-box;padding:0}
@@ -714,23 +714,32 @@ body.nav-open .nav-scrim{opacity:1;pointer-events:auto}
 .qnum.cur{border-color:var(--mid);font-weight:700;box-shadow:0 0 0 3px var(--lite)}
 .qnum.correct{background:var(--gLite);border-color:var(--green);color:var(--green)}
 .qnum.incorrect{background:var(--rLite);border-color:var(--red);color:var(--red)}
-/* The strip and its pager. The arrows replace the old "Show all 24" toggle: that
-   button spent a whole row of the runner on a choice between a line you could
-   scroll and a grid that pushed the question further down still. Both sit after
-   the strip, so the numbers themselves start flush with the question card below;
-   they hide when the whole strip already fits, and disable at each end. */
-.qnav-strip{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
-.qnav-strip .question-nav{flex:1;min-width:0}
-.qnav-arrow{width:30px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid var(--bdr);border-radius:8px;background:var(--surf);color:var(--sec);cursor:pointer;transition:background .1s,opacity .12s}
-.qnav-arrow:hover:not(:disabled){background:var(--alt)}
-.qnav-arrow:active:not(:disabled){transform:scale(.93)}
-.qnav-arrow:disabled{opacity:.32;cursor:default}
-.qnav-arrow[hidden]{display:none}
+/* ── Getting around a strip longer than the row ──
+   There is nothing on the strip to press. It had a pair of chevrons on the right
+   pointing opposite ways, which is a control you have to work out before you can
+   use it, sitting where the numbers should have ended.
+
+   Instead the strip moves itself: pick a number sitting near either end and it
+   slides that number into the middle, which brings the numbers beyond it into
+   view — pick 12 and you can see up to 18, pick 4 and you can see back to 1. And
+   it can be dragged: grab anywhere on it and pull.
+
+   What says it can be? The numbers running out under a fade at whichever end has
+   more of them, and the cursor turning into a hand. */
+.question-nav.qnav-pannable{cursor:grab}
+.question-nav.qnav-dragging{cursor:grabbing}
+/* pointer-events so a number doesn't pop under the hover scale mid-drag; the
+   pointer is captured by the strip by then, so the drag itself is unaffected. */
+.question-nav.qnav-dragging *{cursor:grabbing;pointer-events:none}
+.question-nav.qnav-fade-l{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 32px);mask-image:linear-gradient(to right,transparent 0,#000 32px)}
+.question-nav.qnav-fade-r{-webkit-mask-image:linear-gradient(to left,transparent 0,#000 32px);mask-image:linear-gradient(to left,transparent 0,#000 32px)}
+.question-nav.qnav-fade-l.qnav-fade-r{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 32px,#000 calc(100% - 32px),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 32px,#000 calc(100% - 32px),transparent 100%)}
 /* The runner's head — back button, then the question strip — lives outside
    .practice-layout so a phone can pull the progress card above the question
    without the head coming with it. One row at every width. */
 .prac-head{display:flex;align-items:center;gap:12px;min-width:0;margin-bottom:1rem}
 .prac-head>.prac-back{flex-shrink:0;margin-bottom:0}
+.prac-head>.question-nav{flex:1;min-width:0}
 
 /* ── Practice setup screen (module/topic/count picker before a session starts) ── */
 .prac-setup-wrap{max-width:1200px;margin:0 auto;padding:1.5rem 1.75rem}
@@ -915,9 +924,6 @@ body.nav-open{overflow:hidden}
 .practice-wrap .prac-back-lbl{display:none}
 .pp-runner-head{gap:10px;margin-bottom:.7rem;flex-wrap:nowrap;min-width:0}
 .pp-runner-title{font-size:.8125rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-/* Nothing to point at with a finger: the strip is swiped, and two 30px targets
-   beside it would only take width off the numbers. */
-.practice-wrap .qnav-arrow{display:none}
 
 /* ── Progress above the question, folded into a single strip ── */
 .practice-wrap .practice-layout{gap:0}
@@ -1953,13 +1959,7 @@ body[data-screen="app"] #appShell{display:block}
            the question strip still come first. -->
       <div class="prac-head">
         <button class="nav-btn prac-back" onclick="pracAskEnd()" aria-label="Back to setup"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg><span class="prac-back-lbl">Back to setup</span></button>
-        <!-- Both arrows after the strip, so question 1 starts flush with the left
-             edge of the question card below it. -->
-        <div class="qnav-strip">
-          <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
-          <button class="qnav-arrow" id="qNavPrev" type="button" onclick="qnavPage('qNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
-          <button class="qnav-arrow" id="qNavNext" type="button" onclick="qnavPage('qNav',1)" aria-label="Scroll to later questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
-        </div>
+        <div class="question-nav" id="qNav" role="tablist" aria-label="Questions"></div>
       </div>
       <div class="practice-layout">
         <div class="practice-main">
@@ -2137,11 +2137,7 @@ body[data-screen="app"] #appShell{display:block}
         <span class="pp-runner-title" id="ppRunnerTitle"></span>
       </div>
       <div class="prac-head">
-        <div class="qnav-strip">
-          <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
-          <button class="qnav-arrow" id="ppQNavPrev" type="button" onclick="qnavPage('ppQNav',-1)" aria-label="Scroll to earlier questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 19.5 8.25 12l7.5-7.5"/></svg></button>
-          <button class="qnav-arrow" id="ppQNavNext" type="button" onclick="qnavPage('ppQNav',1)" aria-label="Scroll to later questions" hidden><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
-        </div>
+        <div class="question-nav" id="ppQNav" role="tablist" aria-label="Questions"></div>
       </div>
       <div class="practice-layout">
         <div class="practice-main">
@@ -3207,50 +3203,112 @@ const LETTERS="ABCDEFGHIJ";
 let idx=0,answers={},showSoln={},rightCount=0,justAnswered=false;
 
 /* ── The question strip ──
-   One scrolling line, always, with an arrow at each end on a pointer. It replaced
-   a "Show all 24" toggle: expanding the strip laid the numbers out as a grid that
-   pushed the question further down the screen, which is the opposite of what the
-   runner needs, and collapsing it left a scrollable line with nothing saying so.
-   The arrows say so, and they page it without costing a row. */
+   A single scrolling line of numbers with no control on it. It has had two goes
+   at a control and neither earned its place: a "Show all 24" toggle that expanded
+   the line into a grid, pushing the question further down the screen, and then a
+   pair of chevrons pointing opposite ways, sitting where the numbers should have
+   ended. What is left is the strip moving itself.
 
-/* scrollLeft by hand rather than scrollIntoView: the strip is the only thing
-   that should move. scrollIntoView also scrolls the *page* when the strip is off
-   screen, which on a phone yanks you back to the top the moment you answer. */
-function qnavScrollCurrent(navEl){
+   qnavCentreCurrent  — picking a number near either end slides it to the middle,
+                        which is what brings the numbers past it into view
+   qnavBindDrag       — grab the strip and pull it
+   qnavSyncEdges      — the fades and the cursor that say either is possible
+
+   scrollLeft by hand throughout rather than scrollIntoView: the strip is the only
+   thing that should move. scrollIntoView also scrolls the *page* when the strip
+   is off screen, which on a phone yanks you back to the top the moment you
+   answer. */
+
+/* How close to an end counts as near it, in numbers. Below this the strip stays
+   put — a click in the comfortable middle of the row shouldn't slide anything. */
+const QNAV_EDGE=1.75;
+
+function qnavCentreCurrent(navEl,smooth){
   const cur=navEl&&navEl.querySelector('.cur');
-  if(!cur||navEl.scrollWidth<=navEl.clientWidth)return;
-  const pad=8,left=cur.offsetLeft-pad,right=cur.offsetLeft+cur.offsetWidth+pad;
-  if(left<navEl.scrollLeft)navEl.scrollLeft=left;
-  else if(right>navEl.scrollLeft+navEl.clientWidth)navEl.scrollLeft=right-navEl.clientWidth;
+  if(!cur)return;
+  const max=navEl.scrollWidth-navEl.clientWidth;
+  if(max<=2)return;
+  const band=(cur.offsetWidth+6)*QNAV_EDGE;
+  const left=cur.offsetLeft-navEl.scrollLeft,right=left+cur.offsetWidth;
+  if(left>=band&&right<=navEl.clientWidth-band)return;
+  /* Clamped, so the ends of the strip stay flush with the ends of the row rather
+     than pulling empty space in behind them. Which means picking 1 or 24 leaves
+     it where it is, and only the numbers in between actually centre. */
+  const to=Math.max(0,Math.min(max,cur.offsetLeft+cur.offsetWidth/2-navEl.clientWidth/2));
+  /* The slide is the whole point — it is what shows you which way the numbers
+     went — so it animates, unless the reader has asked for less of that. */
+  const still=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  navEl.scrollTo({left:to,behavior:smooth&&!still?'smooth':'auto'});
 }
 
-/* A page is a strip-width less one number, so the number you were looking at
-   when you pressed stays on screen as an anchor. */
-function qnavPage(navId,dir){
-  const navEl=document.getElementById(navId);
+/* Fades at whichever end still has numbers past it, and the grab cursor while
+   there is anywhere to go. Runs off the strip's own scroll event, so a drag, a
+   swipe and a centring slide all keep it honest. */
+function qnavSyncEdges(navEl){
   if(!navEl)return;
-  navEl.scrollBy({left:dir*Math.max(120,navEl.clientWidth-42),behavior:'smooth'});
+  const max=navEl.scrollWidth-navEl.clientWidth,over=max>2;
+  navEl.classList.toggle('qnav-pannable',over);
+  navEl.classList.toggle('qnav-fade-l',over&&navEl.scrollLeft>2);
+  navEl.classList.toggle('qnav-fade-r',over&&navEl.scrollLeft<max-2);
 }
 
-/* Hidden when the whole strip fits, disabled at each end. Called after every
-   render and off the strip's own scroll event, so a swipe updates them too. */
-function qnavSyncArrows(navId){
-  const navEl=document.getElementById(navId);
-  const prevEl=document.getElementById(navId+'Prev'),nextEl=document.getElementById(navId+'Next');
-  if(!navEl||!prevEl||!nextEl)return;
-  /* 2px of slack: sub-pixel widths otherwise leave "scrollable by 0.4px". */
-  const over=navEl.scrollWidth-navEl.clientWidth>2;
-  prevEl.hidden=nextEl.hidden=!over;
-  if(!over)return;
-  prevEl.disabled=navEl.scrollLeft<=1;
-  nextEl.disabled=navEl.scrollLeft>=navEl.scrollWidth-navEl.clientWidth-1;
-  if(!navEl.dataset.arrowsBound){
-    navEl.dataset.arrowsBound='1';
-    navEl.addEventListener('scroll',()=>qnavSyncArrows(navId),{passive:true});
-  }
+/* Drag to pull the strip along. Mouse only — a touch screen already pans it, and
+   taking the touch events over here would fight that. */
+function qnavBindDrag(navEl){
+  if(!navEl||navEl.dataset.qnavBound)return;
+  navEl.dataset.qnavBound='1';
+  let id=null,fromX=0,fromLeft=0,dragging=false,swallowClick=false;
+
+  navEl.addEventListener('scroll',()=>qnavSyncEdges(navEl),{passive:true});
+
+  navEl.addEventListener('pointerdown',e=>{
+    swallowClick=false;
+    if(e.pointerType!=='mouse'||e.button!==0)return;
+    if(navEl.scrollWidth-navEl.clientWidth<=2)return;
+    id=e.pointerId;fromX=e.clientX;fromLeft=navEl.scrollLeft;dragging=false;
+  });
+  navEl.addEventListener('pointermove',e=>{
+    if(e.pointerId!==id)return;
+    const dx=e.clientX-fromX;
+    /* A few pixels of slack, so pressing a number with a shaky hand is still a
+       press and not a one-pixel drag. */
+    if(!dragging){
+      if(Math.abs(dx)<4)return;
+      dragging=true;
+      navEl.classList.add('qnav-dragging');
+      navEl.setPointerCapture(id);
+    }
+    navEl.scrollLeft=fromLeft-dx;
+    e.preventDefault();
+  });
+  const stop=e=>{
+    if(e.pointerId!==id)return;
+    if(navEl.hasPointerCapture(id))navEl.releasePointerCapture(id);
+    id=null;
+    if(!dragging)return;
+    dragging=false;
+    navEl.classList.remove('qnav-dragging');
+    /* Letting go over a number would otherwise count as picking it. The flag is
+       cleared by the next pointerdown, so a drag that ends over a gap — no click
+       to swallow — can't strand it and eat a later press. */
+    swallowClick=true;
+  };
+  navEl.addEventListener('pointerup',stop);
+  navEl.addEventListener('pointercancel',stop);
+  navEl.addEventListener('click',e=>{
+    if(!swallowClick)return;
+    swallowClick=false;
+    e.stopPropagation();e.preventDefault();
+  },true);
 }
+
 /* A resize changes what fits, and nothing else would re-run the check. */
-window.addEventListener('resize',()=>{qnavSyncArrows('qNav');qnavSyncArrows('ppQNav')});
+window.addEventListener('resize',()=>{
+  ['qNav','ppQNav'].forEach(id=>{
+    const el=document.getElementById(id);
+    qnavSyncEdges(el);qnavCentreCurrent(el,false);
+  });
+});
 
 /* ── Scroll behaviour for the runner ──
    The reveal button and Previous/Next are always on screen — fixed to the bottom
@@ -3362,7 +3420,12 @@ function pracScrollToSolution(areaId){
 }
 
 function renderNav(){
-  const navEl=document.getElementById('qNav');navEl.innerHTML='';
+  const navEl=document.getElementById('qNav');
+  /* Emptying the strip resets its scroll to 0, and render() runs on every answer
+     — so without this the numbers would snap back to 1 and then slide out again
+     each time you picked one. */
+  const keepLeft=navEl.scrollLeft;
+  navEl.innerHTML='';
   PRACTICE_QUESTIONS.forEach((_,i)=>{
     const b=document.createElement('button');b.className='qnum';
     const a=answers[i],revealed=a!==undefined;
@@ -3375,7 +3438,9 @@ function renderNav(){
     b.onclick=()=>{idx=i;render();pracScrollTop(false,'questionArea')};
     navEl.appendChild(b);
   });
-  qnavSyncArrows('qNav');
+  navEl.scrollLeft=keepLeft;
+  qnavBindDrag(navEl);
+  qnavSyncEdges(navEl);
 }
 
 /* The reveal button. Both runners render it into the action block at the foot of
@@ -3428,7 +3493,7 @@ function updateSidebar(){
   bar.style.background=done===PRACTICE_QUESTIONS.length?'var(--green)':'var(--mid)';
 }
 
-function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===PRACTICE_QUESTIONS.length-1;qnavScrollCurrent(document.getElementById('qNav'))}
+function render(){renderNav();renderQuestion();updateSidebar();document.getElementById('prevBtn').disabled=idx===0;document.getElementById('nextBtn').disabled=idx===PRACTICE_QUESTIONS.length-1;qnavCentreCurrent(document.getElementById('qNav'),true)}
 
 function pick(i){
   if(answers[idx]!==undefined)return;
@@ -3541,6 +3606,7 @@ async function ppStart(examType,year,paper,label){
       };
     });
     ppIdx=0;ppAnswers={};ppShowSoln={};ppCurrentLabel=label;
+    document.getElementById('ppQNav').scrollLeft=0;
     document.getElementById('ppRunnerTitle').textContent=label;
     hub.style.display='none';runner.style.display='block';
     ppRender();
@@ -3551,7 +3617,9 @@ async function ppStart(examType,year,paper,label){
 }
 
 function ppRenderNav(){
-  const navEl=document.getElementById('ppQNav');navEl.innerHTML='';
+  const navEl=document.getElementById('ppQNav');
+  const keepLeft=navEl.scrollLeft;
+  navEl.innerHTML='';
   ppQuestions.forEach((_,i)=>{
     const b=document.createElement('button');b.className='qnum';
     const a=ppAnswers[i],revealed=a!==undefined;
@@ -3564,7 +3632,9 @@ function ppRenderNav(){
     b.onclick=()=>{ppIdx=i;ppRender();pracScrollTop(false,'ppQuestionArea')};
     navEl.appendChild(b);
   });
-  qnavSyncArrows('ppQNav');
+  navEl.scrollLeft=keepLeft;
+  qnavBindDrag(navEl);
+  qnavSyncEdges(navEl);
 }
 
 function ppRenderQuestion(){
@@ -3609,7 +3679,7 @@ function ppRender(){
   ppRenderNav();ppRenderQuestion();ppUpdateSidebar();
   document.getElementById('ppPrevBtn').disabled=ppIdx===0;
   document.getElementById('ppNextBtn').disabled=ppIdx===ppQuestions.length-1;
-  qnavScrollCurrent(document.getElementById('ppQNav'));
+  qnavCentreCurrent(document.getElementById('ppQNav'),true);
 }
 
 function ppPick(key){
@@ -5649,6 +5719,10 @@ function pracStartSession(){
   }
   PRACTICE_QUESTIONS=Array.from({length:pracCount},(_,i)=>pool[i%pool.length]);
   idx=0;answers={};showSoln={};
+  /* A new session starts at question 1, so the strip starts at its left end —
+     otherwise renderNav restores the previous session's scroll and the numbers
+     slide back from wherever that was. */
+  document.getElementById('qNav').scrollLeft=0;
   document.getElementById('pracSetup').style.display='none';
   document.getElementById('pracRunner').style.display='';
   render();
